@@ -26,3 +26,4 @@ First, make sure you can build and validate all the current schemas.
 "id": "https://raw.githubusercontent.com/was...es/schema/ans/v0_2/credit.json"
                                                             ^^^^^
 ```
+2. It doesn't appear as though the validator checks for references correctly (e.g. you can delete "id" from either of the fixtures and the credit.json tests pass just fine)
