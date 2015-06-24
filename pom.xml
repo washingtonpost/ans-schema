@@ -19,6 +19,7 @@
         <version.java>1.8</version.java>
         <version.json.schema.validator>2.2.6</version.json.schema.validator>
         <version.junit>4.12</version.junit>
+        <version.slf4j>1.7.10</version.slf4j>
     </properties>
 
     <build>
@@ -75,6 +76,18 @@
             <artifactId>json-schema-validator</artifactId>
             <version>${version.json.schema.validator}</version>
             <scope>test</scope>
-        </dependency>        
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${version.slf4j}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${version.slf4j}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 </project>
