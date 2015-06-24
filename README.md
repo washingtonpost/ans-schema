@@ -10,11 +10,19 @@ ANS Schema files are defined with the [JSON Schema specification](https://spacet
 ## Contributing
 First, make sure you can build and validate all the current schemas.
 * If you don't already have it, get maven
+
 ```brew install maven     # for OSX```
+
 * Run all unit tests validating all current schemas:
+
 ```mvn -U clean package```
+
 * Make edits, and update/add validation unit tests as needed
 
 # Notes/questions
 1. is it good enough to encode "version" as part of the URL in the ID of a schema file? e.g.
-```"id": "https://raw.githubusercontent.com/was...es/schema/ans/v0_2/credit.json"```
+
+```
+"id": "https://raw.githubusercontent.com/was...es/schema/ans/v0_2/credit.json"
+                                                            ^^^^^
+```
