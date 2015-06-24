@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_2/ans.json",
+    "title": "Root level marker for ANS content.",
+    "description": "The common attributes that all ANS elements are expected to posses.",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "A globally unique identifier of the content in the ANS repository.",
+            "type": "string"
+        }
+    },
+    "required": ["id"]
+}

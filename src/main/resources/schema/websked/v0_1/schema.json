@@ -1,0 +1,340 @@
+{  
+	"$schema":"http://json-schema.org/draft-04/schema#",
+	"title":"WebSked Story",
+	"description":"A story to be pushed to the Washington Post's WebSked planning tool.",
+	"type":"object",
+	"properties":{  
+		"id":{              
+			"description":"Immutable ID created in the CMS.",
+			"type":"string"
+		},
+		"url":{              
+			"description":"Web URL for published stories.",
+			"type":"string",
+			"format":"uri"
+		},
+		"status":{              
+			"description":"Contains information about the current status of the story.",
+			"type":"object",
+			"properties":{  
+				"publish":{                      
+					"description":"Denotes which of a number of organization-defined publish statuses the story is currently in.",
+					"type":"integer"
+				},
+				"publishRaw":{                      
+					"description":"The raw publish status from the CMS.",
+					"type":"string"
+				},
+				"workflow":{                     
+					"description":"Denotes which of a number of organization-defined workflow statuses the story is currently in.",
+					"type":"integer"
+				},
+				"workflowRaw":{                      
+					"description":"The raw workflow status from the CMS.",
+					"type":"string"
+				},
+				"live":{					
+					"description":"Whether or not the story is live on the web.",
+					"type":"boolean"
+				}
+			},
+			"required":["publish","workflow","live"],
+			"additionalProperties":false
+		},
+		"contentType":{			
+			"description":"Content type of the story (eg, article, video, gallery).",
+			"enum":["article","video","gallery","graphic","image"]
+		},
+		"dates":{              
+			"description":"Various RFC3339-formatted datetimes associated with the story.",
+			"type":"object",
+			"properties":{  
+				"created":{                      
+					"description":"The RFC3339-formatted datetime at which the story was created in the CMS.",
+					"format":"date-time",
+					"type":"string"
+				},
+				"updated":{                      
+					"description":"The RFC3339-formatted datetime at which the story was last updated in the CMS.",
+					"format":"date-time",
+					"type":"string"
+				},
+				"planned":{                      
+					"description":"The RFC3339-formatted datetime at which the reporter expects the story to be ready, or null if this is still unknown. This is only an estimate and can be modified later.",
+					"format":"date-time",
+					"type":["string","null"]
+				},
+				"scheduled":{                      
+					"description":"The RFC3339-formatted datetime at which the story will go live, if one has been determined.",
+					"format":"date-time",
+					"type":"string"
+				},
+				"published":{                      
+					"description":"The RFC3339-formatted datetime at which the story was published on the web.",
+					"format":"date-time",
+					"type":"string"
+				}
+			},
+			"required":["created","updated","planned"],
+			"additionalProperties":false
+		},
+		"plans":{              
+			"description":"An array of plan paths to which the story belongs.",
+			"type":"array",
+			"items":{                  
+				"type":"string"
+			}
+		},
+		"originatingPlan":{              
+			"description":"The plan path from which the story originated.",
+			"type":"string"
+		},
+		"location":{              
+			"$ref":"#/definitions/location"
+		},
+		"summary":{              
+			"description":"A short summary of the story to be displayed in WebSked.",
+			"type":"string"
+		},
+		"media":{  
+			"description":"Contains information about the various media associated with the story.",
+			"type":"object",
+			"properties":{  
+				"images":{  
+					"description":"An array of the images associated with this story.",
+					"type":"array",
+					"items":{
+						"$ref":"#/definitions/mediaObject"
+					}
+				},
+				"galleries":{  
+					"description":"An array of the galleries associated with this story.",
+					"type":"array",
+					"items":{  
+						"$ref":"#/definitions/mediaObject"
+					}
+				},
+				"videos":{  
+					"description":"An array of the videos associated with this story.",
+					"type":"array",
+					"items":{  
+						"$ref":"#/definitions/mediaObject"
+					}
+				},
+				"graphics":{  
+					"description":"An array of the graphics associated with this story.",
+					"type":"array",
+					"items":{  
+						"$ref":"#/definitions/mediaObject"
+					}
+				},
+				"willHaveImages":{                     
+					"description":"Whether or not the reporter anticipates that the story will have images.",
+					"type":"boolean"
+				},
+				"willHaveGalleries":{                      
+					"description":"Whether or not the reporter anticipates that the story will have galleries.",
+					"type":"boolean"
+				},
+				"willHaveGraphics":{                      
+					"description":"Whether or not the reporter anticipates that the story will have graphics.",
+					"type":"boolean"
+				},
+				"willHaveVideos":{                      
+					"description":"Whether or not the reporter anticipates that the story will have videos.",
+					"type":"boolean"
+				}
+			},
+			"additionalProperties":false
+		},
+		"creators":{  
+			"description":"Various information about the creators and contributors to a story.",
+			"type":"array",
+			"items":{  
+				"$ref":"#/definitions/contributor"
+			}
+		},
+		"html":{  			
+			"description":"The actual content of the story, in HTML format.",
+			"type":"string"
+		},
+		"headline":{              
+			"type":"string"
+		},
+		"slug":{              
+			"description":"A short string by which to easily identify the story.",
+			"type":"string"
+		},
+		"source":{
+			"description":"The source of the content.",
+			"type":"string"
+		},
+		"cms":{              
+			"description":"The name of the CMS from which the story originated.",
+			"type":"string"
+		},
+		"cmsEditURL":{			
+			"description":"URL to open the story for editing in the CMS' web client.",
+			"type":"string",
+			"format":"uri"
+		},
+		"storyLength":{              
+			"type":"object",
+			"properties":{  
+				"planned":{                      
+					"description":"The anticipated number of words in the story.",
+					"type":"integer"
+				},
+				"actual":{                      
+					"description":"Current number of words.",
+					"type":"integer"
+				}
+			},
+			"additionalProperties":false
+		},
+		"analytics":{              
+			"description":"Contains various analytics information about the story.",
+			"type":"object",
+			"properties":{  
+				"pageViews":{                      
+					"type":"integer"
+				},
+				"comments":{                      
+					"description":"Number of comments the story has received.",
+					"type":"integer"
+				},
+				"shares":{                      
+					"description":"The number of times the story has been shared on various social media networks.",
+					"type":"object",
+					"properties":{  
+						"facebook":{                              
+							"type":"integer"
+						},
+						"twitter":{                              
+							"type":"integer"
+						},
+						"googlePlus":{                              
+							"type":"integer"
+						}
+					}
+				}
+			},
+			"additionalProperties":false
+		},
+		"usage":{  
+			"description":"Contains information about where and when the story has been used.",
+			"type":"array",
+			"items":{  
+				"type":"object",
+				"properties":{  
+					"locationId":{  
+						"description":"Unique number for the location.",
+						"type":"integer"
+					},
+					"locationName":{  
+						"description":"Human-readable location.",
+						"type":"string"
+					},
+					"startTime":{  
+						"description":"Epoch time when the story went live at this location.",
+						"type":"integer"
+					},
+					"endTime":{  
+						"description":"Epoch time when the story was removed from this location.",
+						"type":"integer"
+					}
+				},
+				"additionalProperties":false
+			}
+		},
+		"editors":{  
+			"description":"Array containing information about each of the story's editors.",
+			"type":"array",
+			"items":{  
+				"$ref":"#/definitions/contributor"
+			}
+		},
+		"custom":{  
+			"description":"Organizations can use fields within custom to track data that is not captured in the WebSked data specification, but is relevant to their needs.",
+			"type":"object",
+			"properties":{  
+
+			}
+		}
+	},
+	"definitions": {
+		"mediaObject": {
+			"description":"A generic container for a media object.",
+			"type":"object",
+			"properties":{  
+				"url":{  
+					"type":"string"
+				},
+				"caption":{  
+					"type":"string"
+				},
+				"creators":{  
+					"type":"array",
+					"items":{  
+						"$ref":"#/definitions/contributor"
+					}
+				},
+				"location":{  
+					"$ref":"#/definitions/location"
+				}
+			},
+			"additionalProperties":false
+		},
+		"contributor": {
+			"description":"A contributor to a story (creator or editor).",
+			"type":"object",
+			"properties":{  
+				"name":{  
+					"description":"First and last name, as it appears in the byline.",
+					"type":"string"
+				},
+				"role":{  
+					"description":"Creator's position at the news organization.",
+					"type":"string"
+				},
+				"itemRole":{
+					"description":"Contribution in relation to this piece of content.",
+					"type":"string"
+				},
+				"contributorId":{  
+					"description":"Unique identifier.",
+					"type":"string"
+				},
+				"email":{  
+					"type":"string",
+					"format":"email"
+				}
+			},
+			"additionalProperties":false
+		},	
+		"location":{              
+			"description":"The location of the content.",
+			"type":"object",
+			"properties":{  
+				"city":{                      
+					"type":"string"
+				},
+				"state":{                      
+					"type":"string"
+				},
+				"country":{                      
+					"type":"string"
+				},
+				"latitude":{                      
+					"type":"number"
+				},
+				"longitude":{                      
+					"type":"number"
+				}
+			},
+			"additionalProperties":false
+		}
+	},
+	"required":["id","status","contentType","dates","plans","originatingPlan","creators","html","headline"],
+	"additionalProperties":false
+}
