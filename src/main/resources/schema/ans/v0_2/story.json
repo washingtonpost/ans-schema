@@ -22,17 +22,16 @@
             "type": "string",
             "description": "The title of the story."
         },
-        "headline": {
-            "type": "string",
-            "description": "The headline for the story."
+        "headlines": {
+            "type": "array",
+            "items": {
+                "$ref": "headline.json"
+            },
+            "description": "A list of (headline, channel) pairs."
         },
         "description": {
             "type": "string",
             "description": "FIXME - is this only used by websked?"
-        },
-        "headlines": {
-            "type": "string",
-            "description": "FIXME - in the WP ANS Java mockout, this is a Map<String,String>. What is this for?"
         },
         "blurbs": {
             "type": "string",

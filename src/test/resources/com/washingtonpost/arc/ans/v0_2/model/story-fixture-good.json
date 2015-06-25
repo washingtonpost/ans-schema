@@ -14,7 +14,15 @@
     "canonical_url": "http://www.washingtonpost.com/local/anesthesiologist-trashes-sedated-patient-jury-orders-her-to-pay-500000/2015/06/23/cae05c00-18f3-11e5-ab92-c75ae6ab94b5_story.html",
     "short_url": "http://wapo.st/1Crp6bY",
     "title": "He didn\u2019t hear the insults. His phone did.",
-    "headline": "Anesthesiologist trashes sedated patient \u2014 and it ends up costing her",
+    "headlines": [
+        {
+            "headline": "The default headline for this story"
+        },
+        {
+            "headline": "Special headline for social",
+            "channel": "social"
+        }
+    ],
     "description": "A Vienna man went in for a colonoscopy and intended to record his doctor",
     "blurbs": "tbd",
     "related_content": [
