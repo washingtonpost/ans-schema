@@ -33,5 +33,7 @@ First, make sure you can build and validate all the current schemas.
 * What about traits like "skedable", "categorizable" or "trackable"?  Should that be a free-form, optional string field somewhere? or an enum?
 * Should I switch all the "additionalProperties: false" to be "true"?  Or keep the ANS schema strict and allow for "wrapper" schemas that allow whatever they want to be tacked on 'around' the underlying schema?
 
+
 For Tim - 
 * What's the intent of the keyword.frequency field?
+* Right now the taxonomy.json schema just wraps a list of keywords; in the Java POC there's also "ancestors" and "topics" - what is the intent of those?  If we don't need them, should I just delete "taxonomy" and put the list of keywords directly on a story?
