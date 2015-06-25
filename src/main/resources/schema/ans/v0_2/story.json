@@ -12,11 +12,11 @@
         },
         "canonical_url": {
             "type": "string",
-            "description": "FIXME"
+            "description": "The fully qualified URL to the story."
         },
         "short_url": {
             "type": "string",
-            "description": "FIXME"
+            "description": "A url-shorterned version of the canonical_url."
         },
         "title": {
             "type": "string",

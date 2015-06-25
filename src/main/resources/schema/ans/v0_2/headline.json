@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_2/headline.json",
+    "title": "A headline for a story.",
+    "description": "Holds a headline written for a particular channel (e.g. print, mobile, social, etc).",
+    "type": "object",
+    "required": ["headline"],
+    "additionalProperties": false,
+    "properties": {
+        "headline": {
+            "type": "string",
+            "description": "The headline"
+        },
+        "channel": {
+            "type": "string",
+            "default": "default",
+            "description": "The channel the headline was written for (e.g. print, mobile, social).  Specification of this attribute is optional, and it will default to the string 'default'"
+        }
+    }
+}
