@@ -32,3 +32,6 @@ First, make sure you can build and validate all the current schemas.
 ** speaking of that, since "content" has "ans", I assume I can just list "content" as a property, right?
 * What about traits like "skedable", "categorizable" or "trackable"?  Should that be a free-form, optional string field somewhere? or an enum?
 * Should I switch all the "additionalProperties: false" to be "true"?  Or keep the ANS schema strict and allow for "wrapper" schemas that allow whatever they want to be tacked on 'around' the underlying schema?
+
+For Tim - 
+* What's the intent of the keyword.frequency field?
