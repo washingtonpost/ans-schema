@@ -14,17 +14,17 @@ public class TestContent extends AbstractTest {
     }
 
     @Test
-    public void testCreditGood() throws Exception {
+    public void testContentGood() throws Exception {
         runTest("content-fixture-good", true);
     }
 
     @Test
-    public void testCreditBadMissingCreatedDate() throws Exception {
+    public void testContentBadMissingCreatedDate() throws Exception {
         runTest("content-fixture-bad-missing-created-date", false);
     }
 
     @Test
-    public void testCreditBadMalformedCreatedDate() throws Exception {
+    public void testContentBadMalformedCreatedDate() throws Exception {
         runTest("content-fixture-bad-malformed-created-date", false);
     }
 }

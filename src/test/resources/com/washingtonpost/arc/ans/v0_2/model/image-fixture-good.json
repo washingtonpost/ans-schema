@@ -12,6 +12,6 @@
     "image_url": "https://tinyurl.com/mqyonhb",
     "caption": "Never gonna give you up",
     "subtitle": "Never gonna let you down",
-    "width": "800px",
-    "height": "640px"
+    "width": 800,
+    "height": 640
 }

@@ -14,7 +14,7 @@ public class TestImage extends AbstractTest {
     }
 
     @Test
-    public void testCreditGood() throws Exception {
+    public void testImageGood() throws Exception {
         runTest("image-fixture-good", true);
     }
 }

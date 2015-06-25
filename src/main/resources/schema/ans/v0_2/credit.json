@@ -4,6 +4,8 @@
     "title": "Credit for a piece of content.",
     "description": "Models attribution to an individual or group for contribution towards some content item.",
     "type": "object",
+    "required": ["name", "role"],
+    "additionalProperties": false,
     "properties": {
         "name": {
             "description": "The name of contributor.",
@@ -17,7 +19,5 @@
             "description": "The role the contributor played in the content.",
             "type": "string"
         }
-    },
-    "required": ["name", "role"]
-
+    }
 }

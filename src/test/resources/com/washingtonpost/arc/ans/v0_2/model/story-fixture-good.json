@@ -1,0 +1,31 @@
+{
+    "content": {
+        "id": "unique ANS id",
+        "created_date": "2015-06-24T09:50:50.52Z",
+        "last_updated_date": "2015-06-24T09:50:50.52Z",
+        "credit": [
+            {
+                "name": "Bob Woodward",
+                "role": "Author",
+                "organization": "The Washington Post"
+            }
+        ]
+    },
+    "canonical_url": "http://www.washingtonpost.com/local/anesthesiologist-trashes-sedated-patient-jury-orders-her-to-pay-500000/2015/06/23/cae05c00-18f3-11e5-ab92-c75ae6ab94b5_story.html",
+    "short_url": "http://wapo.st/1Crp6bY",
+    "title": "He didn\u2019t hear the insults. His phone did.",
+    "headline": "Anesthesiologist trashes sedated patient \u2014 and it ends up costing her",
+    "description": "A Vienna man went in for a colonoscopy and intended to record his doctor",
+    "blurbs": "tbd",
+    "related_content": [
+        {
+            "id": "some other unique ANS id",
+            "created_date": "2015-06-24T09:50:50.52Z"
+        }
+    ],
+    "taxonomy": "tbd",
+    "tracking": "tbd",
+    "publish_date": "2015-06-24T09:49:00.10Z",
+    "display_date": "2015-06-25T09:50:50.52Z",
+    "html": "<article itemprop=\"articleBody\">\n\n\n<p>Sitting in his surgical gown inside a large medical suite in Reston, Va., a Vienna man prepared for his colonoscopy by pressing record on his smartphone, to capture the instructions his doctor would give him after the procedure.</p>\n<p>But as soon as he pressed play on his way home, he was shocked out of his anesthesia-induced stupor: He found that he had recorded the entire examination and that the surgical team had mocked and insulted him as soon as he drifted off to sleep. </p>"
+}

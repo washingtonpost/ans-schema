@@ -1,0 +1,82 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_2/story.json",
+    "title": "A story.",
+    "description": "Holds attributes of an ANS story.",
+    "type": "object",
+    "required": ["content"],
+    "additionalProperties": false,
+    "properties": {
+        "content": {
+            "$ref": "content.json"
+        },
+        "canonical_url": {
+            "type": "string",
+            "description": "FIXME"
+        },
+        "short_url": {
+            "type": "string",
+            "description": "FIXME"
+        },
+        "title": {
+            "type": "string",
+            "description": "The title of the story."
+        },
+        "headline": {
+            "type": "string",
+            "description": "The headline for the story."
+        },
+        "description": {
+            "type": "string",
+            "description": "FIXME - is this only used by websked?"
+        },
+        "headlines": {
+            "type": "string",
+            "description": "FIXME - in the WP ANS Java mockout, this is a Map<String,String>. What is this for?"
+        },
+        "blurbs": {
+            "type": "string",
+            "description": "FIXME - in the WP ANS Java mockout, this is a Map<String,String>. What is this for?"
+        },
+        "related_content": {
+            "type": "array",
+            "items": {
+                "$ref": "content.json"
+            },
+            "description": "FIXME - is array good enough? In the Java mockout, it's Map<String, List<ANS>>"
+        },
+        "promo_image": {
+            "$ref": "image.json",
+            "description": "FIXME"
+        },
+        "promo_images": {
+            "type": "array",
+            "items": {
+                "$ref": "image.json"
+            },
+            "description": "FIXME - do we need both 'promo_image' *and* 'promo_images' ?"
+        },
+        "taxonomy": {
+            "type": "string",
+            "description": "FIXME - introduce new taxonomy schema, change the type of this"
+        },
+        "tracking": {
+            "type": "string",
+            "description": "FIXME - introduce new tracking schema, change the type of this"
+        },
+        "publish_date": {
+            "type": "string",
+            "format": "datetime",
+            "description": "When the story was first published."
+        },
+        "display_date": {
+            "type": "string",
+            "format": "datetime",
+            "description": "FIXME - what is the definition of this field?"
+        },
+        "html": {
+            "type": "string",
+            "description": "For now, just the clob of HTML that is the story; to be made finer-grain in the future"
+        }
+    }    
+}

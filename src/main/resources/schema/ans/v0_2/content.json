@@ -4,6 +4,8 @@
     "title": "ANS Content root level schema",
     "description": "Content FIXME FILL ME IN.",
     "type": "object",
+    "required": ["id", "created_date"],
+    "additionalProperties": false,
     "properties": {
         "id": {
             "description": "A globally unique identifier of the content in the ANS repository.",
@@ -26,7 +28,5 @@
                 "$ref": "credit.json"
             }
         }
-    },
-    "required": ["id", "created_date"],
-    "additionalProperties": false
+    }
 }

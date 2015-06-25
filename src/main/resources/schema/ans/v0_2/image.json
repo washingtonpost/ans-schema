@@ -4,6 +4,8 @@
     "title": "An image.",
     "description": "Holds attributes of an ANS image component.",
     "type": "object",
+    "required": ["content", "image_url"],
+    "additionalProperties": false,
     "properties": {
         "content": {
             "$ref": "content.json"
@@ -28,7 +30,5 @@
             "description": "Height for the image.",
             "type": "number"
         }
-    },
-    "required": ["content", "image_url"],
-    "additionalProperties": false
+    }
 }
