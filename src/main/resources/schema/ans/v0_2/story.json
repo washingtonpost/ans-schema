@@ -56,8 +56,8 @@
             "description": "FIXME - do we need both 'promo_image' *and* 'promo_images' ?"
         },
         "taxonomy": {
-            "type": "string",
-            "description": "FIXME - introduce new taxonomy schema, change the type of this"
+            "$ref": "taxonomy.json",
+            "description": "A collection of metadata, keywords, etc. describing this story."
         },
         "tracking": {
             "type": "string",

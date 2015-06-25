@@ -67,7 +67,15 @@
             "height": 640
         }
     ],
-    "taxonomy": "tbd",
+    "taxonomy": {
+        "keywords": [
+            {
+                "keyword": "Pandas",
+                "score": 0.77,
+                "frequency": 2
+            }
+        ]
+    },
     "tracking": "tbd",
     "publish_date": "2015-06-24T09:49:00.10Z",
     "display_date": "2015-06-25T09:50:50.52Z",
