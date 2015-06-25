@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_2/image.json",
+    "title": "An image.",
+    "description": "Holds attributes of an ANS image component.",
+    "type": "object",
+    "properties": {
+        "content": {
+            "$ref": "content.json/"
+        },
+        "subtitle": {
+            "description": "Subtitle for the image.",
+            "type": "string"
+        },
+        "caption": {
+            "description": "Caption for the image.",
+            "type": "string"
+        },
+        "image_url": {
+            "description": "URL for the image.",
+            "type": "string"
+        },
+        "width": {
+            "description": "Width for the image.",
+            "type": "number"
+        },
+        "height": {
+            "description": "Height for the image.",
+            "type": "number"
+        }
+    },
+    "required": [],
+    "additionalProperties": false
+}

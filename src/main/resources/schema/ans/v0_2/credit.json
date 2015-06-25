@@ -5,9 +5,6 @@
     "description": "Models attribution to an individual or group for contribution towards some content item.",
     "type": "object",
     "properties": {
-        "ans": {
-            "$ref": "ans.json/"
-        },
         "name": {
             "description": "The name of contributor.",
             "type": "string"

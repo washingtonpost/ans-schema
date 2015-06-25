@@ -8,7 +8,7 @@ import com.github.fge.jsonschema.main.JsonSchemaFactory;
 import java.io.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 /**
  * <p>Helper/common methods for JSON schema/test validation</p>
@@ -53,12 +53,10 @@ public abstract class AbstractTest {
         JsonSchema schema = factory.getJsonSchema(loadSchema(schemaName));
 
         ProcessingReport report = schema.validate(loadFixture(fixture));
-        LOGGER.info("{} report = {}", schemaName, report);
-        assertEquals(
-                String.format("%s %s against %s schema", fixture, (expected ? "did not validate" : "validated"), schemaName),
-                expected,
-                report.isSuccess());
-
+        if (expected != report.isSuccess()) {
+            LOGGER.info("{} report = {}", fixture, report);
+            fail(String.format("%s %s against %s schema", fixture, (expected ? "did not validate" : "validated"), schemaName));
+        }
     }
 
     /**

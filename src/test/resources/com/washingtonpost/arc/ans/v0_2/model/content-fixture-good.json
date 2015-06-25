@@ -1,0 +1,17 @@
+{
+    "id": "some globally unique ANS id",
+    "created_date": "2015-06-25T09:50:50.52Z",
+    "last_updated_date": "2015-06-25T09:51:50.52Z",
+    "credit": [
+        {
+            "name": "The Dude Getting Credit",
+            "org": "The Washington Post",
+            "role": "Author"
+        },
+        {
+            "name": "Someone Else",
+            "org": "The Washington Times",
+            "role": "Contributor"
+        }
+    ]
+}
