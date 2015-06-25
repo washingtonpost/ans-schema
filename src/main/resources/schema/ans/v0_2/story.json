@@ -44,16 +44,12 @@
             },
             "description": "FIXME - is array good enough? In the Java mockout, it's Map<String, List<ANS>>"
         },
-        "promo_image": {
-            "$ref": "image.json",
-            "description": "FIXME"
-        },
         "promo_images": {
             "type": "array",
             "items": {
                 "$ref": "image.json"
             },
-            "description": "FIXME - do we need both 'promo_image' *and* 'promo_images' ?"
+            "description": "List of promotional images to use when highlighting the story."
         },
         "taxonomy": {
             "$ref": "taxonomy.json",
