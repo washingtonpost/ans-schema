@@ -26,8 +26,8 @@ First, make sure you can build and validate all the current schemas.
 "id": "https://raw.githubusercontent.com/was...es/schema/ans/v0_2/credit.json"
                                                             ^^^^^
 ```
-* It doesn't appear as though the validator checks for references correctly (e.g. you can delete "id" from either of the fixtures and the credit.json tests pass just fine)  See [this example](https://github.com/fge/json-schema-validator/blob/master/src/main/resources/com/github/fge/jsonschema/examples/split/fstab.json) for maybe how to do that
-* Do we need to distinguish between images and "generic media object"?
+* Do we need to distinguish between images, videos and "generic media object"?
 * what units are the height and width of an image in?  px?  unit-less?
 * are required values up in referenced objects transitive? or do I need to spell out in every schema that "ans" and "content" are required?
 ** speaking of that, since "content" has "ans", I assume I can just list "content" as a property, right?
+* What about traits like "skedable", "categorizable" or "trackable"?  Should that be a free-form, optional string field somewhere? or an enum?

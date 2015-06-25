@@ -1,0 +1,17 @@
+{
+    "content": {
+        "id": "unique ANS id",
+        "created_date": "2015-06-25T09:50:50.52Z",
+        "credit": [
+            {
+                "name": "Ansel Adams",
+                "role": "Photographer"
+            }
+        ]
+    },
+    "image_url": "https://tinyurl.com/mqyonhb",
+    "caption": "Never gonna give you up",
+    "subtitle": "Never gonna let you down",
+    "width": "800px",
+    "height": "640px"
+}

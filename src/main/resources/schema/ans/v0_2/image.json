@@ -6,7 +6,7 @@
     "type": "object",
     "properties": {
         "content": {
-            "$ref": "content.json/"
+            "$ref": "content.json"
         },
         "subtitle": {
             "description": "Subtitle for the image.",
@@ -29,6 +29,6 @@
             "type": "number"
         }
     },
-    "required": [],
+    "required": ["content", "image_url"],
     "additionalProperties": false
 }
