@@ -66,12 +66,12 @@
         },
         "publish_date": {
             "type": "string",
-            "format": "datetime",
+            "format": "date-time",
             "description": "When the story was first published."
         },
         "display_date": {
             "type": "string",
-            "format": "datetime",
+            "format": "date-time",
             "description": "FIXME - what is the definition of this field?"
         },
         "html": {
