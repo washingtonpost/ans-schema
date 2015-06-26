@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_2/media.json",
+    "title": "A media object.",
+    "description": "Holds common attributes of ANS Media objects.",
+    "type": "object",
+    "required": ["url"],
+    "allOf": [{
+            "$ref": "trait_guid.json",
+            "$ref": "trait_dated.json",
+            "$ref": "trait_credited.json",
+            "properties": {
+                "url": {
+                    "description": "URL for the media object.",
+                    "type": "string"
+                },
+                "width": {
+                    "description": "Width for the media object.",
+                    "type": "integer"
+                },
+                "height": {
+                    "description": "Height for the media object.",
+                    "type": "integer"
+                }
+            }
+        }
+    ]
+}

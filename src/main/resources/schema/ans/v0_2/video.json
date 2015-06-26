@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_2/video.json",
+    "title": "A video.",
+    "description": "Holds attributes of an ANS video component.",
+    "type": "object",
+    "allOf": [{
+            "$ref": "media.json",
+            "properties": {
+                "description": {
+                    "description": "Description for the video.",
+                    "type": "string"
+                },
+                "duration": {
+                    "description": "Runtime of the video.",
+                    "type": "number"
+                }
+            }
+        }
+    ]
+}

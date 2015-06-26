@@ -4,11 +4,8 @@
     "title": "An image.",
     "description": "Holds attributes of an ANS image component.",
     "type": "object",
-    "required": ["image_url"],
     "allOf": [{
-            "$ref": "trait_guid.json",
-            "$ref": "trait_dated.json",
-            "$ref": "trait_credited.json",
+            "$ref": "media.json",
             "properties": {
                 "subtitle": {
                     "description": "Subtitle for the image.",
@@ -17,18 +14,6 @@
                 "caption": {
                     "description": "Caption for the image.",
                     "type": "string"
-                },
-                "image_url": {
-                    "description": "URL for the image.",
-                    "type": "string"
-                },
-                "width": {
-                    "description": "Width for the image.",
-                    "type": "number"
-                },
-                "height": {
-                    "description": "Height for the image.",
-                    "type": "number"
                 }
             }
         }
