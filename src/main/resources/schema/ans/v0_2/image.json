@@ -4,31 +4,33 @@
     "title": "An image.",
     "description": "Holds attributes of an ANS image component.",
     "type": "object",
-    "required": ["content", "image_url"],
-    "additionalProperties": false,
-    "properties": {
-        "content": {
-            "$ref": "content.json"
-        },
-        "subtitle": {
-            "description": "Subtitle for the image.",
-            "type": "string"
-        },
-        "caption": {
-            "description": "Caption for the image.",
-            "type": "string"
-        },
-        "image_url": {
-            "description": "URL for the image.",
-            "type": "string"
-        },
-        "width": {
-            "description": "Width for the image.",
-            "type": "number"
-        },
-        "height": {
-            "description": "Height for the image.",
-            "type": "number"
+    "required": ["image_url"],
+    "allOf": [{
+            "$ref": "trait_guid.json",
+            "$ref": "trait_dated.json",
+            "$ref": "trait_credited.json",
+            "properties": {
+                "subtitle": {
+                    "description": "Subtitle for the image.",
+                    "type": "string"
+                },
+                "caption": {
+                    "description": "Caption for the image.",
+                    "type": "string"
+                },
+                "image_url": {
+                    "description": "URL for the image.",
+                    "type": "string"
+                },
+                "width": {
+                    "description": "Width for the image.",
+                    "type": "number"
+                },
+                "height": {
+                    "description": "Height for the image.",
+                    "type": "number"
+                }
+            }
         }
-    }
+    ]
 }

@@ -4,74 +4,75 @@
     "title": "A story.",
     "description": "Holds attributes of an ANS story.",
     "type": "object",
-    "required": ["content"],
-    "additionalProperties": false,
-    "properties": {
-        "content": {
-            "$ref": "content.json"
-        },
-        "canonical_url": {
-            "type": "string",
-            "description": "The fully qualified URL to the story."
-        },
-        "short_url": {
-            "type": "string",
-            "description": "A url-shorterned version of the canonical_url."
-        },
-        "title": {
-            "type": "string",
-            "description": "The title of the story."
-        },
-        "headlines": {
-            "type": "array",
-            "items": {
-                "$ref": "headline.json"
-            },
-            "description": "A list of (headline, channel) pairs."
-        },
-        "description": {
-            "type": "string",
-            "description": "FIXME - is this only used by websked?"
-        },
-        "blurbs": {
-            "type": "string",
-            "description": "FIXME - in the WP ANS Java mockout, this is a Map<String,String>. What is this for?"
-        },
-        "related_content": {
-            "type": "array",
-            "items": {
-                "$ref": "content.json"
-            },
-            "description": "FIXME - is array good enough? In the Java mockout, it's Map<String, List<ANS>>"
-        },
-        "promo_images": {
-            "type": "array",
-            "items": {
-                "$ref": "image.json"
-            },
-            "description": "List of promotional images to use when highlighting the story."
-        },
-        "taxonomy": {
-            "$ref": "taxonomy.json",
-            "description": "A collection of metadata, keywords, etc. describing this story."
-        },
-        "tracking": {
-            "type": "string",
-            "description": "FIXME - introduce new tracking schema, change the type of this"
-        },
-        "publish_date": {
-            "type": "string",
-            "format": "date-time",
-            "description": "When the story was first published."
-        },
-        "display_date": {
-            "type": "string",
-            "format": "date-time",
-            "description": "FIXME - what is the definition of this field?"
-        },
-        "html": {
-            "type": "string",
-            "description": "For now, just the clob of HTML that is the story; to be made finer-grain in the future"
+    "allOf": [{
+            "$ref": "trait_guid.json",
+            "$ref": "trait_dated.json",
+            "$ref": "trait_credited.json",
+            "properties": {
+                "canonical_url": {
+                    "type": "string",
+                    "description": "The fully qualified URL to the story."
+                },
+                "short_url": {
+                    "type": "string",
+                    "description": "A url-shorterned version of the canonical_url."
+                },
+                "title": {
+                    "type": "string",
+                    "description": "The title of the story."
+                },
+                "headlines": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "headline.json"
+                    },
+                    "description": "A list of (headline, channel) pairs."
+                },
+                "description": {
+                    "type": "string",
+                    "description": "FIXME - is this only used by websked?"
+                },
+                "blurbs": {
+                    "type": "string",
+                    "description": "FIXME - in the WP ANS Java mockout, this is a Map<String,String>. What is this for?"
+                },
+                "related_content": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "trait_guid.json"
+                    },
+                    "description": "A list of GUIDs referencing other content items this story is related to."
+                },
+                "promo_images": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "image.json"
+                    },
+                    "description": "List of promotional images to use when highlighting the story."
+                },
+                "taxonomy": {
+                    "$ref": "taxonomy.json",
+                    "description": "A collection of metadata, keywords, etc. describing this story."
+                },
+                "tracking": {
+                    "type": "string",
+                    "description": "FIXME - introduce new tracking schema, change the type of this"
+                },
+                "publish_date": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "When the story was first published."
+                },
+                "display_date": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "FIXME - what is the definition of this field?"
+                },
+                "html": {
+                    "type": "string",
+                    "description": "For now, just the clob of HTML that is the story; to be made finer-grain in the future"
+                }
+            }
         }
-    }    
+    ]
 }
