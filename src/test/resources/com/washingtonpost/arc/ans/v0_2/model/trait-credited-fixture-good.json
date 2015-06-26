@@ -1,12 +1,12 @@
 {
     "credit": [
         {
-            "name": "The Dude Getting Credit",
+            "name": "The Person Getting Author Credit",
             "org": "The Washington Post",
             "role": "Author"
         },
         {
-            "name": "Someone Else",
+            "name": "Someone Else Getting Contributor Credit",
             "org": "The Washington Times",
             "role": "Contributor"
         }
