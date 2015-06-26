@@ -12,7 +12,7 @@
                     "type": "string"
                 },
                 "duration": {
-                    "description": "Runtime of the video.",
+                    "description": "Runtime of the video in seconds.",
                     "type": "number"
                 }
             }
