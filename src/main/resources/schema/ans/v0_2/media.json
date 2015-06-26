@@ -14,6 +14,10 @@
                     "description": "URL for the media object.",
                     "type": "string"
                 },
+                "title": {
+                    "description": "The title of the media object.",
+                    "type": "string"
+                },
                 "width": {
                     "description": "Width for the media object.",
                     "type": "integer"
