@@ -29,10 +29,6 @@
                     "type": "string",
                     "description": "A description of the story."
                 },
-                "blurbs": {
-                    "type": "string",
-                    "description": "FIXME - in the WP ANS Java mockout, this is a Map<String,String>. What is this for?"
-                },
                 "related_content": {
                     "type": "array",
                     "items": {
