@@ -1,0 +1,312 @@
+[{
+        "id": "5592c09fe4b082c8417f3f72",
+        "adConfig": {
+            "adSetConfig": {
+                "adSetZone": "wpni.video.sports/postsportslive",
+                "adSetCodes": {
+                    "tablet": "b6dcf1f5f15f4b478e8a26ee2e35cfbf",
+                    "apps": "519ade8a896f482cb5490e1b0075db7f",
+                    "mweb": "ccd352383dea44c3b2712b92874012d3",
+                    "desktop": "c728cad8eefd4f0db55febbbc0950544"
+                }
+            },
+            "forceAd": false,
+            "playAds": true,
+            "playVideoAds": true,
+            "enableAutoPreview": true,
+            "commercialAdNode": "/sports/postsportslive"
+        },
+        "contentConfig": {
+            "blurb": "The Washington Post's Scott Allen and Dan Steinberg and WUSA9's Dave Owens join host Gene Wang to discuss the Nationals solid performances despite injuries. The panel also analyzes the Wizards' trade for draft pick Kelly Oubre Jr. and debate whether DeSean Jackson's BET reality series is an unnecessary distraction for the Redskins.",
+            "shortDescription": "Post Sports Live discusses the Nationals' successful run despite injuries and whether the Wizards gave up too much to draft Kelly Oubre Jr.",
+            "clarification": null,
+            "commentsConfig": {
+                "allowComments": true,
+                "allowPhotos": false,
+                "allowVideos": false,
+                "isDisplayable": true,
+                "isModerated": false,
+                "max": null,
+                "period": null,
+                "source": "washpost.com"
+            },
+            "correction": null,
+            "credits": {
+                "editor": null,
+                "source": "Post Sports Live/The Washington Post"
+            },
+            "dateConfig": {
+                "dateCreated": 1435680927305,
+                "datePublished": 1435681870000,
+                "dateFirstPublished": 1435681870000,
+                "dateLastPublished": 1435681870000,
+                "dateUpdated": 1435681861762,
+                "displayDate": 1435680720000,
+                "publicationStartDate": null,
+                "publicationEndDate": null
+            },
+            "hasClarification": false,
+            "hasCorrection": false,
+            "images": null,
+            "isOoyalaVideo": true,
+            "loid": "2001.10.341075006",
+            "path": "/2010-2019/WashingtonPost/2015/06/30/Sports/Videos/vi-20150630-psl-fullshow.xml",
+            "permaLinkURL": "http://www.washingtonpost.com/posttv/sports/nationals-hitting-a-stride-wizards-draft-oubre/2015/06/30/38a49c74-1f43-11e5-a135-935065bc30d0_video.html",
+            "playerBrandingId": null,
+            "playerURL": "http://player.ooyala.com/player_v2.swf?keepEmbedCode=true&embedCode=5592c0a9e4b0ef3ccc0d9b6a&&autoplay=1",
+            "rating": null,
+            "redirectURL": null,
+            "relatedLinks": [{
+                    "title": "STORY: Reserves are giving Nationals a boost",
+                    "url": "https://www.washingtonpost.com/sports/nationals/reserves-give-nationals-a-boost/2015/06/29/f38107ec-1e6e-11e5-84d5-eb37ee8eaa61_story.html"
+                }, {
+                    "title": "STORY: 2015 NBA Free Agent rankings",
+                    "url": "https://www.washingtonpost.com/news/sports/wp/2015/06/29/2015-nba-free-agent-rankings-top-50-headlined-by-lebron-james-lamarcus-aldridge-kevin-love/"
+                }, {
+                    "title": "DC SPORTS BOG: Jackson lands reality show deal with BET",
+                    "url": "https://www.washingtonpost.com/blogs/dc-sports-bog/wp/2015/04/24/desean-jackson-lands-reality-show-deal-with-bet/"
+                }],
+            "shortURL": "http://wapo.st/1BUvRbv",
+            "sourceMediaURL": "http://s3.amazonaws.com/posttv-video-source-prod/06-30-2015/t_1435680787563_name_20150630_psl_fullshow.m4v",
+            "title": "Nationals hitting a stride, Wizards draft Oubre",
+            "type": "clip",
+            "urlHash": "38a49c74-1f43-11e5-a135-935065bc30d0",
+            "uuid": "38a49c74-1f43-11e5-a135-935065bc30d0",
+            "vendor": "ooyala",
+            "videoContentId": "5592c0a9e4b0ef3ccc0d9b6a",
+            "videoDuration": 1198000,
+            "videoStatus": "live",
+            "videoURL": "http://origin.c.ooyala.com/5592c0a9e4b0ef3ccc0d9b6a/DOcJ-FxaFrRg4gtDEwOjkzOjBrO47VbV.mp4",
+            "youtubeContentId": null,
+            "defaultPlaylistLibrary": "/WashingtonPost/Production/Digital/Pages-Web/global/defaults/default_playlist_library.dwc",
+            "promoted": false,
+            "methodeFilePath": "/WashingtonPost/Content/Sports/Videos/vi-20150630-psl-fullshow.xml",
+            "methodeImageFilePath": "/WashingtonPost/Content/Sports/Videos/Images/fullshow_0630.jpg",
+            "collectionPath": "",
+            "gridExperience": false,
+            "includeInSiteSearch": true,
+            "disableEmbedEndScreen": false,
+            "queryTerms": "",
+            "streams": [{
+                    "height": 720,
+                    "width": 1280,
+                    "fileSize": 327819354,
+                    "audioCodec": null,
+                    "videoCodec": null,
+                    "type": "mp4",
+                    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_1413917562171-fstwsn_t_1435680963322_1280_720_2000.mp4",
+                    "bitrate": 2000,
+                    "provider": "elastictranscoder"
+                }, {
+                    "height": 360,
+                    "width": 640,
+                    "fileSize": 111252083,
+                    "audioCodec": null,
+                    "videoCodec": null,
+                    "type": "mp4",
+                    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_1413917693028-uimk59_t_1435680963322_640_360_600.mp4",
+                    "bitrate": 600,
+                    "provider": "elastictranscoder"
+                }, {
+                    "height": 360,
+                    "width": 640,
+                    "fileSize": 75300016,
+                    "audioCodec": null,
+                    "videoCodec": null,
+                    "type": "ts",
+                    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_t_1435680963733_mobile.m3u8",
+                    "bitrate": 300,
+                    "provider": "elastictranscoder"
+                }, {
+                    "height": 720,
+                    "width": 1280,
+                    "fileSize": 352558468,
+                    "audioCodec": null,
+                    "videoCodec": null,
+                    "type": "ts",
+                    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_t_1435680963733_master.m3u8",
+                    "bitrate": 2000,
+                    "provider": "elastictranscoder"
+                }, {
+                    "height": 180,
+                    "width": 320,
+                    "fileSize": 52552204,
+                    "audioCodec": null,
+                    "videoCodec": null,
+                    "type": "ts",
+                    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_t_1435680963733_mobile.m3u8",
+                    "bitrate": 160,
+                    "provider": "elastictranscoder"
+                }, {
+                    "height": 180,
+                    "width": 320,
+                    "fileSize": 44471331,
+                    "audioCodec": null,
+                    "videoCodec": null,
+                    "type": "mp4",
+                    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_1413918388651-bhdhw9_t_1435680963322_320_180_160.mp4",
+                    "bitrate": 160,
+                    "provider": "elastictranscoder"
+                }, {
+                    "height": 1080,
+                    "width": 1920,
+                    "fileSize": 838371405,
+                    "audioCodec": null,
+                    "videoCodec": null,
+                    "type": "mp4",
+                    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_1413917648266-520npb_t_1435680963322_1920_1080_5400.mp4",
+                    "bitrate": 5400,
+                    "provider": "elastictranscoder"
+                }, {
+                    "height": 360,
+                    "width": 640,
+                    "fileSize": 124434944,
+                    "audioCodec": null,
+                    "videoCodec": null,
+                    "type": "ts",
+                    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_t_1435680963733_mobile.m3u8",
+                    "bitrate": 600,
+                    "provider": "elastictranscoder"
+                }, {
+                    "height": 480,
+                    "width": 854,
+                    "fileSize": 202124710,
+                    "audioCodec": null,
+                    "videoCodec": null,
+                    "type": "mp4",
+                    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_1413917780312-tgh3by_t_1435680963322_854_480_1200.mp4",
+                    "bitrate": 1200,
+                    "provider": "elastictranscoder"
+                }, {
+                    "height": 1080,
+                    "width": 1920,
+                    "fileSize": 838371405,
+                    "audioCodec": null,
+                    "videoCodec": null,
+                    "type": "smil",
+                    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_t_1435681422368.smil",
+                    "bitrate": 5400,
+                    "provider": "elastictranscoder"
+                }],
+            "transcoderVideoId": "5592c0a9e4b0ef3ccc0d9b6a"
+        },
+        "metaConfig": {
+            "ideology": null,
+            "section": "PostSportsLive",
+            "subsection": "Sports",
+            "primarySiteNode": "/sports",
+            "secondarySiteNode": null,
+            "sentiment": null,
+            "tags": ["psl", "sports", "pslclip", "wizards", "nationals", "redskins", "nba"],
+            "keywords": ["washington nationals", "nationals", "nationals baseball", "nationals schedule", "nationals tickets", "jayson worth", "anthony rendon", "bryce harper", "stephen strasburg", "stephen strasburg stats", "stephen strasburg era", "max scherzer washington wizards", "wizards basketball", "kelly oubre jr", "kelly oubre", "kelly oubre wizards", "kelly oubre jr wizards", "washington wizards draft", "nba draft nba free agents", "top NBA free agents", "NBA free agents 2015", "lebron james", "lebron james free agent", "lamarcus aldridge", "marc gasol", "paul pierce", "top NBA free agents 2015 desean jackson", "desean jackson reality show", "desean jackson bet", "desean jackson home team", "desean jackson bet reality show", "bet", "washington redskins", "redskins", "washington redskins news", "rgiii", "robert griffin iii"],
+            "order": null,
+            "editor": {
+                "name": null,
+                "lastname": null,
+                "email": null
+            },
+            "sectionDisplayName": "Post Sports Live",
+            "sectionURL": "/c/series/postsportslive",
+            "topic": {
+                "id": "sports",
+                "name": "SPORTS",
+                "subsection": "Sports",
+                "url": "/c/video/topic/sports",
+                "collectionPath": null,
+                "apiMethod": null,
+                "apiParams": null,
+                "priority": false,
+                "order": 6,
+                "menuVisible": true
+            }
+        },
+        "promoImage": {
+            "image": {
+                "caption": null,
+                "credits": null,
+                "height": 1080,
+                "url": "http://s3.amazonaws.com/posttv-thumbnails-prod/thumbnails/5592c09fe4b082c8417f3f72/fullshow_0630.jpg",
+                "width": 1920
+            }
+        },
+        "videoCategoryConfig": [{
+                "id": "postsportslive",
+                "name": "Post Sports Live",
+                "description": null,
+                "videoAdZone": "wpni.video.sports/postsportslive",
+                "defaultPlaylistLibrary": "/WashingtonPost/Production/Digital/Pages-Web/global/defaults/default_playlist_library.dwc",
+                "tags": ["psl", "sports", "pslclip"],
+                "keywords": [],
+                "relatedLinks": null,
+                "credits": [],
+                "seriesConfig": {
+                    "url": "/c/video/series/postsportslive",
+                    "headline": null,
+                    "image": null,
+                    "blurb": null,
+                    "displaySeriesTemplate": false,
+                    "menuVisible": true,
+                    "menuVisibleSince": null,
+                    "menuVisibleDue": null,
+                    "requiredField": "seriesEpisodeDate",
+                    "episodeDate": 1435636800000,
+                    "adTagUrlSuffix": null,
+                    "seriesShareImage": null,
+                    "seriesRelatedLinks": null
+                },
+                "sponsoredVideo": false,
+                "commercialAdNode": "/sports/postsportslive",
+                "primarySiteNode": "/sports",
+                "secondarySiteNode": "",
+                "section": "PostSportsLive",
+                "subsection": "Sports",
+                "active": true,
+                "types": ["clip"],
+                "methodeVideoFilePath": "/WashingtonPost/Content/Sports/Videos",
+                "methodeImageFilePath": "/WashingtonPost/Content/Sports/Videos/Images",
+                "collectionPath": "",
+                "sectionDisplayName": "Post Sports Live",
+                "sectionURL": "/c/series/postsportslive",
+                "hashtag": null
+            }],
+        "sponsoredConfig": {
+            "sponsoredVideo": false,
+            "logoUrl": "",
+            "linkUrl": ""
+        },
+        "videoFilePath": "/2010-2019/WashingtonPost/2015/06/30/Sports/Videos/vi-20150630-psl-fullshow.xml",
+        "associatedContent": null,
+        "liveEventConfig": null,
+        "subtitlesConfig": {
+            "confidence": 0.75130093,
+            "subtitlesUrls": [{
+                    "format": "DFXP",
+                    "url": "https://closedcaptions.posttv.com/06-30-2015/5592c09fe4b082c8417f3f72_5592c013e4b082c8417f3f71/t_1435683757146.dfxp"
+                }, {
+                    "format": "RAW_TEXT",
+                    "url": "https://closedcaptions.posttv.com/06-30-2015/5592c09fe4b082c8417f3f72_5592c013e4b082c8417f3f71/t_1435683757146.rawtext"
+                }, {
+                    "format": "SRT",
+                    "url": "https://closedcaptions.posttv.com/06-30-2015/5592c09fe4b082c8417f3f72_5592c013e4b082c8417f3f71/t_1435683757146.srt"
+                }, {
+                    "format": "WEB_VTT",
+                    "url": "https://closedcaptions.posttv.com/06-30-2015/5592c09fe4b082c8417f3f72_5592c013e4b082c8417f3f71/t_1435683757146.vtt"
+                }]
+        },
+        "dummy": false,
+        "truthTellerEnabled": false,
+        "synchronizedToMethode": false,
+        "syncContentEnabled": false,
+        "hideInPlaylist": false,
+        "youtubeConfig": {
+            "youtubeVideoId": "wWEwUpHvqJg",
+            "youtubePlaylistId": null,
+            "youtubePlaylistItemId": null,
+            "youtubeVideoCategory": 25
+        },
+        "embedConfig": {
+            "embedType": null,
+            "embedContentId": null,
+            "showEmbed": false
+        }
+    }]

@@ -12,9 +12,37 @@
                     "type": "string"
                 },
                 "duration": {
-                    "description": "Runtime of the video in seconds.",
+                    "description": "Runtime of the video in milliseconds.",
                     "type": "number"
+                },
+                "transcript": {
+                    "description": "A transcript of the contents of the video.",
+                    "type" : "string"
+                },
+                "rating": {
+                    "description": "A rating of the video, to be used for appropriate age/content warnings.",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "The type of video (e.g. clip, livestream, etc)",
+                    "type": "string"
+                },
+                "youtubeContentId": {
+                    "description": "The YouTube ID of the content, if (re)hosted on youtube.com",
+                    "type": "string"
+                },
+                "streams": {
+                    "description": "The different streams this video can play in.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "video-stream.json"
+                    }
+                },
+                "promo_image": {
+                    "$ref": "image.json",
+                    "description": "A promo/leader image to the video."
                 }
+                
             }
         }
     ]

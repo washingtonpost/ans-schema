@@ -5,9 +5,7 @@
     "description": "Holds attributes of an ANS story.",
     "type": "object",
     "allOf": [{
-            "$ref": "trait_guid.json",
-            "$ref": "trait_dated.json",
-            "$ref": "trait_credited.json",
+            "$ref": "content.json",
             "properties": {
                 "canonical_url": {
                     "type": "string",
@@ -28,6 +26,10 @@
                 "description": {
                     "type": "string",
                     "description": "A description of the story."
+                },
+                "status": {
+                    "type": "string",
+                    "description": "Optional field to store story workflow related status (e.g. published/embargoed/etc)"
                 },
                 "related_content": {
                     "type": "array",
@@ -59,7 +61,11 @@
                 },
                 "html": {
                     "type": "string",
-                    "description": "For now, just the clob of HTML that is the story; to be made finer-grain in the future"
+                    "description": "For now, just the clob of HTML that is the story; to be made finer-grain in the future."
+                },
+                "editor_note": {
+                    "type": "string",
+                    "description": "Additional information to be displayed in/near the story html content from the editor."
                 }
             }
         }
