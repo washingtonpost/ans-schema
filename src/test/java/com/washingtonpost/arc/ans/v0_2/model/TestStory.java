@@ -17,4 +17,13 @@ public class TestStory extends AbstractTest {
     public void testStoryGood() throws Exception {
         runTest("story-fixture-good", true);
     }
+
+    /**
+     * Just another "happy path" test with real content instead of made-up content
+     * @throws Exception
+     */
+    @Test
+    public void testStoryTinyHouseGood() throws Exception {
+        runTest("story-fixture-tiny-house", true);
+    }
 }

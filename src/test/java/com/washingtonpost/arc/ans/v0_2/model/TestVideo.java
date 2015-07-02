@@ -17,4 +17,13 @@ public class TestVideo extends AbstractTest {
     public void testVideoGood() throws Exception {
         runTest("video-fixture-good", true);
     }
+
+    /**
+     * Just another happy-path test, with real data instead of fake fixture data.
+     * @throws Exception
+     */
+    @Test
+    public void testVideoNational() throws Exception {
+        runTest("video-fixture-nationals", true);
+    }
 }
