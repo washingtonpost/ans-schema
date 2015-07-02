@@ -7,6 +7,7 @@ import com.github.fge.jsonschema.core.report.ProcessingReport;
 import com.github.fge.jsonschema.main.JsonSchema;
 import com.github.fge.jsonschema.main.JsonSchemaFactory;
 import java.io.IOException;
+import java.net.URL;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import static org.junit.Assert.fail;
@@ -22,15 +23,32 @@ public abstract class AbstractTest {
     private final JsonSchemaFactory factory = JsonSchemaFactory.byDefault();
     private JsonSchema schema;
 
+
+    /**
+     * @param resourcePath THe path to the resource to load
+     * @return
+     * @throws IOException
+     */
+    URL getResource(String resourcePath) throws IOException {
+        return getClass().getClassLoader().getResource(resourcePath);
+    }
+
+    /**
+     * @param fixtureName The name of the fixture in the same path as the test being executed, e.g. "credit".
+     * @return
+     * @throws IOException
+     */
+    URL getSisterPathResource(String fixtureName) throws IOException {
+        return getResource(getClass().getPackage().getName().replace(".", "/") + "/" + fixtureName + ".json");
+    }
+
     /**
      * @param fixtureName The name of the fixture in the same path as the test being executed, e.g. "credit".
      * @return
      * @throws IOException
      */
     JsonNode loadFixture(String fixtureName) throws IOException {
-        String relativeFixturePath = getClass().getPackage().getName().replace(".", "/") + "/" + fixtureName + ".json";
-        String fullFixturePathfile = getClass().getClassLoader().getResource(relativeFixturePath).getFile();
-        return JsonLoader.fromPath(fullFixturePathfile);
+        return JsonLoader.fromPath(getSisterPathResource(fixtureName).getFile());
     }
 
     /**
@@ -40,8 +58,7 @@ public abstract class AbstractTest {
      * @throws IOException
      */
     JsonNode loadSchema(String schemaName) throws IOException {
-        String file = getClass().getClassLoader().getResource("schema/ans/v0_2/" + schemaName + ".json").getFile();
-        return JsonLoader.fromPath(file);
+        return JsonLoader.fromPath(getResource("schema/ans/v0_2/" + schemaName + ".json").getFile());
     }
 
     /**
