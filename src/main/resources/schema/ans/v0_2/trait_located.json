@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_2/trait_located.json",
+    "title": "Location related trait",
+    "description": "Captures information related to the location of the content.",
+    "type": "object",
+    "properties": {
+        "location": {
+            "description": "A description of the location, useful if a full address or lat/long specification is overkill.",
+            "type": "string"
+        },
+        "geo": {
+            "$ref": "geo.json",
+            "description": "Latitidue and Longitude of the content"
+        },
+        "address": {
+            "$ref": "address.json",
+            "description": "Address of the content"
+        }
+    }
+}
