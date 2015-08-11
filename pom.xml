@@ -3,6 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>com.washingtonpost</groupId>
+        <artifactId>wp-parent-pom</artifactId>
+        <version>1.2.1</version>
+    </parent>
+
     <groupId>com.washingtonpost.arc.ans</groupId>
     <artifactId>ans-schema</artifactId>
     <version>1.0.0-SNAPSHOT</version>
@@ -10,6 +16,11 @@
 
     <name>ans-schema</name>
     <url>https://github.com/washingtonpost/ans-schema</url>
+
+    <scm>
+        <developerConnection>scm:git:git@github.com:washingtonpost/ans-schema.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
