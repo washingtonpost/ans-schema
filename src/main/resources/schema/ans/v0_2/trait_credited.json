@@ -6,7 +6,7 @@
     "type": "object",
     "required": ["credit"],
     "properties": {
-        "credit": {
+        "credits": {
             "description": "An array of people/groups attributed to this content.",
             "type": "array",
             "items": {
