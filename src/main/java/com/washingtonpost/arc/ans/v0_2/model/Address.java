@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -17,15 +16,6 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  *
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-    "post-office-box",
-    "extended-address",
-    "street-address",
-    "locality",
-    "region",
-    "postal-code",
-    "country-name"
-})
 public class Address {
 
     @JsonProperty("post-office-box")
