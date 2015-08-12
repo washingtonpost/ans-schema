@@ -4,9 +4,9 @@
     "title": "Credit trait",
     "description": "Trait that captures the need to attribute ownership or authorship to content.",
     "type": "object",
-    "required": ["credit"],
+    "required": ["credits"],
     "properties": {
-        "credit": {
+        "credits": {
             "description": "An array of people/groups attributed to this content.",
             "type": "array",
             "items": {

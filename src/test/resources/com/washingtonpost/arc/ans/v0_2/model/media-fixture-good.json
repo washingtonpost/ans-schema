@@ -1,14 +1,12 @@
 {
     "guid": "unique ANS id",
     "created_date": "2015-06-25T09:50:50.52Z",
-    "credit": [
+    "credits": [
         {
             "name": "Ansel Adams",
             "role": "Photographer"
         }
     ],
     "url": "https://img.washingtonpost.com/rw/2010-2019/WashingtonPost/2015/06/23/Local/Images/FXSuit__4671435088890.jpg?uuid=y2-J-hngEeW-2BCT7lja0A",
-    "title": "Tiffany M. Ingham (Maj. Dale Greer/Kentucky Air National Guard)",
-    "width": 300,
-    "height": 640
+    "title": "Tiffany M. Ingham (Maj. Dale Greer/Kentucky Air National Guard)"
 }
