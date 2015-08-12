@@ -15,7 +15,6 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  * Holds attributes of an ANS video component.
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-
 public class Video extends Media {
 
     @JsonProperty("description")
