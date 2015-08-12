@@ -15,7 +15,6 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  * 
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-
 public class Media extends Content {
 
     @JsonProperty("title")
