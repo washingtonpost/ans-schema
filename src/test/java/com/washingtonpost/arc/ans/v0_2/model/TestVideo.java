@@ -1,5 +1,7 @@
 package com.washingtonpost.arc.ans.v0_2.model;
 
+import nl.jqno.equalsverifier.EqualsVerifier;
+import nl.jqno.equalsverifier.Warning;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.CoreMatchers.startsWith;
@@ -23,6 +25,15 @@ public class TestVideo extends AbstractTest<Video> {
     }
 
     @Test
+    @Override
+    public void testEqualsAndHashCode() {
+        EqualsVerifier.forClass(getTargetClass())
+                .suppress(Warning.STRICT_INHERITANCE, Warning.NONFINAL_FIELDS)
+                .withRedefinedSuperclass()
+                .verify();
+    }
+
+    @Test
     public void testVideoGood() throws Exception {
         testJsonValidation("video-fixture-good", true);
         Video video = testClassSerialization("video-fixture-good");
@@ -42,6 +53,7 @@ public class TestVideo extends AbstractTest<Video> {
         assertThat(video.getStreams().get(0).getProvider(), is("elastictranscoder"));
         assertThat(video.getStreams().get(0).getBitrate(), is(600));
         assertThat(video.getStreams().get(0).getUrl(), startsWith("https://videos.posttv.com/washpost-product"));
+        assertThat(video.getPromoImage().getWidth(), is(800));
     }
 
     /**

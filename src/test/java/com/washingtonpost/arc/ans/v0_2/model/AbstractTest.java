@@ -13,10 +13,17 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import nl.jqno.equalsverifier.EqualsVerifier;
+import nl.jqno.equalsverifier.Warning;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.not;
+import static org.hamcrest.CoreMatchers.nullValue;
+import static org.hamcrest.MatcherAssert.assertThat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import static org.junit.Assert.fail;
 import org.junit.Before;
+import org.junit.Test;
 
 /**
  * <p>Helper/common methods for JSON schema/test validation</p>
@@ -103,6 +110,28 @@ public abstract class AbstractTest<T> {
         return (T)objectMapper.readValue(url, getTargetClass());
     }
 
+    /**
+     * This tests that the .equals() and .hashCode() method of our classes all work as per the contract
+     */
+    @Test
+    public void testEqualsAndHashCode() {
+        if (!getTargetClass().isInterface()) {
+            EqualsVerifier.forClass(getTargetClass())
+                    .suppress(Warning.STRICT_INHERITANCE, Warning.NONFINAL_FIELDS)
+                    .verify();
+        }
+    }
+
+    /**
+     * @throws InstantiationException
+     * @throws java.lang.IllegalAccessException
+     */
+    @Test
+    public void testToString() throws InstantiationException, IllegalAccessException {
+        if (!getTargetClass().isInterface()) {
+            assertThat(getTargetClass().newInstance().toString(), is(not(nullValue())));
+        }
+    }
 
     /**
      * Assumes a date format of RFC3339 and parses the string into a date object

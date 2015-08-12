@@ -158,24 +158,35 @@ public class Content implements TraitGuid, TraitDated, TraitCredited, TraitLocal
 
     @Override
     public boolean equals(Object other) {
-        if (other == this) {
-            return true;
+        boolean result = false;
+
+        if (other instanceof Content) {
+            Content that = (Content) other;
+            result = that.canEqual(this)
+                    && new EqualsBuilder()
+                    .append(guid, that.guid)
+                    .append(createdDate, that.createdDate)
+                    .append(lastUpdatedDate, that.lastUpdatedDate)
+                    .append(credits, that.credits)
+                    .append(language, that.language)
+                    .append(location, that.location)
+                    .append(geo, that.geo)
+                    .append(address, that.address)
+                    .append(copyright, that.copyright)
+                    .append(additionalProperties, that.additionalProperties)
+                    .isEquals();
         }
-        if ((other instanceof Content) == false) {
-            return false;
-        }
-        Content rhs = ((Content) other);
-        return new EqualsBuilder()
-                .append(guid, rhs.guid)
-                .append(createdDate, rhs.createdDate)
-                .append(lastUpdatedDate, rhs.lastUpdatedDate)
-                .append(credits, rhs.credits)
-                .append(language, rhs.language)
-                .append(location, rhs.location)
-                .append(geo, rhs.geo)
-                .append(address, rhs.address)
-                .append(copyright, rhs.copyright)
-                .append(additionalProperties, rhs.additionalProperties)
-                .isEquals();
+        return result;
+    }
+
+    /**
+     * See http://www.artima.com/lejava/articles/equality.html for why we're doing this (it's essentially required at all levels
+     * of a heirarchy to make the .equals() reflexivity property work.
+     *
+     * @param other The object we're being compared against
+     * @return true, if it's an instanceof this class type
+     */
+    public boolean canEqual(Object other) {
+        return (other instanceof Content);
     }
 }

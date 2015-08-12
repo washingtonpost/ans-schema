@@ -1,5 +1,7 @@
 package com.washingtonpost.arc.ans.v0_2.model;
 
+import nl.jqno.equalsverifier.EqualsVerifier;
+import nl.jqno.equalsverifier.Warning;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.startsWith;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -19,6 +21,15 @@ public class TestStory extends AbstractTest<Story> {
     @Override
     Class getTargetClass() {
         return Story.class;
+    }
+
+    @Test
+    @Override
+    public void testEqualsAndHashCode() {
+        EqualsVerifier.forClass(getTargetClass())
+                .suppress(Warning.STRICT_INHERITANCE, Warning.NONFINAL_FIELDS)
+                .withRedefinedSuperclass()
+                .verify();
     }
 
     @Test
@@ -68,6 +79,7 @@ public class TestStory extends AbstractTest<Story> {
         assertThat(story.getDisplayDate(), is(date("2015-06-25T09:50:50.52Z")));
         assertThat(story.getHtml(), startsWith("<article itemprop="));
         assertThat(story.getEditorNote(), startsWith("This URL earlier linked to a post"));
+        assertThat(story.getStatus(), is("published"));
     }
 
     /**

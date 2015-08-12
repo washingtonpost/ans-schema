@@ -1,12 +1,6 @@
 
 package com.washingtonpost.arc.ans.v0_2.model;
 
-import java.util.HashMap;
-import java.util.Map;
-import javax.annotation.Generated;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -31,8 +25,6 @@ public class Geo {
     private Double latitude;
     @JsonProperty("longitude")
     private Double longitude;
-    @JsonIgnore
-    private final Map<String, Object> additionalProperties = new HashMap<>();
 
     /**
      * 
@@ -79,19 +71,9 @@ public class Geo {
         return ToStringBuilder.reflectionToString(this);
     }
 
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
-
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(latitude).append(longitude).append(additionalProperties).toHashCode();
+        return new HashCodeBuilder().append(latitude).append(longitude).toHashCode();
     }
 
     @Override
@@ -103,7 +85,7 @@ public class Geo {
             return false;
         }
         Geo rhs = ((Geo) other);
-        return new EqualsBuilder().append(latitude, rhs.latitude).append(longitude, rhs.longitude).append(additionalProperties, rhs.additionalProperties).isEquals();
+        return new EqualsBuilder().append(latitude, rhs.latitude).append(longitude, rhs.longitude).isEquals();
     }
 
 }

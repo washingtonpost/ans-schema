@@ -25,6 +25,7 @@ public class TestVideoStream extends AbstractTest<VideoStream> {
         testJsonValidation("video-stream-fixture-good", true);
         VideoStream videoStream = testClassSerialization("video-stream-fixture-good");
         assertThat(videoStream.getAudioCodec(), is("mpeg-3"));
+        assertThat(videoStream.getVideoCodec(), is("mpeg-4"));
         assertThat(videoStream.getBitrate(), is(600));
         assertThat(videoStream.getFilesize(), is(4443944L));
         assertThat(videoStream.getHeight(), is(360));
@@ -33,6 +34,5 @@ public class TestVideoStream extends AbstractTest<VideoStream> {
                 + "20150701/55944729e4b082c8417f4483/55944904e4b0ef3ccc0da042_t_1435781395718_mobile.m3u8"));
         assertThat(videoStream.getProvider(), is("elastictranscoder"));
         assertThat(videoStream.getType(), is("ts"));
-
     }
 }

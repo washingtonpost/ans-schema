@@ -1,6 +1,10 @@
 package com.washingtonpost.arc.ans.v0_2.model;
 
+import nl.jqno.equalsverifier.EqualsVerifier;
+import nl.jqno.equalsverifier.Warning;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.not;
+import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 import org.junit.Test;
 
@@ -29,5 +33,14 @@ public class TestVideoSubtitles extends AbstractTest<VideoSubtitles> {
         assertThat(videoSubtitles.getUrls().get(0).getFormat(), is("DFXP"));
         assertThat(videoSubtitles.getUrls().get(0).getUrl(), is("https://closedcaptions.posttv.com/06-30-2015/5592c09fe4"
                 + "b082c8417f3f72_5592c013e4b082c8417f3f71/t_1435683757146.dfxp"));
+
+        assertThat(videoSubtitles.getUrls().get(0).toString(), is(not(nullValue())));
+    }
+
+    @Test
+    public void testVideoSubtitleUrlEqualsAndHashCode() {
+        EqualsVerifier.forClass(VideoSubtitleUrl.class)
+                    .suppress(Warning.STRICT_INHERITANCE, Warning.NONFINAL_FIELDS)
+                    .verify();
     }
 }

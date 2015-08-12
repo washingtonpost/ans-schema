@@ -197,4 +197,8 @@ public class Video extends Media {
                 .isEquals();
     }
 
+    @Override
+    public boolean canEqual(Object other) {
+        return (other instanceof Video);
+    }
 }

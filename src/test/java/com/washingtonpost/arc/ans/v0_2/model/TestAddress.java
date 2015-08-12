@@ -32,6 +32,16 @@ public class TestAddress extends AbstractTest<Address> {
     }
 
     @Test
+    public void testAddressWithPoBox() throws Exception {
+        testJsonValidation("address-fixture-good-2", true);
+        Address address = testClassSerialization("address-fixture-good-2");
+        assertThat(address.getStreetAddress(), is("10 Downing Street"));
+        assertThat(address.getRegion(), is("London"));
+        assertThat(address.getPostOfficeBox(), is("109101"));
+        assertThat(address.getAdditionalProperties().get("foo"), is("bar"));
+    }
+
+    @Test
     public void testAddressBadMissingName() throws Exception {
         testJsonValidation("address-fixture-bad-po-box", false);
     }

@@ -294,4 +294,9 @@ public class Story extends Content {
                 .appendSuper(super.equals(other))
                 .isEquals();
     }
+
+    @Override
+    public boolean canEqual(Object other) {
+        return (other instanceof Story);
+    }
 }

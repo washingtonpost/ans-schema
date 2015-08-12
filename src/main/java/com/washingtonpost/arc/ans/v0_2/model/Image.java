@@ -139,4 +139,9 @@ public class Image extends Media {
                 .appendSuper(super.equals(other))
                 .isEquals();
     }
+
+    @Override
+    public boolean canEqual(Object other) {
+        return (other instanceof Image);
+    }
 }

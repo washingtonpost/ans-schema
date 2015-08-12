@@ -1,5 +1,7 @@
 package com.washingtonpost.arc.ans.v0_2.model;
 
+import nl.jqno.equalsverifier.EqualsVerifier;
+import nl.jqno.equalsverifier.Warning;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import org.junit.Test;
@@ -18,6 +20,15 @@ public class TestImage extends AbstractTest<Image> {
     @Override
     Class getTargetClass() {
         return Image.class;
+    }
+
+    @Test
+    @Override
+    public void testEqualsAndHashCode() {
+        EqualsVerifier.forClass(getTargetClass())
+                .suppress(Warning.STRICT_INHERITANCE, Warning.NONFINAL_FIELDS)
+                .withRedefinedSuperclass()
+                .verify();
     }
 
     @Test

@@ -84,4 +84,8 @@ public class Media extends Content {
                 .isEquals();
     }
 
+    @Override
+    public boolean canEqual(Object other) {
+        return (other instanceof Media);
+    }
 }

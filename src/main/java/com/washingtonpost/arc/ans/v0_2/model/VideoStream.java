@@ -1,11 +1,6 @@
 
 package com.washingtonpost.arc.ans.v0_2.model;
 
-import java.util.HashMap;
-import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -88,8 +83,6 @@ public class VideoStream {
      */
     @JsonProperty("provider")
     private String provider;
-    @JsonIgnore
-    private final Map<String, Object> additionalProperties = new HashMap<>();
 
     /**
      * The height of the video.
@@ -294,16 +287,6 @@ public class VideoStream {
         return ToStringBuilder.reflectionToString(this);
     }
 
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
-
     @Override
     public int hashCode() {
         return new HashCodeBuilder()
@@ -316,7 +299,6 @@ public class VideoStream {
                 .append(url)
                 .append(bitrate)
                 .append(provider)
-                .append(additionalProperties)
                 .toHashCode();
     }
 
@@ -339,7 +321,6 @@ public class VideoStream {
                 .append(url, rhs.url)
                 .append(bitrate, rhs.bitrate)
                 .append(provider, rhs.provider)
-                .append(additionalProperties, rhs.additionalProperties)
                 .isEquals();
     }
 

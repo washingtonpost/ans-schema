@@ -98,5 +98,4 @@ public class VideoSubtitleUrl {
                 .append(url, rhs.url)
                 .isEquals();
     }
-
 }
