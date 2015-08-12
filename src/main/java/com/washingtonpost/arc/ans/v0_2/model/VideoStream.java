@@ -39,19 +39,19 @@ public class VideoStream {
      * 
      */
     @JsonProperty("height")
-    private Double height;
+    private int height;
     /**
      * The width of the video.
      * 
      */
     @JsonProperty("width")
-    private Double width;
+    private int width;
     /**
      * The size of the video, in bytes.
      * 
      */
     @JsonProperty("filesize")
-    private Double filesize;
+    private long filesize;
     /**
      * The audio codec.
      * 
@@ -81,7 +81,7 @@ public class VideoStream {
      * 
      */
     @JsonProperty("bitrate")
-    private Double bitrate;
+    private int bitrate;
     /**
      * The provider of the video.
      * 
@@ -98,7 +98,7 @@ public class VideoStream {
      *     The height
      */
     @JsonProperty("height")
-    public Double getHeight() {
+    public int getHeight() {
         return height;
     }
 
@@ -109,7 +109,7 @@ public class VideoStream {
      *     The height
      */
     @JsonProperty("height")
-    public void setHeight(Double height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 
@@ -120,7 +120,7 @@ public class VideoStream {
      *     The width
      */
     @JsonProperty("width")
-    public Double getWidth() {
+    public int getWidth() {
         return width;
     }
 
@@ -131,7 +131,7 @@ public class VideoStream {
      *     The width
      */
     @JsonProperty("width")
-    public void setWidth(Double width) {
+    public void setWidth(int width) {
         this.width = width;
     }
 
@@ -141,8 +141,8 @@ public class VideoStream {
      * @return
      *     The filesize
      */
-    @JsonProperty("filesize")
-    public Double getFilesize() {
+    @JsonProperty("fileSize")
+    public long getFilesize() {
         return filesize;
     }
 
@@ -152,8 +152,8 @@ public class VideoStream {
      * @param filesize
      *     The filesize
      */
-    @JsonProperty("filesize")
-    public void setFilesize(Double filesize) {
+    @JsonProperty("fileSize")
+    public void setFilesize(long filesize) {
         this.filesize = filesize;
     }
 
@@ -252,7 +252,7 @@ public class VideoStream {
      *     The bitrate
      */
     @JsonProperty("bitrate")
-    public Double getBitrate() {
+    public int getBitrate() {
         return bitrate;
     }
 
@@ -263,7 +263,7 @@ public class VideoStream {
      *     The bitrate
      */
     @JsonProperty("bitrate")
-    public void setBitrate(Double bitrate) {
+    public void setBitrate(int bitrate) {
         this.bitrate = bitrate;
     }
 

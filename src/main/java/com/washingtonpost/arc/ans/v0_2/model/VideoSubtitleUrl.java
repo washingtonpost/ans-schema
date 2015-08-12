@@ -1,11 +1,6 @@
 
 package com.washingtonpost.arc.ans.v0_2.model;
 
-import java.util.HashMap;
-import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -32,8 +27,7 @@ public class VideoSubtitleUrl {
      */
     @JsonProperty("url")
     private String url;
-    @JsonIgnore
-    private final Map<String, Object> additionalProperties = new HashMap<>();
+
 
     /**
      * The format of the subtitles (e.g. SRT, DFXP, WEB_VTT, etc)
@@ -84,19 +78,10 @@ public class VideoSubtitleUrl {
         return ToStringBuilder.reflectionToString(this);
     }
 
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(format).append(url).append(additionalProperties).toHashCode();
+        return new HashCodeBuilder().append(format).append(url).toHashCode();
     }
 
     @Override
@@ -111,7 +96,6 @@ public class VideoSubtitleUrl {
         return new EqualsBuilder()
                 .append(format, rhs.format)
                 .append(url, rhs.url)
-                .append(additionalProperties, rhs.additionalProperties)
                 .isEquals();
     }
 

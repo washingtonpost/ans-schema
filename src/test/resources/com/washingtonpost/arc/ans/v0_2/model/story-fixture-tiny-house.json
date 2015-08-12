@@ -2,7 +2,7 @@
     "guid": "f8f706f0-0acc-11e5-9e39-0db921c47b93",
     "created_date": "2015-07-02T09:50:50.52Z",
     "last_updated_date": "2015-07-02T09:55:00.0Z",
-    "credit": [
+    "credits": [
         {
             "name": "Nina Patel",
             "role": "By",
@@ -35,7 +35,7 @@
         {
             "guid": "unique ANS id",
             "created_date": "2015-06-25T09:50:50.52Z",
-            "credit": [
+            "credits": [
                 {
                     "name": "Ansel Adams",
                     "role": "Photographer"

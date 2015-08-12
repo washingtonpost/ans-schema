@@ -24,7 +24,7 @@ public class Video extends Media {
     @JsonProperty("duration")
     private long duration;
 
-    @JsonProperty("string")
+    @JsonProperty("transcript")
     private String transcript;
 
     @JsonProperty("rating")

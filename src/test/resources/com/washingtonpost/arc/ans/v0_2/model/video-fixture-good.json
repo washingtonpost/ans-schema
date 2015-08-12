@@ -1,7 +1,7 @@
-{
+    {
     "guid": "unique ANS id",
     "created_date": "2015-06-25T09:50:50.52Z",
-    "credit": [
+    "credits": [
         {
             "name": "Bruce Harris",
             "role": "sailingshack.com"
@@ -19,8 +19,6 @@
     },
     "copyright": "(c) 2015, The Washington Post, Inc",
     "url": "https://www.youtube.com/watch?v=iZ-nBDcMlWs",
-    "width": 800,
-    "height": 640,
     "taxonomy": {
         "keywords": [
             {

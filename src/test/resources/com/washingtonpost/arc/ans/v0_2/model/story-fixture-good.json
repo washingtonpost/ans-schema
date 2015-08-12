@@ -2,7 +2,7 @@
     "guid": "unique ANS id",
     "created_date": "2015-06-24T09:50:50.52Z",
     "last_updated_date": "2015-06-24T09:50:50.52Z",
-    "credit": [
+    "credits": [
         {
             "name": "Bob Woodward",
             "role": "Author",
@@ -37,7 +37,7 @@
         {
             "guid": "unique ANS id",
             "created_date": "2015-06-25T09:50:50.52Z",
-            "credit": [
+            "credits": [
                 {
                     "name": "Ansel Adams",
                     "role": "Photographer"

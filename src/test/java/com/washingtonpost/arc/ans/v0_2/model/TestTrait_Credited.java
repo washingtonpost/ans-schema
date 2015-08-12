@@ -6,20 +6,25 @@ import org.junit.Test;
  * <p>Tests that JSON we expect to be a valid "trait_credited" data file serializes correctly and validates
  * against the JSON schema</p>
  */
-public class TestTrait_Credited extends AbstractTest {
+public class TestTrait_Credited extends AbstractTest<TraitCredited> {
     
     @Override
     String getSchemaName() {
         return "trait_credited";
     }
 
+    @Override
+    Class getTargetClass() {
+        return TraitCredited.class;
+    }
+
     @Test
     public void testTraitCreditedGood() throws Exception {
-        runTest("trait-credited-fixture-good", true);
+        testJsonValidation("trait-credited-fixture-good", true);
     }
 
     @Test
     public void testTraitCreditBadMissingCredit() throws Exception {
-        runTest("trait-credited-fixture-bad-missing-credit", false);
+        testJsonValidation("trait-credited-fixture-bad-missing-credit", false);
     }
 }
