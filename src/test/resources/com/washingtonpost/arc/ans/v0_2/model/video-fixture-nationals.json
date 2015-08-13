@@ -1,5 +1,5 @@
 {
-    "guid": "5592c09fe4b082c8417f3f72",
+    "_id": "5592c09fe4b082c8417f3f72",
     "created_date": "2015-06-25T09:50:50.52Z",
     "location": "Washington, D.C.",
     "geo": {
@@ -133,7 +133,7 @@
             "provider": "elastictranscoder"
         }],
     "promo_image": {
-        "guid": "5592c09fe4b082c8417f3f72",
+        "_id": "5592c09fe4b082c8417f3f72",
         "created_date": "2015-07-01T09:50:50.52Z",
         "location": "Washington, D.C.",
         "url": "http://s3.amazonaws.com/posttv-thumbnails-prod/thumbnails/5592c09fe4b082c8417f3f72/fullshow_0630.jpg",

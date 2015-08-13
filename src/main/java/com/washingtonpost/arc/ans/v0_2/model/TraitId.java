@@ -12,26 +12,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * 
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public interface TraitGuid {
+public interface TraitId {
 
     /**
      * A globally unique identifier of the content in the ANS repository.
      * (Required)
      * 
-     * @return
-     *     The guid
+     * @return The globally unique ID
      */
-    @JsonProperty("guid")
-    public String getGuid();
+    @JsonProperty("_id")
+    public String getId();
 
     /**
      * A globally unique identifier of the content in the ANS repository.
      * (Required)
      * 
-     * @param guid
-     *     The guid
+     * @param id  The globally unique ID
      */
-    @JsonProperty("guid")
-    public void setGuid(String guid);
+    @JsonProperty("_id")
+    public void setId(String id);
 
 }

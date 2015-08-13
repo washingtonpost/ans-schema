@@ -1,5 +1,5 @@
 {
-    "guid": "unique ANS id",
+    "_id": "unique ANS id",
     "created_date": "2015-06-24T09:50:50.52Z",
     "last_updated_date": "2015-06-24T09:50:50.52Z",
     "credits": [
@@ -30,12 +30,12 @@
     "description": "A Vienna man went in for a colonoscopy and intended to record his doctor",
     "related_content": [
         {
-            "guid": "some other unique ANS id"
+            "_id": "some other unique ANS id"
         }
     ],
     "promo_images": [
         {
-            "guid": "unique ANS id",
+            "_id": "unique ANS id",
             "created_date": "2015-06-25T09:50:50.52Z",
             "credits": [
                 {

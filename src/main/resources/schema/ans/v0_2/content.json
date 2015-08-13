@@ -6,7 +6,7 @@
     "type": "object",
     "allOf": [
         {
-            "$ref": "trait_guid.json",
+            "$ref": "trait_id.json",
             "$ref": "trait_dated.json",
             "$ref": "trait_credited.json",
             "$ref": "trait_locale.json",

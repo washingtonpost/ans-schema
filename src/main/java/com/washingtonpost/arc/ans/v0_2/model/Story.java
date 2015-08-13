@@ -38,7 +38,7 @@ public class Story extends Content {
     private String status;
 
     @JsonProperty("related_content")
-    private List<Guid> relatedContent;
+    private List<Id> relatedContent;
 
     @JsonProperty("promo_images")
     private List<Image> promoImages;
@@ -143,16 +143,16 @@ public class Story extends Content {
     }
 
     /**
-     * @return A list of GUIDs referencing other content items this story is related to.
+     * @return A list of IDs referencing other content items this story is related to.
      */
-    public List<Guid> getRelatedContent() {
+    public List<Id> getRelatedContent() {
         return relatedContent;
     }
 
     /**
-     * @param relatedContent A list of GUIDs referencing other content items this story is related to.
+     * @param relatedContent A list of IDs referencing other content items this story is related to.
      */
-    public void setRelatedContent(List<Guid> relatedContent) {
+    public void setRelatedContent(List<Id> relatedContent) {
         this.relatedContent = relatedContent;
     }
 

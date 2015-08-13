@@ -36,7 +36,7 @@ public class TestStory extends AbstractTest<Story> {
     public void testStoryGood() throws Exception {
         testJsonValidation("story-fixture-good", true);
         Story story = testClassSerialization("story-fixture-good");
-        assertThat(story.getGuid(), is("unique ANS id"));
+        assertThat(story.getId(), is("unique ANS id"));
         assertThat(story.getCreatedDate(), is(date("2015-06-24T09:50:50.52Z")));
         assertThat(story.getLastUpdatedDate(), is(date("2015-06-24T09:50:50.52Z")));
         assertThat(story.getCredits().size(), is(1));
@@ -60,10 +60,10 @@ public class TestStory extends AbstractTest<Story> {
         assertThat(story.getHeadline(), is("The default headline for this story"));
         assertThat(story.getDescription(), is("A Vienna man went in for a colonoscopy and intended to record his doctor"));
         assertThat(story.getRelatedContent().size(), is(1));
-        assertThat(story.getRelatedContent().get(0).getGuid(), is("some other unique ANS id"));
+        assertThat(story.getRelatedContent().get(0).getId(), is("some other unique ANS id"));
         assertThat(story.getPromoImages().size(), is(1));
         Image promoImage = story.getPromoImages().get(0);
-        assertThat(promoImage.getGuid(), is("unique ANS id"));
+        assertThat(promoImage.getId(), is("unique ANS id"));
         assertThat(promoImage.getCreatedDate(), is(date("2015-06-25T09:50:50.52Z")));
         assertThat(promoImage.getCredits().get(0).getName(), is("Ansel Adams"));
         assertThat(promoImage.getCredits().get(0).getRole(), is("Photographer"));
