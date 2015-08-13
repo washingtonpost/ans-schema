@@ -19,9 +19,9 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  *
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Content implements TraitGuid, TraitDated, TraitCredited, TraitLocale, TraitLocated, TraitCopyrighted {
+public class Content implements TraitId, TraitDated, TraitCredited, TraitLocale, TraitLocated, TraitCopyrighted {
 
-    private String guid;
+    private String id;
     private Date createdDate;
     private Date lastUpdatedDate;
     private List<Credit> credits;
@@ -36,13 +36,13 @@ public class Content implements TraitGuid, TraitDated, TraitCredited, TraitLocal
 
 
     @Override
-    public String getGuid() {
-        return this.guid;
+    public String getId() {
+        return this.id;
     }
 
     @Override
-    public void setGuid(String guid) {
-        this.guid = guid;
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Override
@@ -143,7 +143,7 @@ public class Content implements TraitGuid, TraitDated, TraitCredited, TraitLocal
     @Override
     public int hashCode() {
         return new HashCodeBuilder()
-                .append(guid)
+                .append(id)
                 .append(createdDate)
                 .append(lastUpdatedDate)
                 .append(credits)
@@ -164,7 +164,7 @@ public class Content implements TraitGuid, TraitDated, TraitCredited, TraitLocal
             Content that = (Content) other;
             result = that.canEqual(this)
                     && new EqualsBuilder()
-                    .append(guid, that.guid)
+                    .append(id, that.id)
                     .append(createdDate, that.createdDate)
                     .append(lastUpdatedDate, that.lastUpdatedDate)
                     .append(credits, that.credits)

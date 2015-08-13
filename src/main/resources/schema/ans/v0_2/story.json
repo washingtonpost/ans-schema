@@ -34,9 +34,9 @@
                 "related_content": {
                     "type": "array",
                     "items": {
-                        "$ref": "trait_guid.json"
+                        "$ref": "trait_id.json"
                     },
-                    "description": "A list of GUIDs referencing other content items this story is related to."
+                    "description": "A list of IDs referencing other content items this story is related to."
                 },
                 "promo_images": {
                     "type": "array",

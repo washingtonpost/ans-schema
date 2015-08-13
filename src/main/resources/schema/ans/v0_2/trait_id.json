@@ -1,12 +1,12 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_2/trait_guid.json",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_2/trait_id.json",
     "title": "Globally Unique ID trait",
     "description": "Trait that applies a globally unique id.",
     "type": "object",
-    "required": ["guid"],
+    "required": ["_id"],
     "properties": {
-        "guid": {
+        "_id": {
             "description": "A globally unique identifier of the content in the ANS repository.",
             "type": "string"
         }

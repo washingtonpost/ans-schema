@@ -1,5 +1,5 @@
 {
-    "guid": "unique ANS id",
+    "_id": "unique ANS id",
     "created_date": "2015-06-24T09:50:50.52Z",
     "last_updated_date": "2015-06-24T09:50:50.52Z",
     "credits": [

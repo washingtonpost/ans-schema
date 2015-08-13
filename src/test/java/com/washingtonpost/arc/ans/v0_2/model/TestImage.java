@@ -35,7 +35,7 @@ public class TestImage extends AbstractTest<Image> {
     public void testImageGood() throws Exception {
         testJsonValidation("image-fixture-good", true);
         Image image = testClassSerialization("image-fixture-good");
-        assertThat(image.getGuid(), is("unique ANS id"));
+        assertThat(image.getId(), is("unique ANS id"));
         assertThat(image.getCreatedDate(), is(date("2015-06-25T09:50:50.52Z")));
         assertThat(image.getCredits().size(), is(1));
         assertThat(image.getCredits().get(0).getName(), is("Ansel Adams"));
