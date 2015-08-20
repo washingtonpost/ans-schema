@@ -105,6 +105,7 @@ public abstract class AbstractTest<T> {
         }
     }
 
+    @SuppressWarnings("unchecked")
     T testClassSerialization(String fixture) throws Exception {
         URL url = getSisterPathResource(fixture);
         return (T)objectMapper.readValue(url, getTargetClass());
@@ -114,6 +115,7 @@ public abstract class AbstractTest<T> {
      * This tests that the .equals() and .hashCode() method of our classes all work as per the contract
      */
     @Test
+    @SuppressWarnings("unchecked")
     public void testEqualsAndHashCode() {
         if (!getTargetClass().isInterface()) {
             EqualsVerifier.forClass(getTargetClass())

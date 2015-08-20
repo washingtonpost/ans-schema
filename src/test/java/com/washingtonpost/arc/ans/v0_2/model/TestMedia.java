@@ -24,6 +24,7 @@ public class TestMedia extends AbstractTest<Media> {
 
     @Test
     @Override
+    @SuppressWarnings("unchecked")
     public void testEqualsAndHashCode() {
         EqualsVerifier.forClass(getTargetClass())
                 .suppress(Warning.STRICT_INHERITANCE, Warning.NONFINAL_FIELDS)

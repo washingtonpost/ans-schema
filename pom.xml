@@ -5,13 +5,13 @@
 
     <parent>
         <groupId>com.washingtonpost</groupId>
-        <artifactId>wp-parent-pom</artifactId>
-        <version>1.2.1</version>
+        <artifactId>wp-oss-parent-pom</artifactId>
+        <version>0.0.6</version>
     </parent>
 
     <groupId>com.washingtonpost.arc.ans</groupId>
     <artifactId>ans-schema</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.2.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>ans-schema</name>
@@ -23,13 +23,9 @@
     </scm>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <version.commons.lang>3.4</version.commons.lang>
         <version.equalsverifier>1.7.3</version.equalsverifier>
-        <version.maven.compiler>3.1</version.maven.compiler>
-        <version.jacoco>0.7.4.201502262128</version.jacoco>
         <version.jackson>2.5.3</version.jackson>
-        <version.java>1.8</version.java>
         <version.json.schema.validator>2.2.6</version.json.schema.validator>
         <version.junit>4.12</version.junit>
         <version.slf4j>1.7.10</version.slf4j>
@@ -38,18 +34,8 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${version.maven.compiler}</version>
-                <configuration>
-                    <source>${version.java}</source>
-                    <target>${version.java}</target>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>${version.jacoco}</version>
                 <executions>
                     <execution>
                         <id>default-prepare-agent</id>
