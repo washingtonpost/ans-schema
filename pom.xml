@@ -9,7 +9,7 @@
 
     <groupId>com.washingtonpost.arc.ans</groupId>
     <artifactId>ans-schema</artifactId>
-    <version>0.2.0</version>
+    <version>0.3.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>ans-schema</name>
@@ -17,7 +17,7 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:washingtonpost/ans-schema.git</developerConnection>
-        <tag>0.2.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <properties>
