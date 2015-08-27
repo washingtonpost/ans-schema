@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/taxonomy.json",
+    "title": "Taxonomy",
+    "description": "Holds the collection of metadata, keywords, etc that describe content.",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "keywords": {
+            "type": "array",
+            "items": {
+                "$ref": "keyword.json"
+            },
+            "description": "A list of keywords."
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/credit.json",
+    "title": "Credit for a piece of content.",
+    "description": "Models attribution to an individual or group for contribution towards some content item.",
+    "type": "object",
+    "required": ["name", "role"],
+    "additionalProperties": false,
+    "properties": {
+        "name": {
+            "description": "The name of contributor.",
+            "type": "string"
+        },
+        "org": {
+            "description": "The (optional) organization the contributor belongs to.",
+            "type": "string"
+        },
+        "role": {
+            "description": "The role the contributor played in the content.",
+            "type": "string"
+        },
+        "image": {
+            "description": "An image of the contributor.",
+            "$ref": "image.json"
+        },
+        "description": {
+            "description": "A description/short bio of the contributor.",
+            "type": "string"
+        },
+        "url": {
+            "description": "A url to some deeper set of information about the contributor.",
+            "type": "string"
+        },
+        "social_links": {
+            "description": "A list of social links (twitter, facebook, etc) for this contributor.",
+            "type": "array",
+            "items" : {
+                "$ref": "social.json"
+            }
+        }
+    }
+}

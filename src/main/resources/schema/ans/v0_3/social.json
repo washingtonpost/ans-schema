@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/social.json",
+    "description": "A tuple of social media information (e.g. Facebook url, Twitter handle, etc)",
+    "type": "object",
+    "properties": {
+        "site": {
+            "description": "The name of the social media site (e.g. twitter, facebook, etc)",
+            "type": "string"
+        },
+        "url": {
+            "description": "The profile/account page to link to on the site",
+            "type": "string"
+        }
+    }
+}

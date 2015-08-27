@@ -1,0 +1,14 @@
+{
+    "location": "Washington, D.C.",
+    "geo": {
+        "latitude": 38.9047,
+        "longitude": -77.0164
+    },
+    "address": {
+        "street-address": "1600 Pennsylvania Ave",
+        "extended-address": "West Wing",
+        "locality": "Washington, D.C.",
+        "postal-code": "20002",
+        "country-name": "USA"
+    }
+}
