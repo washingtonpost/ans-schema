@@ -1,0 +1,4 @@
+{
+    "keyword": "This should fail because frequency is an integer, not a number",
+    "frequency": 0.5
+}

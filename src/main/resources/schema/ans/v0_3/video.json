@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/video.json",
+    "title": "A video.",
+    "description": "Holds attributes of an ANS video component.",
+    "type": "object",
+    "allOf": [{
+            "$ref": "media.json",
+            "properties": {
+                "description": {
+                    "description": "Description for the video.",
+                    "type": "string"
+                },
+                "duration": {
+                    "description": "Runtime of the video in milliseconds.",
+                    "type": "number"
+                },
+                "transcript": {
+                    "description": "A transcript of the contents of the video.",
+                    "type" : "string"
+                },
+                "rating": {
+                    "description": "A rating of the video, to be used for appropriate age/content warnings.",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "The type of video (e.g. clip, livestream, etc)",
+                    "type": "string"
+                },
+                "youtubeContentId": {
+                    "description": "The YouTube ID of the content, if (re)hosted on youtube.com",
+                    "type": "string"
+                },
+                "streams": {
+                    "description": "The different streams this video can play in.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "video-stream.json"
+                    }
+                },
+                "promo_image": {
+                    "$ref": "image.json",
+                    "description": "A promo/leader image to the video."
+                }
+                
+            }
+        }
+    ]
+}

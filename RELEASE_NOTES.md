@@ -4,7 +4,7 @@
 
 * Under development
 * Provides a new ANS top-level class/schema to enable Story objects to refer to Lists<ANS> instead of just an HTML String blob
-* Implements new types of ANS content like Paragraph, Blockquote, etc
+* Implements new types of ANS content like Text, Blockquote, etc
 
 ## 0.2.0 2015/08/27
 

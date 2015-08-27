@@ -1,0 +1,10 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/geo.json",
+    "description": "A geographical coordinate",
+    "type": "object",
+    "properties": {
+        "latitude": { "type": "number" },
+        "longitude": { "type": "number" }
+    }
+}

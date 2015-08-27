@@ -4,7 +4,7 @@
     <parent>
         <groupId>com.washingtonpost</groupId>
         <artifactId>wp-oss-parent-pom</artifactId>
-        <version>0.0.6</version>
+        <version>0.0.8</version>
     </parent>
 
     <groupId>com.washingtonpost.arc.ans</groupId>

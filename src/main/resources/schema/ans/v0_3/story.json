@@ -1,0 +1,76 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/story.json",
+    "title": "A story.",
+    "description": "Holds attributes of an ANS story.",
+    "type": "object",
+    "allOf": [{
+            "$ref": "content.json",
+            "properties": {
+                "canonical_url": {
+                    "type": "string",
+                    "description": "The fully qualified URL to the story."
+                },
+                "short_url": {
+                    "type": "string",
+                    "description": "A url-shorterned version of the canonical_url."
+                },
+                "title": {
+                    "type": "string",
+                    "description": "The title of the story."
+                },
+                "headline": {
+                    "type": "string",
+                    "description": "The headline for the story."
+                },
+                "description": {
+                    "type": "string",
+                    "description": "A description of the story."
+                },
+                "status": {
+                    "type": "string",
+                    "description": "Optional field to store story workflow related status (e.g. published/embargoed/etc)"
+                },
+                "related_content": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "trait_id.json"
+                    },
+                    "description": "A list of IDs referencing other content items this story is related to."
+                },
+                "promo_images": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "image.json"
+                    },
+                    "description": "List of promotional images to use when highlighting the story."
+                },
+                "taxonomy": {
+                    "$ref": "taxonomy.json",
+                    "description": "A collection of metadata, keywords, etc. describing this story."
+                },
+                "publish_date": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "When the story was first published."
+                },
+                "display_date": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "The RFC3339-formatted dated time of the most recent date the story was (re)displayed on a public site."
+                },
+                "content_elements": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "story_content_element.json"
+                    },
+                    "description": "List of the content elements in this story."
+                },
+                "editor_note": {
+                    "type": "string",
+                    "description": "Additional information to be displayed in/near the story html content from the editor."
+                }
+            }
+        }
+    ]
+}

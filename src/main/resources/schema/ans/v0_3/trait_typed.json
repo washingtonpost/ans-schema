@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/trait_typed.json",
+    "title": "Type trait",
+    "description": "Trait that helps support strongly-typed implementations of this schema.",
+    "type": "object",
+    "required": ["type"],
+    "properties": {
+        "type": {
+            "description": "The concrete type of element the implementing element is.",
+            "type": "string"
+        }
+    }
+}
