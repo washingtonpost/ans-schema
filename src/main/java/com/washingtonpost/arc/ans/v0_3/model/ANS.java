@@ -22,7 +22,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
     @Type(value = Media.class, name = "media"),
     @Type(value = Image.class, name = "image"),
     @Type(value = Video.class, name = "video"),
-    @Type(value = Story.class, name = "story"),
+    @Type(value = Collection.class, name = "story"),
     @Type(value = Text.class, name = "text")})
 public class ANS implements TraitTyped, TraitId {
 

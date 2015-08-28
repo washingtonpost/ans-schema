@@ -7,10 +7,10 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import org.junit.Test;
 
 /**
- * <p>Tests that JSON we expect to be a valid "Story" data file serializes correctly and validates
+ * <p>Tests that JSON we expect to be a valid "Collection" data file serializes correctly and validates
  * against the JSON schema</p>
  */
-public class TestStory extends AbstractANSTest<Story> {
+public class TestStory extends AbstractANSTest<Collection> {
     
     @Override
     String getSchemaName() {
@@ -19,13 +19,13 @@ public class TestStory extends AbstractANSTest<Story> {
 
     @Override
     Class getTargetClass() {
-        return Story.class;
+        return Collection.class;
     }
 
     @Test
     public void testStoryGood() throws Exception {
         testJsonValidation("story-fixture-good", true);
-        Story story = testClassSerialization("story-fixture-good");
+        Collection story = testClassSerialization("story-fixture-good");
         assertThat(story.getId(), is("unique ANS id"));
         assertThat(story.getCreatedDate(), is(date("2015-06-24T09:50:50.52Z")));
         assertThat(story.getLastUpdatedDate(), is(date("2015-06-24T09:50:50.52Z")));

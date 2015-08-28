@@ -8,7 +8,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import org.junit.Test;
 
 /**
- * <p>Tests that JSON we expect to be a valid "Story" data file serializes correctly and validates
+ * <p>Tests that JSON we expect to be a valid "Collection" data file serializes correctly and validates
  * against the JSON schema</p>
  */
 public class TestStory extends AbstractTest<Story> {
