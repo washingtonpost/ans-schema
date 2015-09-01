@@ -26,7 +26,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
     @Type(value = Text.class, name = "text")})
 public class ANS implements TraitTyped, TraitId {
 
-    @JsonProperty("id")
+    @JsonProperty("_id")
     private String id;
     @JsonProperty("type")
     private String type;
