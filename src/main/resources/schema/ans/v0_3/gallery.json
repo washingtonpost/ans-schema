@@ -1,0 +1,11 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/gallery.json",
+    "title": "A gallery.",
+    "description": "Holds attributes of an ANS gallery.",
+    "type": "object",
+    "allOf": [{
+            "$ref": "collection.json"
+        }
+    ]
+}

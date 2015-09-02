@@ -19,11 +19,13 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 @JsonSubTypes({
     @Type(value = ANS.class, name = "ans"),
     @Type(value = Content.class, name = "content"),
-    @Type(value = Media.class, name = "media"),
+    @Type(value = Gallery.class, name = "gallery"),
     @Type(value = Image.class, name = "image"),
-    @Type(value = Video.class, name = "video"),
+    @Type(value = Media.class, name = "media"),
     @Type(value = Story.class, name = "story"),
-    @Type(value = Text.class, name = "text")})
+    @Type(value = Text.class, name = "text"),
+    @Type(value = Video.class, name = "video")
+})
 public class ANS implements TraitTyped, TraitId {
 
     @JsonProperty("_id")

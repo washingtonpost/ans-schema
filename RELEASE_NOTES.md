@@ -5,6 +5,7 @@
 * Under development
 * Provides a new ANS top-level class/schema to enable Story objects to refer to Lists<ANS> instead of just an HTML String blob
 * Implements new types of ANS content like Text, Blockquote, etc
+* Sub-classed empty Story and Gallery class from what *used* to be called Story and is now called Collection.
 
 ## 0.2.0 2015/08/27
 

@@ -6,13 +6,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 /**
- * A story.
+ * A gallery.
  * <p>
- * Holds attributes of an ANS story.
+ * Holds attributes of an ANS gallery.
  *
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Story extends Collection {
+public class Gallery extends Collection {
 
     @Override
     public String toString() {
@@ -31,18 +31,18 @@ public class Story extends Collection {
         if (other == this) {
             return true;
         }
-        if ((other instanceof Story) == false) {
+        if ((other instanceof Gallery) == false) {
             return false;
         }
-        Story that = ((Story) other);
+        Gallery that = ((Gallery) other);
         return that.canEqual(this) &&
                 new EqualsBuilder()
                 .appendSuper(super.equals(other))
                 .isEquals();
     }
-    
+
     @Override
     public boolean canEqual(Object other) {
-        return (other instanceof Story);
+        return (other instanceof Gallery);
     }
 }
