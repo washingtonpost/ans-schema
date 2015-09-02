@@ -276,21 +276,22 @@ public class Collection extends Content {
         if ((other instanceof Collection) == false) {
             return false;
         }
-        Collection rhs = ((Collection) other);
-        return new EqualsBuilder()
-                .append(this.canonicalUrl, rhs.canonicalUrl)
-                .append(this.description, rhs.description)
-                .append(this.displayDate, rhs.displayDate)
-                .append(this.editorNote, rhs.editorNote)
-                .append(this.headline, rhs.headline)
-                .append(this.contentElements, rhs.contentElements)
-                .append(this.promoImages, rhs.promoImages)
-                .append(this.publishDate, rhs.publishDate)
-                .append(this.relatedContent, rhs.relatedContent)
-                .append(this.shortUrl, rhs.shortUrl)
-                .append(this.status, rhs.status)
-                .append(this.taxonomy, rhs.taxonomy)
-                .append(this.title, rhs.title)
+        Collection that = ((Collection) other);
+        return that.canEqual(this) &&
+                new EqualsBuilder()
+                .append(this.canonicalUrl, that.canonicalUrl)
+                .append(this.description, that.description)
+                .append(this.displayDate, that.displayDate)
+                .append(this.editorNote, that.editorNote)
+                .append(this.headline, that.headline)
+                .append(this.contentElements, that.contentElements)
+                .append(this.promoImages, that.promoImages)
+                .append(this.publishDate, that.publishDate)
+                .append(this.relatedContent, that.relatedContent)
+                .append(this.shortUrl, that.shortUrl)
+                .append(this.status, that.status)
+                .append(this.taxonomy, that.taxonomy)
+                .append(this.title, that.title)
                 .appendSuper(super.equals(other))
                 .isEquals();
     }

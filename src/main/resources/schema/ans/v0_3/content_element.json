@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/story_content_element.json",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/content_element.json",
     "title": "A valid content element.",
-    "description": "Lists the schemas we allow as 'content elements' in our story schema.",
+    "description": "Lists the schemas we allow as 'content elements' in our collection schema.",
     "type": "object",
     "oneOf": [
         {

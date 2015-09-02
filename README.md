@@ -23,7 +23,7 @@ Small, self-contained, attributes such as "had copyright" or "had unique id" are
 One can use a variety of third party tools to validate their content against the schema files hosted here on github publicly.
 
 ## Schema Overview
-The ARC Schema is rooted at an "ANS" node that defines an ID and Type field; the ID should be a globally unique identifier to the concrete/subclass instance of content and the Type field should describe to higher-level languages what type of content the concrete instance is (i.e. "collection" or "image")
+The ARC Schema is rooted at an "ANS" node that defines an ID and Type field; the ID should be a globally unique identifier to the concrete/subclass instance of content and the Type field should describe to higher-level languages what type of content the concrete instance is (i.e. "story", "image", "video", etc.)
 
 The hierarchy of content is diagramed here: 
 
@@ -32,7 +32,7 @@ The hierarchy of content is diagramed here:
 ## Examples
 Two examples are provided of content documents that validate against the Washington Post ANS schema:
 
-1. [An Example Story](src/test/resources/com/washingtonpost/arc/ans/v0_3/model/collection-fixture-tiny-house.json)
+1. [An Example Story](src/test/resources/com/washingtonpost/arc/ans/v0_3/model/story-fixture-tiny-house.json)
 2. [An Example Video](src/test/resources/com/washingtonpost/arc/ans/v0_3/model/video-fixture-nationals.json)
 
 ## Contributing
