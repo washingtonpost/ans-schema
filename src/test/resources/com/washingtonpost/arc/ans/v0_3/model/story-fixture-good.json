@@ -1,6 +1,7 @@
 {
     "_id": "unique ANS id",
     "type": "story",
+    "version": "0.3",
     "created_date": "2015-06-24T09:50:50.52Z",
     "last_updated_date": "2015-06-24T09:50:50.52Z",
     "credits": [

@@ -1,6 +1,7 @@
 {
     "_id": "unique ANS id",
     "type": "image",
+    "version": "0.3",
     "created_date": "2015-06-25T09:50:50.52Z",
     "credits": [
         {
