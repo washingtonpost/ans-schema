@@ -7,7 +7,13 @@
     "allOf": [
         {
             "$ref": "trait_id.json",
-            "$ref": "trait_typed.json"
+            "$ref": "trait_typed.json",
+            "properties": {
+                "version": {
+                    "type": "string",
+                    "description": "The ANS Version of this ANS object"
+                }
+            }
         }
     ]
 }

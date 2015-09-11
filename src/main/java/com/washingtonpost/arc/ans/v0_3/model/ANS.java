@@ -32,6 +32,8 @@ public class ANS implements TraitTyped, TraitId {
     private String id;
     @JsonProperty("type")
     private String type;
+    @JsonProperty("version")
+    private String version;
 
     /**
      * @return The globally unique ID of this ANS object
@@ -65,6 +67,21 @@ public class ANS implements TraitTyped, TraitId {
         this.type = type;
     }
 
+    /**
+     * @return version the ANS version of this ANS object
+     */
+    public String getVersion() {
+        return version;
+    }
+
+    /**
+     * @param version the ANS version of this ANS object
+     */
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+
    @Override
     public String toString() {
         return ToStringBuilder.reflectionToString(this);
@@ -75,6 +92,7 @@ public class ANS implements TraitTyped, TraitId {
         return new HashCodeBuilder()
                 .append(id)
                 .append(type)
+                .append(version)
                 .toHashCode();
     }
 
@@ -88,6 +106,7 @@ public class ANS implements TraitTyped, TraitId {
                     && new EqualsBuilder()
                     .append(id, that.id)
                     .append(type, that.type)
+                    .append(version, that.version)
                     .isEquals();
         }
         return result;
