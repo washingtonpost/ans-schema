@@ -26,6 +26,7 @@ public class TestANS extends AbstractTest<Content> {
         ANS ans = testClassSerialization("ans-fixture-good");
         assertThat(ans.getId(), is("1df3t8gh83gh72"));
         assertThat(ans.getType(), is("ans"));
+        assertThat(ans.getVersion(), is("0.3"));
     }
 
     @Test
