@@ -47,8 +47,9 @@ public class TestStory extends AbstractANSTest<Story> {
         assertThat(story.getCanonicalUrl(), is("http://www.washingtonpost.com/local/anesthesiologist-trashes-sedated-"
                 + "patient-jury-orders-her-to-pay-500000/2015/06/23/cae05c00-18f3-11e5-ab92-c75ae6ab94b5_story.html"));
         assertThat(story.getShortUrl(), is("http://wapo.st/1Crp6bY"));
-        assertThat(story.getTitle(), is("He didn\u2019t hear the insults. His phone did."));
-        assertThat(story.getHeadline(), is("The default headline for this story"));
+        assertThat(story.getHeadlines().size(), is(2));
+        assertThat(story.getHeadlines().get(0).getHeadline(), is("The default headline for this story"));
+        assertThat(story.getHeadlines().get(1).getPurpose(), is("twitter"));
         assertThat(story.getDescription(), is("A Vienna man went in for a colonoscopy and intended to record his doctor"));
         assertThat(story.getRelatedContent().size(), is(1));
         assertThat(story.getRelatedContent().get(0).getId(), is("some other unique ANS id"));

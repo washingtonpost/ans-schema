@@ -7,6 +7,7 @@
 * Implements new types of ANS content like Text, Blockquote, etc
 * Sub-classed empty Story and Gallery class from what *used* to be called Story and is now called Collection.
 * Added a "version" property at the root-level ANS object to hold the value of the ANS schema the ANS object conforms to
+* Removing "title" property in favor of just "headline" which now becomes a tuple of (headline, display) to support multiple headline variants for the same story
 
 ## 0.2.0 2015/08/27
 
