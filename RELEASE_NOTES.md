@@ -1,6 +1,9 @@
 # ANS Release Notes
 
-## 0.3.0 TBD
+## 0.4.0 TBD Release Date
+
+
+## 0.3.0 2015/09/14
 
 * Under development
 * Provides a new ANS top-level class/schema to enable Story objects to refer to Lists<ANS> instead of just an HTML String blob
