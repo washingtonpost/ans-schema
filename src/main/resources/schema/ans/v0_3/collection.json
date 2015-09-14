@@ -15,13 +15,12 @@
                     "type": "string",
                     "description": "A url-shorterned version of the canonical_url."
                 },
-                "title": {
-                    "type": "string",
-                    "description": "The title of the story."
-                },
-                "headline": {
-                    "type": "string",
-                    "description": "The headline for the story."
+                "headlines": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "headline.json"
+                    },
+                    "description": "The headline(s) for the story."
                 },
                 "description": {
                     "type": "string",

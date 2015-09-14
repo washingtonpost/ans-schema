@@ -24,8 +24,11 @@
     "copyright": "(c) 2015 The Washington Post, Inc.",
     "canonical_url": "http://www.washingtonpost.com/lifestyle/magazine/tiny-house-big-benefitsfreedom-from-a-mortgage--and-stuff/2015/06/23/f8f706f0-0acc-11e5-9e39-0db921c47b93_story.html",
     "short_url": "http://wapo.st/1Kavaxv",
-    "title": "Tiny house, big benefits:\u2009Freedom from a mortgage and worries \u2014 and stuff",
-    "headline": "Tiny house, big benefits:\u2009Freedom from a mortgage and worries \u2014 and stuff",
+    "headlines": [
+        {
+            "headline": "Tiny house, big benefits:\u2009Freedom from a mortgage and worries \u2014 and stuff"
+        }
+    ],
     "description": "Tiny house, big benefits:\u2009Freedom from a mortgage and worries \u2014 and stuff",
     "related_content": [
         {
