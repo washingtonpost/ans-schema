@@ -2,6 +2,9 @@
 
 ## 0.4.0 TBD Release Date
 
+## 0.3.1 TBD
+
+* Fix bug where the "type" attribute was being deserialized into JSON twice.
 
 ## 0.3.0 2015/09/14
 

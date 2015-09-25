@@ -1,5 +1,6 @@
 package com.washingtonpost.arc.ans.v0_3.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
@@ -30,7 +31,7 @@ public class ANS implements TraitTyped, TraitId {
 
     @JsonProperty("_id")
     private String id;
-    @JsonProperty("type")
+    @JsonIgnore
     private String type;
     @JsonProperty("version")
     private String version;
@@ -52,16 +53,21 @@ public class ANS implements TraitTyped, TraitId {
     }
 
     /**
+     * Use @JsonIgnore here to avoid having 2 "type":"foo" strings in serialized JSON
+     * See https://stackoverflow.com/questions/18237222/duplicate-json-field-with-jackson
      * @return The concrete type of this ANS object
      */
+    @JsonIgnore
     @Override
     public String getType() {
         return type;
     }
 
     /**
+     * Define @JsonProperty("type") here to enable deserialization to save into a field our application code can access
      * @param type The concrete type of this ANS object
      */
+    @JsonProperty("type")
     @Override
     public void setType(String type) {
         this.type = type;

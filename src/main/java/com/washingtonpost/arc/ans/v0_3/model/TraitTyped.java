@@ -1,15 +1,18 @@
 
 package com.washingtonpost.arc.ans.v0_3.model;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 
 /**
- * Trait that helps support strongly-typed implementations of this schema.
- * 
+ * <p>Trait that helps support strongly-typed implementations of this schema.</p>
+ * <p>The implementation of this trait is largely accomplished via the @JsonTypeInfo annotation at the head of the ANS class; by
+ * declaring the serialization tracking variable "type" to be visible, we allow for a human-readable marker of a concrete
+ * type on any subclass of ANS.</p>
+ * <p>NOTE that to avoid the "type" attribute showing up twice in serialized JSON, we must play a couple tricks that aren't
+ * totally obvious:
+ * 1) don't annotate this Trait with any JSON attributes (different from the way other Traits works)
+ * 2) Add @JsonIgnore to all references to the {@code type} attribute or getters, except for the setter {@code setType()} in ANS
+ *
  */
-@JsonInclude(JsonInclude.Include.NON_NULL)
 public interface TraitTyped {
 
     /**
@@ -18,7 +21,6 @@ public interface TraitTyped {
      * 
      * @return The type of the element
      */
-    @JsonProperty("type")
     public String getType();
 
     /**
@@ -27,7 +29,6 @@ public interface TraitTyped {
      * 
      * @param type  The type
      */
-    @JsonProperty("type")
     public void setType(String type);
 
 }

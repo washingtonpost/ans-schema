@@ -35,7 +35,7 @@ public abstract class AbstractTest<T> {
     private static final DateFormat RFC3339 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
     private final JsonSchemaFactory factory = JsonSchemaFactory.byDefault();
     private JsonSchema schema;
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    protected final ObjectMapper objectMapper = new ObjectMapper();
 
 
     /**
