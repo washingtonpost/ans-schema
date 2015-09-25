@@ -1,9 +1,12 @@
 package com.washingtonpost.arc.ans.v0_3.model;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.startsWith;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 /**
@@ -85,6 +88,29 @@ public class TestStory extends AbstractANSTest<Story> {
     public void testStoryTinyHouseGood() throws Exception {
         testJsonValidation("story-fixture-tiny-house", true);
         testClassSerialization("story-fixture-tiny-house");
+    }
+
+    /**
+     * <p>After the 0.3.0 release, we noticed sometimes we'd get JSON blocks of Story objects that had 2 separate "type":"story"
+     * elements in them.  We suspect that's due to there being an explicit Ans.type field with a JSON in addition to the
+     * "JsonTypeInfo" annotation at the class-level.  This test stresses that theory, and then verifies the fix.</p>
+     * <p>The fix, FWIW is: https://stackoverflow.com/questions/18237222/duplicate-json-field-with-jackson</p>
+     * @throws java.lang.Exception
+     */
+    @Test
+    public void testTypeIsNotSavedTwice() throws Exception {
+        Story story = testClassSerialization("story-fixture-good");
+
+        String json = objectMapper.writeValueAsString(story);
+
+        Matcher matcher = Pattern.compile("\"type\":\"story\"").matcher(json);
+
+        int count = 0;
+        while (matcher.find()) {
+            count++;
+        }
+        
+        assertEquals("Expected exactly 1 \"type\":\"story\" field in our JSON, got " + count + " instead", 1, count);
     }
 }
 
