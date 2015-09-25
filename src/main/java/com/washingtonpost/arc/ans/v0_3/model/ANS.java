@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.washingtonpost.arc.ans.ANSVersion;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -29,12 +30,16 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 })
 public class ANS implements TraitTyped, TraitId {
 
+    // Globally unique ID
     @JsonProperty("_id")
     private String id;
+    
+    // The runtime type of this object (see getter/setter for implementation details)
     @JsonIgnore
     private String type;
+
     @JsonProperty("version")
-    private String version;
+    private ANSVersion version;
 
     /**
      * @return The globally unique ID of this ANS object
@@ -74,17 +79,19 @@ public class ANS implements TraitTyped, TraitId {
     }
 
     /**
-     * @return version the ANS version of this ANS object
+     * @return version the ANS version of this ANS object; this is allowed to be Null because we want to avoid the problem
+     * of forcing every single content element in a large collection to repetitively declare their version when they should
+     * be able to derive the version from their parent/containing ANS object (e.g. Story, Gallery, etc)
      */
     public String getVersion() {
-        return version;
+        return (version == null) ? null : version.toString();
     }
 
     /**
      * @param version the ANS version of this ANS object
      */
     public void setVersion(String version) {
-        this.version = version;
+        this.version = ANSVersion.fromString(version);
     }
 
 
