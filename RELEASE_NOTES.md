@@ -2,7 +2,7 @@
 
 ## 0.4.0 TBD Release Date
 
-## 0.3.1 TBD
+## 0.3.1 2015/09/25
 
 * Fix bug where the "type" attribute was being deserialized into JSON twice.
 * Adding a small ANSVersion enumeration class to standardize on what people should enter in the ANS.version field
