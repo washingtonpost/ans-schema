@@ -11,7 +11,7 @@ The latest version of the ANS schema is the 0.3.0-SNAPSHOT release, which includ
 <dependency>
     <groupId>com.washingtonpost.arc.ans</groupId>
     <artifactId>ans-schema</artifactId>
-    <version>0.3.0-SNAPSHOT</version>
+    <version>0.3.2</version>
 </dependency>
 ```
 

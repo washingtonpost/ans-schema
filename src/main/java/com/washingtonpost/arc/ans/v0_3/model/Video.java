@@ -17,6 +17,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Video extends Media {
 
+    public static final String TYPE = "video";
+
     @JsonProperty("description")
     private String description;
 
@@ -29,8 +31,8 @@ public class Video extends Media {
     @JsonProperty("rating")
     private String rating;
 
-    @JsonProperty("type")
-    private String type;
+    @JsonProperty("videoType")
+    private String videoType;
 
     @JsonProperty("youtubeContentId")
     private String youtubeContentId;
@@ -40,6 +42,11 @@ public class Video extends Media {
 
     @JsonProperty("promo_image")
     private Image promoImage;
+
+
+    public Video() {
+        setType(TYPE);
+    }
 
     /**
      * @return Description for the video.
@@ -100,15 +107,15 @@ public class Video extends Media {
     /**
      * @return The type of video (e.g. clip, livestream, etc)
      */
-    public String getType() {
-        return type;
+    public String getVideoType() {
+        return videoType;
     }
 
     /**
-     * @param type The type of video (e.g. clip, livestream, etc)
+     * @param videoType The type of video (e.g. clip, livestream, etc)
      */
-    public void setType(String type) {
-        this.type = type;
+    public void setVideoType(String videoType) {
+        this.videoType = videoType;
     }
 
     /**
@@ -168,7 +175,7 @@ public class Video extends Media {
                 .append(this.rating)
                 .append(this.streams)
                 .append(this.transcript)
-                .append(this.type)
+                .append(this.videoType)
                 .append(this.youtubeContentId)
                 .appendSuper(super.hashCode())
                 .toHashCode();
@@ -190,7 +197,7 @@ public class Video extends Media {
                 .append(this.rating, rhs.rating)
                 .append(this.streams, rhs.streams)
                 .append(this.transcript, rhs.transcript)
-                .append(this.type, rhs.type)
+                .append(this.videoType, rhs.videoType)
                 .append(this.youtubeContentId, rhs.youtubeContentId)
                 .appendSuper(super.equals(other))
                 .isEquals();

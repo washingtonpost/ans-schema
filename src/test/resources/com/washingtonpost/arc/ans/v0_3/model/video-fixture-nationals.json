@@ -29,7 +29,7 @@
     "videoDuration": 1198000,
     "transcript": "Lorem ipsum blah blah blah...",
     "rating": "all_ages",
-    "type": "clip",
+    "videoType": "clip",
     "youtubeContentId": "wWEwUpHvqJg",
     "streams": [{
             "height": 720,
@@ -37,7 +37,7 @@
             "fileSize": 327819354,
             "audioCodec": null,
             "videoCodec": null,
-            "type": "mp4",
+            "streamType": "mp4",
             "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_1413917562171-fstwsn_t_1435680963322_1280_720_2000.mp4",
             "bitrate": 2000,
             "provider": "elastictranscoder"
@@ -47,7 +47,7 @@
             "fileSize": 111252083,
             "audioCodec": null,
             "videoCodec": null,
-            "type": "mp4",
+            "streamType": "mp4",
             "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_1413917693028-uimk59_t_1435680963322_640_360_600.mp4",
             "bitrate": 600,
             "provider": "elastictranscoder"
@@ -57,7 +57,7 @@
             "fileSize": 75300016,
             "audioCodec": null,
             "videoCodec": null,
-            "type": "ts",
+            "streamType": "ts",
             "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_t_1435680963733_mobile.m3u8",
             "bitrate": 300,
             "provider": "elastictranscoder"
@@ -67,7 +67,7 @@
             "fileSize": 352558468,
             "audioCodec": null,
             "videoCodec": null,
-            "type": "ts",
+            "streamType": "ts",
             "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_t_1435680963733_master.m3u8",
             "bitrate": 2000,
             "provider": "elastictranscoder"
@@ -77,7 +77,7 @@
             "fileSize": 52552204,
             "audioCodec": null,
             "videoCodec": null,
-            "type": "ts",
+            "streamType": "ts",
             "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_t_1435680963733_mobile.m3u8",
             "bitrate": 160,
             "provider": "elastictranscoder"
@@ -87,7 +87,7 @@
             "fileSize": 44471331,
             "audioCodec": null,
             "videoCodec": null,
-            "type": "mp4",
+            "streamType": "mp4",
             "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_1413918388651-bhdhw9_t_1435680963322_320_180_160.mp4",
             "bitrate": 160,
             "provider": "elastictranscoder"
@@ -97,7 +97,7 @@
             "fileSize": 838371405,
             "audioCodec": null,
             "videoCodec": null,
-            "type": "mp4",
+            "streamType": "mp4",
             "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_1413917648266-520npb_t_1435680963322_1920_1080_5400.mp4",
             "bitrate": 5400,
             "provider": "elastictranscoder"
@@ -107,7 +107,7 @@
             "fileSize": 124434944,
             "audioCodec": null,
             "videoCodec": null,
-            "type": "ts",
+            "streamType": "ts",
             "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_t_1435680963733_mobile.m3u8",
             "bitrate": 600,
             "provider": "elastictranscoder"
@@ -117,7 +117,7 @@
             "fileSize": 202124710,
             "audioCodec": null,
             "videoCodec": null,
-            "type": "mp4",
+            "streamType": "mp4",
             "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_1413917780312-tgh3by_t_1435680963322_854_480_1200.mp4",
             "bitrate": 1200,
             "provider": "elastictranscoder"
@@ -127,7 +127,7 @@
             "fileSize": 838371405,
             "audioCodec": null,
             "videoCodec": null,
-            "type": "smil",
+            "streamType": "smil",
             "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_t_1435681422368.smil",
             "bitrate": 5400,
             "provider": "elastictranscoder"

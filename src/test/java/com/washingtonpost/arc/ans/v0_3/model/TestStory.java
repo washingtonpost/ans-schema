@@ -94,7 +94,8 @@ public class TestStory extends AbstractANSTest<Story> {
      * <p>After the 0.3.0 release, we noticed sometimes we'd get JSON blocks of Story objects that had 2 separate "type":"story"
      * elements in them.  We suspect that's due to there being an explicit Ans.type field with a JSON in addition to the
      * "JsonTypeInfo" annotation at the class-level.  This test stresses that theory, and then verifies the fix.</p>
-     * <p>The fix, FWIW is: https://stackoverflow.com/questions/18237222/duplicate-json-field-with-jackson</p>
+     * <p>The fix, FWIW is explicitly setting the type of each object in its constructor and using the
+     * "JsonTypeInfo.As.EXISTING_PROPERTY" value in the ANS.java's @JsonTypeInfo setup</p>
      * @throws java.lang.Exception
      */
     @Test

@@ -14,6 +14,12 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Story extends Collection {
 
+    public static final String TYPE = "story";
+
+    public Story() {
+        setType(TYPE);
+    }
+
     @Override
     public String toString() {
         return ToStringBuilder.reflectionToString(this);

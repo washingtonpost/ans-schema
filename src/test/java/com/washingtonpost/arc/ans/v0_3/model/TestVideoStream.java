@@ -33,6 +33,6 @@ public class TestVideoStream extends AbstractTest<VideoStream> {
         assertThat(videoStream.getUrl(), is("https://videos.posttv.com/washpost-production/The%20Washington%20Post/"
                 + "20150701/55944729e4b082c8417f4483/55944904e4b0ef3ccc0da042_t_1435781395718_mobile.m3u8"));
         assertThat(videoStream.getProvider(), is("elastictranscoder"));
-        assertThat(videoStream.getType(), is("ts"));
+        assertThat(videoStream.getStreamType(), is("ts"));
     }
 }

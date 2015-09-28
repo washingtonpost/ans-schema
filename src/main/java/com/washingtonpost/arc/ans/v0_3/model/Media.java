@@ -17,11 +17,18 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Media extends Content {
 
+    public static final String TYPE = "media";
+
     @JsonProperty("title")
     private String title;
 
     @JsonProperty("taxonomy")
     private Taxonomy taxonomy;
+
+
+    public Media() {
+        setType(TYPE);
+    }
 
     /**
      * @return The title of the media object

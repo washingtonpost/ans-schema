@@ -21,6 +21,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Content extends ANS implements TraitDated, TraitCredited, TraitLocale, TraitLocated, TraitCopyrighted {
 
+    public static final String TYPE = "content";
     private Date createdDate;
     private Date lastUpdatedDate;
     private List<Credit> credits;
@@ -32,6 +33,10 @@ public class Content extends ANS implements TraitDated, TraitCredited, TraitLoca
 
     @JsonIgnore
     private final Map<String, Object> additionalProperties = new HashMap<>();
+
+    public Content() {
+        setType(TYPE);
+    }
 
     @Override
     public Date getCreatedDate() {

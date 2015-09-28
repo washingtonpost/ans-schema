@@ -1,6 +1,5 @@
 package com.washingtonpost.arc.ans.v0_3.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
@@ -15,31 +14,38 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  */
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,
-    include = JsonTypeInfo.As.PROPERTY,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
     property = "type",
     visible = true)
 @JsonSubTypes({
-    @Type(value = ANS.class, name = "ans"),
-    @Type(value = Content.class, name = "content"),
-    @Type(value = Gallery.class, name = "gallery"),
-    @Type(value = Image.class, name = "image"),
-    @Type(value = Media.class, name = "media"),
-    @Type(value = Story.class, name = "story"),
-    @Type(value = Text.class, name = "text"),
-    @Type(value = Video.class, name = "video")
+    @Type(value = ANS.class, name = ANS.TYPE),
+    @Type(value = Content.class, name = Content.TYPE),
+    @Type(value = Gallery.class, name = Gallery.TYPE),
+    @Type(value = Image.class, name = Image.TYPE),
+    @Type(value = Media.class, name = Media.TYPE),
+    @Type(value = Story.class, name = Story.TYPE),
+    @Type(value = Text.class, name = Text.TYPE),
+    @Type(value = Video.class, name = Video.TYPE)
 })
 public class ANS implements TraitTyped, TraitId {
+
+    public static final String TYPE = "ans";
 
     // Globally unique ID
     @JsonProperty("_id")
     private String id;
     
     // The runtime type of this object (see getter/setter for implementation details)
-    @JsonIgnore
+    @JsonProperty("type")
     private String type;
 
+    // The version of the ANS specification this class/JSON conforms to
     @JsonProperty("version")
     private ANSVersion version;
+
+    public ANS() {
+        setType(TYPE);
+    }
 
     /**
      * @return The globally unique ID of this ANS object
@@ -58,21 +64,16 @@ public class ANS implements TraitTyped, TraitId {
     }
 
     /**
-     * Use @JsonIgnore here to avoid having 2 "type":"foo" strings in serialized JSON
-     * See https://stackoverflow.com/questions/18237222/duplicate-json-field-with-jackson
      * @return The concrete type of this ANS object
      */
-    @JsonIgnore
     @Override
     public String getType() {
         return type;
     }
 
     /**
-     * Define @JsonProperty("type") here to enable deserialization to save into a field our application code can access
      * @param type The concrete type of this ANS object
      */
-    @JsonProperty("type")
     @Override
     public void setType(String type) {
         this.type = type;
