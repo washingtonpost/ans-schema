@@ -1,7 +1,10 @@
 package com.washingtonpost.arc.ans.v0_3.model;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import nl.jqno.equalsverifier.EqualsVerifier;
 import nl.jqno.equalsverifier.Warning;
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 /**
@@ -19,5 +22,22 @@ public abstract class AbstractANSTest<T> extends AbstractTest<T> {
                 .suppress(Warning.STRICT_INHERITANCE, Warning.NONFINAL_FIELDS)
                 .withRedefinedSuperclass()
                 .verify();
+    }
+
+    /**
+     * <p>At first glance this test seems to just be testing an axiom like "foo.setX(1).getX() == 1" but it's designed to make
+     * sure application engineers who extend the object model below the ANS root object remember to define a distinct type and
+     * set that TYPE on their type field; this is important for downstream users of our ANS JAR such as Jackson (de)serializers
+     * and Mongojack frameworks.</p>
+     * @throws Exception
+     */
+    @Test
+    public void testTypeIsSetCorrectly() throws Exception {
+        Field typeField = getTargetClass().getField("TYPE");
+        Method getTypeMethod = getTargetClass().getMethod("getType");
+        Object ansObject = getTargetClass().newInstance();
+        String declaredType = (String)typeField.get(ansObject);
+
+        assertEquals(declaredType, getTypeMethod.invoke(ansObject));
     }
 }

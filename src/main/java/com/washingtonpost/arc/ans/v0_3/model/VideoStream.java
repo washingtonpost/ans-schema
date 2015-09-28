@@ -48,11 +48,11 @@ public class VideoStream {
     @JsonProperty("videoCodec")
     private String videoCodec;
     /**
-     * The type of video (e.g. mp4).
+     * The type of video stream (e.g. mp4).
      * 
      */
-    @JsonProperty("type")
-    private String type;
+    @JsonProperty("streamType")
+    private String streamType;
     /**
      * Where to get the stream from.
      * 
@@ -183,25 +183,25 @@ public class VideoStream {
     }
 
     /**
-     * The type of video (e.g. mp4).
+     * The type of video stream (e.g. mp4).
      * 
      * @return
      *     The type
      */
-    @JsonProperty("type")
-    public String getType() {
-        return type;
+    @JsonProperty("streamType")
+    public String getStreamType() {
+        return streamType;
     }
 
     /**
-     * The type of video (e.g. mp4).
+     * The type of video stream (e.g. mp4).
      * 
-     * @param type
-     *     The type
+     * @param streamType
+     *     The streamType
      */
-    @JsonProperty("type")
-    public void setType(String type) {
-        this.type = type;
+    @JsonProperty("streamType")
+    public void setStreamType(String streamType) {
+        this.streamType = streamType;
     }
 
     /**
@@ -283,7 +283,7 @@ public class VideoStream {
                 .append(filesize)
                 .append(audioCodec)
                 .append(videoCodec)
-                .append(type)
+                .append(streamType)
                 .append(url)
                 .append(bitrate)
                 .append(provider)
@@ -305,7 +305,7 @@ public class VideoStream {
                 .append(filesize, rhs.filesize)
                 .append(audioCodec, rhs.audioCodec)
                 .append(videoCodec, rhs.videoCodec)
-                .append(type, rhs.type)
+                .append(streamType, rhs.streamType)
                 .append(url, rhs.url)
                 .append(bitrate, rhs.bitrate)
                 .append(provider, rhs.provider)

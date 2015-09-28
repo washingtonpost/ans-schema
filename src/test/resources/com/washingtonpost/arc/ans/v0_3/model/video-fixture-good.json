@@ -32,7 +32,7 @@
     "duration": 139000,
     "transcript": "This is a transcript of all the words said in the video. This can go on for quite some time.",
     "rating": "graphic",
-    "type": "clip",
+    "videoType": "clip",
     "youtubeContentId": "nKW3wvhnZoE",
     "streams": [{
             "height": 360,
@@ -40,7 +40,7 @@
             "fileSize": 4443944,
             "audioCodec": null,
             "videoCodec": null,
-            "type": "ts",
+            "streamType": "ts",
             "url": "https://videos.posttv.com/washpost-production/The%20Washington%20Post/20150701/55944729e4b082c8417f4483/55944904e4b0ef3ccc0da042_t_1435781395718_mobile.m3u8",
             "bitrate": 600,
             "provider": "elastictranscoder"
@@ -50,7 +50,7 @@
             "fileSize": 2738596,
             "audioCodec": null,
             "videoCodec": null,
-            "type": "ts",
+            "streamType": "ts",
             "url": "https://videos.posttv.com/washpost-production/The%20Washington%20Post/20150701/55944729e4b082c8417f4483/55944904e4b0ef3ccc0da042_t_1435781395718_mobile.m3u8",
             "bitrate": 300,
             "provider": "elastictranscoder"

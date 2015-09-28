@@ -10,9 +10,14 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  */
 public class Text extends ANS {
 
+    public static final String TYPE = "text";
+
     @JsonProperty("text")
     private String text;
 
+    public Text() {
+        setType(TYPE);
+    }
     /**
      * @return The text of the element
      */

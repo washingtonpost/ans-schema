@@ -17,6 +17,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Image extends Media {
 
+    public static final String TYPE = "image";
+
     @JsonProperty("subtitle")
     private String subtitle;
 
@@ -31,6 +33,10 @@ public class Image extends Media {
 
     @JsonProperty("width")
     private int width;
+
+    public Image() {
+        setType(TYPE);
+    }
 
     /**
      * @return Subtitle for the image.
