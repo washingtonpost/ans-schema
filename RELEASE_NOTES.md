@@ -2,7 +2,7 @@
 
 ## 0.4.0 TBD Release Date
 
-## 0.3.2 2015/09/28
+## 0.3.2 2015/10/08
 
 * Really fixing bug where the "type" attribute was being deserialized twice. The fix put in the 0.3.1 release technically works, but is incompatible with some other Jackson/Mongo frameworks being used "downstream" of this artifact.
 * Renaming Video.type to Video.videoType and VideoStream.type to VideoStream.streamType to avoid ambiguity about what "Video.type" refers to (answer: it should be the ANS type of the Video object)
