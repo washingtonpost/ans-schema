@@ -25,7 +25,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
     @Type(value = Media.class, name = Media.TYPE),
     @Type(value = Story.class, name = Story.TYPE),
     @Type(value = Text.class, name = Text.TYPE),
-    @Type(value = Video.class, name = Video.TYPE)
+    @Type(value = Video.class, name = Video.TYPE),
+    @Type(value = RawHTML.class, name = RawHTML.TYPE)
 })
 public class ANS implements TraitTyped, TraitId {
 
@@ -34,7 +35,7 @@ public class ANS implements TraitTyped, TraitId {
     // Globally unique ID
     @JsonProperty("_id")
     private String id;
-    
+
     // The runtime type of this object (see getter/setter for implementation details)
     @JsonProperty("type")
     private String type;
