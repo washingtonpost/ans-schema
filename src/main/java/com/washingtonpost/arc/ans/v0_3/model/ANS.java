@@ -26,7 +26,11 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
     @Type(value = Story.class, name = Story.TYPE),
     @Type(value = Text.class, name = Text.TYPE),
     @Type(value = Video.class, name = Video.TYPE),
-    @Type(value = RawHTML.class, name = RawHTML.TYPE)
+    @Type(value = RawHTML.class, name = RawHTML.TYPE),
+    @Type(value = OrderedList.class, name = OrderedList.TYPE),
+    @Type(value = UnorderedList.class, name = UnorderedList.TYPE),
+    @Type(value = ListItem.class, name = ListItem.TYPE),
+    @Type(value = Blockquote.class, name = Blockquote.TYPE)
 })
 public class ANS implements TraitTyped, TraitId {
 

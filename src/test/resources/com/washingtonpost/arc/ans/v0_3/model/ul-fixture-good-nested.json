@@ -1,0 +1,27 @@
+{
+  "_id": "49876543210",
+  "type": "ul",
+  "items": [
+    {
+      "type" : "item",
+      "content" : "Foo"
+    },
+    {
+      "type": "item",
+      "content" : "Bar"
+    },
+    {
+      "type": "ul",
+      "items" : [
+        {
+          "type": "item",
+          "content" : "Hi"
+        },
+        {
+          "type": "item",
+          "content" : "Mom"
+        }
+      ]
+    }
+  ]
+}
