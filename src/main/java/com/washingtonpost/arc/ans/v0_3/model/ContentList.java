@@ -8,7 +8,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 /**
  * <p>Models an ordered list element in an ANS Content object</p>
  */
-public class List extends ListElement {
+public class ContentList extends ContentListElement {
 
     public static final String TYPE = "list";
 
@@ -18,7 +18,7 @@ public class List extends ListElement {
     @JsonProperty("list_type")
     private String listType;
 
-    public List() {
+    public ContentList() {
         setType(TYPE);
     }
 
@@ -67,8 +67,8 @@ public class List extends ListElement {
     public boolean equals(Object other) {
         boolean result = false;
 
-        if (other instanceof List) {
-            List that = (List) other;
+        if (other instanceof ContentList) {
+            ContentList that = (ContentList) other;
             result = that.canEqual(this)
                     && new EqualsBuilder()
                     .append(items, that.items)
@@ -87,7 +87,7 @@ public class List extends ListElement {
      */
     @Override
     public boolean canEqual(Object other) {
-        return (other instanceof List);
+        return (other instanceof ContentList);
     }
 
 }

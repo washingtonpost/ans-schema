@@ -8,7 +8,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 /**
  * <p>Models a text element(s) in an ANS Content object</p>
  */
-public class Text extends ListElement {
+public class Text extends ContentListElement {
 
     public static final String TYPE = "text";
 
