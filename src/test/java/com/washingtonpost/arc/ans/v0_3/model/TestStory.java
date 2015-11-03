@@ -14,7 +14,7 @@ import org.junit.Test;
  * against the JSON schema</p>
  */
 public class TestStory extends AbstractANSTest<Story> {
-    
+
     @Override
     String getSchemaName() {
         return "story";
@@ -74,7 +74,7 @@ public class TestStory extends AbstractANSTest<Story> {
         assertThat(story.getDisplayDate(), is(date("2015-06-25T09:50:50.52Z")));
         assertThat(story.getEditorNote(), startsWith("This URL earlier linked to a post"));
         assertThat(story.getStatus(), is("published"));
-        assertThat(story.getContentElements().size(), is(3));
+        assertThat(story.getContentElements().size(), is(6));
         assertThat(story.getContentElements().get(0), is(instanceOf(Text.class)));
         assertThat(story.getContentElements().get(1), is(instanceOf(Text.class)));
         assertThat(story.getContentElements().get(2), is(instanceOf(Image.class)));
@@ -110,8 +110,7 @@ public class TestStory extends AbstractANSTest<Story> {
         while (matcher.find()) {
             count++;
         }
-        
+
         assertEquals("Expected exactly 1 \"type\":\"story\" field in our JSON, got " + count + " instead", 1, count);
     }
 }
-
