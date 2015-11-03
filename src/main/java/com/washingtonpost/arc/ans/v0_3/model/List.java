@@ -4,33 +4,50 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
-import java.util.List;
 
 /**
- * <p>Models raw_html element(s) in an ANS Content object</p>
+ * <p>Models an ordered list element in an ANS Content object</p>
  */
-public class UnorderedList extends ListElement {
+public class List extends ListElement {
 
-    public static final String TYPE = "ul";
+    public static final String TYPE = "list";
 
     @JsonProperty("items")
-    private List<ListElement> items;
+    private java.util.List<ANS> items;
 
-    public UnorderedList() {
+    @JsonProperty("list_type")
+    private String listType;
+
+    public List() {
         setType(TYPE);
     }
+
     /**
      * @return The items
      */
-    public List<ListElement> getItems() {
+    public java.util.List<ANS> getItems() {
         return items;
     }
 
     /**
      * @param items the list of items
      */
-    public void setItems(List<ListElement> items) {
+    public void setItems(java.util.List<ANS> items) {
         this.items = items;
+    }
+
+    /**
+     * @return The subtype
+     */
+    public String getListType() {
+        return listType;
+    }
+
+    /**
+     * @param listType the list type
+     */
+    public void setListType(String listType) {
+        this.listType = listType;
     }
 
     @Override
@@ -50,8 +67,8 @@ public class UnorderedList extends ListElement {
     public boolean equals(Object other) {
         boolean result = false;
 
-        if (other instanceof UnorderedList) {
-            UnorderedList that = (UnorderedList) other;
+        if (other instanceof List) {
+            List that = (List) other;
             result = that.canEqual(this)
                     && new EqualsBuilder()
                     .append(items, that.items)
@@ -70,7 +87,7 @@ public class UnorderedList extends ListElement {
      */
     @Override
     public boolean canEqual(Object other) {
-        return (other instanceof UnorderedList);
+        return (other instanceof List);
     }
 
 }

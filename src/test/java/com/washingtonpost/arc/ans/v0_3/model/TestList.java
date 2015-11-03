@@ -9,36 +9,39 @@ import org.junit.Test;
  * <p>Tests that JSON we expect to be a blockquote serializes correctly and validates
  * against the JSON schema</p>
  */
-public class TestUnorderedList extends AbstractANSTest<UnorderedList> {
+public class TestList extends AbstractANSTest<List> {
 
     @Override
     String getSchemaName() {
-        return "ordered_list";
+        return "list";
     }
 
     @Override
     Class getTargetClass() {
-        return UnorderedList.class;
+        return List.class;
     }
 
     @Test
     public void testGoodSimple() throws Exception {
         testJsonValidation("ul-fixture-good", true);
-        UnorderedList ul = testClassSerialization("ul-fixture-good");
+        List ul = testClassSerialization("ul-fixture-good");
         assertThat(ul.getId(), is("49876543210"));
-        assertThat(ul.getType(), is("ul"));
+        assertThat(ul.getType(), is("list"));
+        assertThat(ul.getListType(), is("unordered"));
         assertThat(ul.getItems().size(), is(3));
     }
 
     @Test
     public void testGoodNested() throws Exception {
         testJsonValidation("ul-fixture-good-nested", true);
-        UnorderedList ul = testClassSerialization("ul-fixture-good-nested");
+        List ul = testClassSerialization("ul-fixture-good-nested");
         assertThat(ul.getId(), is("49876543210"));
-        assertThat(ul.getType(), is("ul"));
+        assertThat(ul.getType(), is("list"));
+        assertThat(ul.getListType(), is("unordered"));
         assertThat(ul.getItems().size(), is(3));
-        assertTrue(ul.getItems().get(2) instanceof UnorderedList);
-        assertThat(((UnorderedList)ul.getItems().get(2)).getItems().size(), is(2));
+        assertTrue(ul.getItems().get(2) instanceof List);
+        assertThat(((List)ul.getItems().get(2)).getListType(), is("ordered"));
+        assertThat(((List)ul.getItems().get(2)).getItems().size(), is(2));
     }
 
 

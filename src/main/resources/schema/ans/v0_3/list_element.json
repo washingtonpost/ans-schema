@@ -6,9 +6,8 @@
     "type": "object",
     "oneOf": [
         {
-            "$ref": "unordered_list.json",
-            "$ref": "ordered_list.json",
-            "$ref": "list_item.json"
+            "$ref": "list.json",
+            "$ref": "text.json"
         }
     ]
 }

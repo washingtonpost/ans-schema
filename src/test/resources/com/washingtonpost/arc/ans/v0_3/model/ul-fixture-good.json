@@ -1,18 +1,19 @@
 {
-  "_id": "49876543210",
-  "type": "ul",
-  "items": [
-    {
-      "type" : "item",
-      "content" : "Foo"
-    },
-    {
-      "type": "item",
-      "content" : "Bar"
-    },
-    {
-      "type": "item",
-      "content" : "Baz"
-    }
-  ]
+    "_id": "49876543210",
+    "type": "list",
+    "list_type": "unordered",
+    "items": [
+        {
+            "type" : "text",
+            "text" : "Foo"
+        },
+        {
+            "type": "text",
+            "text" : "Bar"
+        },
+        {
+            "type": "text",
+            "text" : "Baz"
+        }
+    ]
 }
