@@ -9,7 +9,10 @@
             "$ref": "ans.json",
             "$ref": "video.json",
             "$ref": "image.json",
-            "$ref": "text.json"
+            "$ref": "text.json",
+            "$ref": "raw_html.json",
+            "$ref": "blockquote.json",
+            "$ref": "list.json",
         }
     ]
 }

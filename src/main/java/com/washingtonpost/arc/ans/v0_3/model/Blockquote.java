@@ -5,31 +5,32 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
+
 /**
- * <p>Models a text element(s) in an ANS Content object</p>
+ * <p>Models raw_html element(s) in an ANS Content object</p>
  */
-public class Text extends ContentListElement {
+public class Blockquote extends ANS {
 
-    public static final String TYPE = "text";
+    public static final String TYPE = "blockquote";
 
-    @JsonProperty("text")
-    private String text;
+    @JsonProperty("content")
+    private String content;
 
-    public Text() {
+    public Blockquote() {
         setType(TYPE);
     }
     /**
-     * @return The text of the element
+     * @return The content of the element
      */
-    public String getText() {
-        return text;
+    public String getContent() {
+        return content;
     }
 
     /**
-     * @param text The text of the element
+     * @param content The content of the element
      */
-    public void setText(String text) {
-        this.text = text;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     @Override
@@ -40,7 +41,7 @@ public class Text extends ContentListElement {
     @Override
     public int hashCode() {
         return new HashCodeBuilder()
-                .append(text)
+                .append(content)
                 .appendSuper(super.hashCode())
                 .toHashCode();
     }
@@ -49,11 +50,11 @@ public class Text extends ContentListElement {
     public boolean equals(Object other) {
         boolean result = false;
 
-        if (other instanceof Text) {
-            Text that = (Text) other;
+        if (other instanceof Blockquote) {
+            Blockquote that = (Blockquote) other;
             result = that.canEqual(this)
                     && new EqualsBuilder()
-                    .append(text, that.text)
+                    .append(content, that.content)
                     .appendSuper(super.equals(other))
                     .isEquals();
         }
@@ -69,7 +70,7 @@ public class Text extends ContentListElement {
      */
     @Override
     public boolean canEqual(Object other) {
-        return (other instanceof Text);
+        return (other instanceof Blockquote);
     }
 
 }

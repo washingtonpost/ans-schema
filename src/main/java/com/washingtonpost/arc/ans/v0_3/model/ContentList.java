@@ -6,30 +6,48 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 /**
- * <p>Models a text element(s) in an ANS Content object</p>
+ * <p>Models an ordered list element in an ANS Content object</p>
  */
-public class Text extends ContentListElement {
+public class ContentList extends ContentListElement {
 
-    public static final String TYPE = "text";
+    public static final String TYPE = "list";
 
-    @JsonProperty("text")
-    private String text;
+    @JsonProperty("items")
+    private java.util.List<ANS> items;
 
-    public Text() {
+    @JsonProperty("list_type")
+    private String listType;
+
+    public ContentList() {
         setType(TYPE);
     }
+
     /**
-     * @return The text of the element
+     * @return The items
      */
-    public String getText() {
-        return text;
+    public java.util.List<ANS> getItems() {
+        return items;
     }
 
     /**
-     * @param text The text of the element
+     * @param items the list of items
      */
-    public void setText(String text) {
-        this.text = text;
+    public void setItems(java.util.List<ANS> items) {
+        this.items = items;
+    }
+
+    /**
+     * @return The subtype
+     */
+    public String getListType() {
+        return listType;
+    }
+
+    /**
+     * @param listType the list type
+     */
+    public void setListType(String listType) {
+        this.listType = listType;
     }
 
     @Override
@@ -40,7 +58,7 @@ public class Text extends ContentListElement {
     @Override
     public int hashCode() {
         return new HashCodeBuilder()
-                .append(text)
+                .append(items)
                 .appendSuper(super.hashCode())
                 .toHashCode();
     }
@@ -49,11 +67,11 @@ public class Text extends ContentListElement {
     public boolean equals(Object other) {
         boolean result = false;
 
-        if (other instanceof Text) {
-            Text that = (Text) other;
+        if (other instanceof ContentList) {
+            ContentList that = (ContentList) other;
             result = that.canEqual(this)
                     && new EqualsBuilder()
-                    .append(text, that.text)
+                    .append(items, that.items)
                     .appendSuper(super.equals(other))
                     .isEquals();
         }
@@ -69,7 +87,7 @@ public class Text extends ContentListElement {
      */
     @Override
     public boolean canEqual(Object other) {
-        return (other instanceof Text);
+        return (other instanceof ContentList);
     }
 
 }
