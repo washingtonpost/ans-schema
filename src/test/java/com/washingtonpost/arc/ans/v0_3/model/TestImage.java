@@ -2,6 +2,7 @@ package com.washingtonpost.arc.ans.v0_3.model;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.Assert.assertNull;
 import org.junit.Test;
 
 /**
@@ -48,4 +49,18 @@ public class TestImage extends AbstractANSTest<Image> {
         assertThat(image.getTaxonomy().getKeywords().size(), is(1));
         assertThat(image.getTaxonomy().getKeywords().get(0).getKeyword(), is("Supreme Court"));
     }
+
+    @Test
+    public void testImageStillGoodWithNoHeightOrWidth() throws Exception {
+        testJsonValidation("image-fixture-good-no-height-width", true);
+        Image image = testClassSerialization("image-fixture-good-no-height-width");
+        assertNull(image.getHeight());
+        assertNull(image.getWidth());
+
+        String jsonRepresentation = super.objectMapper.writeValueAsString(image);
+        assertThat("{\"_id\":\"unique ANS id\",\"type\":\"image\",\"version\":\"0.3.3\",\"url\":"
+                + "\"https://img.washingtonpost.com/rf/image_908w/2010-2019/WashingtonPost/2012/06/29/"
+                + "Outlook/Advance/Images/511969927-363.jpg\"}", is(jsonRepresentation));
+    }
+
 }
