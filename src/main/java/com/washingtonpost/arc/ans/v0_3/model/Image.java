@@ -29,10 +29,10 @@ public class Image extends Media {
     private String url;
 
     @JsonProperty("height")
-    private int height;
+    private Integer height;
 
     @JsonProperty("width")
-    private int width;
+    private Integer width;
 
     public Image() {
         setType(TYPE);
@@ -83,7 +83,7 @@ public class Image extends Media {
     /**
      * @return Height for the image.
      */
-    public int getHeight() {
+    public Integer getHeight() {
         return height;
     }
 
@@ -91,21 +91,21 @@ public class Image extends Media {
      *
      * @param height Height for the image.
      */
-    public void setHeight(int height) {
+    public void setHeight(Integer height) {
         this.height = height;
     }
 
     /**
      * @return Width for the image.
      */
-    public int getWidth() {
+    public Integer getWidth() {
         return width;
     }
 
     /**
      * @param width Width for the image.
      */
-    public void setWidth(int width) {
+    public void setWidth(Integer width) {
         this.width = width;
     }
 

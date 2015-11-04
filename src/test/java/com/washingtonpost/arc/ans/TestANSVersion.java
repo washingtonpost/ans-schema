@@ -16,6 +16,7 @@ public class TestANSVersion {
         assertEquals(V0_3_0, ANSVersion.fromString("0.3"));
         assertEquals(V0_3_1, ANSVersion.fromString("0.3.1"));
         assertEquals(V0_3_2, ANSVersion.fromString("0.3.2"));
+        assertEquals(V0_3_3, ANSVersion.fromString("0.3.3"));
         assertEquals(V0_4_0, ANSVersion.fromString("0.4"));
     }
 

@@ -5,6 +5,8 @@
 ## 0.3.3 TBD Release Date
 
 * Adding raw_html type
+* Adding blockquote and list types
+* Making Image.height and Image.widht Integers (instead of ints) so unset JSON values will not result in deserialized "0" values
 
 ## 0.3.2 2015/10/08
 
