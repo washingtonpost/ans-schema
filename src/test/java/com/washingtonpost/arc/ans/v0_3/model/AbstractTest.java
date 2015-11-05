@@ -9,10 +9,6 @@ import com.github.fge.jsonschema.main.JsonSchema;
 import com.github.fge.jsonschema.main.JsonSchemaFactory;
 import java.io.IOException;
 import java.net.URL;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import nl.jqno.equalsverifier.EqualsVerifier;
 import nl.jqno.equalsverifier.Warning;
 import static org.hamcrest.CoreMatchers.is;
@@ -32,7 +28,6 @@ import org.junit.Test;
 public abstract class AbstractTest<T> {
 
     protected static final Logger LOGGER = LoggerFactory.getLogger(AbstractTest.class);
-    private static final DateFormat RFC3339 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
     private final JsonSchemaFactory factory = JsonSchemaFactory.byDefault();
     private JsonSchema schema;
     protected final ObjectMapper objectMapper = new ObjectMapper();
@@ -137,15 +132,6 @@ public abstract class AbstractTest<T> {
         if (!getTargetClass().isInterface()) {
             assertThat(getTargetClass().newInstance().toString(), is(not(nullValue())));
         }
-    }
-
-    /**
-     * Assumes a date format of RFC3339 and parses the string into a date object
-     * @param date
-     * @return
-     */
-    Date date(String date) throws ParseException {
-        return RFC3339.parse(date);
     }
 
     /**

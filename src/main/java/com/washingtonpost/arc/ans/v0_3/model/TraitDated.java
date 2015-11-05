@@ -1,9 +1,10 @@
 
 package com.washingtonpost.arc.ans.v0_3.model;
 
-import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 
 /**
@@ -14,40 +15,38 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public interface TraitDated {
+    public static final DateFormat RFC3339 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
 
     /**
      * When the content was originally created (RFC3339-formatted).
      * 
-     * @return
-     *     The createdDate
+     * @return The createdDate
      */
     @JsonProperty("created_date")
-    public Date getCreatedDate();
+    public String getCreatedDate();
 
     /**
      * When the content was originally created (RFC3339-formatted).
      * 
-     * @param createdDate
-     *     The created_date
+     * @param createdDate The created_date
      */
     @JsonProperty("created_date")
-    public void setCreatedDate(Date createdDate);
+    public void setCreatedDate(String createdDate);
 
     /**
      * When the content was last updated (RFC3339-formatted).
      * 
-     * @return
-     *     The lastUpdatedDate
+     * @return The lastUpdatedDate
      */
     @JsonProperty("last_updated_date")
-    public Date getLastUpdatedDate();
+    public String getLastUpdatedDate();
 
     /**
      * When the content was last updated (RFC3339-formatted).
      * 
-     * @param lastUpdatedDate
-     *     The last_updated_date
+     * @param lastUpdatedDate The last_updated_date
      */
     @JsonProperty("last_updated_date")
-    public void setLastUpdatedDate(Date lastUpdatedDate);
+    public void setLastUpdatedDate(String lastUpdatedDate);
+
 }

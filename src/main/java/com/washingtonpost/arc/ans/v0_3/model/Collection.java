@@ -3,7 +3,6 @@ package com.washingtonpost.arc.ans.v0_3.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.util.Date;
 import java.util.List;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
@@ -44,10 +43,10 @@ public class Collection extends Content {
     private Taxonomy taxonomy;
 
     @JsonProperty("publish_date")
-    private Date publishDate;
+    private String publishDate;
 
     @JsonProperty("display_date")
-    private Date displayDate;
+    private String displayDate;
 
     @JsonProperty("content_elements")
     private List<? extends ANS> contentElements;
@@ -170,28 +169,28 @@ public class Collection extends Content {
     /**
      * @return When the story was first published.
      */
-    public Date getPublishDate() {
+    public String getPublishDate() {
         return publishDate;
     }
 
     /**
      * @param publishDate When the collection was first published.
      */
-    public void setPublishDate(Date publishDate) {
+    public void setPublishDate(String publishDate) {
         this.publishDate = publishDate;
     }
 
     /**
      * @return The RFC3339-formatted dated time of the most recent date the collection was (re)displayed on a public site.
      */
-    public Date getDisplayDate() {
+    public String getDisplayDate() {
         return displayDate;
     }
 
     /**
      * @param displayDate The RFC3339-formatted dated time of the most recent date the collection was (re)displayed on a public site.
      */
-    public void setDisplayDate(Date displayDate) {
+    public void setDisplayDate(String displayDate) {
         this.displayDate = displayDate;
     }
 
