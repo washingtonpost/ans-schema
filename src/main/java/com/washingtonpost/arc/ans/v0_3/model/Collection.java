@@ -1,8 +1,10 @@
 
 package com.washingtonpost.arc.ans.v0_3.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.time.Instant;
 import java.util.List;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
@@ -173,6 +175,11 @@ public class Collection extends Content {
         return publishDate;
     }
 
+    @JsonIgnore
+    public Instant getPublishDateAsInstant() {
+        return Instant.parse(this.publishDate);
+    }
+
     /**
      * @param publishDate When the collection was first published.
      */
@@ -185,6 +192,11 @@ public class Collection extends Content {
      */
     public String getDisplayDate() {
         return displayDate;
+    }
+
+    @JsonIgnore
+    public Instant getDisplayDateAsInstant() {
+        return Instant.parse(this.displayDate);
     }
 
     /**
