@@ -30,8 +30,8 @@ public class TestStory extends AbstractANSTest<Story> {
         testJsonValidation("story-fixture-good", true);
         Story story = testClassSerialization("story-fixture-good");
         assertThat(story.getId(), is("unique ANS id"));
-        assertThat(story.getCreatedDate(), is(date("2015-06-24T09:50:50.52Z")));
-        assertThat(story.getLastUpdatedDate(), is(date("2015-06-24T09:50:50.52Z")));
+        assertThat(story.getCreatedDate(), is("2015-06-24T09:50:50.52Z"));
+        assertThat(story.getLastUpdatedDate(), is("2015-06-24T09:50:50.52Z"));
         assertThat(story.getCredits().size(), is(1));
         assertThat(story.getCredits().get(0).getName(), is("John Q. Reporter"));
         assertThat(story.getCredits().get(0).getRole(), is("Author"));
@@ -59,7 +59,7 @@ public class TestStory extends AbstractANSTest<Story> {
         assertThat(story.getPromoImages().size(), is(1));
         Image promoImage = story.getPromoImages().get(0);
         assertThat(promoImage.getId(), is("unique ANS id"));
-        assertThat(promoImage.getCreatedDate(), is(date("2015-06-25T09:50:50.52Z")));
+        assertThat(promoImage.getCreatedDate(), is("2015-06-25T09:50:50.52Z"));
         assertThat(promoImage.getCredits().get(0).getName(), is("Ansel Adams"));
         assertThat(promoImage.getCredits().get(0).getRole(), is("Photographer"));
         assertThat(promoImage.getUrl(), is("https://tinyurl.com/mqyonhb"));
@@ -70,8 +70,8 @@ public class TestStory extends AbstractANSTest<Story> {
         assertThat(story.getTaxonomy().getKeywords().get(0).getKeyword(), is("Anesthesiologist"));
         assertThat(story.getTaxonomy().getKeywords().get(0).getFrequency(), is(2));
         assertThat(story.getTaxonomy().getKeywords().get(0).getScore(), is(0.77));
-        assertThat(story.getPublishDate(), is(date("2015-06-24T09:49:00.10Z")));
-        assertThat(story.getDisplayDate(), is(date("2015-06-25T09:50:50.52Z")));
+        assertThat(story.getPublishDate(), is("2015-06-24T09:49:00.10Z"));
+        assertThat(story.getDisplayDate(), is("2015-06-25T09:50:50.52Z"));
         assertThat(story.getEditorNote(), startsWith("This URL earlier linked to a post"));
         assertThat(story.getStatus(), is("published"));
         assertThat(story.getContentElements().size(), is(6));

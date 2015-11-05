@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import java.util.Date;
+import java.text.ParseException;
 import java.util.List;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
@@ -22,8 +22,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 public class Content extends ANS implements TraitDated, TraitCredited, TraitLocale, TraitLocated, TraitCopyrighted {
 
     public static final String TYPE = "content";
-    private Date createdDate;
-    private Date lastUpdatedDate;
+    private String createdDate;
+    private String lastUpdatedDate;
     private List<Credit> credits;
     private String language;
     private String location;
@@ -39,23 +39,34 @@ public class Content extends ANS implements TraitDated, TraitCredited, TraitLoca
     }
 
     @Override
-    public Date getCreatedDate() {
+    public String getCreatedDate() {
         return this.createdDate;
     }
 
     @Override
-    public void setCreatedDate(Date createdDate) {
+    public void setCreatedDate(String createdDate) {
+        validateRFC3339Date("CreatedDate", createdDate);
         this.createdDate = createdDate;
     }
 
     @Override
-    public Date getLastUpdatedDate() {
+    public String getLastUpdatedDate() {
         return this.lastUpdatedDate;
     }
 
     @Override
-    public void setLastUpdatedDate(Date lastUpdatedDate) {
+    public void setLastUpdatedDate(String lastUpdatedDate) {
+        validateRFC3339Date("LastUpdatedDate", lastUpdatedDate);
         this.lastUpdatedDate = lastUpdatedDate;
+    }
+
+    private void validateRFC3339Date(String fieldName, String dateString) {
+        try {
+            TraitDated.RFC3339.parse(dateString);
+        }
+        catch (ParseException e) {
+            throw new RuntimeException(fieldName + " '" + dateString + "' must be of RFC3339 format", e);
+        }
     }
 
     @Override

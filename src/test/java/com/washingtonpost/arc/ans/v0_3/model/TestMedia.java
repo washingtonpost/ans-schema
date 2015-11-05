@@ -26,7 +26,7 @@ public class TestMedia extends AbstractANSTest<Media> {
         Media media = testClassSerialization("media-fixture-good");
         assertThat(media.getTitle(), is("Tiffany M. Ingham (Maj. Dale Greer/Kentucky Air National Guard)"));
         assertThat(media.getId(), is("unique ANS id"));
-        assertThat(media.getCreatedDate(), is(date("2015-06-25T09:50:50.52Z")));
+        assertThat(media.getCreatedDate(), is("2015-06-25T09:50:50.52Z"));
         assertThat(media.getCredits().size(), is(1));
         assertThat(media.getCredits().get(0).getName(), is("Ansel Adams"));
         assertThat(media.getCredits().get(0).getRole(), is("Photographer"));
