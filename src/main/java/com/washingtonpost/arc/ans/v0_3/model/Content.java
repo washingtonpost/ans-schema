@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import java.text.ParseException;
+import java.time.Instant;
 import java.util.List;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
@@ -43,6 +43,11 @@ public class Content extends ANS implements TraitDated, TraitCredited, TraitLoca
         return this.createdDate;
     }
 
+    @JsonIgnore
+    public Instant getCreatedDateAsInstant() {
+        return Instant.parse(this.createdDate);
+    }
+
     @Override
     public void setCreatedDate(String createdDate) {
         validateRFC3339Date("CreatedDate", createdDate);
@@ -52,6 +57,11 @@ public class Content extends ANS implements TraitDated, TraitCredited, TraitLoca
     @Override
     public String getLastUpdatedDate() {
         return this.lastUpdatedDate;
+    }
+
+    @JsonIgnore
+    public Instant getLastUpdatedDateAsInstant() {
+        return Instant.parse(this.lastUpdatedDate);
     }
 
     @Override
@@ -64,7 +74,7 @@ public class Content extends ANS implements TraitDated, TraitCredited, TraitLoca
         try {
             TraitDated.RFC3339.parse(dateString);
         }
-        catch (ParseException e) {
+        catch (IllegalArgumentException e) {
             throw new RuntimeException(fieldName + " '" + dateString + "' must be of RFC3339 format", e);
         }
     }
