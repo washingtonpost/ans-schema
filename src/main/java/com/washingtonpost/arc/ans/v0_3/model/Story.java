@@ -25,6 +25,16 @@ public class Story extends Collection {
         return ToStringBuilder.reflectionToString(this);
     }
 
+    /**
+     * @return A shorter version of the Story object for use in logs where spitting out the whole text of the
+     * story isn't appropriate
+     */
+    public String toShortString() {
+        return new ToStringBuilder(this)
+                .append("uuid", super.getId())
+                .build();
+    }
+
     @Override
     public int hashCode() {
         return new HashCodeBuilder()
