@@ -28,7 +28,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
     @Type(value = Video.class, name = Video.TYPE),
     @Type(value = RawHTML.class, name = RawHTML.TYPE),
     @Type(value = ContentList.class, name = ContentList.TYPE),
-    @Type(value = Blockquote.class, name = Blockquote.TYPE)
+    @Type(value = Blockquote.class, name = Blockquote.TYPE),
+    @Type(value = Audio.class, name = Audio.TYPE)
 })
 public class ANS implements TraitTyped, TraitId {
 
