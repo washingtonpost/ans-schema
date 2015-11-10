@@ -1,7 +1,7 @@
 {
   "_id": "0987654321",
   "type": "audio",
-  "source": "https://www.washingtonpost.com/audio/foo/bar.mp3",
+  "sourceUrl": "https://www.washingtonpost.com/audio/foo/bar.mp3",
   "mimetype": "audio/mp3",
   "custom": {
     "playerLogo": "https://www.washingtonpost.com/logo.png"

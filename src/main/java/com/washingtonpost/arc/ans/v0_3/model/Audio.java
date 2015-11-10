@@ -12,8 +12,8 @@ public class Audio extends Media {
 
     public static final String TYPE = "audio";
 
-    @JsonProperty("source")
-    private String source;
+    @JsonProperty("sourceUrl")
+    private String sourceUrl;
 
     @JsonProperty("mimetype")
     private String mimetype;
@@ -37,19 +37,19 @@ public class Audio extends Media {
     /**
      * @return The source of the audio
      */
-    public String getSource() {
-        return source;
+    public String getSourceUrl() {
+        return sourceUrl;
     }
 
     /**
-     * @param source The source of the audio
+     * @param sourceUrl The source of the audio
      */
-    public void setSource(String source) {
-        this.source = source;
+    public void setSourceUrl(String sourceUrl) {
+        this.sourceUrl = sourceUrl;
     }
 
     /**
-     * @return The source of the audio
+     * @return The mimetype of the audio
      */
     public String getMimetype() {
         return mimetype;
@@ -102,7 +102,7 @@ public class Audio extends Media {
     @Override
     public int hashCode() {
         return new HashCodeBuilder()
-                .append(source)
+                .append(sourceUrl)
                 .append(mimetype)
                 .append(autoplay)
                 .append(controls)
@@ -120,7 +120,7 @@ public class Audio extends Media {
             Audio that = (Audio) other;
             result = that.canEqual(this)
                     && new EqualsBuilder()
-                    .append(source, that.source)
+                    .append(sourceUrl, that.sourceUrl)
                     .append(mimetype, that.mimetype)
                     .append(autoplay, that.autoplay)
                     .append(controls, that.controls)

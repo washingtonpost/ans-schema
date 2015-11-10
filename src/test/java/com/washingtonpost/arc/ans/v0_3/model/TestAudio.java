@@ -27,7 +27,7 @@ public class TestAudio extends AbstractANSTest<Audio> {
         Audio audio = testClassSerialization("audio-fixture-good");
         assertThat(audio.getId(), is("0987654321"));
         assertThat(audio.getType(), is("audio"));
-        assertThat(audio.getSource(), is("https://www.washingtonpost.com/audio/foo/bar.mp3"));
+        assertThat(audio.getSourceUrl(), is("https://www.washingtonpost.com/audio/foo/bar.mp3"));
     }
 
     @Test
@@ -36,7 +36,7 @@ public class TestAudio extends AbstractANSTest<Audio> {
         Audio audio = testClassSerialization("audio-fixture-good-settings");
         assertThat(audio.getId(), is("0987654321"));
         assertThat(audio.getType(), is("audio"));
-        assertThat(audio.getSource(), is("https://www.washingtonpost.com/audio/foo/bar.mp3"));
+        assertThat(audio.getSourceUrl(), is("https://www.washingtonpost.com/audio/foo/bar.mp3"));
         assertThat(audio.getLoop(), is(false));
         assertThat(audio.getControls(), is(true));
         assertThat(audio.getPreload(), is(false));
@@ -49,7 +49,7 @@ public class TestAudio extends AbstractANSTest<Audio> {
         Audio audio = testClassSerialization("audio-fixture-good-custom");
         assertThat(audio.getId(), is("0987654321"));
         assertThat(audio.getType(), is("audio"));
-        assertThat(audio.getSource(), is("https://www.washingtonpost.com/audio/foo/bar.mp3"));
+        assertThat(audio.getSourceUrl(), is("https://www.washingtonpost.com/audio/foo/bar.mp3"));
         Map<String,Object> map = audio.getAdditionalProperties();
         map = (Map<String,Object>) map.get("custom");
         assertThat(map.get("playerLogo"), is("https://www.washingtonpost.com/logo.png"));

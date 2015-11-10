@@ -7,7 +7,7 @@
         {
             "$ref": "ans.json",
             "properties": {
-                "source": {
+                "sourceUrl": {
                     "description": "The audio source file.",
                     "type": "string"
                 },
