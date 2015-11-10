@@ -32,7 +32,7 @@
                     "type": "boolean"
                 }
             },
-            "required": ["source"]
+            "required": ["sourceUrl"]
         }
     ]
 }
