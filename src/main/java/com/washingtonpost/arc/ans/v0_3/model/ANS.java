@@ -29,7 +29,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
     @Type(value = RawHTML.class, name = RawHTML.TYPE),
     @Type(value = ContentList.class, name = ContentList.TYPE),
     @Type(value = Blockquote.class, name = Blockquote.TYPE),
-    @Type(value = Audio.class, name = Audio.TYPE)
+    @Type(value = Audio.class, name = Audio.TYPE),
+    @Type(value = Oembed.class, name = Oembed.TYPE)
 })
 public class ANS implements TraitTyped, TraitId {
 
