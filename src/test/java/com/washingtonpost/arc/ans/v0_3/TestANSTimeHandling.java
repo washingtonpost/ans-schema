@@ -5,6 +5,7 @@ import java.time.Instant;
 import java.time.format.DateTimeParseException;
 import java.time.temporal.ChronoUnit;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -46,5 +47,16 @@ public class TestANSTimeHandling {
     @Test(expected=DateTimeParseException.class)
     public void testRequiredSeconds() {
         story.setLastUpdatedDate("1970-01-01T00:00Z");
+    }
+
+    @Test
+    public void testMillisSensitivity() {
+        String a = "2015-06-24T09:50:50.52Z";
+        String b = "2015-06-24T09:50:50.052Z";
+
+        story.setLastUpdatedDate(a);
+        story.setCreatedDate(b);
+
+        assertTrue(story.getLastUpdatedDateAsInstant().isAfter(story.getCreatedDateAsInstant()));
     }
 }
