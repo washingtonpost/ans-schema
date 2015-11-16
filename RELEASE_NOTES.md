@@ -2,12 +2,18 @@
 
 ## 0.4.0 TBD Release Date
 
-## 0.3.3 TBD Release Date
+## 0.3.4 TBD Release Date
+
+* Planned: allow for per-channel variation of content elements
+
+## 0.3.3 2015/11/16
 
 * Adding raw_html type
 * Adding blockquote and list types
 * Making Image.height and Image.widht Integers (instead of ints) so unset JSON values will not result in deserialized "0" values
 * Changing lastUpdatedDate and createdDate from java.util.Date to Strings of enforced RFC3339 format
+* Added Audio type
+* Added Oembed type
 
 ## 0.3.2 2015/10/08
 
