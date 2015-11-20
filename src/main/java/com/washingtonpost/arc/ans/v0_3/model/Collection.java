@@ -209,7 +209,7 @@ public class Collection extends Content {
     /**
      * @return An ordered list of the elements that make up the content (i.e. "the meat of the collection") for this Object
      */
-    public List<? extends ANS> getContentElements() {
+    public List<? extends ContentElement> getContentElements() {
         return contentElements;
     }
 
