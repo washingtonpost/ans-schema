@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  *
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Content extends ANS implements TraitDated, TraitCredited, TraitLocale, TraitLocated, TraitCopyrighted {
+public class Content extends ContentElement implements TraitDated, TraitCredited, TraitLocale, TraitLocated, TraitCopyrighted {
 
     public static final String TYPE = "content";
     private String createdDate;

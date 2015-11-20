@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  * A collection.
  * <p>
  * Holds attributes of an ANS collection.
- * 
+ *
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Collection extends Content {
@@ -51,7 +51,7 @@ public class Collection extends Content {
     private String displayDate;
 
     @JsonProperty("content_elements")
-    private List<? extends ANS> contentElements;
+    private List<? extends ContentElement> contentElements;
 
     @JsonProperty("editor_note")
     private String editorNote;
@@ -216,7 +216,7 @@ public class Collection extends Content {
     /**
      * @param contentElements An ordered list of the elements that make up the content (i.e. "the meat of the collection") for this
      */
-    public void setContentElements(List<? extends ANS> contentElements) {
+    public void setContentElements(List<? extends ContentElement> contentElements) {
         this.contentElements = contentElements;
     }
 

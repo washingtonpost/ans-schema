@@ -161,7 +161,15 @@
         {
             "_id": "649876543210",
             "type": "raw_html",
-            "html": "<iframe src=\"http://www.google.com\"></iframe>"
+            "html": "<iframe src=\"http://www.google.com\"></iframe>",
+            "channels": ["web"]
+        },
+        {
+            "_id": "22222229",
+            "type": "oembed",
+            "providerUrl": "https://api.twitter.com/1/statuses/oembed.json",
+            "objectUrl": "https://twitter.com/BradDavis_WFTS/status/664422935130566656",
+            "channels": ["ios", "android"]
         }
 
 

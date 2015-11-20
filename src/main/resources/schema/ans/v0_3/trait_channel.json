@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/trait_channel.json",
+    "title": "Channel trait",
+    "description": "Trait that captures an optional list of output types for which this element should be visible",
+    "type": "object",
+    "properties": {
+        "channels": {
+            "description": "List of channels in which this content may appear",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}
