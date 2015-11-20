@@ -8,7 +8,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 /**
  * <p>Models an audio element(s) in an ANS Content object</p>
  */
-public class Oembed extends ANS {
+public class Oembed extends ContentElement {
 
     public static final String TYPE = "oembed";
 

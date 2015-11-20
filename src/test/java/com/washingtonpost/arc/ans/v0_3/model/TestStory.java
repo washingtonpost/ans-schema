@@ -74,10 +74,12 @@ public class TestStory extends AbstractANSTest<Story> {
         assertThat(story.getDisplayDate(), is("2015-06-25T09:50:50.52Z"));
         assertThat(story.getEditorNote(), startsWith("This URL earlier linked to a post"));
         assertThat(story.getStatus(), is("published"));
-        assertThat(story.getContentElements().size(), is(6));
+        assertThat(story.getContentElements().size(), is(7));
         assertThat(story.getContentElements().get(0), is(instanceOf(Text.class)));
         assertThat(story.getContentElements().get(1), is(instanceOf(Text.class)));
         assertThat(story.getContentElements().get(2), is(instanceOf(Image.class)));
+        assertThat(story.getContentElements().get(6), is(instanceOf(Oembed.class)));
+        assertThat(((ContentElement)story.getContentElements().get(6)).getChannels().contains("android"), is(true));
     }
 
     /**
