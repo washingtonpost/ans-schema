@@ -4,6 +4,11 @@
     "title": "A valid content element.",
     "description": "Lists the schemas we allow as 'content elements' in our collection schema.",
     "type": "object",
+    "allOf": [
+      {
+          "$ref": "trait_channel.json",
+      }
+    ],
     "oneOf": [
         {
             "$ref": "ans.json",

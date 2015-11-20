@@ -12,7 +12,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  *
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Gallery extends Collection {
+public class Gallery extends ContentElement {
 
     public static final String TYPE = "ans";
 

@@ -8,7 +8,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 /**
  * <p>Models raw_html element(s) in an ANS Content object</p>
  */
-public class RawHTML extends ANS {
+public class RawHTML extends ContentElement {
 
     public static final String TYPE = "raw_html";
 

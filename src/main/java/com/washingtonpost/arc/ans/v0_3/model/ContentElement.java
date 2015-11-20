@@ -4,33 +4,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import java.util.List;
 
+public abstract class ContentElement extends ANS {
 
-/**
- * <p>Models raw_html element(s) in an ANS Content object</p>
- */
-public class Blockquote extends ContentElement {
+    @JsonProperty("channels")
+    private List<String> channels;
 
-    public static final String TYPE = "blockquote";
-
-    @JsonProperty("content")
-    private String content;
-
-    public Blockquote() {
-        setType(TYPE);
-    }
-    /**
-     * @return The content of the element
-     */
-    public String getContent() {
-        return content;
+    public List<String> getChannels() {
+        return channels;
     }
 
-    /**
-     * @param content The content of the element
-     */
-    public void setContent(String content) {
-        this.content = content;
+    public void setChannels(List<String> channels) {
+        this.channels = channels;
     }
 
     @Override
@@ -41,7 +27,7 @@ public class Blockquote extends ContentElement {
     @Override
     public int hashCode() {
         return new HashCodeBuilder()
-                .append(content)
+                .append(channels)
                 .appendSuper(super.hashCode())
                 .toHashCode();
     }
@@ -50,11 +36,11 @@ public class Blockquote extends ContentElement {
     public boolean equals(Object other) {
         boolean result = false;
 
-        if (other instanceof Blockquote) {
-            Blockquote that = (Blockquote) other;
+        if (other instanceof ContentElement) {
+            ContentElement that = (ContentElement) other;
             result = that.canEqual(this)
                     && new EqualsBuilder()
-                    .append(content, that.content)
+                    .append(channels, that.channels)
                     .appendSuper(super.equals(other))
                     .isEquals();
         }
@@ -70,7 +56,7 @@ public class Blockquote extends ContentElement {
      */
     @Override
     public boolean canEqual(Object other) {
-        return (other instanceof Blockquote);
+        return (other instanceof ContentElement);
     }
 
 }
