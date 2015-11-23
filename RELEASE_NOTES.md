@@ -4,7 +4,7 @@
 
 ## 0.3.4 TBD Release Date
 
-* Planned: allow for per-channel variation of content elements
+* Added "channel" attribute to allow for per-channel variation of content elements
 
 ## 0.3.3 2015/11/16
 
