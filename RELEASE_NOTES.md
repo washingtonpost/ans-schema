@@ -2,7 +2,7 @@
 
 ## 0.4.0 TBD Release Date
 
-## 0.3.4 TBD Release Date
+## 0.3.4 2015/11/23
 
 * Added "channel" attribute to allow for per-channel variation of content elements
 
