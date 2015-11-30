@@ -16,10 +16,7 @@
                     "description": "A url-shorterned version of the canonical_url."
                 },
                 "headlines": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "headline.json"
-                    },
+                    "type": "object",
                     "description": "The headline(s) for the story."
                 },
                 "description": {
