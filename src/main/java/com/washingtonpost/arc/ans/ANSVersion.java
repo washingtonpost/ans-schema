@@ -11,6 +11,7 @@ public enum ANSVersion {
     V0_3_2("0.3.2"),
     V0_3_3("0.3.3"),
     V0_3_4("0.3.4"),
+    V0_3_5("0.3.5"),
     V0_4_0("0.4");
 
     private final String versionString;
