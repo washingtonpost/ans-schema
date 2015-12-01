@@ -43,6 +43,7 @@ public class TestAudio extends AbstractANSTest<Audio> {
         assertThat(audio.getAutoplay(), is(true));
     }
 
+    @SuppressWarnings("unchecked")
     @Test
     public void testWithCustom() throws Exception {
         testJsonValidation("audio-fixture-good-custom", true);
@@ -51,7 +52,7 @@ public class TestAudio extends AbstractANSTest<Audio> {
         assertThat(audio.getType(), is("audio"));
         assertThat(audio.getSourceUrl(), is("https://www.washingtonpost.com/audio/foo/bar.mp3"));
         Map<String,Object> map = audio.getAdditionalProperties();
-        map = (Map<String,Object>) map.get("custom");
+        map = (Map<String, Object>) map.get("custom");
         assertThat(map.get("playerLogo"), is("https://www.washingtonpost.com/logo.png"));
     }
 

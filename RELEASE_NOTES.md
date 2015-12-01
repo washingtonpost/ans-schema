@@ -2,6 +2,10 @@
 
 ## 0.4.0 TBD Release Date
 
+## 0.3.5 TBD Release Date
+
+* Added a StorySummary object to offer a lower-weight option for Story transmission over the wire 
+
 ## 0.3.4 2015/11/23
 
 * Added "channel" attribute to allow for per-channel variation of content elements
