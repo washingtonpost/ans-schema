@@ -1,20 +1,11 @@
 package com.washingtonpost.arc.ans.v0_3.model;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.fge.jackson.JsonLoader;
 import com.github.fge.jsonschema.core.exceptions.ProcessingException;
 import com.github.fge.jsonschema.core.report.ProcessingReport;
 import com.github.fge.jsonschema.main.JsonSchema;
 import com.github.fge.jsonschema.main.JsonSchemaFactory;
 import java.io.IOException;
 import java.net.URL;
-import nl.jqno.equalsverifier.EqualsVerifier;
-import nl.jqno.equalsverifier.Warning;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.not;
-import static org.hamcrest.CoreMatchers.nullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import static org.junit.Assert.fail;
@@ -25,55 +16,11 @@ import org.junit.Test;
  * <p>Helper/common methods for JSON schema/test validation</p>
  * @param <T> The type of POJO the implementing test class is stressing the JSON (de)serialization of.
  */
-public abstract class AbstractTest<T> {
+public abstract class AbstractTest<T> extends AbstractTestSupport {
 
     protected static final Logger LOGGER = LoggerFactory.getLogger(AbstractTest.class);
     private final JsonSchemaFactory factory = JsonSchemaFactory.byDefault();
     private JsonSchema schema;
-    protected final ObjectMapper objectMapper = new ObjectMapper();
-
-
-    /**
-     * @param resourcePath THe path to the resource to load
-     * @return
-     * @throws IOException
-     */
-    URL getResource(String resourcePath) throws IOException {
-        return getClass().getClassLoader().getResource(resourcePath);
-    }
-
-    /**
-     * @param fixtureName The name of the fixture in the same path as the test being executed, e.g. "credit".
-     * @return
-     * @throws IOException
-     */
-    URL getSisterPathResource(String fixtureName) throws IOException {
-        return getResource(getClass().getPackage().getName().replace(".", "/") + "/" + fixtureName + ".json");
-    }
-
-    /**
-     * @param fixtureName The name of the fixture in the same path as the test being executed, e.g. "credit".
-     * @return
-     * @throws IOException
-     */
-    JsonNode loadFixture(String fixtureName) throws IOException {
-        return JsonLoader.fromPath(getSisterPathResource(fixtureName).getFile());
-    }
-
-    /**
-     * @param schemaName The name of the schema to load, e.g. "credit".  This method assumes the schemas
-     * live under a classpath resource schema/ans/v0_X/
-     * @return
-     * @throws IOException
-     */
-    JsonNode loadSchema(String schemaName) throws IOException {
-        // Turns "com.washingtonpost.arc.ans.v0_x.model" into "schema/ans/v0_3/"
-        String schemaResourceDir = getClass().getPackage().getName()
-                .replace(".", "/")
-                .replace("com/washingtonpost/arc", "schema")
-                .replace("model", "");
-        return JsonLoader.fromPath(getResource(schemaResourceDir + schemaName + ".json").getFile());
-    }
 
     /**
      * Each test case in our subclass children will use the same schema, so there's only cause to
@@ -116,11 +63,7 @@ public abstract class AbstractTest<T> {
     @Test
     @SuppressWarnings("unchecked")
     public void testEqualsAndHashCode() {
-        if (!getTargetClass().isInterface()) {
-            EqualsVerifier.forClass(getTargetClass())
-                    .suppress(Warning.STRICT_INHERITANCE, Warning.NONFINAL_FIELDS)
-                    .verify();
-        }
+        super.testEqualsAndHashCode(getTargetClass());
     }
 
     /**
@@ -129,9 +72,7 @@ public abstract class AbstractTest<T> {
      */
     @Test
     public void testToString() throws InstantiationException, IllegalAccessException {
-        if (!getTargetClass().isInterface()) {
-            assertThat(getTargetClass().newInstance().toString(), is(not(nullValue())));
-        }
+        super.testToString(getTargetClass());
     }
 
     /**

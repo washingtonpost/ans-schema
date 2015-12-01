@@ -3,7 +3,6 @@ package com.washingtonpost.arc.ans.v0_3.model;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import org.junit.Test;
-import java.util.Map;
 
 /**
  * <p>Tests that JSON we expect to be a valid "Paragraph" data file serializes correctly and validates
