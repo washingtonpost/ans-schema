@@ -37,8 +37,12 @@ public final class StorySummary {
         summary.setId(story.getId());
         summary.setCanonicalUrl(story.getCanonicalUrl());
         summary.setLastUpdatedDate(story.getLastUpdatedDate());
-        summary.setCredits(new ArrayList<>(story.getCredits()));
-        summary.setHeadlines(new ArrayList<>(story.getHeadlines()));
+        if (story.getCredits() != null) {
+            summary.setCredits(new ArrayList<>(story.getCredits()));
+        }
+        if (story.getHeadlines() != null) {
+            summary.setHeadlines(new ArrayList<>(story.getHeadlines()));
+        }
         return summary;
     }
 
