@@ -12,7 +12,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  * <p>Digest of an ANS Story object for quicker fetching/sorting/listing</p>
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public final class StorySummary {
+public final class StorySummary implements TraitId {
 
     @JsonProperty("_id")
     private String id;
@@ -46,10 +46,12 @@ public final class StorySummary {
         return summary;
     }
 
+    @Override
     public String getId() {
         return id;
     }
 
+    @Override
     public void setId(String id) {
         this.id = id;
     }
