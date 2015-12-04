@@ -45,7 +45,9 @@ public class Content extends ContentElement implements TraitDated, TraitCredited
 
     @JsonIgnore
     public Instant getCreatedDateAsInstant() {
-        return Instant.parse(this.createdDate);
+        return (this.createdDate != null && !this.createdDate.isEmpty())
+                ? Instant.parse(this.createdDate)
+                : null;
     }
 
     @Override
@@ -61,7 +63,9 @@ public class Content extends ContentElement implements TraitDated, TraitCredited
 
     @JsonIgnore
     public Instant getLastUpdatedDateAsInstant() {
-        return Instant.parse(this.lastUpdatedDate);
+        return (this.lastUpdatedDate != null && !this.lastUpdatedDate.isEmpty())
+                ? Instant.parse(this.lastUpdatedDate)
+                : null;
     }
 
     @Override
