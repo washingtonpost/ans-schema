@@ -2,6 +2,7 @@ package com.washingtonpost.arc.ans.v0_3.model;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.Assert.assertNull;
 import org.junit.Test;
 
 /**
@@ -25,5 +26,19 @@ public class TestContent extends AbstractANSTest<Content> {
         testJsonValidation("content-fixture-good", true);
         Content content = testClassSerialization("content-fixture-good");
         assertThat(content.getAdditionalProperties().get("foo"), is("bar"));
+    }
+
+    @Test
+    public void testNullSafeLastUpdatedDateAsInstant() throws Exception {
+        Content content = testClassSerialization("content-fixture-no-dates");
+        assertNull(content.getLastUpdatedDate());
+        assertNull(content.getLastUpdatedDateAsInstant());
+    }
+
+    @Test
+    public void testNullSafeCreatedDateAsInstant() throws Exception {
+        Content content = testClassSerialization("content-fixture-no-dates");
+        assertNull(content.getCreatedDate());
+        assertNull(content.getCreatedDateAsInstant());
     }
 }
