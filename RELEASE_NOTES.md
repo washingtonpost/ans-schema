@@ -2,7 +2,7 @@
 
 ## 0.4.0 TBD Release Date
 
-## 0.3.5 TBD Release Date
+## 0.3.5 2015/11/18
 
 * Added a StorySummary object to offer a lower-weight option for Story transmission over the wire 
 * Made sure Content.getLastUpdatedDateAsInstant and .getCreatedDateAsInstant were null safe if their underlying Strings were null/empty
