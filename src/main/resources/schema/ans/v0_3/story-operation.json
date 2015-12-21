@@ -5,7 +5,6 @@
   "type": "object",
   "allOf": [{
     "$ref": "trait_id.json",
-    "$ref": "trait_credited.json",
     "properties": {
       "date": {
         "description": "When the operation should be considered performed",
