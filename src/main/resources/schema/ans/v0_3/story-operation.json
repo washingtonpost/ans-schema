@@ -12,10 +12,6 @@
         "type": "string",
         "format": "date-time"
       },
-      "type": {
-        "type": "string",
-        "enum": [ "operation" ]
-      }
       "operation": {
         "type": "string",
         "description": "The identifier of the operation being performed"
