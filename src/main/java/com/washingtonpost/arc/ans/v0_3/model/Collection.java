@@ -6,6 +6,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.Instant;
 import java.util.List;
+import java.util.Map;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -27,7 +29,7 @@ public class Collection extends Content {
     private String shortUrl;
 
     @JsonProperty("headlines")
-    private List<Headline> headlines;
+    private Map<String, String> headlines;
 
     @JsonProperty("description")
     private String description;
@@ -87,14 +89,14 @@ public class Collection extends Content {
     /**
      * @return The headlines for this collection.
      */
-    public List<Headline> getHeadlines() {
+    public Map<String, String> getHeadlines() {
         return headlines;
     }
 
     /**
      * @param headlines The headlines for this collection.
      */
-    public void setHeadline(List<Headline> headlines) {
+    public void setHeadline(Map<String, String> headlines) {
         this.headlines = headlines;
     }
 
