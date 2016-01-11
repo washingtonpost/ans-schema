@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/table.json",
+  "description": "A data table content element",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "ans.json",
+      "properties": {
+        "header": {
+          "type": "array",
+          "description": "The header row of the table",
+          "items": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "text.json"
+              }
+            ]
+          }
+	    },
+        "rows" : {
+	      "type" : "array",
+          "description": "The data rows of the table",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "allOf": [
+                {
+                  "$ref": "text.json"
+                }
+              ]
+            }
+	      }
+        }
+      },
+      "required": [ "rows" ]
+    }
+  ]
+}
