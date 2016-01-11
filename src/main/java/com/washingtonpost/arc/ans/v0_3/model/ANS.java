@@ -30,7 +30,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
     @Type(value = ContentList.class, name = ContentList.TYPE),
     @Type(value = Blockquote.class, name = Blockquote.TYPE),
     @Type(value = Audio.class, name = Audio.TYPE),
-    @Type(value = Oembed.class, name = Oembed.TYPE)
+    @Type(value = Oembed.class, name = Oembed.TYPE),
+    @Type(value = Code.class, name = Code.TYPE)
 })
 public class ANS implements TraitTyped, TraitId {
 
