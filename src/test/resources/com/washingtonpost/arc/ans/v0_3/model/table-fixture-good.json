@@ -1,0 +1,7 @@
+{
+  "_id": "0987654321",
+  "type": "table",
+  "header": [ { "id": "a", "text": "Header Y = 1" }, { "id": "b", "text": "Header Y = 1" } ],
+  "rows": [ [ { "id": 1, "text": "X = 1, Y = 1" }, { "id": 2, "text": "X = 2, Y = 1" } ],
+            [ { "id": 3, "text": "X = 2, Y = 1" }, { "id": 4, "text": "X = 2, Y = 2" } ] ]
+}

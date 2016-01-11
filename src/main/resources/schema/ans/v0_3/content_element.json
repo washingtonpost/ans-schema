@@ -18,7 +18,8 @@
             "$ref": "raw_html.json",
             "$ref": "blockquote.json",
             "$ref": "list.json",
-            "$ref": "code.json"
+            "$ref": "code.json",
+            "$ref": "table.json"
         }
     ]
 }

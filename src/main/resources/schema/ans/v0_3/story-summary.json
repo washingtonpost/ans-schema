@@ -13,10 +13,7 @@
                         "format": "date-time"
                 },
                 "headlines": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "headline.json"
-                    },
+                    "type": "object",
                     "description": "The headline(s) for the story."
                 },
                 "canonical_url": {

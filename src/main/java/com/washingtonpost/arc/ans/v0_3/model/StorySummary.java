@@ -7,6 +7,7 @@ import java.util.List;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import java.util.Map;
 
 /**
  * <p>Digest of an ANS Story object for quicker fetching/sorting/listing</p>
@@ -24,7 +25,7 @@ public final class StorySummary implements TraitId {
     private String canonicalUrl;
 
     @JsonProperty("headlines")
-    private List<Headline> headlines;
+    private Map<String, String> headlines;
 
     @JsonProperty("credits")
     private List<Credit> credits;
@@ -41,7 +42,7 @@ public final class StorySummary implements TraitId {
             summary.setCredits(new ArrayList<>(story.getCredits()));
         }
         if (story.getHeadlines() != null) {
-            summary.setHeadlines(new ArrayList<>(story.getHeadlines()));
+            summary.setHeadlines(story.getHeadlines());
         }
         return summary;
     }
@@ -72,11 +73,11 @@ public final class StorySummary implements TraitId {
         this.canonicalUrl = canonicalUrl;
     }
 
-    public List<Headline> getHeadlines() {
+    public Map<String, String> getHeadlines() {
         return headlines;
     }
 
-    public void setHeadlines(List<Headline> headlines) {
+    public void setHeadlines(Map<String, String> headlines) {
         this.headlines = headlines;
     }
 

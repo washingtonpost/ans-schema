@@ -22,7 +22,7 @@ public class TestStorySummary extends AbstractTest<StorySummary> {
         assertTrue(summary.getCanonicalUrl().startsWith("http://www.washingtonpost.com/local/anesthesiologist-"));
         assertEquals("2015-06-24T09:50:50.52Z", summary.getLastUpdatedDate());
         assertEquals("John Q. Reporter", summary.getCredits().get(0).getName());
-        assertEquals("The default headline for this story", summary.getHeadlines().get(0).getHeadline());
+        assertEquals("The default headline for this story", summary.getHeadlines().get("default"));
     }
 
     @Override
