@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/header.json",
+  "description": "A header",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "ans.json",
+      "properties": {
+        "text": {
+          "description": "The text of the header",
+          "type": "string"
+        },
+        "level": {
+          "description": "The level of the header",
+          "type": "integer"
+        }
+      },
+      "required": ["text"]
+    }
+  ]
+}

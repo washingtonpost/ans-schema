@@ -19,7 +19,8 @@
             "$ref": "blockquote.json",
             "$ref": "list.json",
             "$ref": "code.json",
-            "$ref": "table.json"
+            "$ref": "table.json",
+            "$ref": "header.json"
         }
     ]
 }

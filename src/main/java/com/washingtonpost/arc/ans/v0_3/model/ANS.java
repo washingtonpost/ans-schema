@@ -32,7 +32,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
     @Type(value = Audio.class, name = Audio.TYPE),
     @Type(value = Oembed.class, name = Oembed.TYPE),
     @Type(value = Code.class, name = Code.TYPE),
-    @Type(value = Table.class, name = Table.TYPE)
+    @Type(value = Table.class, name = Table.TYPE),
+    @Type(value = Header.class, name = Header.TYPE)
 })
 public class ANS implements TraitTyped, TraitId {
 
