@@ -2,9 +2,14 @@
 
 ## 0.4.0 TBD Release Date
 
+## 0.3.6 2016/1/15
+
+* Added code sample, table, and header content elements
+* Made "text" a require field for text objects
+
 ## 0.3.5 2015/11/18
 
-* Added a StorySummary object to offer a lower-weight option for Story transmission over the wire 
+* Added a StorySummary object to offer a lower-weight option for Story transmission over the wire
 * Made sure Content.getLastUpdatedDateAsInstant and .getCreatedDateAsInstant were null safe if their underlying Strings were null/empty
 
 ## 0.3.4 2015/11/23
