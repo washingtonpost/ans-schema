@@ -17,7 +17,7 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:washingtonpost/ans-schema.git</developerConnection>
-        <tag>0.3.6</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <properties>
