@@ -31,7 +31,7 @@ public class Table extends ContentElement {
     }
 
     /**
-     * @param rows an List of header cells
+     * @param header an List of header cells
      */
     public void setHeader(List<Text> header) {
         this.header = header;
