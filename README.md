@@ -6,7 +6,7 @@ JSON schema definition and supporting example/validation code for The Washington
 # Overview
 ANS ("ARC Native Specification") is the collection of schema documents and generated source files that comprise the Washington Post's definition of "content", in so far as content is passed back and forth between systems in the Arc ecosystem of applications.
 
-The latest version of the ANS schema is the 0.3.6-SNAPSHOT release, which includes Java model objects for use in deserializing ARC JSON files.  Include this artifact in your POM.xml like:
+The latest version of the ANS schema is the 0.3.7-SNAPSHOT release, which includes Java model objects for use in deserializing ARC JSON files.  Include this artifact in your POM.xml like:
 ```
 <dependency>
     <groupId>com.washingtonpost.arc.ans</groupId>
