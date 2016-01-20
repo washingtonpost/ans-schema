@@ -26,6 +26,9 @@
         },
         "next": {
           "description": "A page number, story id, url, or other parameter used for retrieving subsequent items in the list"
+        },
+        "previous": {
+          "description": "A page number, story id, url, or other parameter used for retrieving previous items in the list"
         }
       },
       "required": [ "items" ]

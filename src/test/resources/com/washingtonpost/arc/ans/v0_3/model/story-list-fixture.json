@@ -1,0 +1,45 @@
+{
+  "id": "001",
+  "type": "story-list",
+  "items": [
+    {
+      "type": "story-summary",
+      "id": "a",
+      "headlines": {
+        "default": "Dow plunges amid slump in oil prices"
+      },
+      "credits": [
+        {
+            "name": "Drew Harell",
+            "org": "The Washington Post",
+            "role": "Author"
+        },
+        {
+            "name": "Renae Marle",
+            "org": "The Washington Post",
+            "role": "Contributor"
+        }
+      ],
+      "last_updated_date": "2015-06-24T09:50:50.52Z",
+      "canonical_url": "https://www.washingtonpost.com/business/economy/market-dives-more-than-3-percent-amid-fears-over-oil-prices-china/2016/01/20/010d3a62-bf9f-11e5-bcda-62a36b394160_story.html"
+    },
+    {
+      "id": "b",
+      "type": "story-summary",
+      "headlines": {
+        "default": "Taliban gunmen storm university in Pakistan, killing at least 20 people"
+      },
+      "credits": [
+        {
+            "name": "Tim Craig",
+            "org": "The Washington Post",
+            "role": "Author"
+        }
+      ],
+      "last_updated_date": "2015-06-24T09:50:50.52Z",
+      "canonical_url": "https://www.washingtonpost.com/world/gunmen-storm-college-campus-in-northwestern-pakistan/2016/01/20/7497fec0-bf38-11e5-bcda-62a36b394160_story.html"
+    }
+  ],
+  "count": 255,
+  "next": 3
+}
