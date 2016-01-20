@@ -1,26 +1,29 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/story-summary.json",
-    "description": "A summary of a story",
-    "type": "object",
-    "allOf": [{
-            "$ref": "trait_id.json",
-            "$ref": "trait_credited.json",
-            "properties": {
-                "last_updated_date": {
-                "description": "When the story was last updated (RFC3339-formatted).",
-                        "type": "string",
-                        "format": "date-time"
-                },
-                "headlines": {
-                    "type": "object",
-                    "description": "The headline(s) for the story."
-                },
-                "canonical_url": {
-                    "type": "string",
-                    "description": "The fully qualified URL to the story."
-                }
-            }
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/story-summary.json",
+  "description": "A summary of a story",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "trait_id.json",
+      "$ref": "trait_credited.json",
+      "$ref": "trait_headlines.json",
+      "properties": {
+        "last_updated_date": {
+          "description": "When the story was last updated (RFC3339-formatted).",
+          "type": "string",
+          "format": "date-time"
+        },
+        "headlines": {
+          "type": "object",
+          "description": "The headline(s) for the story."
+        },
+        "canonical_url": {
+          "type": "string",
+          "description": "The fully qualified URL to the story."
         }
-    ]
+      },
+      "required": [ "canonical_url", "headlines" ]
+    }
+  ]
 }

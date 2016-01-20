@@ -20,7 +20,8 @@
             "$ref": "list.json",
             "$ref": "code.json",
             "$ref": "table.json",
-            "$ref": "header.json"
+            "$ref": "header.json",
+            "$ref": "story-list.json"
         }
     ]
 }

@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/trait_headlines.json",
+    "title": "Headlines",
+    "description": "Trait that applies a key-value set of headlines.",
+    "type": "object",
+    "properties": {
+      "default": {
+        "description": "A default headline if no better match is found",
+        "type": "string"
+      }
+    },
+    "required": [ "default" ]
+}

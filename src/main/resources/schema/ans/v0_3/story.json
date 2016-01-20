@@ -1,11 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/story.json",
-    "title": "A story.",
-    "description": "Holds attributes of an ANS story.",
-    "type": "object",
-    "allOf": [{
-            "$ref": "collection.json"
-        }
-    ]
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/story.json",
+  "title": "A story.",
+  "description": "Holds attributes of an ANS story.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "collection.json"
+    }
+  ]
 }

@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/story-list.json",
+  "title": "A list of stories.",
+  "description": "Holds a sequence of ANS story summaries.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "ans.json",
+      "properties": {
+        "items": {
+          "description": "The items that make up the list",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "allOf":  [
+              {
+                "$ref": "story-summary.json"
+              }
+            ]
+          }
+        },
+        "count" : {
+          "description": "Total number of items in the source or query that this list pulls from",
+          "type": "integer"
+        },
+        "next": {
+          "description": "A page number, story id, url, or other parameter used for retrieving subsequent items in the list"
+        }
+      },
+      "required": [ "items" ]
+    }
+  ]
+}
