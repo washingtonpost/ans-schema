@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/video-stream.json",
+    "title": "A stream of video.",
+    "description": "Configuration for a piece of video content, over a stream.",
+    "type": "object",
+    "properties": {
+        "height": {
+            "description": "The height of the video.",
+            "type": "number"
+        },
+        "width": {
+            "description": "The width of the video.",
+            "type": "number"
+        },
+        "filesize": {
+            "description": "The size of the video, in bytes.",
+            "type": "number"
+        },
+        "audioCodec": {
+            "description": "The audio codec.",
+            "type": "string"
+        },
+        "videoCodec": {
+            "description": "The video codec.",
+            "type": "string"
+        },
+        "type": {
+            "description": "The type of video (e.g. mp4).",
+            "type": "string"
+        },
+        "url": {
+            "description": "Where to get the stream from.",
+            "type": "string"
+        },
+        "bitrate": {
+            "description": "The bitrate of the video",
+            "type": "number"
+        },
+        "provider": {
+            "description": "The provider of the video.",
+            "type": "string"
+        }
+    }
+}
