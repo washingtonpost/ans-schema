@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/list_item.json",
+    "description": "A list item element",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "ans.json",
+            "properties": {
+                "content": {
+                    "description": "A single item in a list.",
+                    "type": "string"
+                }
+            }
+        }
+    ]
+}

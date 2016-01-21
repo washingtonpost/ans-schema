@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story.json",
+  "title": "A story.",
+  "description": "Holds attributes of an ANS story.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "content.json",
+      "$ref": "trait-content-elements.json",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [ "story" ]
+        },
+        "content_elements": {
+          "type": "array",
+          "items": {
+            "$ref": "story-elements/story-element.json"
+          }
+        }
+      }
+    }
+  ]
+}

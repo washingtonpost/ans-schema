@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/content.json",
+  "title": "A content object.",
+  "description": "Holds common attributes of ANS Content objects.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "trait-id.json",
+      "$ref": "trait-type.json",
+      "$ref": "trait-date.json",
+      "$ref": "trait-credit.json",
+      "$ref": "trait-locale.json",
+      "$ref": "trait-location.json",
+      "$ref": "trait-copyright.json",
+      "properties": {
+        "canonical_url": {
+          "type": "string",
+          "description": "The fully qualified URL to the story."
+        },
+        "short_url": {
+          "type": "string",
+          "description": "A url-shorterned version of the canonical_url."
+        },
+        "headlines": {
+          "type": "object",
+          "description": "The headline(s) for the story."
+        },
+        "description": {
+          "type": "string",
+          "description": "A description of the story."
+        },
+        "status": {
+          "type": "string",
+          "description": "Optional field to store story workflow related status (e.g. published/embargoed/etc)"
+        },
+        "related_content": {
+          "type": "array",
+          "items": {
+            "$ref": "trait-id.json"
+          },
+          "description": "A list of IDs referencing other content items this story is related to."
+        },
+        "promo_images": {
+          "type": "array",
+          "items": {
+            "$ref": "image.json"
+          },
+          "description": "List of promotional images to use when highlighting the story."
+        },
+        "taxonomy": {
+          "$ref": "taxonomy.json",
+          "description": "A collection of metadata, keywords, etc. describing this story."
+        },
+        "publish_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the story was first published."
+        },
+        "display_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The RFC3339-formatted dated time of the most recent date the story was (re)displayed on a public site."
+        },
+        "editor_note": {
+          "type": "string",
+          "description": "Additional information to be displayed in/near the story html content from the editor."
+        }
+      }
+    }
+  ]
+}

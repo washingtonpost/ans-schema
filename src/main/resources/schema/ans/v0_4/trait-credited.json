@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/trait_credited.json",
+    "title": "Credit trait",
+    "description": "Trait that captures the need to attribute ownership or authorship to content.",
+    "type": "object",
+    "required": ["credits"],
+    "properties": {
+        "credits": {
+            "description": "An array of people/groups attributed to this content.",
+            "type": "array",
+            "items": {
+                "$ref": "credit.json"
+            }
+        }
+    }
+}

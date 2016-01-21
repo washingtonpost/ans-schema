@@ -1,0 +1,13 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/trait_locale.json",
+    "title": "Describes language for an element",
+    "description": "Encapsulates characteristics defining language, locale, etc.",
+    "type": "object",
+    "properties": {
+        "language": {
+            "description": "The primary language of the content. The value should follow IETF BCP47. (e.g. 'en', 'es-419', etc.) ",
+            "type": "string"
+        }
+    }
+}
