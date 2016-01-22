@@ -4,7 +4,6 @@
     "title": "Globally Unique ID trait",
     "description": "Trait that applies a globally unique id.",
     "type": "object",
-    "required": ["_id"],
     "properties": {
         "_id": {
             "description": "A globally unique identifier of the content in the ANS repository.",

@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/story-operation.json",
+  "description": "An operation on a story",
+  "type": "object",
+  "allOf": [{
+    "$ref": "trait_id.json",
+    "properties": {
+      "date": {
+        "description": "When the operation should be considered performed",
+        "type": "string",
+        "format": "date-time"
+      },
+      "operation": {
+        "type": "string",
+        "description": "The identifier of the operation being performed"
+      }
+    }
+  }]
+}

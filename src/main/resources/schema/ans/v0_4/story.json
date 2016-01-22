@@ -12,12 +12,6 @@
         "type": {
           "type": "string",
           "enum": [ "story" ]
-        },
-        "content_elements": {
-          "type": "array",
-          "items": {
-            "$ref": "story-elements/story-element.json"
-          }
         }
       }
     }

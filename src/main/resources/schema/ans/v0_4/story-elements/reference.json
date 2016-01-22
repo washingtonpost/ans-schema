@@ -21,10 +21,10 @@
               "type": "string"
             },
             "id" : {
+              "description": "The id passed to the service to retrieve an ANS document",
               "type": "string"
             }
-          },
-          "required": [ "type", "service", "id" ]
+          }
         }
       },
       "required": [ "type", "referent" ]

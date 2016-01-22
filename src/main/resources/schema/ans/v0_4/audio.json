@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/audio.json",
+    "description": "A audio element",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "ans.json",
+            "properties": {
+                "sourceUrl": {
+                    "description": "The audio source file.",
+                    "type": "string"
+                },
+                "mimetype": {
+                    "description": "Mime type of audio source file.",
+                    "type": "string"
+                },
+                "autoplay": {
+                    "description": "Whether to autoplay is enabled.",
+                    "type": "boolean"
+                },
+                "controls": {
+                    "description": "Whether controls are enabled.",
+                    "type": "boolean"
+                },
+                "loop": {
+                    "description": "Whether looping is enabled.",
+                    "type": "boolean"
+                },
+                "preload": {
+                    "description": "Whether preload is enabled.",
+                    "type": "boolean"
+                }
+            },
+            "required": ["sourceUrl"]
+        }
+    ]
+}

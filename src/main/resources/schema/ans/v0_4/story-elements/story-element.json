@@ -6,9 +6,15 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/trait-id.json",
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/trait-type.json",
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/trait-channel.json"
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/content-element.json",
+      "properties": {
+        "editable": {
+          "description": "Flag to indicate this content may edited in a story",
+          "type": "boolean",
+          "enum": [ true ]
+        }
+      },
+      "required": [ "editable" ]
     }
   ]
 }

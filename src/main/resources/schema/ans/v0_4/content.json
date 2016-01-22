@@ -13,6 +13,7 @@
       "$ref": "trait-locale.json",
       "$ref": "trait-location.json",
       "$ref": "trait-copyright.json",
+      "$ref": "trait-taxonomy.json",
       "properties": {
         "canonical_url": {
           "type": "string",
