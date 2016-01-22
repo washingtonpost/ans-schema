@@ -1,13 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/image.json",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/image.json",
   "title": "An image.",
   "description": "Holds attributes of an ANS image component.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/content.json",
-      "$ref": "story-element.json",
+      "$ref": "content.json",
       "properties": {
         "subtitle": {
           "description": "Subtitle for the image.",

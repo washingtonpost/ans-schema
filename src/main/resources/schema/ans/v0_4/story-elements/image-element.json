@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/image-element.json",
+  "title": "An image.",
+  "description": "Holds attributes of an ANS image component.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/image.json",
+      "$ref": "story-element.json",
+      "properties": {
+        "crop": {
+          "description": "Crop settings for this image element"
+        },
+        "scale": {
+          "description": "Scale settings for this image element"
+        }
+      }
+    }
+  ]
+}
