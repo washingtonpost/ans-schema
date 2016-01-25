@@ -6,15 +6,19 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "trait-id.json",
-      "$ref": "trait-type.json",
-      "$ref": "trait-date.json",
-      "$ref": "trait-credit.json",
-      "$ref": "trait-locale.json",
-      "$ref": "trait-location.json",
-      "$ref": "trait-copyright.json",
-      "$ref": "trait-taxonomy.json",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/trait-id.json",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/trait-type.json",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/trait-date.json",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/trait-credit.json",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/trait-locale.json",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/trait-location.json",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/trait-copyright.json",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/trait-taxonomy.json",
       "properties": {
+        "subtype": {
+          "type": "string",
+          "description": "A more granular type than story, gallery, etc. (E.g., column, blog-post)"
+        },
         "canonical_url": {
           "type": "string",
           "description": "The fully qualified URL to the story."
@@ -24,12 +28,17 @@
           "description": "A url-shorterned version of the canonical_url."
         },
         "headlines": {
-          "type": "object",
-          "description": "The headline(s) for the story."
+          "description": "The headline(s) for the story.",
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/headlines.json"
+        },
+        "subheadlines": {
+          "description": "The subheadline(s) (or deks) for the story.",
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/headlines.json"
         },
         "description": {
-          "type": "string",
-          "description": "A description of the story."
+          "type": "object",
+          "description": "Description(s) of the story, keyed by context.",
+          "
         },
         "status": {
           "type": "string",
@@ -66,6 +75,24 @@
         "editor_note": {
           "type": "string",
           "description": "Additional information to be displayed in/near the story html content from the editor."
+        },
+        "syndication": {
+          "type": "object",
+          "description": "Key-boolean pair of syndication services where this article may go"
+          "patternProperties": {
+            ".*": {
+              "type": "boolean"
+            }
+          }
+        },
+        "source": {
+          "description": "Information about the original source and/or owner of this content"
+        },
+        "tracking": {
+          "description": "Tracking information, probably implementation-dependent"
+        },
+        "comments": {
+          "description": "Comment configuration data"
         }
       }
     }
