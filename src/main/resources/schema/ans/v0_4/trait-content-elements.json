@@ -8,7 +8,7 @@
     "content_elements": {
       "type": "array",
       "items": {
-        "$ref": "content-element.json"
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/content-element.json"
       },
       "description": "List of the content elements in this collection."
     }

@@ -5,7 +5,7 @@
   "description": "This represents a reference to external content that should be denormalized",
   "allOf": [
     {
-      "$ref": "story-element.json",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/story-element.json",
       "properties": {
         "type": {
           "type": "string",

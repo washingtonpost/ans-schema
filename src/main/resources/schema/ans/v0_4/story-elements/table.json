@@ -5,7 +5,7 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "story-element.json",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/story-element.json",
       "properties": {
         "type": {
           "enum": [ "table" ]
@@ -31,7 +31,7 @@
               "type": "object",
               "allOf": [
                 {
-                  "$ref": "text.json"
+                  "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/text.json"
                 }
               ]
             }

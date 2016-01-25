@@ -10,7 +10,7 @@
             "description": "An array of people/groups attributed to this content.",
             "type": "array",
             "items": {
-                "$ref": "credit.json"
+                "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/credit.json"
             }
         }
     }

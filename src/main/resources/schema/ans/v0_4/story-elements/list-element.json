@@ -6,8 +6,8 @@
   "type": "object",
   "oneOf": [
     {
-      "$ref": "list.json",
-      "$ref": "text.json"
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/list.json",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/text.json"
     }
   ]
 }

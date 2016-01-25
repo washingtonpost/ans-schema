@@ -6,7 +6,7 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "content.json",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/content.json",
       "properties": {
         "description": {
           "description": "Description for the video.",
@@ -36,11 +36,11 @@
           "description": "The different streams this video can play in.",
           "type": "array",
           "items": {
-            "$ref": "video-stream.json"
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/video-stream.json"
           }
         },
         "promo_image": {
-          "$ref": "image.json",
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/image.json",
           "description": "A promo/leader image to the video."
         }
       }

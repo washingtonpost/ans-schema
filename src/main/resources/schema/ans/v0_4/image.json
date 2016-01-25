@@ -6,7 +6,7 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "content.json",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/content.json",
       "properties": {
         "subtitle": {
           "description": "Subtitle for the image.",

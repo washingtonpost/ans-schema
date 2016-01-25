@@ -10,11 +10,11 @@
             "type": "string"
         },
         "geo": {
-            "$ref": "geo.json",
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/geo.json",
             "description": "Latitidue and Longitude of the content"
         },
         "address": {
-            "$ref": "address.json",
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/address.json",
             "description": "Address of the content"
         }
     }

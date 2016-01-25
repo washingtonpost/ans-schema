@@ -12,7 +12,7 @@
         "keywords": {
           "type": "array",
           "items": {
-            "$ref": "keyword.json"
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/keyword.json"
           },
           "description": "A list of keywords."
         },

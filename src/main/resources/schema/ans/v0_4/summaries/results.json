@@ -5,8 +5,8 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "content.json",
-      "$ref": "trait-content-elements.json",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/content.json",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/trait-content-elements.json",
       "properties" : {
         "count" : {
           "description": "Total number of items in the source that this list pulls from",
