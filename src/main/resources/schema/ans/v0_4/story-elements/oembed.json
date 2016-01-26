@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/oembed.json",
+  "description": "An oembed object",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/story-element.json",
+      "properties": {
+        "providerUrl": {
+          "description": "The endpoint for the provider's oembed API.",
+          "type": "string"
+        },
+        "objectUrl": {
+          "description": "The canonical url of the embeddable object.",
+          "type": "string"
+        }
+      },
+      "required": ["providerUrl", "objectUrl"]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/code.json",
+  "description": "A code sample",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/story-element.json",
+      "properties": {
+        "type": {
+          "enum": [ "code" ]
+        },
+        "code": {
+          "description": "The code sample.",
+          "type": "string"
+        },
+        "language": {
+          "description": "The programming or markup language of the code sample",
+          "type": "string"
+        }
+      },
+      "required": ["code", "language"]
+    }
+  ]
+}

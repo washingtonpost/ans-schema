@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/raw-html.json",
+  "description": "An html content element",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/story-element.json",
+      "properties": {
+        "type": {
+          "enum": [ "raw-html" ]
+        },
+        "html": {
+          "description": "Any arbitrary chunk of  HTML.",
+          "type": "string"
+        }
+      }
+    }
+  ]
+}

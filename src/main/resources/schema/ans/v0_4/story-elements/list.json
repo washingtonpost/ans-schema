@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/list.json",
+  "title": "A list.",
+  "description": " list of text items or other lists",
+  "type": "object",
+  "allOf": [{
+    "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/story-element.json",
+    "properties": {
+      "type": {
+        "enum": [ "list" ]
+      },
+      "list_type": {
+        "type": "string",
+        "description": "The type of list to render as (ordered, unordered, etc)"
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/list-element.json"
+        },
+        "description": "The items in this list."
+      }
+    }
+  }]
+}

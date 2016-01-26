@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/reference.json",
+  "title": "Representation of a normalized element",
+  "description": "This represents a reference to external content that should be denormalized",
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/story-element.json",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [ "reference" ]
+        },
+        "referent": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "service": {
+              "type": "string"
+            },
+            "id" : {
+              "description": "The id passed to the service to retrieve an ANS document",
+              "type": "string"
+            }
+          }
+        }
+      },
+      "required": [ "type", "referent" ]
+    }
+  ]
+}

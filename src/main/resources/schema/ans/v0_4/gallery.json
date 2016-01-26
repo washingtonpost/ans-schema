@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/gallery.json",
+  "title": "A gallery.",
+  "description": "Holds attributes of an ANS gallery.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/content.json",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/trait-content-elements.json",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [ "gallery" ]
+        }
+      }
+    }
+  ]
+}

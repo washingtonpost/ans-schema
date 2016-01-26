@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-element/table.json",
+  "description": "A data table content element",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/story-element.json",
+      "properties": {
+        "type": {
+          "enum": [ "table" ]
+        },
+        "header": {
+          "type": "array",
+          "description": "The header row of the table",
+          "items": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "text.json"
+              }
+            ]
+          }
+	    },
+        "rows" : {
+	      "type" : "array",
+          "description": "The data rows of the table",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "allOf": [
+                {
+                  "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/text.json"
+                }
+              ]
+            }
+	      }
+        }
+      },
+      "required": [ "rows" ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/story-element.json",
+  "title": "An element that can be saved to a Story",
+  "description": "An item that conforms to this schema can be saved in a Story",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/content-element.json",
+      "properties": {
+        "editable": {
+          "description": "Flag to indicate this content may edited in a story",
+          "type": "boolean",
+          "enum": [ true ]
+        }
+      },
+      "required": [ "editable" ]
+    }
+  ]
+}

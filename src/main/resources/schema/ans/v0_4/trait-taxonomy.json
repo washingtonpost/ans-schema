@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/trait-taxonomy.json",
+  "title": "Taxonomy",
+  "description": "Holds the collection of tags, categories, keywords, etc that describe content.",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "taxonomy": {
+      "type": "object",
+      "properties": {
+        "keywords": {
+          "type": "array",
+          "items": {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/keyword.json"
+          },
+          "description": "A list of keywords."
+        },
+        "tags": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/headlines.json",
+  "title": "A headlines key-value set.",
+  "description": "A common format for containing headlines or other context-dependent strings",
+  "type": "object",
+  "description": "A key-value group of headlines. Key is used to describe context in which a certain value should be used as the headline.",
+  "properties": {
+    "default": {
+      "type": "string"
+    }
+  },
+  "patternProperties": {
+    ".*": {
+      "type": "string"
+    }
+  },
+  "required": [ "default" ]
+}

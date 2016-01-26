@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/summaries/results.json",
+  "description": "A set of summary items to be displayed together (e.g., landing pages, query results, etc.)",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/content.json",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/trait-content-elements.json",
+      "properties" : {
+        "count" : {
+          "description": "Total number of items in the source that this list pulls from",
+          "type": "integer"
+        },
+        "next": {
+          "description": "A page number, story id, url, or other parameter used for retrieving subsequent items in the list"
+        },
+        "previous": {
+          "description": "A page number, story id, url, or other parameter used for retrieving previous items in the list"
+        }
+      }
+    }
+  ]
+}

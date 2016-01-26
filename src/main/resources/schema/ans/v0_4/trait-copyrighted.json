@@ -1,0 +1,13 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_3/trait_copyrighted.json",
+    "title": "Copyright information",
+    "description": "Defines the structure of copyright information, as applied to content.",
+    "type": "object",
+    "properties": {
+        "copyright": {
+            "description": "The copyright notice, e.g. '(c) 2015 The Washington Post, Inc.'",
+            "type": "string"
+        }
+    }
+}
