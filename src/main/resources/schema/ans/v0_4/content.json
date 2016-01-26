@@ -44,18 +44,28 @@
           "description": "Optional field to store story workflow related status (e.g. published/embargoed/etc)"
         },
         "related_content": {
-          "type": "array",
-          "items": {
-            "$ref": "trait-id.json"
-          },
-          "description": "A list of IDs referencing other content items this story is related to."
+          "type": "object",
+          "description": "A set of lists of IDs referencing other content items this story is related to.",
+          "patternProperties": {
+            ".*": {
+              "type": "array",
+              "items": {
+                "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/content.json"
+              }
+            }
+          }
         },
         "promo_images": {
-          "type": "array",
-          "items": {
-            "$ref": "image.json"
+          "type": "object",
+          "description": "List of promotional images to use when highlighting the story.",
+          "properties": {
+            "default": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/image.json"
           },
-          "description": "List of promotional images to use when highlighting the story."
+          "patternProperties": {
+            ".*": {
+              "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/image.json"
+            }
+          }
         },
         "taxonomy": {
           "$ref": "taxonomy.json",
