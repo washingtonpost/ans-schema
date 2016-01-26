@@ -20,15 +20,3 @@ Two examples are provided of content documents that validate against the Washing
 
 1. [An Example Story](src/test/resources/com/washingtonpost/arc/ans/v0_3/model/story-fixture-tiny-house.json)
 2. [An Example Video](src/test/resources/com/washingtonpost/arc/ans/v0_3/model/video-fixture-nationals.json)
-
-## Contributing
-First, make sure you can build and validate all the current schemas.
-* If you don't already have it, get maven
-
-```brew install maven     # for OSX```
-
-* Run all unit tests validating all current schemas:
-
-```mvn -U clean package```
-
-* Make edits, and update/add validation unit tests as needed
