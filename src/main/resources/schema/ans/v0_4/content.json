@@ -36,9 +36,8 @@
           "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/headlines.json"
         },
         "description": {
-          "type": "object",
           "description": "Description(s) of the story, keyed by context.",
-          "
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/headlines.json"
         },
         "status": {
           "type": "string",
