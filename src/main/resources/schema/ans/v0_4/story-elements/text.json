@@ -9,7 +9,7 @@
       "properties": {
         "type": {
           "enum": [ "text" ]
-        }
+        },
         "text": {
           "description": "The text of the paragraph.",
           "type": "string"

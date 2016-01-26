@@ -59,7 +59,9 @@
           "type": "object",
           "description": "List of promotional images to use when highlighting the story.",
           "properties": {
-            "default": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/image.json"
+            "default": {
+              "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/image.json"
+            }
           },
           "patternProperties": {
             ".*": {
@@ -87,7 +89,7 @@
         },
         "syndication": {
           "type": "object",
-          "description": "Key-boolean pair of syndication services where this article may go"
+          "description": "Key-boolean pair of syndication services where this article may go",
           "patternProperties": {
             ".*": {
               "type": "boolean"
