@@ -18,5 +18,5 @@ One can use a variety of third party tools to validate their content against the
 ## Examples
 Two examples are provided of content documents that validate against the Washington Post ANS schema:
 
-1. [An Example Story](src/test/resources/com/washingtonpost/arc/ans/v0_3/model/story-fixture-tiny-house.json)
-2. [An Example Video](src/test/resources/com/washingtonpost/arc/ans/v0_3/model/video-fixture-nationals.json)
+1. [An Example Story](tests/fixtures/story-fixture-tiny-house.json)
+2. [An Example Video](tests/fixtures/video-fixture-nationals.json)
