@@ -2,6 +2,10 @@
 
 ## 0.4.0 TBD Release Date
 
+* Added nodejs module backing
+* Removed Java POJOs to focus on schema
+* Re-factored schema to better distinguish content types, content elements, and summaries
+
 ## 0.3.6 2016/1/15
 
 * Added code sample, table, and header content elements
