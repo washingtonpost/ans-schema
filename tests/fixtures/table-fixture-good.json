@@ -1,7 +1,8 @@
 {
   "_id": "0987654321",
   "type": "table",
-  "header": [ { "_id": "a", "type": "text", "text": "Header Y = 1" }, { "_id": "b", "type": "text", "text": "Header Y = 1" } ],
-  "rows": [ [ { "_id": 1, "type": "text", "text": "X = 1, Y = 1" }, { "_id": 2, "type": "text", "text": "X = 2, Y = 1" } ],
-            [ { "_id": 3, "type": "text", "text": "X = 2, Y = 1" }, { "_id": 4, "type": "text", "text": "X = 2, Y = 2" } ] ]
+  "header": [ { "_id": "a", "type": "text", "editable": true, "text": "Header Y = 1" }, { "_id": "b", "type": "text", "editable": true, "text": "Header Y = 1" } ],
+  "rows": [ [ { "_id": 1, "type": "text", "editable": true, "text": "X = 1, Y = 1" }, { "_id": 2, "type": "text", "editable": true, "text": "X = 2, Y = 1" } ],
+            [ { "_id": 3, "type": "text", "editable": true, "text": "X = 2, Y = 1" }, { "_id": 4, "type": "text", "editable": true, "text": "X = 2, Y = 2" } ] ],
+  "editable": true
 }

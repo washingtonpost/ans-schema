@@ -3,12 +3,14 @@
 var should = require('should'),
     dir = require('node-dir'),
     path = require('path'),
-    tv4 = require('tv4'),
+    Ajv = require('ajv'),
     ans = require('../lib/schemas');
 
 var loadedFiles = {};
 var baseDir = path.join(path.dirname(module.filename), '../src/main/resources/schema/ans');
 var loadedSchemas = {};
+
+var ajv = new Ajv();
 
 var json_schema = {
     "id": "http://json-schema.org/draft-04/schema#",
@@ -366,14 +368,192 @@ describe("ANS Schema", function() {
 
     it("should validate as valid JSON Schema and Hyper Schema", function() {
       var keys = Object.keys(loadedSchemas);
-      tv4.addSchema(json_schema);
-      tv4.addSchema(hyper_schema);
+      //tv4.addSchema(json_schema);
+      //tv4.addSchema(hyper_schema);
       for( var i = 0; i < keys.length; i++) {
         console.log("        " + keys[i] + " should be a valid JSON Schema");
         var schema = loadedSchemas[keys[i]];
-        tv4.validateResult(schema, json_schema).should.have.property('valid').eql(true);
-        tv4.validateResult(schema, hyper_schema).should.have.property('valid').eql(true);
+        ajv.addSchema(schema);
       }
     });
   });
+});
+
+
+
+var fixtures = {};
+var validate = function(schemaName, fixtureName, expected) {
+  var schema = loadedSchemas[schemaName];
+  var fixture = fixtures[fixtureName];
+  //console.log(fixtures);
+  expected = (typeof expected === "undefined") ? true : expected;
+
+  var result = ajv.validate(schema, fixture);
+  //console.log("Fixture: " + fixture);
+  if (result !== expected) {
+    console.log(ajv.errors);
+  }
+  result.should.eql(expected);
+
+};
+
+
+
+describe("Schema: ", function() {
+  before(function(done) {
+    //console.log("b4");
+    //console.log(path.dirname(module.filename));
+    //console.log(      path.join(path.dirname(module.filename), 'fixtures'));
+    dir.readFiles(
+      path.join(path.dirname(module.filename), 'fixtures'),
+      function(err, content, filename, next) {
+        if (err) throw err;
+
+        fixtures[path.basename(filename, '.json')] = JSON.parse(content);
+        next();
+      },
+      function(err, files) {
+        if (err) throw err;
+        done();
+      }
+    );
+  });
+
+  describe("Address", function() {
+    it("should validate a well-formatted address", function() {
+      validate('v0_4/address.json', 'address-fixture-good');
+    });
+
+    it("should not validate an address with a po box and no street address", function() {
+      validate('v0_4/address.json', 'address-fixture-bad-po-box', false);
+    });
+  });
+
+  describe("Audio", function() {
+    it("should validate a well-formatted audio", function() {
+      validate('v0_4/audio.json', 'audio-fixture-good');
+    });
+
+    it("should validate a well-formatted audio with settings", function() {
+      validate('v0_4/audio.json', 'audio-fixture-good-settings');
+    });
+
+    it("should validate a well-formatted audio with custom fields", function() {
+      validate('v0_4/audio.json', 'audio-fixture-good-custom');
+    });
+
+    it("should not validate a non-audio element", function() {
+      validate('v0_4/audio.json', 'audio-fixture-bad', false);
+    });
+  });
+
+  describe("Video", function() {
+    it("should validate a well-formatted video", function() {
+      validate('v0_4/video.json', 'video-fixture-good');
+      validate('v0_4/video.json', 'video-fixture-nationals');
+    });
+
+    it("should not validate a non-well-formatted video", function() {
+      validate('v0_4/video.json', 'video-fixture-bad', false);
+    });
+  });
+
+  describe("Social", function() {
+    it("should validate a social item", function() {
+      validate('v0_4/social.json', 'social-fixture-good');
+    });
+  });
+
+  describe("Story", function() {
+    it("should validate a story", function() {
+      validate('v0_4/story.json', 'story-fixture-good');
+      validate('v0_4/story.json', 'story-fixture-tiny-house');
+    });
+  });
+
+  describe("Image", function() {
+    it("should validate a valid image", function() {
+      validate('v0_4/image.json', 'image-fixture-good');
+    });
+    it("should validate an image with no height or width", function() {
+      validate('v0_4/image.json', 'image-fixture-good-no-height-width');
+    });
+  });
+
+  describe("Story Elements ", function() {
+    describe("Blockquote", function() {
+      it("should validate a well-formatted blockquote", function() {
+        validate('v0_4/story-elements/blockquote.json', 'bq-fixture-good');
+      });
+
+      it("should not validate a non-blockquote", function() {
+        validate('v0_4/story-elements/blockquote.json', 'bq-fixture-bad', false);
+      });
+    });
+
+    describe("Code", function() {
+      it("should validate a well-formatted code sample", function() {
+        validate('v0_4/story-elements/code.json', 'code-fixture-good');
+      });
+    });
+
+    describe("List", function() {
+      it("should validate a list of text elements", function() {
+        validate('v0_4/story-elements/list.json', 'ul-fixture-good');
+        validate('v0_4/story-elements/list-element.json', 'ul-fixture-good');
+      });
+
+      it("should validate a nested list of text elements", function() {
+        validate('v0_4/story-elements/list.json', 'ul-fixture-good-nested');
+      });
+    });
+
+    describe("Oembed", function() {
+      it("should validate an oembed element", function() {
+        validate('v0_4/story-elements/oembed.json', 'oembed-fixture-good');
+      });
+
+      it("should not validate a non-oembed", function() {
+        validate('v0_4/story-elements/oembed.json', 'oembed-fixture-bad', false);
+      });
+    });
+
+
+    describe("Text", function() {
+      it("should validate a text element", function() {
+        validate('v0_4/story-elements/text.json', 'text-fixture-good');
+      });
+
+      it("should validate a text element with channels", function() {
+        validate('v0_4/story-elements/text.json', 'text-fixture-good-channels');
+      });
+
+      it("should not validate a non-text", function() {
+        validate('v0_4/story-elements/text.json', 'text-fixture-bad', false);
+      });
+    });
+
+    describe("Raw Html", function() {
+      it("should validate a raw_html element", function() {
+        validate('v0_4/story-elements/raw-html.json', 'raw-html-fixture-good');
+      });
+
+      it("should not validate a non-raw_html", function() {
+        validate('v0_4/story-elements/raw-html.json', 'raw-html-fixture-bad', false);
+      });
+    });
+
+    describe("Table", function() {
+      it("should validate a table element", function() {
+        validate('v0_4/story-elements/table.json', 'table-fixture-good');
+      });
+
+      it("should not validate a non-table", function() {
+        validate('v0_4/story-elements/table.json', 'raw-html-fixture-bad', false);
+      });
+    });
+
+  });
+
+
 });

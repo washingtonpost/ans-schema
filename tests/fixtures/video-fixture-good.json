@@ -28,7 +28,9 @@
             }
         ]
     },
-    "description": "We went out in 25+ knots and massive waves with two 420's and a 470 off Sandringham Yacht Club... The result was a broken camera and some almost broken sailors. We hope you enjoy the carnage and speed. ",
+      "description": {
+        "default": "We went out in 25+ knots and massive waves with two 420's and a 470 off Sandringham Yacht Club... The result was a broken camera and some almost broken sailors. We hope you enjoy the carnage and speed. "
+      },
     "duration": 139000,
     "transcript": "This is a transcript of all the words said in the video. This can go on for quite some time.",
     "rating": "graphic",
@@ -38,8 +40,8 @@
             "height": 360,
             "width": 640,
             "fileSize": 4443944,
-            "audioCodec": null,
-            "videoCodec": null,
+            "audioCodec": "",
+            "videoCodec": "",
             "streamType": "ts",
             "url": "https://videos.posttv.com/washpost-production/The%20Washington%20Post/20150701/55944729e4b082c8417f4483/55944904e4b0ef3ccc0da042_t_1435781395718_mobile.m3u8",
             "bitrate": 600,
@@ -48,8 +50,8 @@
             "height": 360,
             "width": 640,
             "fileSize": 2738596,
-            "audioCodec": null,
-            "videoCodec": null,
+            "audioCodec": "",
+            "videoCodec": "",
             "streamType": "ts",
             "url": "https://videos.posttv.com/washpost-production/The%20Washington%20Post/20150701/55944729e4b082c8417f4483/55944904e4b0ef3ccc0da042_t_1435781395718_mobile.m3u8",
             "bitrate": 300,
