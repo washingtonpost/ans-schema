@@ -9,7 +9,7 @@
   },
   "bugs": "https://github.com/washingtonpost/ans-schema/issues",
   "dependencies": {
-    "tv4": "~1.2.7",
+    "ajv": "~3.4.0",
     "node-dir": "~0.1.11",
     "should": "~8.2.1"
   },
