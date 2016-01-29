@@ -69,10 +69,6 @@
             }
           }
         },
-        "taxonomy": {
-          "$ref": "taxonomy.json",
-          "description": "A collection of metadata, keywords, etc. describing this story."
-        },
         "publish_date": {
           "type": "string",
           "format": "date-time",

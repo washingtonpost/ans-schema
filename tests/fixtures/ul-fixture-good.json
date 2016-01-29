@@ -1,19 +1,26 @@
 {
-    "_id": "49876543210",
-    "type": "list",
-    "list_type": "unordered",
-    "items": [
-        {
-            "type" : "text",
-            "text" : "Foo"
-        },
-        {
-            "type": "text",
-            "text" : "Bar"
-        },
-        {
-            "type": "text",
-            "text" : "Baz"
-        }
-    ]
+  "_id": "49876543210",
+  "type": "list",
+  "list_type": "unordered",
+  "editable": true,
+  "items": [
+    {
+      "id": "1",
+      "type" : "text",
+      "text" : "Foo",
+      "editable": true
+    },
+    {
+      "id": "2",
+      "type": "text",
+      "text" : "Bar",
+      "editable": true
+    },
+    {
+      "id": "3",
+      "type": "text",
+      "text" : "Baz",
+      "editable": true
+    }
+  ]
 }

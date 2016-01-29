@@ -17,7 +17,7 @@
             "type": "object",
             "allOf": [
               {
-                "$ref": "text.json"
+                "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story-elements/text.json"
               }
             ]
           }
@@ -41,4 +41,5 @@
       "required": [ "rows" ]
     }
   ]
+
 }

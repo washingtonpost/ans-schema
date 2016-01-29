@@ -1,5 +1,6 @@
 {
-    "_id": "09876543210",
-    "type": "raw_html",
-    "html": "<i>Here's my html</i>"
+  "_id": "09876543210",
+  "type": "raw-html",
+  "html": "<i>Here's my html</i>",
+  "editable": true
 }

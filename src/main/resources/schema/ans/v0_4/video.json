@@ -8,10 +8,6 @@
     {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/content.json",
       "properties": {
-        "description": {
-          "description": "Description for the video.",
-          "type": "string"
-        },
         "duration": {
           "description": "Runtime of the video in milliseconds.",
           "type": "number"
@@ -24,7 +20,7 @@
           "description": "A rating of the video, to be used for appropriate age/content warnings.",
           "type": "string"
         },
-        "type": {
+        "video_type": {
           "description": "The type of video (e.g. clip, livestream, etc)",
           "type": "string"
         },

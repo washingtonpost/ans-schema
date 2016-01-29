@@ -9,12 +9,16 @@
   },
   "bugs": "https://github.com/washingtonpost/ans-schema/issues",
   "dependencies": {
-    "jayschema": "~0.3.1",
-    "node-dir": "~0.1.11"
+    "ajv": "~3.4.0",
+    "node-dir": "~0.1.11",
+    "should": "~8.2.1"
   },
   "engines": {
     "node": ">=0.6.6"
   },
   "main": "./lib/schemas.js",
+  "scripts": {
+    "test": "mocha tests/schema-tests.js"
+  },
   "publishConfig":{"registry":"https://washingtonpost.artifactoryonline.com/washingtonpost/api/npm/npm-local"}
 }

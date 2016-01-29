@@ -1,29 +1,40 @@
 {
-    "_id": "49876543210",
-    "type": "list",
-    "list_type": "unordered",
-    "items": [
+  "_id": "49876543210",
+  "type": "list",
+  "list_type": "unordered",
+  "editable": true,
+  "items": [
+    {
+      "_id": "A",
+      "editable": true,
+      "type" : "text",
+      "text" : "Foo"
+    },
+    {
+      "_id": "B",
+      "editable": true,
+      "type": "text",
+      "text" : "Bar"
+    },
+    {
+      "_id": "C",
+      "type": "list",
+      "editable": true,
+      "list_type": "ordered",
+      "items" : [
         {
-            "type" : "text",
-            "text" : "Foo"
+          "_id": "D",
+          "editable": true,
+          "type": "text",
+          "text" : "Hi"
         },
         {
-            "type": "text",
-            "text" : "Bar"
-        },
-        {
-            "type": "list",
-            "list_type": "ordered",
-            "items" : [
-                {
-                    "type": "text",
-                    "text" : "Hi"
-                },
-                {
-                    "type": "text",
-                    "text" : "Mom"
-                }
-            ]
+          "_id": "E",
+          "editable": true,
+          "type": "text",
+          "text" : "Mom"
         }
-    ]
+      ]
+    }
+  ]
 }
