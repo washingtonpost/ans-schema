@@ -17,7 +17,16 @@
           "description": "A list of keywords."
         },
         "tags": {
-          "type": "object"
+          "type": "array",
+          "items": {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/tag.json"
+          }
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/section.json"
+          }
         }
       }
     }
