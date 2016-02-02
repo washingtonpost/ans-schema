@@ -83,6 +83,9 @@
           "type": "string",
           "description": "Additional information to be displayed in/near the story html content from the editor."
         },
+        "revision": {
+          "description": "In systems with versioning / history, the id of the revision should be saved here"
+        },
         "syndication": {
           "type": "object",
           "description": "Key-boolean pair of syndication services where this article may go",
