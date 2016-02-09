@@ -10,7 +10,7 @@ var loadedFiles = {};
 var baseDir = path.join(path.dirname(module.filename), '../src/main/resources/schema/ans');
 var loadedSchemas = {};
 
-var ajv = new Ajv();
+var ajv = new Ajv({allErrors:true});
 
 var json_schema = {
     "id": "http://json-schema.org/draft-04/schema#",
