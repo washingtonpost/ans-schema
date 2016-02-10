@@ -52,13 +52,16 @@
   "description": {
     "default": "A Vienna man went in for a colonoscopy and intended to record his doctor"
   },
-  "related_content": [
-    {
-      "_id": "some other unique ANS id"
-    }
-  ],
-  "promo_images": [
-    {
+  "related_content": {
+    "default": [
+      {
+        "_id": "some other unique ANS id",
+        "type": "story"
+      }
+    ]
+  },
+  "promo_images": {
+    "default": {
       "_id": "unique ANS id",
       "type": "image",
       "created_date": "2015-06-25T09:50:50.52Z",
@@ -74,7 +77,7 @@
       "width": 800,
       "height": 640
     }
-  ],
+  },
   "taxonomy": {
     "keywords": [
       {

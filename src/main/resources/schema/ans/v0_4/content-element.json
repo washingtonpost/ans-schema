@@ -6,8 +6,12 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "trait-id.json",
-      "$ref": "trait-type.json",
+      "$ref": "trait-id.json"
+    },
+    {
+      "$ref": "trait-type.json"
+    },
+    {
       "$ref": "trait-channel.json"
     }
   ]
