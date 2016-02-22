@@ -5,9 +5,13 @@
   "last_updated_date": "2015-07-02T09:50:50.52Z",
   "credits": [
     {
-      "name": "Nina Patel",
       "role": "By",
-      "org": "The Washington Post"
+      "credit": {
+        "_id": "AUTHOR1",
+        "name": "Nina Patel",
+        "org": "The Washington Post",
+        "type": "author"
+      }
     }
   ],
   "language": "en",
@@ -45,7 +49,10 @@
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": [
         {
-          "name": "Ansel Adams",
+          "credit": {
+            "type": "author",
+            "name": "Ansel Adams"
+          },
           "role": "Photographer"
         }
       ],

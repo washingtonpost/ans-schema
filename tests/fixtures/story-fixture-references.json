@@ -6,29 +6,21 @@
   "last_updated_date": "2015-06-24T09:50:50.52Z",
   "credits": [
     {
-      "role": "Author",
+      "role": "author",
       "credit": {
-        "name": "John Q. Reporter",
-        "org": "The Washington Post",
-
-        "image": {
-          "_id": "unique ANS id",
-          "type": "image",
-          "created_date": "2015-06-25T09:50:50.52Z",
-          "url": "https://img.washingtonpost.com/wp-apps/imrs.php?src=http://wp-eng-static.washingtonpost.com/author_images/faiolaam.jpg?ts=1405950848547&w=90&h=90"
-        },
-        "description": "Anthony Faiola is The Post's Berlin bureau chief. Faiola joined the Post in 1994, since then reporting for the paper from five continents and serving as bureau chief in Tokyo, Buenos Aires, New York and London.",
-        "url": "https://www.washingtonpost.com/people/anthony-faiola",
-        "social_links": [
-          {
-            "site": "twitter",
-            "url": "https://www.twitter.com/Anthony_Faiola"
-          },
-          {
-            "site": "facebook",
-            "url": "https://www.facebook.com/anthony.faiola"
-          }
-        ]
+        "type": "reference",
+        "referent": {
+          "type": "credit",
+          "service": "http://www.credits.com/api",
+          "id": "00001"
+        }
+      }
+    },
+    {
+      "role": "contributor",
+      "credit": {
+        "type": "author",
+        "name": "Greg Engel"
       }
     }
   ],
@@ -70,10 +62,7 @@
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": [
         {
-          "credit": {
-            "name": "Ansel Adams",
-            "type": "author"
-          },
+          "name": "Ansel Adams",
           "role": "Photographer"
         }
       ],

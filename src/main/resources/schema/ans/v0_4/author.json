@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/credit.json",
-  "title": "Credit for a piece of content.",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/author.json",
+  "title": "An author of a piece of content.",
   "description": "Models attribution to an individual or group for contribution towards some content item.",
   "type": "object",
   "required": ["name"],
@@ -11,16 +11,16 @@
     },
     {
       "properties": {
+        "type": {
+          "description": "Indicates that this is an author",
+          "enum": [ "author" ]
+        },
         "name": {
           "description": "The name of contributor.",
           "type": "string"
         },
         "org": {
           "description": "The (optional) organization the contributor belongs to.",
-          "type": "string"
-        },
-        "role": {
-          "description": "The role the contributor played in the content.",
           "type": "string"
         },
         "image": {

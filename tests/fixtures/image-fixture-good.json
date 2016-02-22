@@ -5,8 +5,11 @@
     "created_date": "2015-06-25T09:50:50.52Z",
     "credits": [
         {
+          "role": "Photographer",
+          "credit": {
             "name": "Ansel Adams",
-            "role": "Photographer"
+            "type": "author"
+          }
         }
     ],
     "location": "Washington, D.C.",
