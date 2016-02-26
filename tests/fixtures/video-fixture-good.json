@@ -4,10 +4,13 @@
     "version": "0.4",
     "created_date": "2015-06-25T09:50:50.52Z",
     "credits": [
-        {
-            "name": "Bruce Harris",
-            "role": "sailingshack.com"
-        }
+      {
+        "credit": {
+          "name": "Bruce Harris",
+          "type": "author"
+        },
+        "role": "sailingshack.com"
+      }
     ],
     "location": "Washington, D.C.",
     "geo": {
