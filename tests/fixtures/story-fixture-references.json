@@ -10,7 +10,7 @@
       "credit": {
         "type": "reference",
         "referent": {
-          "type": "credit",
+          "type": "author",
           "service": "http://www.credits.com/api",
           "id": "00001"
         }
