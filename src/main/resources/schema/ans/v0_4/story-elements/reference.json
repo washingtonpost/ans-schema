@@ -15,16 +15,23 @@
           "type": "object",
           "properties": {
             "type": {
+              "description": "The ANS type that the provider should return.",
               "type": "string"
             },
             "service": {
+              "description": "The type of interaction the provider expects. E.g., 'oembed'",
               "type": "string"
             },
             "id" : {
-              "description": "The id passed to the service to retrieve an ANS document",
+              "description": "The id passed to the provider to retrieve an ANS document",
+              "type": "string"
+            },
+            "provider": {
+              "description": "A URL that can resolve the id into an ANS element",
               "type": "string"
             }
-          }
+          },
+          "required": ["provider", "id"]
         }
       },
       "required": [ "type", "referent" ]
