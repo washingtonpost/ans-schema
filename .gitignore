@@ -20,3 +20,5 @@ target/
 bin/
 atlassian-ide-plugin.xml
 mcs-ear/META-INF/
+
+node_modules
