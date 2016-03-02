@@ -37,7 +37,7 @@ exports.social = () => {
 
     return {
         'site': chance.capitalize(site),
-        'url': `http://${site}.${chance.pickone([ 'com', 'net' ])}`
+        'url': `http://${site}.${chance.tld()}/${chance.word()}`
     };
 };
 
