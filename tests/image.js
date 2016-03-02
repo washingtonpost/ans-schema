@@ -8,6 +8,16 @@ describe('Image', () => {
         return validateJson(schema, MockData.image);
     });
 
+    describe('Fails', () => {
+        for (let property of ['height', 'width']) {
+            it(`${property} should be an integer`, () => {
+                let image = MockData.image;
+                image[property] = chance.latitude();
+
+                return failJson(schema, image);
+            });
+        }
+    });
 /* 
     Currently there are no required fields on images due to the need to create image object in Arc before having the URL available. 
     To resolve this issue we are considering adding states to schemas so you would have a single `image` schema and then add'l

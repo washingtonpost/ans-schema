@@ -1,7 +1,7 @@
 'use strict';
 
 const Chance = require('chance');
-const chance = new Chance();
+global.chance = new Chance();
 
 exports.address = {
     'street-address': chance.address(),
