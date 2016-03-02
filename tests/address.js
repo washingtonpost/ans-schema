@@ -5,7 +5,7 @@ const schema = loadSchema('address');
 
 describe('Address', () => {
     it('succeeds', () => {
-        validate(schema, MockData.address);
+        return validateJson(schema, MockData.address);
     });
 
     it('fails', () => {
@@ -14,6 +14,6 @@ describe('Address', () => {
         delete mock['extended-address'];
         mock['post-office-box'] = 'defining this requires also defining street address, which we don\'t, so this should be bad JSON';
 
-        fail(schema, mock);
+        return failJson(schema, mock);
     });
 });

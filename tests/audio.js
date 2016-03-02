@@ -5,13 +5,13 @@ const schema = loadSchema('audio');
 
 describe('Audio', () => {
     it('succeeds', () => {
-        validate(schema, MockData.audio);
+        return validateJson(schema, MockData.audio);
     });
 
     it('fails', () => {
         let mock = MockData.audio;
         delete mock['sourceUrl'];
 
-        fail(schema, mock);
+        return failJson(schema, mock);
     });
 });

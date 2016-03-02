@@ -12,10 +12,20 @@ exports.address = {
 };
 
 exports.audio = {
+    'type': 'audio',
     'sourceUrl': chance.url({ extensions: ['mp3'] }),
     'mimetype': 'audio/mp3',
     'autoplay': chance.bool(),
     'controls': chance.bool(),
     'preload': chance.bool(),
     'loop': chance.bool()
+};
+
+exports.image = {
+    'type': 'image',
+    'subtitle': chance.paragraph(),
+    'caption': chance.paragraph(),
+    'url': chance.url({ extensions: ['jpg', 'png' ] }),
+    'width': chance.integer({ min: 500, max: 2000 }),
+    'height': chance.integer({ min: 500, max: 2000 })
 };

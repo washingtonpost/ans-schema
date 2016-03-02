@@ -23,35 +23,41 @@ const Ajv = require('ajv');
 const ajv = new Ajv({ allErrors: true, cache: cache });
 
 let loaded = false;
-let loadSchemas = (cb) => {
+let loadSchemas = () => {
     if (loaded) {
-        return cb();
+        return Promise.resolve();
     }
 
     let execFile = require('child_process').execFile;
     let dirPath = `${__dirname}/../src/main/resources/schema/ans/v0_4`;
 
-    execFile('find', [dirPath, '-name', '\*.json'], function(err, stdout, stderr) {
-      let files = stdout.split('\n');
+    return new Promise((resolve) => {
+        execFile('find', [dirPath, '-name', '\*.json'], function(err, stdout, stderr) {
+          let files = stdout.split('\n');
 
-      for (let file of files) {
-          let content = fs.readFileSync(file, 'utf8');
-          ajv.addSchema(JSON.parse(content));
-      }
+          for (let file of files) {
+              if (file.length > 0) {
+                  let content = fs.readFileSync(file, 'utf8');
+                  ajv.addSchema(JSON.parse(content));
+              }
+          }
 
-      loaded = true;
-      cb();
+          loaded = true;
+          resolve();
+        });
     });
 };
 
-global.validate = (schema, mock) => {
-    loadSchemas(() => {
+global.validateJson = (schema, mock) => {
+    return loadSchemas()
+    .then(() => {
         assert(ajv.validate(schema, mock) === true);
     });
 };
 
-global.fail = (schema, mock) => {
-    loadSchemas(() => {
+global.failJson = (schema, mock) => {
+    return loadSchemas()
+    .then(() => {
         assert(ajv.validate(schema, mock) === false);
     });
 };
