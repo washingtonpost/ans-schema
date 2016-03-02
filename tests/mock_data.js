@@ -77,6 +77,16 @@ exports.keyword = () => {
     };
 };
 
+// Add tags
+exports.taxonomy = () => {
+    let keywords = [];
+    for (let i=0; i < chance.integer({ min: 2, max: 5 }); i++) {
+        keywords.push(exports.keyword());
+    }
+
+    return { 'keywords': keywords };
+};
+
 exports.headlines = () => {
     let obj = {
         'default': chance.sentence()
