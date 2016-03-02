@@ -26,6 +26,11 @@ exports.geo = {
     'longitude': chance.longitude()
 };
 
+exports.social = {
+    'site': chance.word(),
+    'url': chance.url()
+};
+
 exports.image = {
     'type': 'image',
     'subtitle': chance.paragraph(),
