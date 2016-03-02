@@ -68,3 +68,11 @@ exports.author = () => {
         'social_links': links
     };
 };
+
+exports.keyword = () => {
+    return {
+        'keyword': chance.word(),
+        'score': chance.floating({ min: 0, max: 1 }),
+        'frequency': chance.integer({ min: 1, max: 20 })
+    };
+};
