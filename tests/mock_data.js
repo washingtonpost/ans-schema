@@ -3,39 +3,68 @@
 const Chance = require('chance');
 global.chance = new Chance();
 
-exports.address = {
-    'street-address': chance.address(),
-    'extended-address': `Suite ${chance.integer({ min: 100, max: 500 })}`,
-    'locality': `${chance.city()}, ${chance.state()}`,
-    'postal-code': chance.zip(),
-    'country-name': chance.country()    
+exports.address = () => {
+    return {
+        'street-address': chance.address(),
+        'extended-address': `Suite ${chance.integer({ min: 100, max: 500 })}`,
+        'locality': `${chance.city()}, ${chance.state()}`,
+        'postal-code': chance.zip(),
+        'country-name': chance.country()
+    };
 };
 
-exports.audio = {
-    'type': 'audio',
-    'sourceUrl': chance.url({ extensions: ['mp3'] }),
-    'mimetype': 'audio/mp3',
-    'autoplay': chance.bool(),
-    'controls': chance.bool(),
-    'preload': chance.bool(),
-    'loop': chance.bool()
+exports.audio = () => {
+    return {
+        'type': 'audio',
+        'sourceUrl': chance.url({ extensions: ['mp3'] }),
+        'mimetype': 'audio/mp3',
+        'autoplay': chance.bool(),
+        'controls': chance.bool(),
+        'preload': chance.bool(),
+        'loop': chance.bool()
+    };
 };
 
-exports.geo = {
-    'latitude': chance.latitude(),
-    'longitude': chance.longitude()
+exports.geo = () => {
+    return {
+        'latitude': chance.latitude(),
+        'longitude': chance.longitude()
+    };
 };
 
-exports.social = {
-    'site': chance.word(),
-    'url': chance.url()
+exports.social = () => {
+    let site = chance.word({ syllables: 3 });
+
+    return {
+        'site': chance.capitalize(site),
+        'url': `http://${site}.${chance.pickone([ 'com', 'net' ])}`
+    };
 };
 
-exports.image = {
-    'type': 'image',
-    'subtitle': chance.paragraph(),
-    'caption': chance.paragraph(),
-    'url': chance.url({ extensions: ['jpg', 'png'] }),
-    'width': chance.integer({ min: 500, max: 2000 }),
-    'height': chance.integer({ min: 500, max: 2000 })
+exports.image = () => {
+    return {
+        'type': 'image',
+        'subtitle': chance.paragraph(),
+        'caption': chance.paragraph(),
+        'url': chance.url({ extensions: ['jpg', 'png'] }),
+        'width': chance.integer({ min: 500, max: 2000 }),
+        'height': chance.integer({ min: 500, max: 2000 })
+    };
+};
+
+exports.author = () => {
+    let links = [];
+    for (let i=0; i < chance.integer({ min: 2, max: 4 }); i++) {
+        links.push(exports.social());
+    }
+
+    return {
+        'type': 'author',
+        'name': chance.name(),
+        'org': chance.sentence({ words: 3 }),
+        'image': exports.image(),
+        'description': chance.paragraph(),
+        'url': chance.url(),
+        'social_links': links
+    };
 };

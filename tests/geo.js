@@ -5,7 +5,7 @@ const schema = loadSchema('geo');
 
 describe('Geo', () => {
     it('succeeds', () => {
-        return validateJson(schema, MockData.geo);
+        return validateJson(schema, MockData.geo());
     });
 
     it('fails', () => {

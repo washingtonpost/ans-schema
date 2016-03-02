@@ -5,6 +5,6 @@ const schema = loadSchema('social');
 
 describe('Social', () => {
     it('succeeds', () => {
-        return validateJson(schema, MockData.social);
+        return validateJson(schema, MockData.social());
     });
 });
