@@ -21,7 +21,7 @@
   },
   "main": "./lib/schemas.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha tests/*.js"
+    "test": "node_modules/.bin/mocha tests --recursive"
   },
   "publishConfig":{"registry":"https://washingtonpost.artifactoryonline.com/washingtonpost/api/npm/npm-local"}
 }

@@ -51,7 +51,12 @@ let loadSchemas = () => {
 global.validateJson = (schema, mock) => {
     return loadSchemas()
     .then(() => {
-        assert(ajv.validate(schema, mock) === true);
+        let valid = ajv.validate(schema, mock);
+        if (!valid) {
+            console.log(ajv.errors);
+        }
+
+        assert(valid);
     });
 };
 

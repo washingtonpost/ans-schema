@@ -98,3 +98,18 @@ exports.headlines = () => {
 
     return obj;
 };
+
+exports.storyElements = {
+    reference: () => {
+        return {
+            'editable': true,
+            'type': 'reference',
+            'referent': {
+                'type': 'author',
+                'service': chance.url(),
+                'id': chance.guid(),
+                'provider': chance.url()
+            }
+        };
+    }
+};
