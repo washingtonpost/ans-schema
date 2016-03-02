@@ -76,3 +76,15 @@ exports.keyword = () => {
         'frequency': chance.integer({ min: 1, max: 20 })
     };
 };
+
+exports.headlines = () => {
+    let obj = {
+        'default': chance.sentence()
+    };
+
+    for (let i=0; i < chance.integer({ min: 2, max: 5 }); i++) {
+        obj[chance.word({ syllables: 3 })] = chance.sentence();
+    }
+
+    return obj;
+};
