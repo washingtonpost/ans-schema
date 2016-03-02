@@ -10,3 +10,12 @@ exports.address = {
     'postal-code': chance.zip(),
     'country-name': chance.country()    
 };
+
+exports.audio = {
+    'sourceUrl': chance.url({ extensions: ['mp3'] }),
+    'mimetype': 'audio/mp3',
+    'autoplay': chance.bool(),
+    'controls': chance.bool(),
+    'preload': chance.bool(),
+    'loop': chance.bool()
+};
