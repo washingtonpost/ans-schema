@@ -21,6 +21,11 @@ exports.audio = {
     'loop': chance.bool()
 };
 
+exports.geo = {
+    'latitude': chance.latitude(),
+    'longitude': chance.longitude()
+};
+
 exports.image = {
     'type': 'image',
     'subtitle': chance.paragraph(),
