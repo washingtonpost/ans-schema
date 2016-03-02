@@ -10,9 +10,16 @@ describe('Image', () => {
 
     describe('Fails', () => {
         for (let property of ['height', 'width']) {
-            it(`${property} should be an integer`, () => {
+            it(`${property} should not be a float`, () => {
                 let image = MockData.image;
                 image[property] = chance.latitude();
+
+                return failJson(schema, image);
+            });
+
+            it(`${property} should not be a string`, () => {
+                let image = MockData.image;
+                image[property] = `${chance.integer()}`
 
                 return failJson(schema, image);
             });
