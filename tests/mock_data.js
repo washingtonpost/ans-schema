@@ -30,7 +30,7 @@ exports.image = {
     'type': 'image',
     'subtitle': chance.paragraph(),
     'caption': chance.paragraph(),
-    'url': chance.url({ extensions: ['jpg', 'png' ] }),
+    'url': chance.url({ extensions: ['jpg', 'png'] }),
     'width': chance.integer({ min: 500, max: 2000 }),
     'height': chance.integer({ min: 500, max: 2000 })
 };
