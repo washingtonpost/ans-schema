@@ -4,10 +4,9 @@
   "version": "0.3",
   "created_date": "2015-06-24T09:50:50.52Z",
   "last_updated_date": "2015-06-24T09:50:50.52Z",
-  "credits": [
-    {
-      "role": "Author",
-      "credit": {
+  "credits": {
+    "by": [
+      {
         "name": "John Q. Reporter",
         "org": "The Washington Post",
 
@@ -30,8 +29,8 @@
           }
         ]
       }
-    }
-  ],
+    ]
+  },
   "language": "en",
   "location": "Washington, D.C.",
   "geo": {
@@ -68,15 +67,14 @@
       "_id": "unique ANS id",
       "type": "image",
       "created_date": "2015-06-25T09:50:50.52Z",
-      "credits": [
-        {
-          "credit": {
+      "credits": {
+        "by": [
+          {
             "name": "Ansel Adams",
             "type": "author"
-          },
-          "role": "Photographer"
-        }
-      ],
+          }
+        ]
+      },
       "url": "https://tinyurl.com/mqyonhb",
       "caption": "Never gonna give you up",
       "subtitle": "Never gonna let you down",
@@ -115,12 +113,12 @@
       "type": "image",
       "editable": true,
       "created_date": "2015-06-25T09:50:50.52Z",
-      "credits": [
+      "credits": { "by": [
         {
           "name": "Ansel Adams",
-          "role": "Photographer"
+          "type": "Photographer"
         }
-      ],
+      ]},
       "url": "https://tinyurl.com/mqyonhb",
       "caption": "Never gonna give you up",
       "subtitle": "Never gonna let you down",
