@@ -4,17 +4,50 @@
   "description": "An operation on a story",
   "type": "object",
   "allOf": [{
-    "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/trait-id.json",
     "properties": {
+      "type": {
+        "description": "Identifies this as an ANS operation",
+        "type": "string",
+        "enum": [ "story-operation" ]
+      },
+      "operation": {
+        "type": "string",
+        "description": "The identifier of the operation being performed",
+        "enum": [ "create", "update", "delete", "publish-edition", "unpublish-edition" ]
+      },
       "date": {
         "description": "When the operation should be considered performed",
         "type": "string",
         "format": "date-time"
       },
-      "operation": {
+      "story_id": {
         "type": "string",
-        "description": "The identifier of the operation being performed"
+        "description": "The id of the story being operated"
+      },
+      "revision_id": {
+        "type": "string",
+        "description": "The id of the specific revision that this operation occurs on, if any"
+      },
+      "editions": {
+        "type": "array",
+        "description": "A list of identifiers of editions that are changed in this operation, if any",
+        "items": {
+          "type": "string"
+        }
+      },
+      "branch": {
+        "type": "string",
+        "description": "The name of the branch within Story API that this operation occurs on, if any"
+      },
+      "version": {
+        "type": "string",
+        "description": "The version of ANS this Story is written in",
+      },
+      "story": {
+        "description": "The story object being created/updated/deleted/published/unpublished",
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/story.json"
       }
-    }
+    },
+    "required": [ "type", "operation", "story_id" ]
   }]
 }
