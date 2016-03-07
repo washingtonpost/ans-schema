@@ -480,6 +480,24 @@ describe("Schema: ", function() {
     });
   });
 
+  describe("Story Operation", function() {
+    it("should validate a create operation", function() {
+      validate('v0_4/story-operation.json', 'operation-create');
+    });
+    it("should validate an update operation", function() {
+      validate('v0_4/story-operation.json', 'operation-update');
+    });
+    it("should validate a delete operation", function() {
+      validate('v0_4/story-operation.json', 'operation-delete');
+    });
+    it("should validate a publish-edition operation", function() {
+      validate('v0_4/story-operation.json', 'operation-publish-edition');
+    });
+    it("should validate an unpublish-edition operation", function() {
+      validate('v0_4/story-operation.json', 'operation-unpublish-edition');
+    });
+  });
+
   describe("Story Elements ", function() {
     describe("Blockquote", function() {
       it("should validate a well-formatted blockquote", function() {
