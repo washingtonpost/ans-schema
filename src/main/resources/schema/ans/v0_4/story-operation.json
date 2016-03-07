@@ -41,7 +41,7 @@
       },
       "version": {
         "type": "string",
-        "description": "The version of ANS this Story is written in",
+        "description": "The version of ANS this Story is written in"
       },
       "story": {
         "description": "The story object being created/updated/deleted/published/unpublished",
