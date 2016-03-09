@@ -3,6 +3,8 @@
 const Chance = require('chance');
 global.chance = new Chance();
 
+const moment = require('moment');
+
 exports.address = () => {
     return {
         'street-address': chance.address(),
@@ -99,6 +101,16 @@ exports.headlines = () => {
     return obj;
 };
 
+exports.credit = () => {
+    let credit = chance.pickOne([ exports.storyElements.reference(), exports.author() ]);
+    let role = chance.word();
+
+    return {
+        role: role,
+        credit: credit
+    };
+};
+
 exports.storyElements = {
     reference: () => {
         return {
@@ -113,3 +125,28 @@ exports.storyElements = {
         };
     }
 };
+
+exports.story = () => {
+    let date = moment().utc();
+    let format = 'YYYY-MM-dd[T]HH:mm:ss.SS[Z]';
+
+    let obj = {
+        '_id': chance.guid(),
+        'type': 'story',
+        'version': '0.5',
+        'created_date': date.format(format),
+        'last_updated_date': date.format(format),
+        'credits': [],
+        'language': 'en',
+        'location': chance.city(),
+        'geo': exports.geo(),
+        'address': exports.address(),
+        'copyright': `${date.year()} ${chance.company()}`
+    };
+
+    for (let i=0; i < chance.integer({ min: 0, max: 3 }); i++) {
+        obj.credits.push(exports.credit());
+    }
+
+    return obj;
+}

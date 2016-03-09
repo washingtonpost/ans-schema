@@ -13,7 +13,8 @@
     "node-dir": "~0.1.11",
     "should": "~8.2.1",
     "mocha": "~2.4.5",
-    "chance": "~1.0.1"
+    "chance": "~1.0.1",
+    "moment": "~2.12.0"
   },
   "license": "MIT",
   "engines": {
