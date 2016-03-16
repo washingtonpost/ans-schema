@@ -49,7 +49,7 @@
               "description": "The anticipated number of words in the story.",
               "type": "integer"
             },
-            "word_count_Actual": {
+            "word_count_actual": {
               "description": "Current number of words.",
               "type": "integer"
             },
