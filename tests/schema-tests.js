@@ -468,6 +468,7 @@ describe("Schema: ", function() {
     it("should validate a story", function() {
       validate('v0_4/story.json', 'story-fixture-good');
       validate('v0_4/story.json', 'story-fixture-tiny-house');
+      validate('v0_4/story.json', 'story-fixture-references');
     });
   });
 
