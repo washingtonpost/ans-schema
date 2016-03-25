@@ -405,7 +405,7 @@ describe("Schema: ", function() {
     //console.log(path.dirname(module.filename));
     //console.log(      path.join(path.dirname(module.filename), 'fixtures'));
     dir.readFiles(
-      path.join(path.dirname(module.filename), 'fixtures'),
+      path.join(path.dirname(module.filename), 'fixtures/schema'),
       function(err, content, filename, next) {
         if (err) throw err;
 
