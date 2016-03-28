@@ -1,20 +1,17 @@
 {
   "_id": "f8f706f0-0acc-11e5-9e39-0db921c47b93",
   "type": "story",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "created_date": "2015-07-02T09:50:50.52Z",
   "last_updated_date": "2015-07-02T09:50:50.52Z",
-  "credits": [
-    {
-      "role": "By",
-      "credit": {
-        "_id": "AUTHOR1",
-        "name": "Nina Patel",
-        "org": "The Washington Post",
-        "type": "author"
-      }
-    }
-  ],
+  "credits": {
+    "by": [{
+      "_id": "AUTHOR1",
+      "name": "Nina Patel",
+      "org": "The Washington Post",
+      "type": "author"
+    }]
+  },
   "language": "en",
   "location": "Washington, D.C.",
   "geo": {
@@ -48,15 +45,12 @@
       "_id": "unique ANS id",
       "type": "image",
       "created_date": "2015-06-25T09:50:50.52Z",
-      "credits": [
+      "credits": { "by": [
         {
-          "credit": {
-            "type": "author",
-            "name": "Ansel Adams"
-          },
-          "role": "Photographer"
+          "type": "author",
+          "name": "Ansel Adams"
         }
-      ],
+      ]},
       "url": "https://img.washingtonpost.com/rw/2010-2019/WashingtonPost/2015/06/19/Magazine/Images/6_28%20Tinyhome2_r1.tif?uuid=fXQD2BbLEeWd3OM1NUIQDA",
       "caption": "America is having a big love affair with tiny houses.",
       "width": 320,
@@ -105,12 +99,14 @@
       "_id": "1000005",
       "type": "image",
       "created_date": "2015-06-25T09:50:50.52Z",
-      "credits": [
-        {
-          "name": "Ansel Adams",
-          "role": "Photographer"
-        }
-      ],
+      "credits": {
+        "by": [
+          {
+            "type": "author",
+            "name": "Ansel Adams"
+          }
+        ]
+      },
       "url": "https://img.washingtonpost.com/rw/2010-2019/WashingtonPost/2015/06/19/Magazine/Images/6_28%20Tinyhome2_r1.tif?uuid=fXQD2BbLEeWd3OM1NUIQDA",
       "caption": "America is having a big love affair with tiny houses.",
       "width": 320,
