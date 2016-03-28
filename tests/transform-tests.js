@@ -96,6 +96,7 @@ describe("Transformations: ", function() {
     it(" validates as version " + current_version.version + " after being upverted from " + FIRST_VERSION, function() {
       _.forEach(fixture_names, function(name, key) {
         var result = transforms.upvert(fixtures[FIRST_VERSION][name], current_version);
+
         validate('v0_4/image.json', result);
       });
     });

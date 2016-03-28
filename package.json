@@ -20,7 +20,7 @@
   },
   "main": "./lib/schemas.js",
   "scripts": {
-    "test": "mocha tests/schema-tests.js tests/transformer-tests.js"
+    "test": "mocha tests/schema-tests.js tests/transform-tests.js"
   },
   "publishConfig": {
     "registry": "https://washingtonpost.artifactoryonline.com/washingtonpost/api/npm/npm-local"

@@ -1,7 +1,7 @@
 {
   "_id": "unique ANS id",
   "type": "story",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "created_date": "2015-06-24T09:50:50.52Z",
   "last_updated_date": "2015-06-24T09:50:50.52Z",
   "credits": {
@@ -51,7 +51,8 @@
     "default": [
       {
         "_id": "some other unique ANS id",
-        "type": "story"
+        "type": "story",
+        "version": "0.4.7"
       }
     ]
   },
@@ -59,6 +60,7 @@
     "default": {
       "_id": "unique ANS id",
       "type": "image",
+      "version": "0.4.7",
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {
         "by": [
@@ -104,6 +106,7 @@
     {
       "_id": "789",
       "type": "image",
+      "version": "0.4.7",
       "editable": true,
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {
