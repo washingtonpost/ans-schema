@@ -1,7 +1,7 @@
 {
   "_id": "unique ANS id",
   "type": "video",
-  "version": "0.4",
+  "version": "0.4.6",
   "created_date": "2015-06-25T09:50:50.52Z",
   "credits": {
     "by": [{

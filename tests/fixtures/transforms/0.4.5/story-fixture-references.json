@@ -1,12 +1,13 @@
 {
   "_id": "unique ANS id",
   "type": "story",
-  "version": "0.4.6",
+  "version": "0.4.5",
   "created_date": "2015-06-24T09:50:50.52Z",
   "last_updated_date": "2015-06-24T09:50:50.52Z",
-  "credits": {
-    "by": [
-      {
+  "credits": [
+    {
+      "role": "by",
+      "credit": {
         "type": "reference",
         "editable": true,
         "referent": {
@@ -16,14 +17,15 @@
           "id": "00001"
         }
       }
-    ],
-    "additional reporting by": [
-      {
+    },
+    {
+      "role": "additional reporting by",
+      "credit": {
         "type": "author",
         "name": "Greg Engel"
       }
-    ]
-  },
+    }
+  ],
   "language": "en",
   "location": "Washington, D.C.",
   "geo": {
@@ -60,14 +62,6 @@
       "_id": "unique ANS id",
       "type": "image",
       "created_date": "2015-06-25T09:50:50.52Z",
-      "credits": {
-        "by": [
-          {
-            "name": "Ansel Adams",
-            "role": "Photographer"
-          }
-        ]
-      },
       "url": "https://tinyurl.com/mqyonhb",
       "caption": "Never gonna give you up",
       "subtitle": "Never gonna let you down",
@@ -106,14 +100,6 @@
       "type": "image",
       "editable": true,
       "created_date": "2015-06-25T09:50:50.52Z",
-      "credits": {
-        "by": [
-          {
-            "name": "Ansel Adams",
-            "role": "Photographer"
-          }
-        ]
-      },
       "url": "https://tinyurl.com/mqyonhb",
       "caption": "Never gonna give you up",
       "subtitle": "Never gonna let you down",
