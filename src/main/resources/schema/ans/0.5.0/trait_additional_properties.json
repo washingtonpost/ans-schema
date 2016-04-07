@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/trait_additional_properties.json",
+  "title": "Has additional properties",
+  "description": "This object can be extended via its additional_properties child.",
+  "type": "object",
+  "properties": {
+    "additional_properties": {
+      "description": "A grab-bag bucket of properties for whatever you like.",
+      "type": "object",
+      "additionalProperties": {}
+    }
+  }
+}

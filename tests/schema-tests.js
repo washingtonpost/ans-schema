@@ -10,7 +10,8 @@ var loadedFiles = {};
 var baseDir = path.join(path.dirname(module.filename), '../src/main/resources/schema/ans');
 var loadedSchemas = {};
 
-var ajv = new Ajv({allErrors:true});
+//var ajv = new Ajv({allErrors:true});
+var tv4 = require('tv4');
 
 var test_versions = [ "v0_4", "0.5.0" ];
 
