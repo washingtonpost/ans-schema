@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/story_elements/blockquote.json",
+  "description": "A blockquote content element",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/story_elements/story_element.json",
+      "properties": {
+        "type": {
+          "enum": [ "blockquote" ]
+        },
+        "content": {
+          "description": "A blockquote",
+          "type": "string"
+        }
+      },
+      "required": [ "content" ]
+    }
+  ]
+}

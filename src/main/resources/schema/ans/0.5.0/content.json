@@ -1,0 +1,143 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/content.json",
+  "title": "A content object.",
+  "description": "Holds common attributes of ANS Content objects.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/trait_id.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/trait_version.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/trait_type.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/trait_subtype.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/trait_date.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/trait_credits.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/trait_locale.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/trait_location.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/trait_copyright.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/trait_taxonomy.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/trait_owner.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/trait_planning.json"
+    },
+    {
+      "properties": {
+        "canonical_url": {
+          "type": "string",
+          "description": "The fully qualified URL to the story."
+        },
+        "short_url": {
+          "type": "string",
+          "description": "A url-shorterned version of the canonical_url."
+        },
+        "headlines": {
+          "description": "The headline(s) for the story.",
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/headlines.json"
+        },
+        "subheadlines": {
+          "description": "The subheadline(s) (or deks) for the story.",
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/headlines.json"
+        },
+        "description": {
+          "description": "Description(s) of the story, keyed by context.",
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/headlines.json"
+        },
+        "status": {
+          "type": "string",
+          "description": "Optional field to store story workflow related status (e.g. published/embargoed/etc)"
+        },
+        "related_content": {
+          "type": "object",
+          "description": "A set of lists of IDs referencing other content items this story is related to.",
+          "patternProperties": {
+            ".*": {
+              "type": "array",
+              "items": {
+                "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/content.json"
+              }
+            }
+          }
+        },
+        "promo_items": {
+          "type": "object",
+          "description": "List of promotional content to use when highlighting the story.",
+          "properties": {
+            "default": {
+              "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/content.json"
+            }
+          },
+          "patternProperties": {
+            ".*": {
+              "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/content.json"
+            }
+          }
+        },
+        "publish_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the story was first published."
+        },
+        "display_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The RFC3339-formatted dated time of the most recent date the story was (re)displayed on a public site."
+        },
+        "editor_note": {
+          "type": "string",
+          "description": "Additional information to be displayed in/near the story html content from the editor."
+        },
+        "revision": {
+          "description": "In systems with versioning / history, the id of the revision should be saved here"
+        },
+        "syndication": {
+          "type": "object",
+          "description": "Key-boolean pair of syndication services where this article may go",
+          "patternProperties": {
+            ".*": {
+              "type": "boolean"
+            }
+          }
+        },
+        "source": {
+          "description": "Information about the original source and/or owner of this content"
+        },
+        "tracking": {
+          "description": "Tracking information, probably implementation-dependent"
+        },
+        "comments": {
+          "description": "Comment configuration data"
+        },
+        "label": {
+          "description": "What the Washington Post calls a Kicker",
+          "type": "object",
+          "patternProperties": {
+            ".*": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

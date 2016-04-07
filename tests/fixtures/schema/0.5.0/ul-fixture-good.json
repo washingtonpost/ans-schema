@@ -1,0 +1,26 @@
+{
+  "_id": "49876543210",
+  "type": "list",
+  "list_type": "unordered",
+  "editable": true,
+  "items": [
+    {
+      "id": "1",
+      "type" : "text",
+      "content" : "Foo",
+      "editable": true
+    },
+    {
+      "id": "2",
+      "type": "text",
+      "content" : "Bar",
+      "editable": true
+    },
+    {
+      "id": "3",
+      "type": "text",
+      "content" : "Baz",
+      "editable": true
+    }
+  ]
+}

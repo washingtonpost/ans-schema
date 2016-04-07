@@ -1,0 +1,28 @@
+{
+    "_id": "unique ANS id",
+    "type": "content",
+    "created_date": "2015-06-24T09:50:50.52Z",
+    "last_updated_date": "2015-06-24T09:50:50.52Z",
+    "credits": [
+        {
+            "name": "Bob Woodward",
+            "role": "Author",
+            "org": "The Washington Post"
+        }
+    ],
+    "language": "en",
+    "location": "Washington, D.C.",
+    "geo": {
+        "latitude": 38.9047,
+        "longitude": -77.0164
+    },
+    "address": {
+        "street_address": "1600 Pennsylvania Ave",
+        "extended_address": "West Wing",
+        "locality": "Washington, D.C.",
+        "postal_code": "20002",
+        "country_name": "USA"
+    },
+    "copyright": "(c) 2015 The Washington Post, Inc.",
+    "foo": "bar"
+}

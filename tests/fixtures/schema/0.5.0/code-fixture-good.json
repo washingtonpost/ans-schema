@@ -1,0 +1,7 @@
+{
+  "_id": "0987654321",
+  "type": "code",
+  "content": "var x = \"foo\";\nconsole.log(\"foo\");",
+  "language": "javascript",
+  "editable": true
+}
