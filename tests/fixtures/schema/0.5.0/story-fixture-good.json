@@ -49,14 +49,14 @@
   "canonical_url": "http://www.washingtonpost.com/local/anesthesiologist-trashes-sedated-patient-jury-orders-her-to-pay-500000/2015/06/23/cae05c00-18f3-11e5-ab92-c75ae6ab94b5_story.html",
   "short_url": "http://wapo.st/1Crp6bY",
   "headlines": {
-    "default": "The default headline for this story",
+    "basic": "The default headline for this story",
     "twitter": "Twitter headline!"
   },
   "description": {
-    "default": "A Vienna man went in for a colonoscopy and intended to record his doctor"
+    "basic": "A Vienna man went in for a colonoscopy and intended to record his doctor"
   },
   "related_content": {
-    "default": [
+    "basic": [
       {
         "_id": "some other unique ANS id",
         "type": "story",
@@ -64,8 +64,8 @@
       }
     ]
   },
-  "promo_images": {
-    "default": {
+  "promo_items": {
+    "basic": {
       "_id": "unique ANS id",
       "type": "image",
       "version": "0.4.7",

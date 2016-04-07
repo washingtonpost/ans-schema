@@ -6,7 +6,7 @@
   "type": "object",
   "description": "A key-value group of headlines. Key is used to describe context in which a certain value should be used as the headline.",
   "properties": {
-    "default": {
+    "basic": {
       "type": "string"
     }
   },
@@ -15,5 +15,5 @@
       "type": "string"
     }
   },
-  "required": [ "default" ]
+  "required": [ "basic" ]
 }

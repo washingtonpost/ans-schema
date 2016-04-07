@@ -4,7 +4,6 @@
   "title": "Taxonomy",
   "description": "Holds the collection of tags, categories, keywords, etc that describe content.",
   "type": "object",
-  "additionalProperties": true,
   "properties": {
     "taxonomy": {
       "type": "object",

@@ -380,7 +380,8 @@ describe("ANS Schema", function() {
       for( var i = 0; i < keys.length; i++) {
         console.log("        " + keys[i] + " should be a valid JSON Schema");
         var schema = loadedSchemas[keys[i]];
-        ajv.addSchema(schema);
+        //ajv.addSchema(schema);
+        tv4.addSchema(schema);
       }
     });
   });
@@ -396,11 +397,21 @@ var validate = function(version, schemaName, fixtureName, expected) {
 
   expected = (typeof expected === "undefined") ? true : expected;
 
-  var result = ajv.validate(schema, fixture);
-  if (result !== expected) {
-    console.log(ajv.errors);
+  // var result = ajv.validate(schema, fixture);
+  // if (result !== expected) {
+  //   console.log(ajv.errors);
+  // }
+
+  var result = tv4.validateResult(fixture, schema, false, true);
+  // console.log(result);
+  // console.log(result.valid);
+  // console.log(expected);
+  // console.log(result.valid == expected);
+  if (result.valid != expected) {
+    console.log(result);
   }
-  result.should.eql(expected);
+
+  result.valid.should.eql(expected);
 
 };
 
@@ -483,6 +494,7 @@ describe("Schema: ", function() {
           validate(version, '/story.json', 'story-fixture-tiny-house');
           validate(version, '/story.json', 'story-fixture-references');
         });
+
       });
 
       describe("Image", function() {

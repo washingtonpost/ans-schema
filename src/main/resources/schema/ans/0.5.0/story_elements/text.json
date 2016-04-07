@@ -5,7 +5,9 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/story_elements/story_element.json",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/story_elements/story_element.json"
+    },
+    {
       "properties": {
         "type": {
           "enum": [ "text" ]

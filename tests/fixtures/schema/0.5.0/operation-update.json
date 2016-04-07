@@ -5,24 +5,24 @@
   "story_id": "f8f706f0-0acc-11e5-9e39-0db921c47b93",
   "revision_id": "2A",
   "branch": "default",
-  "version": "0.4",
+  "version": "0.5.0",
   "story": {
     "_id": "f8f706f0-0acc-11e5-9e39-0db921c47b93",
-    "version": "0.4",
+    "version": "0.5.0",
     "type": "story",
     "created_date": "2015-07-02T09:50:50.52Z",
     "last_updated_date": "2015-07-02T09:50:50.52Z",
     "headlines": {
-      "default": "Tiny house, big benefits:\u2009Freedom from a mortgage and worries \u2014 and stuff"
+      "basic": "Tiny house, big benefits:\u2009Freedom from a mortgage and worries \u2014 and stuff"
     },
     "description": {
-      "default": "Tiny house, big benefits:\u2009Freedom from a mortgage and worries \u2014 and stuff"
+      "basic": "Tiny house, big benefits:\u2009Freedom from a mortgage and worries \u2014 and stuff"
     },
     "content_elements": [
       {
         "type": "text",
         "editable": true,
-        "text": "MY TWO CENTS",
+        "content": "MY TWO CENTS",
         "_id": "D2349ABC88A9A"
       }
     ],
