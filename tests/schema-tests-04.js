@@ -10,8 +10,8 @@ var loadedFiles = {};
 var baseDir = path.join(path.dirname(module.filename), '../src/main/resources/schema/ans');
 var loadedSchemas = {};
 
-//var ajv = new Ajv({allErrors:true});
-var tv4 = require('tv4');
+var ajv = new Ajv({allErrors:true});
+//var tv4 = require('tv4');
 
 var test_versions = [ "v0_4" ];
 
@@ -380,8 +380,8 @@ describe("ANS Schema", function() {
       for( var i = 0; i < keys.length; i++) {
         console.log("        " + keys[i] + " should be a valid JSON Schema");
         var schema = loadedSchemas[keys[i]];
-        //ajv.addSchema(schema);
-        tv4.addSchema(schema);
+        ajv.addSchema(schema);
+        //tv4.addSchema(schema);
       }
     });
   });
@@ -397,21 +397,21 @@ var validate = function(version, schemaName, fixtureName, expected) {
 
   expected = (typeof expected === "undefined") ? true : expected;
 
-  // var result = ajv.validate(schema, fixture);
-  // if (result !== expected) {
-  //   console.log(ajv.errors);
-  // }
-
-  var result = tv4.validateResult(fixture, schema, false, true);
-  // console.log(result);
-  // console.log(result.valid);
-  // console.log(expected);
-  // console.log(result.valid == expected);
-  if (result.valid != expected) {
-    console.log(result);
+  var result = ajv.validate(schema, fixture);
+  if (result !== expected) {
+    console.log(ajv.errors);
   }
 
-  result.valid.should.eql(expected);
+  // var result = tv4.validateResult(fixture, schema, false, true);
+  // // console.log(result);
+  // // console.log(result.valid);
+  // // console.log(expected);
+  // // console.log(result.valid == expected);
+  // if (result.valid != expected) {
+  //   console.log(result);
+  // }
+
+  result.should.eql(expected);
 
 };
 
