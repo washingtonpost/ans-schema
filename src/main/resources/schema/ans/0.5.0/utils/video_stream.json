@@ -25,7 +25,7 @@
       "description": "The video codec.",
       "type": "string"
     },
-    "type": {
+    "stream_type": {
       "description": "The type of video (e.g. mp4).",
       "type": "string"
     },
@@ -39,6 +39,9 @@
     },
     "provider": {
       "description": "The provider of the video.",
+      "type": "string"
+    },
+    "url": {
       "type": "string"
     }
   }

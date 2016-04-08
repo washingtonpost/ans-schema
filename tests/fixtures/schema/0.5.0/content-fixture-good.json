@@ -17,11 +17,12 @@
         "longitude": -77.0164
     },
     "address": {
-        "street_address": "1600 Pennsylvania Ave",
-        "extended_address": "West Wing",
-        "locality": "Washington, D.C.",
-        "postal_code": "20002",
-        "country_name": "USA"
+      "street_address": "1600 Pennsylvania Ave",
+      "extended_address": "West Wing",
+      "locality": "Washington",
+      "region": "D.C.",
+      "postal_code": "20002",
+      "country_name": "USA"
     },
     "copyright": "(c) 2015 The Washington Post, Inc.",
     "foo": "bar"

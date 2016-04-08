@@ -21,7 +21,7 @@
     "content_elements": [
       {
         "type": "text",
-        "editable": true,
+
         "content": "MY TWO CENTS",
         "_id": "D2349ABC88A9A"
       }

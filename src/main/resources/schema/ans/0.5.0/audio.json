@@ -133,5 +133,5 @@
       "type": "boolean"
     }
   },
-  "required": [ "type", "version", "source_url" ]
+  "required": [ "type", "version" ]
 }

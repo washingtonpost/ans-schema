@@ -4,5 +4,5 @@
   "title": "Description",
   "description": "The descriptions, or blurbs, for the content.",
   "type": "object",
-  "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/utils/dictionary.json",
+  "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/utils/dictionary.json"
 }

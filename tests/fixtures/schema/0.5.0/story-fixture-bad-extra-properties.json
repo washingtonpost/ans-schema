@@ -1,4 +1,5 @@
 {
+  "foo": "bar",
   "_id": "unique ANS id",
   "type": "story",
   "version": "0.5.0",
@@ -7,20 +8,28 @@
   "credits": {
     "by": [
       {
-        "type": "reference",
-
-        "referent": {
-          "type": "author",
-          "service": "http://www.credits.com/api",
-          "provider": "http://www.credits.com/api",
-          "id": "00001"
-        }
-      }
-    ],
-    "additional reporting by": [
-      {
+        "name": "John Q. Reporter",
+        "org": "The Washington Post",
         "type": "author",
-        "name": "Greg Engel"
+        "image": {
+          "_id": "unique ANS id",
+          "type": "image",
+          "version": "0.5.0",
+          "created_date": "2015-06-25T09:50:50.52Z",
+          "url": "https://img.washingtonpost.com/wp-apps/imrs.php?src=http://wp-eng-static.washingtonpost.com/author_images/faiolaam.jpg?ts=1405950848547&w=90&h=90"
+        },
+        "bio": "Anthony Faiola is The Post's Berlin bureau chief. Faiola joined the Post in 1994, since then reporting for the paper from five continents and serving as bureau chief in Tokyo, Buenos Aires, New York and London.",
+        "url": "https://www.washingtonpost.com/people/anthony-faiola",
+        "social_links": [
+          {
+            "site": "twitter",
+            "url": "https://www.twitter.com/Anthony_Faiola"
+          },
+          {
+            "site": "facebook",
+            "url": "https://www.facebook.com/anthony.faiola"
+          }
+        ]
       }
     ]
   },
@@ -42,7 +51,7 @@
   "canonical_url": "http://www.washingtonpost.com/local/anesthesiologist-trashes-sedated-patient-jury-orders-her-to-pay-500000/2015/06/23/cae05c00-18f3-11e5-ab92-c75ae6ab94b5_story.html",
   "short_url": "http://wapo.st/1Crp6bY",
   "headlines": {
-    "basic": "The basic headline for this story",
+    "basic": "The default headline for this story",
     "twitter": "Twitter headline!"
   },
   "description": {
@@ -113,8 +122,8 @@
       "credits": {
         "by": [
           {
-            "type": "author",
-            "name": "Ansel Adams"
+            "name": "Ansel Adams",
+            "type": "author"
           }
         ]
       },
@@ -133,14 +142,14 @@
         {
           "_id" : "t1",
           "type" : "text",
-          "content" : "Foo"
+          "text" : "Foo"
 
         },
         {
           "_id" : "t2",
           "type": "text",
 
-          "content" : "Bar"
+          "text" : "Bar"
         },
         {
           "_id" : "l2",
@@ -152,13 +161,13 @@
               "_id": "t4",
               "type": "text",
 
-              "content" : "Hi"
+              "text" : "Hi"
             },
             {
               "_id": "t5",
               "type": "text",
 
-              "content" : "Mom"
+              "text" : "Mom"
             }
           ]
         }
@@ -175,6 +184,7 @@
       "type": "raw_html",
       "content": "<iframe src=\"http://www.google.com\"></iframe>",
       "channels": ["web"]
+
     },
     {
       "_id": "22222229",

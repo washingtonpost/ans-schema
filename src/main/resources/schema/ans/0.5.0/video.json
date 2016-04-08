@@ -8,7 +8,7 @@
   "properties": {
     "type": {
       "type": "string",
-      "enum": [ "video" ],
+      "enum": [ "video" ]
     },
     "_id": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/traits/trait_id.json"
@@ -134,6 +134,9 @@
       "items": {
         "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/utils/video_stream.json"
       }
+    },
+    "subtitles": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/utils/video_subtitle.json"
     },
     "promo_image": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/image.json",

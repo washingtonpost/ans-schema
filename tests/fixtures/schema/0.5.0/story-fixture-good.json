@@ -1,7 +1,7 @@
 {
   "_id": "unique ANS id",
   "type": "story",
-  "version": "0.4.7",
+  "version": "0.5.0",
   "created_date": "2015-06-24T09:50:50.52Z",
   "last_updated_date": "2015-06-24T09:50:50.52Z",
   "credits": {
@@ -13,11 +13,11 @@
         "image": {
           "_id": "unique ANS id",
           "type": "image",
-          "version": "0.4.7",
+          "version": "0.5.0",
           "created_date": "2015-06-25T09:50:50.52Z",
           "url": "https://img.washingtonpost.com/wp-apps/imrs.php?src=http://wp-eng-static.washingtonpost.com/author_images/faiolaam.jpg?ts=1405950848547&w=90&h=90"
         },
-        "description": "Anthony Faiola is The Post's Berlin bureau chief. Faiola joined the Post in 1994, since then reporting for the paper from five continents and serving as bureau chief in Tokyo, Buenos Aires, New York and London.",
+        "bio": "Anthony Faiola is The Post's Berlin bureau chief. Faiola joined the Post in 1994, since then reporting for the paper from five continents and serving as bureau chief in Tokyo, Buenos Aires, New York and London.",
         "url": "https://www.washingtonpost.com/people/anthony-faiola",
         "social_links": [
           {
@@ -41,7 +41,8 @@
   "address": {
     "street_address": "1600 Pennsylvania Ave",
     "extended_address": "West Wing",
-    "locality": "Washington, D.C.",
+    "locality": "Washington",
+    "region": "D.C.",
     "postal_code": "20002",
     "country_name": "USA"
   },
@@ -60,7 +61,7 @@
       {
         "_id": "some other unique ANS id",
         "type": "story",
-        "version": "0.4.7"
+        "version": "0.5.0"
       }
     ]
   },
@@ -68,7 +69,7 @@
     "basic": {
       "_id": "unique ANS id",
       "type": "image",
-      "version": "0.4.7",
+      "version": "0.5.0",
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {
         "by": [
@@ -102,20 +103,20 @@
     {
       "_id": "123",
       "type": "text",
-      "text": "<h1>this is my first paragraph</h1>",
-      "editable": true
+      "content": "<h1>this is my first paragraph</h1>"
+
     },
     {
       "_id": "456",
       "type": "text",
-      "editable": true,
-      "text": "<h2>this is my second paragraph</h2>"
+
+      "content": "<h2>this is my second paragraph</h2>"
     },
     {
       "_id": "789",
       "type": "image",
-      "version": "0.4.7",
-      "editable": true,
+      "version": "0.5.0",
+
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {
         "by": [
@@ -135,37 +136,37 @@
       "_id": "49876543210",
       "type": "list",
       "list_type": "unordered",
-      "editable": true,
+
       "items": [
         {
           "_id" : "t1",
           "type" : "text",
-          "text" : "Foo",
-          "editable": true
+          "content" : "Foo"
+
         },
         {
           "_id" : "t2",
           "type": "text",
-          "editable": true,
-          "text" : "Bar"
+
+          "content" : "Bar"
         },
         {
           "_id" : "l2",
           "type": "list",
-          "editable": true,
+
           "list_type": "ordered",
           "items" : [
             {
               "_id": "t4",
               "type": "text",
-              "editable": true,
-              "text" : "Hi"
+
+              "content" : "Hi"
             },
             {
               "_id": "t5",
               "type": "text",
-              "editable": true,
-              "text" : "Mom"
+
+              "content" : "Mom"
             }
           ]
         }
@@ -174,23 +175,23 @@
     {
       "_id": "549876543210",
       "type": "blockquote",
-      "content": "<i>Here's my html</i>",
-      "editable": true
+      "content": "<i>Here's my html</i>"
+
     },
     {
       "_id": "649876543210",
       "type": "raw_html",
-      "html": "<iframe src=\"http://www.google.com\"></iframe>",
-      "channels": ["web"],
-      "editable": true
+      "content": "<iframe src=\"http://www.google.com\"></iframe>",
+      "channels": ["web"]
+
     },
     {
       "_id": "22222229",
       "type": "oembed",
       "providerUrl": "https://api.twitter.com/1/statuses/oembed.json",
       "objectUrl": "https://twitter.com/BradDavis_WFTS/status/664422935130566656",
-      "channels": ["ios", "android"],
-      "editable": true
+      "channels": ["ios", "android"]
+
     }
 
 

@@ -3,7 +3,6 @@
   "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/story_elements/text.json",
   "description": "A textual content element",
   "type": "object",
-  "additionalProperties": false,
   "properties": {
     "type": {
       "type": "string",
@@ -15,7 +14,7 @@
     "subtype": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/traits/trait_subtype.json"
     },
-    "channel": {
+    "channels": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/traits/trait_channel.json"
     },
     "additonal_properties": {

@@ -1,7 +1,7 @@
 {
   "_id": "f8f706f0-0acc-11e5-9e39-0db921c47b93",
   "type": "story",
-  "version": "0.4.7",
+  "version": "0.5.0",
   "created_date": "2015-07-02T09:50:50.52Z",
   "last_updated_date": "2015-07-02T09:50:50.52Z",
   "credits": {
@@ -37,7 +37,7 @@
       {
         "type": "story",
         "_id": "some other unique ANS id",
-        "version": "0.4.7"
+        "version": "0.5.0"
       }
     ]
   },
@@ -45,7 +45,7 @@
     "basic": {
       "_id": "unique ANS id",
       "type": "image",
-      "version": "0.4.7",
+      "version": "0.5.0",
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": { "by": [
         {
@@ -100,7 +100,7 @@
     {
       "_id": "1000005",
       "type": "image",
-      "version": "0.4.7",
+      "version": "0.5.0",
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {
         "by": [

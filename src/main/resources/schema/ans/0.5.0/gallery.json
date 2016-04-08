@@ -10,7 +10,7 @@
     "type": {
       "type": "string",
       "enum": [ "gallery" ]
-    }
+    },
     "_id": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/traits/trait_id.json"
     },

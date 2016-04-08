@@ -1,8 +1,15 @@
 {
   "_id": "0987654321",
   "type": "audio",
-  "version": "0.4.7",
-  "sourceUrl": "https://www.washingtonpost.com/audio/foo/bar.mp3",
+  "version": "0.5.0",
+  "source_url": "https://www.washingtonpost.com/audio/foo/bar.mp3",
   "mimetype": "audio/mp3",
-  "credit": []
+  "credits": {
+    "by": [
+      {
+        "type": "author",
+        "name": "John Jacob"
+      }
+    ]
+  }
 }

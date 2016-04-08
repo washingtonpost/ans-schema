@@ -2,35 +2,35 @@
   "_id": "49876543210",
   "type": "list",
   "list_type": "unordered",
-  "editable": true,
+
   "items": [
     {
       "_id": "A",
-      "editable": true,
+
       "type" : "text",
       "content" : "Foo"
     },
     {
       "_id": "B",
-      "editable": true,
+
       "type": "text",
       "content" : "Bar"
     },
     {
       "_id": "C",
       "type": "list",
-      "editable": true,
+
       "list_type": "ordered",
       "items" : [
         {
           "_id": "D",
-          "editable": true,
+
           "type": "text",
           "content" : "Hi"
         },
         {
           "_id": "E",
-          "editable": true,
+
           "type": "text",
           "content" : "Mom"
         }

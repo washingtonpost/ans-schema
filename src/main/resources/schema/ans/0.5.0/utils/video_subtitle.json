@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/utils/video_subtitles.json",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/utils/video_subtitle.json",
   "title": "Video Subtitle Configuration Schema.",
   "description": "Data about different subtitle encodings and confidences of auto-transcribed content.",
   "type": "object",
@@ -12,7 +12,7 @@
     "urls": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/subtitleUrl"
+        "$ref": "#/definitions/subtitle_url"
       },
       "description": "The locations of any subtitle transcriptions of the video."
     }

@@ -4,6 +4,5 @@
   "title": "Headlines",
   "description": "The headline(s) for the content.",
   "type": "object",
-  "description": "A key-value group of headlines. Key is used to describe context in which a certain value should be used as the headline.",
-  "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/utils/dictionary.json",
+  "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/utils/dictionary.json"
 }

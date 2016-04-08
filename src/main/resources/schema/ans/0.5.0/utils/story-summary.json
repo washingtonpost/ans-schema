@@ -22,7 +22,7 @@
     },
     "last_updated_date": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/trait/trait_last_updated_date.json"
-    },
+    }
   },
 
   "required": [ "type", "_id", "canonical_url", "headlines", "revision", "last_updated_date" ]

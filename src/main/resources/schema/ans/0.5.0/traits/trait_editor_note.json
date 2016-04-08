@@ -3,5 +3,5 @@
   "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/traits/trait_editor_note.json",
   "title": "Editor_Note",
   "description": "Additional information to be displayed near the content from the editor.",
-  "type": "string",
+  "type": "string"
 }
