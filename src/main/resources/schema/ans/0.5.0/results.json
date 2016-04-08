@@ -1,14 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/story.json",
-  "title": "A story.",
-  "description": "Holds attributes of an ANS story. See also content.json",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/summaries/results.json",
+  "description": "A set of summary items to be displayed together (e.g., landing pages, query results, etc.)",
   "type": "object",
-  "additionalProperties": false,
   "properties": {
     "type": {
       "type": "string",
-      "enum": [ "story" ]
+      "enum": [ "results" ]
     },
     "_id": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/traits/trait_id.json"
@@ -108,7 +106,21 @@
     },
     "content_elements": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/traits/trait_content_elements.json"
+    },
+
+
+
+    "count" : {
+      "description": "Total number of items in the source that this list pulls from",
+      "type": "integer"
+    },
+    "next": {
+      "description": "A page number, story id, url, or other parameter used for retrieving subsequent items in the list"
+    },
+    "previous": {
+      "description": "A page number, story id, url, or other parameter used for retrieving previous items in the list"
     }
   },
   "required": [ "type", "version" ]
+
 }

@@ -4,24 +4,35 @@
   "title": "A list.",
   "description": " list of text items or other lists",
   "type": "object",
-  "allOf": [{
-    "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/story_elements/story_element.json"
-  }, {
-    "properties": {
-      "type": {
-        "enum": [ "list" ]
-      },
-      "list_type": {
-        "type": "string",
-        "description": "The type of list to render as (ordered, unordered, etc)"
-      },
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "enum": [ "list" ]
+    },
+    "_id": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/traits/trait_id.json"
+    },
+    "subtype": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/traits/trait_subtype.json"
+    },
+    "channel": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/traits/trait_channel.json"
+    },
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/traits/trait_additional_properties.json"
+    },
+
+    "list_type": {
+      "type": "string",
+      "description": "The type of list to render as (ordered, unordered, etc)"
+    },
+    "items": {
+      "type": "array",
       "items": {
-        "type": "array",
-        "items": {
-          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/story_elements/list_element.json"
-        },
-        "description": "The items in this list."
-      }
-    }
-  }]
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/story_elements/list_element.json"
+      },
+      "description": "The items in this list."
+    },
+  },
+  "required": [ "type" ]
 }

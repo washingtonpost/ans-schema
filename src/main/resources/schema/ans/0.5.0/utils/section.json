@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/utils/section.json",
+  "title": "Section",
+  "description": "A hierarchical taxonomy section.",
+  "type": "object",
+  "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/content.json",
+  "properties": {
+    "parent": {
+      "description": "The parent section, if any",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/utils/section.json"
+    }
+  }
+}

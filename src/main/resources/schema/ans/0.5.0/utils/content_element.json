@@ -1,11 +1,13 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/story_elements/oembed.json",
-  "description": "An oembed object",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/utils/utils/content_element.json",
+  "title": "An element that can be listed as part of content elements",
+  "description": "An item that conforms to this schema can be rendered in a sequence",
   "type": "object",
+  "additionalProperties": {},
   "properties": {
     "type": {
-      "enum": [ "oembed" ]
+      "type": "string"
     },
     "_id": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/traits/trait_id.json"
@@ -18,16 +20,7 @@
     },
     "additional_properties": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/traits/trait_additional_properties.json"
-    },
-
-    "providerUrl": {
-      "description": "The endpoint for the provider's oembed API.",
-      "type": "string"
-    },
-    "objectUrl": {
-      "description": "The canonical url of the embeddable object.",
-      "type": "string"
     }
   },
-  "required": ["type", "providerUrl", "objectUrl"]
+  "required": [ "type" ]
 }

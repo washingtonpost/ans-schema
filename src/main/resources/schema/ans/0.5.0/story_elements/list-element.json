@@ -4,6 +4,7 @@
   "title": "A valid list element.",
   "description": "Lists the schemas we allow as 'list elements' in our collection schema.",
   "type": "object",
+  "additionalProperties": {},
   "oneOf": [
     {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/story_elements/list.json"
