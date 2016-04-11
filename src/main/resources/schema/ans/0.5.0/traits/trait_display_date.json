@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/traits/trait_display_date.json",
+  "title": "Display_Date",
+  "description": "The RFC3339-formatted dated time of the most recent date the story was (re)displayed on a public site.",
+  "type": "string",
+  "format": "date-time"
+}

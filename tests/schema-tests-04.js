@@ -11,6 +11,9 @@ var baseDir = path.join(path.dirname(module.filename), '../src/main/resources/sc
 var loadedSchemas = {};
 
 var ajv = new Ajv({allErrors:true});
+//var tv4 = require('tv4');
+
+var test_versions = [ "v0_4" ];
 
 var json_schema = {
     "id": "http://json-schema.org/draft-04/schema#",
@@ -353,10 +356,14 @@ describe("ANS Schema", function() {
           next();
         },
         function(err, files) {
-          if (err) throw err;
+          if (err) {
+            console.log(err);
+            throw err;
+          }
 
           var keys = Object.keys(loadedFiles);
           for ( var i = 0; i < keys.length; i++) {
+
             var schema = loadedSchemas[keys[i]];
             schema.should.be.instanceOf(Object);
             schema.should.deepEqual(JSON.parse(loadedFiles[keys[i]]));
@@ -374,6 +381,7 @@ describe("ANS Schema", function() {
         console.log("        " + keys[i] + " should be a valid JSON Schema");
         var schema = loadedSchemas[keys[i]];
         ajv.addSchema(schema);
+        //tv4.addSchema(schema);
       }
     });
   });
@@ -382,197 +390,223 @@ describe("ANS Schema", function() {
 
 
 var fixtures = {};
-var validate = function(schemaName, fixtureName, expected) {
-  var schema = loadedSchemas[schemaName];
+var validate = function(version, schemaName, fixtureName, expected) {
+
+  var schema = loadedSchemas[version + schemaName];
   var fixture = fixtures[fixtureName];
-  //console.log(fixtures);
+
   expected = (typeof expected === "undefined") ? true : expected;
 
   var result = ajv.validate(schema, fixture);
-  //console.log("Fixture: " + fixture);
   if (result !== expected) {
     console.log(ajv.errors);
   }
+
+  // var result = tv4.validateResult(fixture, schema, false, true);
+  // // console.log(result);
+  // // console.log(result.valid);
+  // // console.log(expected);
+  // // console.log(result.valid == expected);
+  // if (result.valid != expected) {
+  //   console.log(result);
+  // }
+
   result.should.eql(expected);
 
 };
 
 
 
+
+
 describe("Schema: ", function() {
-  before(function(done) {
-    //console.log("b4");
-    //console.log(path.dirname(module.filename));
-    //console.log(      path.join(path.dirname(module.filename), 'fixtures'));
-    dir.readFiles(
-      path.join(path.dirname(module.filename), 'fixtures/schema'),
-      function(err, content, filename, next) {
-        if (err) throw err;
 
-        fixtures[path.basename(filename, '.json')] = JSON.parse(content);
-        next();
-      },
-      function(err, files) {
-        if (err) throw err;
-        done();
-      }
-    );
+  test_versions.forEach(function(version) {
+
+    describe("ANS " + version, function() {
+
+      before(function(done) {
+        fixtures = {};
+        dir.readFiles(
+          path.join(path.dirname(module.filename), 'fixtures/schema/' + version),
+          function(err, content, filename, next) {
+            if (err) throw err;
+
+            fixtures[path.basename(filename, '.json')] = JSON.parse(content);
+            next();
+          },
+          function(err, files) {
+            if (err) throw err;
+            done();
+          }
+        );
+      });
+
+
+      describe("Address", function() {
+        it("should validate a well-formatted address", function() {
+          validate(version, '/address.json', 'address-fixture-good');
+        });
+
+        it("should not validate an address with a po box and no street address", function() {
+          validate(version, '/address.json', 'address-fixture-bad-po-box', false);
+        });
+      });
+
+      describe("Audio", function() {
+        it("should validate a well-formatted audio", function() {
+          validate(version, '/audio.json', 'audio-fixture-good');
+        });
+
+        it("should validate a well-formatted audio with settings", function() {
+          validate(version, '/audio.json', 'audio-fixture-good-settings');
+        });
+
+        it("should validate a well-formatted audio with custom fields", function() {
+          validate(version, '/audio.json', 'audio-fixture-good-custom');
+        });
+
+        it("should not validate a non-audio element", function() {
+          validate(version, '/audio.json', 'audio-fixture-bad', false);
+        });
+      });
+
+      describe("Video", function() {
+        it("should validate a well-formatted video", function() {
+          validate(version, '/video.json', 'video-fixture-good');
+          validate(version, '/video.json', 'video-fixture-nationals');
+        });
+
+        it("should not validate a non-well-formatted video", function() {
+          validate(version, '/video.json', 'video-fixture-bad', false);
+        });
+      });
+
+      describe("Social", function() {
+        it("should validate a social item", function() {
+          validate(version, '/social.json', 'social-fixture-good');
+        });
+      });
+
+      describe("Story", function() {
+        it("should validate a story", function() {
+          validate(version, '/story.json', 'story-fixture-good');
+          validate(version, '/story.json', 'story-fixture-tiny-house');
+          validate(version, '/story.json', 'story-fixture-references');
+        });
+
+      });
+
+      describe("Image", function() {
+        it("should validate a valid image", function() {
+          validate(version, '/image.json', 'image-fixture-good');
+        });
+        it("should validate an image with no height or width", function() {
+          validate(version, '/image.json', 'image-fixture-good-no-height-width');
+        });
+      });
+
+      describe("Story Operation", function() {
+        var type = "/story_operation.json";
+        if (version === "v0_4") {
+          type = "/story-operation.json";
+        }
+
+        it("should validate a create operation", function() {
+          validate(version, type, 'operation-create');
+        });
+        it("should validate an update operation", function() {
+          validate(version, type, 'operation-update');
+        });
+        it("should validate a delete operation", function() {
+          validate(version, type, 'operation-delete');
+        });
+        it("should validate a publish-edition operation", function() {
+          validate(version, type, 'operation-publish-edition');
+        });
+        it("should validate an unpublish-edition operation", function() {
+          validate(version, type, 'operation-unpublish-edition');
+        });
+      });
+
+      describe("Story Elements ", function() {
+        var type_prefix = "/story_elements";
+        if (version === "v0_4") {
+          type_prefix = "/story-elements";
+        }
+
+        describe("Blockquote", function() {
+          it("should validate a well-formatted blockquote", function() {
+            validate(version, type_prefix + '/blockquote.json', 'bq-fixture-good');
+          });
+
+          it("should not validate a non-blockquote", function() {
+            validate(version, type_prefix + '/blockquote.json', 'bq-fixture-bad', false);
+          });
+        });
+
+        describe("Code", function() {
+          it("should validate a well-formatted code sample", function() {
+            validate(version, type_prefix + '/code.json', 'code-fixture-good');
+          });
+        });
+
+        describe("List", function() {
+          it("should validate a list of text elements", function() {
+            validate(version, type_prefix + '/list.json', 'ul-fixture-good');
+            validate(version, type_prefix + '/list-element.json', 'ul-fixture-good');
+          });
+
+          it("should validate a nested list of text elements", function() {
+            validate(version, type_prefix + '/list.json', 'ul-fixture-good-nested');
+          });
+        });
+
+        describe("Oembed", function() {
+          it("should validate an oembed element", function() {
+            validate(version, type_prefix + '/oembed.json', 'oembed-fixture-good');
+          });
+
+          it("should not validate a non-oembed", function() {
+            validate(version, type_prefix + '/oembed.json', 'oembed-fixture-bad', false);
+          });
+        });
+
+
+        describe("Text", function() {
+          it("should validate a text element", function() {
+            validate(version, type_prefix + '/text.json', 'text-fixture-good');
+          });
+
+          it("should validate a text element with channels", function() {
+            validate(version, type_prefix + '/text.json', 'text-fixture-good-channels');
+          });
+
+          it("should not validate a non-text", function() {
+            validate(version, type_prefix + '/text.json', 'text-fixture-bad', false);
+          });
+        });
+
+        describe("Raw Html", function() {
+          it("should validate a raw_html element", function() {
+            validate(version, type_prefix + '/raw-html.json', 'raw-html-fixture-good');
+          });
+
+          it("should not validate a non-raw_html", function() {
+            validate(version, type_prefix + '/raw-html.json', 'raw-html-fixture-bad', false);
+          });
+        });
+
+        describe("Table", function() {
+          it("should validate a table element", function() {
+            validate(version, type_prefix + '/table.json', 'table-fixture-good');
+          });
+
+          it("should not validate a non-table", function() {
+            validate(version, type_prefix + '/table.json', 'raw-html-fixture-bad', false);
+          });
+        });
+      });
+    });
   });
-
-  describe("Address", function() {
-    it("should validate a well-formatted address", function() {
-      validate('v0_4/address.json', 'address-fixture-good');
-    });
-
-    it("should not validate an address with a po box and no street address", function() {
-      validate('v0_4/address.json', 'address-fixture-bad-po-box', false);
-    });
-  });
-
-  describe("Audio", function() {
-    it("should validate a well-formatted audio", function() {
-      validate('v0_4/audio.json', 'audio-fixture-good');
-    });
-
-    it("should validate a well-formatted audio with settings", function() {
-      validate('v0_4/audio.json', 'audio-fixture-good-settings');
-    });
-
-    it("should validate a well-formatted audio with custom fields", function() {
-      validate('v0_4/audio.json', 'audio-fixture-good-custom');
-    });
-
-    it("should not validate a non-audio element", function() {
-      validate('v0_4/audio.json', 'audio-fixture-bad', false);
-    });
-  });
-
-  describe("Video", function() {
-    it("should validate a well-formatted video", function() {
-      validate('v0_4/video.json', 'video-fixture-good');
-      validate('v0_4/video.json', 'video-fixture-nationals');
-    });
-
-    it("should not validate a non-well-formatted video", function() {
-      validate('v0_4/video.json', 'video-fixture-bad', false);
-    });
-  });
-
-  describe("Social", function() {
-    it("should validate a social item", function() {
-      validate('v0_4/social.json', 'social-fixture-good');
-    });
-  });
-
-  describe("Story", function() {
-    it("should validate a story", function() {
-      validate('v0_4/story.json', 'story-fixture-good');
-      validate('v0_4/story.json', 'story-fixture-tiny-house');
-      validate('v0_4/story.json', 'story-fixture-references');
-    });
-  });
-
-  describe("Image", function() {
-    it("should validate a valid image", function() {
-      validate('v0_4/image.json', 'image-fixture-good');
-    });
-    it("should validate an image with no height or width", function() {
-      validate('v0_4/image.json', 'image-fixture-good-no-height-width');
-    });
-  });
-
-  describe("Story Operation", function() {
-    it("should validate a create operation", function() {
-      validate('v0_4/story-operation.json', 'operation-create');
-    });
-    it("should validate an update operation", function() {
-      validate('v0_4/story-operation.json', 'operation-update');
-    });
-    it("should validate a delete operation", function() {
-      validate('v0_4/story-operation.json', 'operation-delete');
-    });
-    it("should validate a publish-edition operation", function() {
-      validate('v0_4/story-operation.json', 'operation-publish-edition');
-    });
-    it("should validate an unpublish-edition operation", function() {
-      validate('v0_4/story-operation.json', 'operation-unpublish-edition');
-    });
-  });
-
-  describe("Story Elements ", function() {
-    describe("Blockquote", function() {
-      it("should validate a well-formatted blockquote", function() {
-        validate('v0_4/story-elements/blockquote.json', 'bq-fixture-good');
-      });
-
-      it("should not validate a non-blockquote", function() {
-        validate('v0_4/story-elements/blockquote.json', 'bq-fixture-bad', false);
-      });
-    });
-
-    describe("Code", function() {
-      it("should validate a well-formatted code sample", function() {
-        validate('v0_4/story-elements/code.json', 'code-fixture-good');
-      });
-    });
-
-    describe("List", function() {
-      it("should validate a list of text elements", function() {
-        validate('v0_4/story-elements/list.json', 'ul-fixture-good');
-        validate('v0_4/story-elements/list-element.json', 'ul-fixture-good');
-      });
-
-      it("should validate a nested list of text elements", function() {
-        validate('v0_4/story-elements/list.json', 'ul-fixture-good-nested');
-      });
-    });
-
-    describe("Oembed", function() {
-      it("should validate an oembed element", function() {
-        validate('v0_4/story-elements/oembed.json', 'oembed-fixture-good');
-      });
-
-      it("should not validate a non-oembed", function() {
-        validate('v0_4/story-elements/oembed.json', 'oembed-fixture-bad', false);
-      });
-    });
-
-
-    describe("Text", function() {
-      it("should validate a text element", function() {
-        validate('v0_4/story-elements/text.json', 'text-fixture-good');
-      });
-
-      it("should validate a text element with channels", function() {
-        validate('v0_4/story-elements/text.json', 'text-fixture-good-channels');
-      });
-
-      it("should not validate a non-text", function() {
-        validate('v0_4/story-elements/text.json', 'text-fixture-bad', false);
-      });
-    });
-
-    describe("Raw Html", function() {
-      it("should validate a raw_html element", function() {
-        validate('v0_4/story-elements/raw-html.json', 'raw-html-fixture-good');
-      });
-
-      it("should not validate a non-raw_html", function() {
-        validate('v0_4/story-elements/raw-html.json', 'raw-html-fixture-bad', false);
-      });
-    });
-
-    describe("Table", function() {
-      it("should validate a table element", function() {
-        validate('v0_4/story-elements/table.json', 'table-fixture-good');
-      });
-
-      it("should not validate a non-table", function() {
-        validate('v0_4/story-elements/table.json', 'raw-html-fixture-bad', false);
-      });
-    });
-
-  });
-
-
 });

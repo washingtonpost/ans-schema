@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/traits/trait_locale.json",
+  "title": "Describes language for an element",
+  "description": "The primary language of the content. The value should follow IETF BCP47. (e.g. 'en', 'es-419', etc.) ",
+  "type": "string"
+}

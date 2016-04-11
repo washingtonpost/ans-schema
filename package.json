@@ -1,7 +1,7 @@
 {
   "name": "ans-schema",
   "description": "The Washington Post's Arc Native Specification",
-  "version": "0.4.7",
+  "version": "0.5.0-rc1",
   "homepage": "https://github.com/washingtonpost/ans-schema",
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   },
   "main": "./lib/schemas.js",
   "scripts": {
-    "test": "mocha tests/schema-tests.js tests/transform-tests.js"
+    "test": "mocha tests/schema-tests-04.js tests/schema-tests-05.js tests/transform-tests.js"
   },
   "publishConfig": {
     "registry": "https://washingtonpost.artifactoryonline.com/washingtonpost/api/npm/npm-local"

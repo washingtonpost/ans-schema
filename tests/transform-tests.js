@@ -14,7 +14,10 @@ var loadedSchemas = {};
 
 var ajv = new Ajv({allErrors:true});
 
+
+// Don't upvert to 0.5.0
 var FIRST_VERSION = '0.4.5';
+var LAST_VERSION = '0.4.7';
 
 var fixtures = {};
 
@@ -27,12 +30,11 @@ var validate = function(schemaName, ans, expected) {
   var result = ajv.validate(schema, ans);
   //console.log("Fixture: " + fixture);
   if (result !== expected) {
+    console.log(ans);
     console.log(ajv.errors);
   }
   result.should.eql(expected);
-
 };
-
 
 
 describe("Transformations: ", function() {
@@ -54,7 +56,10 @@ describe("Transformations: ", function() {
   // Make sure fixtures are loaded
   before(function(done) {
 
-    var version_keys = _.keys(transforms.versions);
+    var version_keys = _.union(
+      _.keys(transforms.versions['0.4']),
+      _.keys(transforms.versions['0.5'])
+    );
 
     async.reduce(version_keys, {}, function(result, version, callback) {
       fixtures[version] = {};
@@ -85,17 +90,19 @@ describe("Transformations: ", function() {
   describe("Image ", function() {
     var fixture_names = ['image-fixture-good', 'image-fixture-good-no-height-width'];
 
-    _.forIn(transforms.versions, function(transformer, version) {
-      it("can transform from " + version, function() {
-        _.forEach(fixture_names, function(value, key) {
-          transformer(fixtures[version][value]);
+    _.forIn(transforms.versions, function(transformers, minor_version){
+      _.forIn(transformers, function(transformer, version) {
+        it("can transform from " + version, function() {
+          _.forEach(fixture_names, function(value, key) {
+            transformer(fixtures[version][value]);
+          });
         });
       });
     });
 
-    it(" validates as version " + current_version.version + " after being upverted from " + FIRST_VERSION, function() {
+    it(" validates as version " + LAST_VERSION + " after being upverted from " + FIRST_VERSION, function() {
       _.forEach(fixture_names, function(name, key) {
-        var result = transforms.upvert(fixtures[FIRST_VERSION][name], current_version);
+        var result = transforms.upvert(fixtures[FIRST_VERSION][name], LAST_VERSION);
 
         validate('v0_4/image.json', result);
       });
@@ -106,17 +113,19 @@ describe("Transformations: ", function() {
   describe("Video ", function() {
     var fixture_names = ['video-fixture-good', 'video-fixture-nationals'];
 
-    _.forIn(transforms.versions, function(transformer, version) {
-      it("can transform from " + version, function() {
-        _.forEach(fixture_names, function(value, key) {
-          transformer(fixtures[version][value]);
+    _.forIn(transforms.versions, function(transformers, minor_version) {
+      _.forIn(transformers, function(transformer, version) {
+        it("can transform from " + version, function() {
+          _.forEach(fixture_names, function(value, key) {
+            transformer(fixtures[version][value]);
+          });
         });
       });
     });
 
-    it(" validates as version " + current_version.version + " after being upverted from " + FIRST_VERSION, function() {
+    it(" validates as version " + LAST_VERSION + " after being upverted from " + FIRST_VERSION, function() {
       _.forEach(fixture_names, function(name, key) {
-        var result = transforms.upvert(fixtures[FIRST_VERSION][name], current_version);
+        var result = transforms.upvert(fixtures[FIRST_VERSION][name], LAST_VERSION);
         validate('v0_4/video.json', result);
       });
     });
@@ -126,17 +135,20 @@ describe("Transformations: ", function() {
   describe("Story ", function() {
     var fixture_names = ['story-fixture-good', 'story-fixture-references', 'story-fixture-tiny-house'];
 
-    _.forIn(transforms.versions, function(transformer, version) {
-      it("can transform from " + version, function() {
-        _.forEach(fixture_names, function(value, key) {
-          transformer(fixtures[version][value]);
+    _.forIn(transforms.versions, function(transformers, minor_version){
+
+      _.forIn(transformers, function(transformer, version) {
+        it("can transform from " + version, function() {
+          _.forEach(fixture_names, function(value, key) {
+            transformer(fixtures[version][value]);
+          });
         });
       });
     });
 
-    it(" validates as version " + current_version.version + " after being upverted from " + FIRST_VERSION, function() {
+    it(" validates as version " + LAST_VERSION + " after being upverted from " + FIRST_VERSION, function() {
       _.forEach(fixture_names, function(name, key) {
-        var result = transforms.upvert(fixtures[FIRST_VERSION][name], current_version);
+        var result = transforms.upvert(fixtures[FIRST_VERSION][name], LAST_VERSION);
         validate('v0_4/story.json', result);
       });
     });
