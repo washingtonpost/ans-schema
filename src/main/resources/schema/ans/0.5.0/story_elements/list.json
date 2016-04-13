@@ -4,6 +4,7 @@
   "title": "A list.",
   "description": " list of text items or other lists",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "type": {
       "enum": [ "list" ]

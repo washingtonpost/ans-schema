@@ -3,6 +3,7 @@
   "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/story_elements/oembed.json",
   "description": "An oembed object",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "type": {
       "enum": [ "oembed" ]

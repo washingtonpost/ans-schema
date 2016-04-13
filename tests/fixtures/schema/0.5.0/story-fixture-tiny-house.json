@@ -80,22 +80,22 @@
     {
       "_id": "1000000",
       "type": "text",
-      "text": "America is having a big love affair with tiny houses. There are television shows: “Tiny House Nation” and “Tiny House Hunters.” There are movies: “Tiny: A Story About Living Small” and “Small Is Beautiful: A Tiny House Documentary.” Pinterest has more than 900 boards devoted to tiny houses, and design Web site Houzz showcases thousands of tiny- house photos. “Many Houzz readers have been fascinated by the idea of a portable home they can pay off quickly and personalize down to the smallest detail,” says editor Sheila Schmitz. And you know a concept has arrived when “Portlandia” skewers it: Check out the “Microhouse” episode."
+      "content": "America is having a big love affair with tiny houses. There are television shows: “Tiny House Nation” and “Tiny House Hunters.” There are movies: “Tiny: A Story About Living Small” and “Small Is Beautiful: A Tiny House Documentary.” Pinterest has more than 900 boards devoted to tiny houses, and design Web site Houzz showcases thousands of tiny- house photos. “Many Houzz readers have been fascinated by the idea of a portable home they can pay off quickly and personalize down to the smallest detail,” says editor Sheila Schmitz. And you know a concept has arrived when “Portlandia” skewers it: Check out the “Microhouse” episode."
     },
     {
       "_id": "1000002",
       "type": "text",
-      "text": "Why are Americans, whose homes average about 2,200 square feet, so obsessed with tiny homes? Perhaps they are responding to the benefits tiny-house owners cite: financial and emotional freedom, a greener lifestyle, the satisfaction of building one’s own refuge."
+      "content": "Why are Americans, whose homes average about 2,200 square feet, so obsessed with tiny homes? Perhaps they are responding to the benefits tiny-house owners cite: financial and emotional freedom, a greener lifestyle, the satisfaction of building one’s own refuge."
     },
     {
       "_id": "1000003",
       "type": "text",
-      "text": "The phrase “ ‘tiny house’ put a name to the movement that was already there,” says Thom Stanton, a tiny-home builder in West Virginia."
+      "content": "The phrase “ ‘tiny house’ put a name to the movement that was already there,” says Thom Stanton, a tiny-home builder in West Virginia."
     },
     {
       "_id": "1000004",
       "type": "text",
-      "text": "Stanton says two groups are fueling the movement: millennials, because their college loans have put traditional houses out of reach, and retiring baby boomers looking for affordable homes with minimal maintenance. Meanwhile, traditional homeowners are contributing to the trend by building tiny houses on their properties to shelter guests, family members or caregivers, or putting them on vacation land."
+      "content": "Stanton says two groups are fueling the movement: millennials, because their college loans have put traditional houses out of reach, and retiring baby boomers looking for affordable homes with minimal maintenance. Meanwhile, traditional homeowners are contributing to the trend by building tiny houses on their properties to shelter guests, family members or caregivers, or putting them on vacation land."
     },
     {
       "_id": "1000005",
@@ -118,7 +118,7 @@
     {
       "_id": "1000006",
       "type": "text",
-      "text": "But there’s one big drawback: Many municipalities haven’t made room literally or legislatively for tiny residences. It’s a challenge to find a place to park a tiny house if you don’t own land. And they often fall into a legal limbo. “Tiny houses exist in sort of a legal gray area, neither explicitly allowed nor expressly forbidden,” says tiny-home owner Jay Austin of Northeast Washington. Though the District recently banned “camping” in tiny-house-like structures, Austin says he has been told the provision is unenforceable."
+      "content": "But there’s one big drawback: Many municipalities haven’t made room literally or legislatively for tiny residences. It’s a challenge to find a place to park a tiny house if you don’t own land. And they often fall into a legal limbo. “Tiny houses exist in sort of a legal gray area, neither explicitly allowed nor expressly forbidden,” says tiny-home owner Jay Austin of Northeast Washington. Though the District recently banned “camping” in tiny-house-like structures, Austin says he has been told the provision is unenforceable."
     }
 
   ]

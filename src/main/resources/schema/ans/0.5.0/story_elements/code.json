@@ -3,6 +3,7 @@
   "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/story_elements/code.json",
   "description": "A code sample",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "type": {
       "enum": [ "code" ]

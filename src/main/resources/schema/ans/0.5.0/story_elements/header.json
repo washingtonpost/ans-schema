@@ -1,12 +1,13 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/story_elements/raw_html.json",
-  "description": "An html content element",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/story_elements/header.json",
+  "description": "A Header",
   "type": "object",
   "additionalProperties": false,
   "properties": {
     "type": {
-      "enum": [ "raw_html" ]
+      "type": "string",
+      "enum": [ "header" ]
     },
     "_id": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/traits/trait_id.json"
@@ -17,13 +18,16 @@
     "channels": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/traits/trait_channel.json"
     },
-    "additional_properties": {
+    "additonal_properties": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/traits/trait_additional_properties.json"
     },
-
     "content": {
-      "description": "Any arbitrary chunk of  HTML.",
+      "description": "The text of the heading.",
       "type": "string"
+    },
+    "level": {
+      "description": "Header level",
+      "type": "integer"
     }
   },
   "required": [ "type", "content" ]

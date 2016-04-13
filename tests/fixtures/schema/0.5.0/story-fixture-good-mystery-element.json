@@ -113,7 +113,7 @@
     {
       "_id": "456",
       "type": "text",
-      "text": "<h2>this is my second paragraph</h2>"
+      "content": "<h2>this is my second paragraph</h2>"
     }
 
 

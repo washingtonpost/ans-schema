@@ -626,6 +626,17 @@ describe("Schema: ", function() {
           });
         });
 
+        describe("Header", function() {
+          it("should validate a header element", function() {
+            validate(version, type_prefix + '/header.json', 'header-fixture-good');
+          });
+
+          it("should not validate a header with 'text' property", function() {
+            validate(version, type_prefix + '/header.json', 'header-fixture-bad', false);
+          });
+        });
+
+
         describe("Table", function() {
           it("should validate a table element", function() {
             validate(version, type_prefix + '/table.json', 'table-fixture-good');

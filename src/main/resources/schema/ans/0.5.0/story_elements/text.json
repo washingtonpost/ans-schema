@@ -3,6 +3,7 @@
   "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/story_elements/text.json",
   "description": "A textual content element",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "type": {
       "type": "string",
