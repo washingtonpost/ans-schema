@@ -103,14 +103,14 @@
     {
       "_id": "123",
       "type": "text",
-      "content": "<h1>this is my first paragraph</h1>"
+      "content": "this is my first paragraph"
 
     },
     {
       "_id": "456",
       "type": "text",
 
-      "content": "<h2>this is my second paragraph</h2>"
+      "content": "this is my second paragraph"
     },
     {
       "_id": "789",
