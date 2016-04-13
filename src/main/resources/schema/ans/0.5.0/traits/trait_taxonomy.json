@@ -4,35 +4,31 @@
   "title": "Taxonomy",
   "description": "Holds the collection of tags, categories, keywords, etc that describe content.",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
-    "taxonomy": {
-      "type": "object",
-      "properties": {
-        "keywords": {
-          "type": "array",
-          "items": {
-            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/utils/keyword.json"
-          },
-          "description": "A list of keywords."
-        },
-        "tags": {
-          "type": "array",
-          "items": {
-            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/utils/tag.json"
-          }
-        },
-        "sections": {
-          "type": "array",
-          "items": {
-            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/utils/section.json"
-          }
-        },
-        "seo_keywords": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
+    "keywords": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/utils/keyword.json"
+      },
+      "description": "A list of keywords."
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/utils/tag.json"
+      }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.0/utils/section.json"
+      }
+    },
+    "seo_keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
       }
     }
   }
