@@ -1,5 +1,10 @@
 # ANS Release Notes
 
+## 0.5.1 2016/4/14 ##
+
+* Correct misspelled "additonal_properties" in text, header elements
+
+
 ## 0.5.0 2016/4/13 ##
 
 * camelCase and hypen-ated variable names everywhere converted to under_score
