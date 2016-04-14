@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.1/traits/trait_credits.json",
+  "title": "Credit trait",
+  "description": "Trait that captures the need to attribute ownership or authorship to content.",
+  "type": "object",
+  "description": "People and groups attributed to this content, keyed by type of contribution.",
+  "patternProperties": {
+    ".*": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "anyOf": [
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.1/utils/author.json"
+          },
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.1/utils/reference.json"
+          }
+        ]
+      }
+    }
+  }
+}

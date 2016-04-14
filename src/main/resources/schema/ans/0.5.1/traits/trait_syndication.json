@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.1/traits/trait_syndication.json",
+
+  "title": "Syndication",
+  "type": "object",
+  "description": "Key-boolean pair of syndication services where this article may go",
+  "patternProperties": {
+    ".*": {
+      "type": "boolean"
+    }
+  }
+}

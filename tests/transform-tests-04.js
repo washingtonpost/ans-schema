@@ -90,12 +90,10 @@ describe("Transformations: ", function() {
   describe("Image ", function() {
     var fixture_names = ['image-fixture-good', 'image-fixture-good-no-height-width'];
 
-    _.forIn(transforms.versions, function(transformers, minor_version){
-      _.forIn(transformers, function(transformer, version) {
-        it("can transform from " + version, function() {
-          _.forEach(fixture_names, function(value, key) {
-            transformer(fixtures[version][value]);
-          });
+    _.forIn(transforms.versions['0.4'], function(transformer, version) {
+      it("can transform from " + version, function() {
+        _.forEach(fixture_names, function(value, key) {
+          transformer(fixtures[version][value]);
         });
       });
     });
@@ -113,12 +111,10 @@ describe("Transformations: ", function() {
   describe("Video ", function() {
     var fixture_names = ['video-fixture-good', 'video-fixture-nationals'];
 
-    _.forIn(transforms.versions, function(transformers, minor_version) {
-      _.forIn(transformers, function(transformer, version) {
-        it("can transform from " + version, function() {
-          _.forEach(fixture_names, function(value, key) {
-            transformer(fixtures[version][value]);
-          });
+    _.forIn(transforms.versions['0.4'], function(transformer, version) {
+      it("can transform from " + version, function() {
+        _.forEach(fixture_names, function(value, key) {
+          transformer(fixtures[version][value]);
         });
       });
     });
@@ -135,15 +131,12 @@ describe("Transformations: ", function() {
   describe("Story ", function() {
     var fixture_names = ['story-fixture-good', 'story-fixture-references', 'story-fixture-tiny-house'];
 
-    _.forIn(transforms.versions, function(transformers, minor_version){
-
-      _.forIn(transformers, function(transformer, version) {
+    _.forIn(transforms.versions['0.4'], function(transformer, version) {
         it("can transform from " + version, function() {
           _.forEach(fixture_names, function(value, key) {
             transformer(fixtures[version][value]);
           });
         });
-      });
     });
 
     it(" validates as version " + LAST_VERSION + " after being upverted from " + FIRST_VERSION, function() {

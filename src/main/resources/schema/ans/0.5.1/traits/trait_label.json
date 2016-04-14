@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.1/traits/trait_label.json",
+  "title": "Label",
+  "description": "What the Washington Post calls a Kicker",
+  "type": "object",
+  "patternProperties": {
+    ".*": {
+      "type": "object"
+    }
+  }
+}
