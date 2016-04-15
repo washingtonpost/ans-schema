@@ -13,7 +13,7 @@ var loadedSchemas = {};
 var ajv = new Ajv({allErrors:true});
 // var tv4 = require('tv4');
 
-var test_versions = [ "0.5.0" ];
+var test_versions = [ "0.5.0", "0.5.1" ];
 
 var json_schema = {
     "id": "http://json-schema.org/draft-04/schema#",
@@ -537,9 +537,6 @@ describe("Schema: ", function() {
 
       describe("Story Operation", function() {
         var type = "/story_operation.json";
-        if (version === "v0_4") {
-          type = "/story-operation.json";
-        }
 
         it("should validate a create operation", function() {
           validate(version, type, 'operation-create');
@@ -560,9 +557,6 @@ describe("Schema: ", function() {
 
       describe("Story Elements ", function() {
         var type_prefix = "/story_elements";
-        if (version === "v0_4") {
-          type_prefix = "/story-elements";
-        }
 
         describe("Blockquote", function() {
           it("should validate a well-formatted blockquote", function() {
@@ -614,6 +608,13 @@ describe("Schema: ", function() {
           it("should not validate a non-text", function() {
             validate(version, type_prefix + '/text.json', 'text-fixture-bad', false);
           });
+
+          it("should validate a text element with additional properties (0.5.1+)", function() {
+            if ('text-fixture-good-additional-properties' in fixtures) {
+              validate(version, type_prefix + '/text.json', 'text-fixture-good-additional-properties');
+            };
+          });
+
         });
 
         describe("Raw Html", function() {
@@ -624,6 +625,7 @@ describe("Schema: ", function() {
           it("should not validate a non-raw_html", function() {
             validate(version, type_prefix + '/raw_html.json', 'raw-html-fixture-bad', false);
           });
+
         });
 
         describe("Header", function() {

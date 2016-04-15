@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.1/traits/trait_channel.json",
+  "title": "Channel trait",
+  "description": "An optional list of output types for which this element should be visible",
+  "type": "array",
+  "items": {
+    "type": "string"
+  }
+}
