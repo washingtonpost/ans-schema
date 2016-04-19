@@ -13,7 +13,7 @@ var loadedSchemas = {};
 var ajv = new Ajv({allErrors:true});
 // var tv4 = require('tv4');
 
-var test_versions = [ "0.5.0", "0.5.1" ];
+var test_versions = [ "0.5.0", "0.5.1", "0.5.2" ];
 
 var json_schema = {
     "id": "http://json-schema.org/draft-04/schema#",
