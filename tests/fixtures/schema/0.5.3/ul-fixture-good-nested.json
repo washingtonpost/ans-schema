@@ -1,0 +1,40 @@
+{
+  "_id": "49876543210",
+  "type": "list",
+  "list_type": "unordered",
+
+  "items": [
+    {
+      "_id": "A",
+
+      "type" : "text",
+      "content" : "Foo"
+    },
+    {
+      "_id": "B",
+
+      "type": "text",
+      "content" : "Bar"
+    },
+    {
+      "_id": "C",
+      "type": "list",
+
+      "list_type": "ordered",
+      "items" : [
+        {
+          "_id": "D",
+
+          "type": "text",
+          "content" : "Hi"
+        },
+        {
+          "_id": "E",
+
+          "type": "text",
+          "content" : "Mom"
+        }
+      ]
+    }
+  ]
+}

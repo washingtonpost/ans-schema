@@ -4,6 +4,7 @@ var should = require('should'),
     dir = require('node-dir'),
     path = require('path'),
     Ajv = require('ajv'),
+    _ = require('lodash'),
     ans = require('../lib/schemas');
 
 var loadedFiles = {};
@@ -13,7 +14,7 @@ var loadedSchemas = {};
 var ajv = new Ajv({allErrors:true});
 // var tv4 = require('tv4');
 
-var test_versions = [ "0.5.0", "0.5.1", "0.5.2" ];
+var test_versions = [ "0.5.0", "0.5.1", "0.5.2", "0.5.3" ];
 
 var json_schema = {
     "id": "http://json-schema.org/draft-04/schema#",
@@ -365,6 +366,7 @@ describe("ANS Schema", function() {
           for ( var i = 0; i < keys.length; i++) {
 
             var schema = loadedSchemas[keys[i]];
+
             schema.should.be.instanceOf(Object);
             schema.should.deepEqual(JSON.parse(loadedFiles[keys[i]]));
           }
@@ -427,7 +429,7 @@ describe("Schema: ", function() {
 
   test_versions.forEach(function(version) {
 
-    describe("ANS " + version, function() {
+    describe("ANS ", function() {
 
       before(function(done) {
         fixtures = {};
@@ -451,280 +453,301 @@ describe("Schema: ", function() {
         );
       });
 
-      describe("Audio", function() {
-        it("should validate a well-formatted audio", function() {
-          validate(version, '/audio.json', 'audio-fixture-good');
-        });
-
-        it("should validate a well-formatted audio with settings", function() {
-          validate(version, '/audio.json', 'audio-fixture-good-settings');
-        });
-
-        it("should validate a well-formatted audio with custom fields", function() {
-          validate(version, '/audio.json', 'audio-fixture-good-custom');
-        });
-
-        it("should not validate a non-audio element", function() {
-          validate(version, '/audio.json', 'audio-fixture-bad', false);
-        });
-
-        it("should validate as content", function() {
-          validate(version, '/content.json', 'audio-fixture-good')
-          validate(version, '/content.json', 'audio-fixture-good-settings')
-          validate(version, '/content.json', 'audio-fixture-good-custom')
-        });
-      });
-
-      describe("Video", function() {
-        it("should validate a well-formatted video", function() {
-          validate(version, '/video.json', 'video-fixture-good');
-          validate(version, '/video.json', 'video-fixture-nationals');
-        });
-
-        it("should not validate a non-well-formatted video", function() {
-          validate(version, '/video.json', 'video-fixture-bad', false);
-        });
-
-        it("should validate as content", function() {
-          validate(version, '/content.json', 'video-fixture-good');
-        });
-      });
-
-      describe("Story", function() {
-        it("should validate a story", function() {
-          validate(version, '/story.json', 'story-fixture-good');
-          validate(version, '/story.json', 'story-fixture-tiny-house');
-          validate(version, '/story.json', 'story-fixture-references');
-        });
-
-        it("should not validate a story with unspecified properties", function() {
-          validate(version, '/story.json', 'story-fixture-bad-extra-properties', false);
-        });
-
-        it("should not validate a story with the wrong type", function() {
-          validate(version, '/story.json', 'story-fixture-bad-wrong-type', false);
-        });
-
-        it("should not validate a story with the wrong version", function() {
-          validate(version, '/story.json', 'story-fixture-bad-wrong-version', false);
-        });
-
-        it("should validate a story with a content element with unknown properties", function() {
-          validate(version, '/story.json', 'story-fixture-good-mystery-element');
-        });
-
-        it("should validate as content", function() {
-          validate(version, '/content.json', 'story-fixture-good');
-          validate(version, '/content.json', 'story-fixture-tiny-house');
-          validate(version, '/content.json', 'story-fixture-references');
-        });
-
-
-      });
-
-      describe("Image", function() {
-        it("should validate a valid image", function() {
-          validate(version, '/image.json', 'image-fixture-good');
-        });
-        it("should validate an image with no height or width", function() {
-          validate(version, '/image.json', 'image-fixture-good-no-height-width');
-        });
-
-        it("should validate as content", function() {
-          validate(version, '/content.json', 'image-fixture-good');
-        });
-      });
-
-      describe("Story Operation", function() {
-        var type = "/story_operation.json";
-
-        it("should validate a create operation", function() {
-          validate(version, type, 'operation-create');
-        });
-        it("should validate an update operation", function() {
-          validate(version, type, 'operation-update');
-        });
-        it("should validate a delete operation", function() {
-          validate(version, type, 'operation-delete');
-        });
-        it("should validate a publish-edition operation", function() {
-          validate(version, type, 'operation-publish-edition');
-        });
-        it("should validate an unpublish-edition operation", function() {
-          validate(version, type, 'operation-unpublish-edition');
-        });
-      });
-
-      describe("Story Elements ", function() {
-        var type_prefix = "/story_elements";
-
-        describe("Blockquote", function() {
-          it("should validate a well-formatted blockquote", function() {
-            validate(version, type_prefix + '/blockquote.json', 'bq-fixture-good');
+      describe(version, function() {
+        describe("Audio", function() {
+          it("should validate a well-formatted audio", function() {
+            validate(version, '/audio.json', 'audio-fixture-good');
           });
 
-          it("should not validate a non-blockquote", function() {
-            validate(version, type_prefix + '/blockquote.json', 'bq-fixture-bad', false);
+          it("should validate a well-formatted audio with settings", function() {
+            validate(version, '/audio.json', 'audio-fixture-good-settings');
+          });
+
+          it("should validate a well-formatted audio with custom fields", function() {
+            validate(version, '/audio.json', 'audio-fixture-good-custom');
+          });
+
+          it("should not validate a non-audio element", function() {
+            validate(version, '/audio.json', 'audio-fixture-bad', false);
+          });
+
+          it("should validate as content", function() {
+            validate(version, '/content.json', 'audio-fixture-good')
+            validate(version, '/content.json', 'audio-fixture-good-settings')
+            validate(version, '/content.json', 'audio-fixture-good-custom')
           });
         });
 
-        describe("Code", function() {
-          it("should validate a well-formatted code sample", function() {
-            validate(version, type_prefix + '/code.json', 'code-fixture-good');
+        describe("Video", function() {
+          it("should validate a well-formatted video", function() {
+            validate(version, '/video.json', 'video-fixture-good');
+            validate(version, '/video.json', 'video-fixture-nationals');
+          });
+
+          it("should not validate a non-well-formatted video", function() {
+            validate(version, '/video.json', 'video-fixture-bad', false);
+          });
+
+          it("should validate as content", function() {
+            validate(version, '/content.json', 'video-fixture-good');
           });
         });
 
-        describe("List", function() {
-          it("should validate a list of text elements", function() {
-            validate(version, type_prefix + '/list.json', 'ul-fixture-good');
-            validate(version, type_prefix + '/list_element.json', 'ul-fixture-good');
+        describe("Story", function() {
+          it("should validate a story", function() {
+            validate(version, '/story.json', 'story-fixture-good');
+            validate(version, '/story.json', 'story-fixture-tiny-house');
+            validate(version, '/story.json', 'story-fixture-references');
           });
 
-          it("should validate a nested list of text elements", function() {
-            validate(version, type_prefix + '/list.json', 'ul-fixture-good-nested');
-          });
-        });
-
-        describe("Oembed", function() {
-          it("should validate an oembed element", function() {
-            validate(version, type_prefix + '/oembed.json', 'oembed-fixture-good');
+          it("should validate a story with a content element with unknown properties", function() {
+            validate(version, '/story.json', 'story-fixture-good-mystery-element');
           });
 
-          it("should not validate a non-oembed", function() {
-            validate(version, type_prefix + '/oembed.json', 'oembed-fixture-bad', false);
-          });
-        });
-
-
-        describe("Text", function() {
-          it("should validate a text element", function() {
-            validate(version, type_prefix + '/text.json', 'text-fixture-good');
+          it("should not validate a story with unspecified properties", function() {
+            validate(version, '/story.json', 'story-fixture-bad-extra-properties', false);
           });
 
-          it("should validate a text element with channels", function() {
-            validate(version, type_prefix + '/text.json', 'text-fixture-good-channels');
+          it("should not validate a story with the wrong type", function() {
+            validate(version, '/story.json', 'story-fixture-bad-wrong-type', false);
           });
 
-          it("should not validate a non-text", function() {
-            validate(version, type_prefix + '/text.json', 'text-fixture-bad', false);
+          it("should not validate a story with the wrong version", function() {
+            validate(version, '/story.json', 'story-fixture-bad-wrong-version', false);
           });
 
-          it("should validate a text element with additional properties (0.5.1+)", function() {
-            if ('text-fixture-good-additional-properties' in fixtures) {
-              validate(version, type_prefix + '/text.json', 'text-fixture-good-additional-properties');
-            };
+          it("should not validate a story with bad taxonomy (0.5.3+)", function() {
+            if (_.has(fixtures, 'story-fixture-bad-tag-strings')) {
+              validate(version, '/story.json', 'story-fixture-bad-tag-strings', false);
+              validate(version, '/story.json', 'story-fixture-bad-sections-addl-properties', false);
+            }
           });
+
+          it("should validate as content", function() {
+            validate(version, '/content.json', 'story-fixture-good');
+            validate(version, '/content.json', 'story-fixture-tiny-house');
+            validate(version, '/content.json', 'story-fixture-references');
+          });
+
 
         });
 
-        describe("Raw Html", function() {
-          it("should validate a raw_html element", function() {
-            validate(version, type_prefix + '/raw_html.json', 'raw-html-fixture-good');
+        describe("Image", function() {
+          it("should validate a valid image", function() {
+            validate(version, '/image.json', 'image-fixture-good');
+          });
+          it("should validate an image with no height or width", function() {
+            validate(version, '/image.json', 'image-fixture-good-no-height-width');
           });
 
-          it("should not validate a non-raw_html", function() {
-            validate(version, type_prefix + '/raw_html.json', 'raw-html-fixture-bad', false);
-          });
-
-        });
-
-        describe("Header", function() {
-          it("should validate a header element", function() {
-            validate(version, type_prefix + '/header.json', 'header-fixture-good');
-          });
-
-          it("should not validate a header with 'text' property", function() {
-            validate(version, type_prefix + '/header.json', 'header-fixture-bad', false);
+          it("should validate as content", function() {
+            validate(version, '/content.json', 'image-fixture-good');
           });
         });
 
+        describe("Story Operation", function() {
+          var type = "/story_operation.json";
 
-        describe("Table", function() {
-          it("should validate a table element", function() {
-            validate(version, type_prefix + '/table.json', 'table-fixture-good');
+          it("should validate a create operation", function() {
+            validate(version, type, 'operation-create');
           });
-
-          it("should not validate a non-table", function() {
-            validate(version, type_prefix + '/table.json', 'raw-html-fixture-bad', false);
+          it("should validate an update operation", function() {
+            validate(version, type, 'operation-update');
+          });
+          it("should validate a delete operation", function() {
+            validate(version, type, 'operation-delete');
+          });
+          it("should validate a publish-edition operation", function() {
+            validate(version, type, 'operation-publish-edition');
+          });
+          it("should validate an unpublish-edition operation", function() {
+            validate(version, type, 'operation-unpublish-edition');
           });
         });
 
-        describe("...all together now", function() {
-          var valid_fixtures = [ "story-fixture-good", "story-fixture-references" ];
-          valid_fixtures.forEach(function(fixtureName) {
+        describe("Story Elements ", function() {
+          var type_prefix = "/story_elements";
 
-            it("should validate every content element in a valid story: " + fixtureName, function() {
-              var document = fixtures[fixtureName];
-
-              document.content_elements.forEach(function(element) {
-                element.type.should.equalOneOf([ "blockquote", "code", "list", "oembed", "raw_html", "table", "text", "reference", "image", "video", "audio", "story" ]);
-
-                switch(element.type) {
-                case "blockquote":
-                  validate(version, type_prefix + '/blockquote.json', element);
-                  break;
-                case "code":
-                  validate(version, type_prefix + '/code.json', element);
-                  break;
-                case "list":
-                  validate(version, type_prefix + '/list.json', element);
-                  break;
-                case "oembed":
-                  validate(version, type_prefix + '/oembed.json', element);
-                  break;
-                case "raw_html":
-                  validate(version, type_prefix + '/raw_html.json', element);
-                  break;
-                case "table":
-                  validate(version, type_prefix + '/table.json', element);
-                  break;
-                case "text":
-                  validate(version, type_prefix + '/text.json', element);
-                  break;
-                case "reference":
-                  validate(version, type_prefix + '/reference.json', element);
-                  break;
-                case "image":
-                  validate(version, '/image.json', element);
-                  break;
-                case "video":
-                  validate(version, '/video.json', element);
-                  break;
-                case "audio":
-                  validate(version, '/audio.json', element);
-                  break;
-                case "story":
-                  validate(version, '/story.json', element);
-                  break;
-                }
-              });
+          describe("Blockquote", function() {
+            it("should validate a well-formatted blockquote", function() {
+              validate(version, type_prefix + '/blockquote.json', 'bq-fixture-good');
             });
 
-            it("should validate every promo item in a valid story: " + fixtureName, function() {
-              var document = fixtures[fixtureName];
+            it("should not validate a non-blockquote", function() {
+              validate(version, type_prefix + '/blockquote.json', 'bq-fixture-bad', false);
+            });
+          });
 
-              Object.keys(document.promo_items).forEach(function(item_name) {
-                var item = document.promo_items[item_name];
-                item.type.should.equalOneOf([ "image", "video", "audio", "story" ]);
+          describe("Code", function() {
+            it("should validate a well-formatted code sample", function() {
+              validate(version, type_prefix + '/code.json', 'code-fixture-good');
+            });
+          });
 
-                switch(item.type) {
-                case "image":
-                  validate(version, '/image.json', item);
-                  break;
-                case "video":
-                  validate(version, '/video.json', item);
-                  break;
-                case "audio":
-                  validate(version, '/audio.json', item);
-                  break;
-                case "story":
-                  validate(version, '/story.json', item);
-                  break;
-                }
+          describe("List", function() {
+            it("should validate a list of text elements", function() {
+              validate(version, type_prefix + '/list.json', 'ul-fixture-good');
+              validate(version, type_prefix + '/list_element.json', 'ul-fixture-good');
+            });
+
+            it("should validate a nested list of text elements", function() {
+              validate(version, type_prefix + '/list.json', 'ul-fixture-good-nested');
+            });
+          });
+
+          describe("Oembed", function() {
+            it("should validate an oembed element", function() {
+              validate(version, type_prefix + '/oembed.json', 'oembed-fixture-good');
+            });
+
+            it("should not validate a non-oembed", function() {
+              validate(version, type_prefix + '/oembed.json', 'oembed-fixture-bad', false);
+            });
+          });
+
+
+          describe("Text", function() {
+            it("should validate a text element", function() {
+              validate(version, type_prefix + '/text.json', 'text-fixture-good');
+            });
+
+            it("should validate a text element with channels", function() {
+              validate(version, type_prefix + '/text.json', 'text-fixture-good-channels');
+            });
+
+            it("should not validate a non-text", function() {
+              validate(version, type_prefix + '/text.json', 'text-fixture-bad', false);
+            });
+
+            it("should validate a text element with additional properties (0.5.1+)", function() {
+              if ('text-fixture-good-additional-properties' in fixtures) {
+                validate(version, type_prefix + '/text.json', 'text-fixture-good-additional-properties');
+              };
+            });
+
+          });
+
+          describe("Raw Html", function() {
+            it("should validate a raw_html element", function() {
+              validate(version, type_prefix + '/raw_html.json', 'raw-html-fixture-good');
+            });
+
+            it("should not validate a non-raw_html", function() {
+              validate(version, type_prefix + '/raw_html.json', 'raw-html-fixture-bad', false);
+            });
+
+          });
+
+          describe("Header", function() {
+            it("should validate a header element", function() {
+              validate(version, type_prefix + '/header.json', 'header-fixture-good');
+            });
+
+            it("should not validate a header with 'text' property", function() {
+              validate(version, type_prefix + '/header.json', 'header-fixture-bad', false);
+            });
+          });
+
+
+          describe("Table", function() {
+            it("should validate a table element", function() {
+              validate(version, type_prefix + '/table.json', 'table-fixture-good');
+            });
+
+            it("should not validate a non-table", function() {
+              validate(version, type_prefix + '/table.json', 'raw-html-fixture-bad', false);
+            });
+          });
+
+          describe("...all together now", function() {
+            var valid_fixtures = [ "story-fixture-good", "story-fixture-references" ];
+            valid_fixtures.forEach(function(fixtureName) {
+
+              it("should validate every content element in a valid story: " + fixtureName, function() {
+                var document = fixtures[fixtureName];
+
+                document.content_elements.forEach(function(element) {
+                  element.type.should.equalOneOf([ "blockquote", "code", "list", "oembed", "raw_html", "table", "text", "reference", "image", "video", "audio", "story" ]);
+
+                  switch(element.type) {
+                  case "blockquote":
+                    validate(version, type_prefix + '/blockquote.json', element);
+                    break;
+                  case "code":
+                    validate(version, type_prefix + '/code.json', element);
+                    break;
+                  case "list":
+                    validate(version, type_prefix + '/list.json', element);
+                    break;
+                  case "oembed":
+                    validate(version, type_prefix + '/oembed.json', element);
+                    break;
+                  case "raw_html":
+                    validate(version, type_prefix + '/raw_html.json', element);
+                    break;
+                  case "table":
+                    validate(version, type_prefix + '/table.json', element);
+                    break;
+                  case "text":
+                    validate(version, type_prefix + '/text.json', element);
+                    break;
+                  case "reference":
+                    validate(version, type_prefix + '/reference.json', element);
+                    break;
+                  case "image":
+                    validate(version, '/image.json', element);
+                    break;
+                  case "video":
+                    validate(version, '/video.json', element);
+                    break;
+                  case "audio":
+                    validate(version, '/audio.json', element);
+                    break;
+                  case "story":
+                    validate(version, '/story.json', element);
+                    break;
+                  }
+                });
+              });
+
+              it("should validate every promo item in a valid story: " + fixtureName, function() {
+                var document = fixtures[fixtureName];
+
+                Object.keys(document.promo_items).forEach(function(item_name) {
+                  var item = document.promo_items[item_name];
+                  item.type.should.equalOneOf([ "image", "video", "audio", "story" ]);
+
+                  switch(item.type) {
+                  case "image":
+                    validate(version, '/image.json', item);
+                    break;
+                  case "video":
+                    validate(version, '/video.json', item);
+                    break;
+                  case "audio":
+                    validate(version, '/audio.json', item);
+                    break;
+                  case "story":
+                    validate(version, '/story.json', item);
+                    break;
+                  }
+                });
               });
             });
           });
         });
+
+        describe("Misc bug fixes", function() {
+
+          describe("Promo Items", function() {
+            it("should not validate without a 'basic' key (0.5.3+)", function() {
+              if('promo-items-bad-no-basic' in fixtures) {
+                validate(version, '/traits/trait_promo_items.json', 'promo-items-bad-no-basic', false);
+              }
+            });
+          });
+        });
+
       });
     });
   });

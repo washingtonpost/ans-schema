@@ -1,0 +1,166 @@
+{
+  "_id": "5592c09fe4b082c8417f3f72",
+  "type": "video",
+  "version": "0.5.3",
+  "created_date": "2015-06-25T09:50:50.52Z",
+  "location": "Washington, D.C.",
+  "geo": {
+    "latitude": 38.9047,
+    "longitude": -77.0164
+  },
+  "address": {
+    "locality": "Washington, D.C.",
+    "postal_code": "20002",
+    "country_name": "USA"
+  },
+  "copyright": "(c) 2015, The Washington Post, Inc",
+  "canonical_url": "http://www.washingtonpost.com/posttv/sports/nationals-hitting-a-stride-wizards-draft-oubre/2015/06/30/38a49c74-1f43-11e5-a135-935065bc30d0_video.html",
+  "taxonomy": {
+    "keywords": [
+      {
+        "keyword": "baseball"
+      },
+      {
+        "keyword": "nationals",
+        "frequency": 5,
+        "score": 0.09512891146702013
+      }
+    ]
+  },
+  "description": {
+    "basic": "Post Sports Live discusses the Nationals' successful run despite injuries and whether the Wizards gave up too much to draft Kelly Oubre Jr."
+  },
+  "duration": 1198000,
+  "transcript": "Lorem ipsum blah blah blah...",
+  "rating": "all_ages",
+  "video_type": "clip",
+  "youtube_content_id": "wWEwUpHvqJg",
+  "streams": [{
+    "height": 720,
+    "width": 1280,
+    "filesize": 327819354,
+    "audioCodec": "",
+    "video_codec": "",
+    "stream_type": "mp4",
+    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_1413917562171-fstwsn_t_1435680963322_1280_720_2000.mp4",
+    "bitrate": 2000,
+    "provider": "elastictranscoder"
+  }, {
+    "height": 360,
+    "width": 640,
+    "filesize": 111252083,
+    "audio_codec": "",
+    "video_codec": "",
+    "stream_type": "mp4",
+    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_1413917693028-uimk59_t_1435680963322_640_360_600.mp4",
+    "bitrate": 600,
+    "provider": "elastictranscoder"
+  }, {
+    "height": 360,
+    "width": 640,
+    "filesize": 75300016,
+    "audio_codec": "",
+    "video_codec": "",
+    "stream_type": "ts",
+    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_t_1435680963733_mobile.m3u8",
+    "bitrate": 300,
+    "provider": "elastictranscoder"
+  }, {
+    "height": 720,
+    "width": 1280,
+    "filesize": 352558468,
+    "audio_codec": "",
+    "video_codec": "",
+    "stream_type": "ts",
+    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_t_1435680963733_master.m3u8",
+    "bitrate": 2000,
+    "provider": "elastictranscoder"
+  }, {
+    "height": 180,
+    "width": 320,
+    "filesize": 52552204,
+    "audio_codec": "",
+    "video_codec": "",
+    "stream_type": "ts",
+    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_t_1435680963733_mobile.m3u8",
+    "bitrate": 160,
+    "provider": "elastictranscoder"
+  }, {
+    "height": 180,
+    "width": 320,
+    "filesize": 44471331,
+    "audio_codec": "",
+    "video_codec": "",
+    "stream_type": "mp4",
+    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_1413918388651-bhdhw9_t_1435680963322_320_180_160.mp4",
+    "bitrate": 160,
+    "provider": "elastictranscoder"
+  }, {
+    "height": 1080,
+    "width": 1920,
+    "filesize": 838371405,
+    "audio_codec": "",
+    "video_codec": "",
+    "stream_type": "mp4",
+    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_1413917648266-520npb_t_1435680963322_1920_1080_5400.mp4",
+    "bitrate": 5400,
+    "provider": "elastictranscoder"
+  }, {
+    "height": 360,
+    "width": 640,
+    "filesize": 124434944,
+    "audio_codec": "",
+    "video_codec": "",
+    "stream_type": "ts",
+    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_t_1435680963733_mobile.m3u8",
+    "bitrate": 600,
+    "provider": "elastictranscoder"
+  }, {
+    "height": 480,
+    "width": 854,
+    "filesize": 202124710,
+    "audio_codec": "",
+    "video_codec": "",
+    "stream_type": "mp4",
+    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_1413917780312-tgh3by_t_1435680963322_854_480_1200.mp4",
+    "bitrate": 1200,
+    "provider": "elastictranscoder"
+  }, {
+    "height": 1080,
+    "width": 1920,
+    "filesize": 838371405,
+    "audio_codec": "",
+    "video_codec": "",
+    "stream_type": "smil",
+    "url": "https://videos.posttv.com/washpost-production/Post%20Sports%20Live/The%20Washington%20Post/20150630/5592c09fe4b082c8417f3f72/5592c0a9e4b0ef3ccc0d9b6a_t_1435681422368.smil",
+    "bitrate": 5400,
+    "provider": "elastictranscoder"
+  }],
+  "promo_image": {
+    "_id": "5592c09fe4b082c8417f3f72",
+    "type": "image",
+    "version": "0.5.3",
+    "created_date": "2015-07-01T09:50:50.52Z",
+    "location": "Washington, D.C.",
+    "url": "http://s3.amazonaws.com/posttv-thumbnails-prod/thumbnails/5592c09fe4b082c8417f3f72/fullshow_0630.jpg",
+    "caption": "US Supreme Court Justice Antonin Scalia testifies before the Senate Judiciary Committee",
+    "width": 1920,
+    "height": 640
+  },
+  "subtitles": {
+    "confidence": 0.75130093,
+    "subtitlesUrls": [{
+      "format": "DFXP",
+      "url": "https://closedcaptions.posttv.com/06-30-2015/5592c09fe4b082c8417f3f72_5592c013e4b082c8417f3f71/t_1435683757146.dfxp"
+    }, {
+      "format": "RAW_TEXT",
+      "url": "https://closedcaptions.posttv.com/06-30-2015/5592c09fe4b082c8417f3f72_5592c013e4b082c8417f3f71/t_1435683757146.rawtext"
+    }, {
+      "format": "SRT",
+      "url": "https://closedcaptions.posttv.com/06-30-2015/5592c09fe4b082c8417f3f72_5592c013e4b082c8417f3f71/t_1435683757146.srt"
+    }, {
+      "format": "WEB_VTT",
+      "url": "https://closedcaptions.posttv.com/06-30-2015/5592c09fe4b082c8417f3f72_5592c013e4b082c8417f3f71/t_1435683757146.vtt"
+    }]
+  }
+}

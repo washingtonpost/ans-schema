@@ -1,13 +1,13 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/utils/section.json",
-  "title": "Section",
-  "description": "A hierarchical taxonomy section.",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/utils/site.json",
+  "title": "Site",
+  "description": "A hierarchical section or 'site' in a taxonomy.",
   "type": "object",
   "additionalProperties": false,
   "properties": {
     "type": {
-      "enum": "section"
+      "enum": [ "site" ]
     },
     "_id" : {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/traits/trait_id.json"
@@ -19,21 +19,21 @@
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/traits/trait_additional_properties.json"
     },
     "name": {
-      "description": "The name of this section",
+      "description": "The name of this site",
       "type": "string"
     },
     "description": {
-      "description": "A short description or tagline about this section",
+      "description": "A short description or tagline about this site",
       "type": "string"
     },
     "path": {
-      "description": "The url path to this section",
+      "description": "The url path to this site",
       "type": "string"
     },
     "parent_id": {
-      "description": "The id of this section's parent section, if any",
+      "description": "The id of this section's parent site, if any",
       "type": "string"
-    },
-    "required": [ "type", "version", "name" ]
-  }
+    }
+  },
+  "required": [ "type", "version", "name" ]
 }

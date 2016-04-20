@@ -1,0 +1,9 @@
+{
+  "type": "story_operation",
+  "operation": "delete",
+  "date": "2015-06-25T09:50:50.52Z",
+  "story_id": "f8f706f0-0acc-11e5-9e39-0db921c47b93",
+  "revision_id": "2A",
+  "branch": "default",
+  "version": "0.5.3"
+}
