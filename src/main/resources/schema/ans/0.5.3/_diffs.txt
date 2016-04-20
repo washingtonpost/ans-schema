@@ -1,0 +1,113 @@
+--- a/src/main/resources/schema/ans/0.5.2/utils/section.json
++++ /dev/null
+@@ -1,14 +0,0 @@
+-{
+-  "$schema": "http://json-schema.org/draft-04/schema#",
+-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.2/utils/section.json",
+-  "title": "Section",
+-  "description": "A hierarchical taxonomy section.",
+-  "type": "object",
+-  "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.2/content.json",
+-  "properties": {
+-    "parent": {
+-      "description": "The parent section, if any",
+-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.2/utils/section.json"
+-    }
+-  }
+-}
+diff --git a/src/main/resources/schema/ans/0.5.3/utils/site.json b/src/main/resources/schema/ans/0.5.3/utils/site.json
+new file mode 100644
+index 0000000..e48ad1f
+--- /dev/null
++++ b/src/main/resources/schema/ans/0.5.3/utils/site.json
+@@ -0,0 +1,39 @@
++{
++  "$schema": "http://json-schema.org/draft-04/schema#",
++  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/utils/site.json",
++  "title": "Site",
++  "description": "A hierarchical section or 'site' in a taxonomy.",
++  "type": "object",
++  "additionalProperties": false,
++  "properties": {
++    "type": {
++      "enum": [ "site" ]
++    },
++    "_id" : {
++      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/traits/trait_id.json"
++    },
++    "version": {
++      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/traits/trait_version.json"
++    },
++    "additional_properties": {
++      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/traits/trait_additional_properties.json"
++    },
++    "name": {
++      "description": "The name of this site",
++      "type": "string"
++    },
++    "description": {
++      "description": "A short description or tagline about this site",
++      "type": "string"
++    },
++    "path": {
++      "description": "The url path to this site",
++      "type": "string"
++    },
++    "parent_id": {
++      "description": "The id of this section's parent site, if any",
++      "type": "string"
++    }
++  },
++  "required": [ "type", "version", "name" ]
++}
+diff --git a/src/main/resources/schema/ans/0.5.2/traits/trait_promo_items.json b/src/main/resources/schema/ans/0.5.3/traits/trait_promo_items.json
+index 2eec59f..0244bb2 100644
+--- a/src/main/resources/schema/ans/0.5.2/traits/trait_promo_items.json
++++ b/src/main/resources/schema/ans/0.5.3/traits/trait_promo_items.json
+@@ -1,17 +1,18 @@
+ {
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/traits/trait_promo_items.json",
+   "title": "Promo Items",
+   "type": "object",
+   "description": "List of promotional content to use when highlighting the story.",
+   "properties": {
+     "basic": {
+       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/content.json"
+     }
+   },
+   "patternProperties": {
+     ".*": {
+       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/content.json"
+     }
+-  }
++  },
++  "required": [ "basic" ]
+ }
+ diff --git a/src/main/resources/schema/ans/0.5.2/traits/trait_taxonomy.json b/src/main/resources/schema/ans/0.5.3/traits/trait_taxonomy.json
+index 23ee95e..3e37498 100644
+--- a/src/main/resources/schema/ans/0.5.2/traits/trait_taxonomy.json
++++ b/src/main/resources/schema/ans/0.5.3/traits/trait_taxonomy.json
+@@ -9,20 +9,20 @@
+     "keywords": {
+       "type": "array",
+       "items": {
+         "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/utils/keyword.json"
+       },
+       "description": "A list of keywords."
+     },
+     "tags": {
+       "type": "array",
+       "items": {
+         "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/utils/tag.json"
+       }
+     },
+-    "sections": {
++    "sites": {
+       "type": "array",
+       "items": {
+-        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.2/utils/section.json"
++        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/utils/site.json"
+       }
+     },
+     "seo_keywords": {
