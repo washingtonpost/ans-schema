@@ -3,6 +3,7 @@
 ### 0.5.3 2016/4/20 ###
 
 * Removed `sections` from taxonomy and added `sites`. Sites define several fields and validate strictly - previously freeform sections will be upverted to sites as best as possible, stuffing unknown fields into `additional_properties`
+* Allows a `reference` to be used in the sites list
 * Fixed a bug where schema for `tags` appeared to allow objects but in fact only allowed strings. Tag objects with `_id` and `text` will now validate.
 * Made `basic` a required index in the `promo_items` dictionary
 

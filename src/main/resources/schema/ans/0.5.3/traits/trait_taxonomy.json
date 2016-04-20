@@ -22,7 +22,29 @@
     "sites": {
       "type": "array",
       "items": {
-        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/utils/site.json"
+        "oneOf": [
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/utils/site.json"
+          },
+          {
+            "allOf": [
+              {
+                "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/utils/reference.json"
+              },
+              {
+                "properties": {
+                  "referent": {
+                    "properties": {
+                      "type": {
+                        "enum": [ "site" ]
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
       }
     },
     "seo_keywords": {

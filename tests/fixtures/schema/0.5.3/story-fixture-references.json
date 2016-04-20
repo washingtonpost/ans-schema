@@ -85,6 +85,21 @@
         "score": 0.77,
         "frequency": 2
       }
+    ],
+    "sites": [
+      {
+        "type": "site",
+        "name": "Cool Site",
+        "version": "0.5.3"
+      },
+      {
+        "type": "reference",
+        "referent": {
+          "id": "78",
+          "provider": "https://sites.arcpublishing.com/api",
+          "type": "site"
+        }
+      }
     ]
   },
   "publish_date": "2015-06-24T09:49:00.10Z",
