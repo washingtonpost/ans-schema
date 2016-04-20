@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/utils/section.json",
+  "title": "Section",
+  "description": "A hierarchical taxonomy section.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "enum": "section"
+    },
+    "_id" : {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/traits/trait_id.json"
+    },
+    "version": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/traits/trait_version.json"
+    },
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/traits/trait_additional_properties.json"
+    },
+    "name": {
+      "description": "The name of this section",
+      "type": "string"
+    },
+    "description": {
+      "description": "A short description or tagline about this section",
+      "type": "string"
+    },
+    "path": {
+      "description": "The url path to this section",
+      "type": "string"
+    },
+    "parent_id": {
+      "description": "The id of this section's parent section, if any",
+      "type": "string"
+    },
+    "required": [ "type", "version", "name" ]
+  }
+}
