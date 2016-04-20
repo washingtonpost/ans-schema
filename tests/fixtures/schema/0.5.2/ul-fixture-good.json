@@ -1,0 +1,22 @@
+{
+  "_id": "49876543210",
+  "type": "list",
+  "list_type": "unordered",
+  "items": [
+    {
+      "_id": "1",
+      "type" : "text",
+      "content" : "Foo"
+    },
+    {
+      "_id": "2",
+      "type": "text",
+      "content" : "Bar"
+    },
+    {
+      "_id": "3",
+      "type": "text",
+      "content" : "Baz"
+    }
+  ]
+}

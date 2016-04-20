@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.2/traits/trait_owner.json",
+  "title": "Owner information ",
+  "description": "Trait that applies a owner information to a document or resource.",
+  "type": "object",
+  "properties": {
+    "owner": {
+      "description": "Information about the owner of this content.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "The unique identifier for this owner.",
+          "type": "string"
+        }
+      }
+    }
+  }
+}

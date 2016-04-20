@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.2/traits/trait_content_elements.json",
+  "title": "A collection of content.",
+  "description": "Holds attributes of an ANS collection - a common parent to story and gallery objects.",
+  "type": "array",
+  "items": {
+    "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.2/utils/content_element.json"
+  }
+}
