@@ -1,0 +1,429 @@
+{
+  "_id": "unique ANS id",
+  "type": "story",
+  "version": "0.5.0",
+  "content_elements": [
+    {
+      "_id": "2EV52ZJLDBA6PLZWX6J2QADVMQ",
+      "type": "table",
+      "header": [
+        {
+          "_id": "IYGVM6KZTNG5HLLULUE7KGGGOM",
+          "type": "text",
+          "content": "Name"
+        },
+        {
+          "_id": "NN3SIRLANRDWLCMZGHCWJPRDCQ",
+          "type": "text",
+          "content": "Id"
+        },
+        {
+          "_id": "SH2VR2JQ3ZAKDD4PADH7B7GSMY",
+          "type": "text",
+          "content": "Type"
+        },
+        {
+          "_id": "BX3SS5R5XRGWFDWLJ7CIWRREBE",
+          "type": "text",
+          "content": "Required"
+        },
+        {
+          "_id": "FVQYM2GZLFEP3IYUQ4QIRCUB4A",
+          "type": "text",
+          "content": "Default Value"
+        },
+        {
+          "_id": "MAWEW7A4HRBKXAVILVWLZP4SRI",
+          "type": "text",
+          "content": "Comment"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "_id": "DMHS7HR6ONDIJFDAKJZ6GFCLK4",
+            "type": "text",
+            "content": "Breaking News Headline"
+          },
+          {
+            "_id": "C3OF5MZTPFBVVBHWNWEWZNF5KA",
+            "type": "text",
+            "content": "breakingHed"
+          },
+          {
+            "_id": "4IBOIKTZVREPRH67X5DC63N2QY",
+            "type": "text",
+            "content": "text"
+          },
+          {
+            "_id": "PYZ6PRTQEBFLNBQGP72XIZH4LM",
+            "type": "text",
+            "content": "no"
+          },
+          {
+            "_id": "CNWNJIXNONH7NFGIX3P35RQO5E",
+            "type": "text",
+            "content": ""
+          },
+          {
+            "_id": "OPFLOZ5XLZFNNJSJDTH37RV5QA",
+            "type": "text",
+            "content": ""
+          }
+        ],
+        [
+          {
+            "_id": "X2DWOIA3XJEQ5GU4SCITJSNNR4",
+            "type": "text",
+            "content": "Breaking News URL"
+          },
+          {
+            "_id": "36LEKBR6M5HJBHWNBEOJBZZXQU",
+            "type": "text",
+            "content": "breakingUrl"
+          },
+          {
+            "_id": "GC275VS5OZGZ3KBP4SRUSVDYIY",
+            "type": "text",
+            "content": "text"
+          },
+          {
+            "_id": "AVQHIFO3FRAHVLB3AVABG6ZLA4",
+            "type": "text",
+            "content": "no"
+          },
+          {
+            "_id": "TC5HUMTNQRG5RJ6HEMFCXCBK6E",
+            "type": "text",
+            "content": ""
+          },
+          {
+            "_id": "5J7JBD2GQNDHHMJZMRBYZ7W2QA",
+            "type": "text",
+            "content": ""
+          }
+        ],
+        [
+          {
+            "_id": "637SEZWMBBCOBHSZ726TXOEEIE",
+            "type": "text",
+            "content": "Site Title"
+          },
+          {
+            "_id": "PS2GYF5X5VFH7EYXKUJMMDSN54",
+            "type": "text",
+            "content": "siteTitle"
+          },
+          {
+            "_id": "FDR4G7AND5GNJPILJZFVVRSILY",
+            "type": "text",
+            "content": "text"
+          },
+          {
+            "_id": "V33BQ2DREJFDHEFUEDLK4PUI64",
+            "type": "text",
+            "content": "yes"
+          },
+          {
+            "_id": "QT4HAMQLZZA3FORCA56GGKNW4M",
+            "type": "text",
+            "content": "The News"
+          },
+          {
+            "_id": "H7QFQE5BGVCZRKLDP6VKHNJTXI",
+            "type": "text",
+            "content": ""
+          }
+        ],
+        [
+          {
+            "_id": "JZEKDLKWB5C7XPV2QAN3GJ55EU",
+            "type": "text",
+            "content": "Logo"
+          },
+          {
+            "_id": "AM22APNNEZHSVKF2S7PLVB2H5E",
+            "type": "text",
+            "content": "centerImg"
+          },
+          {
+            "_id": "DG6QTIS43VCTDHTQR4EPKJSPOY",
+            "type": "text",
+            "content": "text"
+          },
+          {
+            "_id": "XEJHBJRZSFCPVL5ZPF2AQH2JSE",
+            "type": "text",
+            "content": "no"
+          },
+          {
+            "_id": "WEE5U3R3AZCZ5COLGY4NTNFGQM",
+            "type": "text",
+            "content": ""
+          },
+          {
+            "_id": "ETXB3MWE7BHHTNDW7J4AW6T5FY",
+            "type": "text",
+            "content": "Main site logo that appears in the masthead."
+          }
+        ],
+        [
+          {
+            "_id": "P55S65WMEBB4DJQH3VAC5SB5DE",
+            "type": "text",
+            "content": "Organization Name (Text)"
+          },
+          {
+            "_id": "FQYBFDXZGVFRDP5YHI6E3TWJ6E",
+            "type": "text",
+            "content": "orgName"
+          },
+          {
+            "_id": "3S7FSPYMGNE73ODLQSMBUROJ6I",
+            "type": "text",
+            "content": "text"
+          },
+          {
+            "_id": "S26QDN46UBDNNFQBLFD3TJZ2N4",
+            "type": "text",
+            "content": "no"
+          },
+          {
+            "_id": "HJUMGALERRAZBAILP675STCAEY",
+            "type": "text",
+            "content": ""
+          },
+          {
+            "_id": "L3IN3JGT5ZB5VMTG3D52FDL7KA",
+            "type": "text",
+            "content": ""
+          }
+        ],
+        [
+          {
+            "_id": "NZN7MJQXJJCOJGB3VX7VNCJORE",
+            "type": "text",
+            "content": "Small Header Image"
+          },
+          {
+            "_id": "OV3TYEODVRG5VOIIY4V6YRB4QU",
+            "type": "text",
+            "content": "headerImg"
+          },
+          {
+            "_id": "WBN2RCL5LFF2HDVIFXAQYJHJYM",
+            "type": "text",
+            "content": "text"
+          },
+          {
+            "_id": "BFMAO33H2FGZZODKZKK5DVYMOY",
+            "type": "text",
+            "content": "no"
+          },
+          {
+            "_id": "7VMO4JT6KJE2NKWU2WAWTLKBYQ",
+            "type": "text",
+            "content": ""
+          },
+          {
+            "_id": "WTZBM7V3WVEUZHZ7ICNDAO2OMM",
+            "type": "text",
+            "content": "Small image that can appear on the right or left (by setting Social Position, below) of the masthead."
+          }
+        ],
+        [
+          {
+            "_id": "RUQFC7QVGREXBAQDZKWTS65DQI",
+            "type": "text",
+            "content": "Scroll/Mobile Logo"
+          },
+          {
+            "_id": "I2V5EUMUMNASVJCHJI67OTDFMY",
+            "type": "text",
+            "content": "leftAlt"
+          },
+          {
+            "_id": "RDRQ7KA5DRDVRDEYSNHE5EJERU",
+            "type": "text",
+            "content": "text"
+          },
+          {
+            "_id": "TJPSDEUHGVGGRMJDWOJ64UUUTI",
+            "type": "text",
+            "content": "no"
+          },
+          {
+            "_id": "JPU2JTOVSZEGTEBVYHKQDGMTDU",
+            "type": "text",
+            "content": ""
+          },
+          {
+            "_id": "A3W7HCJ35VA23OFB6L3RE354HI",
+            "type": "text",
+            "content": "Smaller organization logo that appears when the user scrolls up."
+          }
+        ],
+        [
+          {
+            "_id": "FU52XFHBJFAU3PY5EYJPMI2OIU",
+            "type": "text",
+            "content": "Swap social button position"
+          },
+          {
+            "_id": "63EMW3N5UVET7AOU7WOXBUWWC4",
+            "type": "text",
+            "content": "socialPosition"
+          },
+          {
+            "_id": "CVHYOAWV7RFXXNX7U6UKKBUEPE",
+            "type": "text",
+            "content": "socialLeft, socialRight"
+          },
+          {
+            "_id": "X6JEGBCMLVG7DBPQULLOQHBRHY",
+            "type": "text",
+            "content": "yes"
+          },
+          {
+            "_id": "YK46MPXR3RB3XOMOL7WMWP235I",
+            "type": "text",
+            "content": "socialRight"
+          },
+          {
+            "_id": "JJIJZRDYFZB5DLNIUQ7KJPAI5U",
+            "type": "text",
+            "content": "Typically the social buttons appear on the right side of the header, but you can swap them to the left here. The small header image will then appear on the right."
+          }
+        ],
+        [
+          {
+            "_id": "4AOMCZIOPVG6JGU3375EWXMWNI",
+            "type": "text",
+            "content": "Facebook"
+          },
+          {
+            "_id": "DA3XV5DTSZAKNAI35PICTEQR3Q",
+            "type": "text",
+            "content": "facebook"
+          },
+          {
+            "_id": "XMIIBWLZPVBGDLKKJD3T5SKT7I",
+            "type": "text",
+            "content": "text"
+          },
+          {
+            "_id": "YDW7H6YGPRHFHAOOHVSTKMJ23Y",
+            "type": "text",
+            "content": "no"
+          },
+          {
+            "_id": "LALHQTW4IBDUPCFZF4P6TP7YGA",
+            "type": "text",
+            "content": "https://facebook.com"
+          },
+          {
+            "_id": "DPUMFSMXHZDM3JYMXEQDWJPBRE",
+            "type": "text",
+            "content": ""
+          }
+        ],
+        [
+          {
+            "_id": "MQBKK2TFWVBB5F4OKYW4OJ5W6M",
+            "type": "text",
+            "content": "Twitter"
+          },
+          {
+            "_id": "XCH4AYEDGBFMRLAJQHSXC7R2DY",
+            "type": "text",
+            "content": "twitter"
+          },
+          {
+            "_id": "7FPPB56P3RARLODOKTCC2U3UBU",
+            "type": "text",
+            "content": "text"
+          },
+          {
+            "_id": "TNCMMZRSAVHV3IEHBH3YIDFWZA",
+            "type": "text",
+            "content": "no"
+          },
+          {
+            "_id": "TIC2DTAWAFETPJXRPS7LI6VYLY",
+            "type": "text",
+            "content": "https://twitter.com"
+          },
+          {
+            "_id": "WKQJPOMHAJCVZH3T7HAP5FYSVA",
+            "type": "text",
+            "content": ""
+          }
+        ],
+        [
+          {
+            "_id": "X5FKDNDHVJGPRGGPOUWUOLETBY",
+            "type": "text",
+            "content": "Instagram"
+          },
+          {
+            "_id": "YVDQZTY6HNGSHB4OODYR345RYU",
+            "type": "text",
+            "content": "instragram"
+          },
+          {
+            "_id": "QM42QV3RO5BMXGXV6JM6JCZB3U",
+            "type": "text",
+            "content": "text"
+          },
+          {
+            "_id": "WO5ZOISWM5D4TL24N3P2RECOAE",
+            "type": "text",
+            "content": "no"
+          },
+          {
+            "_id": "5J74LBEU2NFRDOFRMMXOOXJYAQ",
+            "type": "text",
+            "content": "https://instragram.com"
+          },
+          {
+            "_id": "5BHYEURPFVGGNOWTJIED453CSA",
+            "type": "text",
+            "content": ""
+          }
+        ],
+        [
+          {
+            "_id": "A75FNQKNR5CLFFYV4XVH47KPJY",
+            "type": "text",
+            "content": "Youtube"
+          },
+          {
+            "_id": "KLAEIEY56JH6FENV7K5ESM42JM",
+            "type": "text",
+            "content": "youtube"
+          },
+          {
+            "_id": "7IZ7VV5ADRAVHFEV34GE4VKHQE",
+            "type": "text",
+            "content": "text"
+          },
+          {
+            "_id": "2PWI2MOU4VFVTGFMS6ZAIJCZY4",
+            "type": "text",
+            "content": "no"
+          },
+          {
+            "_id": "BNPDFXHAUJHX5MWXUNXZ3XKP6M",
+            "type": "text",
+            "content": "https://youtube.com"
+          },
+          {
+            "_id": "ZFZQQOQLKNB6XOFM3AJE2BRA2A",
+            "type": "text",
+            "content": ""
+          }
+        ]
+      ]
+    }
+  ]
+}
