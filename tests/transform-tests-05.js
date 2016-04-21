@@ -124,12 +124,12 @@ describe("Transformations: ", function() {
 
 
   describe("Story ", function() {
-    var fixture_names = ['story-fixture-good', 'story-fixture-references', 'story-fixture-tiny-house'];
+    var fixture_names = ['story-fixture-good', 'story-fixture-references', 'story-fixture-tiny-house', 'story-fixture-table'];
 
     _.forIn(transforms.versions['0.5'], function(transformer, version) {
       it("can transform from " + version, function() {
         _.forEach(fixture_names, function(value, key) {
-          transformer(fixtures[version][value]);
+          var x = transformer(fixtures[version][value]);
         });
       });
     });
