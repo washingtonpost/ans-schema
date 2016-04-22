@@ -81,7 +81,6 @@ describe("Transformations: ", function() {
     });
   });
 
-
   describe("Image ", function() {
     var fixture_names = ['image-fixture-good', 'image-fixture-good-no-height-width'];
 
@@ -142,7 +141,7 @@ describe("Transformations: ", function() {
     });
   });
 
-  describe("0.5.0: misspelled additional properties", function() {
+  describe("0.5.0 to 0.5.1: misspelled additional properties", function() {
 
     var getResult = function() { return transforms.upvert(fixtures['0.5.0']['story-fixture-misspelled-additional-properties'], '0.5.1') };
 
@@ -195,5 +194,101 @@ describe("Transformations: ", function() {
       result.taxonomy.seo_keywords[0].should.be.eql("one");
     });
 
- });
+  });
+
+
+  describe("0.5.2 to 0.5.3: ", function() {
+
+    var getResult = function() { return transforms.upvert(fixtures['0.5.2']['story-fixture-taxonomy-bugs'], '0.5.3') };
+
+
+    describe("sections", function() {
+
+      it("should have type, version, and name", function() {
+        var result = getResult();
+        var site0 = result.taxonomy.sites[0];
+        site0.should.have.property("type");
+        site0.should.have.property("version");
+        site0.should.have.property("name");
+      });
+
+      it("should have type == 'site'", function() {
+        var result = getResult();
+        var site0 = result.taxonomy.sites[0];
+        site0.type.should.be.eql("site");
+      });
+
+      it("should not have extraneous properties", function() {
+        var result = getResult();
+        var site0 = result.taxonomy.sites[0];
+
+        site0.should.not.have.property("foo");
+        site0.should.not.have.property("other");
+        site0.should.have.property("additional_properties");
+        site0.additional_properties.should.have.property("foo");
+        site0.additional_properties.foo.should.be.eql("bar");
+      });
+
+      it("should migrate parent to parent_id", function() {
+        var result = getResult();
+        var site1 = result.taxonomy.sites[1];
+        site1.should.have.property("parent_id");
+        var old_parent = fixtures['0.5.2']['story-fixture-taxonomy-bugs'].taxonomy.sections[1].parent;
+
+        site1.parent_id.should.be.eql(old_parent);
+        site1.should.not.have.property("parent");
+      });
+
+      it("should be applied recursively", function() {
+        var result = getResult();
+        var site0 = result.content_elements[1].taxonomy.sites[0];
+        site0.should.have.property("type");
+      });
+
+    });
+
+    describe("tags", function() {
+
+      it("should be objects", function() {
+        var result = getResult();
+        result.taxonomy.tags[0].should.be.Object();
+      });
+
+      it("should have name and _id set to string", function() {
+        var result = getResult();
+        result.taxonomy.tags[0]._id.should.be.eql("alpha");
+        result.taxonomy.tags[0].text.should.be.eql("alpha");
+      });
+
+      it("should be applied recusively", function() {
+        var result = getResult();
+        var tag0 = result.content_elements[1].taxonomy.tags[0];
+        tag0.should.be.Object();
+        tag0.text.should.be.eql("delta");
+      });
+
+    });
+
+
+    describe("promo items", function() {
+
+      it("should have items in it or be absent", function() {
+        var result = transforms.upvert(fixtures['0.5.2']['story-fixture-promo-items-empty'], '0.5.3');
+        result.should.not.have.property("promo_items");
+      });
+
+      it("should have a 'basic' item", function() {
+        var result = transforms.upvert(fixtures['0.5.2']['story-fixture-promo-items-no-basic'], '0.5.3');
+        result.should.have.property("promo_items");
+        _.keys(result.promo_items).length.should.be.eql(2);
+        result.promo_items.should.have.property("secondary");
+        result.promo_items.should.have.property("basic");
+        result.promo_items.basic.should.be.eql(result.promo_items.secondary);
+      });
+
+    });
+
+
+  });
+
 });

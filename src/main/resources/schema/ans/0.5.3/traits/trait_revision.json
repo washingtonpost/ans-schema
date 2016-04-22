@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/traits/trait_revision.json",
+  "title": "Revision",
+  "description": "Revision information for this object",
+  "type": "object",
+  "properties": {
+    "revision_id": {
+      "type": "string"
+    },
+    "parent_id": {
+      "type": "string"
+    },
+    "branch": {
+      "type": "string"
+    },
+    "editions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

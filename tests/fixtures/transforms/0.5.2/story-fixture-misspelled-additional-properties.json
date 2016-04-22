@@ -1,0 +1,52 @@
+{
+  "type": "story",
+  "version": "0.5.2",
+  "content_elements": [
+    {
+      "type": "text",
+      "content": "Content",
+      "additonal_properties": {
+        "was": "misspelled",
+        "and": "should be corrected",
+        "after": "upverting",
+        "to": "0.5.2"
+      }
+    },{
+      "type": "header",
+      "content": "Content",
+      "additonal_properties": {
+        "was": "misspelled",
+        "and": "should be corrected",
+        "after": "upverting",
+        "to": "0.5.2"
+      }
+    },
+    {
+      "type": "image",
+      "version": "0.5.2",
+      "additional_properties": {
+        "was": "correctly spelled"
+      }
+    },
+    {
+      "type": "story",
+      "version": "0.5.2",
+      "content_elements": [{
+        "type": "text",
+        "content": "text",
+        "additonal_properties": {
+          "was": "misspelled"
+        }
+      }]
+    }
+  ],
+  "additional_properties": {
+    "is": "correctly spelled",
+    "additonal_properties": {
+      "is": "permanently misspelled"
+    }
+  },
+  "taxonomy": {
+    "seo_keywords": [ "one", "two" ]
+  }
+}

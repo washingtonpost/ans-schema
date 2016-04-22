@@ -1,11 +1,22 @@
 # ANS Release Notes
 
-## 0.5.1 2016/4/14 ##
+### 0.5.3 2016/4/20 ###
 
-* Correct misspelled "additonal_properties" in text, header elements
+* Removed `sections` from taxonomy and added `sites`. Sites define several fields and validate strictly - previously freeform sections will be upverted to sites as best as possible, stuffing unknown fields into `additional_properties`
+* Allows a `reference` to be used in the sites list
+* Fixed a bug where schema for `tags` appeared to allow objects but in fact only allowed strings. Tag objects with `_id` and `text` will now validate.
+* Made `basic` a required index in the `promo_items` dictionary
+
+### 0.5.2 2016/4/18 ###
+
+* Added `additional_properties` to image.json
+
+### 0.5.1 2016/4/14 ###
+
+* Correct misspelled `additonal_properties` in text, header elements
 
 
-## 0.5.0 2016/4/13 ##
+### 0.5.0 2016/4/13 ###
 
 * camelCase and hypen-ated variable names everywhere converted to under_score
 * `author.description` renamed `author.bio`
@@ -29,21 +40,21 @@
 * Removed Java POJOs to focus on schema
 * Re-factored schema to better distinguish content types, content elements, and summaries
 
-#### 0.3.6 2016/1/15 ####
+### 0.3.6 2016/1/15 ###
 
 * Added code sample, table, and header content elements
 * Made "text" a require field for text objects
 
-#### 0.3.5 2015/11/18 ####
+### 0.3.5 2015/11/18 ###
 
 * Added a StorySummary object to offer a lower-weight option for Story transmission over the wire
 * Made sure Content.getLastUpdatedDateAsInstant and .getCreatedDateAsInstant were null safe if their underlying Strings were null/empty
 
-#### 0.3.4 2015/11/23 ####
+### 0.3.4 2015/11/23 ###
 
 * Added "channel" attribute to allow for per-channel variation of content elements
 
-#### 0.3.3 2015/11/16 ####
+### 0.3.3 2015/11/16 ###
 
 * Adding raw_html type
 * Adding blockquote and list types
@@ -52,17 +63,17 @@
 * Added Audio type
 * Added Oembed type
 
-#### 0.3.2 2015/10/08 ####
+### 0.3.2 2015/10/08 ###
 
 * Really fixing bug where the "type" attribute was being deserialized twice. The fix put in the 0.3.1 release technically works, but is incompatible with some other Jackson/Mongo frameworks being used "downstream" of this artifact.
 * Renaming Video.type to Video.videoType and VideoStream.type to VideoStream.streamType to avoid ambiguity about what "Video.type" refers to (answer: it should be the ANS type of the Video object)
 
-#### 0.3.1 2015/09/25 ####
+### 0.3.1 2015/09/25 ###
 
 * Fix bug where the "type" attribute was being deserialized into JSON twice.
 * Adding a small ANSVersion enumeration class to standardize on what people should enter in the ANS.version field
 
-#### 0.3.0 2015/09/14 ####
+### 0.3.0 2015/09/14 ###
 
 * Under development
 * Provides a new ANS top-level class/schema to enable Story objects to refer to Lists<ANS> instead of just an HTML String blob
