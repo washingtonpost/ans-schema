@@ -210,6 +210,7 @@ describe("Transformations: ", function() {
         site0.should.have.property("type");
         site0.should.have.property("version");
         site0.should.have.property("name");
+        site0.should.have.property("_id");
       });
 
       it("should have type == 'site'", function() {
