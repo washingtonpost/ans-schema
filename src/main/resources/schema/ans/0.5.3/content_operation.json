@@ -28,6 +28,14 @@
         "type": "string",
         "description": "The id of the organization"
       },
+      "branch": {
+        "type": "string",
+        "description": "The name of the branch within Story API that this operation occurs on, if any"
+      },
+      "published": {
+        "type": "boolean",
+        "description": "Identifies this item as published or not"
+      },
       "version": {
         "type": "string",
         "description": "The version of ANS this item is written in"
