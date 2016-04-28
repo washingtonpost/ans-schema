@@ -1,3 +1,5 @@
+'use strict';
+
 var should = require('should'),
     dir = require('node-dir'),
     path = require('path'),
@@ -289,6 +291,65 @@ describe("Transformations: ", function() {
 
     });
 
+
+  });
+
+  describe("0.5.3 to 0.5.4", function() {
+
+    describe("planning traits", function() {
+      it("should move extra properties into additional_properties", function() {
+        var result = transforms.upvert(fixtures['0.5.3']['story-fixture-good-planning'], '0.5.4');
+        result.should.have.property("planning");
+        result.planning.should.have.property("additional_properties");
+        result.planning.additional_properties.foo.should.eql("bar");
+        result.planning.additional_properties.scheduling.foo.should.eql("ack");
+        result.planning.additional_properties.story_length.baz.should.eql("bat");
+      });
+
+      it("should have only one level of 'planning' objects", function() {
+        var result = transforms.upvert(fixtures['0.5.3']['story-fixture-good-planning'], '0.5.4');
+        result.planning.should.not.have.property("planning");
+        result.planning.should.have.property("scheduling");
+        result.planning.should.have.property("story_length");
+        result.planning.scheduling.planned_publish_date.should.eql("2015-06-24T09:49:00.10Z");
+      });
+
+      it("should have 'planned_publish_date' instead of 'planned_published_date'", function() {
+        var result = transforms.upvert(fixtures['0.5.3']['story-fixture-good-planning'], '0.5.4');
+        result.planning.scheduling.should.not.have.property("planned_published_date");
+        result.planning.scheduling.should.have.property("planned_publish_date");
+        result.planning.scheduling.planned_publish_date.should.eql("2015-06-24T09:49:00.10Z");
+      });
+
+      it("should validate as a 'planning' trait", function() {
+        var result = transforms.upvert(fixtures['0.5.3']['story-fixture-good-planning'], '0.5.4');
+        validate('0.5.4/traits/trait_planning.json', result.planning);
+      });
+    });
+
+    describe("references", function() {
+      it("should move extra properties into additional_properties", function() {
+        var result = transforms.upvert(fixtures['0.5.3']['story-fixture-good-references-2'], '0.5.4');
+        result.content_elements[0].should.have.property("additional_properties");
+        result.content_elements[0].additional_properties.foo.should.eql("bar");
+        result.content_elements[0].additional_properties.three.should.eql("four");
+        result.content_elements[0].additional_properties.additional_properties.one.should.eql("two");
+
+      });
+
+      it("should not alter references with no extraneous properties", function() {
+        var result = transforms.upvert(fixtures['0.5.3']['story-fixture-good-references-3'], '0.5.4');
+        result.content_elements[0].should.not.have.property('additional_properties');
+      });
+
+      it("should validate as 'reference'", function() {
+        var result = transforms.upvert(fixtures['0.5.3']['story-fixture-good-references-2'], '0.5.4');
+        validate('0.5.4/utils/reference.json', result.content_elements[0]);
+
+        result = transforms.upvert(fixtures['0.5.3']['story-fixture-good-references-3'], '0.5.4');
+        validate('0.5.4/utils/reference.json', result.content_elements[0]);
+      });
+    });
 
   });
 

@@ -1,0 +1,6 @@
+{
+  "_id": "0987654321",
+  "type": "text",
+  "content": "<i>Here's my text</i>",
+  "channels": ["web", "ios", "android"]
+}

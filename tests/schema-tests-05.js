@@ -14,7 +14,7 @@ var loadedSchemas = {};
 var ajv = new Ajv({allErrors:true});
 // var tv4 = require('tv4');
 
-var test_versions = [ "0.5.0", "0.5.1", "0.5.2", "0.5.3" ];
+var test_versions = [ "0.5.0", "0.5.1", "0.5.2", "0.5.3", "0.5.4" ];
 
 var json_schema = {
     "id": "http://json-schema.org/draft-04/schema#",
@@ -562,6 +562,26 @@ describe("Schema: ", function() {
           });
           it("should validate an unpublish-edition operation", function() {
             validate(version, type, 'operation-unpublish-edition');
+          });
+        });
+
+        describe("Reference", function() {
+          it("should validate a reference", function() {
+            validate(version, '/utils/reference.json', 'reference-fixture-good');
+          });
+
+          it("should not validate a reference with additional properties (0.5.4+)", function() {
+            if (_.has(fixtures, 'reference-fixture-bad-addl-props')) {
+              //console.log("Found in " + version);
+              validate(version, '/utils/reference.json', 'reference-fixture-bad-addl-props', false);
+            }
+          });
+
+          it("should not validate a reference with a referent with additional properties (0.5.4+)", function() {
+            if (_.has(fixtures, 'reference-fixture-bad-more-addl-props')) {
+              //console.log("Found in " + version);
+              validate(version, '/utils/reference.json', 'reference-fixture-bad-more-addl-props', false);
+            }
           });
         });
 

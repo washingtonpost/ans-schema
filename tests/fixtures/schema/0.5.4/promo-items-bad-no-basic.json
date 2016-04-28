@@ -1,0 +1,9 @@
+{
+  "secondary_promo_item": {
+    "type": "story",
+    "version": "0.5.4",
+    "headlines": {
+      "basic": "A very basic story"
+    }
+  }
+}
