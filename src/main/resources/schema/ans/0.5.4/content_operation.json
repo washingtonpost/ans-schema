@@ -28,13 +28,21 @@
         "type": "string",
         "description": "The id of the organization"
       },
+      "branch": {
+        "type": "string",
+        "description": "The name of the branch within Story API that this operation occurs on, if any"
+      },
+      "published": {
+        "type": "boolean",
+        "description": "Identifies this item as published or not"
+      },
       "version": {
         "type": "string",
         "description": "The version of ANS this item is written in"
       },
       "body": {
         "description": "The object being inserted/updated/deleted",
-        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.4/story.json"
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/story.json"
       }
     },
     "required": [ "type", "operation", "id", "organization_id" ]

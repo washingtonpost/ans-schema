@@ -34,7 +34,7 @@
       },
       "body": {
         "description": "The image being inserted/updated/deleted",
-        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.4/image.json"
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/image.json"
       }
     },
     "required": [ "type", "operation", "_id", "organization_id" ]
