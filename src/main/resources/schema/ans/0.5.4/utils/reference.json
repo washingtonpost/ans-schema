@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.4/utils/reference.json",
+  "title": "Representation of a normalized element",
+  "description": "This represents a reference to external content that should be denormalized",
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [ "reference" ]
+    },
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.4/traits/trait_additional_properties.json"
+    },
+    "referent": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "description": "The ANS type that the provider should return.",
+          "type": "string"
+        },
+        "service": {
+          "description": "The type of interaction the provider expects. E.g., 'oembed'",
+          "type": "string"
+        },
+        "id" : {
+          "description": "The id passed to the provider to retrieve an ANS document",
+          "type": "string"
+        },
+        "provider": {
+          "description": "A URL that can resolve the id into an ANS element",
+          "type": "string"
+        }
+      },
+      "required": [ "provider", "id" ]
+    }
+  },
+  "required": [ "type", "referent" ]
+}

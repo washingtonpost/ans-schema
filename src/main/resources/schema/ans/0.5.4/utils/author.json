@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.4/utils/author.json",
+  "title": "An author of a piece of content.",
+  "description": "Models attribution to an individual or group for contribution towards some content item.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "_id": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.4/traits/trait_id.json"
+    },
+    "type": {
+      "description": "Indicates that this is an author",
+      "type": "string",
+      "enum": [ "author" ]
+    },
+    "name": {
+      "description": "The name of contributor.",
+      "type": "string"
+    },
+    "org": {
+      "description": "The name of the organization the contributor belongs to.",
+      "type": "string"
+    },
+    "image": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.4/image.json"
+    },
+    "bio": {
+      "description": "A description/short bio of the contributor.",
+      "type": "string"
+    },
+    "url": {
+      "description": "A url to some deeper set of information about the contributor.",
+      "type": "string"
+    },
+    "social_links": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.4/traits/trait_social.json"
+    },
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.4/traits/trait_additional_properties.json"
+    }
+  },
+  "required": [ "type", "name" ]
+}
