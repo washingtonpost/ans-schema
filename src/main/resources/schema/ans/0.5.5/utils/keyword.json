@@ -4,7 +4,7 @@
     "title": "Keyword",
     "description": "Models a keyword used in describing a piece of content.",
     "type": "object",
-    "required": ["keyword", "score", "frequency"],
+    "required": ["keyword", "score"],
     "additionalProperties": false,
     "properties": {
         "keyword": {
