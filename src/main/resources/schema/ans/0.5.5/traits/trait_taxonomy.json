@@ -13,6 +13,20 @@
       },
       "description": "A list of keywords."
     },
+    "topics": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.5/utils/topic.json"
+      },
+      "description": "A list of topics."
+    },
+    "auxiliaries": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.5/utils/auxiliary.json"
+      },
+      "description": "A list of auxiliaries."
+    },
     "tags": {
       "type": "array",
       "items": {
