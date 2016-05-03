@@ -24,7 +24,8 @@
   "taxonomy": {
     "keywords": [
       {
-        "keyword": "sailing"
+        "keyword": "sailing",
+        "score": 0.005
       }
     ]
   },

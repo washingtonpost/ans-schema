@@ -18,7 +18,8 @@
   "taxonomy": {
     "keywords": [
       {
-        "keyword": "baseball"
+        "keyword": "baseball",
+        "score": 0.18299719127400172
       },
       {
         "keyword": "nationals",

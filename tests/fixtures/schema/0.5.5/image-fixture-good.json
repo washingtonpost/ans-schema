@@ -33,7 +33,8 @@
   "taxonomy": {
     "keywords": [
       {
-        "keyword": "Supreme Court"
+        "keyword": "Supreme Court",
+        "score": 0.003816102874901
       }
     ]
   },
