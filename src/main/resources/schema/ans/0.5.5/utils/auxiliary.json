@@ -7,7 +7,7 @@
     "required": ["id", "uid"],
     "additionalProperties": false,
     "properties": {
-        "id": {
+        "_id": {
             "type": "string",
             "description": "The unique identifier for this auxiliary."
         },

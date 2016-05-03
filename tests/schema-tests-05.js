@@ -585,60 +585,70 @@ describe("Schema: ", function() {
           });
         });
 
-        describe("Clavis Keywords", function() {
-          it("should validate a keyword", function() {
-            validate(version, 'utils/keyword.json', 'keyword-fixture-good');
-          });
+        describe("Clavis (0.5.5+)", function() {
+          if (_.has(fixtures, 'keyword-fixture-bad-missing-score')) {
+            
+            describe("Clavis Keywords", function() {
+              it("should validate a keyword", function() {
+                validate(version, '/utils/keyword.json', 'keyword-fixture-good');
+              });
+              
+              it("should not validate a keyword with a bad score", function() {
+                validate(version, '/utils/keyword.json', 'keyword-fixture-bad-score-type', false);
+              });
+              
+              it("should not validate a keyword with a missing score", function() {
+                validate(version, '/utils/keyword.json', 'keyword-fixture-bad-missing-score', false);
+              });
+              
+              it("should not validate a keyword with a bad tag type", function() {
+                validate(version, '/utils/keyword.json', 'keyword-fixture-bad-tag-type', false);
+              });
+              
+              it("should not validate a keyword with a bad frequency type", function() {
+                validate(version, '/utils/keyword.json', 'keyword-fixture-bad-numeric-frequency', false);
+              });
+            });
+            
+          }
           
-          it("should not validate a keyword with a bad score", function() {
-            validate(version, 'utils/keyword.json', 'keyword-fixture-bad-score-type', false);
-          });
+          if (_.has(fixtures, 'topic-fixture-good')) {
+            describe("Clavis Topics", function() {
+              it("should validate a topic", function() {
+                validate(version, '/utils/topic.json', 'topic-fixture-good');
+              });
+              
+              it("should validate a topic with a missing name", function() {
+                validate(version, '/utils/topic.json', 'topic-fixture-good-missing-name');
+              });
+              
+              it("should not validate a topic with a bad id", function() {
+                validate(version, '/utils/topic.json', 'toppic-fixture-bad-id-type', false);
+              });
+              
+              it("should not validate a topic with a missing uid", function() {
+                validate(version, '/utils/topic.json', 'topic-fixture-bad-missing-uid', false);
+              });
+            });
+          }
 
-          it("should not validate a keyword with a missing score", function() {
-            validate(version, 'utils/keyword.json', 'keyword-fixture-bad-missing-score', false);
-          });
+          if (_.has(fixtures, 'auxiliary-fixture-good')) {
+            describe("Clavis Auxiliaries", function() {
+              it("should validate an auxiliary", function() {
+                validate(version, '/utils/auxiliary.json', 'auxiliary-fixture-good');
+              });
+              
+              it("should validate an auxiliary without a name", function() {
+                validate(version, '/utils/auxiliary.json', 'auxiliary-fixture-good-optional-name');
+              });
+              
+              it("should not validate an auxiliary missing an uid", function() {
+                validate(version, '/utils/auxiliary.json', 'auxiliary-fixture-bad-missing-uid');
+              });
+            });
+          }
           
-          it("should not validate a keyword with a bad tag type", function() {
-            validate(version, 'utils/keyword.json', 'keyword-fixture-bad-tag-type', false);
-          });
-
-          it("should not validate a keyword with a bad frequency type", function() {
-            validate(version, 'utils/keyword.json', 'keyword-fixture-bad-numeric-frequency', false);
-          });
         });
-
-          
-        describe("Clavis Topics", function() {
-          it("should validate a topic", function() {
-            validate(version, 'utils/topic.json', 'topic-fixture-good');
-          });
-          
-          it("should validate a topic with a missing name", function() {
-            validate(version, 'utils/topic.json', 'topic-fixture-good-missing-name');
-          });
-          
-          it("should not validate a topic with a bad id", function() {
-            validate(version, 'utils/topic.json', 'toppic-fixture-bad-id-type', false);
-          });
-
-          it("should not validate a topic with a missing uid", function() {
-            validate(version, 'utils/topic.json', 'topic-fixture-bad-missing-uid', false);
-          });
-        });
-        
-        describe("Clavis Auxiliaries", function() {
-          it("should validate an auxiliary", function() {
-            validate(version, 'utils/auxiliary.json', 'auxiliary-fixture-good');
-          });
-          
-          it("should validate an auxiliary without a name", function() {
-            validate(version, 'utils/auxiliary.json', 'auxiliary-fixture-good-optional-name');
-          });
-          
-          it("should not validate an auxiliary missing an uid", function() {
-            validate(version, 'utils/auxiliary.json', 'auxiliary-fixture-bad-missing-uid');
-          });
-        });          
           
         describe("Story Elements ", function() {
           var type_prefix = "/story_elements";
