@@ -1,7 +1,7 @@
 {
   "_id": "unique ANS id",
   "type": "story",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "created_date": "2015-06-24T09:50:50.52Z",
   "last_updated_date": "2015-06-24T09:50:50.52Z",
   "credits": {
@@ -53,7 +53,7 @@
       {
         "_id": "some other unique ANS id",
         "type": "story",
-        "version": "0.5.4"
+        "version": "0.5.5"
       }
     ]
   },
@@ -61,7 +61,7 @@
     "basic": {
       "_id": "unique ANS id",
       "type": "image",
-      "version": "0.5.4",
+      "version": "0.5.5",
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {
         "by": [
@@ -90,7 +90,7 @@
       {
         "type": "site",
         "name": "Cool Site",
-        "version": "0.5.4"
+        "version": "0.5.5"
       },
       {
         "type": "reference",
@@ -122,7 +122,7 @@
     {
       "_id": "789",
       "type": "image",
-      "version": "0.5.4",
+      "version": "0.5.5",
 
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {

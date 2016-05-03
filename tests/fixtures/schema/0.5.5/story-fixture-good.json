@@ -1,7 +1,7 @@
 {
   "_id": "unique ANS id",
   "type": "story",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "created_date": "2015-06-24T09:50:50.52Z",
   "last_updated_date": "2015-06-24T09:50:50.52Z",
   "credits": {
@@ -13,7 +13,7 @@
         "image": {
           "_id": "unique ANS id",
           "type": "image",
-          "version": "0.5.4",
+          "version": "0.5.5",
           "created_date": "2015-06-25T09:50:50.52Z",
           "url": "https://img.washingtonpost.com/wp-apps/imrs.php?src=http://wp-eng-static.washingtonpost.com/author_images/faiolaam.jpg?ts=1405950848547&w=90&h=90"
         },
@@ -61,7 +61,7 @@
       {
         "_id": "some other unique ANS id",
         "type": "story",
-        "version": "0.5.4"
+        "version": "0.5.5"
       }
     ]
   },
@@ -69,7 +69,7 @@
     "basic": {
       "_id": "unique ANS id",
       "type": "image",
-      "version": "0.5.4",
+      "version": "0.5.5",
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {
         "by": [
@@ -108,7 +108,7 @@
       {
         "_id": "site_1",
         "type": "site",
-        "version": "0.5.4",
+        "version": "0.5.5",
         "name": "Business",
         "description": "For all your business needs",
         "path": "/business",
@@ -119,7 +119,7 @@
       {
         "_id": "site_2",
         "type": "site",
-        "version": "0.5.4",
+        "version": "0.5.5",
         "name": "Manufacturing",
         "description": "For all your manufacturing needs",
         "path": "/business/manufacturing",
@@ -168,7 +168,7 @@
     {
       "_id": "789",
       "type": "image",
-      "version": "0.5.4",
+      "version": "0.5.5",
 
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {

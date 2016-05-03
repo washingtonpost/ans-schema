@@ -13,7 +13,7 @@
         "image": {
           "_id": "unique ANS id",
           "type": "image",
-          "version": "0.5.4",
+          "version": "0.5.5",
           "created_date": "2015-06-25T09:50:50.52Z",
           "url": "https://img.washingtonpost.com/wp-apps/imrs.php?src=http://wp-eng-static.washingtonpost.com/author_images/faiolaam.jpg?ts=1405950848547&w=90&h=90"
         },
@@ -61,7 +61,7 @@
       {
         "_id": "some other unique ANS id",
         "type": "story",
-        "version": "0.5.4"
+        "version": "0.5.5"
       }
     ]
   },
@@ -69,7 +69,7 @@
     "basic": {
       "_id": "unique ANS id",
       "type": "image",
-      "version": "0.5.4",
+      "version": "0.5.5",
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {
         "by": [
@@ -103,7 +103,7 @@
     {
       "_id": "789",
       "type": "image",
-      "version": "0.5.4",
+      "version": "0.5.5",
 
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {
