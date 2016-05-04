@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.5/utils/site.json",
+  "title": "Site",
+  "description": "A hierarchical section or 'site' in a taxonomy.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "enum": [ "site" ]
+    },
+    "_id" : {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.5/traits/trait_id.json"
+    },
+    "version": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.5/traits/trait_version.json"
+    },
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.5/traits/trait_additional_properties.json"
+    },
+    "name": {
+      "description": "The name of this site",
+      "type": "string"
+    },
+    "description": {
+      "description": "A short description or tagline about this site",
+      "type": "string"
+    },
+    "path": {
+      "description": "The url path to this site",
+      "type": "string"
+    },
+    "parent_id": {
+      "description": "The id of this section's parent site, if any",
+      "type": "string"
+    }
+  },
+  "required": [ "type", "version", "name" ]
+}

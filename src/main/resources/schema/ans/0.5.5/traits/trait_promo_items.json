@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.5/traits/trait_promo_items.json",
+  "title": "Promo Items",
+  "type": "object",
+  "description": "List of promotional content to use when highlighting the story.",
+  "properties": {
+    "basic": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.5/content.json"
+    }
+  },
+  "patternProperties": {
+    ".*": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.5/content.json"
+    }
+  },
+  "required": [ "basic" ]
+}
