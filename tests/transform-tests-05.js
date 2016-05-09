@@ -71,6 +71,7 @@ describe("Transformations: ", function() {
         },
         function(err, files) {
           if (err) {
+            console.log(err);
             callback(err);
           }
           else {
@@ -351,6 +352,24 @@ describe("Transformations: ", function() {
       });
     });
 
+  });
+
+  describe("0.5.4 to 0.5.5", function() {
+    describe("Promote additional_properties.slug to slug", function() {
+      it("should have slug property set correctly", function() {
+
+        var result = transforms.upvert(fixtures['0.5.4']['story-fixture-good-slugs'], '0.5.5');
+        result.slug.should.eql("story-about-tj-life");
+        result.credits.by[0].slug.should.eql("thomas-jefferson");
+        result.content_elements[0].slug.should.eql("foo");
+      });
+
+      it("should not affect additional_properties", function() {
+        var result = transforms.upvert(fixtures['0.5.4']['story-fixture-good-slugs'], '0.5.5');
+        result.additional_properties.foo.should.eql("bar");
+        result.additional_properties.slug.should.eql("story-about-tj-life");
+      });
+    });
   });
 
 });

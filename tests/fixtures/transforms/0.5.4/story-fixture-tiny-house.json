@@ -1,7 +1,7 @@
 {
   "_id": "f8f706f0-0acc-11e5-9e39-0db921c47b93",
   "type": "story",
-  "version": "0.5.5",
+  "version": "0.5.4",
   "created_date": "2015-07-02T09:50:50.52Z",
   "last_updated_date": "2015-07-02T09:50:50.52Z",
   "credits": {
@@ -9,8 +9,7 @@
       "_id": "AUTHOR1",
       "name": "Nina Patel",
       "org": "The Washington Post",
-      "type": "author",
-      "slug": "nina-patel"
+      "type": "author"
     }]
   },
   "language": "en",
@@ -38,7 +37,7 @@
       {
         "type": "story",
         "_id": "some other unique ANS id",
-        "version": "0.5.5"
+        "version": "0.5.4"
       }
     ]
   },
@@ -46,7 +45,7 @@
     "basic": {
       "_id": "unique ANS id",
       "type": "image",
-      "version": "0.5.5",
+      "version": "0.5.4",
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": { "by": [
         {
@@ -65,7 +64,7 @@
       {
         "keyword": "loft",
         "frequency": 5,
-        "score": 0.09512891146702013
+        "score": 0.054891146702013
       },
       {
         "keyword": "residence",
@@ -101,7 +100,7 @@
     {
       "_id": "1000005",
       "type": "image",
-      "version": "0.5.5",
+      "version": "0.5.4",
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {
         "by": [
@@ -122,6 +121,5 @@
       "content": "But there’s one big drawback: Many municipalities haven’t made room literally or legislatively for tiny residences. It’s a challenge to find a place to park a tiny house if you don’t own land. And they often fall into a legal limbo. “Tiny houses exist in sort of a legal gray area, neither explicitly allowed nor expressly forbidden,” says tiny-home owner Jay Austin of Northeast Washington. Though the District recently banned “camping” in tiny-house-like structures, Austin says he has been told the provision is unenforceable."
     }
 
-  ],
-  "slug": "tiny-house-story"
+  ]
 }
