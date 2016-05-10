@@ -2,7 +2,7 @@
 
 ### 0.5.5 2016/5/10 ###
 
-* Added 'user_id' and 'default' to revision object
+* Added 'user_id' and 'published' to revision object
 * Added 'slug' to story, video, image, gallery and author objects
 * Created schemas for Clavis Topics and Auxiliaries.
 * Modified the Keyword schema to match that of the Clavis datatype.
