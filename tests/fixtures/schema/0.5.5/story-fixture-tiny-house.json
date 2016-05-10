@@ -123,5 +123,15 @@
     }
 
   ],
-  "slug": "tiny-house-story"
+  "slug": "tiny-house-story",
+  "revision": {
+    "revision_id": "1",
+    "parent_id": "0",
+    "branch": "default",
+    "editions": [ "default" ],
+    "user_id": "engelg",
+    "additional_properties": {
+      "foo": "bar"
+    }
+  }
 }
