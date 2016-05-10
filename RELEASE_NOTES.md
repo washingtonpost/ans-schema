@@ -1,5 +1,17 @@
 # ANS Release Notes
 
+### 0.5.5 2016/5/10 ###
+
+* Added 'user_id' to revision object
+* Added 'slug' to story, video, image, gallery and author objects
+* Created schemas for Clavis Topics and Auxiliaries.
+* Modified the Keyword schema to match that of the Clavis datatype.
+* Score is now a required field in the Keyword schema.
+
+### 0.5.4 2016/4/27 ###
+
+* Moves extraneous properties in planning trait and reference object into additional_properties, enables strict validation
+
 ### 0.5.3 2016/4/20 ###
 
 * Removed `sections` from taxonomy and added `sites`. Sites define several fields and validate strictly - previously freeform sections will be upverted to sites as best as possible, stuffing unknown fields into `additional_properties`
