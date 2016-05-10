@@ -130,6 +130,7 @@
     "branch": "default",
     "editions": [ "default" ],
     "user_id": "engelg",
+    "published": true,
     "additional_properties": {
       "foo": "bar"
     }

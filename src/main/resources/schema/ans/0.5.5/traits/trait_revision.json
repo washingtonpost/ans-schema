@@ -29,6 +29,10 @@
       "type": "string",
       "description": "The unique user id of the person who created this revision."
     },
+    "published": {
+      "type": "boolean",
+      "description": "Whether or not this revision's parent story is published, in any form or place"
+    },
     "additional_properties": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.5/traits/trait_additional_properties.json"
     }
