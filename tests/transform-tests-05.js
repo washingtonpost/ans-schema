@@ -326,6 +326,11 @@ describe("Transformations: ", function() {
         var result = transforms.upvert(fixtures['0.5.3']['story-fixture-good-planning'], '0.5.4');
         validate('0.5.4/traits/trait_planning.json', result.planning);
       });
+
+      it("should not fail when planning.scheduling.additional_properties is undefined", function() {
+        var result = transforms.upvert(fixtures['0.5.3']['story-fixture-good-with-scheduling-without-additional-properties-with-story-length-without-addtional-properties'], '0.5.4');
+        result.version.should.eql('0.5.4');
+      });
     });
 
     describe("references", function() {
