@@ -144,6 +144,24 @@ describe("Transformations: ", function() {
     });
   });
 
+
+  describe("Version Incrementer", function() {
+    var getResult = function() { return transforms.incrementer('0.5.5')(fixtures['0.5.4']['story-fixture-versions']) };
+
+    it("should add version to a story", function() {
+      var result = getResult();
+      result.version.should.eql('0.5.5');
+      result.promo_items.basic.version.should.eql('0.5.5');
+    });
+    it("should not add version to references", function() {
+      var result = getResult();
+      result.content_elements[13].referent.should.not.have.property("version");
+      result.content_elements[18].referent.should.not.have.property("version");
+    });
+
+  });
+
+
   describe("0.5.0 to 0.5.1: misspelled additional properties", function() {
 
     var getResult = function() { return transforms.upvert(fixtures['0.5.0']['story-fixture-misspelled-additional-properties'], '0.5.1') };
