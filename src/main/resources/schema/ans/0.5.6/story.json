@@ -106,6 +106,9 @@
     "slug": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.6/traits/trait_slug.json"
     },
+    "corrections": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.6/traits/trait_corrections.json"
+    },
 
     "additional_properties": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.6/traits/trait_additional_properties.json"
