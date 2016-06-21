@@ -1,0 +1,12 @@
+{
+    "keywords": [
+        {
+            "keyword": "foo"
+        },
+        {
+            "keyword": "bar",
+            "score": 0.333,
+            "frequency": 5
+        }
+    ]
+}
