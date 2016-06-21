@@ -38,6 +38,9 @@
     "publish_date": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.6/traits/trait_publish_date.json"
     },
+    "first_publish_date": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.6/traits/trait_first_publish_date.json"
+    },
     "display_date": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.6/traits/trait_display_date.json"
     },
