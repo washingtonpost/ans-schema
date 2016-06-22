@@ -158,7 +158,41 @@
       "caption": "Never gonna give you up",
       "subtitle": "Never gonna let you down",
       "width": 800,
-      "height": 640
+      "height": 640,
+      "taxonomy": {
+        "keywords": [
+          {
+            "keyword": "Anesthesiologist",
+            "score": 0.77,
+            "frequency": 2
+          }
+        ],
+        "sites": [
+          {
+            "_id": "site_1",
+            "type": "site",
+            "version": "0.5.5",
+            "name": "Business",
+            "description": "For all your business needs",
+            "path": "/business",
+            "additional_properties": {
+              "foo": "bar"
+            }
+          },
+          {
+            "_id": "site_2",
+            "type": "site",
+            "version": "0.5.5",
+            "name": "Manufacturing",
+            "description": "For all your manufacturing needs",
+            "path": "/business/manufacturing",
+            "parent_id" : "site_1",
+            "additional_properties": {
+              "foo": "bar"
+            }
+          }
+        ]
+      }
     },
     {
       "_id": "49876543210",

@@ -401,6 +401,7 @@ describe("Transformations: ", function() {
 
         var result = transforms.upvert(fixtures['0.5.5']['story-fixture-good'], '0.5.6');
         result.taxonomy.sites[0].primary.should.eql(false);
+        result.content_elements[2].taxonomy.sites[0].primary.should.eql(false);
         result.owner.sponsored.should.eql(false);
       });
     });
