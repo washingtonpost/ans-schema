@@ -20,6 +20,16 @@ Two examples are provided of content documents that validate against the Washing
 1. [An Example Story](tests/fixtures/schema/0.5.5/story-fixture-tiny-house.json)
 2. [An Example Video](tests/fixtures/schema/0.5.5/video-fixture-nationals.json)
 
+## Submitting a Proposal
+
+Changes to the ANS Schema should first be accepted by the ANS committee at The Washington Post.  To submit a proposal for a requested change to the schema, please [create an issue](https://github.com/washingtonpost/ans-schema/issues/new) in this repo's issue tracker.
+
+A proposal should be a short document that includes the following:
+
+* A brief example of desired change, including example JSON of an ANS document that adheres to the change. 
+* A description of the reason or use case for the requested change
+* Responses to any anticipated problems or concerned caused by this change.
+
 ## Contributing to this Repository
 
 The standard method for contributing to this repository is pull requests.  For the time being, each new version requires a specific series of manual changes to the repository, listed below.
