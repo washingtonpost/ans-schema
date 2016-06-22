@@ -25,10 +25,10 @@
       "description": "The interstitial link url.",
       "type": "string"
     },
-    "text": {
+    "content": {
       "description": "The interstitial link text.",
       "type": "string"
     }
   },
-  "required": ["type", "url", "text"]
+  "required": ["type", "url", "content"]
 }
