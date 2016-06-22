@@ -12,6 +12,14 @@
         "id": {
           "description": "The unique identifier for this owner.",
           "type": "string"
+        },
+        "name": {
+          "description": "The name of this owner.",
+          "type": "string"
+        },
+        "sponsored": {
+          "description": "Necessary for including/excluding advertorial and native content in search results, story card features.",
+          "type": "boolean"
         }
       }
     }

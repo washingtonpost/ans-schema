@@ -66,6 +66,12 @@
       "items": {
         "type": "string"
       }
+    },
+    "stock_symbols": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   }
 }

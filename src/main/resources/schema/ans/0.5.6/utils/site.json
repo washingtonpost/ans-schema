@@ -33,6 +33,10 @@
     "parent_id": {
       "description": "The id of this section's parent site, if any",
       "type": "string"
+    },
+    "primary": {
+      "description": "Is this the primary site?",
+      "type": "boolean"
     }
   },
   "required": [ "type", "version", "name" ]

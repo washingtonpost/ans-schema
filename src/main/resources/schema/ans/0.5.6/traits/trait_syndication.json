@@ -9,5 +9,15 @@
     ".*": {
       "type": "boolean"
     }
+  },
+  "properties": {
+    "external_distribution": {
+      "description": "Necessary for fulfilling contractual agreements with third party Globe and Mail clients",
+      "type": "boolean"
+    },
+    "search": {
+      "description": "Necessary so that we can filter out all articles that editorial has deemed should not be discoverable via search",
+      "type": "boolean"
+    }
   }
 }
