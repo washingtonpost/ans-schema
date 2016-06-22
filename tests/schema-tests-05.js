@@ -529,6 +529,14 @@ describe("Schema: ", function() {
             validate(version, '/content.json', 'story-fixture-references');
           });
 
+            it("should not validate a story with bad corrections", function() {
+                validate(version, '/story.json', 'story-fixture-bad-corrections', false);
+            });
+
+            it("should not validate a story with bad interstitial link", function() {
+                validate(version, '/story.json', 'story-fixture-bad-interstitial-link', false);
+            });
+
 
         });
 
@@ -743,6 +751,19 @@ describe("Schema: ", function() {
               validate(version, type_prefix + '/table.json', 'raw-html-fixture-bad', false);
             });
           });
+
+
+            describe("Interstitial Link", function() {
+                if (_.has(fixtures, 'interstitial-link-fixture-good')) {
+                    it("should validate a interstitial link", function () {
+                        validate(version, type_prefix + '/table.json', 'interstitial-link-fixture-good');
+                    });
+
+                    it("should not validate a non-interstitial link", function () {
+                        validate(version, type_prefix + '/table.json', 'interstitial-link-fixture-bad', false);
+                    });
+                }
+            });
 
           describe("...all together now", function() {
             var valid_fixtures = [ "story-fixture-good", "story-fixture-references" ];
