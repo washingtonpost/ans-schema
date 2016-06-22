@@ -5,10 +5,10 @@
   "story_id": "f8f706f0-0acc-11e5-9e39-0db921c47b93",
   "revision_id": "1A",
   "branch": "default",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "story": {
     "_id": "f8f706f0-0acc-11e5-9e39-0db921c47b93",
-    "version": "0.5.5",
+    "version": "0.5.6",
     "type": "story",
     "created_date": "2015-07-02T09:50:10.52Z",
     "last_updated_date": "2015-07-02T09:10:50.52Z",

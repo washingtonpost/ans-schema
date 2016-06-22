@@ -395,4 +395,15 @@ describe("Transformations: ", function() {
     });
   });
 
+  describe("0.5.5 to 0.5.6", function() {
+    describe("Add site.primary and owner.sponsored", function() {
+      it("should have site.primary and owner.sponsored set correctly", function() {
+
+        var result = transforms.upvert(fixtures['0.5.5']['story-fixture-good'], '0.5.6');
+        result.taxonomy.sites[0].primary.should.eql(false);
+        result.owner.sponsored.should.eql(false);
+      });
+    });
+  });
+
 });

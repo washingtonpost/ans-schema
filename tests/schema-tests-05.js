@@ -14,7 +14,7 @@ var loadedSchemas = {};
 var ajv = new Ajv({allErrors:true});
 // var tv4 = require('tv4');
 
-var test_versions = [ "0.5.0", "0.5.1", "0.5.2", "0.5.3", "0.5.4", "0.5.5" ];
+var test_versions = [ "0.5.0", "0.5.1", "0.5.2", "0.5.3", "0.5.4", "0.5.5", "0.5.6" ];
 
 var json_schema = {
     "id": "http://json-schema.org/draft-04/schema#",
@@ -752,7 +752,7 @@ describe("Schema: ", function() {
                 var document = fixtures[fixtureName];
 
                 document.content_elements.forEach(function(element) {
-                  element.type.should.equalOneOf([ "blockquote", "code", "list", "oembed", "raw_html", "table", "text", "reference", "image", "video", "audio", "story" ]);
+                  element.type.should.equalOneOf([ "blockquote", "code", "interstitial_link", "list", "oembed", "raw_html", "table", "text", "reference", "image", "video", "audio", "story" ]);
 
                   switch(element.type) {
                   case "blockquote":
