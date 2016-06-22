@@ -35,7 +35,7 @@ A proposal should be a short document that includes the following:
 
 The standard method for contributing to this repository is pull requests.  For the time being, each new version requires a specific series of manual changes to the repository, listed below.
 
-* Branch this repository.
+* Branch or fork this repository.
 * Copy the directory of current version of ANS to the proposed new version number.  (E.g., /src/main/resources/schema/ans/0.5.x). 
 * Within this new directory, find+replace the old version number with the new one across all files.
 * Make requested changes to the schema.
