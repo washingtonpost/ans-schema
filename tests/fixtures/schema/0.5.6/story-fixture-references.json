@@ -54,6 +54,15 @@
         "_id": "some other unique ANS id",
         "type": "story",
         "version": "0.5.6"
+      },
+      {
+        "type": "reference",
+        "referent": {
+          "id": "1",
+          "type": "image",
+          "service": "",
+          "provider": ""
+        }
       }
     ]
   },
@@ -76,6 +85,15 @@
       "subtitle": "Never gonna let you down",
       "width": 800,
       "height": 640
+    },
+    "second": {
+      "type": "reference",
+      "referent": {
+        "type": "image",
+        "id": "1",
+        "service": "",
+        "provider": ""
+      }
     }
   },
   "taxonomy": {
