@@ -14,7 +14,7 @@ var loadedSchemas = {};
 var ajv = new Ajv({allErrors:true});
 // var tv4 = require('tv4');
 
-var test_versions = [ "0.5.0", "0.5.1", "0.5.2", "0.5.3", "0.5.4", "0.5.5" ];
+var test_versions = [ "0.5.0", "0.5.1", "0.5.2", "0.5.3", "0.5.4", "0.5.5", "0.5.6" ];
 
 var json_schema = {
     "id": "http://json-schema.org/draft-04/schema#",
@@ -529,6 +529,14 @@ describe("Schema: ", function() {
             validate(version, '/content.json', 'story-fixture-references');
           });
 
+            it("should not validate a story with bad corrections", function() {
+                validate(version, '/story.json', 'story-fixture-bad-corrections', false);
+            });
+
+            it("should not validate a story with bad interstitial link", function() {
+                validate(version, '/story.json', 'story-fixture-bad-interstitial-link', false);
+            });
+
 
         });
 
@@ -539,7 +547,7 @@ describe("Schema: ", function() {
           it("should validate an image with no height or width", function() {
             validate(version, '/image.json', 'image-fixture-good-no-height-width');
           });
-            
+
           it("should validate as content", function() {
             validate(version, '/content.json', 'image-fixture-good');
           });
@@ -587,45 +595,45 @@ describe("Schema: ", function() {
 
         describe("Clavis (0.5.5+)", function() {
           if (_.has(fixtures, 'keyword-fixture-bad-missing-score')) {
-            
+
             describe("Clavis Keywords", function() {
               it("should validate a keyword", function() {
                 validate(version, '/utils/keyword.json', 'keyword-fixture-good');
               });
-              
+
               it("should not validate a keyword with a bad score", function() {
                 validate(version, '/utils/keyword.json', 'keyword-fixture-bad-score-type', false);
               });
-              
+
               it("should not validate a keyword with a missing score", function() {
                 validate(version, '/utils/keyword.json', 'keyword-fixture-bad-missing-score', false);
               });
-              
+
               it("should not validate a keyword with a bad tag type", function() {
                 validate(version, '/utils/keyword.json', 'keyword-fixture-bad-tag-type', false);
               });
-              
+
               it("should not validate a keyword with a bad frequency type", function() {
                 validate(version, '/utils/keyword.json', 'keyword-fixture-bad-numeric-frequency', false);
               });
             });
-            
+
           }
-          
+
           if (_.has(fixtures, 'topic-fixture-good')) {
             describe("Clavis Topics", function() {
               it("should validate a topic", function() {
                 validate(version, '/utils/topic.json', 'topic-fixture-good');
               });
-              
+
               it("should validate a topic with a missing name", function() {
                 validate(version, '/utils/topic.json', 'topic-fixture-good-missing-name');
               });
-              
+
               it("should not validate a topic with a bad id", function() {
                 validate(version, '/utils/topic.json', 'toppic-fixture-bad-id-type', false);
               });
-              
+
               it("should not validate a topic with a missing uid", function() {
                 validate(version, '/utils/topic.json', 'topic-fixture-bad-missing-uid', false);
               });
@@ -637,19 +645,19 @@ describe("Schema: ", function() {
               it("should validate an auxiliary", function() {
                 validate(version, '/utils/auxiliary.json', 'auxiliary-fixture-good');
               });
-              
+
               it("should validate an auxiliary without a name", function() {
                 validate(version, '/utils/auxiliary.json', 'auxiliary-fixture-good-optional-name');
               });
-              
+
               it("should not validate an auxiliary missing an uid", function() {
                 validate(version, '/utils/auxiliary.json', 'auxiliary-fixture-bad-missing-uid');
               });
             });
           }
-          
+
         });
-          
+
         describe("Story Elements ", function() {
           var type_prefix = "/story_elements";
 
@@ -744,6 +752,19 @@ describe("Schema: ", function() {
             });
           });
 
+
+            describe("Interstitial Link", function() {
+                if (_.has(fixtures, 'interstitial-link-fixture-good')) {
+                    it("should validate a interstitial link", function () {
+                        validate(version, type_prefix + '/table.json', 'interstitial-link-fixture-good');
+                    });
+
+                    it("should not validate a non-interstitial link", function () {
+                        validate(version, type_prefix + '/table.json', 'interstitial-link-fixture-bad', false);
+                    });
+                }
+            });
+
           describe("...all together now", function() {
             var valid_fixtures = [ "story-fixture-good", "story-fixture-references" ];
             valid_fixtures.forEach(function(fixtureName) {
@@ -752,7 +773,7 @@ describe("Schema: ", function() {
                 var document = fixtures[fixtureName];
 
                 document.content_elements.forEach(function(element) {
-                  element.type.should.equalOneOf([ "blockquote", "code", "list", "oembed", "raw_html", "table", "text", "reference", "image", "video", "audio", "story" ]);
+                  element.type.should.equalOneOf([ "blockquote", "code", "interstitial_link", "list", "oembed", "raw_html", "table", "text", "reference", "image", "video", "audio", "story" ]);
 
                   switch(element.type) {
                   case "blockquote":
@@ -800,7 +821,7 @@ describe("Schema: ", function() {
 
                 Object.keys(document.promo_items).forEach(function(item_name) {
                   var item = document.promo_items[item_name];
-                  item.type.should.equalOneOf([ "image", "video", "audio", "story" ]);
+                  item.type.should.equalOneOf([ "image", "video", "audio", "story", "reference" ]);
 
                   switch(item.type) {
                   case "image":
@@ -814,6 +835,9 @@ describe("Schema: ", function() {
                     break;
                   case "story":
                     validate(version, '/story.json', item);
+                    break;
+                  case "reference":
+                    validate(version, '/utils/reference.json', item);
                     break;
                   }
                 });

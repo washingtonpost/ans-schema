@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.6/site_operation.json",
+  "description": "An operation on a site",
+  "type": "object",
+  "allOf": [{
+    "properties": {
+      "type": {
+        "description": "Identifies this as an ANS operation",
+        "type": "string",
+        "enum": [ "site-service" ]
+      },
+      "operation": {
+        "type": "string",
+        "description": "The identifier of the operation being performed",
+        "enum": [ "insert", "update", "delete" ]
+      },
+      "date": {
+        "description": "When the operation should be considered performed",
+        "type": "string",
+        "format": "date-time"
+      },
+      "id": {
+        "type": "string",
+        "description": "The id of the item being operated"
+      },
+      "organization_id": {
+        "type": "string",
+        "description": "The id of the organization"
+      },
+      "version": {
+        "type": "string",
+        "description": "The version of ANS this item is written in"
+      },
+      "body": {
+        "description": "The object being inserted/updated/deleted",
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/utils/author.json"
+      }
+    },
+    "required": [ "type", "operation", "id", "organization_id" ]
+  }]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.6/traits/trait_corrections.json",
+  "title": "Corrections",
+  "description": "Trait that applies corrections to a document or resource.",
+  "type": "array",
+  "items": {
+    "description": "Correction object",
+    "type": "object",
+    "properties": {
+      "correction_type": {
+        "description": "Type of correction",
+        "type": "string"
+      },
+      "text": {
+        "description": "Correction text",
+        "type": "string"
+      }
+    }
+  }
+}
