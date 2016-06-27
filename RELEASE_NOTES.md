@@ -1,5 +1,17 @@
 # ANS Release Notes
 
+### 0.5.6 2016/6/27 ###
+
+* Add corrections to story object, including text and correction_type (to distinguish "clarification" from "correction", etc)
+* Adds interstitial_links content element
+* Adds reference as a type under related_content, promo_items
+* Adds first_publish_date
+* Adds source.source_id
+* Adds owner.name, owner.sponsored
+* Adds syndication.external_distribution, syndication.search
+* Adds taxonomy.stock_symbols
+* Adds site.primary
+
 ### 0.5.5 2016/5/10 ###
 
 * Added 'user_id' and 'published' to revision object
