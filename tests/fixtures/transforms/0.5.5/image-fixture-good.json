@@ -1,7 +1,7 @@
 {
   "_id": "unique ANS id",
   "type": "image",
-  "version": "0.5.3",
+  "version": "0.5.5",
   "created_date": "2015-06-25T09:50:50.52Z",
   "credits": {
     "by": [
@@ -33,8 +33,12 @@
   "taxonomy": {
     "keywords": [
       {
-        "keyword": "Supreme Court"
+        "keyword": "Supreme Court",
+        "score": 0.003816102874901
       }
     ]
+  },
+  "additional_properties": {
+    "foo": "bar"
   }
 }

@@ -1,10 +1,10 @@
 {
   "type": "story",
-  "version": "0.5.3",
+  "version": "0.5.5",
   "promo_items": {
     "secondary": {
       "type": "image",
-      "version": "0.5.3",
+      "version": "0.5.5",
       "url": "http://www.google.com/logo.png"
     }
   }
