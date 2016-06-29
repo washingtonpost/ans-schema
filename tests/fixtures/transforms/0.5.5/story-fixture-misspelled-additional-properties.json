@@ -1,6 +1,6 @@
 {
   "type": "story",
-  "version": "0.5.3",
+  "version": "0.5.5",
   "content_elements": [
     {
       "type": "text",
@@ -9,7 +9,7 @@
         "was": "misspelled",
         "and": "should be corrected",
         "after": "upverting",
-        "to": "0.5.3"
+        "to": "0.5.5"
       }
     },{
       "type": "header",
@@ -18,19 +18,19 @@
         "was": "misspelled",
         "and": "should be corrected",
         "after": "upverting",
-        "to": "0.5.3"
+        "to": "0.5.5"
       }
     },
     {
       "type": "image",
-      "version": "0.5.3",
+      "version": "0.5.5",
       "additional_properties": {
         "was": "correctly spelled"
       }
     },
     {
       "type": "story",
-      "version": "0.5.3",
+      "version": "0.5.5",
       "content_elements": [{
         "type": "text",
         "content": "text",
