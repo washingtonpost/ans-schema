@@ -21,7 +21,7 @@ var LAST_VERSION = current_version.version;
 
 var fixtures = {};
 
-// Helper
+// Helpers
 var validate = function(schemaName, ans, expected) {
   var schema = loadedSchemas[schemaName];
   //console.log(fixtures);
@@ -57,7 +57,7 @@ var validateTransformAndValidate = function validateTransformAndValidate(name, v
 describe("Transformations: ", function() {
   // Make sure schemas are loaded
   before(function(done) {
-    ans.getSchemas(function(schemas) {
+    ans.getSchemas(function(err, schemas) {
       loadedSchemas = schemas;
       var keys = Object.keys(loadedSchemas);
 

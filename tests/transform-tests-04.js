@@ -40,7 +40,7 @@ var validate = function(schemaName, ans, expected) {
 describe("Transformations: ", function() {
   // Make sure schemas are loaded
   before(function(done) {
-    ans.getSchemas(function(schemas) {
+    ans.getSchemas(function(err, schemas) {
       loadedSchemas = schemas;
       var keys = Object.keys(loadedSchemas);
 
