@@ -395,7 +395,20 @@ describe("Transformations: ", function() {
   });
 
   describe("0.5.4 to 0.5.5", function() {
+    describe("keyword.score is required field", function() {
+      it("should add score to keyword objects if not present", function() {
+        var result = transforms.upvert(fixtures['0.5.4']['gallery-fixture'], '0.5.5');
+        result.content_elements[0].taxonomy.keywords[0].score.should.eql(0.0);
+        result.taxonomy.keywords[0].score.should.eql(0.0);
+      });
+      it("should not change existing scores", function() {
+        var result = transforms.upvert(fixtures['0.5.4']['gallery-fixture'], '0.5.5');
+        result.taxonomy.keywords[1].score.should.eql(0.5);
+      });
+    });
+
     describe("Promote additional_properties.slug to slug", function() {
+
       it("should have slug property set correctly", function() {
 
         var result = transforms.upvert(fixtures['0.5.4']['story-fixture-good-slugs'], '0.5.5');
