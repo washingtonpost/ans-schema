@@ -27,7 +27,7 @@
   },
   "main": "./lib/schemas.js",
   "scripts": {
-    "test": "mocha tests/schema-tests-04.js tests/transform-tests-04.js tests/schema-tests-05.js  tests/transform-tests-05",
+    "test": "mocha tests/schema-tests-04.js tests/schema-tests-05.js tests/transform-tests",
     "ans": "node lib/cli.js"
   },
   "bin": {
