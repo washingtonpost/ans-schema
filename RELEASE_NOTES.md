@@ -1,5 +1,9 @@
 # ANS Release Notes
 
+### 0.5.7 ----- ###
+
+* Adds library command line for generating new ANS version stubs, cleaning up
+
 ### 0.5.6 2016/6/27 ###
 
 * Add corrections to story object, including text and correction_type (to distinguish "clarification" from "correction", etc)
