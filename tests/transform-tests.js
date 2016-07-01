@@ -21,7 +21,7 @@ var LAST_VERSION = current_version.version;
 
 var fixtures = {};
 
-// Helper
+// Helpers
 var validate = function(schemaName, ans, expected) {
   var schema = loadedSchemas[schemaName];
   //console.log(fixtures);
@@ -57,7 +57,7 @@ var validateTransformAndValidate = function validateTransformAndValidate(name, v
 describe("Transformations: ", function() {
   // Make sure schemas are loaded
   before(function(done) {
-    ans.getSchemas(function(schemas) {
+    ans.getSchemas(function(err, schemas) {
       loadedSchemas = schemas;
       var keys = Object.keys(loadedSchemas);
 
@@ -73,7 +73,7 @@ describe("Transformations: ", function() {
   // Make sure fixtures are loaded
   before(function(done) {
 
-    var version_keys = _.keys(transforms.versions['0.5']);
+    var version_keys = _.keys(transforms.upverters);
 
     async.reduce(version_keys, {}, function(result, version, callback) {
       fixtures[version] = {};
@@ -104,7 +104,7 @@ describe("Transformations: ", function() {
   describe("Image ", function() {
     var fixture_names = ['image-fixture-good', 'image-fixture-good-no-height-width'];
 
-    _.forIn(transforms.versions['0.5'], function(transformer, version) {
+    _.forIn(transforms.upverters, function(transformer, version) {
         it("can transform from " + version, function() {
           _.forEach(fixture_names, function(value, key) {
             validateTransformAndValidate(value, version, '/image.json', transformer);
@@ -125,7 +125,7 @@ describe("Transformations: ", function() {
   describe("Video ", function() {
     var fixture_names = ['video-fixture-good', 'video-fixture-nationals'];
 
-    _.forIn(transforms.versions['0.5'], function(transformer, version) {
+    _.forIn(transforms.upverters, function(transformer, version) {
       it("can transform from " + version, function() {
         _.forEach(fixture_names, function(value, key) {
           validateTransformAndValidate(value, version, '/video.json', transformer);
@@ -145,7 +145,7 @@ describe("Transformations: ", function() {
   describe("Story ", function() {
     var fixture_names = ['story-fixture-good', 'story-fixture-references', 'story-fixture-tiny-house', 'story-fixture-table'];
 
-    _.forIn(transforms.versions['0.5'], function(transformer, version) {
+    _.forIn(transforms.upverters, function(transformer, version) {
       it("can transform from " + version, function() {
         _.forEach(fixture_names, function(value, key) {
           validateTransformAndValidate(value, version, '/story.json', transformer);

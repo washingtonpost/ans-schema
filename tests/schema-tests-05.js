@@ -5,6 +5,7 @@ var should = require('should'),
     path = require('path'),
     Ajv = require('ajv'),
     _ = require('lodash'),
+    version = require('../lib/version'),
     ans = require('../lib/schemas');
 
 var loadedFiles = {};
@@ -14,7 +15,15 @@ var loadedSchemas = {};
 var ajv = new Ajv({allErrors:true});
 // var tv4 = require('tv4');
 
-var test_versions = [ "0.5.0", "0.5.1", "0.5.2", "0.5.3", "0.5.4", "0.5.5", "0.5.6" ];
+//var test_versions = [ "0.5.0", "0.5.1", "0.5.2", "0.5.3", "0.5.4", "0.5.5", "0.5.6" ];
+var test_versions = _.map(
+  _.filter(version.history, function(item) {
+    return (item.schema == true) && (item.name.indexOf("0.5") > -1);
+  }),
+  function(item) {
+    return item.name;
+  }
+);
 
 var json_schema = {
     "id": "http://json-schema.org/draft-04/schema#",
@@ -338,7 +347,7 @@ var hyper_schema = {
 
 describe("ANS Schema", function() {
   beforeEach(function(done) {
-    ans.getSchemas(function(schemas) {
+    ans.getSchemas(function(err, schemas) {
       loadedSchemas = schemas;
       done();
     });

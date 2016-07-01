@@ -337,7 +337,7 @@ var hyper_schema = {
 
 describe("ANS Schema", function() {
   beforeEach(function(done) {
-    ans.getSchemas(function(schemas) {
+    ans.getSchemas(function(err, schemas) {
       loadedSchemas = schemas;
       done();
     });

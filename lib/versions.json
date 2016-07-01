@@ -1,0 +1,62 @@
+[
+  {
+    "name": "v0_2",
+    "schema": true,
+    "upverter": false,
+    "downverter": false
+  },
+  {
+    "name": "v0_3",
+    "schema": true,
+    "upverter": false,
+    "downverter": false
+  },
+  {
+    "name": "v0_4",
+    "schema": true,
+    "upverter": false,
+    "downverter": false
+  },
+  {
+    "name": "0.5.0",
+    "schema": true,
+    "upverter": true,
+    "downverter": false
+  },
+  {
+    "name": "0.5.1",
+    "schema": true,
+    "upverter": true,
+    "downverter": false
+  },
+  {
+    "name": "0.5.2",
+    "schema": true,
+    "upverter": true,
+    "downverter": false
+  },
+  {
+    "name": "0.5.3",
+    "schema": true,
+    "upverter": true,
+    "downverter": false
+  },
+  {
+    "name": "0.5.4",
+    "schema": true,
+    "upverter": true,
+    "downverter": false
+  },
+  {
+    "name": "0.5.5",
+    "schema": true,
+    "upverter": true,
+    "downverter": false
+  },
+  {
+    "name": "0.5.6",
+    "schema": true,
+    "upverter": false,
+    "downverter": false
+  }
+]
