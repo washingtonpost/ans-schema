@@ -1,7 +1,15 @@
 # ANS Release Notes
 
-### 0.5.7 ----- ###
+### 1.0.2 ###
 
+* Adds gallery operation
+* Adds tests for image and gallery operations
+* Fixes lots of tests that were not being run properly
+* Fixes bug in 0.5.5->0.5.6 upverter that generated invalid reference objects in taxonomy.sites
+
+### 1.0.1 ###
+
+* ANS Version de-coupled from package version
 * Adds library command line for generating new ANS version stubs, cleaning up
 
 ### 0.5.6 2016/6/27 ###
