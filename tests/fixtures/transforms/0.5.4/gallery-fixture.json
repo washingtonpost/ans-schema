@@ -1,0 +1,40 @@
+{
+  "type": "gallery",
+  "version": "0.5.4",
+  "content_elements": [
+    {
+      "width": 3000,
+      "taxonomy": {
+        "keywords": [
+          {
+            "keyword": "horizontal"
+          }
+        ]
+      },
+      "caption": "A mother of victims killed the day before in a suicide bombing and gun attack at Istanbul's airport, cries on June 29, 2016 in Istanbul.\nA triple suicide bombing and gun attack that occurred on June 28, 2016 at Istanbul's Ataturk airport has killed at least 36 people, including foreigners, with Turkey's prime minister saying early signs pointed to an assault by the Islamic State group. \/ AFP PHOTO \/ BULENT KILICBULENT KILIC\/AFP\/Getty Images",
+      "url": "http:\/\/anglerfish-resizer.arc.nile.works\/RhAyjBEW4DVJVWBfo3P9rAi3n5U=\/arc-anglerfish-washpost-sandbox-sandbox-washpost\/UDMHDER56MI6NAF42BTRD7JBEU",
+      "subtitle": "TURKEY-ATTACKS-AIRPORT",
+      "created_date": "2016-06-29T12:32:25+00:00",
+      "_id": "UDMHDER56MI6NAF42BTRD7JBEU",
+      "additional_properties": {
+        "published": false,
+        "originalName": "AFP_CK25R.jpg",
+        "originalUrl": "https:\/\/arc-anglerfish-washpost-sandbox-sandbox-washpost.s3.amazonaws.com\/UDMHDER56MI6NAF42BTRD7JBEU",
+        "version": 3,
+        "galleries": [],
+        "countryId": 219
+      }
+    }
+  ],
+  "taxonomy": {
+    "keywords": [
+      {
+        "keyword": "vertical"
+      },
+      {
+        "keyword": "real",
+        "score": 0.5
+      }
+    ]
+  }
+}
