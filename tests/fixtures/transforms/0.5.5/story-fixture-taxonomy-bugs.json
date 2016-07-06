@@ -24,17 +24,31 @@
     "tags": [
       "alpha", "beta", "gamma"
     ],
-    "sections": [
+    "sites": [
       {
+        "type": "site",
         "name": "Business",
-        "path": "/business",
-        "other": "data",
-        "foo": "bar"
+        "path": "/business"
       },
       {
+        "type": "site",
         "title": "Finance",
         "path": "/business/finance",
-        "parent": "/business"
+        "parent": "/business",
+        "additional_properties": {
+          "primary": true
+        }
+      },
+      {
+        "type": "reference",
+        "referent": {
+          "id": "1",
+          "type": "site",
+          "provider": "foo"
+        },
+        "additional_properties": {
+          "primary": true
+        }
       }
     ]
   },
@@ -54,11 +68,11 @@
       "_id": "456",
       "taxonomy": {
         "tags": [ "delta" ],
-        "sections": [
+        "sites": [
           {
+            "type": "site",
             "name": "Section 451",
-            "path": "/451",
-            "other": "misc"
+            "path": "/451"
           }
         ]
       }

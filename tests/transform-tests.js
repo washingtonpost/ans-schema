@@ -434,6 +434,19 @@ describe("Transformations: ", function() {
         result.content_elements[2].taxonomy.sites[0].primary.should.eql(false);
         result.owner.sponsored.should.eql(false);
       });
+
+      it("should copy 'primary' value from additional_properties", function() {
+
+        var result = transforms.upvert(fixtures['0.5.5']['story-fixture-taxonomy-bugs'], '0.5.6');
+        result.taxonomy.sites[1].primary.should.eql(true);
+      });
+
+      it("should leave references in taxonomy.sites alone", function() {
+        var result = transforms.upvert(fixtures['0.5.5']['story-fixture-taxonomy-bugs'], '0.5.6');
+        result.taxonomy.sites[2].should.not.have.property('primary');
+        result.taxonomy.sites[2].additional_properties.primary.should.eql(true);
+      });
+
     });
   });
 
