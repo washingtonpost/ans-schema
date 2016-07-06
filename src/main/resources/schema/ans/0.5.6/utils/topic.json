@@ -4,7 +4,7 @@
     "title": "Topic",
     "description": "Models a topic used in describing a piece of content.",
     "type": "object",
-    "required": ["id", "score", "uid"],
+    "required": ["_id", "score", "uid"],
     "additionalProperties": false,
     "properties": {
         "_id": {
