@@ -570,7 +570,28 @@ describe("Schema: ", function() {
             });
           });
         });
-        
+
+        describe("Gallery", function() {
+          it("should validate a valid gallery", function() {
+            validateIfFixtureExists(version, '/gallery.json', 'gallery-fixture-good');
+          });
+          it("should validate a gallery with no images", function() {
+            validateIfFixtureExists(version, '/gallery.json', 'gallery-fixture-good-no-images');
+          });
+          it("should validate as content", function() {
+            validateIfFixtureExists(version, '/content.json', 'gallery-fixture-good');
+          });
+        });
+
+        describe("Gallery Operation", function() {
+          var type = "/gallery_operation.json";
+          ['create', 'update', 'delete'].forEach(function (op) {
+            it("should validate gallery " + op + " operation", function () {
+              validateIfFixtureExists(version, type, "gallery-operation-" + op);
+            });
+          });
+        });
+
         describe("Story Operation", function() {
           var type = "/story_operation.json";
 
