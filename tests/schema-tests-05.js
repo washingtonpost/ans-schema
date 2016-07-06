@@ -430,8 +430,11 @@ var validate = function(version, schemaName, fixture, expected) {
 
 };
 
-
-
+var validateIfFixtureExists = function(version, schemaName, fixture, expected) {
+  if(_.has(fixtures, fixture)) {
+    validate(version, schemaName, fixture, expected);
+  }
+};
 
 
 describe("Schema: ", function() {
@@ -526,10 +529,8 @@ describe("Schema: ", function() {
           });
 
           it("should not validate a story with bad taxonomy (0.5.3+)", function() {
-            if (_.has(fixtures, 'story-fixture-bad-tag-strings')) {
-              validate(version, '/story.json', 'story-fixture-bad-tag-strings', false);
-              validate(version, '/story.json', 'story-fixture-bad-sections-addl-properties', false);
-            }
+            validateIfFixtureExists(version, '/story.json', 'story-fixture-bad-tag-strings', false);
+            validateIfFixtureExists(version, '/story.json', 'story-fixture-bad-sections-addl-properties', false);
           });
 
           it("should validate as content", function() {
@@ -538,14 +539,13 @@ describe("Schema: ", function() {
             validate(version, '/content.json', 'story-fixture-references');
           });
 
-            it("should not validate a story with bad corrections", function() {
-                validate(version, '/story.json', 'story-fixture-bad-corrections', false);
-            });
+          it("should not validate a story with bad corrections", function() {
+              validate(version, '/story.json', 'story-fixture-bad-corrections', false);
+          });
 
-            it("should not validate a story with bad interstitial link", function() {
-                validate(version, '/story.json', 'story-fixture-bad-interstitial-link', false);
-            });
-
+          it("should not validate a story with bad interstitial link", function() {
+              validate(version, '/story.json', 'story-fixture-bad-interstitial-link', false);
+          });
 
         });
 
@@ -588,82 +588,69 @@ describe("Schema: ", function() {
           });
 
           it("should not validate a reference with additional properties (0.5.4+)", function() {
-            if (_.has(fixtures, 'reference-fixture-bad-addl-props')) {
-              //console.log("Found in " + version);
-              validate(version, '/utils/reference.json', 'reference-fixture-bad-addl-props', false);
-            }
+            validateIfFixtureExists(version, '/utils/reference.json', 'reference-fixture-bad-addl-props', false);
           });
 
           it("should not validate a reference with a referent with additional properties (0.5.4+)", function() {
-            if (_.has(fixtures, 'reference-fixture-bad-more-addl-props')) {
-              //console.log("Found in " + version);
-              validate(version, '/utils/reference.json', 'reference-fixture-bad-more-addl-props', false);
-            }
+            validateIfFixtureExists(version, '/utils/reference.json', 'reference-fixture-bad-more-addl-props', false);
           });
         });
 
         describe("Clavis (0.5.5+)", function() {
-          if (_.has(fixtures, 'keyword-fixture-bad-missing-score')) {
 
-            describe("Clavis Keywords", function() {
-              it("should validate a keyword", function() {
-                validate(version, '/utils/keyword.json', 'keyword-fixture-good');
-              });
-
-              it("should not validate a keyword with a bad score", function() {
-                validate(version, '/utils/keyword.json', 'keyword-fixture-bad-score-type', false);
-              });
-
-              it("should not validate a keyword with a missing score", function() {
-                validate(version, '/utils/keyword.json', 'keyword-fixture-bad-missing-score', false);
-              });
-
-              it("should not validate a keyword with a bad tag type", function() {
-                validate(version, '/utils/keyword.json', 'keyword-fixture-bad-tag-type', false);
-              });
-
-              it("should not validate a keyword with a bad frequency type", function() {
-                validate(version, '/utils/keyword.json', 'keyword-fixture-bad-numeric-frequency', false);
-              });
+          describe("Clavis Keywords", function() {
+            it("should validate a keyword", function() {
+              validateIfFixtureExists(version, '/utils/keyword.json', 'keyword-fixture-good');
             });
 
-          }
-
-          if (_.has(fixtures, 'topic-fixture-good')) {
-            describe("Clavis Topics", function() {
-              it("should validate a topic", function() {
-                validate(version, '/utils/topic.json', 'topic-fixture-good');
-              });
-
-              it("should validate a topic with a missing name", function() {
-                validate(version, '/utils/topic.json', 'topic-fixture-good-missing-name');
-              });
-
-              it("should not validate a topic with a bad id", function() {
-                validate(version, '/utils/topic.json', 'toppic-fixture-bad-id-type', false);
-              });
-
-              it("should not validate a topic with a missing uid", function() {
-                validate(version, '/utils/topic.json', 'topic-fixture-bad-missing-uid', false);
-              });
+            it("should not validate a keyword with a bad score", function() {
+              validateIfFixtureExists(version, '/utils/keyword.json', 'keyword-fixture-bad-score-type', false);
             });
-          }
 
-          if (_.has(fixtures, 'auxiliary-fixture-good')) {
-            describe("Clavis Auxiliaries", function() {
-              it("should validate an auxiliary", function() {
-                validate(version, '/utils/auxiliary.json', 'auxiliary-fixture-good');
-              });
-
-              it("should validate an auxiliary without a name", function() {
-                validate(version, '/utils/auxiliary.json', 'auxiliary-fixture-good-optional-name');
-              });
-
-              it("should not validate an auxiliary missing an uid", function() {
-                validate(version, '/utils/auxiliary.json', 'auxiliary-fixture-bad-missing-uid');
-              });
+            it("should not validate a keyword with a missing score", function() {
+              validateIfFixtureExists(version, '/utils/keyword.json', 'keyword-fixture-bad-missing-score', false);
             });
-          }
+
+            it("should not validate a keyword with a bad tag type", function() {
+              validateIfFixtureExists(version, '/utils/keyword.json', 'keyword-fixture-bad-tag-type', false);
+            });
+
+            it("should not validate a keyword with a bad frequency type", function() {
+              validateIfFixtureExists(version, '/utils/keyword.json', 'keyword-fixture-bad-numeric-frequency', false);
+            });
+          });
+
+          describe("Clavis Topics", function() {
+            it("should validate a topic", function() {
+              validateIfFixtureExists(version, '/utils/topic.json', 'topic-fixture-good');
+            });
+
+            it("should validate a topic with a missing name", function() {
+              validateIfFixtureExists(version, '/utils/topic.json', 'topic-fixture-good-missing-name');
+            });
+
+            it("should not validate a topic with a bad id", function() {
+              validateIfFixtureExists(version, '/utils/topic.json', 'toppic-fixture-bad-id-type', false);
+            });
+
+            it("should not validate a topic with a missing uid", function() {
+              validateIfFixtureExists(version, '/utils/topic.json', 'topic-fixture-bad-missing-uid', false);
+            });
+          });
+
+          describe("Clavis Auxiliaries", function() {
+            it("should validate an auxiliary", function() {
+              validateIfFixtureExists(version, '/utils/auxiliary.json', 'auxiliary-fixture-good');
+            });
+
+            it("should validate an auxiliary without a name", function() {
+              validateIfFixtureExists(version, '/utils/auxiliary.json', 'auxiliary-fixture-good-optional-name');
+            });
+
+            it("should not validate an auxiliary missing an uid", function() {
+              validateIfFixtureExists(version, '/utils/auxiliary.json', 'auxiliary-fixture-bad-missing-uid', false);
+            });
+          });
 
         });
 
@@ -762,17 +749,15 @@ describe("Schema: ", function() {
           });
 
 
-            describe("Interstitial Link", function() {
-                if (_.has(fixtures, 'interstitial-link-fixture-good')) {
-                    it("should validate a interstitial link", function () {
-                        validate(version, type_prefix + '/table.json', 'interstitial-link-fixture-good');
-                    });
-
-                    it("should not validate a non-interstitial link", function () {
-                        validate(version, type_prefix + '/table.json', 'interstitial-link-fixture-bad', false);
-                    });
-                }
+          describe("Interstitial Link", function() {
+            it("should validate a interstitial link", function () {
+              validateIfFixtureExists(version, type_prefix + '/interstitial_link.json', 'interstitial-link-fixture-good');
             });
+
+            it("should not validate a non-interstitial link", function () {
+              validateIfFixtureExists(version, type_prefix + '/interstitial_link.json', 'interstitial-link-fixture-bad', false);
+            });
+          });
 
           describe("...all together now", function() {
             var valid_fixtures = [ "story-fixture-good", "story-fixture-references" ];
