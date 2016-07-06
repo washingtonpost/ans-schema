@@ -562,6 +562,15 @@ describe("Schema: ", function() {
           });
         });
 
+        describe("Image Operation", function() {
+          var type = "/image_operation.json";
+          ['create', 'update', 'delete'].forEach(function (op) {
+            it("should validate image " + op + " operation", function () {
+              validateIfFixtureExists(version, type, "image-operation-" + op);
+            });
+          });
+        });
+        
         describe("Story Operation", function() {
           var type = "/story_operation.json";
 
