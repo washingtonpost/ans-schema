@@ -4,7 +4,7 @@
     "title": "Auxiliary",
     "description": "Models a auxiliary used in targeting a piece of content.",
     "type": "object",
-    "required": ["id", "uid"],
+    "required": ["_id", "uid"],
     "additionalProperties": false,
     "properties": {
         "_id": {

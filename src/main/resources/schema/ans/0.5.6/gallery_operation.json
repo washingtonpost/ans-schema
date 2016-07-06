@@ -1,14 +1,14 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.6/image_operation.json",
-  "description": "An operation on an image",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.6/gallery_operation.json",
+  "description": "An operation on a gallery",
   "type": "object",
   "allOf": [{
     "properties": {
       "type": {
         "description": "Identifies this as an ANS operation",
         "type": "string",
-        "enum": [ "image-operation" ]
+        "enum": [ "gallery-operation" ]
       },
       "operation": {
         "type": "string",
@@ -22,7 +22,7 @@
       },
       "_id": {
         "type": "string",
-        "description": "The id of the item being operated on"
+        "description": "The id of the gallery being operated on"
       },
       "organization_id": {
         "type": "string",
@@ -33,8 +33,8 @@
         "description": "The version of ANS this item is written in"
       },
       "body": {
-        "description": "The image being inserted/updated/deleted",
-        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.6/image.json"
+        "description": "The gallery being inserted/updated/deleted",
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.6/gallery.json"
       }
     },
     "required": [ "type", "operation", "_id", "organization_id" ]
