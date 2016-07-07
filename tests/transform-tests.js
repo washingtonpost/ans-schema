@@ -4,12 +4,12 @@ var should = require('should'),
     dir = require('node-dir'),
     path = require('path'),
     Ajv = require('ajv'),
-    ans = require('../lib/schemas'),
+    ans = require('../lib/ans'),
     _ = require('lodash'),
-    current_version = require('../lib/version'),
-    async = require('async'),
-    transforms = require('../lib/transforms');
+    async = require('async');
 
+var current_version = ans.version;
+var transforms = ans.transforms;
 var loadedFiles = {};
 var baseDir = path.join(path.dirname(module.filename), '../src/main/resources/schema/ans');
 var loadedSchemas = {};
