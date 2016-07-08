@@ -19,7 +19,7 @@ describe("ANS Validator", function() {
         json_validator.addSchema(schema, schema.id);
       });
       loaded_schemas = s;
-      validator = new AnsValidator(json_validator, loaded_schemas);
+      validator = new AnsValidator(new Ajv({allErrors:true}), loaded_schemas);
       done();
     });
   });
