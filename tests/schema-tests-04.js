@@ -4,7 +4,7 @@ var should = require('should'),
     dir = require('node-dir'),
     path = require('path'),
     Ajv = require('ajv'),
-    ans = require('../lib/schemas');
+    ans = require('../lib/ans');
 
 var loadedFiles = {};
 var baseDir = path.join(path.dirname(module.filename), '../src/main/resources/schema/ans');

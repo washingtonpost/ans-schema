@@ -23,10 +23,7 @@
     },
     {
       "type": "image",
-      "version": "0.5.0",
-      "additional_properties": {
-        "was": "correctly spelled"
-      }
+      "version": "0.5.0"
     },
     {
       "type": "story",
