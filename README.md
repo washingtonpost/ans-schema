@@ -21,6 +21,34 @@ A few examples are provided of content documents that validate against the Washi
 2. [An Example Video](tests/fixtures/schema/0.5.6/video-fixture-nationals.json)
 3. [An Example Image](tests/fixtures/schema/0.5.6/image-fixture-good.json)
 
+## Validating Locally ##
+
+This project contains a node library that can be used to validate ANS documents locally.  It is the same validator used in the ANS Service: https://ans.arc.nile.works/validate/0.5.6
+
+You can run the validator on the command line from the project directory to validate an ANS document:
+```
+npm install
+npm run-script ans -- --ansdata='{"type":"story", "version":"0.5.6"}' --version=0.5.6 validate
+npm run-script ans -- --ansfile=test.json --version=0.5.6 validate
+```
+
+You can also load the validator as a library in your node project:
+
+```
+var ans = require('ans-schema');
+
+ans.getValidatorForVersion('0.5.6', function(err, validator) {
+  var errors = validator.validate({"type":"story", "version":"0.5.6"});
+
+  if (errors.length > 0) {
+    console.log("There were some errors: " + JSON.stringify(errors));
+  }
+  else {
+    console.log("It's valid!");
+  }
+});
+```
+
 ## Submitting a Proposal ##
 
 Changes to the ANS Schema should first be accepted by the ANS committee at The Washington Post.  To submit a proposal for a requested change to the schema, please [create an issue](https://github.com/washingtonpost/ans-schema/issues/new) in this repo's issue tracker.
