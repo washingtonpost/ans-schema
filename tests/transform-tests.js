@@ -4,12 +4,12 @@ var should = require('should'),
     dir = require('node-dir'),
     path = require('path'),
     Ajv = require('ajv'),
-    ans = require('../lib/schemas'),
+    ans = require('../lib/ans'),
     _ = require('lodash'),
-    current_version = require('../lib/version'),
-    async = require('async'),
-    transforms = require('../lib/transforms');
+    async = require('async');
 
+var current_version = ans.version;
+var transforms = ans.transforms;
 var loadedFiles = {};
 var baseDir = path.join(path.dirname(module.filename), '../src/main/resources/schema/ans');
 var loadedSchemas = {};
@@ -20,6 +20,7 @@ var FIRST_VERSION = '0.5.0';
 var LAST_VERSION = current_version.version;
 
 var fixtures = {};
+var ans_validator = null;
 
 // Helpers
 var validate = function(schemaName, ans, expected) {
@@ -31,9 +32,21 @@ var validate = function(schemaName, ans, expected) {
   //console.log("Fixture: " + fixture);
   if (result !== expected) {
     console.log(ans);
-    console.log(ajv.errors);
+    console.log(result.errors);
   }
   result.should.eql(expected);
+};
+
+var validateAns = function(transformed_ans, original_ans, version, expected) {
+
+  expected = (typeof expected === "undefined") ? [] : expected;
+  var result = ans_validator.getAllContentErrors(transformed_ans, version, "");
+  if (_.difference(result, expected).length !== 0) {
+    console.log("----ORIGINAL: " + JSON.stringify(original_ans, null, 2));
+    console.log("----TRANSFORMED: " + JSON.stringify(transformed_ans, null, 2));
+    console.log(JSON.stringify(result, null, 2));
+  }
+  _.difference(result, expected).length.should.eql(0);
 };
 
 
@@ -42,14 +55,15 @@ var validateTransformAndValidate = function validateTransformAndValidate(name, v
     console.log("      Skipping " + name + " for version " + version);
   }
   else {
-    //console.log("Validating existing fixture " + name + " against " + version + type + " before transform...");
-    validate(version + type, fixtures[version][name]);
+    console.log("      Validating " + name + " for version " + version);
+    var original = fixtures[version][name];
+    validateAns(original, null, version);
 
+    console.log("      Transforming and validating " + name);
     var transformed = transformer(fixtures[version][name]);
     var validate_version = transformed.version;
-    //console.log("Transforming " + name + " from " + version + " to " + validate_version);
 
-    validate(validate_version + type, transformed);
+    validateAns(transformed, original, validate_version);
   }
 };
 
@@ -59,6 +73,9 @@ describe("Transformations: ", function() {
   before(function(done) {
     ans.getSchemas(function(err, schemas) {
       loadedSchemas = schemas;
+
+      ans_validator = new ans.AnsValidator(new Ajv({allErrors:true}), loadedSchemas);
+
       var keys = Object.keys(loadedSchemas);
 
       for( var i = 0; i < keys.length; i++) {
@@ -114,9 +131,7 @@ describe("Transformations: ", function() {
 
     it(" validates as version " + LAST_VERSION + " after being upverted from " + FIRST_VERSION, function() {
       _.forEach(fixture_names, function(name, key) {
-        var transformed = transforms.upvert(fixtures[FIRST_VERSION][name], LAST_VERSION);
-
-        validate(LAST_VERSION + '/image.json', transformed);
+        validateTransformAndValidate(name, FIRST_VERSION, '/image.json', function(ans) { return transforms.upvert(ans, LAST_VERSION); });
       });
     });
   });
@@ -136,14 +151,15 @@ describe("Transformations: ", function() {
     it(" validates as version " + LAST_VERSION + " after being upverted from " + FIRST_VERSION, function() {
       _.forEach(fixture_names, function(name, key) {
         var transformed = transforms.upvert(fixtures[FIRST_VERSION][name], LAST_VERSION);
-        validate(LAST_VERSION + '/video.json', transformed);
+        validateTransformAndValidate(name, FIRST_VERSION, '/video.json', function(ans) { return transforms.upvert(ans, LAST_VERSION); });
       });
     });
   });
 
 
   describe("Story ", function() {
-    var fixture_names = ['story-fixture-good', 'story-fixture-references', 'story-fixture-tiny-house', 'story-fixture-table'];
+    var fixture_names = ['story-fixture-good', 'story-fixture-references', 'story-fixture-tiny-house', 'story-fixture-table', 'story-fixture-good-planning',
+                         'story-fixture-references-2', 'story-fixture-references-3', 'story-fixture-misspelled-additional-properties'];
 
     _.forIn(transforms.upverters, function(transformer, version) {
       it("can transform from " + version, function() {
@@ -155,8 +171,9 @@ describe("Transformations: ", function() {
 
     it(" validates as version " + LAST_VERSION + " after being upverted from " + FIRST_VERSION, function() {
       _.forEach(fixture_names, function(name, key) {
-        var result = transforms.upvert(fixtures[FIRST_VERSION][name], LAST_VERSION);
-        validate(LAST_VERSION + '/story.json', result);
+        //var result = transforms.upvert(fixtures[FIRST_VERSION][name], LAST_VERSION);
+        validateTransformAndValidate(name, FIRST_VERSION, '/story.json', function(ans) { return transforms.upvert(ans, LAST_VERSION); });
+        //validate(LAST_VERSION + '/story.json', result);
       });
     });
   });
@@ -189,7 +206,6 @@ describe("Transformations: ", function() {
       result.content_elements[0].should.not.have.property('additonal_properties');
       result.content_elements[0].additional_properties.should.be.Object();
       result.content_elements[0].additional_properties['was'].should.be.eql("misspelled");
-
     });
 
 
@@ -201,21 +217,12 @@ describe("Transformations: ", function() {
       result.content_elements[1].additional_properties['was'].should.be.eql("misspelled");
     });
 
-
-
     it("should be corrected in content_elements[3].content_elements[0]", function() {
       var result = getResult();
       result.content_elements[3].content_elements[0].should.have.property('additional_properties');
       result.content_elements[3].content_elements[0].should.not.have.property('additonal_properties');
       result.content_elements[3].content_elements[0].additional_properties.should.be.Object();
       result.content_elements[3].content_elements[0].additional_properties['was'].should.be.eql("misspelled");
-    });
-
-
-    it("should be left alone in content_elements[2]", function() {
-      var result = getResult();
-      result.content_elements[2].should.have.property('additional_properties');
-      result.content_elements[2].should.not.have.property('additonal_properties');
     });
 
     it("should be left alone in additional_properties.additonal_properties", function() {

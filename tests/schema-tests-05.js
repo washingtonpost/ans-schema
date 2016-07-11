@@ -5,9 +5,9 @@ var should = require('should'),
     path = require('path'),
     Ajv = require('ajv'),
     _ = require('lodash'),
-    version = require('../lib/version'),
-    ans = require('../lib/schemas');
+    ans = require('../lib/ans');
 
+var version = ans.version;
 var loadedFiles = {};
 var baseDir = path.join(path.dirname(module.filename), '../src/main/resources/schema/ans');
 var loadedSchemas = {};

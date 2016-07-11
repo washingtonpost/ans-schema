@@ -1,5 +1,12 @@
 # ANS Release Notes
 
+### 1.1.0 ###
+
+* Adds AnsValidator
+* Improves transformer testing
+* Fixes minor issues with upverters, tests
+* Removes unused fixtures
+
 ### 1.0.2 ###
 
 * Adds gallery operation
