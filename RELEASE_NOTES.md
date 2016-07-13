@@ -1,20 +1,22 @@
 # ANS Release Notes
 
-### 1.1.0 ###
+### 1.2.0 2016/07/13 ###
+
+### 1.1.0 2016/07/08 ###
 
 * Adds AnsValidator
 * Improves transformer testing
 * Fixes minor issues with upverters, tests
 * Removes unused fixtures
 
-### 1.0.2 ###
+### 1.0.2 2016/07/06 ###
 
 * Adds gallery operation
 * Adds tests for image and gallery operations
 * Fixes lots of tests that were not being run properly
 * Fixes bug in 0.5.5->0.5.6 upverter that generated invalid reference objects in taxonomy.sites
 
-### 1.0.1 ###
+### 1.0.1 2016/07/01 ###
 
 * ANS Version de-coupled from package version
 * Adds library command line for generating new ANS version stubs, cleaning up
