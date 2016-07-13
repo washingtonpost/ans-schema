@@ -177,6 +177,43 @@ describe("ANS Validator", function() {
     });
 
 
+    it("should validate items with a hyphen in their type", function() {
+      var image_operation = {
+        "_id": "1",
+        "body": {
+          "_id": "2",
+          "additional_properties": {         "alttext": "REUTERS"       },
+          "caption": "Indiana Pacers David West celebrates during Game 6 of their NBA Eastern Conference Final playoff series against the Miami Heat in Indianapolis, Indiana June 1, 2013.",
+          "credits": {
+            "photographer": [
+              {
+                "name": "BRENT SMITH",
+                "type": "author"
+              }
+            ]
+          },
+          "owner": {
+            "name": "REUTERS"
+          },
+          "revision": {
+            "revision_id": ""
+          },
+          "type": "image",
+          "url": "http://www.theglobeandmail.com/sports/basketball/article12301697.ece/BINARY/IND164_NBA.JPG",
+          "version": "0.5.6"
+        },
+        "date": "2013-06-02T03:18:49.053Z",
+        "operation": "update",
+        "organization_id": "sandbox.tgam",
+        "type": "image-operation",
+        "version": "0.5.6"
+      };
+      var errors = validator.getAllContentErrors(image_operation, version, "");
+      errors.length.should.eql(0);
+
+    });
+
+
   });
 
 
