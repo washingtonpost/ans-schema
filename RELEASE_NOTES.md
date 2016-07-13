@@ -1,6 +1,12 @@
 # ANS Release Notes
 
+### 1.2.1 2016/07/13 ###
+
+* Fixes issue where schemas whose type included a hyphen would never successfully validate (operations)
+
 ### 1.2.0 2016/07/13 ###
+
+* Adds 'sync' functionality to fix document composed of multi-version sub-documents
 
 ### 1.1.0 2016/07/08 ###
 
