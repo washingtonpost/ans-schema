@@ -1,0 +1,240 @@
+{
+  "version": "0.5.5",
+  "type": "story",
+
+  "related_content": {
+    "basic": [
+      {
+        "type":"gallery",
+        "version": "0.5.4",
+        "content_elements": [
+          {
+            "type": "image",
+            "version": "0.5.2",
+            "created_date": "2015-06-25T09:50:50.52Z",
+            "credits": {
+              "by": [
+                {
+                  "name": "Ansel Adams",
+                  "type": "author"
+                }
+              ]
+            },
+            "location": "Washington, D.C.",
+            "copyright": "(c) 2015, The Washington Post, Inc",
+            "url": "https://img.washingtonpost.com/rf/image_908w/2010-2019/WashingtonPost/2012/06/29/Outlook/Advance/Images/511969927-363.jpg",
+            "caption": "US Supreme Court Justice Antonin Scalia testifies before the Senate Judiciary Committee",
+            "subtitle": "Scalia tried to make the court a conservative stronghold. He failed.",
+            "width": 800,
+            "height": 640,
+            "taxonomy": {
+              "keywords": [
+                {
+                  "keyword": "Supreme Court"
+                }
+              ]
+            },
+            "additional_properties": {
+              "foo": "bar"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "content_elements": [
+    {
+      "type": "story",
+      "version": "0.5.0",
+
+      "last_updated_date": "2015-06-24T09:50:50.52Z",
+      "created_date": "2015-06-24T09:50:50.52Z",
+
+
+      "content_elements": [
+        {
+          "content": "this is my first paragraph",
+          "type": "text",
+          "_id": "123"
+        },
+        {
+          "content": "this is my second paragraph",
+          "type": "text",
+          "_id": "456"
+        },
+        {
+          "height": 640,
+          "width": 800,
+          "subtitle": "Never gonna let you down",
+          "caption": "Never gonna give you up",
+          "url": "https:\/\/tinyurl.com\/mqyonhb",
+          "credits": {
+            "by": [
+              {
+                "type": "author",
+                "name": "Ansel Adams"
+              }
+            ]
+          },
+          "created_date": "2015-06-25T09:50:50.52Z",
+          "version": "0.5.0",
+          "type": "image",
+          "_id": "789"
+        },
+        {
+          "items": [
+            {
+              "content": "Foo",
+              "type": "text",
+              "_id": "t1"
+            },
+            {
+              "content": "Bar",
+              "type": "text",
+              "_id": "t2"
+            },
+            {
+              "items": [
+                {
+                  "content": "Hi",
+                  "type": "text",
+                  "_id": "t4"
+                },
+                {
+                  "content": "Mom",
+                  "type": "text",
+                  "_id": "t5"
+                }
+              ],
+              "list_type": "ordered",
+              "type": "list",
+              "_id": "l2"
+            }
+          ],
+          "list_type": "unordered",
+          "type": "list",
+          "_id": "49876543210"
+        },
+        {
+          "content": "<i>Here's my html<\/i>",
+          "type": "blockquote",
+          "_id": "549876543210"
+        },
+        {
+          "channels": [
+            "web"
+          ],
+          "content": "<iframe src=\"http:\/\/www.google.com\"><\/iframe>",
+          "type": "raw_html",
+          "_id": "649876543210"
+        },
+        {
+          "channels": [
+            "ios",
+            "android"
+          ],
+          "objectUrl": "https:\/\/twitter.com\/BradDavis_WFTS\/status\/664422935130566656",
+          "providerUrl": "https:\/\/api.twitter.com\/1\/statuses\/oembed.json",
+          "type": "oembed",
+          "_id": "22222229"
+        }
+      ],
+      "editor_note": "This URL earlier linked to a post that we\u2019ve unpublished due to its flawed premise.",
+      "display_date": "2015-06-25T09:50:50.52Z",
+      "status": "published",
+      "publish_date": "2015-06-24T09:49:00.10Z",
+      "taxonomy": {
+        "keywords": [
+          {
+            "frequency": 2,
+            "score": 0.77,
+            "keyword": "Anesthesiologist"
+          }
+        ]
+      },
+      "promo_items": {
+        "basic": {
+          "height": 640,
+          "width": 800,
+          "subtitle": "Never gonna let you down",
+          "caption": "Never gonna give you up",
+          "url": "https:\/\/tinyurl.com\/mqyonhb",
+          "credits": {
+            "by": [
+              {
+                "type": "author",
+                "name": "Ansel Adams"
+              }
+            ]
+          },
+          "created_date": "2015-06-25T09:50:50.52Z",
+          "version": "0.5.0",
+          "type": "image",
+          "_id": "unique ANS id"
+        }
+      },
+      "related_content": {
+        "basic": [
+          {
+            "version": "0.5.0",
+            "type": "story",
+            "_id": "some other unique ANS id"
+          }
+        ]
+      },
+      "description": {
+        "basic": "A Vienna man went in for a colonoscopy and intended to record his doctor"
+      },
+      "headlines": {
+        "twitter": "Twitter headline!",
+        "basic": "The default headline for this story"
+      },
+      "short_url": "http:\/\/wapo.st\/1Crp6bY",
+      "canonical_url": "http:\/\/www.washingtonpost.com\/local\/anesthesiologist-trashes-sedated-patient-jury-orders-her-to-pay-500000\/2015\/06\/23\/cae05c00-18f3-11e5-ab92-c75ae6ab94b5_story.html",
+      "copyright": "(c) 2015 The Washington Post, Inc.",
+      "address": {
+        "country_name": "USA",
+        "postal_code": "20002",
+        "region": "D.C.",
+        "locality": "Washington",
+        "extended_address": "West Wing",
+        "street_address": "1600 Pennsylvania Ave"
+      },
+      "geo": {
+        "longitude": -77.0164,
+        "latitude": 38.9047
+      },
+      "location": "Washington, D.C.",
+      "language": "en",
+      "credits": {
+        "by": [
+          {
+            "social_links": [
+              {
+                "url": "https:\/\/www.twitter.com\/Anthony_Faiola",
+                "site": "twitter"
+              },
+              {
+                "url": "https:\/\/www.facebook.com\/anthony.faiola",
+                "site": "facebook"
+              }
+            ],
+            "url": "https:\/\/www.washingtonpost.com\/people\/anthony-faiola",
+            "bio": "Anthony Faiola is The Post's Berlin bureau chief. Faiola joined the Post in 1994, since then reporting for the paper from five continents and serving as bureau chief in Tokyo, Buenos Aires, New York and London.",
+            "image": {
+              "url": "https:\/\/img.washingtonpost.com\/wp-apps\/imrs.php?src=http:\/\/wp-eng-static.washingtonpost.com\/author_images\/faiolaam.jpg?ts=1405950848547&w=90&h=90",
+              "created_date": "2015-06-25T09:50:50.52Z",
+              "version": "0.5.0",
+              "type": "image",
+              "_id": "unique ANS id"
+            },
+            "type": "author",
+            "org": "The Washington Post",
+            "name": "John Q. Reporter"
+          }
+        ]
+      }
+    }
+  ]
+}
