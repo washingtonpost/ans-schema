@@ -118,7 +118,7 @@ describe("Transformations: ", function() {
     });
   });
 
-*  describe("Upverters", function() {
+  describe("Upverters", function() {
 
     describe("Image ", function() {
       var fixture_names = ['image-fixture-good', 'image-fixture-good-no-height-width'];
