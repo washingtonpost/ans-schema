@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.6/traits/trait_revision.json",
   "title": "Revision",
-  "description": "Revision information for this object",
+  "description": "Trait that applies revision information to a document. In the Arc ecosystem, many of these fields are populated in stories by the Story API.",
   "type": "object",
   "additionalProperties": false,
   "properties": {
