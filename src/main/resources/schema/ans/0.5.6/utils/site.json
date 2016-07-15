@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.6/utils/site.json",
   "title": "Site",
-  "description": "A hierarchical section or 'site' in a taxonomy.",
+  "description": "A hierarchical section or 'site' in a taxonomy. In the Arc ecosystem, these are stored in the arc-site-service.",
   "type": "object",
   "additionalProperties": false,
   "properties": {
