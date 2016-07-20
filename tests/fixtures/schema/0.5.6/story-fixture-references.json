@@ -210,13 +210,14 @@
       "channels": ["web"]
     },
     {
-      "_id": "22222229",
-      "type": "oembed",
-      "providerUrl": "https://api.twitter.com/1/statuses/oembed.json",
-      "objectUrl": "https://twitter.com/BradDavis_WFTS/status/664422935130566656",
-      "channels": ["ios", "android"]
+        "type": "reference",
 
-    }
+        "referent": {
+          "type": "oembed",
+          "provider": "https://api.twitter.com/1.1/statuses/oembed.json",
+          "id": "755767310309265408"
+        }
+      }
 
 
   ]
