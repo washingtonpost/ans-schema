@@ -11,21 +11,21 @@
       "items": {
         "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.6/utils/keyword.json"
       },
-      "description": "A list of keywords."
+      "description": "A list of keywords. In the Arc ecosystem, this list is populated by Clavis."
     },
     "topics": {
       "type": "array",
       "items": {
         "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.6/utils/topic.json"
       },
-      "description": "A list of topics."
+      "description": "A list of topics. In the Arc ecosystem, this list is populated by Clavis."
     },
     "auxiliaries": {
       "type": "array",
       "items": {
         "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.6/utils/auxiliary.json"
       },
-      "description": "A list of auxiliaries."
+      "description": "A list of auxiliaries. In the Arc ecosystem, this list is populated by Clavis."
     },
     "tags": {
       "type": "array",
@@ -34,6 +34,7 @@
       }
     },
     "sites": {
+      "description": "A list of site objects or references to them. In the Arc ecosystem, references in this list are denormalized into sites from the arc-site-service.",
       "type": "array",
       "items": {
         "oneOf": [
@@ -63,11 +64,13 @@
     },
     "seo_keywords": {
       "type": "array",
+      "description": "A list of user-editable manually entered keywords for search purposes. In the Arc ecosystem, these can be generated and saved in source CMS systems, editors, etc.",
       "items": {
         "type": "string"
       }
     },
     "stock_symbols": {
+      "description": "A list of stock symbols of companies related to this content. In the Arc ecosystem, these can be generated and saved in source CMS systems, editors, etc.",
       "type": "array",
       "items": {
         "type": "string"

@@ -7,7 +7,7 @@
   "additionalProperties": {},
   "properties": {
     "source_id": {
-      "description": "Original escenic id",
+      "description": "Original source CMS id",
       "type":"string"
     }
   }

@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.6/traits/trait_headlines.json",
   "title": "Headlines",
-  "description": "The headline(s) for the content.",
+  "description": "The headline(s) or title for this content.  The 'basic' key is required.",
   "type": "object",
   "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.6/utils/dictionary.json"
 }
