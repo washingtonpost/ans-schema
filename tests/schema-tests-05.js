@@ -822,7 +822,7 @@ describe("Schema: ", function() {
                     validate(version, type_prefix + '/text.json', element);
                     break;
                   case "reference":
-                    validate(version, type_prefix + '/reference.json', element);
+                    validate(version, '/utils/reference.json', element);
                     break;
                   case "image":
                     validate(version, '/image.json', element);

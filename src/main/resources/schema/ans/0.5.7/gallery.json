@@ -118,7 +118,7 @@
     },
     "content_restrictions": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.7/traits/trait_content_restrictions.json"
-    },
+    }
   },
   "required": [ "type", "version" ]
 }
