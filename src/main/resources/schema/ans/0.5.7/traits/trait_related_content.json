@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.7/traits/trait_related_content.json",
+  "title": "Related_Content",
+  "description": "Lists of content items or references this story is related to, arbitrarily keyed. In the Arc ecosystem, references in this object will be denormalized into the fully-inflated content objects they represent.",
+  "type": "object",
+  "patternProperties": {
+    ".*": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "anyOf": [
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.7/content.json"
+          },
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.7/utils/reference.json"
+          }
+        ]
+      }
+    }
+  }
+}

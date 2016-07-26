@@ -1,0 +1,28 @@
+{
+  "type": "story",
+  "version": "0.5.5",
+  "credits": {
+    "by": [
+      {
+        "type": "author",
+        "name": "Thomas Jefferson",
+        "additional_properties": {
+          "slug": "thomas-jefferson"
+        }
+      }
+    ]
+  },
+  "content_elements": [
+    {
+      "type": "story",
+      "version": "0.5.5",
+      "additional_properties": {
+        "slug": "foo"
+      }
+    }
+  ],
+  "additional_properties": {
+    "foo": "bar",
+    "slug": "story-about-tj-life"
+  }
+}

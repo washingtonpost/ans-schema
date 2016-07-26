@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.7/traits/trait_canonical_url.json",
+  "title": "Canonical URL",
+  "description": "The fully qualified URL to the story. In the Arc ecosystem, this will be populated by the content api from the arc-canonical-url service if present.",
+  "type": "string"
+}

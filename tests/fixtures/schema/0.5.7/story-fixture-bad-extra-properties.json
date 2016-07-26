@@ -1,0 +1,200 @@
+{
+  "foo": "bar",
+  "_id": "unique ANS id",
+  "type": "story",
+  "version": "0.5.7",
+  "created_date": "2015-06-24T09:50:50.52Z",
+  "last_updated_date": "2015-06-24T09:50:50.52Z",
+  "credits": {
+    "by": [
+      {
+        "name": "John Q. Reporter",
+        "org": "The Washington Post",
+        "type": "author",
+        "image": {
+          "_id": "unique ANS id",
+          "type": "image",
+          "version": "0.5.7",
+          "created_date": "2015-06-25T09:50:50.52Z",
+          "url": "https://img.washingtonpost.com/wp-apps/imrs.php?src=http://wp-eng-static.washingtonpost.com/author_images/faiolaam.jpg?ts=1405950848547&w=90&h=90"
+        },
+        "bio": "Anthony Faiola is The Post's Berlin bureau chief. Faiola joined the Post in 1994, since then reporting for the paper from five continents and serving as bureau chief in Tokyo, Buenos Aires, New York and London.",
+        "url": "https://www.washingtonpost.com/people/anthony-faiola",
+        "social_links": [
+          {
+            "site": "twitter",
+            "url": "https://www.twitter.com/Anthony_Faiola"
+          },
+          {
+            "site": "facebook",
+            "url": "https://www.facebook.com/anthony.faiola"
+          }
+        ]
+      }
+    ]
+  },
+  "language": "en",
+  "location": "Washington, D.C.",
+  "geo": {
+    "latitude": 38.9047,
+    "longitude": -77.0164
+  },
+  "address": {
+    "street_address": "1600 Pennsylvania Ave",
+    "extended_address": "West Wing",
+    "locality": "Washington",
+    "region": "D.C.",
+    "postal_code": "20002",
+    "country_name": "USA"
+  },
+  "copyright": "(c) 2015 The Washington Post, Inc.",
+  "canonical_url": "http://www.washingtonpost.com/local/anesthesiologist-trashes-sedated-patient-jury-orders-her-to-pay-500000/2015/06/23/cae05c00-18f3-11e5-ab92-c75ae6ab94b5_story.html",
+  "short_url": "http://wapo.st/1Crp6bY",
+  "headlines": {
+    "basic": "The default headline for this story",
+    "twitter": "Twitter headline!"
+  },
+  "description": {
+    "basic": "A Vienna man went in for a colonoscopy and intended to record his doctor"
+  },
+  "related_content": {
+    "basic": [
+      {
+        "_id": "some other unique ANS id",
+        "type": "story",
+        "version": "0.5.7"
+      }
+    ]
+  },
+  "promo_items": {
+    "basic": {
+      "_id": "unique ANS id",
+      "type": "image",
+      "version": "0.5.7",
+      "created_date": "2015-06-25T09:50:50.52Z",
+      "credits": {
+        "by": [
+          {
+            "name": "Ansel Adams",
+            "type": "author"
+          }
+        ]
+      },
+      "url": "https://tinyurl.com/mqyonhb",
+      "caption": "Never gonna give you up",
+      "subtitle": "Never gonna let you down",
+      "width": 800,
+      "height": 640
+    }
+  },
+  "taxonomy": {
+    "keywords": [
+      {
+        "keyword": "Anesthesiologist",
+        "score": 0.77,
+        "frequency": 2
+      }
+    ]
+  },
+  "publish_date": "2015-06-24T09:49:00.10Z",
+  "status": "published",
+  "display_date": "2015-06-25T09:50:50.52Z",
+  "editor_note": "This URL earlier linked to a post that we’ve unpublished due to its flawed premise.",
+  "content_elements": [
+    {
+      "_id": "123",
+      "type": "text",
+      "content": "<h1>this is my first paragraph</h1>"
+
+    },
+    {
+      "_id": "456",
+      "type": "text",
+
+      "content": "<h2>this is my second paragraph</h2>"
+    },
+    {
+      "_id": "789",
+      "type": "image",
+      "version": "0.5.7",
+
+      "created_date": "2015-06-25T09:50:50.52Z",
+      "credits": {
+        "by": [
+          {
+            "name": "Ansel Adams",
+            "type": "author"
+          }
+        ]
+      },
+      "url": "https://tinyurl.com/mqyonhb",
+      "caption": "Never gonna give you up",
+      "subtitle": "Never gonna let you down",
+      "width": 800,
+      "height": 640
+    },
+    {
+      "_id": "49876543210",
+      "type": "list",
+      "list_type": "unordered",
+
+      "items": [
+        {
+          "_id" : "t1",
+          "type" : "text",
+          "text" : "Foo"
+
+        },
+        {
+          "_id" : "t2",
+          "type": "text",
+
+          "text" : "Bar"
+        },
+        {
+          "_id" : "l2",
+          "type": "list",
+
+          "list_type": "ordered",
+          "items" : [
+            {
+              "_id": "t4",
+              "type": "text",
+
+              "text" : "Hi"
+            },
+            {
+              "_id": "t5",
+              "type": "text",
+
+              "text" : "Mom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "549876543210",
+      "type": "blockquote",
+      "content": "<i>Here's my html</i>"
+
+    },
+    {
+      "_id": "649876543210",
+      "type": "raw_html",
+      "content": "<iframe src=\"http://www.google.com\"></iframe>",
+      "channels": ["web"]
+
+    },
+    {
+      "_id": "22222229",
+      "type": "oembed",
+      "providerUrl": "https://api.twitter.com/1/statuses/oembed.json",
+      "objectUrl": "https://twitter.com/BradDavis_WFTS/status/664422935130566656",
+      "channels": ["ios", "android"]
+
+    }
+
+
+  ]
+}
