@@ -56,6 +56,9 @@
   "description": {
     "basic": "A Vienna man went in for a colonoscopy and intended to record his doctor"
   },
+  "content_restrictions": {
+    "content_code": "green"
+  },
   "related_content": {
     "basic": [
       {
@@ -64,7 +67,15 @@
           "type": "story",
           "service": "http://www.story.com/api",
           "provider": "http://www.story.com/api",
-          "id": "00001"
+          "id": "00001",
+          "_id": "unique ANS id",
+          "channel": [
+            "mobile"
+          ],
+          "subtype": "review",
+          "referent_properties":{
+            "alt_headline": "An alternate headline"
+          }
         }
       }
     ]

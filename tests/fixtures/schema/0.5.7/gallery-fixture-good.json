@@ -31,6 +31,9 @@
   "headlines" : {
     "basic" : "gallery galleryName 1"
   },
+  "content_restrictions": {
+    "content_code": "green"
+  },
   "last_updated_date" : "2016-04-02T12:02:00+00:00",
   "type" : "gallery",
   "version" : "0.5.7"
