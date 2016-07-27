@@ -1,7 +1,7 @@
 {
   "_id": "unique ANS id",
   "type": "story",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "created_date": "2015-06-24T09:50:50.52Z",
   "last_updated_date": "2015-06-24T09:50:50.52Z",
   "copyright": "(c) 2015 The Washington Post, Inc.",
@@ -22,13 +22,16 @@
       }
     ],
     "tags": [
-      "alpha", "beta", "gamma"
+      "alpha",
+      "beta",
+      "gamma"
     ],
     "sites": [
       {
         "type": "site",
         "name": "Business",
-        "path": "/business"
+        "path": "/business",
+        "primary": false
       },
       {
         "type": "site",
@@ -37,7 +40,8 @@
         "parent": "/business",
         "additional_properties": {
           "primary": true
-        }
+        },
+        "primary": true
       },
       {
         "type": "reference",
@@ -61,22 +65,24 @@
       "_id": "123",
       "type": "text",
       "content": "this is my first paragraph"
-
     },
     {
       "type": "story",
       "_id": "456",
       "taxonomy": {
-        "tags": [ "delta" ],
+        "tags": [
+          "delta"
+        ],
         "sites": [
           {
             "type": "site",
             "name": "Section 451",
-            "path": "/451"
+            "path": "/451",
+            "primary": false
           }
         ]
-      }
+      },
+      "version": "0.5.6"
     }
-
   ]
 }

@@ -63,16 +63,15 @@
     "basic": [
       {
         "type": "reference",
+        "_id": "00001",
+        "channel": [
+          "mobile"
+        ],
+
         "referent": {
           "type": "story",
-          "service": "http://www.story.com/api",
+          "id": "ABCDEFGHIJKLMNO",
           "provider": "http://www.story.com/api",
-          "id": "00001",
-          "_id": "unique ANS id",
-          "channel": [
-            "mobile"
-          ],
-          "subtype": "review",
           "referent_properties":{
             "alt_headline": "An alternate headline"
           }
@@ -259,11 +258,47 @@
     },
     {
       "_id": "22222229",
-      "type": "oembed",
-      "providerUrl": "https://api.twitter.com/1/statuses/oembed.json",
-      "objectUrl": "https://twitter.com/BradDavis_WFTS/status/664422935130566656",
-      "channels": ["ios", "android"]
+      "type": "reference",
+      "channel": ["ios", "android"],
 
+      "referent": {
+        "provider": "https://api.twitter.com/1/statuses/oembed.json",
+        "id": "https://twitter.com/BradDavis_WFTS/status/664422935130566656"
+      }
+
+    },
+    {
+      "_id": "22222220",
+      "type": "oembed_response",
+      "additional_properties": {
+        "Foo": "Bar"
+      },
+      "raw_oembed": {
+        "type": "video",
+        "version": "1.0",
+        "provider_name": "Vimeo",
+        "provider_url": "https://vimeo.com/",
+        "title": "The New Vimeo Player (You Know, For Videos)",
+        "author_name": "Vimeo Staff",
+        "author_url": "https://vimeo.com/staff",
+        "is_plus": "0",
+        "html": "<iframe src=\"https://player.vimeo.com/video/76979871\" width=\"480\" height=\"270\" frameborder=\"0\" title=\"The New Vimeo Player (You Know, For Videos)\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+        "width": 480,
+        "height": 270,
+        "duration": 62,
+        "description": "It may look (mostly) the same on the surface, but under the hood we totally rebuilt our player. Here’s a quick rundown of some of the coolest new features:\n\n• Lightning fast playback\n• Redesigned Share screen\n• Closed caption and subtitle compatible\n• HTML5 by default\n• Purchase-from-player functionality for embedded Vimeo On Demand trailers\n• More responsive than ever (go ahead, resize it, we dare you!!!)\n\nWe’re really proud of these updates. So proud that we made a spiffy new page to showcase all the reasons why we have the best video player in the galaxy. Check it out here: http://vimeo.com/player\n\nIn short, this is a player that even haters can love.",
+        "thumbnail_url": "https://i.vimeocdn.com/video/452001751_295x166.jpg",
+        "thumbnail_width": 295,
+        "thumbnail_height": 166,
+        "thumbnail_url_with_play_button": "https://i.vimeocdn.com/filter/overlay?src=https://i.vimeocdn.com/video/452001751_295x166.jpg&src=http://f.vimeocdn.com/p/images/crawler_play.png",
+        "upload_date": "2013-10-15 14:08:29",
+        "video_id": 76979871,
+        "uri": "/videos/76979871"
+      },
+      "referent": {
+        "provider": "https://vimeo.com/api/oembed.json?url=",
+        "id": "76979871"
+      }
     },
     {
       "_id": "safas9dafs097asd890f",

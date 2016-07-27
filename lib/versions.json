@@ -56,6 +56,12 @@
   {
     "name": "0.5.6",
     "schema": true,
+    "upverter": true,
+    "downverter": false
+  },
+  {
+    "name": "0.5.7",
+    "schema": true,
     "upverter": false,
     "downverter": false
   }

@@ -21,6 +21,7 @@
     "channel": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.7/traits/trait_channel.json"
     },
+
     "referent": {
       "type": "object",
       "additionalProperties": false,
@@ -42,6 +43,7 @@
           "type": "string"
         },
         "referent_properties": {
+          "additionalProperties": {},
           "description": "An object for key-value pairs that should override the values of keys with the same name in the denormalized object",
           "type": "object"
         }

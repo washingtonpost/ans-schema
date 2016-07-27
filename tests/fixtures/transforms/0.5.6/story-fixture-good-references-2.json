@@ -1,6 +1,6 @@
 {
   "type": "story",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "content_elements": [
     {
       "type": "reference",
@@ -12,7 +12,7 @@
         "provider": "https://foo.com/authorservice"
       },
       "additional_properties": {
-        "one":"two"
+        "one": "two"
       }
     }
   ]

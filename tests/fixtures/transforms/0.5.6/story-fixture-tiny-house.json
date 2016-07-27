@@ -1,16 +1,18 @@
 {
   "_id": "f8f706f0-0acc-11e5-9e39-0db921c47b93",
   "type": "story",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "created_date": "2015-07-02T09:50:50.52Z",
   "last_updated_date": "2015-07-02T09:50:50.52Z",
   "credits": {
-    "by": [{
-      "_id": "AUTHOR1",
-      "name": "Nina Patel",
-      "org": "The Washington Post",
-      "type": "author"
-    }]
+    "by": [
+      {
+        "_id": "AUTHOR1",
+        "name": "Nina Patel",
+        "org": "The Washington Post",
+        "type": "author"
+      }
+    ]
   },
   "language": "en",
   "location": "Washington, D.C.",
@@ -27,17 +29,17 @@
   "canonical_url": "http://www.washingtonpost.com/lifestyle/magazine/tiny-house-big-benefitsfreedom-from-a-mortgage--and-stuff/2015/06/23/f8f706f0-0acc-11e5-9e39-0db921c47b93_story.html",
   "short_url": "http://wapo.st/1Kavaxv",
   "headlines": {
-    "basic": "Tiny house, big benefits:\u2009Freedom from a mortgage and worries \u2014 and stuff"
+    "basic": "Tiny house, big benefits: Freedom from a mortgage and worries — and stuff"
   },
   "description": {
-    "basic": "Tiny house, big benefits:\u2009Freedom from a mortgage and worries \u2014 and stuff"
+    "basic": "Tiny house, big benefits: Freedom from a mortgage and worries — and stuff"
   },
   "related_content": {
     "basic": [
       {
         "type": "story",
         "_id": "some other unique ANS id",
-        "version": "0.5.5"
+        "version": "0.5.6"
       }
     ]
   },
@@ -45,14 +47,16 @@
     "basic": {
       "_id": "unique ANS id",
       "type": "image",
-      "version": "0.5.5",
+      "version": "0.5.6",
       "created_date": "2015-06-25T09:50:50.52Z",
-      "credits": { "by": [
-        {
-          "type": "author",
-          "name": "Ansel Adams"
-        }
-      ]},
+      "credits": {
+        "by": [
+          {
+            "type": "author",
+            "name": "Ansel Adams"
+          }
+        ]
+      },
       "url": "https://img.washingtonpost.com/rw/2010-2019/WashingtonPost/2015/06/19/Magazine/Images/6_28%20Tinyhome2_r1.tif?uuid=fXQD2BbLEeWd3OM1NUIQDA",
       "caption": "America is having a big love affair with tiny houses.",
       "width": 320,
@@ -100,7 +104,7 @@
     {
       "_id": "1000005",
       "type": "image",
-      "version": "0.5.5",
+      "version": "0.5.6",
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {
         "by": [
@@ -120,6 +124,5 @@
       "type": "text",
       "content": "But there’s one big drawback: Many municipalities haven’t made room literally or legislatively for tiny residences. It’s a challenge to find a place to park a tiny house if you don’t own land. And they often fall into a legal limbo. “Tiny houses exist in sort of a legal gray area, neither explicitly allowed nor expressly forbidden,” says tiny-home owner Jay Austin of Northeast Washington. Though the District recently banned “camping” in tiny-house-like structures, Austin says he has been told the provision is unenforceable."
     }
-
   ]
 }
