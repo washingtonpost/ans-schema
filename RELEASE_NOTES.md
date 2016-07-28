@@ -8,6 +8,7 @@
   - Added referent_properties to reference object
   - Added _id, subtype, channel to reference object (makes compatible with elements)
   - Added content_restrictions trait to content objects
+  - Add 'display_date' and 'publish_date' to story_opertation objects
 
 ### 1.2.1 2016/07/13 ###
 
