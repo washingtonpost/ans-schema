@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.7/traits/trait_subtype.json",
+  "title": "Subtype trait",
+  "type": "string",
+  "description": "A more granular type than story, gallery, etc. (E.g., column, blog_post)"
+}

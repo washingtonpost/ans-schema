@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.7/traits/trait_source.json",
+  "title": "Source",
+  "description": "Information about the original source and/or owner of this content",
+  "type": "object",
+  "additionalProperties": {},
+  "properties": {
+    "source_id": {
+      "description": "Original source CMS id",
+      "type":"string"
+    }
+  }
+}

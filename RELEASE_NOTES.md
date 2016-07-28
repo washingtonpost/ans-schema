@@ -1,5 +1,15 @@
 # ANS Release Notes
 
+### 1.2.2 2016/07/28 ###
+
+* Adds ANS 0.5.7
+  - Deleted oembed element (merged into reference object)
+  - Added oembed_response element
+  - Added referent_properties to reference object
+  - Added _id, subtype, channel to reference object (makes compatible with elements)
+  - Added content_restrictions trait to content objects
+  - Add 'display_date' and 'publish_date' to story_opertation objects
+
 ### 1.2.1 2016/07/13 ###
 
 * Fixes issue where schemas whose type included a hyphen would never successfully validate (operations)

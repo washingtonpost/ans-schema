@@ -200,13 +200,13 @@ describe("ANS Validator", function() {
           },
           "type": "image",
           "url": "http://www.theglobeandmail.com/sports/basketball/article12301697.ece/BINARY/IND164_NBA.JPG",
-          "version": "0.5.6"
+          "version": version
         },
         "date": "2013-06-02T03:18:49.053Z",
         "operation": "update",
         "organization_id": "sandbox.tgam",
         "type": "image-operation",
-        "version": "0.5.6"
+        "version": version
       };
       var errors = validator.getAllContentErrors(image_operation, version, "");
       errors.length.should.eql(0);

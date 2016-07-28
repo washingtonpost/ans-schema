@@ -441,6 +441,8 @@ describe("Schema: ", function() {
 
   test_versions.forEach(function(version) {
 
+    var versionObj = new ans.version.Version(ans.version.parse_version(version));
+
     describe("ANS ", function() {
 
       before(function(done) {
@@ -714,16 +716,25 @@ describe("Schema: ", function() {
             });
           });
 
-          describe("Oembed", function() {
-            it("should validate an oembed element", function() {
-              validate(version, type_prefix + '/oembed.json', 'oembed-fixture-good');
-            });
+          if (versionObj.lt(new ans.version.Version(ans.version.parse_version("0.5.7")))) {
+            describe("Oembed", function() {
+              it("should validate an oembed element", function() {
+                validate(version, type_prefix + '/oembed.json', 'oembed-fixture-good');
+              });
 
-            it("should not validate a non-oembed", function() {
-              validate(version, type_prefix + '/oembed.json', 'oembed-fixture-bad', false);
+              it("should not validate a non-oembed", function() {
+                validate(version, type_prefix + '/oembed.json', 'oembed-fixture-bad', false);
+              });
             });
-          });
+          }
 
+          if (versionObj.gt(new ans.version.Version(ans.version.parse_version("0.5.6")))) {
+            describe("Oembed Response", function() {
+              it("should validate an oembed response object", function() {
+                validate(version, "/utils/oembed_response.json", "oembed-response-fixture-good");
+              });
+            });
+          }
 
           describe("Text", function() {
             it("should validate a text element", function() {
@@ -797,7 +808,7 @@ describe("Schema: ", function() {
                 var document = fixtures[fixtureName];
 
                 document.content_elements.forEach(function(element) {
-                  element.type.should.equalOneOf([ "blockquote", "code", "interstitial_link", "list", "oembed", "raw_html", "table", "text", "reference", "image", "video", "audio", "story" ]);
+                  element.type.should.equalOneOf([ "blockquote", "code", "interstitial_link", "list", "oembed", "oembed_response", "raw_html", "table", "text", "reference", "image", "video", "audio", "story" ]);
 
                   switch(element.type) {
                   case "blockquote":
@@ -812,6 +823,10 @@ describe("Schema: ", function() {
                   case "oembed":
                     validate(version, type_prefix + '/oembed.json', element);
                     break;
+                  case "oembed_response":
+                    // Oembed format changed in 0.5.7
+                    validate(version, '/utils/oembed_response.json', element);
+                    break;
                   case "raw_html":
                     validate(version, type_prefix + '/raw_html.json', element);
                     break;
@@ -822,7 +837,7 @@ describe("Schema: ", function() {
                     validate(version, type_prefix + '/text.json', element);
                     break;
                   case "reference":
-                    validate(version, type_prefix + '/reference.json', element);
+                    validate(version, '/utils/reference.json', element);
                     break;
                   case "image":
                     validate(version, '/image.json', element);
