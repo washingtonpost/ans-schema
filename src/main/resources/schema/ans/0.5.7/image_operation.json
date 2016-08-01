@@ -13,10 +13,20 @@
       "operation": {
         "type": "string",
         "description": "The identifier of the operation being performed",
-        "enum": [ "insert", "update", "delete" ]
+        "enum": [ "insert", "update", "delete", "publish", "unpublish" ]
       },
       "date": {
         "description": "When the operation should be considered performed",
+        "type": "string",
+        "format": "date-time"
+      },
+      "display_date":{
+        "description": "The RFC3339-formatted dated time of the most recent date the story was (re)displayed on a public site.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "publish_date":{
+        "description": "When the story was published.",
         "type": "string",
         "format": "date-time"
       },
