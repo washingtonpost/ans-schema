@@ -594,6 +594,24 @@ describe("Schema: ", function() {
           });
         });
 
+        describe("Redirect", function() {
+            it("should validate a valid redirect", function() {
+                validateIfFixtureExists(version, '/redirect.json', 'redirect-fixture-good');
+            });
+            it("should not validate an invalid redirect", function() {
+                validateIfFixtureExists(version, '/redirect.json', 'redirect-fixture-bad', false);
+            });
+        });
+
+        describe("URL Operation", function() {
+          var type = "/url_operation.json";
+          ['insert-redirect'].forEach(function (op) {
+              it("should validate url " + op + " operation", function () {
+                  validateIfFixtureExists(version, type, "url-operation-" + op);
+              });
+          });
+        });
+
         describe("Story Operation", function() {
           var type = "/story_operation.json";
 
