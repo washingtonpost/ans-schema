@@ -1,5 +1,9 @@
 # ANS Release Notes
 
+### 1.2.3 2016/08/31 ###
+
+* Adds url operation, redirect object, new fields to image_operation to ANS 0.5.7
+
 ### 1.2.2 2016/07/28 ###
 
 * Adds ANS 0.5.7
