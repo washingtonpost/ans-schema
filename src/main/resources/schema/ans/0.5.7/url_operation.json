@@ -15,6 +15,11 @@
         "description": "The identifier of the operation being performed",
         "enum": [ "insert-redirect" ]
       },
+      "redirect_type": {
+        "description": "Identifies the redirect type this operation is.",
+        "type": "string",
+        "enum": [ "vanity", "story" ]
+      },
       "date": {
         "description": "When the operation should be considered performed",
         "type": "string",
