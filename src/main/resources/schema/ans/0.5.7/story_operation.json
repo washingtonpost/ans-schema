@@ -56,6 +56,15 @@
       "story": {
         "description": "The story object being created/updated/deleted/published/unpublished",
         "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.7/story.json"
+      },
+      "all_published_revisions": {
+        "description": "A map of editions to revisions that are associated with this operation's parent story. Informational only (does not affect operation).",
+        "type": "object",
+        "patternProperties": {
+          ".*": {
+            "type": "string"
+          }
+        }
       }
     },
     "required": [ "type", "operation", "story_id" ]
