@@ -137,6 +137,10 @@
     "height": {
       "description": "Height for the image.",
       "type": "integer"
+    },
+    "licensable": {
+      "description": "True if the image can legally be licensed to others.",
+      "type": "boolean"
     }
   },
   "required": [ "type", "version" ]
