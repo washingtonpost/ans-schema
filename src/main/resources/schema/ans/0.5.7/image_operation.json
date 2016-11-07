@@ -21,18 +21,18 @@
         "format": "date-time"
       },
       "display_date":{
-        "description": "The RFC3339-formatted dated time of the most recent date the story was (re)displayed on a public site.",
+        "description": "The RFC3339-formatted dated time of the most recent date the image was (re)displayed on a public site.",
         "type": "string",
         "format": "date-time"
       },
       "publish_date":{
-        "description": "When the story was published.",
+        "description": "When the image was published.",
         "type": "string",
         "format": "date-time"
       },
       "_id": {
         "type": "string",
-        "description": "The id of the item being operated on"
+        "description": "The id of the image being operated on"
       },
       "organization_id": {
         "type": "string",
