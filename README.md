@@ -4,7 +4,7 @@ JSON schema definition and supporting example/validation code for The Washington
 *NOTE* This schema is in development and subject to change.
 
 # Overview
-ANS ("ARC Native Specification") is the collection of schema documents that comprise the Washington Post's definition of "content", in so far as content is passed back and forth between systems in the Arc ecosystem of applications.
+ANS ("Arc Native Specification") is the collection of schema documents that comprise the Washington Post's definition of "content", in so far as content is passed back and forth between systems in the Arc ecosystem of applications.
 
 ## Schema files
 ANS Schema files are defined with the [JSON Schema specification](https://spacetelescope.github.io/understanding-json-schema/index.html).  Schemas are defined in individual files under the [src/main/resrouces/schema/ans/_version_/](src/main/resources/schema/ans/0.5.6/) directory.
@@ -69,7 +69,7 @@ ans.getValidatorForVersion('0.5.6', function(err, validator) {
 
 ## Other Commands ##
 
-##### upvert ####
+### upvert ###
 Converts a valid document in an old version of ANS to newer version.
 
 ```
@@ -103,7 +103,7 @@ npm run-script ans -- --ansdata='{"type":"story", "version":"0.5.0", "content_el
 }
 ```
 
-#### sync ####
+### sync ###
 
 Fixes an invalid document composed of valid sub-documents of differing ANS versions. Essentially this converts a very specific kind of invalid document to a valid one by selective upverting.
 
@@ -144,7 +144,7 @@ A proposal should be a short document that includes the following:
 
 ## Contributing to this Repository ##
 
-The standard method for contributing to this repository is pull requests.  For the time being, each new version requires a specific series of manual changes to the repository, listed below.
+The standard method for contributing to this repository is via pull requests.  For the time being, each new version requires a specific series of manual changes to the repository, listed below.
 
 * Branch or fork this repository.
 * Run `npm install`
@@ -155,5 +155,5 @@ The standard method for contributing to this repository is pull requests.  For t
   * Generate test fixtures for this new upverter
   * Add the new version to the internal version sequence
 * If for some reason you want to remove your new version, you can run: `npm run-script ans -- --version=x.x.x cleanup` to remove the files created by the above command.
-* Run npm test.
+* Run `npm test`.
 * Create pull request for this collection of changes.
