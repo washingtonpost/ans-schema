@@ -4,6 +4,7 @@
   "version": "0.5.7",
   "created_date": "2015-06-24T09:50:50.52Z",
   "last_updated_date": "2015-06-24T09:50:50.52Z",
+  "channels": ["ios", "android"],
   "credits": {
     "by": [
       {

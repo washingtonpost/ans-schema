@@ -5,6 +5,7 @@
     "coverPhoto" : null,
     "published" : false
   },
+  "channels": ["web"],
   "content_elements" : [ {
     "_id" : "XYZABC2",
     "additional_properties" : {
