@@ -461,18 +461,25 @@ describe("Transformations: ", function() {
 
     describe("0.5.6 to 0.5.7", function() {
       describe("ombed", function() {
-        it("should not convert additional_properties or referent objects", function() {
+        it("should not convert additional_properties or referent objects", function () {
           var result = transforms.upvert(fixtures['0.5.6']['story-fixture-oembed'], '0.5.7');
           result.content_elements[0].additional_properties.type.should.eql("oembed");
           result.content_elements[1].referent.type.should.eql("oembed");
         });
 
-        it("should convert oembed objects to references", function() {
+        it("should convert oembed objects to references", function () {
           var result = transforms.upvert(fixtures['0.5.6']['story-fixture-oembed'], '0.5.7');
           result.content_elements[2].additional_properties.abraham.should.eql("lincoln");
           result.content_elements[2].type.should.eql("reference");
           result.content_elements[2].referent.provider.should.eql("https://api.twitter.com/1/statuses/oembed.json");
           result.content_elements[2].referent.id.should.eql("https://twitter.com/BradDavis_WFTS/status/664422935130566656");
+        });
+      });
+      describe("channels", function() {
+        it("should convert channel to channels", function() {
+          var result = transforms.upvert(fixtures['0.5.6']['story-fixture-references-with-channel'], '0.5.7');
+          result.content_elements[0].channels[0].should.eql("web");
+          result.content_elements[1].channels[0].should.eql("post-it-note");
         });
       });
     });
