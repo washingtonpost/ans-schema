@@ -2,6 +2,7 @@
   "_id": "unique ANS id",
   "type": "image",
   "version": "0.5.7",
+  "channels": ["web", "print"],
   "created_date": "2015-06-25T09:50:50.52Z",
   "credits": {
     "by": [
@@ -33,6 +34,7 @@
   "subtitle": "Scalia tried to make the court a conservative stronghold. He failed.",
   "width": 800,
   "height": 640,
+  "licensable": true,
   "taxonomy": {
     "keywords": [
       {

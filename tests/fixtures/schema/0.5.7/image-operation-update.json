@@ -21,6 +21,7 @@
       } ]
     },
     "height" : 600,
+    "licensable": true,
     "subtitle" : "A test photo",
     "type" : "image",
     "url" : "http://anglerfish/fake/url/",
