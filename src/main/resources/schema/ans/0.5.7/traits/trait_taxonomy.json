@@ -33,6 +33,32 @@
         "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.7/utils/tag.json"
       }
     },
+    "primary_site": {
+      "description": "A primary site object or reference to one. In the Arc ecosystem, a reference here is denormalized into a site from the arc-site-service.",
+      "oneOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.7/utils/site.json"
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.7/utils/reference.json"
+            },
+            {
+              "properties": {
+                "referent": {
+                  "properties": {
+                    "type": {
+                      "enum": [ "site" ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
     "sites": {
       "description": "A list of site objects or references to them. In the Arc ecosystem, references in this list are denormalized into sites from the arc-site-service.",
       "type": "array",

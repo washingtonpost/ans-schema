@@ -104,6 +104,14 @@
         "frequency": 2
       }
     ],
+    "primary_site": {
+      "type": "reference",
+      "referent": {
+        "id": "news",
+        "provider": "https://sites.arcpublishing.com/api",
+        "type": "site"
+      }
+    },
     "sites": [
       {
         "type": "site",
