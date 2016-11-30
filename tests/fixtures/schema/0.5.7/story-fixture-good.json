@@ -119,6 +119,17 @@
         "frequency": 2
       }
     ],
+    "primary_site": {
+      "_id": "site_primary",
+      "type": "site",
+      "version": "0.5.7",
+      "name": "News",
+      "description": "General News",
+      "path": "/news",
+      "additional_properties": {
+        "baz": "bag"
+      }
+    },
     "sites": [
       {
         "_id": "site_1",
