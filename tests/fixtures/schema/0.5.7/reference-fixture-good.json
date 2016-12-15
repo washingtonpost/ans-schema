@@ -6,5 +6,10 @@
     "service": "http://www.credits.com/api",
     "provider": "http://www.credits.com/api",
     "id": "00001"
+    "referent_properties": {
+      "additional_properties": {
+        "foo": "bar"
+      }
+    }
   }
 }
