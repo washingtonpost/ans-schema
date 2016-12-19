@@ -1,0 +1,4 @@
+{
+    "id": "12345",
+    "name": "This should fail because it is missing the uid field."
+}

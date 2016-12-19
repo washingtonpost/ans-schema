@@ -484,6 +484,10 @@ describe("Transformations: ", function() {
       });
     });
 
+    describe("0.5.7 to 0.5.8", function() {
+
+    });
+
   });
 
   describe("Synchronizer", function() {
