@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/utils/auxiliary.json",
+    "title": "Auxiliary",
+    "description": "Models a auxiliary used in targeting a piece of content.",
+    "type": "object",
+    "required": ["_id", "uid"],
+    "additionalProperties": false,
+    "properties": {
+        "_id": {
+            "type": "string",
+            "description": "The unique identifier for this auxiliary."
+        },
+        "name": {
+            "type": "string",
+            "description": "The general name for this auxiliary."
+        },
+        "uid": {
+            "type": "string",
+            "description": "A short identifier for this auxiliary. Usually used in cases where a long form id cannot work."
+        }
+    }
+}

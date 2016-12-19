@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_location.json",
+  "title": "Location related trait",
+  "description": "A description of the location, useful if a full address or lat/long specification is overkill.",
+  "type": "string"
+}
