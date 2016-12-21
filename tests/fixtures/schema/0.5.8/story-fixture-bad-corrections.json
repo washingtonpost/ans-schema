@@ -17,7 +17,7 @@
         "image": {
           "_id": "unique ANS id",
           "type": "image",
-  "format": "ans",
+          "format": "ans",
           "version": "0.5.8",
           "created_date": "2015-06-25T09:50:50.52Z",
           "url": "https://img.washingtonpost.com/wp-apps/imrs.php?src=http://wp-eng-static.washingtonpost.com/author_images/faiolaam.jpg?ts=1405950848547&w=90&h=90"
@@ -66,7 +66,7 @@
       {
         "_id": "some other unique ANS id",
         "type": "story",
-  "format": "ans",
+        "format": "ans",
         "version": "0.5.8"
       }
     ]
@@ -75,7 +75,7 @@
     "basic": {
       "_id": "unique ANS id",
       "type": "image",
-  "format": "ans",
+      "format": "ans",
       "version": "0.5.8",
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {
@@ -110,7 +110,7 @@
     {
       "_id": "789",
       "type": "image",
-  "format": "ans",
+      "format": "ans",
       "version": "0.5.8",
 
       "created_date": "2015-06-25T09:50:50.52Z",

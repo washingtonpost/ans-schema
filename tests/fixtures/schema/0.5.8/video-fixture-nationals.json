@@ -141,7 +141,7 @@
   "promo_image": {
     "_id": "5592c09fe4b082c8417f3f72",
     "type": "image",
-  "format": "ans",
+    "format": "ans",
     "version": "0.5.8",
     "created_date": "2015-07-01T09:50:50.52Z",
     "location": "Washington, D.C.",

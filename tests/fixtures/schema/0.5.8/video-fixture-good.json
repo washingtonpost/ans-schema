@@ -67,7 +67,7 @@
   "promo_image": {
     "_id": "unique image id",
     "type": "image",
-  "format": "ans",
+    "format": "ans",
     "version": "0.5.8",
     "created_date": "2015-06-25T09:50:50.52Z",
     "location": "Washington, D.C.",
