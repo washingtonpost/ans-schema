@@ -4,17 +4,17 @@ var ans = require('../lib/ans'),
     _ = require('lodash'),
     loaded_schemas = {};
 
-var version = ans.version.version;
+var v = ans.version.version;
 var json_validator = new Ajv({allErrors:true});
 var validator = null;
 var AnsValidator = ans.AnsValidator;
 
 var getBaseStoryForVersion = function(version) {
-  if (version === "0.5.8") {
-    return { "type": "story", "version": version, "format": "ans" };
+  if (v.parse_version(version).lt(v.parse_version("0.5.8"))) {
+    return { "type": "story", "version": version };
   }
   else {
-    return { "type": "story", "version": version };
+    return { "type": "story", "version": version, "format": "ans" };
   }
 };
 
