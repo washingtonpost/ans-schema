@@ -66,6 +66,7 @@
       "basic" : "Gallery of Test Images"
     },
     "type" : "gallery",
+    "format": "ans",
     "version" : "0.5.8"
   },
   "date" : "2016-04-02T12:02:00+00:00",

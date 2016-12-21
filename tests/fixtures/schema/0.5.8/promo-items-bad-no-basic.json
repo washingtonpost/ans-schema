@@ -1,6 +1,7 @@
 {
   "secondary_promo_item": {
     "type": "story",
+    "format": "ans",
     "version": "0.5.8",
     "headlines": {
       "basic": "A very basic story"

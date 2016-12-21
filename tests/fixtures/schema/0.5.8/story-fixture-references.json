@@ -1,6 +1,7 @@
 {
   "_id": "unique ANS id",
   "type": "story",
+  "format": "ans",
   "version": "0.5.8",
   "created_date": "2015-06-24T09:50:50.52Z",
   "last_updated_date": "2015-06-24T09:50:50.52Z",
@@ -53,6 +54,7 @@
       {
         "_id": "some other unique ANS id",
         "type": "story",
+        "format": "ans",
         "version": "0.5.8"
       },
       {
@@ -70,6 +72,7 @@
     "basic": {
       "_id": "unique ANS id",
       "type": "image",
+      "format": "ans",
       "version": "0.5.8",
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {
@@ -148,6 +151,7 @@
     {
       "_id": "789",
       "type": "image",
+      "format": "ans",
       "version": "0.5.8",
 
       "created_date": "2015-06-25T09:50:50.52Z",

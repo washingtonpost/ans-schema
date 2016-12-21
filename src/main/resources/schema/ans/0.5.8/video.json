@@ -6,6 +6,10 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "format": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_format.json"
+    },
+
     "type": {
       "type": "string",
       "enum": [ "video" ]
@@ -156,5 +160,5 @@
       "description": "A promo/leader image to the video."
     }
   },
-  "required": [ "type", "version" ]
+  "required": [ "type", "version", "format" ]
 }

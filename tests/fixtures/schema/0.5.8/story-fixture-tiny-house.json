@@ -1,6 +1,7 @@
 {
   "_id": "f8f706f0-0acc-11e5-9e39-0db921c47b93",
   "type": "story",
+  "format": "ans",
   "version": "0.5.8",
   "created_date": "2015-07-02T09:50:50.52Z",
   "last_updated_date": "2015-07-02T09:50:50.52Z",
@@ -37,6 +38,7 @@
     "basic": [
       {
         "type": "story",
+        "format": "ans",
         "_id": "some other unique ANS id",
         "version": "0.5.8"
       }
@@ -46,6 +48,7 @@
     "basic": {
       "_id": "unique ANS id",
       "type": "image",
+      "format": "ans",
       "version": "0.5.8",
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": { "by": [
@@ -101,6 +104,7 @@
     {
       "_id": "1000005",
       "type": "image",
+      "format": "ans",
       "version": "0.5.8",
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {

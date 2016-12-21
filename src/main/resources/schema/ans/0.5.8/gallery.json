@@ -7,6 +7,10 @@
   "additionalProperties": false,
 
   "properties": {
+    "format": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_format.json"
+    },
+
     "type": {
       "type": "string",
       "enum": [ "gallery" ]
@@ -123,5 +127,5 @@
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_content_restrictions.json"
     }
   },
-  "required": [ "type", "version" ]
+  "required": [ "type", "version", "format" ]
 }

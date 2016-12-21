@@ -485,9 +485,23 @@ describe("Transformations: ", function() {
     });
 
     describe("0.5.7 to 0.5.8", function() {
-
+      describe("format", function() {
+        it("should be added to top-level content types", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good'], '0.5.8');
+          result.should.have.property('format');
+          result.format.should.eql('ans');
+        });
+        it("should be added recursively", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good'], '0.5.8');
+          result.content_elements[2].should.have.property('format');
+          result.content_elements[2].format.should.eql('ans');
+        });
+        it("should not be added to content elements that are not content types", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good'], '0.5.8');
+          result.content_elements[0].should.not.have.property('format');
+        });
+      });
     });
-
   });
 
   describe("Synchronizer", function() {

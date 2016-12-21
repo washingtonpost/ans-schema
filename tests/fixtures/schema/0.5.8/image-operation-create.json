@@ -24,6 +24,7 @@
     "licensable": false,
     "subtitle" : "A test photo",
     "type" : "image",
+    "format": "ans",
     "url" : "http://anglerfish/fake/url/",
     "version" : "0.5.8",
     "width" : 400
