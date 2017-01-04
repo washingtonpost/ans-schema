@@ -102,6 +102,7 @@
       "_id": "1000005",
       "type": "image",
       "version": "0.5.8",
+      "alignment": "left",
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {
         "by": [

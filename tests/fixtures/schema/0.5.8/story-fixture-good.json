@@ -199,6 +199,7 @@
       "_id": "789",
       "type": "image",
       "version": "0.5.8",
+      "alignment": "left",
 
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {
@@ -214,6 +215,7 @@
       "subtitle": "Never gonna let you down",
       "width": 800,
       "height": 640
+
     },
     {
       "_id": "49876543210",
@@ -317,9 +319,23 @@
       "type": "interstitial_link",
       "url": "https://www.washingtonpost.com/politics/can-clinton-and-trump-ride-to-big-victories-in-next-weeks-acela-primary/2016/04/20/ea6454fc-064e-11e6-bdcb-0133da18418d_story.html?hpid=hp_rhp-top-table-main_5states-1025a%3Ahomepage%2Fstory",
       "content": "Can Clinton and Trump ride to big victories in next weeks Acela primary?"
+    },
+    {
+      "_id": "safas9dafs097asd8911",
+      "type": "element_group",
+      "content_elements": [
+        {
+          "type": "image",
+          "url": "http://foo.com/foo.jpg",
+          "caption": "Foo"
+        },
+        {
+          "type": "image",
+          "url": "http://bar.com/bar.jpg",
+          "caption": "Bar"
+        }
+      ]
     }
-
-
   ],
 
   "corrections": [

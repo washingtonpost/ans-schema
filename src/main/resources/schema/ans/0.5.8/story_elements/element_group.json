@@ -1,13 +1,13 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/story_elements/list.json",
-  "title": "A list.",
-  "description": " list of text items or other lists",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/story_elements/element_group.json",
+  "description": "A sub-sequence of related content elements",
   "type": "object",
   "additionalProperties": false,
   "properties": {
     "type": {
-      "enum": [ "list" ]
+      "type": "string",
+      "enum": [ "element_group" ]
     },
     "_id": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_id.json"
@@ -25,18 +25,9 @@
     "additional_properties": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_additional_properties.json"
     },
-
-    "list_type": {
-      "type": "string",
-      "description": "The type of list to render as (ordered, unordered, etc)"
-    },
-    "items": {
-      "type": "array",
-      "items": {
-        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/story_elements/list_element.json"
-      },
-      "description": "The items in this list."
+    "content_elements": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_content_elements.json"
     }
   },
-  "required": [ "type" ]
+  "required": [ "type", "content_elements" ]
 }

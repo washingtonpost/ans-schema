@@ -594,6 +594,12 @@ describe("Schema: ", function() {
           });
         });
 
+        describe("Alignment", function() {
+          it("should not validate an object with an invalid alignment setting", function() {
+            validateIfFixtureExists(version, '/image.json', 'image-fixture-bad-alignment', false);
+          });
+        });
+
         describe("Redirect", function() {
             it("should validate a valid redirect", function() {
                 validateIfFixtureExists(version, '/redirect.json', 'redirect-fixture-good');
@@ -818,6 +824,12 @@ describe("Schema: ", function() {
             });
           });
 
+          describe("Element Group", function() {
+            it("should validate an element group", function() {
+              validateIfFixtureExists(version, type_prefix + '/element_group.json', 'element-group-fixture-good');
+            });
+          });
+
           describe("...all together now", function() {
             var valid_fixtures = [ "story-fixture-good", "story-fixture-references" ];
             valid_fixtures.forEach(function(fixtureName) {
@@ -826,7 +838,7 @@ describe("Schema: ", function() {
                 var document = fixtures[fixtureName];
 
                 document.content_elements.forEach(function(element) {
-                  element.type.should.equalOneOf([ "blockquote", "code", "interstitial_link", "list", "oembed", "oembed_response", "raw_html", "table", "text", "reference", "image", "video", "audio", "story" ]);
+                  element.type.should.equalOneOf([ "blockquote", "code", "interstitial_link", "list", "oembed", "oembed_response", "raw_html", "table", "text", "reference", "image", "video", "audio", "story", "element_group" ]);
 
                   switch(element.type) {
                   case "blockquote":
