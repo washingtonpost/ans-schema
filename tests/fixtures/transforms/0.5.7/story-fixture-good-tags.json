@@ -1,0 +1,33 @@
+{
+  "type": "story",
+  "version": "0.5.7",
+  "taxonomy": {
+    "tags": [
+      {
+        "_id": "ABC",
+        "text": "Foo"
+      },
+      {
+        "text": "Bar",
+        "tag": "wrong"
+      },
+      {
+        "_id": "DEF",
+        "tag": "Baz"
+      },
+      {
+        "_id": "GHI",
+        "text": "Car",
+        "description": "Not automobiles",
+        "slug": "car",
+        "prop1": "foo",
+        "prop2": "bar",
+        "additional_properties": {
+          "one": "two",
+          "prop1": "baz",
+          "slug": "carrr--"
+        }
+      }
+    ]
+  }
+}
