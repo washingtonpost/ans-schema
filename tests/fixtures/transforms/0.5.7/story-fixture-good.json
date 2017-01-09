@@ -120,6 +120,19 @@
         },
         "primary": false
       }
+    ],
+    "tags": [
+      {
+        "_id": "tag1",
+        "text": "tag one",
+        "description": "The first tag",
+        "slug": "tag-one",
+        "foo": "bar"
+      },
+      {
+        "_id": "tag2",
+        "tag": "tag two"
+      }
     ]
   },
   "publish_date": "2015-06-24T09:49:00.10Z",

@@ -485,9 +485,66 @@ describe("Transformations: ", function() {
     });
 
     describe("0.5.7 to 0.5.8", function() {
+      describe("Tags", function() {
+        it("should leave valid tags alone", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good-tags'], '0.5.8');
+          result.taxonomy.tags[0]._id.should.eql("ABC");
+          result.taxonomy.tags[0].text.should.eql("Foo");
+          result.taxonomy.tags[0].should.not.have.property("additional_properties");
+          result.taxonomy.tags[0].should.not.have.property("slug");
+          result.taxonomy.tags[0].should.not.have.property("description");
+          result.taxonomy.tags[0].should.not.have.property("tag");
 
+          result.taxonomy.tags[1].text.should.eql("Bar");
+        });
+
+        it("should promote 'tag' to 'text' where the former exists and the latter does not", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good-tags'], '0.5.8');
+          result.taxonomy.tags[2].text.should.eql("Baz");
+        });
+
+        it("should not promote 'tag' to 'text' where the latter exists", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good-tags'], '0.5.8');
+          result.taxonomy.tags[1].text.should.eql("Bar");
+        });
+
+        it("should leave in place 0.5.8 fields 'description' and 'slug' if they exist", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good-tags'], '0.5.8');
+          result.taxonomy.tags[3].slug.should.eql("car");
+          result.taxonomy.tags[3].description.should.eql("Not automobiles");
+        });
+
+        it("should add non-spec properties to additional properties", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good-tags'], '0.5.8');
+          result.taxonomy.tags[3].additional_properties.prop1.should.eql("foo");
+          result.taxonomy.tags[3].additional_properties.prop2.should.eql("bar");
+        });
+
+        it("should preserve non-colliding additional propeties when possible", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good-tags'], '0.5.8');
+          result.taxonomy.tags[3].additional_properties.one.should.eql("two");
+          result.taxonomy.tags[3].additional_properties.slug.should.eql("carrr--");
+        });
+
+        it("should copy original additional_properties to sub-object", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good-tags'], '0.5.8');
+          result.taxonomy.tags[3].additional_properties.should.have.property("additional_properties");
+          result.taxonomy.tags[3].additional_properties.additional_properties.one.should.eql("two");
+          result.taxonomy.tags[3].additional_properties.additional_properties.prop1.should.eql("baz");
+          result.taxonomy.tags[3].additional_properties.additional_properties.slug.should.eql("carrr--");
+
+          result.taxonomy.tags[1].additional_properties.tag.should.eql("wrong");
+          result.taxonomy.tags[2].additional_properties.tag.should.eql("Baz");
+        });
+
+        it("should not create second additional_properties if first did not exist", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good-tags'], '0.5.8');
+          result.taxonomy.tags[1].additional_properties.should.not.have.property("additional_properties");
+          result.taxonomy.tags[2].additional_properties.should.not.have.property("additional_properties");
+
+        });
+      });
     });
-
   });
 
   describe("Synchronizer", function() {

@@ -105,7 +105,12 @@
     "tags": [
       {
         "_id": "fred",
-        "text": "Fred"
+        "text": "Fred",
+        "slug": "fred",
+        "description": "For all things Fred",
+        "additional_properties": {
+          "foo": "bar"
+        }
       },
       {
         "_id": "writing",

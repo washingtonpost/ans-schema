@@ -1,5 +1,26 @@
 # ANS Release Notes
 
+### 1.2.7 2017/01/09 ###
+
+* Adds `description`, `slug`, `additional_properties` properties to tags
+* Disables non-spec properties on tags
+
+### 1.2.6 2017/01/05 ###
+
+* Creates ANS 0.5.8
+  * Adds `alignment` property
+  * Adds `element_group` content element
+
+### 1.2.5 2016/11/30 ###
+
+* Adds `primary_site` to taxonomy
+
+### 1.2.4 2016/11/11 ###
+
+* Adds `licensable` to images
+* Adds `channels` to top-level content items (standardizes on "channels" instead of "channel")
+* Fixes `description` in images
+
 ### 1.2.3 2016/08/31 ###
 
 * Adds url operation, redirect object, new fields to image_operation to ANS 0.5.7
