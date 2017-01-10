@@ -396,7 +396,6 @@ describe("ANS Schema", function() {
         //tv4.addSchema(schema);
       }
 
-
     });
   });
 });
@@ -830,6 +829,15 @@ describe("Schema: ", function() {
             });
           });
 
+          describe("Quote", function() {
+            it("should not validate a quote with an invalid citation", function() {
+              validateIfFixtureExists(version, type_prefix + '/quote.json', 'quote-fixture-bad-citation', false);
+            });
+            it("should not validate a quote with no content elements", function() {
+              validateIfFixtureExists(version, type_prefix + '/quote.json', 'quote-fixture-bad-content-elements', false);
+            });
+          });
+
           describe("...all together now", function() {
             var valid_fixtures = [ "story-fixture-good", "story-fixture-references" ];
             valid_fixtures.forEach(function(fixtureName) {
@@ -838,9 +846,12 @@ describe("Schema: ", function() {
                 var document = fixtures[fixtureName];
 
                 document.content_elements.forEach(function(element) {
-                  element.type.should.equalOneOf([ "blockquote", "code", "interstitial_link", "list", "oembed", "oembed_response", "raw_html", "table", "text", "reference", "image", "video", "audio", "story", "element_group" ]);
+                  element.type.should.equalOneOf([ "blockquote", "code", "interstitial_link", "list", "oembed", "oembed_response", "raw_html", "table", "text", "reference", "image", "video", "audio", "story", "element_group", "quote" ]);
 
                   switch(element.type) {
+                  case "quote":
+                    validate(version, type_prefix + '/quote.json', element);
+                    break;
                   case "blockquote":
                     validate(version, type_prefix + '/blockquote.json', element);
                     break;

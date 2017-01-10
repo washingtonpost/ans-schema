@@ -269,6 +269,38 @@
 
     },
     {
+      "_id": "549876543210",
+      "type": "quote",
+      "content_elements": [
+        {
+          "type": "text",
+          "content": "I really like this sample sentence. Maybe we should use it?"
+        },
+        {
+          "type": "quote",
+          "content_elements": [
+            {
+              "type": "image",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Underwoodfive.jpg/220px-Underwoodfive.jpg"
+            },
+            {
+              "type": "text",
+              "content": "Now is the time for all good men to come to the aid of their party."
+            }
+          ],
+          "citation": {
+            "type": "text",
+            "content": "Charles E. Weller; <em>The Early History of the Typewriter</em>, p. 21 (1918)"
+          }
+        }
+      ],
+      "citation": {
+        "type": "text",
+        "content": "Me, on Slack, two minutes ago."
+      }
+    },
+
+    {
       "_id": "649876543210",
       "type": "raw_html",
       "content": "<iframe src=\"http://www.google.com\"></iframe>",
