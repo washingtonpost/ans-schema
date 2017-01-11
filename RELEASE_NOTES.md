@@ -1,9 +1,15 @@
 # ANS Release Notes
 
+### 1.2.8 2017/01/10 ###
+
+* Adds `quote` element #89
+
 ### 1.2.7 2017/01/09 ###
 
-* Adds `description`, `slug`, `additional_properties` properties to tags
-* Disables non-spec properties on tags
+* Adds `alignment` property on all elements #85
+* Adds `element_group` element #84
+* Adds `description`, `slug`, `additional_properties` properties to tags #87
+* Disables non-spec properties on tags #87
 
 ### 1.2.6 2017/01/05 ###
 

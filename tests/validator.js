@@ -214,6 +214,29 @@ describe("ANS Validator", function() {
     });
 
 
+    it("should return an error if a nested content element does not validate against its own schema", function() {
+      var bad_inner_quote = {
+        "type": "story",
+        "version": "0.5.8",
+        "content_elements": [{
+          "type": "quote",
+          "content_elements": [
+            {
+              "type": "quote",
+              "content_elements": [{
+                "type": "text",
+                "content": "Citation should be a text object"
+              }],
+              "citation": "Inner citation is broken."
+            }
+          ]
+        }]
+      };
+      var errors = validator.getAllContentErrors(bad_inner_quote, version, "");
+      errors.length.should.eql(1);
+
+    });
+
   });
 
 
