@@ -164,6 +164,19 @@
     ],
     "stock_symbols": [ "IBM", "INTL", "AMZN", "MRSFT" ]
   },
+  "label": {
+    "basic": {
+      "text": "The Kicker",
+      "url": "https://www.washingtonpost.com/kicker",
+      "display": true,
+      "additional_properties": {
+        "bar": "foo"
+      }
+    },
+    "another_one": {
+      "text": "Another One"
+    }
+  },
   "publish_date": "2015-06-24T09:49:00.10Z",
   "first_publish_date": "2015-06-24T09:49:00.10Z",
   "status": "published",
@@ -393,7 +406,13 @@
   },
 
   "source": {
-    "source_id": "washpost"
+    "source_id": "1234-5678",
+    "source_type": "Original",
+    "name": "The Washington Post",
+    "system": "Methode",
+    "additional_properties": {
+      "foo": "bar"
+    }
   },
 
   "syndication": {

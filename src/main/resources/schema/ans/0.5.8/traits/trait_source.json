@@ -4,11 +4,27 @@
   "title": "Source",
   "description": "Information about the original source and/or owner of this content",
   "type": "object",
-  "additionalProperties": {},
+  "additionalProperties": false,
   "properties": {
     "source_id": {
       "description": "Original source CMS id",
       "type":"string"
+    },
+    "source_type": {
+      "type": "string",
+      "description": "The method used to enter this content. E.g. 'Staff', 'Wires'"
+    },
+    "name": {
+      "type": "string",
+      "description": "The organization who originated this content."
+    },
+    "system": {
+      "type": "string",
+      "description": "The software (e.g., CMS) that was used to enter this content."
+    },
+
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_additional_properties.json"
     }
   }
 }
