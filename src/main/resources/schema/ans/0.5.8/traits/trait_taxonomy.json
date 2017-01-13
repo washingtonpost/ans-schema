@@ -101,6 +101,11 @@
       "items": {
         "type": "string"
       }
+    },
+
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_additional_properties.json"
     }
+
   }
 }

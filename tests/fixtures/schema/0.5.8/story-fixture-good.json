@@ -162,7 +162,10 @@
         }
       }
     ],
-    "stock_symbols": [ "IBM", "INTL", "AMZN", "MRSFT" ]
+    "stock_symbols": [ "IBM", "INTL", "AMZN", "MRSFT" ],
+    "additional_properties": {
+      "more": "info"
+    }
   },
   "label": {
     "basic": {
