@@ -709,6 +709,32 @@ describe("Schema: ", function() {
 
         });
 
+        describe("Label (0.5.8+)", function() {
+          it("should validate a valid label", function() {
+            validateIfFixtureExists(version, '/traits/trait_label.json', 'label-good');
+          });
+
+          it("should not validate a label with extra properties", function() {
+            validateIfFixtureExists(version, '/traits/trait_label.json', 'label-bad-arbitrary-properties', false);
+          });
+
+          it("should not validate a valid label with fields with extra characters", function() {
+            validateIfFixtureExists(version, '/traits/trait_label.json', 'label-bad-field-name-with-dots', false);
+          });
+        });
+
+
+        describe("Source (0.5.8+)", function() {
+          it("should validate a valid source", function() {
+            validateIfFixtureExists(version, '/traits/trait_source.json', 'source-good');
+          });
+
+          it("should not validate an invalid source", function() {
+            validateIfFixtureExists(version, '/traits/trait_source.json', 'source-bad-extra-properties', false);
+          });
+        });
+
+
         describe("Story Elements ", function() {
           var type_prefix = "/story_elements";
 
@@ -823,13 +849,13 @@ describe("Schema: ", function() {
             });
           });
 
-          describe("Element Group", function() {
+          describe("Element Group (0.5.8+)", function() {
             it("should validate an element group", function() {
               validateIfFixtureExists(version, type_prefix + '/element_group.json', 'element-group-fixture-good');
             });
           });
 
-          describe("Quote", function() {
+          describe("Quote (0.5.8+)", function() {
             it("should not validate a quote with an invalid citation", function() {
               validateIfFixtureExists(version, type_prefix + '/quote.json', 'quote-fixture-bad-citation', false);
             });
@@ -837,6 +863,7 @@ describe("Schema: ", function() {
               validateIfFixtureExists(version, type_prefix + '/quote.json', 'quote-fixture-bad-content-elements', false);
             });
           });
+
 
           describe("...all together now", function() {
             var valid_fixtures = [ "story-fixture-good", "story-fixture-references" ];

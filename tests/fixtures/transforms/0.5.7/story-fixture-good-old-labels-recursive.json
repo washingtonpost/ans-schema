@@ -1,0 +1,18 @@
+{
+  "type": "story",
+  "version": "0.5.7",
+  "content_elements": [{
+    "type": "story",
+    "version": "0.5.7",
+    "label": {
+      "invalid.name": {
+        "text": "Foo"
+      }
+    }
+  }],
+  "label": {
+    "basic": {
+      "key": "value"
+    }
+  }
+}

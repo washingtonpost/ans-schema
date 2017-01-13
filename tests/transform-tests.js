@@ -544,6 +544,49 @@ describe("Transformations: ", function() {
 
         });
       });
+
+      describe("Labels", function() {
+        it("should leave valid labels alone", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good'], '0.5.8');
+          result.label.basic.text.should.eql("The Kicker");
+          result.label.basic.url.should.eql("https://www.washingtonpost.com/kicker");
+          result.label.basic.display.should.eql(true);
+          result.label.basic.additional_properties.bar.should.eql("foo");
+
+          result.label.another_one.text.should.eql("Another One");
+        });
+
+        it("should add 'text' where not present'", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good-old-style-label-and-source'], '0.5.8');
+          result.label.basic.text.should.eql('');
+        });
+
+        it("should move invalid properties to additional_properties'", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good-old-style-label-and-source'], '0.5.8');
+          result.label.basic.additional_properties.field.should.eql("value");
+          result.label.basic.additional_properties.why.should.eql("is there no text here");
+        });
+
+        it("should rename invalid keys'", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good-old-style-label-and-source'], '0.5.8');
+          result.label.should.have.property('__renamed_invalid_name');
+          result.label.__renamed_invalid_name.text.should.eql("Invalid name for a label.");
+        });
+      });
+
+      describe("Source", function() {
+        it("should leave valid source fields alone", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good-old-style-label-and-source'], '0.5.8');
+          result.source.type.should.eql("Wires");
+          result.source.name.should.eql("Reuters");
+        });
+
+        it("should move invalid source fields to additional_properties", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good-old-style-label-and-source'], '0.5.8');
+          result.source.additional_properties.more.should.eql("data");
+        });
+      });
+
     });
   });
 
