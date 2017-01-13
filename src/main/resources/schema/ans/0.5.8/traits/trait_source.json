@@ -10,9 +10,9 @@
       "description": "Original source CMS id",
       "type":"string"
     },
-    "type": {
+    "source_type": {
       "type": "string",
-      "description": "The method used to enter this content. E.g. 'Original', 'Wires'"
+      "description": "The method used to enter this content. E.g. 'Staff', 'Wires'"
     },
     "name": {
       "type": "string",

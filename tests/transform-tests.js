@@ -577,7 +577,7 @@ describe("Transformations: ", function() {
       describe("Source", function() {
         it("should leave valid source fields alone", function() {
           var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good-old-style-label-and-source'], '0.5.8');
-          result.source.type.should.eql("Wires");
+          result.source.source_type.should.eql("Wires");
           result.source.name.should.eql("Reuters");
         });
 

@@ -2,7 +2,7 @@
   "type": "story",
   "version": "0.5.7",
   "source": {
-    "type": "Wires",
+    "source_type": "Wires",
     "name": "Reuters",
     "system": "Arc I/O",
     "source_id": "ABC-DEF-45G",
