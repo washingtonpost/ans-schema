@@ -1,5 +1,5 @@
 {
-  "type": "Wires",
+  "source_type": "Wires",
   "name": "Reuters",
   "system": "Arc I/O",
   "source_id": "ABC-DEF-45G",

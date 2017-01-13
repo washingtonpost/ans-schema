@@ -407,7 +407,7 @@
 
   "source": {
     "source_id": "1234-5678",
-    "type": "Original",
+    "source_type": "Original",
     "name": "The Washington Post",
     "system": "Methode",
     "additional_properties": {
