@@ -587,6 +587,20 @@ describe("Transformations: ", function() {
         });
       });
 
+      describe("Comments", function() {
+        it("should leave valid comments fields alone", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good'], '0.5.8');
+          result.comments.comments_period.should.eql(14);
+          result.comments.moderation_required.should.eql(false);
+        });
+
+        it("should move invalid comments fields to additional_properties", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good'], '0.5.8');
+          result.comments.additional_properties.favorite_comment.should.eql("All work and no play makes Jack a dull boy.");
+        });
+      });
+
+
     });
   });
 
