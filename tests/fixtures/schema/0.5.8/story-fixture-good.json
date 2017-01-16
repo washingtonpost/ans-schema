@@ -423,6 +423,17 @@
     "search": true
   },
 
+  "comments": {
+    "comments_period": 14,
+    "allow_comments": true,
+    "display_comments": true,
+    "moderation_required": false,
+
+    "additional_properties": {
+      "favorite_comment": "All work and no play makes Jack a dull boy."
+    }
+  },
+
   "additional_properties": {
     "foo": "bar"
   }

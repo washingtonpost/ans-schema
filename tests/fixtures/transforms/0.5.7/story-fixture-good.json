@@ -292,5 +292,13 @@
         "provider": "https://api.twitter.com/1/statuses/oembed.json"
       }
     }
-  ]
+  ],
+
+  "comments": {
+    "comments_period": 14,
+    "allow_comments": true,
+    "display_comments": true,
+    "moderation_required": false,
+    "favorite_comment": "All work and no play makes Jack a dull boy."
+  }
 }
