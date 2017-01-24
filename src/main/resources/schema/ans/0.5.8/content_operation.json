@@ -13,7 +13,7 @@
       "operation": {
         "type": "string",
         "description": "The identifier of the operation being performed",
-        "enum": [ "insert-story", "delete-story" ]
+        "enum": [ "insert-story", "delete-story", "insert-gallery", "delete-gallery", "insert-video", "delete-video" ]
       },
       "date": {
         "description": "When the operation should be considered performed",
