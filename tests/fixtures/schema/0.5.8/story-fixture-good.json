@@ -327,6 +327,7 @@
       "_id": "22222229",
       "type": "reference",
       "channels": ["ios", "android"],
+      "alignment": "left",
 
       "referent": {
         "provider": "https://api.twitter.com/1/statuses/oembed.json",
