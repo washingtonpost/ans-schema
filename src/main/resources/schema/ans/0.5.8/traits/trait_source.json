@@ -22,6 +22,10 @@
       "type": "string",
       "description": "The software (e.g., CMS) that was used to enter this content."
     },
+    "edit_url": {
+      "type": "string",
+      "description": "A link to edit this content in its source CMS."
+    },
 
     "additional_properties": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_additional_properties.json"
