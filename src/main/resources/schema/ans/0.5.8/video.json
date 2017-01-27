@@ -158,6 +158,10 @@
     "promo_image": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/image.json",
       "description": "A promo/leader image to the video."
+    },
+    "embed_html": {
+      "description": "An HTML snippet used to embed this video in another document. Used for oembed responses.",
+      "type": "string"
     }
   },
   "required": [ "type", "version" ]
