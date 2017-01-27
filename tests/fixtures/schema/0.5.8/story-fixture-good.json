@@ -414,6 +414,7 @@
     "source_type": "Original",
     "name": "The Washington Post",
     "system": "Methode",
+    "edit_url": "http://washpost.methode.com/foo/bar/1234-5678",
     "additional_properties": {
       "foo": "bar"
     }
