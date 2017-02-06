@@ -43,6 +43,10 @@
       "body": {
         "description": "The object being inserted/updated/deleted",
         "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.3/story.json"
+      },
+      "created": {
+        "type": "boolean",
+        "description": "Identifies this item as created or updated."
       }
     },
     "required": [ "type", "operation", "id", "organization_id" ]
