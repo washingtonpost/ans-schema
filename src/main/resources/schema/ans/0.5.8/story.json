@@ -98,6 +98,9 @@
     "workflow": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_workflow.json"
     },
+    "pitches": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_pitches.json"
+    },    
     "revision": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_revision.json"
     },
