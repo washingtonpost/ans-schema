@@ -744,6 +744,9 @@ describe("Schema: ", function() {
           it("should validate properly formatted workflow information", function() {
             validateIfFixtureExists(version, '/traits/trait_workflow.json', 'trait-workflow-fixture-good', true);
           });
+          it("should reject invalid workflow status code", function() {
+            validateIfFixtureExists(version, '/traits/trait_workflow.json', 'trait-workflow-fixture-bad-code', false);
+          });          
         });
 
         describe("Planning (0.5.8+)", function() {
