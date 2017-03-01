@@ -11,6 +11,7 @@
     },
     "status_code": {
       "type": "integer",
+      "minimum": 1,
       "description": "Code indicating the story's current workflow status. This number should match the values configured in WebSked."
     },
     "note": {
