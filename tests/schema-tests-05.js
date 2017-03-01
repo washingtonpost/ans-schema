@@ -734,6 +734,23 @@ describe("Schema: ", function() {
           });
         });
 
+        describe("Pitches (0.5.8+)", function() {
+          it("should validate properly formatted pitches", function() {
+            validateIfFixtureExists(version, '/traits/trait_pitches.json', 'pitches-fixture-good', true);
+          });
+        });
+
+        describe("Workflow (0.5.8+)", function() {
+          it("should validate properly formatted workflow information", function() {
+            validateIfFixtureExists(version, '/traits/trait_workflow.json', 'workflow-fixture-good', true);
+          });
+        });
+
+        describe("Planning (0.5.8+)", function() {
+          it("should validate properly formatted planning information", function() {
+            validateIfFixtureExists(version, '/traits/trait_planning.json', 'planning-fixture-good', true);
+          });
+        });
 
         describe("Story Elements ", function() {
           var type_prefix = "/story_elements";
