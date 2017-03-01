@@ -11,6 +11,7 @@
     },
     "status": {
       "type": "string",
+      "pattern": "[a-z]*",
       "description": "The current status of the pitch."
     },
     "time": {
