@@ -9,6 +9,19 @@
     "additional_properties": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_additional_properties.json"
     },
+    "websked_sort_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date to be used for chronological sorting in WebSked. This should only be set internally."
+    },
+    "deadline_miss": {
+      "type": "integer",
+      "description": "The delta between the story's planned publish date and actual first publish time, in minutes. This should only be set internally."
+    },
+    "note": {
+      "type": "string",
+      "description": "Story note used for planning purposes."
+    },
     "scheduling": {
       "description": "Scheduling information.",
       "type": "object",

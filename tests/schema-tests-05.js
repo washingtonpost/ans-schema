@@ -734,6 +734,38 @@ describe("Schema: ", function() {
           });
         });
 
+        describe("Pitches (0.5.8+)", function() {
+          it("should validate properly formatted pitches", function() {
+            validateIfFixtureExists(version, '/traits/trait_pitches.json', 'trait-pitches-fixture-good', true);
+          });
+          it("should reject platform pitch event status containing numeric characters", function() {
+            validateIfFixtureExists(version, '/traits/trait_platform_pitch_event.json', 'trait-pitch-event-fixture-numeric-status', false);
+          });
+          it("should reject platform pitch event status containing uppercase characters", function() {
+            validateIfFixtureExists(version, '/traits/trait_platform_pitch_event.json', 'trait-pitch-event-fixture-uppercase-status', false);
+          });
+          it("should reject publication pitch event status containing numeric characters", function() {
+            validateIfFixtureExists(version, '/traits/trait_publication_pitch_event.json', 'trait-pitch-event-fixture-numeric-status', false);
+          });
+          it("should reject publication pitch event status containing uppercase characters", function() {
+            validateIfFixtureExists(version, '/traits/trait_publication_pitch_event.json', 'trait-pitch-event-fixture-uppercase-status', false);
+          });           
+        });
+
+        describe("Workflow (0.5.8+)", function() {
+          it("should validate properly formatted workflow information", function() {
+            validateIfFixtureExists(version, '/traits/trait_workflow.json', 'trait-workflow-fixture-good', true);
+          });
+          it("should reject invalid workflow status code", function() {
+            validateIfFixtureExists(version, '/traits/trait_workflow.json', 'trait-workflow-fixture-bad-code', false);
+          });          
+        });
+
+        describe("Planning (0.5.8+)", function() {
+          it("should validate properly formatted planning information", function() {
+            validateIfFixtureExists(version, '/traits/trait_planning.json', 'trait-planning-fixture-good', true);
+          });
+        });
 
         describe("Story Elements ", function() {
           var type_prefix = "/story_elements";
