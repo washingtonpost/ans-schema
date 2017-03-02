@@ -121,7 +121,99 @@
       "_id": "1000006",
       "type": "text",
       "content": "But there’s one big drawback: Many municipalities haven’t made room literally or legislatively for tiny residences. It’s a challenge to find a place to park a tiny house if you don’t own land. And they often fall into a legal limbo. “Tiny houses exist in sort of a legal gray area, neither explicitly allowed nor expressly forbidden,” says tiny-home owner Jay Austin of Northeast Washington. Though the District recently banned “camping” in tiny-house-like structures, Austin says he has been told the provision is unenforceable."
+    },
+    {
+      "type": "table",
+      "_id": "0987654321",
+      "subtype": "special_table",
+      "channels": [ "all" ],
+      "additional_properties": {
+        "goodbye": "birdie"
+      },
+
+      "header": {
+        "type": "table_row",
+        "_id": "A",
+        "subtype": "special_row",
+        "channels": [ "web" ],
+        "additional_properties": {
+          "x": "y"
+        },
+
+        "cells": [
+          {
+            "type": "table_cell",
+            "content_elements": [
+              { "_id": "a", "type": "text",  "content": "Header Y = 1" }
+            ]
+          },
+          {
+            "type": "table_cell",
+            "content_elements": [
+              { "_id": "b", "type": "text",  "content": "Header Y = 1" }
+            ]
+          }
+        ]
+      },
+
+      "rows": [
+        {
+          "type": "table_row",
+          "_id": "B",
+          "subtype": "special_row",
+          "channels": [ "web" ],
+          "additional_properties": {
+            "x": "y"
+          },
+
+          "cells": [
+            {
+              "type": "table_cell",
+              "_id": "B1",
+
+              "subtype": "special_cell",
+              "channels": [ "phone" ],
+              "additional_properties": {
+                "hi": "mom"
+              },
+
+              "content_elements": [
+                { "_id": "1", "type": "text",  "content": "X = 1, Y = 1" }
+              ]
+
+            },
+            {
+              "type": "table_cell",
+              "content_elements": [
+                { "_id": "2", "type": "text",  "content": "X = 2, Y = 1" }
+              ]
+            }
+          ]
+        },
+
+        {
+          "_id": "C",
+          "type": "table_row",
+          "cells": [
+            {
+              "type": "table_cell",
+              "content_elements": [
+                { "_id": "1", "type": "text",  "content": "X = 1, Y = 1" }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "content_elements": [
+                { "_id": "2", "type": "text",  "content": "X = 2, Y = 1" }
+              ]
+            }
+          ]
+        }
+
+      ]
+
     }
+
 
   ],
   "slug": "tiny-house-story",
