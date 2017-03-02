@@ -235,6 +235,34 @@ describe("ANS Validator", function() {
       var errors = validator.getAllContentErrors(bad_inner_quote, version, "");
       errors.length.should.eql(1);
 
+      var bad_table = {
+        "type": "table",
+        "version": "0.5.8",
+        "rows": [
+          {
+            "type": "table_row",
+            "cells": [
+              {
+                "type": "table_cell",
+                "content_elements": [
+                  {
+                    "type": "text",
+                    "content": "This one is fine."
+                  },
+                  {
+                    "type": "invalid",
+                    "content": "This one is not."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      };
+      var errors = validator.getAllContentErrors(bad_table, version, "");
+      errors.length.should.eql(1);
+
+
     });
 
   });

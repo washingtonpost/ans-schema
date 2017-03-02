@@ -7,31 +7,6 @@
     "goodbye": "birdie"
   },
 
-  "header": {
-    "type": "table_row",
-    "_id": "A",
-    "subtype": "special_row",
-    "channels": [ "web" ],
-    "additional_properties": {
-      "x": "y"
-    },
-
-    "cells": [
-      {
-        "type": "table_cell",
-        "content_elements": [
-          { "_id": "a", "type": "text",  "content": "Header Y = 1" }
-        ]
-      },
-      {
-        "type": "table_cell",
-        "content_elements": [
-          { "_id": "b", "type": "text",  "content": "Header Y = 1" }
-        ]
-      }
-    ]
-  },
-
   "rows": [
     {
       "type": "table_row",
@@ -54,14 +29,14 @@
           },
 
           "content_elements": [
-            { "_id": "1", "type": "text",  "content": "X = 1, Y = 1" }
+            { "_id": "1", "type": "invalid_type",  "content": "X = 1, Y = 1" }
           ]
 
         },
         {
           "type": "table_cell",
           "content_elements": [
-            { "_id": "2", "type": "text",  "content": "X = 2, Y = 1" }
+            { "_id": "2", "type": "another_invalid_type",  "content": "X = 2, Y = 1" }
           ]
         }
       ]

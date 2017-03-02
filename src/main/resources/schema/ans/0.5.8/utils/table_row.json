@@ -1,12 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/story_element/table.json",
-  "description": "A data table content element.",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/utils/table_row.json",
+  "description": "A list of table cells, usually for use in a table row.",
   "type": "object",
-  "additonalProperties": false,
+
   "properties": {
     "type": {
-      "enum": [ "table" ]
+      "enum": [ "table_row" ]
     },
     "_id": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_id.json"
@@ -17,25 +17,15 @@
     "channels": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_channel.json"
     },
-    "alignment": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_alignment.json"
-    },
     "additional_properties": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_additional_properties.json"
     },
 
-    "header": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/utils/table_row.json"
-    },
-
-    "rows" : {
+    "cells": {
       "type": "array",
-      "description": "The non-header rows of the table",
       "items": {
-        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/utils/table_row.json"
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/utils/table_cell.json"
       }
     }
-  },
-  "required": [ "type", "rows" ]
-
+  }
 }
