@@ -1,5 +1,10 @@
 # ANS Release Notes
 
+### 1.2.9 2017/03/02 ###
+
+* Adds `workflow` and `pitches` #106
+* Changes `table` type so that rows and cells are represented by their own object and cells can contain content_elements rather than a mere text node.
+
 ### 1.2.8 2017/01/10 ###
 
 * Adds `quote` element #89
