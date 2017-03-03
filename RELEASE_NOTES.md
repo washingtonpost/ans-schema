@@ -1,9 +1,32 @@
 # ANS Release Notes
 
-### 1.2.9 2017/03/02 ###
+### TBD
+
+### 1.2.14 2017/03/02 ###
 
 * Adds `workflow` and `pitches` #106
-* Changes `table` type so that rows and cells are represented by their own object and cells can contain content_elements rather than a mere text node.
+* Changes `table` type so that rows and cells are represented by their own object and cells can contain content_elements rather than a mere text node. #107
+
+### 1.2.13 2017/01/27 ###
+
+* Adds `created` flag to content operations
+* Adds `edit_url`
+
+### 1.2.12 2017/01/27 ##
+
+* Adds `embed_html`
+
+### 1.2.11 2017/01/26
+
+* Fixes issue where `alignment` not present on references
+
+### 1.2.10 2017/01/16 ###
+
+* Adds `comments`
+
+### 1.2.9 2017/01/13 ###
+
+* Adds `additional_properties` to taxonomy
 
 ### 1.2.8 2017/01/10 ###
 
