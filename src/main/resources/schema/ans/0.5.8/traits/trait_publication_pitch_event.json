@@ -32,7 +32,7 @@
       "description": "The ID of the publication edition that this pitch targets."
     },
     "edition_time": {
-      "type": "string",
+      "type": ["string", "null"],
       "format": "date-time",
       "description": "The time of the publication edition that this pitch targets."
     }
