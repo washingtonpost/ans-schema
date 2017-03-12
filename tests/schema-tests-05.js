@@ -749,7 +749,10 @@ describe("Schema: ", function() {
           });
           it("should reject publication pitch event status containing uppercase characters", function() {
             validateIfFixtureExists(version, '/traits/trait_publication_pitch_event.json', 'trait-pitch-event-fixture-uppercase-status', false);
-          });           
+          });
+          it("should allow publication pitch events where the edition time is null", function() {
+            validateIfFixtureExists(version, '/traits/trait_publication_pitch_event.json', 'trait-publication-pitch-event-fixture-null-edition-time.json', true);
+          });
         });
 
         describe("Workflow (0.5.8+)", function() {
