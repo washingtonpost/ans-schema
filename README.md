@@ -140,7 +140,7 @@ A proposal should be a short document that includes the following:
 
 * A brief example of desired change, including example JSON of an ANS document that adheres to the change.
 * A description of the reason or use case for the requested change
-* Responses to any anticipated problems or concerned caused by this change.
+* Responses to any anticipated problems or concerns caused by this change.
 
 ## Contributing to this Repository ##
 
