@@ -48,7 +48,7 @@
     "country_name": "USA"
   },
   "copyright": "(c) 2015 The Washington Post, Inc.",
-  "canonical_url": "http://www.washingtonpost.com/local/anesthesiologist-trashes-sedated-patient-jury-orders-her-to-pay-500000/2015/06/23/cae05c00-18f3-11e5-ab92-c75ae6ab94b5_story.html",
+  "canonical_url": "/local/anesthesiologist-trashes-sedated-patient-jury-orders-her-to-pay-500000/2015/06/23/cae05c00-18f3-11e5-ab92-c75ae6ab94b5_story.html",
   "short_url": "http://wapo.st/1Crp6bY",
   "headlines": {
     "basic": "The default headline for this story",
@@ -78,7 +78,13 @@
           }
         }
       }
-    ]
+    ],
+    "redirect": [{
+      "type": "redirect",
+      "version": "0.5.8",
+      "canonical_url": "/local/anesthesiologist-trashes-sedated-patient-jury-orders-her-to-pay-500000/2015/06/23/cae05c00-18f3-11e5-ab92-c75ae6ab94b5_story.html",
+      "redirect_url": "http://www.washingtonpost.com/editors-note/published-too-soon.html"
+    }]
   },
   "promo_items": {
     "basic": {

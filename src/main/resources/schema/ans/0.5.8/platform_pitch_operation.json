@@ -22,7 +22,7 @@
       },
       "id": {
         "type": "string",
-        "description": "The id of the item being operated",
+        "description": "The id of the item being operated"
       },
       "organization_id": {
         "type": "string",

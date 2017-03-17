@@ -1,0 +1,26 @@
+{
+  "type": "video",
+  "version": "0.5.7",
+  "related_content": {
+    "basic": [{
+      "type": "story",
+      "version": "0.5.8",
+      "headlines": {
+        "basic": "Dog Bites Man."
+      },
+      "related_content": {
+        "redirect": [{
+          "type": "story",
+          "version": "0.5.8",
+          "canonical_url": "/recursive/redirect/item"
+        }]
+      }
+    }],
+    "redirect": [{
+      "type": "story",
+      "version": "0.5.7",
+      "_id": "ABCDEFG",
+      "canonical_url": "/other/story/there"
+    }]
+  }
+}
