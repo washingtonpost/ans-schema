@@ -913,9 +913,12 @@ describe("Schema: ", function() {
                 var document = fixtures[fixtureName];
 
                 document.content_elements.forEach(function(element) {
-                  element.type.should.equalOneOf([ "blockquote", "code", "interstitial_link", "list", "oembed", "oembed_response", "raw_html", "table", "text", "reference", "image", "video", "audio", "story", "element_group", "quote" ]);
+                  element.type.should.equalOneOf([ "blockquote", "code", "interstitial_link", "list", "oembed", "oembed_response", "raw_html", "table", "text", "reference", "image", "video", "audio", "story", "element_group", "quote", "correction" ]);
 
                   switch(element.type) {
+                  case "correction":
+                    validate(version, type_prefix + '/correction.json', element);
+                    break;
                   case "quote":
                     validate(version, type_prefix + '/quote.json', element);
                     break;

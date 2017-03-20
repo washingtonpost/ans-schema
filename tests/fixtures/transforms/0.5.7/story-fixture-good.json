@@ -294,6 +294,38 @@
     }
   ],
 
+  "corrections": [
+    {
+      "correction_type": "retraction",
+      "text": "This document is a fabrication by the author and is false."
+    },
+    {
+      "correction_type": "clarification",
+      "text": "An earlier version of this document mis-spelled the name of William Jefferson Clinton.",
+      "foo": "bar"
+    },
+    {
+      "type": "correction",
+      "correction_type": "clarification",
+      "content": "An earlier version of this document mis-spelled the name of William Jefferson Clinton."
+    },
+    {
+      "type": "correction",
+      "correction_type": "clarification",
+      "content": "An earlier version of this document mis-spelled the name of William Jefferson Clinton.",
+      "text": "An earlier version of this document mis-spelled the name of George Walker Bush.",
+      "additional_properties": {
+        "foo": "bar"
+      },
+      "alignment": "left",
+      "channels": [
+        "web"
+      ],
+      "subtype": "why",
+      "_id": "correction_4"
+    }
+  ],
+
   "comments": {
     "comments_period": 14,
     "allow_comments": true,
