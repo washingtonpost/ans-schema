@@ -749,7 +749,7 @@ describe("Schema: ", function() {
           });
           it("should reject publication pitch event status containing uppercase characters", function() {
             validateIfFixtureExists(version, '/traits/trait_publication_pitch_event.json', 'trait-pitch-event-fixture-uppercase-status', false);
-          });           
+          });
         });
 
         describe("Workflow (0.5.8+)", function() {
@@ -758,12 +758,20 @@ describe("Schema: ", function() {
           });
           it("should reject invalid workflow status code", function() {
             validateIfFixtureExists(version, '/traits/trait_workflow.json', 'trait-workflow-fixture-bad-code', false);
-          });          
+          });
         });
 
         describe("Planning (0.5.8+)", function() {
           it("should validate properly formatted planning information", function() {
             validateIfFixtureExists(version, '/traits/trait_planning.json', 'trait-planning-fixture-good', true);
+          });
+        });
+
+
+        describe("Related Content (0.5.8+)", function() {
+          it("should not validate related_content.redirect that is not a redirect or that has too many items", function() {
+            validateIfFixtureExists(version, '/traits/trait_related_content.json', 'trait-related-content-bad-attached-redirect-has-multiple-items', false);
+            validateIfFixtureExists(version, '/traits/trait_related_content.json', 'trait-related-content-bad-attached-redirect-is-not-redirect', false);
           });
         });
 

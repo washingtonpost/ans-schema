@@ -600,6 +600,14 @@ describe("Transformations: ", function() {
         });
       });
 
+      describe("Related Content", function() {
+        it("should delete related_content.redirect", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['video-fixture-good-related-content-redirect'], '0.5.8');
+          result.related_content.should.not.have.property("redirect");
+          result.related_content.basic[0].related_content.should.not.have.property('redirect');
+        });
+      });
+
 
     });
   });
