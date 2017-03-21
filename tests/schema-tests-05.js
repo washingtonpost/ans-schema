@@ -744,12 +744,18 @@ describe("Schema: ", function() {
           it("should reject platform pitch event status containing uppercase characters", function() {
             validateIfFixtureExists(version, '/traits/trait_platform_pitch_event.json', 'trait-pitch-event-fixture-uppercase-status', false);
           });
+          it("should allow platform pitch event status containing spaces", function() {
+            validateIfFixtureExists(version, '/traits/trait_platform_pitch_event.json', 'trait-pitch-event-fixture-space-in-status', true);
+          });          
           it("should reject publication pitch event status containing numeric characters", function() {
             validateIfFixtureExists(version, '/traits/trait_publication_pitch_event.json', 'trait-pitch-event-fixture-numeric-status', false);
           });
           it("should reject publication pitch event status containing uppercase characters", function() {
             validateIfFixtureExists(version, '/traits/trait_publication_pitch_event.json', 'trait-pitch-event-fixture-uppercase-status', false);
           });
+          it("should allow publication pitch event status containing spaces", function() {
+            validateIfFixtureExists(version, '/traits/trait_publication_pitch_event.json', 'trait-pitch-event-fixture-space-in-status', true);
+          });             
         });
 
         describe("Workflow (0.5.8+)", function() {
