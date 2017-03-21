@@ -323,6 +323,13 @@
     },
 
     {
+      "_id": "659876643210",
+      "type": "correction",
+      "correction_type": "clarification",
+      "content": "An earlier version of this article attributed the above quote to David Foster Wallace."
+    },
+
+    {
       "_id": "649876543210",
       "type": "raw_html",
       "content": "<iframe src=\"http://www.google.com\"></iframe>",
@@ -400,12 +407,14 @@
 
   "corrections": [
     {
+      "type": "correction",
       "correction_type": "clarification",
-      "text": "What I said before was not exactly true."
+      "content": "What I said before was not exactly true."
     },
     {
+      "type": "correction",
       "correction_type": "correction",
-      "text": "What I said before was false and not true."
+      "content": "What I said before was false and not true."
     }
   ],
 
