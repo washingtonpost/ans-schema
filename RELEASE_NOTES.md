@@ -1,6 +1,11 @@
 # ANS Release Notes
 
-### TBD
+### TBD ###
+
+### 1.2.15 2017/03/21 ###
+
+* Make related_content.redirect a reserved slot for a redirect object.
+* Adds corrections element, changes trait_corrections to use element
 
 ### 1.2.14 2017/03/02 ###
 
