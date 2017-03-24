@@ -24,7 +24,7 @@ A few examples are provided of content documents that validate against the Washi
 
 ## Validating Locally ##
 
-This project contains a node library that can be used to validate ANS documents locally.  It is the same validator used in the ANS Service: https://ans.arc.nile.works/validate/0.5.8
+This project contains a node library that can be used to validate ANS documents locally.  It is the same validator used in the ANS Service: http://ans.arc2.nile.works/validate/0.5.8
 
 You can run the validator on the command line from the project directory to validate an ANS document:
 
