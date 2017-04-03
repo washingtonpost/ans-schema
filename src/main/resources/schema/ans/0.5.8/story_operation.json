@@ -21,13 +21,18 @@
         "format": "date-time"
       },
       "display_date":{
-        "description": "The RFC3339-formatted dated time of the most recent date the story was (re)displayed on a public site.",
+        "description": "The date that is displayed with this story to readers.",
         "type": "string",
         "format": "date-time"
       },
       "publish_date":{
         "description": "When the story was published.",
         "type": "string",
+        "format": "date-time"
+      },
+      "submit_date": {
+        "description": "When this operation was submitted to Content API. Used for latency checking.",
+        "type":"string",
         "format": "date-time"
       },
       "story_id": {
