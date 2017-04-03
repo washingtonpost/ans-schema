@@ -1,14 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/story_elements/correction.json",
-  "title": "Correction",
-  "additionalProperties": false,
-  "description": "Describes a change that has been made to the document for transparency, or describes inaccuracies or falsehoods that remain in the document.",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/story_element/table_02.json",
+  "description": "A data table content element, which is incompatible with the original table: https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/story_element/table.json",
   "type": "object",
+  "additonalProperties": false,
   "properties": {
     "type": {
-      "type": "string",
-      "enum": [ "correction" ]
+      "enum": [ "table_02" ]
     },
     "_id": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_id.json"
@@ -22,21 +20,22 @@
     "alignment": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_alignment.json"
     },
-
     "additional_properties": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_additional_properties.json"
     },
 
-
-    "correction_type": {
-      "description": "Type of correction. E.g., clarification, retraction.",
-      "type": "string"
+    "header": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/utils/table_row_02.json"
     },
-    "text": {
-      "description": "The text of the correction.",
-      "type": "string"
-    }
 
+    "rows" : {
+      "type": "array",
+      "description": "The non-header rows of the table",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/utils/table_row_02.json"
+      }
+    }
   },
-  "required": [ "type", "text" ]
+  "required": [ "type", "rows" ]
+
 }

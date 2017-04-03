@@ -430,7 +430,7 @@ var validate = function(version, schemaName, fixture, expected) {
 };
 
 var validateIfFixtureExists = function(version, schemaName, fixture, expected) {
-  if(_.has(fixtures, fixture)) {
+  if(_.has(fixtures, fixture) && _.has(loadedSchemas, version + schemaName)) {
     validate(version, schemaName, fixture, expected);
   }
 };
@@ -746,7 +746,7 @@ describe("Schema: ", function() {
           });
           it("should allow platform pitch event status containing spaces", function() {
             validateIfFixtureExists(version, '/traits/trait_platform_pitch_event.json', 'trait-pitch-event-fixture-space-in-status', true);
-          });          
+          });
           it("should reject publication pitch event status containing numeric characters", function() {
             validateIfFixtureExists(version, '/traits/trait_publication_pitch_event.json', 'trait-pitch-event-fixture-numeric-status', false);
           });
@@ -755,7 +755,7 @@ describe("Schema: ", function() {
           });
           it("should allow publication pitch event status containing spaces", function() {
             validateIfFixtureExists(version, '/traits/trait_publication_pitch_event.json', 'trait-pitch-event-fixture-space-in-status', true);
-          });             
+          });
         });
 
         describe("Workflow (0.5.8+)", function() {
@@ -884,6 +884,15 @@ describe("Schema: ", function() {
             });
           });
 
+          describe("Table 2", function() {
+            it("should validate a table 2 element", function() {
+              validateIfFixtureExists(version, type_prefix + '/table_02.json', 'table_02-fixture-good');
+            });
+
+            it("should not validate a table 1 element", function() {
+              validateIfFixtureExists(version, type_prefix + '/table_02.json', 'table-fixture-good', false);
+            });
+          });
 
           describe("Interstitial Link", function() {
             it("should validate a interstitial link", function () {
