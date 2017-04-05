@@ -88,6 +88,13 @@
   "embed_html": "<iframe src=\"https://videos.posttv.com/washpost-production/The%20Washington%20Post/20150701/55944729e4b082c8417f4483/55944904e4b0ef3ccc0da042_t_1435781395718_mobile.m3u8\"></iframe>",
   "additional_properties": {
     "foo": "bar"
-  }
+  },
+  "corrections": [
+    {
+      "type": "correction",
+      "correction_type": "clarification",
+      "content": "An earlier version of this video stated that Dewey defeated Truman. Truman defeated Dewey."
+    }
+  ]
 
 }
