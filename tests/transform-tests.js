@@ -611,10 +611,10 @@ describe("Transformations: ", function() {
       describe("Corrections", function() {
         it("should preserve corrections", function() {
           var result = transforms.upvert(fixtures['0.5.7']['story-fixture-good'], '0.5.8');
-          result.corrections[0].content.should.eql("This document is a fabrication by the author and is false.");
+          result.corrections[0].text.should.eql("This document is a fabrication by the author and is false.");
           result.corrections[1].additional_properties.foo.should.eql("bar");
-          result.corrections[2].content.should.eql("An earlier version of this document mis-spelled the name of William Jefferson Clinton.");
-          result.corrections[3].content.should.eql("An earlier version of this document mis-spelled the name of George Walker Bush.");
+          result.corrections[2].text.should.eql("");
+          result.corrections[3].text.should.eql("An earlier version of this document mis-spelled the name of George Walker Bush.");
           result.corrections[3].additional_properties.foo.should.eql("bar");
           result.corrections[3].additional_properties.content.should.eql("An earlier version of this document mis-spelled the name of William Jefferson Clinton.");
           result.corrections[3]._id.should.eql("correction_4");

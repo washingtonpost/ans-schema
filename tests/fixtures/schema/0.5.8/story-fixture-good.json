@@ -326,7 +326,7 @@
       "_id": "659876643210",
       "type": "correction",
       "correction_type": "clarification",
-      "content": "An earlier version of this article attributed the above quote to David Foster Wallace."
+      "text": "An earlier version of this article attributed the above quote to David Foster Wallace."
     },
 
     {
@@ -409,12 +409,12 @@
     {
       "type": "correction",
       "correction_type": "clarification",
-      "content": "What I said before was not exactly true."
+      "text": "What I said before was not exactly true."
     },
     {
       "type": "correction",
       "correction_type": "correction",
-      "content": "What I said before was false and not true."
+      "text": "What I said before was false and not true."
     }
   ],
 

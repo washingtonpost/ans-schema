@@ -1,12 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/story_element/table.json",
-  "description": "A data table content element",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/utils/table_row_02.json",
+  "description": "A list of table cells, usually for use in a table row.",
   "type": "object",
-  "additonalProperties": false,
+
   "properties": {
     "type": {
-      "enum": [ "table" ]
+      "enum": [ "table_row_02" ]
     },
     "_id": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_id.json"
@@ -21,25 +21,11 @@
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_additional_properties.json"
     },
 
-
-    "header": {
+    "cells": {
       "type": "array",
-      "description": "The header row of the table",
       "items": {
-        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/story_elements/text.json"
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/utils/table_cell_02.json"
       }
-	},
-    "rows" : {
-	  "type" : "array",
-      "description": "The data rows of the table",
-      "items": {
-        "type": "array",
-        "items": {
-          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/story_elements/text.json"
-        }
-	  }
     }
-  },
-  "required": [ "type", "rows" ]
-
+  }
 }
