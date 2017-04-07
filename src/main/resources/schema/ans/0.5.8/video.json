@@ -168,6 +168,9 @@
     "embed_html": {
       "description": "An HTML snippet used to embed this video in another document. Used for oembed responses.",
       "type": "string"
+    },
+    "corrections": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_corrections.json"
     }
   },
   "required": [ "type", "version" ]
