@@ -20,6 +20,11 @@
         "type": "string",
         "format": "date-time"
       },
+      "submit_date": {
+        "description": "When this operation was submitted to Content API. Used for latency checking.",
+        "type":"string",
+        "format": "date-time"
+      },
       "_id": {
         "type": "string",
         "description": "The id of the gallery being operated on"
