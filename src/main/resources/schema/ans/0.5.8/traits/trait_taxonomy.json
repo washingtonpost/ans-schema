@@ -13,6 +13,13 @@
       },
       "description": "A list of keywords. In the Arc ecosystem, this list is populated by Clavis."
     },
+    "named_entities": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/utils/named_entity.json"
+      },
+      "description": "A list of named entities. In the Arc ecosystem, this list is populated by Clavis."
+    },
     "topics": {
       "type": "array",
       "items": {
