@@ -707,6 +707,16 @@ describe("Schema: ", function() {
             });
           });
 
+          describe("Named Entities", function() {
+            it("should validate a named entity", function() {
+              validateIfFixtureExists(version, '/utils/named_entity.json', 'named-entity-fixture-good');
+            });
+
+            it("should not validate a named entity without id", function() {
+              validateIfFixtureExists(version, '/utils/named_entity.json', 'named-entity-fixture-bad-missing-id', false);
+            });
+          });
+
         });
 
         describe("Label (0.5.8+)", function() {

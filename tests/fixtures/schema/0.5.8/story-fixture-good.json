@@ -130,6 +130,23 @@
         "frequency": 2
       }
     ],
+    "named_entities": [
+      {
+        "_id": "jpmorgan-chase",
+        "name": "JPMorgan Chase",
+        "type": "organization"
+      },
+      {
+        "_id": "barack-obama",
+        "name": "Barack Obama",
+        "type": "person"
+      },
+      {
+        "_id": "washington-dc",
+        "name": "Washington D.C.",
+        "type": "location"
+      }
+    ],
     "primary_site": {
       "_id": "site_primary",
       "type": "site",
