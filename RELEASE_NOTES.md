@@ -2,6 +2,14 @@
 
 ### TBD ###
 
+### 1.2.19 2017/04/13 ##
+
+* Makes tag, source, comments objects open-ended (fully backwards-compatible with 0.5.7)
+* Adds named entities
+* Adds submit_date to story, image operations
+* Adds corrections to video object
+* Fixes various validator bugs
+
 ### 1.2.15 2017/03/21 ###
 
 * Make related_content.redirect a reserved slot for a redirect object.
