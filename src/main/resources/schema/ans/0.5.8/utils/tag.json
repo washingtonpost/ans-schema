@@ -4,7 +4,7 @@
   "title": "Tag",
   "description": "Models a keyword used in describing a piece of content.",
   "type": "object",
-  "additionalProperties": false,
+  "additionalProperties": {},
   "properties": {
     "_id": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_id.json"

@@ -738,10 +738,6 @@ describe("Schema: ", function() {
           it("should validate a valid source", function() {
             validateIfFixtureExists(version, '/traits/trait_source.json', 'source-good');
           });
-
-          it("should not validate an invalid source", function() {
-            validateIfFixtureExists(version, '/traits/trait_source.json', 'source-bad-extra-properties', false);
-          });
         });
 
         describe("Pitches (0.5.8+)", function() {
