@@ -125,7 +125,7 @@
 
         "revision_id": {
           "title": "Revision ID",
-          "description": "The id of the revision that is edition was created from. Omitted if unpublished.",
+          "description": "The id of the revision that this edition was created from. Omitted if unpublished.",
           "type": "string"
         }
       },
