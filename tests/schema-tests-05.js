@@ -414,7 +414,8 @@ var validate = function(version, schemaName, fixture, expected) {
 
   var result = ajv.validate(schema, fixture);
   if (result !== expected) {
-    console.log(fixture);
+    console.log(JSON.stringify(fixture));
+    console.log(JSON.stringify(schema));
     console.log(ajv.errors);
   }
   result.should.eql(expected);
@@ -779,6 +780,15 @@ describe("Schema: ", function() {
           });
         });
 
+        describe("Publishing (0.5.8+)", function() {
+          it("should validate publishing information", function() {
+            validateIfFixtureExists(version, '/traits/trait_publishing.json', 'trait-publishing-fixture-good', true);
+          })
+
+          it('should not validate publishing with incorrect story operation types', function() {
+            validateIfFixtureExists(version, '/traits/trait_publishing.json', 'trait-publishing-fixture-bad-mismatched-operations', false);
+          });
+        });
 
         describe("Related Content (0.5.8+)", function() {
           it("should not validate related_content.redirect that is not a redirect or that has too many items", function() {

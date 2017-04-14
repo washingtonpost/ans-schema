@@ -621,6 +621,39 @@ describe("Transformations: ", function() {
         });
       });
 
+      describe("Planning", function() {
+        it("should preserve the planning object fields", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-planning'], '0.5.8');
+
+          result.planning.scheduling.planned_publish_date.should.eql("2015-06-24T09:49:00.10Z");
+          result.planning.scheduling.scheduled_publish_date.should.eql("2015-06-24T09:49:00.10Z");
+          result.planning.story_length.word_count_planned.should.eql(2400);
+          result.planning.story_length.inch_count_actual.should.eql(8);
+          result.planning.additional_properties.status.workflow.should.eql(2);
+          result.planning.additional_properties.status.note.should.eql("This is a private note.");
+
+        });
+
+        it("should add a workflow object", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-planning'], '0.5.8');
+
+          result.workflow.status_code.should.eql(2);
+          result.workflow.note.should.eql("This is a private note.");
+        });
+
+        it("should add a workflow object even when status code is a string", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-planning-status-code-is-string'], '0.5.8');
+
+          result.workflow.status_code.should.eql(2);
+          result.workflow.note.should.eql("This is a private note.");
+        });
+
+      });
+
+      it("should not drop fields", function() {
+        var result = transforms.upvert(fixtures['0.5.7']['story-fixture-planning'], '0.5.8');
+        result.headlines.basic.should.eql("A simple story with big plans..");
+      });
 
     });
   });
