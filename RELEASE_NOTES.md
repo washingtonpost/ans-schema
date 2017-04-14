@@ -2,6 +2,11 @@
 
 ### TBD ###
 
+### 1.3.0 2017/04/14 ##
+
+* Adds `publishing` trait to 0.5.8
+* 0.5.8 release candidate
+
 ### 1.2.19 2017/04/13 ##
 
 * Makes tag, source, comments objects open-ended (fully backwards-compatible with 0.5.7)
