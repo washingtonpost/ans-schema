@@ -34,16 +34,18 @@
       "title": "Scheduled Operations",
       "description": "A map of lists of operations scheduled to be performed on this content item, sorted by operation type.",
       "type": "object",
-
+      "additionalProperties": false,
       "properties": {
         "publish_edition": {
           "type": "array",
           "items": {
-            "$allOf": [
+            "type": "object",
+            "allOf": [
               {
                 "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/story_operation.json"
               },
               {
+                "type": "object",
                 "properties": {
                   "operation": {
                     "enum": [ "publish_edition" ]
@@ -56,7 +58,8 @@
         "unpublish_edition": {
           "type": "array",
           "items": {
-            "$allOf": [
+            "type": "object",
+            "allOf": [
               {
                 "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/story_operation.json"
               },
@@ -118,6 +121,12 @@
           "title": "Publish Status",
           "description": "If false, this edition has been deleted/unpublished.",
           "type": "boolean"
+        },
+
+        "revision_id": {
+          "title": "Revision ID",
+          "description": "The id of the revision that is edition was created from. Omitted if unpublished.",
+          "type": "string"
         }
       },
       "required": [ "published", "edition_date", "edition" ]

@@ -1,0 +1,22 @@
+{
+    "has_published_edition": true,
+    "scheduled_operations": {
+      "publish_edition": [{
+        "type": "story_operation",
+        "operation": "create",
+        "date": "2017-04-20T15:00:00Z",
+        "editions": [ "default" ],
+        "story": {
+          "type": "story",
+          "version": "0.5.7"
+        }
+      }],
+      "unpublish_edition": [{
+        "type": "story_operation",
+        "operation": "unpublish_edition",
+        "story_id": "ABC",
+        "date": "2017-04-30T15:00:00Z",
+        "editions": [ "default" ]
+      }]
+    }
+  }
