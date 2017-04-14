@@ -4,7 +4,7 @@
   "title": "Source",
   "description": "Information about the original source and/or owner of this content",
   "type": "object",
-  "additionalProperties": {},
+  "additionalProperties": false,
   "properties": {
     "source_id": {
       "description": "Original source CMS id",
