@@ -640,6 +640,14 @@ describe("Transformations: ", function() {
           result.workflow.status_code.should.eql(2);
           result.workflow.note.should.eql("This is a private note.");
         });
+
+        it("should add a workflow object even when status code is a string", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-planning-status-code-is-string'], '0.5.8');
+
+          result.workflow.status_code.should.eql(2);
+          result.workflow.note.should.eql("This is a private note.");
+        });
+
       });
 
       it("should not drop fields", function() {
