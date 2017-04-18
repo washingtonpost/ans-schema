@@ -36,6 +36,10 @@
     "social_links": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_social.json"
     },
+    "socialLinks": {
+      "description": "Deperecated. Included for backwards-compatibility.",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_social.json"
+    },
     "slug": {
        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_slug.json"
     },
