@@ -1,0 +1,13 @@
+{
+  "type": "element_group",
+  "content_elements": [
+    {
+      "type": "text",
+      "content": "Foo"
+    },
+    {
+      "type": "text",
+      "content": "Bar"
+    }
+  ]
+}

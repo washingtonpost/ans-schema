@@ -1,0 +1,11 @@
+{
+  "_id": "0987654321",
+  "type": "audio",
+  "version": "0.5.9",
+  "source_url": "https://www.washingtonpost.com/audio/foo/bar.mp3",
+  "mimetype": "audio/mp3",
+  "autoplay": true,
+  "controls": true,
+  "preload": false,
+  "loop": false
+}

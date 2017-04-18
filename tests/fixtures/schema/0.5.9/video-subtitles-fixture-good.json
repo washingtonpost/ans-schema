@@ -1,0 +1,16 @@
+{
+    "confidence": 0.75130093,
+    "urls": [{
+            "format": "DFXP",
+            "url": "https://closedcaptions.posttv.com/06-30-2015/5592c09fe4b082c8417f3f72_5592c013e4b082c8417f3f71/t_1435683757146.dfxp"
+        }, {
+            "format": "RAW_TEXT",
+            "url": "https://closedcaptions.posttv.com/06-30-2015/5592c09fe4b082c8417f3f72_5592c013e4b082c8417f3f71/t_1435683757146.rawtext"
+        }, {
+            "format": "SRT",
+            "url": "https://closedcaptions.posttv.com/06-30-2015/5592c09fe4b082c8417f3f72_5592c013e4b082c8417f3f71/t_1435683757146.srt"
+        }, {
+            "format": "WEB_VTT",
+            "url": "https://closedcaptions.posttv.com/06-30-2015/5592c09fe4b082c8417f3f72_5592c013e4b082c8417f3f71/t_1435683757146.vtt"
+        }]
+}
