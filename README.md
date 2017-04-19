@@ -22,6 +22,10 @@ A few examples are provided of content documents that validate against the Washi
 3. [An Example Image](tests/fixtures/schema/0.5.8/image-fixture-good.json)
 
 
+## Contributing
+
+See the contributing documentation for information about how to suggest changes to the ANS schema.
+
 ## Validating Locally ##
 
 This project contains a node library that can be used to validate ANS documents locally.  It is the same validator used in the ANS Service: http://ans.arc2.nile.works/validate/0.5.8
@@ -128,32 +132,3 @@ npm run-script ans -- --ansdata='{"type":"story", "version":"0.5.8", "content_el
   ]
 }
 ```
-
-
-
-
-## Submitting a Proposal ##
-
-Changes to the ANS Schema should first be accepted by the ANS committee at The Washington Post.  To submit a proposal for a requested change to the schema, please [create an issue](https://github.com/washingtonpost/ans-schema/issues/new) in this repo's issue tracker.
-
-A proposal should be a short document that includes the following:
-
-* A brief example of desired change, including example JSON of an ANS document that adheres to the change.
-* A description of the reason or use case for the requested change
-* Responses to any anticipated problems or concerns caused by this change.
-
-## Contributing to this Repository ##
-
-The standard method for contributing to this repository is via pull requests.  For the time being, each new version requires a specific series of manual changes to the repository, listed below.
-
-* Branch or fork this repository.
-* Run `npm install`
-* Run `npm run-script ans -- --version=x.x.x create` where `x.x.x` is the new version of ANS you wish to create. This command will:
-  * Generate new schema files (copied from the current version)
-  * Generate new schema tests
-  * Generate an upverter function from the current version to the new version
-  * Generate test fixtures for this new upverter
-  * Add the new version to the internal version sequence
-* If for some reason you want to remove your new version, you can run: `npm run-script ans -- --version=x.x.x cleanup` to remove the files created by the above command.
-* Run `npm test`.
-* Create pull request for this collection of changes.
