@@ -23,7 +23,7 @@ Your proposed change should be "non-breaking" with respect to the current schema
 
 6. As questions arise about your proposal, you may change it and update your pull request. Discussion can happen in the github comments, the #ans slack channel, or offline, but all parties must approve of your proposal before it will be added to the schema.
 
-7. Once your proposal is accepted by ALL of the five teams above, the developer you named in your proposal, or someone else, should write the actual schema changes, complete with positive and negative tests and upverter logic.  These changes should also be submitted via a pull request.
+7. Once your proposal is accepted by ALL of the teams below, the developer you named in your proposal, or someone else, should write the actual schema changes, complete with positive and negative tests and upverter logic.  These changes should also be submitted via a pull request.
 
 ## Accepting a Proposal
 
@@ -35,7 +35,10 @@ One representatives from each of the following groups at The Washington Post mus
    * Onboarding Team (e.g. Will Van Wazer)
    * Native Apps (e.g. Chad Moone, Vadim Gritsenko)
 
+This list may change over time.
+
 By approving a proposal, representatives for these groups indicate that their group is able to cope technically with any changes brought about by this schema change and that it can proceed at will. **There is no mechanism for "unaccepting" accepted proposals so make sure that your approval vote accurately speaks for your entire team before approving.**
+
 
 ## Previous Proposals
 
