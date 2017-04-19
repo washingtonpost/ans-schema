@@ -21,7 +21,7 @@ Your proposed change should be "non-breaking" with respect to the current schema
 
 5. Your proposal will be implemented if and only if your pull request is approved by representatives of all relevant departments at The Washington Post. (See "Accepting a Proposal" below.)
 
-6. As questions arise about your proposal, you may change it and update your pull request. Discussion can happen in the github comments, the #ans slack channel, or offline, but all parties must approve of your proposal before it will be added to the schema.
+6. As questions arise about your proposal, you may change it and update your pull request. Discussion can happen in the github comments, the #ans slack channel, or offline, but all parties must approve of your proposal before it will be added to the schema. It is the responsibility of the proposal-writer to obtain acceptance from all relevant parties.
 
 7. Once your proposal is accepted by ALL of the teams below, the developer you named in your proposal, or someone else, should write the actual schema changes, complete with positive and negative tests and upverter logic.  These changes should also be submitted via a pull request.
 
