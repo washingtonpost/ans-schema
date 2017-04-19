@@ -13,17 +13,17 @@ If you wish to alter the schema of ANS in any substantive way, you must write a 
    * Answers to any anticipated questions or concerns that your proposal might raise.
    * The name of the developer or team who will write the pull request for the schema change if your request is accepted.
 
-An example proposal can be found here:
+An example proposal can be found here: [SAMPLE - 2017-04-19 - Recipe Element](https://github.com/washingtonpost/ans-schema/blob/master/docs/proposals/SAMPLE%20-%202017-04-19%20-%20Recipe%20Element.md)
 
 Your proposed change should be "non-breaking" with respect to the current schema. (It should not remove or rename fields or objects.)
 
 4. Once you are satisfied with your proposal, you should commit your document locally and submit a pull request to the master branch of this repository. (Your change should simply be the addition of your document to the /docs/proposals directory.)
 
-5. Your proposal will be implemented if and only if your pull request is approved by representatives of the following departments at The Washington Post:
+5. Your proposal will be implemented if and only if your pull request is approved by representatives of all relevant departments at The Washington Post.
 
-6. As questions arise about your proposal, you may change it and update your pull request. Discussion can happen in the github comments, the #ans slack channel, or offline, but all parties must approve of your proposal before it will be added to the schema.
+6. As questions arise about your proposal, you may change it and update your pull request. Discussion can happen in the github comments, the #ans slack channel, or offline, but all parties must approve of your proposal before it will be added to the schema. It is the responsibility of the proposal-writer to obtain acceptance from all relevant parties.
 
-7. Once your proposal is accepted by ALL of the five teams above, the developer you named in your proposal, or someone else, should write the actual schema changes, complete with positive and negative tests and upverter logic.  These changes should also be submitted via a pull request.
+7. Once your proposal is accepted by ALL of the teams below, the developer you named in your proposal, or someone else, should write the actual schema changes, complete with positive and negative tests and upverter logic.  These changes should also be submitted via a pull request.
 
 ## Previous Proposals
 
