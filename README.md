@@ -24,7 +24,7 @@ A few examples are provided of content documents that validate against the Washi
 
 ## Contributing
 
-See the contributing documentation for information about how to suggest changes to the ANS schema.
+See the [contributing documentation](CONTRIBUTING.md) for information about how to suggest changes to the ANS schema.
 
 ## Validating Locally ##
 
