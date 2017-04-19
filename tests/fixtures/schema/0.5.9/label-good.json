@@ -1,0 +1,13 @@
+{
+  "basic": {
+    "text": "Breaking"
+  },
+  "secondary": {
+    "text": "Recent",
+    "url": "/recent",
+    "display": true,
+    "additional_properties": {
+      "bar": "baz"
+    }
+  }
+}

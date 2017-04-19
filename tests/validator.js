@@ -217,7 +217,7 @@ describe("ANS Validator", function() {
     it("should return an error if a nested content element does not validate against its own schema", function() {
       var bad_inner_quote = {
         "type": "story",
-        "version": "0.5.8",
+        "version": version,
         "content_elements": [{
           "type": "quote",
           "content_elements": [
@@ -233,11 +233,12 @@ describe("ANS Validator", function() {
         }]
       };
       var errors = validator.getAllContentErrors(bad_inner_quote, version, "");
+      //console.log(errors);
       errors.length.should.eql(1);
 
       var bad_table = {
         "type": "table",
-        "version": "0.5.8",
+        "version": version,
         "rows": [
           {
             "type": "table_row",
@@ -260,6 +261,7 @@ describe("ANS Validator", function() {
         ]
       };
       var errors = validator.getAllContentErrors(bad_table, version, "");
+      //console.log(errors);
       errors.length.should.eql(1);
 
 

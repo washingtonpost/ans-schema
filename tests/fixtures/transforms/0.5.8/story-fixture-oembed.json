@@ -1,0 +1,37 @@
+{
+  "type": "story",
+  "version": "0.5.8",
+  "content_elements": [
+    {
+      "type": "reference",
+      "referent": {
+        "id": "1234567890",
+        "provider": "https://api.twitter.com/1/statuses/oembed.json"
+      },
+      "additional_properties": {
+        "type": "oembed"
+      }
+    },
+    {
+      "type": "reference",
+      "referent": {
+        "type": "oembed",
+        "id": "1234567890",
+        "provider": "https://api.twitter.com/1/statuses/oembed.json"
+      }
+    },
+    {
+      "type": "reference",
+      "_id": "1234",
+      "subtype": "twitter",
+      "additional_properties": {
+        "abraham": "lincoln"
+      },
+      "referent": {
+        "type": "oembed",
+        "id": "https://twitter.com/BradDavis_WFTS/status/664422935130566656",
+        "provider": "https://api.twitter.com/1/statuses/oembed.json"
+      }
+    }
+  ]
+}
