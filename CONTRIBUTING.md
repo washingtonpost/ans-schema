@@ -13,7 +13,7 @@ If you wish to alter the schema of ANS in any substantive way, you must write a 
    * Answers to any anticipated questions or concerns that your proposal might raise.
    * The name of the developer or team who will write the pull request for the schema change if your request is accepted.
 
-An example proposal can be found here: https://github.com/washingtonpost/ans-schema/blob/master/docs/proposals/SAMPLE%20-%202017-04-19%20-%20Recipe%20Element.md
+An example proposal can be found here: [SAMPLE - 2017-04-19 - Recipe Element](https://github.com/washingtonpost/ans-schema/blob/master/docs/proposals/SAMPLE%20-%202017-04-19%20-%20Recipe%20Element.md)
 
 Your proposed change should be "non-breaking" with respect to the current schema. (It should not remove or rename fields or objects.)
 
