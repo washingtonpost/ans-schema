@@ -31,6 +31,8 @@ Your proposed change should be "non-breaking" with respect to the current schema
 
 7. Once your proposal is accepted by ALL of the teams below, the developer you named in your proposal, or someone else, should write the actual schema changes, complete with positive and negative tests and upverter logic.  These changes should also be submitted via a pull request.
 
+If your proposal is not approved and merged within 10 business days, it will be closed.
+
 ## Previous Proposals
 
 Proposals written and accepted using the old system will remain in the github issue tracker for this repository.
