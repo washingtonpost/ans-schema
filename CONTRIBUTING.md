@@ -2,7 +2,13 @@
 
 ## Submitting a Proposal ##
 
-If you wish to alter the schema of ANS in any substantive way, you must write a proposal describing the change that you wish to make. To write a proposal, do the following:
+If you wish to alter the schema of ANS in any substantive way, you must write a proposal describing the change that you wish to make.
+
+### Procedure (Short Version)
+
+Submit a pull request to this repository with a proposal document like [this one](https://github.com/washingtonpost/ans-schema/blob/master/docs/proposals/SAMPLE%20-%202017-04-19%20-%20Recipe%20Element.md) in the /docs/proposals directory.  When your pull request is merged, you can begin working on a second pull request to implement your changes.
+
+### Procedure (Long Version)
 
 1. Branch or fork this repository.
 2. Create a markdown document in the /docs/proposals/ directory with the date and title of your proposal. (E.g. "2017-05-01 - My Proposal.md")
