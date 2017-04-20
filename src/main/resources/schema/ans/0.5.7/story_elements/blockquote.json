@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.7/story_elements/blockquote.json",
-  "description": "A blockquote content element",
+  "description": "(Deprecated.) Equivalent to a blockquote HTML element. Use the new quote element instead.",
   "type": "object",
   "additionalPropeties": false,
   "properties": {
