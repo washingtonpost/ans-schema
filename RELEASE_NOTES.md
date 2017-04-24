@@ -2,6 +2,10 @@
 
 ### TBD ###
 
+### 1.3.1 2017/04/24 ##
+
+* Fixes bug in 0.5.7->0.5.8 upverter where an empty string in `additional_properties.workflow.status` would cause `.planning.workflow.status_code` to be set to 0 instead of not set at all.
+
 ### 1.3.0 2017/04/14 ##
 
 * Adds `publishing` trait to 0.5.8
