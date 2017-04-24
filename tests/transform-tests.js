@@ -648,6 +648,14 @@ describe("Transformations: ", function() {
           result.workflow.note.should.eql("This is a private note.");
         });
 
+        it("should not add workflow status code of 0", function() {
+          var result = transforms.upvert(fixtures['0.5.7']['story-fixture-planning-status-code-is-invalid'], '0.5.8');
+
+          result.workflow.should.not.have.property('status_code');
+          result.workflow.note.should.eql("This is a private note.");
+        });
+
+
       });
 
       it("should not drop fields", function() {
