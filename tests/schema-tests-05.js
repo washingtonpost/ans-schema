@@ -900,16 +900,6 @@ describe("Schema: ", function() {
             });
           });
 
-          describe("Table 2", function() {
-            it("should validate a table 2 element", function() {
-              validateIfFixtureExists(version, type_prefix + '/table_02.json', 'table_02-fixture-good');
-            });
-
-            it("should not validate a table 1 element", function() {
-              validateIfFixtureExists(version, type_prefix + '/table_02.json', 'table-fixture-good', false);
-            });
-          });
-
           describe("Interstitial Link", function() {
             it("should validate a interstitial link", function () {
               validateIfFixtureExists(version, type_prefix + '/interstitial_link.json', 'interstitial-link-fixture-good');

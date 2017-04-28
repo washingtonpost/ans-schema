@@ -40,40 +40,61 @@
           "type": "array",
           "items": {
             "type": "object",
-            "allOf": [
-              {
-                "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/story_operation.json"
+            "additionalProperties": false,
+            "properties": {
+              "operation": {
+                "enum": [ "publish_edition" ]
               },
-              {
-                "type": "object",
-                "properties": {
-                  "operation": {
-                    "enum": [ "publish_edition" ]
-                  }
-                }
+              "operation_revision_id": {
+                "title": "Revision ID (Operation)",
+                "description": "The revision id to be published.",
+                "type": "string"
+              },
+              "operation_edition": {
+                "title": "Edition Name (Operation)",
+                "description": "The name of the edition this operation will publish to.",
+                "type": "string"
+              },
+              "operation_date": {
+                "title": "Operation Date",
+                "description": "The date that this operation will be performed.",
+                "type": "string"
+              },
+              "additional_properties": {
+                "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_additional_properties.json"
               }
-            ]
+            }
           }
         },
         "unpublish_edition": {
           "type": "array",
           "items": {
             "type": "object",
-            "allOf": [
-              {
-                "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/story_operation.json"
+            "additionalProperties": false,
+            "properties": {
+              "operation": {
+                "enum": [ "unpublish_edition" ]
               },
-              {
-                "properties": {
-                  "operation": {
-                    "enum": [ "unpublish_edition" ]
-                  }
-                }
+              "operation_edition": {
+                "title": "Edition Name (Operation)",
+                "description": "The name of the edition this operation will publish to.",
+                "type": "string"
+              },
+              "operation_date": {
+                "title": "Operation Date",
+                "description": "The date that this operation will be performed.",
+                "type": "string"
+              },
+              "additional_properties": {
+                "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_additional_properties.json"
               }
-            ]
+            }
           }
         }
       }
+    },
+    "additional_properties": {
+      "$ref" : "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_additional_properties.json"
     }
   },
 
@@ -81,9 +102,10 @@
 
   "definitions": {
     "edition": {
+      "additionalProperties": false,
       "properties": {
 
-        "edition": {
+        "edition_name": {
           "title": "Edition Name",
           "description": "The machine-readable identifier of this edition. This should be the same as the key in 'editions' for the edition object.",
           "type": "string"
@@ -96,40 +118,45 @@
           "format": "date-time"
         },
 
-        "first_published_date": {
-          "title": "First Published Date",
+        "edition_first_publish_date": {
+          "title": "First Published Date (Edition)",
           "description": "The machine-generated date that this edition was created for the first time (i.e., that the content item was first published.)",
           "type": "string",
           "format": "date-time"
         },
 
-        "display_date": {
+        "edition_display_date": {
           "title": "Display Date (Edition)",
           "description": "The human-editable date that should be shown to readers as the 'date' for this content item. When viewing the story at this edition name directly, this will override whatever value is set for Display Date on the story directly. After an edition is created, subsequent updates to that edition will not change this date unless otherwise specified.",
           "type": "string",
           "format": "date-time"
         },
 
-        "publish_date": {
+        "edition_publish_date": {
           "title": "Publish Date (Edition)",
           "description": "The machine-editable date that should be shown to readers as the 'publish date' for this content item. When viewing the story at this edition name directly, this will override whatever value is set for Publish Date on the story directly. Every time an edition is updated (i.e. a story is republished) this date will also be updated unless otherwise specified.",
           "type": "string",
           "format": "date-time"
         },
 
-        "published": {
+        "edition_published": {
           "title": "Publish Status",
           "description": "If false, this edition has been deleted/unpublished.",
           "type": "boolean"
         },
 
-        "revision_id": {
+        "edition_revision_id": {
           "title": "Revision ID",
           "description": "The id of the revision that this edition was created from. Omitted if unpublished.",
           "type": "string"
+        },
+
+        "additional_properties": {
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_additional_properties.json"
         }
+
       },
-      "required": [ "published", "edition_date", "edition" ]
+      "required": [ "edition_published", "edition_date", "edition_name" ]
     }
   }
 }
