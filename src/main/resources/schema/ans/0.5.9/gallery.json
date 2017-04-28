@@ -33,9 +33,6 @@
     "copyright": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_copyright.json"
     },
-    "channels": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_channel.json"
-    },
     "canonical_url": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_canonical_url.json"
     },
@@ -126,14 +123,16 @@
     "slug": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_slug.json"
     },
+    "content_restrictions": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_content_restrictions.json"
+    },
+
     "additional_properties": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_additional_properties.json"
     },
+
     "content_elements": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_content_elements.json"
-    },
-    "content_restrictions": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_content_restrictions.json"
     }
   },
   "required": [ "type", "version" ]
