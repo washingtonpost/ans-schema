@@ -141,42 +141,48 @@
     "has_published_edition": true,
     "editions": {
       "default": {
-        "edition": "default",
+        "edition_name": "default",
         "edition_date": "2017-04-15T15:00:00Z",
-        "first_published_date": "2017-04-15T12:00:00Z",
-        "publish_date": "2017-04-15T12:00:00Z",
-        "display_date": "2017-04-15T15:00:00Z",
-        "revision_id": "CAIP33ODLZD5LESQ3CH6MLP6IM",
-        "published": true
+        "edition_first_publish_date": "2017-04-15T12:00:00Z",
+        "edition_publish_date": "2017-04-15T12:00:00Z",
+        "edition_display_date": "2017-04-15T15:00:00Z",
+        "edition_revision_id": "CAIP33ODLZD5LESQ3CH6MLP6IM",
+        "edition_publish_status": true,
+        "additional_properties": {
+          "foo":"bar"
+        }
       },
       "print": {
-        "edition": "print",
+        "edition_name": "print",
         "edition_date": "2017-04-16T15:00:00Z",
-        "first_publish_date": "2017-04-16T15:00:00Z",
-        "publish_date": "2017-04-16T15:00:00Z",
-        "display_date": "2017-04-16T15:00:00Z",
-        "revision_id": "CAIP33ODLZD5LESQ3CH6MLP6IM",
-        "published": true
+        "edition_first_publish_date": "2017-04-16T15:00:00Z",
+        "edition_publish_date": "2017-04-16T15:00:00Z",
+        "edition_display_date": "2017-04-16T15:00:00Z",
+        "edition_revision_id": "CAIP33ODLZD5LESQ3CH6MLP6IM",
+        "edition_publish_status": true
       }
     },
     "scheduled_operations": {
       "publish_edition": [{
-        "type": "story_operation",
-        "story_id": "f8f706f0-0acc-11e5-9e39-0db921c47b93",
         "operation": "publish_edition",
-        "date": "2017-04-20T15:00:00Z",
-        "publish_date": "2017-04-15T15:00:00Z",
-        "display_date": "2017-04-15T15:00:00Z",
-        "revision_id": "DDDP33ODLZD5LESQ3CH6MLP6IM",
-        "editions": [ "default" ]
+        "operation_date": "2017-04-20T15:00:00Z",
+        "operation_revision_id": "DDDP33ODLZD5LESQ3CH6MLP6IM",
+        "operation_edition":  "default",
+        "additional_properties": {
+          "foo": "bar"
+        }
       }],
       "unpublish_edition": [{
-        "type": "story_operation",
-        "story_id": "f8f706f0-0acc-11e5-9e39-0db921c47b93",
         "operation": "unpublish_edition",
-        "date": "2017-04-30T15:00:00Z",
-        "editions": [ "default" ]
+        "operation_date": "2017-04-30T15:00:00Z",
+        "operation_edition": "default",
+        "additional_properties": {
+          "foo": "bar"
+        }
       }]
+    },
+    "additional_properties": {
+      "foo":"bar"
     }
   }
 }
