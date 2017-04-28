@@ -42,11 +42,11 @@ It should also:
 
 # Proposal
 
-## Part I. Structured Text Element.
+## Part I. Structured Text Object.
 
-### `text` story element should describe structured text content
+### `attributed_text` object describes structured text content
 
-Text element will have following structure:
+Attributed text object will have the following structure. Note that proposed structure is compatible with preexisting `text` story element (as of 0.5.8).
 
 * a required `text` property with plain text content of type `string`,
 * an optional `attributes` property with array of `attribute` objects describing formatting to be applied to the text,
@@ -116,21 +116,39 @@ Example:
 ```
 
 
-## Part II. Structured Text Applied to Other Elements
+## Part II. Structured Text Applied to Story Elements
 
 ### All formatted content should be represented as a structured text content
 
-Existing `blockquote`, `code`, `correction`, `header`, `interstitial_link` adopt the same structure as a `text` element. Following properties are replaced with text/attributes/selections/text properties:
+Existing `text`, `blockquote`, `correction`, `header`, `interstitial_link` adopt the structure defined by `attributed_text` object. Following properties are replaced with `text`/`attributes`/`selections`/`text` properties as defined above:
 
 * blockquote/content
-* code/content
 * correction/text
 * header/content
 * interstitial_link/content
 * text/content
 
+The exception is the `code/content` property, which represents plain text computer code - without syntax highlighting or any other markup.
 
-## Part III. Document Usage of HTML
+
+## Part III. Structured Text Applied to Properties
+
+Existing properties which allow usage of the markup in text content should adopt `attributed_text` type instead of `string`. These include:
+
+* image/caption
+* video/transcript
+* description (trait_description.json / dictionary.json)
+* headlines (trait_headlines.json / dictionary.json)
+* subheadlines (trait_subheadlines.json / dictionary.json)
+
+Existing properties which use `text` where additional properties defined in `content_element` are not needed, should switch to `attributed_text`:
+
+* quote/citation
+* table/header/items
+* table/rows/items/items
+
+
+## Part IV. Document Usage of HTML
 
 ### Define properties allowing HTML content
 
@@ -142,12 +160,14 @@ All `string` type properties which can have HTML content should be explicitly do
 All other `string` type properties are assumed to have only plain text content. Examples include:
 
 * image/subtitle
-* image/caption
+* code/content
 * code/language
 * address/street_address (via trait_address.json)
 * copyright (via trait_copyright.json)
 * editor_note (via trait_editor_note.json)
 * location (via trait_location.json)
+* label/basic/text (via trait_label.json)
+* label/*/text (via trait_label.json)
 * owner/name (via trait_owner.json)
 * slug (via trait_slug.json)
 * source/name (via trait_source.json)
@@ -165,12 +185,11 @@ All other `string` type properties are assumed to have only plain text content. 
 * video/rating
 
 
-## Part IV. Future Work
+## Part V. Future Work
 
 This proposal leaves room for defining other types of attributes, such a `link`, which could be used to denote relationship between elements and other content.
 
 
-# OPEN QUESTIONS #
+# OPEN ISSUES #
 
-* Should text (trait_label.json) support formatting/HTML?
-* Should main (train_disctionary.json) support formatting/HTML?
+* Add `link` attribute to represent `<a>` HTML tags.
