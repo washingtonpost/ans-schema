@@ -147,7 +147,7 @@
         "edition_publish_date": "2017-04-15T12:00:00Z",
         "edition_display_date": "2017-04-15T15:00:00Z",
         "edition_revision_id": "CAIP33ODLZD5LESQ3CH6MLP6IM",
-        "edition_publish_status": true
+        "edition_published": true
       },
       "print": {
         "edition_name": "print",
@@ -156,7 +156,7 @@
         "edition_publish_date": "2017-04-16T15:00:00Z",
         "edition_display_date": "2017-04-16T15:00:00Z",
         "edition_revision_id": "CAIP33ODLZD5LESQ3CH6MLP6IM",
-        "edition_publish_status": true
+        "edition_published": true
       }
     },
     "scheduled_operations": {

@@ -139,22 +139,23 @@
           "format": "date-time"
         },
 
-        "edition_publish_status": {
-          "title": "Publish Status",
+        "edition_published": {
+          "title": "Publish Status (Edition)",
           "description": "If false, this edition has been deleted/unpublished.",
           "type": "boolean"
         },
 
         "edition_revision_id": {
-          "title": "Revision ID",
-          "description": "The id of the revision that this edition was created from. Omitted if unpublished.",
+          "title": "Revision ID (Edition)",
+          "description": "The id of the revision that the edition was created from. Omitted if unpublished.",
           "type": "string"
         },
+
         "additional_properties": {
           "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_additional_properties.json"
         }
       },
-      "required": [ "edition_publish_status", "edition_date", "edition_name" ]
+      "required": [ "edition_published", "edition_date", "edition_name" ]
     }
   }
 }
