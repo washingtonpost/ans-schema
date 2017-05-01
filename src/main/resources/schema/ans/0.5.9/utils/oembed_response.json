@@ -36,7 +36,8 @@
         },
         "provider": {
           "description": "A URL that can resolve the id into an ANS element",
-          "type": "string"
+          "type": "string",
+          "format": "uri"
         }
       },
       "required": [ "provider", "id" ]

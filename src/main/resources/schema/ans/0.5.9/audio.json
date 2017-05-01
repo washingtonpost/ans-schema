@@ -133,7 +133,8 @@
 
     "source_url": {
       "description": "The audio source file.",
-      "type": "string"
+      "type": "string",
+      "format": "uri"
     },
     "mimetype": {
       "description": "Mime type of audio source file.",

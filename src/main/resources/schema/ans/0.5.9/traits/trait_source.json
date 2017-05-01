@@ -24,7 +24,8 @@
     },
     "edit_url": {
       "type": "string",
-      "description": "A link to edit this content in its source CMS."
+      "description": "A link to edit this content in its source CMS.",
+      "format": "uri"
     },
 
     "additional_properties": {

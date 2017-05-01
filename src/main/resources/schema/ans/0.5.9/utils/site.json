@@ -28,7 +28,8 @@
     },
     "path": {
       "description": "The url path to this site",
-      "type": "string"
+      "type": "string",
+      "format": "uri"
     },
     "parent_id": {
       "description": "The id of this section's parent site, if any",

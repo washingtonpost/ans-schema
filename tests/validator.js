@@ -156,7 +156,7 @@ describe("ANS Validator", function() {
                       "type": "reference",
                       "referent": {
                         "type": "foo",
-                        "provider": "bar",
+                        "provider": "/bar",
                         "id": "goo"
                       }
                     }]

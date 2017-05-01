@@ -61,7 +61,7 @@
           "id": "1",
           "type": "image",
           "service": "",
-          "provider": ""
+          "provider": "/provider"
         }
       }
     ]
@@ -92,7 +92,7 @@
         "type": "image",
         "id": "1",
         "service": "",
-        "provider": ""
+        "provider": "https://www.provider.com"
       }
     }
   },

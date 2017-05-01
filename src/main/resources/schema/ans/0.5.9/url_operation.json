@@ -39,11 +39,13 @@
       },
       "original_url": {
         "type": "string",
-        "description": "The original url that will trigger a redirect to the destination_url."
+        "description": "The original url that will trigger a redirect to the destination_url.",
+        "format": "uri"
       },
       "destination_url": {
         "type": "string",
-        "description": "The new canonical_url of the story.  The original_url will redirect to the destination_url."
+        "description": "The new canonical_url of the story.  The original_url will redirect to the destination_url.",
+        "format": "uri"
       }
     },
     "required": [ "type", "operation", "id", "organization_id" ]

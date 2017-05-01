@@ -26,7 +26,8 @@
         },
         "url" :{
           "type": "string",
-          "description": "The url of the subtitle stream."
+          "description": "The url of the subtitle stream.",
+          "format": "uri"
         }
       }
     }

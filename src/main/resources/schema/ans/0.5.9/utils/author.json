@@ -31,7 +31,8 @@
     },
     "url": {
       "description": "A url to some deeper set of information about the contributor.",
-      "type": "string"
+      "type": "string",
+      "format": "uri"
     },
     "social_links": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_social.json"

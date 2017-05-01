@@ -17,7 +17,8 @@
         },
         "url": {
           "type": "string",
-          "description": "An optional destination url of this label."
+          "description": "An optional destination url of this label.",
+          "format": "uri"
         },
         "display": {
           "type": "boolean",
@@ -42,7 +43,8 @@
         },
         "url": {
           "type": "string",
-          "description": "An optional destination url of this label."
+          "description": "An optional destination url of this label.",
+          "format": "uri"
         },
         "display": {
           "type": "boolean",

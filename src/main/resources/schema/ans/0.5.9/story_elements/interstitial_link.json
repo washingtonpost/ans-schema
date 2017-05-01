@@ -26,7 +26,8 @@
 
     "url": {
       "description": "The interstitial link url.",
-      "type": "string"
+      "type": "string",
+      "format": "uri"
     },
     "content": {
       "description": "The interstitial link text.",

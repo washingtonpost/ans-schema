@@ -141,7 +141,8 @@
     },
     "url": {
       "description": "URL for the image.",
-      "type": "string"
+      "type": "string",
+      "format": "uri"
     },
     "width": {
       "description": "Width for the image.",

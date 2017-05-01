@@ -31,7 +31,8 @@
     },
     "url": {
       "description": "Where to get the stream from.",
-      "type": "string"
+      "type": "string",
+      "format": "uri"
     },
     "bitrate": {
       "description": "The bitrate of the video",
