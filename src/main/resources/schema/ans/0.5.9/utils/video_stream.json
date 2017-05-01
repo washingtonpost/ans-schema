@@ -40,9 +40,6 @@
     "provider": {
       "description": "The provider of the video.",
       "type": "string"
-    },
-    "url": {
-      "type": "string"
     }
   }
 }
