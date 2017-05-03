@@ -7,20 +7,20 @@
   "additionalProperties": false,
   "properties": {
     "source_id": {
-      "description": "Original source CMS id",
+      "description": "The id of this content in a foreign CMS.",
       "type":"string"
     },
     "source_type": {
       "type": "string",
-      "description": "The method used to enter this content. E.g. 'Staff', 'Wires'"
+      "description": "The method used to enter this content. E.g. 'staff', 'wires'."
     },
     "name": {
       "type": "string",
-      "description": "The organization who originated this content."
+      "description": "The human-readable name of the organization who first produced this content. E.g., 'Reuters'."
     },
     "system": {
       "type": "string",
-      "description": "The software (e.g., CMS) that was used to enter this content."
+      "description": "The software (CMS or editor) that was used to enter this content. E.g., 'wordpress', 'ellipsis'."
     },
     "edit_url": {
       "type": "string",
