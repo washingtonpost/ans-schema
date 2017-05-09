@@ -4,7 +4,7 @@
   "title": "Blockquote",
   "description": "(Deprecated.) Equivalent to an HTML blockquote element. Consider the new `quote` element instead.",
   "type": "object",
-  "additionalPropeties": false,
+  "additionalProperties": false,
   "properties": {
     "type": {
       "enum": [ "blockquote" ]
