@@ -4,8 +4,33 @@
   "title": "Credit trait",
   "type": "object",
   "description": "A list of people and groups attributed to this content, keyed by type of contribution. In the Arc ecosystem, references in this list will be denormalized into author objects from the arc-author-service.",
+  "properties": {
+    "by": {
+        "type": "object",
+        "anyOf": [
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/utils/author.json"
+          },
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/utils/reference.json"
+          }
+        ]
+    },
+    "photos_by": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/utils/author.json"
+        },
+        {
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/utils/reference.json"
+        }
+      ]
+    }
+  },
+
   "patternProperties": {
-    ".*": {
+    "^[a-zA-Z0-9_]*": {
       "type": "array",
       "items": {
         "type": "object",
