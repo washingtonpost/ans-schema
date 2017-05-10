@@ -23,7 +23,7 @@
     },
 
     "photographer": {
-      "title": "Photos by",
+      "title": "Photographer",
       "description": "The primary photographer(s) of an image.",
 
       "type": "array",
