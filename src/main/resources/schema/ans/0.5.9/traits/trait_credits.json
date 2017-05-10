@@ -42,7 +42,7 @@
 
     "photos_by": {
       "title": "Photos by",
-      "description": "The photographer(s) of supplementary images included in this document, especially if this document is a gallery or a story. Note that if this document is an image, the photographer(s) should appear in the 'photographer' slot.",
+      "description": "The photographer(s) of supplementary images included in this document, if it is a story. Note that if this document is an image, the photographer(s) should appear in the 'photographer' slot.",
       "type": "array",
       "items": {
         "type": "object",
