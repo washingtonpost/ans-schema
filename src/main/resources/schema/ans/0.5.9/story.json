@@ -138,7 +138,11 @@
     },
     "publishing": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_publishing.json"
+    },
+    "voice_transcripts": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_voice_transcript.json"
     }
+
   },
   "required": [ "type", "version" ]
 }

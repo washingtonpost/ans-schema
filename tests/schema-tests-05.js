@@ -473,6 +473,10 @@ describe("Schema: ", function() {
             validate(version, '/audio.json', 'audio-fixture-good');
           });
 
+          it("should validate audio with streams (0.5.9+)", function() {
+            validateIfFixtureExists(version, '/audio.json', 'audio-fixture-good-streams');
+          });
+
           it("should validate a well-formatted audio with settings", function() {
             validate(version, '/audio.json', 'audio-fixture-good-settings');
           });
@@ -483,6 +487,10 @@ describe("Schema: ", function() {
 
           it("should not validate a non-audio element", function() {
             validate(version, '/audio.json', 'audio-fixture-bad', false);
+          });
+
+          it("should not validate an audio with no source (0.5.9+)", function() {
+            validateIfFixtureExists(version, '/audio.json', 'audio-fixture-bad-no-source', false);
           });
 
           it("should validate as content", function() {

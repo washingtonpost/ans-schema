@@ -2,6 +2,11 @@
 
 ### TBD ###
 
+### 1.3.3 2017/05/16 ##
+
+* Add `trait_voice_transcripts` to stories
+* Adds `streams` to `audio`
+
 ### 1.3.2 2017/04/28 ##
 
 * Reworks `trait_publishing`
