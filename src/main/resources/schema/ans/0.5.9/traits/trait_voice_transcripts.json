@@ -60,7 +60,9 @@
       "output": {
         "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/audio.json"
       }
-    }
+    },
+
+    "required": [ "options" ]
   }
 
 }
