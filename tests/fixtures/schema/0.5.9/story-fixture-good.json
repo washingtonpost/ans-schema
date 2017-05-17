@@ -468,6 +468,48 @@
     }
   },
 
+  "voice_transcripts": [{
+    "_id": "vt-1",
+    "type": "voice_transcript",
+    "subtype": "short",
+
+    "options": {
+      "enabled": true,
+      "voice": "joanna"
+    },
+
+    "options_used": {
+      "enabled": true,
+      "voice": "joanna"
+    },
+
+    "output": {
+      "type": "audio",
+      "version": "0.5.9",
+      "streams": [{
+        "url": "https://arc-content-api.s3.amazonaws.com/polly/test.mp3"
+      }]
+    }
+  }, {
+    "_id": "vt-2",
+    "type": "voice_transcript",
+    "subtype": "full",
+
+    "options": {
+      "enabled": true
+    },
+    "options_used": {
+      "enabled": true
+    },
+    "streams": [{
+      "bitrate": 96,
+      "url": "https://arc-content-api.s3.amazonaws.com/polly/test-full-96.mp3"
+    }, {
+      "bitrate": 128,
+      "url": "https://arc-content-api.s3.amazonaws.com/polly/test-full-128.mp3"
+    }]
+  }],
+
   "additional_properties": {
     "foo": "bar"
   }

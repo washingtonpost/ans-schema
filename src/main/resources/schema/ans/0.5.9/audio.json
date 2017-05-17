@@ -130,13 +130,12 @@
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_additional_properties.json"
     },
 
-
     "source_url": {
-      "description": "The audio source file.",
+      "description": "(Deprecated.) The audio source file. Use 'streams' instead.",
       "type": "string"
     },
     "mimetype": {
-      "description": "Mime type of audio source file.",
+      "description": "(Deprecated.) Mime type of audio source file. Use 'streams' instead.",
       "type": "string"
     },
     "autoplay": {
@@ -154,7 +153,21 @@
     "preload": {
       "description": "Whether preload is enabled.",
       "type": "boolean"
+    },
+
+    "streams": {
+      "description": "The different streams this audio can play in.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/utils/audio_stream.json"
+      }
     }
   },
-  "required": [ "type", "version" ]
+  "required": [ "type", "version" ],
+  "oneOf": [{
+    "required": [ "streams" ]
+  }, {
+    "required": [ "source_url" ]
+  }]
 }
