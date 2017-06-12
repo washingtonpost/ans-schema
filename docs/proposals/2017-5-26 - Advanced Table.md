@@ -5,24 +5,24 @@ Current ANS tables are not sufficient to support tables from methode.
 
 # Proposal
 
-Add a new table spec that mirrors the functionality of an HTML table, called `advanced_table`.
+Add a new table object that encapsulates the functionality of an HTML table, called `advanced_table`.
 
-Key traits of the table:
+Key traits of the advanced table:
 
-* 4 data types - `advanced_table`, `row`, `data_cell`, `header_cell`
+* made up of 4 objects - `advanced_table`, `row`, `data_cell`, `header_cell`
   * a `table` is a list of rows
   * a `row` is a list of cells
   * a `cell` is a list of content elements, restricted to text and raw_html
     * there are two implementations of a cell, `data_cell` and `header_cell`, similar to `<th>` and `<td>` tags
 * order/layout assumptions - elements will have an assumed layout that clients may follow
-  * for example, it is assumed that rows are ordered from top to bottom, and cells are ordered left to right
+  * for example, rows are ordered from top to bottom, and cells are ordered left to right
 * no other rendering details will be included in the spec
-  * adapters can use additional properties to specify rendering details, if desired
+  * if needed, adapters can use additional properties to specify rendering details
 
 
 ## Advanced Table
 
-`advanced_table` is the parent object. It will be a content element, and contain a list of rows.
+`advanced_table` is the parent object. It is a content element, and contain a list of rows.
 
 ### Rows
 
@@ -30,7 +30,7 @@ List of rows that belong to the table. The order is assumed to be top to bottom.
 
 ### Title
 
-ANS field. Name of the table.
+Text field. Name of the table.
 
 ### Citation
 
@@ -39,6 +39,10 @@ ANS text element. The source of the table, for example "The Washington Post".
 ### Credits
 
 ANS credits object, for identifying the author(s) of the table.
+
+### Subtype
+
+ANS subtype. Can be used to distinguish between different types of tables, so that clients can react accordingly.
 
 ### No height/width or other display options
 
@@ -55,8 +59,11 @@ A `row` contains a list of cells. It will only be usable within a table.
 
 List of cells that belong to this row. The order is assumed to be left to right.
 
+### Subtype
 
-## Data Cell / header Cell
+ANS Subtype. Can be used to distinguish types of rows.
+
+## Data Cell / Header Cell
 
 There are two types of cells, `data_cell` and `header_cell`. They will only be usable within a row.
 
@@ -68,37 +75,34 @@ A list of content elements that belong to the cell. This is restricted to elemen
 
 The order of elements is assumed to be top to bottom.
 
-Raw html is allowed here to make it possible to include more advanced markup, such as span tags. Currently, these tags are allowed in text elements, but I think this way is better for future proofing the advanced table.
+### Subtype
 
+ANS Subtype. Can be used to distinguish types of cells.
 
 
 ## Alternatives
 
 ### Cell types
 
-The spec could potentially have one type `cell`, and use subtype to distinguish between `data` and `header` cells.
-
-One could argue that it may be better to have one `cell` type and to use subtype to indicate `header` vs `data`. This would make the schema smaller, but would also require clients check two fields on each cell when implementing logic. I don't have strong feelings on this either way.
-
-
+The spec could potentially have one type for cells, `cell`, and use subtype to distinguish between `data` and `header` cells. This would make the schema smaller, but would also require clients check two fields on each cell. I don't have strong feelings on this either way.
 
 
 ## Concerns
 
 ### What happens if rows have different numbers of cells?
 
-Based on the order of elements and the assumed layout (left to right, or top to bottom), it is clear where each element should go. If the user wants to leave empty space in the table, they should include empty elements. Otherwise, it will be assuemd that any mismatch in length will lead to space at the end of the element.
+Based on the order of elements and the assumed layout (left to right, or top to bottom), it is clear where each element should go. If the user wants to leave empty space, they would include empty elements. Otherwise, it will be assuemd that any mismatch in length will lead to space at the end of the element.
 
 
 ### Why do we need multiple elements in a cell?
 
-We need to be able to represent multiple p tags within a cell. Furthermore, these p tags can include minor amounts of rendering information. While we don't want any of that rendering information to be in the schema, we do need to be able to put additional properties on each paragraph within a cell. Allowing mutiple elements within a cell makes this possible.
+We need to be able to represent multiple p tags within a cell. Furthermore, these p tags can include minor rendering details. While we don't want any of that rendering information to be in the schema, we do need to be able to put additional properties on each paragraph within a cell. Allowing mutiple elements within a cell makes this possible.
 
 ### Why do we need both raw_html and text elements in the cell?
 
-Raw html makes it possible to include more advanced markup, such as span tags, on elements within a cell.
+Raw html makes it possible to include more advanced markup, such as span tags, on elements within a cell. Raw html would be used sparingly, only when text elements are not sufficient.
 
-While this currently isn't a problem, because text elements do allow tags right now, my understanding is that this will change in the future. I believe allowing raw_html in a cell will future proof this functionality, and avoid unnecessary migrations.
+While this currently isn't a problem, because text elements do not have restrictions, my understanding is that this will change in the future. I believe allowing raw_html in a cell will future proof this functionality, and avoid unnecessary migrations.
 
 An example from methode:  
 ```
@@ -109,9 +113,9 @@ An example from methode:
 
 For example, look at this [article](https://www.washingtonpost.com/sports/nationals/ryan-zimmerman-returns-as-nationals-top-marlins-for-90th-win-3-2/2014/09/20/ff3a05b8-40ff-11e4-9587-5dafd96295f0_story.html).
 
-We could potentially utilize a more specific ans object for these stat series, though it may not be worth it. By supporting complex tables from methode, we are also supporting these other use cases. While it does makes sense have a template to quickly create a stat series/timeline, it may not be worth putting an object explicitly into the schema itself.
+We could potentially utilize a more specific ans object for these stat series, though it may not be worth it. By supporting other complex tables from methode, we are also supporting these other use cases. While it does makes sense have a template to quickly create a stat series/timeline, it may not be worth putting an object explicitly into the schema.
 
-From an adapter perspective, this would also require us to have logic to distinguish between a normal table and a stat series, which is more complicated than parsing html/xml in the `advanced_tabled` spec.
+From an adapter perspective, this would also require logic to distinguish between a normal table and a stat series, which is more complicated than parsing both into the same object.
 
 
 # Examples
@@ -229,7 +233,7 @@ From an adapter perspective, this would also require us to have logic to disting
 }
 ```
 
-The above table translated to markdown style (not actual valid markdown):
+The above ANS table would translate to a table that looks something like this:
 
 ```
 |    | X1 | X2 |
@@ -257,8 +261,6 @@ Or in html:
     </tr>
 </table>
 ```
-
-Note: This table isn't necessarily specifying this exact html output, but, by using some basic templating logic, this html is fully implied and can be constructed easily.
 
 
 ## Complex usage - A WAPO/Methode example
