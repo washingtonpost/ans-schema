@@ -64,7 +64,7 @@ Example:
   }
 ```
 
-### `selection` describe formatting for specific segments of a text string
+### `selection`s describe formatting for specific segments of a text string
 
 Each `selection` object defines a part of a text string and what formatting attributes should be applied to it. An idea borrowed from Apple and Twitter.
 
@@ -115,6 +115,26 @@ Example:
         ]
 ```
 
+### `content` is an HTML representation of the canonical `text` property
+
+Each attributed text object can have an optional `content` element which contains HTML representation of that `text`. It is expected that, on input:
+
+* `text`, and `attributes`, and `selections` properties are present, or recreated from the `content` property during import;
+* `content` property is omitted, or contains only allowed subset of the HTML;
+
+On output:
+
+* `text`, and `attributes`, and `selections` properties are present;
+* `content`  property can be omitted for non HTML clients;
+
+This means that ARC producers, when HTML content is passed in, should validate and parse that HTML content into attributed text content. On the other hand, HTML centric consumers can ignore attributed text markup and use raw HTML representation directly.
+
+Supported HTML subset will consist of tags and styles which can be directly mapped to the attribute types:
+
+* for strong, `<b>` and `<strong>`,
+* for emphasis, `<i>` and `<em>`,
+* etc.
+
 
 ## Part II. Structured Text Applied to Story Elements
 
@@ -148,14 +168,16 @@ Existing properties which use `text` where additional properties defined in `con
 * table/rows/items/items
 
 
-## Part IV. Document Usage of HTML
+## Part IV. Document Usage of Raw HTML
 
-### Define properties allowing HTML content
+### Define properties allowing raw HTML content
 
 All `string` type properties which can have HTML content should be explicitly documented. These include:
 
 * raw_html/content
 * video/embed_html
+
+### Define properties prohibiting HTML content
 
 All other `string` type properties are assumed to have only plain text content. Examples include:
 
