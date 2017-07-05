@@ -99,7 +99,8 @@ Each attribute element modifies the formatting of the text it is applied to. Ini
 * superscript,
 * subscript,
 * smallcaps,
-* dropcaps.
+* dropcaps,
+* link.
 
 Example:
 ```
@@ -111,6 +112,18 @@ Example:
           {
             "_id": "AAAAAAAAAAAAAAAAAAAAAAAAAC",
             "type": "strong"
+          }
+        ]
+```
+
+Additionally, `link` attribute must have `url` property pointing to the linked content. Example:
+
+```
+        "attributes": [
+          {
+            "_id": "AAAAAAAAAAAAAAAAAAAAAAAAAC",
+            "type": "link"
+            "url": "https://www.washingtonpost.com/..."
           }
         ]
 ```
@@ -211,7 +224,3 @@ All other `string` type properties are assumed to have only plain text content. 
 
 This proposal leaves room for defining other types of attributes, such a `link`, which could be used to denote relationship between elements and other content.
 
-
-# OPEN ISSUES #
-
-* Add `link` attribute to represent `<a>` HTML tags.
