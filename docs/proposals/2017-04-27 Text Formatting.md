@@ -128,6 +128,18 @@ Additionally, `link` attribute must have `url` property pointing to the linked c
         ]
 ```
 
+This initial list of attributes can be extended at a later versions of the specification with additional attributes, or with additional properties on existing attributes, if such need arises. For example, `strong` attribute could be extended to include `weight` property:
+
+```
+        "attributes": [
+          {
+            "_id": "AAAAAAAAAAAAAAAAAAAAAAAAAC",
+            "type": "strong",
+            "weight": 500
+          }
+        ]
+```
+
 ### `content` is an HTML representation of the canonical `text` property
 
 Each attributed text object can have an optional `content` element which contains HTML representation of that `text`. It is expected that, on input:
@@ -168,9 +180,12 @@ The exception is the `code/content` property, which represents plain text comput
 
 Existing properties which allow usage of the markup in text content should adopt `attributed_text` type instead of `string`. These include:
 
+* author/bio
 * image/caption
+* tag/description
 * video/transcript
 * description (trait_description.json / dictionary.json)
+* editor_note (via trait_editor_note.json)
 * headlines (trait_headlines.json / dictionary.json)
 * subheadlines (trait_subheadlines.json / dictionary.json)
 
@@ -199,7 +214,6 @@ All other `string` type properties are assumed to have only plain text content. 
 * code/language
 * address/street_address (via trait_address.json)
 * copyright (via trait_copyright.json)
-* editor_note (via trait_editor_note.json)
 * location (via trait_location.json)
 * label/basic/text (via trait_label.json)
 * label/*/text (via trait_label.json)
@@ -208,14 +222,12 @@ All other `string` type properties are assumed to have only plain text content. 
 * source/name (via trait_source.json)
 * author/name
 * author/org
-* author/bio
 * auxiliary/name (taxonomy)
 * keyword/keyword (taxonomy)
 * named_entity/name (taxonomy)
 * site/name
 * site/description
 * tag/text
-* tag/description
 * topic/name
 * video/rating
 
@@ -224,3 +236,4 @@ All other `string` type properties are assumed to have only plain text content. 
 
 This proposal leaves room for defining other types of attributes, such a `link`, which could be used to denote relationship between elements and other content.
 
+Determine if site/description and image/subtitle could contain attributed text.
