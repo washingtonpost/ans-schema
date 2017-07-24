@@ -658,6 +658,10 @@ describe("Schema: ", function() {
           it("should not validate a reference with a referent with additional properties (0.5.4+)", function() {
             validateIfFixtureExists(version, '/utils/reference.json', 'reference-fixture-bad-more-addl-props', false);
           });
+
+          it("should not validate an array as a reference (0.5.8+)", function() {
+            validateIfFixtureExists(version, '/utils/reference.json', 'reference-fixture-bad-array', false);
+          });
         });
 
         describe("Clavis (0.5.5+)", function() {
