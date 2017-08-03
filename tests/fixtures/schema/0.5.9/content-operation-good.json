@@ -21,7 +21,7 @@
   "created": false,
   "branch": "default",
   "version" : "0.5.9",
-  "source": {
+  "trigger": {
     "type": "image",
     "id": "AB456",
     "referent_update": true

@@ -48,21 +48,21 @@
         "type": "boolean",
         "description": "Identifies this item as created or updated."
       },
-      "source": {
-        "title": "Operation Source",
+      "trigger": {
+        "title": "Operation Trigger",
         "description": "Metadata about the primary source update that triggered this operation. These fields can be used by downstream consumers as an efficient way of determining the relevance of an operation.",
         "type": "object",
         "additionalProperties": false,
 
         "properties": {
           "type": {
-            "title": "Source Type",
+            "title": "Trigger Type",
             "description": "The type of update that was consumed in order to produce this update. If this operation is the result of a referent update, than this type may or may not match the type of document in the body. For example, suppose story A contains image B and story C. If B is updated, then an operation may be produced with source 'image' and a body of story A (with updated image metadata.) If C is updated, then an operation may be produced with source 'story' and the body of story A.",
             "type": "string",
             "enum": [ "story", "gallery", "image", "video", "url", "site", "author", "clavis" ]
           },
           "id": {
-            "title": "Source ID",
+            "title": "Trigger ID",
             "description": "The id of the document whose update was consumed in order to produce this update. If this operation is the result of a referent update, than this id will not match the id of the document in the body (except the case where a document references itself.)",
             "type": "string"
           },
