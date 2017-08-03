@@ -626,6 +626,13 @@ describe("Schema: ", function() {
           });
         });
 
+        describe("Content Operation", function() {
+          var type = "/content_operation.json";
+          it("should validate a referent update", function () {
+            validateIfFixtureExists(version, type, "content-operation-good");
+          });
+        });
+
         describe("Story Operation", function() {
           var type = "/story_operation.json";
 
