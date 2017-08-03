@@ -2,6 +2,7 @@
   "id" : "default_false_XYZ123",
   "body" : {
     "_id" : "XYZ123",
+    "version": "0.5.8",
     "type" : "story",
     "content_elements": [
       {

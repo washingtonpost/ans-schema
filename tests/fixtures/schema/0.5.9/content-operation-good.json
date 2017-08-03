@@ -2,6 +2,7 @@
   "id" : "default_false_XYZ123",
   "body" : {
     "_id" : "XYZ123",
+    "version": "0.5.9",
     "type" : "story",
     "content_elements": [
       {
@@ -18,7 +19,7 @@
   "published": false,
   "created": false,
   "branch": "default",
-  "version" : "0.5.8",
+  "version" : "0.5.9",
   "source": {
     "type": "image",
     "id": "AB456"
