@@ -24,6 +24,8 @@
   "trigger": {
     "type": "image",
     "id": "AB456",
-    "referent_update": true
+    "referent_update": true,
+    "priority": "standard",
+    "app_name": "ellipsis"
   }
 }

@@ -44,7 +44,14 @@
       "destination_url": {
         "type": "string",
         "description": "The new canonical_url of the story.  The original_url will redirect to the destination_url."
+      },
+      "priority": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_priority.json"
+      },
+      "app_name": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.8/traits/trait_app_name.json"
       }
+
     },
     "required": [ "type", "operation", "id", "organization_id" ]
   }]

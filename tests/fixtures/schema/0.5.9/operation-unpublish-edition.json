@@ -6,5 +6,8 @@
   "revision_id": "2A",
   "branch": "default",
   "version": "0.5.9",
+  "priority": "standard",
+  "app_name": "ellipsis",
+
   "editions": [ "web" ]
 }

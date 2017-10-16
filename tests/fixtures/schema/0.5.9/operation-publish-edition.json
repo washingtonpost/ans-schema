@@ -6,6 +6,8 @@
   "revision_id": "2A",
   "branch": "default",
   "version": "0.5.9",
+  "priority": "standard",
+  "app_name": "ellipsis",
   "editions": [ "web" ],
   "story": {
     "_id": "f8f706f0-0acc-11e5-9e39-0db921c47b93",

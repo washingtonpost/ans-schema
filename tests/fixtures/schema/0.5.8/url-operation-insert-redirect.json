@@ -5,6 +5,8 @@
   "organization_id" : "staging",
   "type" : "url-operation",
   "version" : "0.5.8",
+  "priority": "standard",
+  "app_name": "ellipsis",
   "original_url" : "/original-url",
   "destination_url" : "/destination-url"
 }

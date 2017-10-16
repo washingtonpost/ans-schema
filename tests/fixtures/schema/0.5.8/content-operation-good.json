@@ -22,6 +22,9 @@
   "version" : "0.5.8",
   "trigger": {
     "type": "image",
-    "id": "AB456"
+    "id": "AB456",
+    "referent_update": false,
+    "priority": "standard",
+    "app_name": "ellipsis"
   }
 }
