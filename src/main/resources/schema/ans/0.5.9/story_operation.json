@@ -58,6 +58,14 @@
       "type": "string",
       "description": "The version of ANS this Story is written in"
     },
+
+    "priority": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_priority.json"
+    },
+    "app_name": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_app_name.json"
+    },
+
     "story": {
       "description": "The story object being created/updated/deleted/published/unpublished",
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/story.json"

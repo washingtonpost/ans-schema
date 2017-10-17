@@ -32,5 +32,8 @@
   "operation" : "update",
   "organization_id" : "PW5TIZPZINHXBPNQTAJRSIS123",
   "type" : "image-operation",
-  "version" : "0.5.8"
+  "version" : "0.5.8",
+  "priority": "standard",
+  "app_name": "anglerfish"
+
 }

@@ -40,6 +40,14 @@
         "type": "string",
         "description": "The version of ANS this item is written in"
       },
+
+      "priority": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_priority.json"
+      },
+      "app_name": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_app_name.json"
+      },
+
       "keywords": {
         "type": "array",
         "items": {

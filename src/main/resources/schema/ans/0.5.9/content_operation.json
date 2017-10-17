@@ -70,7 +70,15 @@
             "title": "Referent Update",
             "description": "If true, this update was triggered by an update to a referenced element in the document rather than the document itself.",
             "type": "boolean"
+          },
+
+          "priority": {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_priority.json"
+          },
+          "app_name": {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_app_name.json"
           }
+
         }
       }
 

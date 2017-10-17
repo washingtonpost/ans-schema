@@ -6,5 +6,7 @@
   "type" : "url-operation",
   "version" : "0.5.9",
   "original_url" : "/original-url",
-  "destination_url" : "/destination-url"
+  "destination_url" : "/destination-url",
+  "priority": "standard",
+  "app_name": "ellipsis"
 }
