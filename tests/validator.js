@@ -178,6 +178,19 @@ describe("ANS Validator", function() {
 
 
     it("should validate items with a hyphen in their type", function() {
+      var author = {
+        "name": "BRENT SMITH",
+        "type": "author"
+      };
+
+      // Authors changed in v 0.5.9
+      var ver = new ans.version.Version(ans.version.parse_version(version));
+      var v058 = new ans.version.Version(ans.version.parse_version('0.5.8'));
+      if (ver.gt(v058)) {
+        author.version = version;
+        author.byline = "BRENT SMITH";
+      }
+
       var image_operation = {
         "_id": "1",
         "body": {
@@ -185,12 +198,7 @@ describe("ANS Validator", function() {
           "additional_properties": {         "alttext": "REUTERS"       },
           "caption": "Indiana Pacers David West celebrates during Game 6 of their NBA Eastern Conference Final playoff series against the Miami Heat in Indianapolis, Indiana June 1, 2013.",
           "credits": {
-            "photographer": [
-              {
-                "name": "BRENT SMITH",
-                "type": "author"
-              }
-            ]
+            "photographer": [ author ]
           },
           "owner": {
             "name": "REUTERS"

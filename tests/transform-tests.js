@@ -664,6 +664,23 @@ describe("Transformations: ", function() {
       });
 
     });
+
+    describe("0.5.8 to 0.5.9", function() {
+      it("should upvert an author", function() {
+        var upverter = transforms.upverters['0.5.8'];
+        var original = fixtures['0.5.8']['author-fixture'];
+        var result = upverter(original);
+        //console.log(JSON.stringify(result, 0, 2));
+        result.byline.should.eql("Greggo");
+        result.should.have.property('additional_properties');
+        result.books.should.eql(original.additional_properties.books);
+        result.education.should.eql(original.additional_properties.education);
+        result.should.not.have.property('some_additional_field');
+        result.name.should.eql("Gregory Engel");
+
+        validateAns(result, original, '0.5.9');
+      });
+    });
   });
 
   describe("Synchronizer", function() {
