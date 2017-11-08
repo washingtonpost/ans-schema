@@ -17,7 +17,9 @@
     "credits" : {
       "by" : [ {
         "name" : "Johnny Anonymous",
-        "type" : "author"
+        "byline": "Johnny Anonymous",
+        "type" : "author",
+        "version": "0.5.9"
       } ]
     },
     "height" : 600,

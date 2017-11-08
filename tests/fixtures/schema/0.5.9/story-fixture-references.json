@@ -20,7 +20,9 @@
     "additional reporting by": [
       {
         "type": "author",
-        "name": "Greg Engel"
+        "version": "0.5.9",
+        "name": "Greg Engel",
+        "byline": "Greggo"
       }
     ]
   },
@@ -76,7 +78,9 @@
         "by": [
           {
             "name": "Ansel Adams",
-            "type": "author"
+            "byline": "Ansel Adams",
+            "type": "author",
+            "version": "0.5.9"
           }
         ]
       },
@@ -155,7 +159,9 @@
         "by": [
           {
             "type": "author",
-            "name": "Ansel Adams"
+            "version": "0.5.9",
+            "name": "Ansel Adams",
+            "byline": "Ansel Adams"
           }
         ]
       },

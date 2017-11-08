@@ -85,7 +85,9 @@
     "by": [
       {
         "type": "author",
-        "name": "Bruce Harris"
+        "version": "0.5.9",
+        "name": "Bruce Harris",
+        "byline": "Bruce Harris"
       }
     ]
   },
