@@ -8,7 +8,9 @@
     "by": [
       {
         "type": "author",
-        "name": "John Jacob"
+        "version": "0.5.9",
+        "name": "John Jacob",
+        "byline": "John Jacob"
       }
     ]
   },

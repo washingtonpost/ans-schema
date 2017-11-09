@@ -9,8 +9,10 @@
     "by": [
       {
         "name": "John Q. Reporter",
+        "byline": "John Q. Reporter",
         "org": "The Washington Post",
         "type": "author",
+        "version": "0.5.9",
         "image": {
           "_id": "unique ANS id",
           "type": "image",
@@ -76,7 +78,9 @@
         "by": [
           {
             "name": "Ansel Adams",
-            "type": "author"
+            "byline": "Ansel Adams",
+            "type": "author",
+            "version": "0.5.9"
           }
         ]
       },
@@ -123,7 +127,9 @@
         "by": [
           {
             "name": "Ansel Adams",
-            "type": "author"
+            "byline": "Ansel Adams",
+            "type": "author",
+            "version": "0.5.9"
           }
         ]
       },

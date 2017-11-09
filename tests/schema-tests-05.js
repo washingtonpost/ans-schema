@@ -468,6 +468,12 @@ describe("Schema: ", function() {
       });
 
       describe(version, function() {
+        describe("Author (0.5.9+)", function() {
+          it("should validate a well-formatted author", function() {
+            validateIfFixtureExists('/utils/author.json', 'author-fixture-good');
+          });
+        });
+
         describe("Audio", function() {
           it("should validate a well-formatted audio", function() {
             validate(version, '/audio.json', 'audio-fixture-good');

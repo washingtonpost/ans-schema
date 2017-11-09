@@ -8,8 +8,10 @@
     "by": [{
       "_id": "AUTHOR1",
       "name": "Nina Patel",
+      "byline": "Nina Patel",
       "org": "The Washington Post",
       "type": "author",
+      "version": "0.5.9",
       "slug": "nina-patel"
     }]
   },
@@ -51,7 +53,9 @@
       "credits": { "by": [
         {
           "type": "author",
-          "name": "Ansel Adams"
+          "version": "0.5.9",
+          "name": "Ansel Adams",
+          "byline": "Ansel Adams"
         }
       ]},
       "url": "https://img.washingtonpost.com/rw/2010-2019/WashingtonPost/2015/06/19/Magazine/Images/6_28%20Tinyhome2_r1.tif?uuid=fXQD2BbLEeWd3OM1NUIQDA",
@@ -108,7 +112,9 @@
         "by": [
           {
             "type": "author",
-            "name": "Ansel Adams"
+            "version": "0.5.9",
+            "name": "Ansel Adams",
+            "byline": "Ansel Adams"
           }
         ]
       },

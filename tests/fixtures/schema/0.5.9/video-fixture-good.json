@@ -7,7 +7,9 @@
   "credits": {
     "by": [{
       "name": "Bruce Harris",
-      "type": "author"
+      "byline": "Bruce Harris",
+      "type": "author",
+      "version": "0.5.9"
     }]
   },
   "location": "Washington, D.C.",
