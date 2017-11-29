@@ -1,0 +1,19 @@
+{
+  "_id" : "XYZABC1",
+  "additional_properties" : {
+    "version" : 0,
+    "coverPhoto" : null,
+    "published" : false
+  },
+  "content_elements" : [ ],
+  "created_date" : "2016-04-02T12:02:00+00:00",
+  "description" : {
+    "basic" : "test gallery description 1"
+  },
+  "headlines" : {
+    "basic" : "gallery galleryName 1"
+  },
+  "last_updated_date" : "2016-04-02T12:02:00+00:00",
+  "type" : "gallery",
+  "version" : "1.0.0"
+}
