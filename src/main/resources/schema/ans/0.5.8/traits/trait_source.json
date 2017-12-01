@@ -12,7 +12,7 @@
     },
     "source_type": {
       "type": "string",
-      "description": "The method used to enter this content. E.g. 'Staff', 'Wires'"
+      "description": "The method used to enter this content. E.g. 'staff', 'wires'"
     },
     "name": {
       "type": "string",
