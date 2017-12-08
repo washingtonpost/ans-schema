@@ -2,6 +2,8 @@
 
 ### TBD ###
 
+* Adds `rating` element
+
 ### 1.3.3 2017/05/16 ##
 
 * Add `trait_voice_transcripts` to stories
