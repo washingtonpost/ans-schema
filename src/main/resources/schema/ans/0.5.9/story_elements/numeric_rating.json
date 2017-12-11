@@ -1,12 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/story_elements/rating.json",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/story_elements/numeric_rating.json",
   "description": "Indicates a numeric rating value",
   "type": "object",
   "additionalProperties": false,
   "properties": {
     "type": {
-      "enum": [ "rating" ]
+      "enum": [ "numeric_rating" ]
     },
     "_id": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_id.json"
@@ -25,7 +25,7 @@
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/traits/trait_additional_properties.json"
     },
 
-    "rating": {
+    "numeric_rating": {
       "description": "A number indicating the item's value.",
       "type": "number"
     },
@@ -42,5 +42,5 @@
       "type": "string"
     }
   },
-  "required": ["rating"]
+  "required": ["numeric_rating"]
 }

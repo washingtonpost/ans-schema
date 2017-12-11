@@ -428,8 +428,8 @@
     },
     {
       "_id": "safas9dafs097asd8911001fs",
-      "type": "rating",
-      "rating": 4.5,
+      "type": "numeric_rating",
+      "numeric_rating": 4.5,
       "min": 0,
       "max": 5,
       "units": "stars"
