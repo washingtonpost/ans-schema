@@ -2,7 +2,7 @@
 
 ### TBD ###
 
-* Adds `rating` element
+* Adds `numeric_rating` element
 * Adds `endorsement` element
 
 ### 1.3.3 2017/05/16 ##
