@@ -840,6 +840,20 @@ describe("Schema: ", function() {
               validate(version, type_prefix + '/code.json', 'code-fixture-good');
             });
           });
+            
+          describe("Rating", function() {
+            it("should validate a valid rating", function() {
+              validateIfFixtureExists(version, type_prefix + '/rating.json', 'rating-fixture-good'); 
+            });
+            
+            it("should not validate an invalid rating", function() {
+              validateIfFixtureExists(version, type_prefix + '/rating.json', 'rating-fixture-bad', false); 
+            });
+            
+            it("should validate a rating with no min, max, or units", function() {
+               validateIfFixtureExists(version, type_prefix + '/rating.json', 'rating-fixture-good-only-rating'); 
+            });
+          });
 
           describe("List", function() {
             it("should validate a list of text elements", function() {
@@ -959,7 +973,7 @@ describe("Schema: ", function() {
                 var document = fixtures[fixtureName];
 
                 document.content_elements.forEach(function(element) {
-                  element.type.should.equalOneOf([ "blockquote", "code", "interstitial_link", "list", "oembed", "oembed_response", "raw_html", "table", "text", "reference", "image", "video", "audio", "story", "element_group", "quote", "correction" ]);
+                  element.type.should.equalOneOf([ "blockquote", "code", "interstitial_link", "list", "oembed", "oembed_response", "raw_html", "table", "text", "reference", "image", "video", "audio", "story", "element_group", "quote", "correction", "rating"]);
 
                   switch(element.type) {
                   case "correction":
@@ -1007,6 +1021,9 @@ describe("Schema: ", function() {
                     break;
                   case "story":
                     validate(version, '/story.json', element);
+                    break;
+                  case "rating":
+                    validate(version, type_prefix + '/rating.json', element);
                     break;
                   }
                 });
