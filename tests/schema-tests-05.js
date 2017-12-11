@@ -841,17 +841,17 @@ describe("Schema: ", function() {
             });
           });
             
-          describe("Rating", function() {
-            it("should validate a valid rating", function() {
-              validateIfFixtureExists(version, type_prefix + '/rating.json', 'rating-fixture-good'); 
+          describe("Numeric Rating", function() {
+            it("should validate a valid numeric rating", function() {
+              validateIfFixtureExists(version, type_prefix + '/numeric_rating.json', 'numeric-rating-fixture-good'); 
             });
             
-            it("should not validate an invalid rating", function() {
-              validateIfFixtureExists(version, type_prefix + '/rating.json', 'rating-fixture-bad', false); 
+            it("should not validate an invalid numeric rating", function() {
+              validateIfFixtureExists(version, type_prefix + '/numeric_rating.json', 'numeric-rating-fixture-bad', false); 
             });
             
-            it("should validate a rating with no min, max, or units", function() {
-               validateIfFixtureExists(version, type_prefix + '/rating.json', 'rating-fixture-good-only-rating'); 
+            it("should validate a numeric rating with no min, max, or units", function() {
+               validateIfFixtureExists(version, type_prefix + '/numeric_rating.json', 'numeric-rating-fixture-good-only-rating'); 
             });
           });
             
@@ -987,7 +987,8 @@ describe("Schema: ", function() {
                 var document = fixtures[fixtureName];
 
                 document.content_elements.forEach(function(element) {
-                  element.type.should.equalOneOf([ "blockquote", "code", "interstitial_link", "list", "oembed", "oembed_response", "raw_html", "table", "text", "reference", "image", "video", "audio", "story", "element_group", "quote", "correction", "rating", "endorsement"]);
+
+                  element.type.should.equalOneOf([ "blockquote", "code", "interstitial_link", "list", "oembed", "oembed_response", "raw_html", "table", "text", "reference", "image", "video", "audio", "story", "element_group", "quote", "correction", "numeric_rating", "endorsement"]);
 
                   switch(element.type) {
                   case "correction":
@@ -1036,8 +1037,8 @@ describe("Schema: ", function() {
                   case "story":
                     validate(version, '/story.json', element);
                     break;
-                  case "rating":
-                    validate(version, type_prefix + '/rating.json', element);
+                  case "numeric_rating":
+                    validate(version, type_prefix + '/numeric_rating.json', element);
                     break;
                   case "endorsement":
                     validate(version, type_prefix + '/endorsement.json', element);
