@@ -854,6 +854,20 @@ describe("Schema: ", function() {
                validateIfFixtureExists(version, type_prefix + '/numeric_rating.json', 'numeric-rating-fixture-good-only-rating'); 
             });
           });
+            
+          describe("Endorsement", function() {
+            it("should validate a valid endorsement", function() {
+              validateIfFixtureExists(version, type_prefix + '/endorsement.json', 'endorsement-fixture-good');    
+            });
+            
+            it("should not validate an endorsement with a number value for a property that should be a string", function() {
+              validateIfFixtureExists(version, type_prefix + '/endorsement.json', 'endorsement-fixture-bad-type-mismatch', false); 
+            });
+            
+            it("should not validate an endorsement with a property missing", function() {
+              validateIfFixtureExists(version, type_prefix + '/endorsement.json', 'endorsement-fixture-bad-missing-prop', false); 
+            });
+          });
 
           describe("List", function() {
             it("should validate a list of text elements", function() {
@@ -973,7 +987,8 @@ describe("Schema: ", function() {
                 var document = fixtures[fixtureName];
 
                 document.content_elements.forEach(function(element) {
-                  element.type.should.equalOneOf([ "blockquote", "code", "interstitial_link", "list", "oembed", "oembed_response", "raw_html", "table", "text", "reference", "image", "video", "audio", "story", "element_group", "quote", "correction", "numeric_rating"]);
+
+                  element.type.should.equalOneOf([ "blockquote", "code", "interstitial_link", "list", "oembed", "oembed_response", "raw_html", "table", "text", "reference", "image", "video", "audio", "story", "element_group", "quote", "correction", "numeric_rating", "endorsement"]);
 
                   switch(element.type) {
                   case "correction":
@@ -1024,6 +1039,9 @@ describe("Schema: ", function() {
                     break;
                   case "numeric_rating":
                     validate(version, type_prefix + '/numeric_rating.json', element);
+                    break;
+                  case "endorsement":
+                    validate(version, type_prefix + '/endorsement.json', element);
                     break;
                   }
                 });

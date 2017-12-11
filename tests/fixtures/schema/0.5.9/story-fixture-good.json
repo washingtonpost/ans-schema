@@ -433,6 +433,11 @@
       "min": 0,
       "max": 5,
       "units": "stars"
+    },
+    {
+      "_id": "7asd8911001fs4144sajhvt",
+      "type": "endorsement",
+      "endorsement": "Recommended"
     }
   ],
 
