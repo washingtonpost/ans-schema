@@ -1,5 +1,9 @@
 # ANS Release Notes
 
+### 1.4.1 2017/12/12 ###
+
+* Fixes typo in `trait_publishing`
+
 ### 1.4.0 2017/12/12 ###
 
 * Adds `numeric_rating` element
