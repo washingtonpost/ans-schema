@@ -1,6 +1,6 @@
 # ANS Release Notes
 
-### TBD ###
+### 1.4.0 2017/12/12 ###
 
 * Adds `numeric_rating` element
 * Adds `endorsement` element
