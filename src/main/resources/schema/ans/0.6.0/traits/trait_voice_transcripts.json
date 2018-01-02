@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.0/traits/trait_voice_transcripts.json",
+  "title": "Voice transcript(s) configuration and output.",
+  "description": "Any voice transcripts (e.g. text-to-speech or author-narrations) of the document requested by the user, along with configuration information and the resulting output.",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "properties": {
+      "_id": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.0/traits/trait_id.json"
+      },
+      "type": {
+        "type": "string",
+        "enum": [ "voice_transcript" ]
+      },
+      "subtype": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.0/traits/trait_subtype.json"
+      },
+
+      "options": {
+        "title": "Options (Requested)",
+        "description": "The transcription settings as requested by an end-user or API caller. These values should be displayed to editorial users in Arc apps.",
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "title": "Enabled",
+            "description": "If true, then a transcript of the appropriate options was requested for this document."
+          },
+          "voice": {
+            "type": "string",
+            "title": "Voice ID",
+            "description": "The id of the 'voice' used to read aloud an audio transcript."
+          }
+        },
+        "required": [ "enabled" ]
+      },
+
+      "options_used": {
+        "title": "Options (Used)",
+        "description": "The transcription settings that were used by the renderer to generate the final output. (If these differ from 'options' it may indicate an inability to render exactly as specified.) These values can be used when rendering to readers or external users.",
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "title": "Enabled",
+            "description": "If true, then a transcript of the appropriate options was generated for this document."
+          },
+          "voice": {
+            "type": "string",
+            "title": "Voice ID",
+            "description": "The id of the 'voice' used to read aloud an audio transcript."
+          }
+        },
+        "required": [ "enabled" ]
+      },
+
+      "output": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.0/audio.json"
+      }
+    },
+
+    "required": [ "options" ]
+  }
+
+}

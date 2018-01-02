@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.0/utils/keyword.json",
+    "title": "Keyword",
+    "description": "Models a keyword used in describing a piece of content.",
+    "type": "object",
+    "required": ["keyword", "score"],
+    "additionalProperties": false,
+    "properties": {
+        "keyword": {
+            "type": "string",
+            "description": "The keyword used to describe a piece of content"
+        },
+        "score": {
+            "type": "number",
+            "description": "An arbitrary weighting to give the keyword"
+        },
+        "tag": {
+            "type": "string",
+            "description": "The Part of Speech tag for this keyword."
+        },
+        "frequency": {
+            "type": "integer",
+            "description": "An optional count of the frequency of the keyword as it appears in the content it describes"
+        }
+    }
+}

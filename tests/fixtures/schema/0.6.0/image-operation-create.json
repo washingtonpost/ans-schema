@@ -1,0 +1,42 @@
+{
+  "_id" : "XYZ123",
+  "body" : {
+    "_id" : "XYZ123",
+    "additional_properties" : {
+      "galleries" : [ ],
+      "originalUrl" : "http://anglerfish/fake/url/",
+      "published" : false,
+      "version" : 0
+    },
+    "address" : {
+      "street_address" : "Gladsaxe Teen Club",
+      "locality" : "Gladsaxe",
+      "region" : "Egegaard Skole"
+    },
+    "caption" : "A fake photo used for testing.",
+    "credits" : {
+      "by" : [ {
+        "name" : "Johnny Anonymous",
+        "byline": "Johnny Anonymous",
+        "type" : "author",
+        "version": "0.6.0"
+      } ]
+    },
+    "height" : 600,
+    "licensable": false,
+    "subtitle" : "A test photo",
+    "type" : "image",
+    "url" : "http://anglerfish/fake/url/",
+    "version" : "0.6.0",
+    "width" : 400
+  },
+  "date" : "2016-04-02T12:02:00+00:00",
+  "submit_date" : "2016-04-02T12:02:01+00:00",
+  "operation" : "insert",
+  "organization_id" : "PW5TIZPZINHXBPNQTAJRSIS123",
+  "type" : "image-operation",
+  "version" : "0.6.0",
+  "priority": "standard",
+  "app_name": "anglerfish"
+
+}
