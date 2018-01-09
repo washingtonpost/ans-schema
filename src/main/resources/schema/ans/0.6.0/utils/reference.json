@@ -46,13 +46,27 @@
           "description": "A URL that can resolve the id into an ANS element",
           "type": "string"
         },
+        "website": {
+          "description": "The website which the referenced id belongs to. Currently supported only for sections.",
+          "type": "string"
+        },
         "referent_properties": {
           "additionalProperties": {},
           "description": "An object for key-value pairs that should override the values of keys with the same name in the denormalized object",
           "type": "object"
         }
       },
-      "required": [ "provider", "id" ]
+      "dependencies": {
+        "website": {
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [ "section" ]
+            }
+          }
+        }
+      },
+      "required": [ "id" ]
     }
   },
   "required": [ "type", "referent" ]

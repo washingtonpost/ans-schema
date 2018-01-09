@@ -15,7 +15,7 @@
     "node-options": "^0.0.7",
     "ncp": "2.0.0",
     "rimraf": "2.5.2",
-    "async": "2.0.0-rc.6",
+    "async": "2.0.0",
     "replacestream": "4.0.0",
     "should": "~8.2.1",
     "mocha": "2.4.5"
@@ -25,7 +25,7 @@
   },
   "main": "./lib/ans.js",
   "scripts": {
-    "test": "mocha tests/schema-tests-04.js tests/schema-tests-05.js tests/transform-tests tests/validator",
+    "test": "mocha tests/schema-tests-04.js tests/schema-tests-05.js tests/schema-tests-06.js tests/transform-tests tests/validator",
     "ans": "node lib/cli.js"
   },
   "bin": {
