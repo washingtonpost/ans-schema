@@ -43,7 +43,7 @@
     },
     "website_url": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.0/traits/trait_website_url.json"
-    },
+     },
     "short_url": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.0/traits/trait_short_url.json"
     },
