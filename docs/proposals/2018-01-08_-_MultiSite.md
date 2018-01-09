@@ -12,7 +12,7 @@ The new `section` type supplants the previous `site` type. References to a `sect
 
 * `taxonomy.sections` - A replacement for `taxonomy.sites` but with the new section type.  A list of all sections across all websites that this document belongs to.
 
-* `taxonomy.primary_section` - A partial replacement for `taxonomy.primary_section`. The primary section (within a website) that this document belongs to.
+* `taxonomy.primary_section` - A partial replacement for `taxonomy.primary_site`. The primary section (within a website) that this document belongs to.
 
 * `canonical_website` - Specified on an ANS website to indicate which website, of all websites within an organization, should be considered the canonical host of this document for SEO purposes. Typically this is the website that originally created the document.
 
