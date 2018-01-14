@@ -40,8 +40,9 @@
         "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.0/utils/tag.json"
       }
     },
+
     "primary_site": {
-      "description": "A primary site object or reference to one. In the Arc ecosystem, a reference here is denormalized into a site from the arc-site-service.",
+      "description": "Deprecated in 0.6.0. (See `primary_section` instead.) A primary site object or reference to one. In the Arc ecosystem, a reference here is denormalized into a site from the arc-site-service.",
       "oneOf": [
         {
           "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.0/utils/site.json"
@@ -66,8 +67,36 @@
         }
       ]
     },
+
+    "primary_section": {
+      "description": "A primary section object or reference to one. In the Arc ecosystem, a reference here is denormalized into a site from the arc-site-service.",
+      "oneOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.0/utils/section.json"
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.0/utils/reference.json"
+            },
+            {
+              "properties": {
+                "referent": {
+                  "properties": {
+                    "type": {
+                      "enum": [ "section" ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+
     "sites": {
-      "description": "A list of site objects or references to them. In the Arc ecosystem, references in this list are denormalized into sites from the arc-site-service.",
+      "description": "Deprecated in 0.6.0. (See `sections` instead.) A list of site objects or references to them. In the Arc ecosystem, references in this list are denormalized into sites from the arc-site-service.  In a multi-site context, sites will be denormalized against an organization's default website only.",
       "type": "array",
       "items": {
         "oneOf": [
@@ -95,6 +124,37 @@
         ]
       }
     },
+
+    "sections": {
+      "description": "A list of site objects or references to them. In the Arc ecosystem, references in this list are denormalized into sites from the arc-site-service.  In a multi-site context, sites will be denormalized against an organization's default website only.",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.0/utils/section.json"
+          },
+          {
+            "allOf": [
+              {
+                "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.0/utils/reference.json"
+              },
+              {
+                "properties": {
+                  "referent": {
+                    "properties": {
+                      "type": {
+                        "enum": [ "section" ]
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+
     "seo_keywords": {
       "type": "array",
       "description": "A list of user-editable manually entered keywords for search purposes. In the Arc ecosystem, these can be generated and saved in source CMS systems, editors, etc.",

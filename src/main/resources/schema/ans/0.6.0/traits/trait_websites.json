@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.0/traits/trait_websites.json",
+  "title": "Websites Input",
+  "description": "Website-specific  metadata for url generation for multi-site copies. These fields are not indexed in Content API.",
+  "type": "object",
+  "patternProperties": {
+    "^[a-zA-Z0-9_]*": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "website_section": {
+          "anyOf": [
+            {
+              "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.0/utils/reference.json"
+            },
+            {
+              "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.0/utils/section.json"
+            }
+          ]
+        },
+        "website_url": {
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.0/traits/trait_website_url.json"
+        }
+      }
+    }
+  }
+}
