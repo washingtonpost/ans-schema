@@ -1079,13 +1079,6 @@ describe("Schema: ", function() {
 
         describe("Misc bug fixes", function() {
 
-          describe("Promo Items", function() {
-            it("should not validate without a 'basic' key (0.5.3+)", function() {
-              if('promo-items-bad-no-basic' in fixtures) {
-                validate(version, '/traits/trait_promo_items.json', 'promo-items-bad-no-basic', false);
-              }
-            });
-          });
         });
 
       });
