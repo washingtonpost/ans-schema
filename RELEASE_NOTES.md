@@ -1,5 +1,9 @@
 # ANS Release Notes
 
+### 1.5.0 2018/1/15 ###
+
+* Adds ANS 0.6.0 with multisite fields
+
 ### 1.4.1 2017/12/12 ###
 
 * Fixes typo in `trait_publishing`
