@@ -31,29 +31,41 @@ The three letter language code from the ISO 639 standard.
           "format": "WEB_VTT",
           "url": "https://closedcaptions.posttv.com/2017/12/13/5b593c38-e01c-11e7-b2e9-8c636f076c76/3_1513190211004/5b593c38-e01c-11e7-b2e9-8c636f076c76_5a3144dee4b0d6b173bf2785.vtt”,
           “confidence”: 1.0,
-          “language: “English”,
-          “language_code”: “eng”
+	  "language": 
+	   {
+     		"language_code": "eng",
+     		"language_display": "English"
+   	   }
         },
         {
           "format": "DFXP",
           "url": "https://closedcaptions.posttv.com/2017/12/13/5b593c38-e01c-11e7-b2e9-8c636f076c76/3_1513190212012/5b593c38-e01c-11e7-b2e9-8c636f076c76_5a3144dee4b0d6b173bf2785.dfxp"
           “confidence”: 1.0,
-          “language: “English”,
-          “language_code”: “eng”
+          "language": 
+	   {
+     		"language_code": "eng",
+     		"language_display": "English"
+   	   }
         },
         {
           "format": "RAW_TEXT",
           "url": "https://closedcaptions.posttv.com/2017/12/13/5b593c38-e01c-11e7-b2e9-8c636f076c76/3_1513190212052/5b593c38-e01c-11e7-b2e9-8c636f076c76_5a3144dee4b0d6b173bf2785.txt"
           “confidence”: 1.0,
-          “language: “English”,
-          “language_code”: “eng”
+          "language": 
+	   {
+     		"language_code": "eng",
+     		"language_display": "English"
+   	   }
         },
         {
           "format": "SRT",
           "url": "https://closedcaptions.posttv.com/2017/12/13/5b593c38-e01c-11e7-b2e9-8c636f076c76/3_1513190212092/5b593c38-e01c-11e7-b2e9-8c636f076c76_5a3144dee4b0d6b173bf2785.srt"
           “confidence”: 1.0,
-          “language: “English”,
-          “language_code”: “eng”
+          "language": 
+	   {
+     		"language_code": "eng",
+     		"language_display": "English"
+   	   }
         }
       ]
     },
