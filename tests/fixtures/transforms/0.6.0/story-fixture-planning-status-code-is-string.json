@@ -1,0 +1,39 @@
+{
+  "type": "story",
+  "version": "0.6.0",
+  "content_elements": [
+    {
+      "type": "text",
+      "content": "Plans are in motion."
+    }
+  ],
+  "headlines": {
+    "basic": "A simple story with big plans.."
+  },
+  "planning": {
+    "scheduling": {
+      "planned_publish_date": "2015-06-24T09:49:00.10Z",
+      "scheduled_publish_date": "2015-06-24T09:49:00.10Z",
+      "will_have_gallery": true,
+      "will_have_graphic": false,
+      "will_have_image": true,
+      "will_have_video": false
+    },
+    "story_length": {
+      "word_count_planned": 2400,
+      "word_count_actual": 3000,
+      "inch_count_planned": 6,
+      "inch_count_actual": 8
+    },
+    "additional_properties": {
+      "status": {
+        "workflow": "2",
+        "note": "This is a private note."
+      }
+    }
+  },
+  "workflow": {
+    "status_code": 2,
+    "note": "This is a private note."
+  }
+}

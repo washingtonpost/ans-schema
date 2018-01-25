@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.1/story_elements/correction.json",
+  "title": "Correction",
+  "additionalProperties": false,
+  "description": "Describes a change that has been made to the document for transparency, or describes inaccuracies or falsehoods that remain in the document.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [ "correction" ]
+    },
+    "_id": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.1/traits/trait_id.json"
+    },
+    "subtype": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.1/traits/trait_subtype.json"
+    },
+    "channels": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.1/traits/trait_channel.json"
+    },
+    "alignment": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.1/traits/trait_alignment.json"
+    },
+
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.1/traits/trait_additional_properties.json"
+    },
+
+
+    "correction_type": {
+      "description": "Type of correction. E.g., clarification, retraction.",
+      "type": "string"
+    },
+    "text": {
+      "description": "The text of the correction.",
+      "type": "string"
+    }
+
+  },
+  "required": [ "type", "text" ]
+}

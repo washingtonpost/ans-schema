@@ -1,0 +1,11 @@
+
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.1/traits/trait_corrections.json",
+  "title": "Corrections",
+  "description": "Trait that applies a list of corrections to a document.",
+  "type": "array",
+  "items": {
+    "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.1/story_elements/correction.json"
+  }
+}

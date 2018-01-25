@@ -1,0 +1,26 @@
+{
+  "type": "story",
+  "version": "0.6.0",
+  "content_elements": [
+    {
+      "type": "story",
+      "version": "0.6.0",
+      "label": {
+        "basic": {
+          "text": ""
+        },
+        "__renamed_invalid_name": {
+          "text": "Foo"
+        }
+      }
+    }
+  ],
+  "label": {
+    "basic": {
+      "additional_properties": {
+        "key": "value"
+      },
+      "text": ""
+    }
+  }
+}

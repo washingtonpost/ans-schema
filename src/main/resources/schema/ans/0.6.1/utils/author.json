@@ -1,0 +1,212 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.1/utils/author.json",
+  "title": "An author of a piece of content.",
+  "description": "Models attribution to an individual or group for contribution towards some content item. In the Arc ecosystem, these are stored in the arc-author-service.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "_id": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.1/traits/trait_id.json"
+    },
+
+    "type": {
+      "description": "Indicates that this is an author",
+      "type": "string",
+      "enum": [ "author" ]
+    },
+
+    "version": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.1/traits/trait_version.json"
+    },
+
+    "name": {
+      "title": "Name",
+      "description": "The full human name of contributor. See also byline, first_name, last_name, middle_name, suffix.",
+      "type": "string"
+    },
+
+    "image": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.1/image.json"
+    },
+
+    "url": {
+      "description": "A link to an author's landing page on the website, or a personal website.",
+      "type": "string"
+    },
+
+    "social_links": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.1/traits/trait_social.json"
+    },
+
+    "slug": {
+       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.1/traits/trait_slug.json"
+    },
+
+    "first_name": {
+      "title": "First Name",
+      "description": "The real first name of a human author.",
+      "type": "string"
+    },
+
+    "middle_name": {
+      "title": "Middle Name",
+      "description": "The real middle name of a human author.",
+      "type": "string"
+    },
+
+    "last_name": {
+      "title": "Last Name",
+      "description": "The real last name of a human author.",
+      "type": "string"
+    },
+
+    "suffix": {
+      "title": "Suffix",
+      "description": "The real suffix of a human author.",
+      "type": "string"
+    },
+
+    "byline": {
+      "title": "Byline",
+      "description": "The public-facing name, or nom-de-plume, name of the author.",
+      "type": "string"
+    },
+
+    "location": {
+      "title": "Location",
+      "description": "The city or locality that the author resides in or is primarily associated with.",
+      "type": "string"
+    },
+
+    "division": {
+      "title": "Division",
+      "description": "The desk or group that this author normally reports to. E.g., 'Politics' or 'Sports.'",
+      "type": "string"
+    },
+
+    "email": {
+      "title": "E-mail",
+      "description": "The professional email address of this author.",
+      "type": "string",
+      "format": "email"
+    },
+
+    "role": {
+      "title": "Role",
+      "description": "The organizational role or title of this author.",
+      "type": "string"
+    },
+
+    "expertise": {
+      "title": "Expertise",
+      "description": "A comma-delimited list of subjects the author in which the author has expertise.",
+      "type": "string"
+    },
+
+    "affiliation": {
+      "title": "Affiliation",
+      "description": "The name of an organization the author is affiliated with. E.g., The Washington Post, or George Mason University.",
+      "type": "string"
+    },
+
+    "languages": {
+      "title": "Languages",
+      "description": "A description of list of languages that the author is somewhat fluent in, excluding the native language of the parent publication, and identified in the language of the parent publication. E.g., Russian, Japanese, Greek.",
+      "type": "string"
+    },
+
+    "bio": {
+      "title": "Short Biography",
+      "description": "A one or two sentence description of the author.",
+      "type": "string"
+    },
+
+    "long_bio": {
+      "title": "Long Biography",
+      "description": "The full biography of the author.",
+      "type": "string"
+    },
+
+    "books": {
+      "title": "Books",
+      "description": "A list of books written by the author.",
+      "type": "array",
+      "items": {
+        "title": "Book",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "book_title": {
+            "title": "Title",
+            "description": "The book title.",
+            "type": "string"
+          },
+          "book_url": {
+            "title": "URL",
+            "description": "A link to a page to purchase or learn more about the book.",
+            "type": "string"
+          }
+        }
+      }
+    },
+
+    "education": {
+      "title": "Education",
+      "description": "A list of schools that this author has graduated from.",
+      "type": "array",
+      "items": {
+        "title": "School",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "school_name": {
+            "title": "School Name",
+            "description": "The name of the school.",
+            "type": "string"
+          }
+        }
+      }
+    },
+
+
+    "awards": {
+      "title": "Awards",
+      "description": "A list of awards the author has received.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "award_name": {
+            "title": "Award Name",
+            "description": "The name of the award.",
+            "type": "string"
+          }
+        }
+      }
+    },
+
+    "contributor": {
+      "type": "boolean",
+      "title": "Contributor",
+      "description": "If true, this author is an external contributor to the publication."
+    },
+
+    "org": {
+      "title": "Org",
+      "description": "Deprecated. In ANS 0.5.8 and prior versions, this field is populated with the 'location' field from Arc Author Service. New implementations should use the 'location' and 'affiliation' field. Content should be identical to 'location.'",
+      "type": "string"
+    },
+
+    "socialLinks": {
+      "description": "Deperecated. Included for backwards-compatibility. Content should be identical to social_links.",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.1/traits/trait_social.json"
+    },
+
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.1/traits/trait_additional_properties.json"
+    }
+  },
+  "required": [ "type", "name" ]
+}
