@@ -64,15 +64,15 @@ We propose adding `line_count_planned` and `line_count_actual` properties to `pl
 			"inch_count_actual": {
 				"description": "The current length of the story in inches.",
 				"type": "integer"
-            },
-            "line_count_planned": {
-                "description": "The anticipated length of the story in lines.",
-                "type": "integer"
-            },
-            "line_count_actual": {
-                "description": "The current length of the story in lines.",
-                "type": "integer"
-            }
+			},
+			"line_count_planned": {
+				"description": "The anticipated length of the story in lines.",
+				"type": "integer"
+			},
+			"line_count_actual": {
+				"description": "The current length of the story in lines.",
+				"type": "integer"
+			}
 		}
 	}
 }
