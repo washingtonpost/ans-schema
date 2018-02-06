@@ -85,19 +85,17 @@ WebSked expects to ingest data in the format below. (Note that the story object 
 
 ```json
 {
-    "_id": "BKZSUVTBGVACFEQDRW7QRXPHFY",
-    "type": "story",
-    "version": "0.6.0",
-    "content_elements": [],
-    "planning": {
-        "scheduling": {
-        "planned_publish_date": "2018-02-06T23:00:22Z"
-    },
-    "story_length": {
-        "inch_count_planned": 40,
-        "line_count_planned": 10,
-        "word_count_planned": 200
-    }
+	"_id": "BKZSUVTBGVACFEQDRW7QRXPHFY",
+	"type": "story",
+	"version": "0.6.0",
+	"content_elements": [],
+	"planning": {
+		"story_length": {
+			"inch_count_planned": 40,
+			"line_count_planned": 10,
+			"word_count_planned": 200
+		}
+	}
 }
 
 ```
