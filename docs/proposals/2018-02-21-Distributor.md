@@ -18,7 +18,7 @@ For backwards compatibility, we suggest *no changes* to the existing fields:
 
 The following fields are to be *deprecated* and ultimately fall into desuetude:
   * `source.name`
-  * `source.type`
+  * `source.source_type`
   * `owner.name`
 
 The following fields should be added:
