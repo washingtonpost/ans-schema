@@ -93,3 +93,7 @@ Applications will exclusively use the new field locations for reading and writin
 ### When will the implementation plan begin?
 
 Acceptance by all major stakeholders and the merging of this PR will constitute the beginning of Phase One.
+
+### My organization has a large amount of data and does not want to re-ingest it through the entire content pipeline.
+
+We don't want you to, either! If it is critical that all data be migrated to the new formats in a timely manner, please speak to the respective team owners to coordinate plans for behind-the-scenes migrations.
