@@ -22,8 +22,8 @@ The following fields are to be *deprecated* and ultimately fall into desuetude:
   * `owner.name`
 
 The following fields should be added:
-  * `distributor.name` -- The human-readable name of the person or organization controls the distribution rights for a piece of content. E.g. Reuters, AP, Getty
-  * `distributor.category` -- The category of distribution method, e.g. Staff/Wire/Feelance/Stock/Handout
+  * `distributor.name` -- The human-readable name of the person or organization controls the distribution rights for a piece of content. E.g. Reuters, AP, Getty. *This replaces some previous uses of `owner.name` and `source.name`.*
+  * `distributor.category` -- The category of distribution method, e.g. Staff/Wire/Feelance/Stock/Handout.  *This replaces some previous uses of `source.type`.*
 
 
 ## Example
