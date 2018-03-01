@@ -24,11 +24,10 @@ The following fields are to be *deprecated* and ultimately fall into desuetude:
 The following fields should be added:
   * `distributor.name` -- The human-readable name of the person or organization controls the distribution rights for a piece of content. E.g. Reuters, AP, Getty. *This replaces some previous uses of `owner.name` and `source.name`.*
   * `distributor.category` -- A machine-readable enumeration of the general category of distribution method: `staff`, `wires`, `other`.  *This replaces some previous uses of `source.type`.*
-  * `distributor.description` -- A human-readable description of the category of distribution method. Particularly used in conjunction with `distributor.category:"other"` but may also be informative in conjunction with `staff` or `wires`.  E.g. "Freelance" or "Staff" *This replaces some previous uses of `source.type`.*
+  * `distributor.subcategory` -- A machine-readable description of the sub-category of distribution method. Used in conjunction with `distributor.category`. E.g. "freelance" or "unsolicited" *This replaces some previous uses of `source.type` and `owner.name`.*
 
 
 ## Example
-
 ```json
 {
   "_id": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -58,9 +57,12 @@ The following fields should be added:
   },
 
   "distributor": {
-    "name": "Reuters",
-    "category": "wires",
-    "description": "Wires - Reuters"
+    "name": "The Washington Post",
+    "category": "staff",
+    "subcategory": "freelance - unsigned",
+    "additional_properties": {
+      "description": "Something something something"
+    }
   }
 }
 ```
