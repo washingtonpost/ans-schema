@@ -67,7 +67,7 @@ The following fields should be added:
 }
 ```
 
-In this example, the content was ingested via a wire feed from Reuters. It is currently editable in WordPress with an id of 1234567890.  It is being stored in the Washington Post Content API and should be marked as sponsored content. It should be rendered as being written by "Professor Gregory Engel."
+In this example, the content was written by a freelance writer for The Washington Post and added to the CMS "in-house." It is currently editable in WordPress with an id of 1234567890.  It is being stored in the Washington Post Content API and should be marked as sponsored content. It should be rendered as being written by "Professor Gregory Engel."
 
 
 # Implementation Plan
