@@ -109,6 +109,9 @@
     "source": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.1/traits/trait_source.json"
     },
+    "distributor": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.1/traits/trait_distributor.json"
+    },
     "tracking": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.1/traits/trait_tracking.json"
     },

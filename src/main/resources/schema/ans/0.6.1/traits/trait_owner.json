@@ -10,11 +10,11 @@
       "type": "string"
     },
     "name": {
-      "description": "Human-readable name of original producer of content. Distinguishes between Wires, Staff and other sources. See also trait_source.type and trait_source.name",
+      "description": "Deprecated in 0.6.1. See `distributor.name`. (Formerly: The human-readable name of original producer of content. Distinguishes between Wires, Staff and other sources.)",
       "type": "string"
     },
     "sponsored": {
-      "description": "Necessary for including/excluding advertorial and native content in search results, story card features.",
+      "description": "True if this content is advertorial or native advertising.",
       "type": "boolean"
     }
   }
