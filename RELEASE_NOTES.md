@@ -1,5 +1,9 @@
 # ANS Release Notes
 
+### 1.6.0 2018/3/6 ###
+
+* Adds ANS 0.6.1 with `distributor` trait
+
 ### 1.5.0 2018/1/15 ###
 
 * Adds ANS 0.6.0 with multisite fields
