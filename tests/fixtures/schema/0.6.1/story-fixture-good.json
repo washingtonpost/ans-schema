@@ -49,7 +49,7 @@
     "postal_code": "20002",
     "country_name": "USA"
   },
-  "copyright": "(c) 2015 The Washington Post, Inc.",
+  "copyright": "Copyright © 2018 Thomson Reuters.",
   "canonical_url": "/local/anesthesiologist-trashes-sedated-patient-jury-orders-her-to-pay-500000/2015/06/23/cae05c00-18f3-11e5-ab92-c75ae6ab94b5_story.html",
   "short_url": "http://wapo.st/1Crp6bY",
   "headlines": {
@@ -458,16 +458,25 @@
 
   "owner": {
     "id": "washpost",
-    "name": "The Washington Post",
+    "name": "(deprecated)",
     "sponsored": false
   },
 
   "source": {
     "source_id": "1234-5678",
-    "source_type": "Original",
-    "name": "The Washington Post",
+    "source_type": "(deprecated)",
+    "name": "(deprecated)",
     "system": "Methode",
     "edit_url": "http://washpost.methode.com/foo/bar/1234-5678",
+    "additional_properties": {
+      "foo": "bar"
+    }
+  },
+
+  "distributor": {
+    "name": "Reuters",
+    "category": "wires",
+    "subcategory": "wires-reuters",
     "additional_properties": {
       "foo": "bar"
     }

@@ -12,11 +12,11 @@
     },
     "source_type": {
       "type": "string",
-      "description": "The method used to enter this content. E.g. 'staff', 'wires'."
+      "description": "Deprecated in 0.6.1. See `distributor.category` and `distributor.subcategory`. (Formerly: The method used to enter this content. E.g. 'staff', 'wires'.)"
     },
     "name": {
       "type": "string",
-      "description": "The human-readable name of the organization who first produced this content. E.g., 'Reuters'."
+      "description": "Deprecated in  0.6.1. See `distributor.name`. (Formerly: The human-readable name of the organization who first produced this content. E.g., 'Reuters'.)"
     },
     "system": {
       "type": "string",
