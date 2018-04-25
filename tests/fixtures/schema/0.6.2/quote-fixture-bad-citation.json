@@ -1,0 +1,8 @@
+{
+  "type": "quote",
+  "content_elements": [{
+    "type": "text",
+    "content": "Citation should be a text object"
+  }],
+  "citation": "Citation is broken."
+}
