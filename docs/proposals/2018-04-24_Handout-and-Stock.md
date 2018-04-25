@@ -1,6 +1,6 @@
 # Problem
 
-To be completed.
+Currently, `distributor.category` can be one of four values: `staff`, `wires`, `freelance`, or `other`. Anglerfish also needs to be able to specify two new values: content that was distributed from a stock media provider or promotional media distributed directly from a company.
 
 # Proposal
 
@@ -27,7 +27,7 @@ A new possible value will be added to `distributor.category` to represent promot
 
 ```
 "distributor": {
-    "name": "",
+    "name": "Big Brand Company",
     "category": "handout"
 }
 ```
