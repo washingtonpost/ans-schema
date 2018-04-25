@@ -21,7 +21,7 @@ A new possible value will be added to `distributor.category` to represent stock 
 
 ## Handout
 
-A new possible value will be added to `distributor.category` to represent media provided by a subject in an article that is used for promotional or non-promotional purposes, e.g. product branding, photo of a victim provided by their family.
+A new possible value will be added to `distributor.category` to represent content provided from a source for an article. It is usually promotional media distributed directly from a company, e.g. product branding.
 
 ### Example
 
