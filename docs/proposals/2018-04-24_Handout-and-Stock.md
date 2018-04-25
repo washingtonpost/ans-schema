@@ -15,11 +15,7 @@ A new possible value will be added to `distributor.category` to represent stock 
 ```
 "distributor": {
     "name": "Shutterstock",
-    "category": "stock",
-    "subcategory":"",
-    "additional_properties": {
-      "description": "Something something something"
-    }
+    "category": "stock"
 }
 ```
 
@@ -32,11 +28,7 @@ A new possible value will be added to `distributor.category` to represent promot
 ```
 "distributor": {
     "name": "",
-    "category": "handout",
-    "subcategory":"",
-    "additional_properties": {
-      "description": "Something something something"
-    }
+    "category": "handout"
 }
 ```
 
