@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.2/story_elements/list_element.json",
+  "title": "A valid list element.",
+  "description": "Lists the schemas we allow as 'list elements' in our collection schema.",
+  "type": "object",
+  "additionalProperties": {},
+  "anyOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.2/story_elements/list.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.2/story_elements/text.json"
+    }
+  ]
+}

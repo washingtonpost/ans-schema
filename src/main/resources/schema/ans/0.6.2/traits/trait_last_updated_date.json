@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.2/traits/trait_last_updated_date.json",
+  "title": "Last Updated Date",
+  "description": "When the content was last updated (RFC3339-formatted).",
+  "type": "string",
+  "format": "date-time"
+}

@@ -1,0 +1,6 @@
+{
+    "post_office_box": "defining this requires also defining street address, which we don't, so this should be bad JSON",
+    "locality": "Washington, D.C.",
+    "postal_code": "20002",
+    "country_name": "USA"
+}

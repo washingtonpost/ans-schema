@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.2/traits/trait_website_url.json",
+  "title": "Website URL",
+  "description": "The relative URL to this document on the website specified by the `website` field. In a multi-site context, this is the url that is typically queried on when fetching by URL. It may be different than canonical_url. Generated at fetch time by Content API.",
+  "type": "string"
+}
