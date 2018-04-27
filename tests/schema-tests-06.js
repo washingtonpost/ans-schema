@@ -532,6 +532,14 @@ describe("Schema: ", function() {
             validate(version, '/story.json', 'story-fixture-good-mystery-element');
           });
 
+          it("should validate a story with distributor.category set to 'stock'", function() {
+            validateIfFixtureExists(version, '/story.json', 'story-fixture-good-distributor');
+          });
+            
+          it("should validate a story with distributor.category set to 'handout'", function() {
+            validateIfFixtureExists(version, '/story.json', 'story-fixture-good-distributor-handout'); 
+          });
+        
           it("should not validate a story with unspecified properties", function() {
             validate(version, '/story.json', 'story-fixture-bad-extra-properties', false);
           });

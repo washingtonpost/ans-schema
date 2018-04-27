@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.2/traits/trait_created_date.json",
+  "title": "Created Date",
+  "description": "When the content was originally created (RFC3339-formatted). In the Arc ecosystem, this will be automatically generated for stories in the Story API.",
+  "type": "string",
+  "format": "date-time"
+}
