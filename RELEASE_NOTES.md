@@ -1,5 +1,9 @@
 # ANS Release Notes
 
+### 1.6.1 2018/4/27 ###
+
+* Adds ANS 0.6.2 with `handout` and `stock` as new possible values for `distributor.category`
+
 ### 1.6.0 2018/3/6 ###
 
 * Adds ANS 0.6.1 with `distributor` trait
