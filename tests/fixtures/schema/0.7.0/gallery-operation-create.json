@@ -1,0 +1,79 @@
+{
+  "_id" : "XYZABC1",
+  "body" : {
+    "_id" : "XYZABC2",
+    "additional_properties" : {
+      "version" : 0,
+      "coverPhoto" : null,
+      "published" : false
+    },
+    "content_elements" : [ {
+      "additional_properties" : {
+        "galleryOrder" : 0,
+        "published" : true
+      },
+      "caption" : "Caption 1",
+      "credits" : {
+        "by" : [ {
+          "name" : "Fake gallery photo 1",
+          "type" : "author"
+        } ]
+      },
+      "height" : 300,
+      "type" : "image",
+      "url" : "http://path/to/image/1.jpg",
+      "version" : "0.7.0",
+      "width" : 200
+    }, {
+      "additional_properties" : {
+        "galleryOrder" : 1,
+        "published" : false
+      },
+      "caption" : "Caption 2",
+      "credits" : {
+        "by" : [ {
+          "name" : "Fake gallery photo 2",
+          "type" : "author"
+        } ]
+      },
+      "height" : 300,
+      "type" : "image",
+      "url" : "http://path/to/image/2.jpg",
+      "version" : "0.7.0",
+      "width" : 200
+    }, {
+      "additional_properties" : {
+        "galleryOrder" : 2,
+        "published" : false
+      },
+      "caption" : "Caption 3",
+      "credits" : {
+        "by" : [ {
+          "name" : "Fake gallery photo 3",
+          "type" : "author"
+        } ]
+      },
+      "height" : 300,
+      "type" : "image",
+      "url" : "http://path/to/image/3.jpg",
+      "version" : "0.7.0",
+      "width" : 200
+    } ],
+    "description" : {
+      "basic" : "A fake gallery with 3 images used for testing."
+    },
+    "headlines" : {
+      "basic" : "Gallery of Test Images"
+    },
+    "type" : "gallery",
+    "version" : "0.7.0"
+  },
+  "date" : "2016-04-02T12:02:00+00:00",
+  "submit_date" : "2016-04-02T12:02:01+00:00",
+  "operation" : "insert",
+  "organization_id" : "PW5TIZPZINHXBPNQTAJRSIS123",
+  "type" : "gallery-operation",
+  "version" : "0.7.0",
+  "priority": "standard",
+  "app_name": "anglerfish"
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.0/traits/trait_website.json",
+  "title": "Website",
+  "description": "The _id of the website on which this document exists. This field is only available in Content API. If different from canonical_website, then this document was originally sourced from the canonical_website. Generated at fetch time by Content API.",
+  "type": "string"
+}
