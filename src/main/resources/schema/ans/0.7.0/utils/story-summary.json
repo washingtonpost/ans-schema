@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.0/utils/story_summary.json",
+  "description": "A summary of a story",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "enum": [ "story" ]
+    },
+    "_id": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.0/traits/trait_id.json"
+    },
+    "canonical_url": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.0/traits/trait_canonical_url.json"
+    },
+    "revision": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.0/traits/trait_revision.json"
+    },
+    "headlines": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.0/traits/trait_headlines.json"
+    },
+    "last_updated_date": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.0/traits/trait_last_updated_date.json"
+    }
+  },
+
+  "required": [ "type", "_id", "canonical_url", "headlines", "revision", "last_updated_date" ]
+}
