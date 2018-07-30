@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.1/traits/trait_tracking.json",
+  "title": "Tracking",
+  "description": "Tracking information, probably implementation-dependent",
+  "type": "object",
+  "additionalProperties": {}
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.1/utils/promo_reference.json",
+  "title": "Representation of a normalized element, intended to only partially denormalize.",
+  "description": "This represents a reference to external content that should be partially denormalized. Unlike a regular reference, it is used in a promotional context only and will never include the content_elements or related_content of the object being denormalized.",
+  "additionalProperties": false,
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [ "promo_reference" ]
+    },
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.1/traits/trait_additional_properties.json"
+    },
+    "_id": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.1/traits/trait_id.json"
+    },
+    "subtype": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.1/traits/trait_subtype.json"
+    },
+    "channels": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.1/traits/trait_channel.json"
+    },
+    "alignment": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.1/traits/trait_alignment.json"
+    },
+
+    "referent": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "description": "The type of the ANS document to denormalize.",
+          "type": "string",
+          "enum": [ "story", "gallery", "video" ]
+        },
+        "id" : {
+          "description": "The id of the ANS document to denormalize.",
+          "type": "string"
+        },
+        "referent_properties": {
+          "additionalProperties": {},
+          "description": "An object for key-value pairs that should override the values of keys with the same name in the denormalized object",
+          "type": "object"
+        }
+      },
+      "required": [ "id", "type" ]
+    }
+  },
+  "required": [ "type", "referent" ]
+}

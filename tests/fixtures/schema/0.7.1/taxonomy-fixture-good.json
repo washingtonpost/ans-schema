@@ -1,0 +1,23 @@
+{
+  "keywords": [
+    {
+      "keyword": "foo"
+    },
+    {
+      "keyword": "bar",
+      "score": 0.333,
+      "frequency": 5
+    }
+  ],
+  "tags": [
+    {
+      "_id": "YRAXSARSPFFC5O577BS5XIJ5M4",
+      "text": "apples and bananas",
+      "slug": "apples-and-bananas",
+      "description": "Apples & Bananas",
+      "additional_properties": {
+        "something": "else"
+      }
+    }
+  ]
+}

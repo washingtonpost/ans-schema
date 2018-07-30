@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.1/traits/trait_first_publish_date.json",
+  "title": "First Publish Date",
+  "description": "When the story was first published.",
+  "type": "string",
+  "format": "date-time"
+}

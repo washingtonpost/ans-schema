@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.1/traits/trait_copyright.json",
+  "title": "Copyright information",
+  "description": "A copyright notice for the legal owner of this content. E.g., '© 1996-2018 The Washington Post.' Format may vary between organizations.",
+  "type": "string"
+}
