@@ -18,6 +18,10 @@
         "type": {
             "type": "string",
             "description": "A description of what the named entity is. E.g. 'organization', 'person', or 'location'."
+        },
+        "score": {
+            "type": "number",
+            "decription": "An optional relevancy for this named entitiy."
         }
     }
 }
