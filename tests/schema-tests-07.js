@@ -25,322 +25,322 @@ var test_versions = _.map(
 );
 
 var json_schema = {
-  "id": "http://json-schema.org/draft-04/schema#",
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "description": "Core schema meta-schema",
-  "definitions": {
-    "schemaArray": {
-      "type": "array",
-      "minItems": 1,
-      "items": { "$ref": "#" }
-    },
-    "positiveInteger": {
-      "type": "integer",
-      "minimum": 0
-    },
-    "positiveIntegerDefault0": {
-      "allOf": [ { "$ref": "#/definitions/positiveInteger" }, { "default": 0 } ]
-    },
-    "simpleTypes": {
-      "enum": [ "array", "boolean", "integer", "null", "number", "object", "string" ]
-    },
-    "stringArray": {
-      "type": "array",
-      "items": { "type": "string" },
-      "minItems": 1,
-      "uniqueItems": true
-    }
-  },
-  "type": "object",
-  "properties": {
-    "id": {
-      "type": "string",
-      "format": "uri"
-    },
-    "$schema": {
-      "type": "string",
-      "format": "uri"
-    },
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "type": "string"
-    },
-    "default": {},
-    "multipleOf": {
-      "type": "number",
-      "minimum": 0,
-      "exclusiveMinimum": true
-    },
-    "maximum": {
-      "type": "number"
-    },
-    "exclusiveMaximum": {
-      "type": "boolean",
-      "default": false
-    },
-    "minimum": {
-      "type": "number"
-    },
-    "exclusiveMinimum": {
-      "type": "boolean",
-      "default": false
-    },
-    "maxLength": { "$ref": "#/definitions/positiveInteger" },
-    "minLength": { "$ref": "#/definitions/positiveIntegerDefault0" },
-    "pattern": {
-      "type": "string",
-      "format": "regex"
-    },
-    "additionalItems": {
-      "anyOf": [
-        { "type": "boolean" },
-        { "$ref": "#" }
-      ],
-      "default": {}
-    },
-    "items": {
-      "anyOf": [
-        { "$ref": "#" },
-        { "$ref": "#/definitions/schemaArray" }
-      ],
-      "default": {}
-    },
-    "maxItems": { "$ref": "#/definitions/positiveInteger" },
-    "minItems": { "$ref": "#/definitions/positiveIntegerDefault0" },
-    "uniqueItems": {
-      "type": "boolean",
-      "default": false
-    },
-    "maxProperties": { "$ref": "#/definitions/positiveInteger" },
-    "minProperties": { "$ref": "#/definitions/positiveIntegerDefault0" },
-    "required": { "$ref": "#/definitions/stringArray" },
-    "additionalProperties": {
-      "anyOf": [
-        { "type": "boolean" },
-        { "$ref": "#" }
-      ],
-      "default": {}
-    },
+    "id": "http://json-schema.org/draft-04/schema#",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "Core schema meta-schema",
     "definitions": {
-      "type": "object",
-      "additionalProperties": { "$ref": "#" },
-      "default": {}
+        "schemaArray": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "$ref": "#" }
+        },
+        "positiveInteger": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "positiveIntegerDefault0": {
+            "allOf": [ { "$ref": "#/definitions/positiveInteger" }, { "default": 0 } ]
+        },
+        "simpleTypes": {
+            "enum": [ "array", "boolean", "integer", "null", "number", "object", "string" ]
+        },
+        "stringArray": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1,
+            "uniqueItems": true
+        }
     },
+    "type": "object",
     "properties": {
-      "type": "object",
-      "additionalProperties": { "$ref": "#" },
-      "default": {}
-    },
-    "patternProperties": {
-      "type": "object",
-      "additionalProperties": { "$ref": "#" },
-      "default": {}
+        "id": {
+            "type": "string",
+            "format": "uri"
+        },
+        "$schema": {
+            "type": "string",
+            "format": "uri"
+        },
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "default": {},
+        "multipleOf": {
+            "type": "number",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        },
+        "maximum": {
+            "type": "number"
+        },
+        "exclusiveMaximum": {
+            "type": "boolean",
+            "default": false
+        },
+        "minimum": {
+            "type": "number"
+        },
+        "exclusiveMinimum": {
+            "type": "boolean",
+            "default": false
+        },
+        "maxLength": { "$ref": "#/definitions/positiveInteger" },
+        "minLength": { "$ref": "#/definitions/positiveIntegerDefault0" },
+        "pattern": {
+            "type": "string",
+            "format": "regex"
+        },
+        "additionalItems": {
+            "anyOf": [
+                { "type": "boolean" },
+                { "$ref": "#" }
+            ],
+            "default": {}
+        },
+        "items": {
+            "anyOf": [
+                { "$ref": "#" },
+                { "$ref": "#/definitions/schemaArray" }
+            ],
+            "default": {}
+        },
+        "maxItems": { "$ref": "#/definitions/positiveInteger" },
+        "minItems": { "$ref": "#/definitions/positiveIntegerDefault0" },
+        "uniqueItems": {
+            "type": "boolean",
+            "default": false
+        },
+        "maxProperties": { "$ref": "#/definitions/positiveInteger" },
+        "minProperties": { "$ref": "#/definitions/positiveIntegerDefault0" },
+        "required": { "$ref": "#/definitions/stringArray" },
+        "additionalProperties": {
+            "anyOf": [
+                { "type": "boolean" },
+                { "$ref": "#" }
+            ],
+            "default": {}
+        },
+        "definitions": {
+            "type": "object",
+            "additionalProperties": { "$ref": "#" },
+            "default": {}
+        },
+        "properties": {
+            "type": "object",
+            "additionalProperties": { "$ref": "#" },
+            "default": {}
+        },
+        "patternProperties": {
+            "type": "object",
+            "additionalProperties": { "$ref": "#" },
+            "default": {}
+        },
+        "dependencies": {
+            "type": "object",
+            "additionalProperties": {
+                "anyOf": [
+                    { "$ref": "#" },
+                    { "$ref": "#/definitions/stringArray" }
+                ]
+            }
+        },
+        "enum": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true
+        },
+        "type": {
+            "anyOf": [
+                { "$ref": "#/definitions/simpleTypes" },
+                {
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/simpleTypes" },
+                    "minItems": 1,
+                    "uniqueItems": true
+                }
+            ]
+        },
+        "allOf": { "$ref": "#/definitions/schemaArray" },
+        "anyOf": { "$ref": "#/definitions/schemaArray" },
+        "oneOf": { "$ref": "#/definitions/schemaArray" },
+        "not": { "$ref": "#" }
     },
     "dependencies": {
-      "type": "object",
-      "additionalProperties": {
-        "anyOf": [
-          { "$ref": "#" },
-          { "$ref": "#/definitions/stringArray" }
-        ]
-      }
+        "exclusiveMaximum": [ "maximum" ],
+        "exclusiveMinimum": [ "minimum" ]
     },
-    "enum": {
-      "type": "array",
-      "minItems": 1,
-      "uniqueItems": true
-    },
-    "type": {
-      "anyOf": [
-        { "$ref": "#/definitions/simpleTypes" },
-        {
-          "type": "array",
-          "items": { "$ref": "#/definitions/simpleTypes" },
-          "minItems": 1,
-          "uniqueItems": true
-        }
-      ]
-    },
-    "allOf": { "$ref": "#/definitions/schemaArray" },
-    "anyOf": { "$ref": "#/definitions/schemaArray" },
-    "oneOf": { "$ref": "#/definitions/schemaArray" },
-    "not": { "$ref": "#" }
-  },
-  "dependencies": {
-    "exclusiveMaximum": [ "maximum" ],
-    "exclusiveMinimum": [ "minimum" ]
-  },
-  "default": {}
+    "default": {}
 };
 
 var hyper_schema = {
-  "$schema": "http://json-schema.org/draft-04/hyper-schema#",
-  "id": "http://json-schema.org/draft-04/hyper-schema#",
-  "title": "JSON Hyper-Schema",
-  "allOf": [
-    {
-      "$ref": "http://json-schema.org/draft-04/schema#"
-    }
-  ],
-  "properties": {
-    "additionalItems": {
-      "anyOf": [
+    "$schema": "http://json-schema.org/draft-04/hyper-schema#",
+    "id": "http://json-schema.org/draft-04/hyper-schema#",
+    "title": "JSON Hyper-Schema",
+    "allOf": [
         {
-          "type": "boolean"
-        },
-        {
-          "$ref": "#"
+            "$ref": "http://json-schema.org/draft-04/schema#"
         }
-      ]
-    },
-    "additionalProperties": {
-      "anyOf": [
-        {
-          "type": "boolean"
+    ],
+    "properties": {
+        "additionalItems": {
+            "anyOf": [
+                {
+                    "type": "boolean"
+                },
+                {
+                    "$ref": "#"
+                }
+            ]
         },
-        {
-          "$ref": "#"
-        }
-      ]
-    },
-    "dependencies": {
-      "additionalProperties": {
-        "anyOf": [
-          {
+        "additionalProperties": {
+            "anyOf": [
+                {
+                    "type": "boolean"
+                },
+                {
+                    "$ref": "#"
+                }
+            ]
+        },
+        "dependencies": {
+            "additionalProperties": {
+                "anyOf": [
+                    {
+                        "$ref": "#"
+                    },
+                    {
+                        "type": "array"
+                    }
+                ]
+            }
+        },
+        "items": {
+            "anyOf": [
+                {
+                    "$ref": "#"
+                },
+                {
+                    "$ref": "#/definitions/schemaArray"
+                }
+            ]
+        },
+        "definitions": {
+            "additionalProperties": {
+                "$ref": "#"
+            }
+        },
+        "patternProperties": {
+            "additionalProperties": {
+                "$ref": "#"
+            }
+        },
+        "properties": {
+            "additionalProperties": {
+                "$ref": "#"
+            }
+        },
+        "allOf": {
+            "$ref": "#/definitions/schemaArray"
+        },
+        "anyOf": {
+            "$ref": "#/definitions/schemaArray"
+        },
+        "oneOf": {
+            "$ref": "#/definitions/schemaArray"
+        },
+        "not": {
             "$ref": "#"
-          },
-          {
-            "type": "array"
-          }
-        ]
-      }
-    },
-    "items": {
-      "anyOf": [
-        {
-          "$ref": "#"
         },
-        {
-          "$ref": "#/definitions/schemaArray"
+
+        "links": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/linkDescription"
+            }
+        },
+        "fragmentResolution": {
+            "type": "string"
+        },
+        "media": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "description": "A media type, as described in RFC 2046",
+                    "type": "string"
+                },
+                "binaryEncoding": {
+                    "description": "A content encoding scheme, as described in RFC 2045",
+                    "type": "string"
+                }
+            }
+        },
+        "pathStart": {
+            "description": "Instances' URIs must start with this value for this schema to apply to them",
+            "type": "string",
+            "format": "uri"
         }
-      ]
     },
     "definitions": {
-      "additionalProperties": {
-        "$ref": "#"
-      }
-    },
-    "patternProperties": {
-      "additionalProperties": {
-        "$ref": "#"
-      }
-    },
-    "properties": {
-      "additionalProperties": {
-        "$ref": "#"
-      }
-    },
-    "allOf": {
-      "$ref": "#/definitions/schemaArray"
-    },
-    "anyOf": {
-      "$ref": "#/definitions/schemaArray"
-    },
-    "oneOf": {
-      "$ref": "#/definitions/schemaArray"
-    },
-    "not": {
-      "$ref": "#"
-    },
-
-    "links": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/linkDescription"
-      }
-    },
-    "fragmentResolution": {
-      "type": "string"
-    },
-    "media": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "description": "A media type, as described in RFC 2046",
-          "type": "string"
+        "schemaArray": {
+            "type": "array",
+            "items": {
+                "$ref": "#"
+            }
         },
-        "binaryEncoding": {
-          "description": "A content encoding scheme, as described in RFC 2045",
-          "type": "string"
+        "linkDescription": {
+            "title": "Link Description Object",
+            "type": "object",
+            "required": [ "href", "rel" ],
+            "properties": {
+                "href": {
+                    "description": "a URI template, as defined by RFC 6570, with the addition of the $, ( and ) characters for pre-processing",
+                    "type": "string"
+                },
+                "rel": {
+                    "description": "relation to the target resource of the link",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "a title for the link",
+                    "type": "string"
+                },
+                "targetSchema": {
+                    "description": "JSON Schema describing the link target",
+                    "$ref": "#"
+                },
+                "mediaType": {
+                    "description": "media type (as defined by RFC 2046) describing the link target",
+                    "type": "string"
+                },
+                "method": {
+                    "description": "method for requesting the target of the link (e.g. for HTTP this might be \"GET\" or \"DELETE\")",
+                    "type": "string"
+                },
+                "encType": {
+                    "description": "The media type in which to submit data along with the request",
+                    "type": "string",
+                    "default": "application/json"
+                },
+                "schema": {
+                    "description": "Schema describing the data to submit along with the request",
+                    "$ref": "#"
+                }
+            }
         }
-      }
     },
-    "pathStart": {
-      "description": "Instances' URIs must start with this value for this schema to apply to them",
-      "type": "string",
-      "format": "uri"
-    }
-  },
-  "definitions": {
-    "schemaArray": {
-      "type": "array",
-      "items": {
-        "$ref": "#"
-      }
-    },
-    "linkDescription": {
-      "title": "Link Description Object",
-      "type": "object",
-      "required": [ "href", "rel" ],
-      "properties": {
-        "href": {
-          "description": "a URI template, as defined by RFC 6570, with the addition of the $, ( and ) characters for pre-processing",
-          "type": "string"
+    "links": [
+        {
+            "rel": "self",
+            "href": "{+id}"
         },
-        "rel": {
-          "description": "relation to the target resource of the link",
-          "type": "string"
-        },
-        "title": {
-          "description": "a title for the link",
-          "type": "string"
-        },
-        "targetSchema": {
-          "description": "JSON Schema describing the link target",
-          "$ref": "#"
-        },
-        "mediaType": {
-          "description": "media type (as defined by RFC 2046) describing the link target",
-          "type": "string"
-        },
-        "method": {
-          "description": "method for requesting the target of the link (e.g. for HTTP this might be \"GET\" or \"DELETE\")",
-          "type": "string"
-        },
-        "encType": {
-          "description": "The media type in which to submit data along with the request",
-          "type": "string",
-          "default": "application/json"
-        },
-        "schema": {
-          "description": "Schema describing the data to submit along with the request",
-          "$ref": "#"
+        {
+            "rel": "full",
+            "href": "{+($ref)}"
         }
-      }
-    }
-  },
-  "links": [
-    {
-      "rel": "self",
-      "href": "{+id}"
-    },
-    {
-      "rel": "full",
-      "href": "{+($ref)}"
-    }
-  ]
+    ]
 };
 
 
@@ -564,11 +564,11 @@ describe("Schema: ", function() {
           });
 
           it("should not validate a story with bad corrections", function() {
-            validate(version, '/story.json', 'story-fixture-bad-corrections', false);
+              validate(version, '/story.json', 'story-fixture-bad-corrections', false);
           });
 
           it("should not validate a story with bad interstitial link", function() {
-            validate(version, '/story.json', 'story-fixture-bad-interstitial-link', false);
+              validate(version, '/story.json', 'story-fixture-bad-interstitial-link', false);
           });
 
         });
@@ -623,20 +623,20 @@ describe("Schema: ", function() {
         });
 
         describe("Redirect", function() {
-          it("should validate a valid redirect", function() {
-            validateIfFixtureExists(version, '/redirect.json', 'redirect-fixture-good');
-          });
-          it("should not validate an invalid redirect", function() {
-            validateIfFixtureExists(version, '/redirect.json', 'redirect-fixture-bad', false);
-          });
+            it("should validate a valid redirect", function() {
+                validateIfFixtureExists(version, '/redirect.json', 'redirect-fixture-good');
+            });
+            it("should not validate an invalid redirect", function() {
+                validateIfFixtureExists(version, '/redirect.json', 'redirect-fixture-bad', false);
+            });
         });
 
         describe("URL Operation", function() {
           var type = "/url_operation.json";
           ['insert-redirect'].forEach(function (op) {
-            it("should validate url " + op + " operation", function () {
-              validateIfFixtureExists(version, type, "url-operation-" + op);
-            });
+              it("should validate url " + op + " operation", function () {
+                  validateIfFixtureExists(version, type, "url-operation-" + op);
+              });
           });
         });
 
@@ -877,7 +877,7 @@ describe("Schema: ", function() {
             });
 
             it("should validate a numeric rating with no min, max, or units", function() {
-              validateIfFixtureExists(version, type_prefix + '/numeric_rating.json', 'numeric-rating-fixture-good-only-rating');
+               validateIfFixtureExists(version, type_prefix + '/numeric_rating.json', 'numeric-rating-fixture-good-only-rating');
             });
           });
 
@@ -1019,58 +1019,58 @@ describe("Schema: ", function() {
                   element.type.should.equalOneOf([ "blockquote", "code", "interstitial_link", "list", "oembed", "oembed_response", "raw_html", "table", "text", "reference", "image", "video", "audio", "story", "element_group", "quote", "correction", "numeric_rating", "endorsement"]);
 
                   switch(element.type) {
-                    case "correction":
-                      validate(version, type_prefix + '/correction.json', element);
-                      break;
-                    case "quote":
-                      validate(version, type_prefix + '/quote.json', element);
-                      break;
-                    case "blockquote":
-                      validate(version, type_prefix + '/blockquote.json', element);
-                      break;
-                    case "code":
-                      validate(version, type_prefix + '/code.json', element);
-                      break;
-                    case "list":
-                      validate(version, type_prefix + '/list.json', element);
-                      break;
-                    case "oembed":
-                      validate(version, type_prefix + '/oembed.json', element);
-                      break;
-                    case "oembed_response":
-                      // Oembed format changed in 0.5.7
-                      validate(version, '/utils/oembed_response.json', element);
-                      break;
-                    case "raw_html":
-                      validate(version, type_prefix + '/raw_html.json', element);
-                      break;
-                    case "table":
-                      validate(version, type_prefix + '/table.json', element);
-                      break;
-                    case "text":
-                      validate(version, type_prefix + '/text.json', element);
-                      break;
-                    case "reference":
-                      validate(version, '/utils/reference.json', element);
-                      break;
-                    case "image":
-                      validate(version, '/image.json', element);
-                      break;
-                    case "video":
-                      validate(version, '/video.json', element);
-                      break;
-                    case "audio":
-                      validate(version, '/audio.json', element);
-                      break;
-                    case "story":
-                      validate(version, '/story.json', element);
-                      break;
-                    case "numeric_rating":
-                      validate(version, type_prefix + '/numeric_rating.json', element);
-                      break;
-                    case "endorsement":
-                      validate(version, type_prefix + '/endorsement.json', element);
-                      break;
+                  case "correction":
+                    validate(version, type_prefix + '/correction.json', element);
+                    break;
+                  case "quote":
+                    validate(version, type_prefix + '/quote.json', element);
+                    break;
+                  case "blockquote":
+                    validate(version, type_prefix + '/blockquote.json', element);
+                    break;
+                  case "code":
+                    validate(version, type_prefix + '/code.json', element);
+                    break;
+                  case "list":
+                    validate(version, type_prefix + '/list.json', element);
+                    break;
+                  case "oembed":
+                    validate(version, type_prefix + '/oembed.json', element);
+                    break;
+                  case "oembed_response":
+                    // Oembed format changed in 0.5.7
+                    validate(version, '/utils/oembed_response.json', element);
+                    break;
+                  case "raw_html":
+                    validate(version, type_prefix + '/raw_html.json', element);
+                    break;
+                  case "table":
+                    validate(version, type_prefix + '/table.json', element);
+                    break;
+                  case "text":
+                    validate(version, type_prefix + '/text.json', element);
+                    break;
+                  case "reference":
+                    validate(version, '/utils/reference.json', element);
+                    break;
+                  case "image":
+                    validate(version, '/image.json', element);
+                    break;
+                  case "video":
+                    validate(version, '/video.json', element);
+                    break;
+                  case "audio":
+                    validate(version, '/audio.json', element);
+                    break;
+                  case "story":
+                    validate(version, '/story.json', element);
+                    break;
+                  case "numeric_rating":
+                    validate(version, type_prefix + '/numeric_rating.json', element);
+                    break;
+                  case "endorsement":
+                    validate(version, type_prefix + '/endorsement.json', element);
+                    break;
                   }
                 });
               });
@@ -1083,21 +1083,21 @@ describe("Schema: ", function() {
                   item.type.should.equalOneOf([ "image", "video", "audio", "story", "reference" ]);
 
                   switch(item.type) {
-                    case "image":
-                      validate(version, '/image.json', item);
-                      break;
-                    case "video":
-                      validate(version, '/video.json', item);
-                      break;
-                    case "audio":
-                      validate(version, '/audio.json', item);
-                      break;
-                    case "story":
-                      validate(version, '/story.json', item);
-                      break;
-                    case "reference":
-                      validate(version, '/utils/reference.json', item);
-                      break;
+                  case "image":
+                    validate(version, '/image.json', item);
+                    break;
+                  case "video":
+                    validate(version, '/video.json', item);
+                    break;
+                  case "audio":
+                    validate(version, '/audio.json', item);
+                    break;
+                  case "story":
+                    validate(version, '/story.json', item);
+                    break;
+                  case "reference":
+                    validate(version, '/utils/reference.json', item);
+                    break;
                   }
                 });
               });
