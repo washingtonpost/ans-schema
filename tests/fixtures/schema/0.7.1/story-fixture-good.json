@@ -138,17 +138,20 @@
       {
         "_id": "jpmorgan-chase",
         "name": "JPMorgan Chase",
-        "type": "organization"
+        "type": "organization",
+        "score": 1.0
       },
       {
         "_id": "barack-obama",
         "name": "Barack Obama",
-        "type": "person"
+        "type": "person",
+        "score": 0.8
       },
       {
         "_id": "washington-dc",
         "name": "Washington D.C.",
-        "type": "location"
+        "type": "location",
+        "score": 0.3
       }
     ],
     "primary_site": {
