@@ -1,4 +1,4 @@
-# Allowed Websites Proposal
+# Forbidden Websites Proposal
 
 ## Problem
 
