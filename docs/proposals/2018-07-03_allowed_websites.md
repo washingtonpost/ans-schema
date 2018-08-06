@@ -60,7 +60,7 @@ are also changed.
 
 *Who is responsible for enforcing the content restrictions?*
 
-Rendering applications (PB Templates, Apps) will ultimately be responsible for omitting restricted content.  
+The Content API and rendering applications (PB Templates, Apps) will ultimately be responsible for omitting restricted content. The Content API will add feature-flagged endpoints to enable customers to take advantage of this functionality without re-writing existing rendering logic. 
 Middleware applications such as Content API may add flags to retrieval endpoints to remove these earlier in 
 the stream if desired. Content production applications may also apply some validation at content save/publish time.
 
