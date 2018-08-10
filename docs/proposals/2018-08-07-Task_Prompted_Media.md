@@ -16,20 +16,12 @@ Allowing content creators to tag media with task IDs will make it easy to find w
 
 # Proposal
 
-A new field, TK, will allow an array of Task IDs to be associated with any content inside of Arc.
+A new field, associated_tasks, will allow an array of Task IDs (strings) to be associated with any content inside of Arc. This new property will belong to `trait_taxonomy`
 
-## New field
 
-# Example
-
-```
-TK
-```
-
-# Concerns
-
-## Concern #1
-TK
-
-# Implementation
-TK
+    "associated_tasks": {
+      "description": "A list of task IDs that this content was created or curated to satisfy.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
