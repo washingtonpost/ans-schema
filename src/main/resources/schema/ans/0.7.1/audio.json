@@ -162,7 +162,14 @@
       "description": "Whether preload is enabled.",
       "type": "boolean"
     },
-
+    "duration": {
+      "description": "Runtime of the audio in milliseconds.",
+      "type": "number"
+    },
+    "rating": {
+      "description": "A rating of the audio, to be used for appropriate age/content warnings.",
+      "type": "string"
+    },
     "streams": {
       "description": "The different streams this audio can play in.",
       "type": "array",
