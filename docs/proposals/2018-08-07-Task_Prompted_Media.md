@@ -25,3 +25,11 @@ A new field, associated_tasks, will allow an array of Task IDs (strings) to be a
       "items": {
         "type": "string"
       }
+
+# Concerns
+
+- Do we need to limit the number of task IDs that can be associated with a story? It is conceivable that a single photo, for example, is used to satsify many different tasks.
+
+# Implementation
+
+A developer on the Anglerfish team will implement this and add it to the schema if this proposal is accepted.  
