@@ -32,4 +32,4 @@ A new field, associated_tasks, will allow an array of Task IDs (strings) to be a
 
 # Implementation
 
-A developer on the Anglerfish team will implement this and add it to the schema if this proposal is accepted.  
+Jon Peterson on the Anglerfish team will implement this and add it to the schema if this proposal is accepted.  
