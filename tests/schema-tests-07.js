@@ -552,7 +552,12 @@ describe("Schema: ", function() {
             validate(version, '/story.json', 'story-fixture-bad-wrong-version', false);
           });
 
+          it("should validate a story with valid taxonomy", function() {
+            validateIfFixtureExists(version, '/story.json', 'story-fixture-good-taxonomy');
+          });
+
           it("should not validate a story with bad taxonomy", function() {
+            validateIfFixtureExists(version, '/story.json', 'story-fixture-bad-taxonomy-additional-tasks', false);
             validateIfFixtureExists(version, '/story.json', 'story-fixture-bad-tag-strings', false);
             validateIfFixtureExists(version, '/story.json', 'story-fixture-bad-sections-addl-properties', false);
           });
