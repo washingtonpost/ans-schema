@@ -746,6 +746,10 @@ describe("Schema: ", function() {
               validateIfFixtureExists(version, '/utils/named_entity.json', 'named-entity-fixture-good');
             });
 
+            it("should validate a named entity without score", function() {
+              validateIfFixtureExists(version, '/utils/named_entity.json', 'named-entity-fixture-good-missing-score');
+            });
+
             it("should not validate a named entity without id", function() {
               validateIfFixtureExists(version, '/utils/named_entity.json', 'named-entity-fixture-bad-missing-id', false);
             });
