@@ -1,5 +1,10 @@
 # ANS Release Notes
 
+### 1.7.1 2018/9/20
+
+* Added task related media fields field `associated_tasks`
+* Added named entity scoring field `score`
+
 ### 1.6.1 2018/4/27 ###
 
 * Adds ANS 0.6.2 with `handout` and `stock` as new possible values for `distributor.category`
