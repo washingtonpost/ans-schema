@@ -6,8 +6,8 @@ JSON schema definition and supporting example/validation code for The Washington
 # Overview
 ANS ("Arc Native Specification") is the collection of schema documents that comprise the Washington Post's definition of "content", in so far as content is passed back and forth between systems in the Arc ecosystem of applications.
 
-## The current production version of ANS is 0.7.0
-## The current development version of ANS is 0.7.1
+## The current production version of ANS is 0.7.1
+## The current development version of ANS is 0.7.2
 
 ## Schema files
 ANS Schema files are defined with the [JSON Schema specification](https://spacetelescope.github.io/understanding-json-schema/index.html).  Schemas are defined in individual files under the [src/main/resrouces/schema/ans/_version_/](src/main/resources/schema/ans/0.5.8/) directory.
@@ -20,9 +20,9 @@ One can use a variety of third party tools to validate their content against the
 ## Examples
 A few examples are provided of content documents that validate against the Washington Post ANS schema:
 
-1. [An Example Story](tests/fixtures/schema/0.5.8/story-fixture-tiny-house.json)
-2. [An Example Video](tests/fixtures/schema/0.5.8/video-fixture-nationals.json)
-3. [An Example Image](tests/fixtures/schema/0.5.8/image-fixture-good.json)
+1. [An Example Story](tests/fixtures/schema/0.7.1/story-fixture-tiny-house.json)
+2. [An Example Video](tests/fixtures/schema/0.7.1/video-fixture-nationals.json)
+3. [An Example Image](tests/fixtures/schema/0.7.1/image-fixture-good.json)
 
 
 ## Contributing
@@ -31,7 +31,7 @@ See the [contributing documentation](CONTRIBUTING.md) for information about how 
 
 ## Validating Locally ##
 
-This project contains a node library that can be used to validate ANS documents locally.  It is the same validator used in the ANS Service: http://ans.arc2.nile.works/validate/0.5.8
+This project contains a node library that can be used to validate ANS documents locally.  It is the same validator used in the ANS Service: http://ans.arc2.nile.works/validate/0.7.1
 
 You can run the validator on the command line from the project directory to validate an ANS document:
 
