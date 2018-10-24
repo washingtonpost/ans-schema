@@ -14,7 +14,6 @@ Create a new field `colors` in the `story_elements/text.json`. Also, create a tr
 - `start` of type `number` which contains a color start position in a text
 - `length` of type `number` which will be a non-zero value of the colored text
 - `class_name` of type `string` which will be a CSS class name applied to the HTML `<span>` element. Its name comes from the Ellipsis settings.
-- `color_code` of type `string` having `#RRGGBB` color code. This is for backward compatibility, if Ellipsis has no color settings, it will still be able to render colored text. It also might be used by Page Builder to generate styles on the fly or even inject a text with inline styles, if needed.
 
 ### trait_colors
 
@@ -42,14 +41,9 @@ Create a new field `colors` in the `story_elements/text.json`. Also, create a tr
         "description": "A CSS class name to the HTML element for the Page Builder",
         "type" : "string",
         "minLength": 1
-      },
-      "color_code" : {
-        "description": "A HTML color code for the text block",
-        "type" : "string",
-        "pattern": "#[0-9a-fA-F]{6}"
-      },
+      }
     },
-    "required": [ "start", "length", "class_name", "color_code" ]
+    "required": [ "start", "length", "class_name" ]
   }
 }
 ```
