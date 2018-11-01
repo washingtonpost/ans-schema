@@ -10,25 +10,14 @@ We propose that a new restricted content element can replace the content element
 ```json
 {
   "_id": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-  "type": "object",
+  "type": "story",
   "version": "0.7.1",
 
   "restricted_content": {
     "type": "reference",
     "referent": {
       "id": "ABCFE...",
-      "type": "gallery",
-      "referent_properties": {
-        "credits": {
-          "by": [
-            {
-              "type": "author",
-              "version": "0.7.1",
-              "byline": "Greg"
-            }
-          ]
-        }
-      }
+      "type": "gallery"
     }
   },
 
