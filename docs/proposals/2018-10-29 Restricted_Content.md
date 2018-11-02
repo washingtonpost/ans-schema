@@ -21,9 +21,10 @@ We propose that a new restricted content element can replace the content element
     }
   },
 
-  "reasons": [
-    "This content is not available in this region."
-  ]
+  "reasons": [{
+    "restriction_id": "DEFGHIJKL",
+    "message": "This content is not available on website baltimore-sun because of restriction 'Tribune-only restriction'."
+  }]
 }
 ```
 
