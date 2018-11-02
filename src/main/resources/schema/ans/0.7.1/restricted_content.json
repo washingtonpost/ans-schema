@@ -21,8 +21,11 @@
     "reasons": {
       "type": "array",
       "items": {
-        "type": "string",
-        "minItems": 1
+        "type": "object",
+        "properties": {
+          "restriction_id": "string",
+          "message": "string"
+        }
       }
     }
   },
