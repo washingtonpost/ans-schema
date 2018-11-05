@@ -4,13 +4,13 @@ Some content can be restricted due to various reasons. We want to leave a placeh
 
 # Proposal
 
-We propose that a new restricted content element can replace the content element when it is removed.
+We propose that a new restricted content element can be returned in the place of a content element if it is restricted. Any sub-elements of the restricted content are also excluded.
 
 ## Example
 ```json
 {
   "_id": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-  "type": "story",
+  "type": "restricted_content",
   "version": "0.7.1",
 
   "restricted_content": {
@@ -29,6 +29,11 @@ We propose that a new restricted content element can replace the content element
 ```
 
 # Concerns
+
+## What do each of the IDs pertain to?
+
+The id held in the top level object is the id for the restricted content replacement object. The id in the restricted_content field is the id of the content that is restricted. The id in the reasons field is the id of the restriction that applied to the content.
+
 
 # Implementation
 
