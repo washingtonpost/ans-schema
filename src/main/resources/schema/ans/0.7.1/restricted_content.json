@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.1/restricted_content.json",
+  "title": "A restricted content object.",
+  "description": "Represents restricted ANS Content objects.",
+  "type": "object",
+  "additionalProperties": {},
+  "properties": {
+    "type": {
+      "enum": [ "restricted" ]
+    },
+
+    "_id": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.1/traits/trait_id.json"
+    },
+
+    "restricted_content": {
+      "$ref": "https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.7.1/utils/reference.json"
+    },
+
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "restriction_id": "string",
+          "message": "string"
+        }
+      }
+    }
+  },
+  "required": [ "type", "reasons" ]
+}
