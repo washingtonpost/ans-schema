@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.0/traits/trait_social.json",
+  "title": "Social Links",
+  "description": "Links to various social media",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "site": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": {}
+  }
+}

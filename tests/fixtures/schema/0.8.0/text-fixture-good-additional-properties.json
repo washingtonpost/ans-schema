@@ -1,0 +1,5 @@
+{
+  "type":"text",
+  "content": "Some text",
+  "additional_properties": { "foo": "bar" }
+}
