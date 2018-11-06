@@ -1,19 +1,21 @@
 # Problem
 
-On certain stories, newsroom users want to override or hide the photographer and credit names that are set in the downstream display channels they own (i.e., website, AMP, and native apps). 
+On certain stories, newsroom users want to override or hide the photographer and credit names that are set in the downstream display channels they own (i.e., website, AMP, and native apps). In some cases, they may have added a note to the story indicating the photo credits independent of the photo itself.
 
-However, this information should not be modified in all downstream contexts. Shared stories over wires should contain the original credits for legal and other reasons. Consumers should be able to choose whether to use the alternate credits or not. 
+However, this information should not be modified in all downstream contexts. Shared stories over wires should contain the original credits for legal and other reasons. Direct ANS consumers that render documents to readers should use the overridden credits when possible.  However, when converting data into a "generic" format, such as an RSS feed, Apple News, or other common formats, the original credit should be preserved for maximum compatibility. E.g., an image may parsed from such a format independent of the story, and although the credit may be clear in the context of the story, it would not be present with the extracted photo outside of the context of that story. For cases like these, the original credit should be preserved.
+
 
 # Proposal
 
-Add an 'alternate_credits' trait on all ANS elements, also explicitly suggested usage within `referent_properties`.
+Add an 'preferred_credits' trait on all ANS elements, also explicitly suggested usage within `referent_properties`.
 
-Consuming templates should be updated to use the `alternate_credits` trait if it is available and they desire to use it.
+Consuming clients that render content directly to readers should be updated to use the `preferred_credits` trait when present.
+Consuming clients that translate ANS into a format used by third parties should ignore the field.
 
 
 ## Alternate Credits Trait
 
-* `alternate_credits` will have the same structure as `credits` but potentially different data. 
+* `preferred_credits` will have the same structure as `credits` but potentially different data. 
 
 
 ## Example Usage
@@ -32,7 +34,7 @@ Before denormalization.
          "type": "image",
          "id": "DEFGHIJKLMNOPQRSTUVWXYZABC",
          "referent_properties": {
-           "alternate_credits": {
+           "preferred_credits": {
              "by": [
                {
                  "type": "author",
@@ -70,7 +72,7 @@ After denormalization.
           }
         ]
       },  
-      "alternate_credits": {
+      "preferred_credits": {
         "by": [
           {
             "type": "author",
