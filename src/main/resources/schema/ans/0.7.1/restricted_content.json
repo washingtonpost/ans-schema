@@ -15,7 +15,7 @@
     },
 
     "restricted_content": {
-      "$ref": "https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.7.1/utils/reference.json"
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.1/utils/reference.json"
     },
 
     "reasons": {
@@ -23,8 +23,14 @@
       "items": {
         "type": "object",
         "properties": {
-          "restriction_id": "string",
-          "message": "string"
+          "restriction_id": {
+            "description": "The ARC UUID of the distributor of this content. E.g., ABCDEFGHIJKLMNOPQRSTUVWXYZ.",
+            "type": "string"
+          },
+          "message": {
+            "description": "The human-readable message describing the restriction.",
+            "type": "string"
+          }
         }
       }
     }
