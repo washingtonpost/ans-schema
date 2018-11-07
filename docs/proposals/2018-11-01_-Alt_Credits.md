@@ -7,15 +7,15 @@ However, this information should not be modified in all downstream contexts. Sha
 
 # Proposal
 
-Add an 'preferred_credits' trait on all ANS elements, also explicitly suggested usage within `referent_properties`.
+Add a 'vanity_credits' trait on all ANS elements, also explicitly suggested usage within `referent_properties`.
 
-Consuming clients that render content directly to readers should be updated to use the `preferred_credits` trait when present.
+Consuming clients that render content directly to readers should be updated to use the `vanity_credits` trait when present.
 Consuming clients that translate ANS into a format used by third parties should ignore the field.
 
 
 ## Alternate Credits Trait
 
-* `preferred_credits` will have the same structure as `credits` but potentially different data. 
+* `vanity_credits` will have the same structure as `credits` but potentially different data. 
 
 
 ## Example Usage
@@ -34,7 +34,7 @@ Before denormalization.
          "type": "image",
          "id": "DEFGHIJKLMNOPQRSTUVWXYZABC",
          "referent_properties": {
-           "preferred_credits": {
+           "vanity_credits": {
              "by": [
                {
                  "type": "author",
@@ -72,7 +72,7 @@ After denormalization.
           }
         ]
       },  
-      "preferred_credits": {
+      "vanity_credits": {
         "by": [
           {
             "type": "author",
