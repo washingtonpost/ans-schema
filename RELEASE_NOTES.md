@@ -1,5 +1,10 @@
 # ANS Release Notes
 
+### 1.8.0 2018/11/8
+
+* Added restricted content object
+* Added referenced distributor option to `distributor` trait
+
 ### 1.7.1 2018/9/20
 
 * Added task related media fields field `associated_tasks`
