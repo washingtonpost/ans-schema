@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.0/traits/trait_label.json",
+  "title": "Label",
+  "description": "What the Washington Post calls a Kicker",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "basic": {
+      "description": "The default label object for this piece of content.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "The text of this label."
+        },
+        "url": {
+          "type": "string",
+          "description": "An optional destination url of this label."
+        },
+        "display": {
+          "type": "boolean",
+          "description": "If false, this label should be hidden."
+        },
+        "additional_properties": {
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.0/traits/trait_additional_properties.json"
+        }
+      },
+      "required": [ "text" ]
+    }
+  },
+  "patternProperties": {
+    "^[a-zA-Z0-9_]*$": {
+      "description": "Additional user-defined keyed label objects.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "The text of this label."
+        },
+        "url": {
+          "type": "string",
+          "description": "An optional destination url of this label."
+        },
+        "display": {
+          "type": "boolean",
+          "description": "If false, this label should be hidden."
+        },
+        "additional_properties": {
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.0/traits/trait_additional_properties.json"
+        }
+      },
+      "required": [ "text" ]
+    }
+  }
+}

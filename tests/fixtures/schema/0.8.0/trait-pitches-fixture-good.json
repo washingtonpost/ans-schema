@@ -1,0 +1,40 @@
+{
+	"platform": [
+		{
+			"platform_path": "/homepage",
+			"creation_event": {
+				"status": "pitched",
+				"time": "2017-02-27T09:45:00Z",
+				"user_id": "john.doe",
+				"note": "This is a great story that would work well on the homepage."
+			},
+			"latest_event": {
+				"status": "watching",
+				"time": "2017-02-27T10:30:00Z",
+				"user_id": "jane.smith",
+				"note": "Looks interesting, we'll keep an eye on it."
+			}
+		}
+	],
+	"publication": [
+		{
+			"publication_id": "5852f14de4b0c123b7d34c5c",
+			"creation_event": {
+				"status": "pitched",
+				"time": "2017-02-27T10:15:00Z",
+				"user_id": "john.doe",
+				"note": "Please consider this for tomorrow's paper.",
+				"edition_id": "5852f14de4b0c123b7d78d2a",
+				"edition_time": "2017-02-28T06:00:00Z"
+			},
+			"latest_event": {
+				"status": "booked",
+				"time": "2017-02-27T10:45:00Z",
+				"user_id": "jane.smith",
+				"note": "Will run on A1 tomorrow.",
+				"edition_id": "5852f14de4b0c123b7d78d2a",
+				"edition_time": "2017-02-28T06:00:00Z"
+			}
+		}
+	]
+}

@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.0/utils/topic.json",
+    "title": "Topic",
+    "description": "Models a topic used in describing a piece of content.",
+    "type": "object",
+    "required": ["_id", "score", "uid"],
+    "additionalProperties": false,
+    "properties": {
+        "_id": {
+            "type": "string",
+            "description": "The unique identifier for this topic."
+        },
+        "name": {
+            "type": "string",
+            "description": "The general name for this topic."
+        },
+        "score": {
+            "type": "number",
+            "description": "An arbitrary weighting to give the topic"
+        },
+        "uid": {
+            "type": "string",
+            "description": "A short identifier for this topic. Usually used in cases where a long form id cannot work."
+        }
+    }
+}

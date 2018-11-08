@@ -540,18 +540,6 @@ describe("Schema: ", function() {
             validateIfFixtureExists(version, '/story.json', 'story-fixture-good-distributor-handout');
           });
 
-          it("should validate a story with referenced distributor", function() {
-            validateIfFixtureExists(version, '/story.json', 'story-fixture-good-referenced-distributor');
-          });
-
-          it("should not validate a story with referenced distributor with no reference id", function() {
-            validateIfFixtureExists(version, '/story.json', 'story-fixture-bad-referenced-distributor-reference-id', false);
-          });
-
-          it("should not validate a story with referenced distributor with no mode", function() {
-            validateIfFixtureExists(version, '/story.json', 'story-fixture-bad-referenced-distributor-mode', false);
-          });
-
           it("should not validate a story with unspecified properties", function() {
             validate(version, '/story.json', 'story-fixture-bad-extra-properties', false);
           });

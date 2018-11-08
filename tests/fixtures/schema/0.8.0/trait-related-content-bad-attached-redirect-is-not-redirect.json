@@ -1,0 +1,26 @@
+{
+  "basic": [
+    {
+      "type": "story",
+      "version": "0.8.0"
+    },
+    {
+      "type": "reference",
+      "referent": {
+        "type": "story",
+        "id": "ABCDEFG",
+        "provider": ""
+      }
+    }
+  ],
+  "redirect": [
+    {
+      "type": "reference",
+      "referent": {
+        "type": "story",
+        "id": "ABCDEFG",
+        "provider": ""
+      }
+    }
+  ]
+}
