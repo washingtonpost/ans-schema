@@ -23,7 +23,7 @@
     },
 
     "additional_properties": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.0/traits/trait_additional_properties.json"
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.7.1/traits/trait_additional_properties.json"
     }
   }
 }
