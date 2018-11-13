@@ -50,6 +50,33 @@ Add [raw_html](https://github.com/washingtonpost/ans-schema/blob/master/src/main
 }
 ```
 
+### Sample Story
+```
+{
+  "type": "story",
+  "version": "0.8.1",
+  "owner": {
+    "id": "staging"
+  },
+  "promo_items": {
+    "basic": {
+      "type": "raw_html",
+      "content": "<h1>raw HTML content</h1>"
+    }
+  },
+  "content_elements": [
+    ...
+  ],
+  "credits": {
+    ...
+  },
+  "taxonomy": {
+    ...
+  }
+}
+```
+
+
 # Concerns
 
 A `basic` key has its own set of validation rules. This might be done for a reason. By default Ellipsis treat `basic` key as an `image` type, however, it's flexible.
