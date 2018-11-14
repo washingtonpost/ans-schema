@@ -1136,6 +1136,13 @@ describe("Schema: ", function() {
 
         });
 
+        describe("Promo Items", function() {
+          it("should allow raw_html item type under basic and any abitrary key", function() {
+            validateIfFixtureExists(version, '/traits/trait_promo_items.json', 'trait-promo-item-raw-html-goog', true);
+            validateIfFixtureExists(version, '/traits/trait_promo_items.json', 'trait-promo-item-raw-html-bad', false);
+          });
+        });
+
       });
     });
   });
