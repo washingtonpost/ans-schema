@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.8.1/planning_note_operation.json",
+  "description": "An operation to update the planning note associated with a story.",
+  "type": "object",
+  "allOf": [{
+    "properties": {
+      "type": {
+        "description": "Identifies this as an ANS operation",
+        "type": "string",
+        "enum": [ "planning-note-operation" ]
+      },
+      "operation": {
+        "type": "string",
+        "description": "The identifier of the operation being performed",
+        "enum": [ "update" ]
+      },
+      "date": {
+        "description": "When the operation should be considered performed",
+        "type": "string",
+        "format": "date-time"
+      },
+      "id": {
+        "type": "string",
+        "description": "The id of the item being operated"
+      },
+      "organization_id": {
+        "type": "string",
+        "description": "The id of the organization"
+      },
+      "version": {
+        "type": "string",
+        "description": "The version of ANS this item is written in"
+      },
+      "note": {
+        "type": "string",
+        "description": "The new or updated note"
+      }
+    },
+    "required": [ "type", "operation", "id", "organization_id", "note" ]
+  }]
+}

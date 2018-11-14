@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/restricted_content.json",
+  "title": "A restricted content object.",
+  "description": "Represents restricted ANS Content objects.",
+  "type": "object",
+  "additionalProperties": {},
+  "properties": {
+    "type": {
+      "enum": [ "restricted" ]
+    },
+
+    "_id": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/traits/trait_id.json"
+    },
+
+    "restricted_content": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/utils/reference.json"
+    },
+
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "restriction_id": {
+            "description": "The ARC UUID of the distributor of this content. E.g., ABCDEFGHIJKLMNOPQRSTUVWXYZ.",
+            "type": "string"
+          },
+          "message": {
+            "description": "The human-readable message describing the restriction.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": [ "type", "reasons" ]
+}

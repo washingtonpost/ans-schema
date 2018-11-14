@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/traits/trait_revision.json",
+  "title": "Revision",
+  "description": "Trait that applies revision information to a document. In the Arc ecosystem, many of these fields are populated in stories by the Story API.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "revision_id": {
+      "description": "The unique id of this revision.",
+      "type": "string"
+    },
+    "parent_id": {
+      "description": "The unique id of the revision that this revisions was branched from, or preceded it on the current branch.",
+      "type": "string"
+    },
+    "branch": {
+      "description": "The name of the branch this revision was created on.",
+      "type": "string"
+    },
+    "editions": {
+      "description": "A list of identifiers of editions that point to this revision.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "user_id": {
+      "type": "string",
+      "description": "The unique user id of the person who created this revision."
+    },
+    "published": {
+      "type": "boolean",
+      "description": "Whether or not this revision's parent story is published, in any form or place"
+    },
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/traits/trait_additional_properties.json"
+    }
+  }
+}

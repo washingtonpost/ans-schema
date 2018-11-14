@@ -1,0 +1,28 @@
+{
+  "_id": "unique ANS id",
+  "type": "story",
+  "version": "0.8.0",
+  "created_date": "2015-06-24T09:50:50.52Z",
+  "last_updated_date": "2015-06-24T09:50:50.52Z",
+  "language": "en",
+  "canonical_url": "http://www.washingtonpost.com/local/anesthesiologist-trashes-sedated-patient-jury-orders-her-to-pay-500000/2015/06/23/cae05c00-18f3-11e5-ab92-c75ae6ab94b5_story.html",
+  "short_url": "http://wapo.st/1Crp6bY",
+  "content_elements": [
+    {
+      "_id": "123",
+      "type": "text",
+      "channels": [
+        "web"
+      ],
+      "content": "<h1>this is my first paragraph</h1>"
+    },
+    {
+      "_id": "456",
+      "type": "text",
+      "channels": [
+        "post-it-note"
+      ],
+      "content": "<h2>this is my second paragraph</h2>"
+    }
+  ]
+}
