@@ -1,0 +1,25 @@
+{
+  "type": "story",
+  "version": "0.8.0",
+  "source": {
+    "source_type": "Wires",
+    "name": "Reuters",
+    "system": "Arc I/O",
+    "source_id": "ABC-DEF-45G",
+    "additional_properties": {
+      "more": "data"
+    }
+  },
+  "label": {
+    "basic": {
+      "additional_properties": {
+        "field": "value",
+        "why": "is there no text here"
+      },
+      "text": ""
+    },
+    "__renamed_invalid_name": {
+      "text": "Invalid name for a label."
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/traits/trait_promo_items.json",
+  "title": "Promo Items",
+  "type": "object",
+  "description": "Lists of promotional content to use when highlighting the story. In the Arc ecosystem, references in these lists will be denormalized.",
+  "properties": {
+    "basic": {
+      "oneOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/content.json"
+        },
+        {
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/utils/reference.json"
+        },
+        {
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/story_elements/raw_html.json"
+        }
+      ]
+    }
+  },
+  "patternProperties": {
+    ".*": {
+      "oneOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/content.json"
+        },
+        {
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/utils/reference.json"
+        },
+        {
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/story_elements/raw_html.json"
+        }
+      ]
+    }
+  }
+}

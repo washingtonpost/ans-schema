@@ -1,0 +1,542 @@
+{
+  "_id": "unique ANS id",
+  "type": "story",
+  "version": "0.8.1",
+  "created_date": "2015-06-24T09:50:50.52Z",
+  "last_updated_date": "2015-06-24T09:50:50.52Z",
+  "channels": ["ios", "android"],
+  "credits": {
+    "by": [
+      {
+        "name": "John Q. Reporter",
+        "byline": "John Q. Reporter",
+        "org": "The Washington Post",
+        "type": "author",
+        "version": "0.8.1",
+        "image": {
+          "_id": "unique ANS id",
+          "type": "image",
+          "version": "0.8.1",
+          "created_date": "2015-06-25T09:50:50.52Z",
+          "url": "https://img.washingtonpost.com/wp-apps/imrs.php?src=http://wp-eng-static.washingtonpost.com/author_images/faiolaam.jpg?ts=1405950848547&w=90&h=90"
+        },
+        "bio": "Anthony Faiola is The Post's Berlin bureau chief. Faiola joined the Post in 1994, since then reporting for the paper from five continents and serving as bureau chief in Tokyo, Buenos Aires, New York and London.",
+        "url": "https://www.washingtonpost.com/people/anthony-faiola",
+        "social_links": [
+          {
+            "site": "twitter",
+            "url": "https://www.twitter.com/Anthony_Faiola"
+          },
+          {
+            "site": "facebook",
+            "url": "https://www.facebook.com/anthony.faiola"
+          }
+        ]
+      }
+    ]
+  },
+  "language": "en",
+  "location": "Washington, D.C.",
+  "geo": {
+    "latitude": 38.9047,
+    "longitude": -77.0164
+  },
+  "address": {
+    "street_address": "1600 Pennsylvania Ave",
+    "extended_address": "West Wing",
+    "locality": "Washington",
+    "region": "D.C.",
+    "postal_code": "20002",
+    "country_name": "USA"
+  },
+  "copyright": "Copyright © 2018 Thomson Reuters.",
+  "canonical_url": "/local/anesthesiologist-trashes-sedated-patient-jury-orders-her-to-pay-500000/2015/06/23/cae05c00-18f3-11e5-ab92-c75ae6ab94b5_story.html",
+  "short_url": "http://wapo.st/1Crp6bY",
+  "headlines": {
+    "basic": "The default headline for this story",
+    "twitter": "Twitter headline!"
+  },
+  "description": {
+    "basic": "A Vienna man went in for a colonoscopy and intended to record his doctor"
+  },
+  "content_restrictions": {
+    "content_code": "green"
+  },
+  "related_content": {
+    "basic": [
+      {
+        "type": "reference",
+        "_id": "00001",
+        "channels": [
+          "mobile"
+        ],
+
+        "referent": {
+          "type": "story",
+          "id": "ABCDEFGHIJKLMNO",
+          "provider": "http://www.story.com/api",
+          "referent_properties":{
+            "alt_headline": "An alternate headline"
+          }
+        }
+      }
+    ],
+    "redirect": [{
+      "type": "redirect",
+      "version": "0.8.1",
+      "canonical_url": "/local/anesthesiologist-trashes-sedated-patient-jury-orders-her-to-pay-500000/2015/06/23/cae05c00-18f3-11e5-ab92-c75ae6ab94b5_story.html",
+      "redirect_url": "http://www.washingtonpost.com/editors-note/published-too-soon.html"
+    }]
+  },
+  "promo_items": {
+    "basic": {
+      "_id": "unique ANS id",
+      "type": "image",
+      "version": "0.8.1",
+      "created_date": "2015-06-25T09:50:50.52Z",
+      "credits": {
+        "by": [
+          {
+            "name": "Ansel Adams",
+            "byline": "Ansel Adams",
+            "type": "author",
+            "version": "0.8.1"
+          }
+        ]
+      },
+      "url": "https://tinyurl.com/mqyonhb",
+      "caption": "Never gonna give you up",
+      "subtitle": "Never gonna let you down",
+      "width": 800,
+      "height": 640
+    }
+  },
+  "taxonomy": {
+    "tags": [
+      {
+        "_id": "fred",
+        "text": "Fred",
+        "slug": "fred",
+        "description": "For all things Fred",
+        "additional_properties": {
+          "foo": "bar"
+        }
+      },
+      {
+        "_id": "writing",
+        "text": "Writing"
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Anesthesiologist",
+        "score": 0.77,
+        "frequency": 2
+      }
+    ],
+    "named_entities": [
+      {
+        "_id": "jpmorgan-chase",
+        "name": "JPMorgan Chase",
+        "type": "organization"
+      },
+      {
+        "_id": "barack-obama",
+        "name": "Barack Obama",
+        "type": "person"
+      },
+      {
+        "_id": "washington-dc",
+        "name": "Washington D.C.",
+        "type": "location"
+      }
+    ],
+    "primary_site": {
+      "_id": "site_primary",
+      "type": "site",
+      "version": "0.8.1",
+      "name": "News",
+      "description": "General News",
+      "path": "/news",
+      "additional_properties": {
+        "baz": "bag"
+      }
+    },
+    "sites": [
+      {
+        "_id": "site_1",
+        "type": "site",
+        "version": "0.8.1",
+        "primary": false,
+        "name": "Business",
+        "description": "For all your business needs",
+        "path": "/business",
+        "additional_properties": {
+          "foo": "bar"
+        }
+      },
+      {
+        "_id": "site_2",
+        "type": "site",
+        "version": "0.8.1",
+        "primary": true,
+        "name": "Manufacturing",
+        "description": "For all your manufacturing needs",
+        "path": "/business/manufacturing",
+        "parent_id" : "site_1",
+        "additional_properties": {
+          "foo": "bar"
+        }
+      }
+    ],
+    "stock_symbols": [ "IBM", "INTL", "AMZN", "MRSFT" ],
+    "additional_properties": {
+      "more": "info"
+    }
+  },
+  "label": {
+    "basic": {
+      "text": "The Kicker",
+      "url": "https://www.washingtonpost.com/kicker",
+      "display": true,
+      "additional_properties": {
+        "bar": "foo"
+      }
+    },
+    "another_one": {
+      "text": "Another One"
+    }
+  },
+  "publish_date": "2015-06-24T09:49:00.10Z",
+  "first_publish_date": "2015-06-24T09:49:00.10Z",
+  "status": "published",
+  "display_date": "2015-06-25T09:50:50.52Z",
+  "editor_note": "This URL earlier linked to a post that we’ve unpublished due to its flawed premise.",
+
+  "planning": {
+    "scheduling": {
+      "planned_publish_date": "2015-06-24T09:49:00.10Z",
+      "scheduled_publish_date": "2015-06-24T09:49:00.10Z",
+      "will_have_gallery": true,
+      "will_have_graphic": false,
+      "will_have_image": true,
+      "will_have_video": false
+    },
+    "story_length": {
+      "word_count_planned": 2400,
+      "word_count_actual": 3000,
+      "inch_count_planned": 6,
+      "inch_count_actual": 8,
+      "line_count_planned": 100,
+      "line_count_actual": 120
+    }
+  },
+
+  "content_elements": [
+    {
+      "_id": "123",
+      "type": "text",
+      "content": "this is my first paragraph"
+
+    },
+    {
+      "_id": "456",
+      "type": "text",
+
+      "content": "this is my second paragraph"
+    },
+    {
+      "_id": "789",
+      "type": "image",
+      "version": "0.8.1",
+      "alignment": "left",
+
+      "created_date": "2015-06-25T09:50:50.52Z",
+      "credits": {
+        "by": [
+          {
+            "name": "Ansel Adams",
+            "byline": "Ansel Adams",
+            "type": "author",
+            "version": "0.8.1"
+          }
+        ]
+      },
+      "url": "https://tinyurl.com/mqyonhb",
+      "caption": "Never gonna give you up",
+      "subtitle": "Never gonna let you down",
+      "width": 800,
+      "height": 640
+
+    },
+    {
+      "_id": "49876543210",
+      "type": "list",
+      "list_type": "unordered",
+
+      "items": [
+        {
+          "_id" : "t1",
+          "type" : "text",
+          "content" : "Foo"
+
+        },
+        {
+          "_id" : "t2",
+          "type": "text",
+
+          "content" : "Bar"
+        },
+        {
+          "_id" : "l2",
+          "type": "list",
+
+          "list_type": "ordered",
+          "items" : [
+            {
+              "_id": "t4",
+              "type": "text",
+
+              "content" : "Hi"
+            },
+            {
+              "_id": "t5",
+              "type": "text",
+
+              "content" : "Mom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "549876543210",
+      "type": "blockquote",
+      "content": "<i>Here's my html</i>"
+
+    },
+    {
+      "_id": "549876543210",
+      "type": "quote",
+      "content_elements": [
+        {
+          "type": "text",
+          "content": "I really like this sample sentence. Maybe we should use it?"
+        },
+        {
+          "type": "quote",
+          "content_elements": [
+            {
+              "type": "image",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Underwoodfive.jpg/220px-Underwoodfive.jpg"
+            },
+            {
+              "type": "text",
+              "content": "Now is the time for all good men to come to the aid of their party."
+            }
+          ],
+          "citation": {
+            "type": "text",
+            "content": "Charles E. Weller; <em>The Early History of the Typewriter</em>, p. 21 (1918)"
+          }
+        }
+      ],
+      "citation": {
+        "type": "text",
+        "content": "Me, on Slack, two minutes ago."
+      }
+    },
+
+    {
+      "_id": "659876643210",
+      "type": "correction",
+      "correction_type": "clarification",
+      "text": "An earlier version of this article attributed the above quote to David Foster Wallace."
+    },
+
+    {
+      "_id": "649876543210",
+      "type": "raw_html",
+      "content": "<iframe src=\"http://www.google.com\"></iframe>",
+      "channels": ["web"]
+
+    },
+    {
+      "_id": "22222229",
+      "type": "reference",
+      "channels": ["ios", "android"],
+      "alignment": "left",
+
+      "referent": {
+        "provider": "https://api.twitter.com/1/statuses/oembed.json",
+        "id": "https://twitter.com/BradDavis_WFTS/status/664422935130566656"
+      }
+
+    },
+    {
+      "_id": "22222220",
+      "type": "oembed_response",
+      "additional_properties": {
+        "Foo": "Bar"
+      },
+      "raw_oembed": {
+        "type": "video",
+        "version": "1.0",
+        "provider_name": "Vimeo",
+        "provider_url": "https://vimeo.com/",
+        "title": "The New Vimeo Player (You Know, For Videos)",
+        "author_name": "Vimeo Staff",
+        "author_url": "https://vimeo.com/staff",
+        "is_plus": "0",
+        "html": "<iframe src=\"https://player.vimeo.com/video/76979871\" width=\"480\" height=\"270\" frameborder=\"0\" title=\"The New Vimeo Player (You Know, For Videos)\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+        "width": 480,
+        "height": 270,
+        "duration": 62,
+        "description": "It may look (mostly) the same on the surface, but under the hood we totally rebuilt our player. Here’s a quick rundown of some of the coolest new features:\n\n• Lightning fast playback\n• Redesigned Share screen\n• Closed caption and subtitle compatible\n• HTML5 by default\n• Purchase-from-player functionality for embedded Vimeo On Demand trailers\n• More responsive than ever (go ahead, resize it, we dare you!!!)\n\nWe’re really proud of these updates. So proud that we made a spiffy new page to showcase all the reasons why we have the best video player in the galaxy. Check it out here: http://vimeo.com/player\n\nIn short, this is a player that even haters can love.",
+        "thumbnail_url": "https://i.vimeocdn.com/video/452001751_295x166.jpg",
+        "thumbnail_width": 295,
+        "thumbnail_height": 166,
+        "thumbnail_url_with_play_button": "https://i.vimeocdn.com/filter/overlay?src=https://i.vimeocdn.com/video/452001751_295x166.jpg&src=http://f.vimeocdn.com/p/images/crawler_play.png",
+        "upload_date": "2013-10-15 14:08:29",
+        "video_id": 76979871,
+        "uri": "/videos/76979871"
+      },
+      "referent": {
+        "provider": "https://vimeo.com/api/oembed.json?url=",
+        "id": "76979871"
+      }
+    },
+    {
+      "_id": "safas9dafs097asd890f",
+      "type": "interstitial_link",
+      "url": "https://www.washingtonpost.com/politics/can-clinton-and-trump-ride-to-big-victories-in-next-weeks-acela-primary/2016/04/20/ea6454fc-064e-11e6-bdcb-0133da18418d_story.html?hpid=hp_rhp-top-table-main_5states-1025a%3Ahomepage%2Fstory",
+      "content": "Can Clinton and Trump ride to big victories in next weeks Acela primary?"
+    },
+    {
+      "_id": "safas9dafs097asd8911",
+      "type": "element_group",
+      "content_elements": [
+        {
+          "type": "image",
+          "url": "http://foo.com/foo.jpg",
+          "caption": "Foo"
+        },
+        {
+          "type": "image",
+          "url": "http://bar.com/bar.jpg",
+          "caption": "Bar"
+        }
+      ]
+    },
+    {
+      "_id": "safas9dafs097asd8911001fs",
+      "type": "numeric_rating",
+      "numeric_rating": 4.5,
+      "min": 0,
+      "max": 5,
+      "units": "stars"
+    },
+    {
+      "_id": "7asd8911001fs4144sajhvt",
+      "type": "endorsement",
+      "endorsement": "Recommended"
+    }
+  ],
+
+  "corrections": [
+    {
+      "type": "correction",
+      "correction_type": "clarification",
+      "text": "What I said before was not exactly true."
+    },
+    {
+      "type": "correction",
+      "correction_type": "correction",
+      "text": "What I said before was false and not true."
+    }
+  ],
+
+  "owner": {
+    "id": "washpost",
+    "name": "(deprecated)",
+    "sponsored": false
+  },
+
+  "source": {
+    "source_id": "1234-5678",
+    "source_type": "(deprecated)",
+    "name": "(deprecated)",
+    "system": "Methode",
+    "edit_url": "http://washpost.methode.com/foo/bar/1234-5678",
+    "additional_properties": {
+      "foo": "bar"
+    }
+  },
+
+  "distributor": {
+    "reference_id": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "mode": "reference"
+  },
+
+  "syndication": {
+    "external_distribution": true,
+    "search": true
+  },
+
+  "comments": {
+    "comments_period": 14,
+    "allow_comments": true,
+    "display_comments": true,
+    "moderation_required": false,
+
+    "additional_properties": {
+      "favorite_comment": "All work and no play makes Jack a dull boy."
+    }
+  },
+
+  "voice_transcripts": [{
+    "_id": "vt-1",
+    "type": "voice_transcript",
+    "subtype": "short",
+
+    "options": {
+      "enabled": true,
+      "voice": "joanna"
+    },
+
+    "options_used": {
+      "enabled": true,
+      "voice": "joanna"
+    },
+
+    "output": {
+      "type": "audio",
+      "version": "0.8.1",
+      "streams": [{
+        "url": "https://arc-content-api.s3.amazonaws.com/polly/test.mp3"
+      }]
+    }
+  }, {
+    "_id": "vt-2",
+    "type": "voice_transcript",
+    "subtype": "full",
+
+    "options": {
+      "enabled": true
+    },
+    "options_used": {
+      "enabled": true
+    },
+    "streams": [{
+      "bitrate": 96,
+      "url": "https://arc-content-api.s3.amazonaws.com/polly/test-full-96.mp3"
+    }, {
+      "bitrate": 128,
+      "url": "https://arc-content-api.s3.amazonaws.com/polly/test-full-128.mp3"
+    }]
+  }],
+
+  "additional_properties": {
+    "foo": "bar"
+  }
+}
