@@ -89,6 +89,9 @@
     "credits": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/traits/trait_credits.json"
     },
+    "vanity_credits": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/traits/trait_vanity_credits.json"
+    },
     "taxonomy": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/traits/trait_taxonomy.json"
     },

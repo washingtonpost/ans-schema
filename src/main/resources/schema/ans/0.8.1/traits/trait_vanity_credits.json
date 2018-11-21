@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/traits/trait_vanity_credits.json",
+  "title": "Vanity Credits trait",
+  "type": "object",
+  "description": "Similar to the credits trait, but to be used only when ANS is being directly rendered to readers natively. For legal and technical reasons, the `credits` trait is preferred when converting ANS into feeds or other distribution formats. However, when present, `vanity_credits` allows more sophisticated credits presentation to override the default without losing that original data.",
+  "properties": {
+    "by": {
+      "title": "By",
+      "description": "The primary author(s) of this document. For a story, is is the writer or reporter. For an image, it is the photographer.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "anyOf": [
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/utils/author.json"
+          },
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/utils/reference.json"
+          }
+        ]
+      }
+    },
+
+    "photos_by": {
+      "title": "Photos by",
+      "description": "The photographer(s) of supplementary images included in this document, if it is a story. Note that if this document is an image, the photographer(s) should appear in the 'by' slot.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "anyOf": [
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/utils/author.json"
+          },
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/utils/reference.json"
+          }
+        ]
+      }
+    }
+  },
+
+  "patternProperties": {
+    "^[a-zA-Z0-9_]*": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "anyOf": [
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/utils/author.json"
+          },
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/utils/reference.json"
+          }
+        ]
+      }
+    }
+  }
+}
