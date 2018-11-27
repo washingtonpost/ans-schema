@@ -44,7 +44,7 @@ We propose to add a new trait `robot_instructions` which contains keys as the ro
 
 # Concerns
 
-Do we need to be more restrict on the instruction strings using enum "noindex" and "nofollow"?
+Do we need to be more restrict on the instruction strings using enum noindex, nofollow, none, ...etc (listing all allowed strings)?
 
 # Implementation
 
