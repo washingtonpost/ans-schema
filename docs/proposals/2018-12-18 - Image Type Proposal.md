@@ -7,7 +7,7 @@ different fields be visible/required based on this type.
 
 # Proposal
 
-Add an `image_type` trait, represented as a machine-readable enumeration of the types: `["photograph", "infographic", "illustration", "thumbnail"]`
+Add an `image_type` trait, represented as a machine-readable enumeration of the types: `["photograph", "graphic", "illustration", "thumbnail"]`
 
 ## Photograph
 
@@ -50,7 +50,24 @@ The promotional image for a video that appears before video is played to draw au
 Depends on how large customer's video staff is. If large, then most infographics are owned by the customer. If owned by the customer, indefinitely. If not, third-party is usually not generous.
 
 
-# Example
+# Trait in ANS Schema
+
+```
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.8.1/traits/trait_image_type.json",
+  "title": "Image Type",
+  "description": "A more specific category for an image.",
+  "type": "string",
+  "category": {
+    "type": "string",
+    "enum": [ "photograph", "graphic", "illustration", "thumbnail" ],
+    "description": "The machine-readable enumeration of valid image types."
+  }
+}
+```
+
+# Example Image ANS
 
 ```
 {
