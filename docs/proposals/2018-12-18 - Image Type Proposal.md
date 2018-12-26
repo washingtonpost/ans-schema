@@ -37,7 +37,7 @@ A creative work made for expression.
 
 ### Rights and Usage
 
-Most infographics are owned by the customer. If owned by the customer, indefinitely. If not, third-party is usually not generous.
+Most illustrations are owned by the customer. If owned by the customer, indefinitely. If not, third-party is usually not generous.
 
 ## Thumbnail
 
@@ -47,7 +47,7 @@ The promotional image for a video that appears before video is played to draw au
 
 ### Rights and Usage
 
-Depends on how large customer's video staff is. If large, then most infographics are owned by the customer. If owned by the customer, indefinitely. If not, third-party is usually not generous.
+Depends on how large customer's video staff is. If large, then most thumbnails are owned by the customer. If owned by the customer, indefinitely. If not, third-party is usually not generous.
 
 
 # Trait in ANS Schema
