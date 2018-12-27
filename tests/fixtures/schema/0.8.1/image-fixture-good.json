@@ -45,6 +45,7 @@
       }
     ]
   },
+  "image_type": "photograph",
   "additional_properties": {
     "foo": "bar"
   }
