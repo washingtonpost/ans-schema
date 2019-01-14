@@ -10,13 +10,13 @@
       "description": "The content restriction code/level/flag associated with the ANS object"
     },
     "embargo": {
-      "description": "Embargo configuration to enforce publishing restrictions",
+      "description": "Embargo configuration to enforce publishing restrictions. Embargoed content must not go live.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "active": {
           "type": "boolean",
-          "description": "The boolean flag to indicate if the embargo is active or not"
+          "description": "The boolean flag to indicate if the embargo is active or not. If this field is false, ignore the embargo."
         },
         "end_time": {
           "type": "string",
