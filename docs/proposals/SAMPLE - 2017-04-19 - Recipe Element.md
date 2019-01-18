@@ -85,6 +85,12 @@ Each instructions should be a text element.  Renderers can decide whether to ren
 
 Identifying a semantic recipe on a page clearly is useful rendering information, as well as enabling search by ingredient.
 
+# Alternatives Considered
+
+## Why not simply embed a reference into a document and make `recipe` its own top-level content type?
+
+Recipes are rarely represented outside of the context of an entire article, and implementing an entire recipe app is beyond the scope of this work.
+
 # Implementation
 
 Gregory Engel of Platform Services will implement this and add to the schema if this proposal is accepted.
