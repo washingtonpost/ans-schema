@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.9.0/traits/trait_subtype.json",
+  "title": "Subtype or Template",
+  "type": "string",
+  "description": "A user-defined categorization method to supplement type. In Arc, this field is reserved for organization-defined purposes, such as selecting the PageBuilder template that should be used to render a document."
+}
