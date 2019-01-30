@@ -1,0 +1,6 @@
+{
+  "basic": {
+    "text": "This label is invalid because it has extra properties defined below.",
+    "a": "b"
+  }
+}

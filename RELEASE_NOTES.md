@@ -1,5 +1,16 @@
 # ANS Release Notes
 
+### 1.9.0 2019/1/28
+
+* Updates title and description of `subtype` trait
+* Adds new `embargo` object which contains active and end_time properties to the planning trait
+* Adds `alt_text` to images
+
+### 1.8.1 2018/11/23
+
+* Adds `raw_html` content element to `promo_items`
+* Adds a new type of credit called `vanity_credits`
+
 ### 1.8.0 2018/11/8
 
 * Added restricted content object

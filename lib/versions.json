@@ -116,6 +116,12 @@
   {
     "name": "0.8.1",
     "schema": true,
+    "upverter": true,
+    "downverter": false
+  },
+  {
+    "name": "0.9.0",
+    "schema": true,
     "upverter": false,
     "downverter": false
   }

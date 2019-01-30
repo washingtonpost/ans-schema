@@ -1,0 +1,11 @@
+{
+  "type": "story",
+  "version": "0.8.1",
+  "promo_items": {
+    "secondary": {
+      "type": "image",
+      "version": "0.8.1",
+      "url": "http://www.google.com/logo.png"
+    }
+  }
+}
