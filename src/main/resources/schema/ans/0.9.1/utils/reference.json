@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.9.1/utils/reference.json",
+  "title": "Representation of a normalized element",
+  "description": "This represents a reference to external content that should be denormalized",
+  "additionalProperties": false,
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [ "reference" ]
+    },
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.9.1/traits/trait_additional_properties.json"
+    },
+    "_id": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.9.1/traits/trait_id.json"
+    },
+    "subtype": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.9.1/traits/trait_subtype.json"
+    },
+    "channels": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.9.1/traits/trait_channel.json"
+    },
+    "alignment": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.9.1/traits/trait_alignment.json"
+    },
+
+    "referent": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "description": "The ANS type that the provider should return.",
+          "type": "string"
+        },
+        "service": {
+          "description": "The type of interaction the provider expects. E.g., 'oembed'",
+          "type": "string"
+        },
+        "id" : {
+          "description": "The id passed to the provider to retrieve an ANS document",
+          "type": "string"
+        },
+        "provider": {
+          "description": "A URL that can resolve the id into an ANS element",
+          "type": "string"
+        },
+        "website": {
+          "description": "The website which the referenced id belongs to. Currently supported only for sections.",
+          "type": "string"
+        },
+        "referent_properties": {
+          "additionalProperties": {},
+          "description": "An object for key-value pairs that should override the values of keys with the same name in the denormalized object",
+          "type": "object"
+        }
+      },
+      "dependencies": {
+        "website": {
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [ "section" ]
+            }
+          }
+        }
+      },
+      "required": [ "id" ]
+    }
+  },
+  "required": [ "type", "referent" ]
+}

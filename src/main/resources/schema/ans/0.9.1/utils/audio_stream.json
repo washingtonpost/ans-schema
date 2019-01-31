@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.9.1/utils/audio_stream.json",
+  "title": "A stream of audio.",
+  "description": "Configuration for a piece of audio content, over a stream.",
+  "type": "object",
+  "properties": {
+    "filesize": {
+      "title": "File size",
+      "description": "The size of the audio file in bytes.",
+      "type": "number"
+    },
+    "audio_codec": {
+      "title": "Audio Codec",
+      "description": "The codec used to encode the audio stream. (E.g. mpeg)",
+      "type": "string"
+    },
+    "stream_type": {
+      "title": "Audio Stream Type",
+      "description": "The type of audio (e.g. mp3).",
+      "type": "string"
+    },
+    "url": {
+      "title": "URL",
+      "description": "The file location of the stream.",
+      "type": "string",
+      "format": "uri"
+    },
+    "bitrate": {
+      "title": "Bitrate",
+      "description": "The bitrate of the audio in kilobytes per second.",
+      "type": "number"
+    }
+  },
+  "required": [ "url" ]
+}

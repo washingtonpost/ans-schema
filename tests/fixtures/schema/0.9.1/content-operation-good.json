@@ -1,0 +1,31 @@
+{
+  "id" : "default_false_XYZ123",
+  "type": "insert-story",
+  "body" : {
+    "_id" : "XYZ123",
+    "version": "0.9.1",
+    "type" : "story",
+    "content_elements": [
+      {
+        "type": "image",
+        "_id": "AB456"
+      }
+    ]
+  },
+  "date" : "2016-04-02T12:02:00+00:00",
+  "submit_date" : "2016-04-02T12:02:01+00:00",
+  "operation" : "insert-story",
+  "organization_id" : "washpost",
+  "type" : "content-operation",
+  "published": false,
+  "created": false,
+  "branch": "default",
+  "version" : "0.9.1",
+  "trigger": {
+    "type": "image",
+    "id": "AB456",
+    "referent_update": true,
+    "priority": "standard",
+    "app_name": "ellipsis"
+  }
+}
