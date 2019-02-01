@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.9.1/redirect.json",
+  "title": "A redirect object.",
+  "description": "A redirect to another story.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [ "redirect" ]
+    },
+    "_id": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.9.1/traits/trait_id.json"
+    },
+    "version": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.9.1/traits/trait_version.json"
+    },
+    "owner": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.9.1/traits/trait_owner.json"
+    },
+    "revision": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.9.1/traits/trait_revision.json"
+    },
+    "canonical_url": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.9.1/traits/trait_canonical_url.json"
+    },
+    "redirect_url": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.9.1/traits/trait_canonical_url.json"
+    }
+  },
+  "required": [ "type", "version", "canonical_url", "redirect_url" ]
+}

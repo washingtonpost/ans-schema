@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.9.1/traits/trait_alt_text.json",
+  "title": "Alt Text",
+  "description": "The direct ANS equivalent of the HTML 'alt' attribute. A description of the contents of an image for improved accessibility.",
+  "type": "string"
+}

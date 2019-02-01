@@ -1,0 +1,4 @@
+{
+    "keyword": "This should fail because it is missing the score field.",
+    "frequency": 5
+}

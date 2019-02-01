@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.9.1/traits/trait_canonical_website.json",
+  "title": "Canonical Website",
+  "description": "The _id of the website from which this document was originally authored. In conjunction with canonical_url, it can be used to determine the SEO canonical url or open graph url. In a multi-site context, this field may be different from the website field.",
+  "type": "string"
+}

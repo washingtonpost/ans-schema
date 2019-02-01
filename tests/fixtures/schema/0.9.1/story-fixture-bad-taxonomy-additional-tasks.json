@@ -1,0 +1,105 @@
+{
+  "_id": "unique ANS id",
+  "version": "0.9.1",
+  "type": "story",
+  "created_date": "2015-06-24T09:50:50.52Z",
+  "last_updated_date": "2015-06-24T09:50:50.52Z",
+  "channels": ["ios", "android"],
+  "language": "en",
+  "taxonomy": {
+    "associated_tasks": [
+      "5b9a7ffce4b0a981ee6a9897",
+      "this is not a valid task",
+      "5b92bb3ce08ea96cb2fa8ca4"
+    ],
+    "tags": [
+      {
+        "_id": "fred",
+        "text": "Fred",
+        "slug": "fred",
+        "description": "For all things Fred",
+        "additional_properties": {
+          "foo": "bar"
+        }
+      },
+      {
+        "_id": "writing",
+        "text": "Writing"
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Anesthesiologist",
+        "score": 0.77,
+        "frequency": 2
+      }
+    ],
+    "named_entities": [
+      {
+        "_id": "jpmorgan-chase",
+        "name": "JPMorgan Chase",
+        "type": "organization"
+      },
+      {
+        "_id": "barack-obama",
+        "name": "Barack Obama",
+        "type": "person"
+      },
+      {
+        "_id": "washington-dc",
+        "name": "Washington D.C.",
+        "type": "location"
+      }
+    ],
+    "primary_site": {
+      "_id": "site_primary",
+      "type": "site",
+      "version": "0.9.1",
+      "name": "News",
+      "description": "General News",
+      "path": "/news",
+      "additional_properties": {
+        "baz": "bag"
+      }
+    },
+    "sites": [
+      {
+        "_id": "site_1",
+        "type": "site",
+        "version": "0.9.1",
+        "primary": false,
+        "name": "Business",
+        "description": "For all your business needs",
+        "path": "/business",
+        "additional_properties": {
+          "foo": "bar"
+        }
+      },
+      {
+        "_id": "site_2",
+        "type": "site",
+        "version": "0.9.1",
+        "primary": true,
+        "name": "Manufacturing",
+        "description": "For all your manufacturing needs",
+        "path": "/business/manufacturing",
+        "parent_id": "site_1",
+        "additional_properties": {
+          "foo": "bar"
+        }
+      }
+    ],
+    "stock_symbols": [
+      "IBM",
+      "INTL",
+      "AMZN",
+      "MRSFT"
+    ],
+    "additional_properties": {
+      "more": "info"
+    }
+  },
+  "additional_properties": {
+    "foo": "bar"
+  }
+}

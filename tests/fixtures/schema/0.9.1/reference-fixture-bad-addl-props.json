@@ -1,0 +1,11 @@
+{
+  "type": "reference",
+  "foo": "bar",
+  "referent": {
+    "type": "author",
+    "version": "0.9.1",
+    "service": "http://www.credits.com/api",
+    "provider": "http://www.credits.com/api",
+    "id": "00001"
+  }
+}
