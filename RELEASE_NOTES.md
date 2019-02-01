@@ -1,5 +1,9 @@
 # ANS Release Notes
 
+### 1.9.1 2019/2/1
+
+* Adds new ANS version to validator logic
+
 ### 1.9.0 2019/1/28
 
 * Updates title and description of `subtype` trait
