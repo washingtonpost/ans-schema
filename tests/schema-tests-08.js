@@ -587,14 +587,6 @@ describe("Schema: ", function() {
           it("should not validate a story with bad interstitial link", function() {
               validate(version, '/story.json', 'story-fixture-bad-interstitial-link', false);
           });
-
-          it("should validate a story with valid embargo", function() {
-            validateIfFixtureExists(version, '/story.json', 'story-fixture-good-embargo', true);
-          });
-
-          it("should not validate a story with bad embargo", function() {
-            validateIfFixtureExists(version, '/story.json', 'story-fixture-bad-embargo', false);
-          });
         });
 
         describe("Image", function() {
