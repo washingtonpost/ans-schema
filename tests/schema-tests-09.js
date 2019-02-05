@@ -17,7 +17,7 @@ var ajv = new Ajv({allErrors:true});
 
 var test_versions = _.map(
   _.filter(version.history, function(item) {
-    return (item.schema == true) && (item.name.indexOf("0.8") > -1);
+    return (item.schema == true) && (item.name.indexOf("0.9") > -1);
   }),
   function(item) {
     return item.name;
@@ -587,6 +587,14 @@ describe("Schema: ", function() {
           it("should not validate a story with bad interstitial link", function() {
               validate(version, '/story.json', 'story-fixture-bad-interstitial-link', false);
           });
+          
+          it("should validate a story with valid embargo", function() {
+            validateIfFixtureExists(version, '/story.json', 'story-fixture-good-embargo', true);
+          });
+
+           it("should not validate a story with bad embargo", function() {
+            validateIfFixtureExists(version, '/story.json', 'story-fixture-bad-embargo', false);
+          });
         });
 
         describe("Image", function() {
@@ -860,7 +868,7 @@ describe("Schema: ", function() {
           });
         });
 
-        describe("Collection (0.8.0+)", function() {
+        describe("Collection (0.9.0+)", function() {
           it("should validate a well-formatted collection", function() {
             validate(version, '/collection.json', 'collection-fixture-good');
           });
