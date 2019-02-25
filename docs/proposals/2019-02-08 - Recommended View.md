@@ -8,15 +8,15 @@ Two examples of the latter (see below for more details):
   - Static graphics pages where the ANS version is the fallback
   - A story that uses AR in `raw_html` that would be better served on a device
 
-Applications can make their best guess as to whether there is enough information within the ANS document, but sometimes that information is not available within the ANS format, and it is useful for a user of the publishing system to indicate the optimal or preferred rendering application. Other rendering applications could adjust either by falling back to a browser in the case of `www` preferred, or a banner directing users to experience the article on a different platform.
+Applications can make their best guess as to whether there is enough information within the ANS document, but sometimes that information is not available within the ANS format, and it is useful for a user of the publishing system to indicate the optimal or preferred rendering application. Other rendering applications could adjust either by falling back to a browser in the case of `website` preferred, or a banner directing users to experience the article on a different platform.
 
 # Proposal
 
-Add a `recommended_view` (open to other names) trait to describe the optimal rendering perspective of the story element.
+Add a `preferred_method` (open to other names) field to a new `rendering_guides` trait to describe the optimal rendering method of the story.
 
-## Recommended View
+## Preferred Rendering Method
 
-Each story has an array of strings that represent the the ideal rendering for the content. Blank means there is no preference. If the rendering application is aware of these other options, it can decide to either fallback to one of them, render messaging to the user, or render the story as normal.
+Each story has an array of strings that represent the optimal rendering for the content. Blank means there is no preference. If the rendering application is aware of these other options, it can decide to either use one of them, render messaging to the user, or render the story as normal.
 
 NOTE: Example values are just a suggestion and open to other names. The idea I want to convey here is that they are not naming specific applications, but rather specific methods of rendering.
 
@@ -29,7 +29,9 @@ Graphics team has created a static article with lots of bespoke animations and u
   "type": "story",
   "version": "0.5.9",
   //...
-  "recommended_view": ["www"]
+  "rendering_guides": {
+    preferred_method: ["website"]
+  }
 }
 ```
 
@@ -44,7 +46,9 @@ The team developing sponsored content has made a AR experience that is only supp
   "type": "story",
   "version": "0.5.9",
   //...
-  "recommended_view": ["native-app"]
+  "rendering_guides": {
+    preferred_method: ["native"]
+  }
 }
 ```
 
