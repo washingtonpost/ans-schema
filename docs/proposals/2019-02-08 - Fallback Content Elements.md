@@ -6,24 +6,22 @@ The content element `raw_html` is often used to inject Javascript into an ANS do
 
 # Proposal
 
-Add an `alternatives` trait to the `raw_html` content element, that contains one or more arrays of content elements that can notionally replace the `raw_html` block. The `basic` one is the only one required, and cannot contain a `raw_html` content element. `upvert`ing should fill this with a stock `text` element that has a stock `This content is not available on this platform` message (or similar).
+Add a required `alternative` trait to the `raw_html` content element, that contains an array of one content element (allows for multiple later) that can notionally replace the `raw_html` block. The content in the array can only be of type `text`, `image`, `gallery` or `video`. When `upvert`ing this trait should be filled this with a `text` element that has a stock `This content is not available on this platform` message (or similar).
 
 ## Alternatives
 
-Each `raw_html` element should have an `alternatives` and at least a `basic` array with non-`raw_html` content. An example of the default behaviour:
+Each `raw_html` element should have an `alternative` and at least a `basic` array with non-`raw_html` content. An example of the default behaviour:
 
 ```
 {
   "type": "raw_html",
   "content": "<script src=\"https://www.washingtonpost.com/stat/cool.js\"></script>",
-  "alternatives": {
-    "basic": [
-      {
-        "type": "text",
-        "content": "<b>This content is unavailable on this platform</b>"
-      }
-    ]
-  }
+  "alternative": [
+    {
+      "type": "text",
+      "content": "<b>This content is unavailable on this platform</b>"
+    }
+  ]
 }
 ```
 
@@ -35,18 +33,16 @@ The graphics team has created a JS rendered graphic that scales to browser viewp
 {
   "type": "raw_html",
   "content": "<div class=\"graphics\"><!-- Graphics HTML and JS --></div>",
-  "alternatives": {
-    "basic": [
-      {
-        "type": "image",
-        "url": "https://www.coolpublishing.com/graphics/alt-cool-1.png"
-      }
-    ]
-  }
+  "alternative": [
+    {
+      "type": "image",
+      "url": "https://www.coolpublishing.com/graphics/alt-cool-1.png"
+    }
+  ]
 }
 ```
 
-# Example 2
+# Example 2 (future implementation of multiple elements)
 
 The social team is trying to build awareness of the Twitch channel so they are embedding the Twitch stream where normally we would use the Goldfish live video. They provide the normal video as an alternative as well as a note to encourage users to open the twitch channel.
 
@@ -54,18 +50,16 @@ The social team is trying to build awareness of the Twitch channel so they are e
 {
   "type": "raw_html",
   "content": "<iframe src=\"https://player.twitch.tv/?channel=coolpublishing\" frameborder=\"0\" allowfullscreen=\"true\" scrolling=\"no\" height=\"378\" width=\"620\"></iframe><a href=\"https://www.twitch.tv/coolpublishing?tt_content=text_link&tt_medium=live_embed\" style=\"padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;\">Watch live video from coolpublishing on www.twitch.tv</a>",
-  "alternatives": {
-    "basic": [
-      {
-        "type": "video",
-        // PostTV, etc ...
-      },
-      {
-        "type": "text",
-        "content": "<b>We are also streaming live on <a href=\"https://www.twitch.tv/coolpublishing\">Twitch</a></b>"
-      }
-    ],
-  }
+  "alternative": [
+    {
+      "type": "video",
+      // PostTV, etc ...
+    },
+    {
+      "type": "text",
+      "content": "<b>We are also streaming live on <a href=\"https://www.twitch.tv/coolpublishing\">Twitch</a></b>"
+    }
+  ]
 }
 ```
 
@@ -78,6 +72,8 @@ Yes, honestly, in my opinion that is the "right" way to handle `raw_html`. The `
 Realistically though, given momentum and the frequent use of raw_html now, I am not sure that this answer would be tenable, so the proposal is a version of this that is more backwards compatible.
 
 ## Does there need to be multiple alternatives by name? Couldn't it just be one list?
+
+_EDIT: Changed to this suggestion based on feedback_
 
 Yes, that would definitely solve the issue we are having, but my thinking was that the naming would be a signal as to the capabilities desired by these alternatives. In the proposal `basic` here suggests that you only need to be able to support ANS elements to render this alternative. In the example in the previous question `browser` signifies that it should be rendered in a browser-like environment.
 
