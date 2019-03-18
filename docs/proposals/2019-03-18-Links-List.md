@@ -68,6 +68,11 @@ A links_list may have:
 }
 ```
 
+## Implementation
+
+Gregory Engel in coordination with the Ellipsis team will implement the schema for this proposal.
+
+
 ## Questions and Concerns
 
 ### Can't you already essentially do this by using an embedded `story`, a reference to a `story`, or an `element_group`?
@@ -102,6 +107,6 @@ The implicit tradeoff here -- that updates to headlines and urls of linked stori
 
 Also, as a practical matter, story references (as currently implemented) make payload sizes very large.
 
-## Doesn't `links_list` sound a lot like `linked_list`?
+### Doesn't `links_list` sound a lot like `linked_list`?
 
 I am open to suggestions for better names!
