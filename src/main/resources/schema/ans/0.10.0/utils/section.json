@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/utils/section.json",
+  "title": "Section",
+  "description": "A hierarchical section in a taxonomy. In the Arc ecosystem, these are stored in the arc-site-service.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "enum": [ "section" ]
+    },
+    "_id" : {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/traits/trait_id.json"
+    },
+    "_website": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/traits/trait_website.json"
+    },
+    "version": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/traits/trait_version.json"
+    },
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/traits/trait_additional_properties.json"
+    },
+    "name": {
+      "description": "The name of this site",
+      "type": "string"
+    },
+    "description": {
+      "description": "A short description or tagline about this site",
+      "type": "string"
+    },
+    "path": {
+      "description": "The url path to this site",
+      "type": "string"
+    },
+    "parent_id": {
+      "description": "The id of this section's parent section in the default hierarchy, if any.",
+      "type": "string"
+    },
+    "parent": {
+      "description": "The id of this section's parent section in various commonly-used hierarchies, where available.",
+      "type": "object",
+      "properties": {
+        "default": {
+          "type": "string"
+        }
+      }
+    },
+
+    "primary": {
+      "description": "Is this the primary site?",
+      "type": "boolean"
+    }
+  },
+  "required": [ "type", "version", "name" ]
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/traits/trait_image_type.json",
+  "title": "Image Type",
+  "description": "A more specific category for an image.",
+  "type": "string",
+  "category": {
+    "type": "string",
+    "enum": [ "photograph", "graphic", "illustration", "thumbnail" ],
+    "description": "The machine-readable enumeration of valid image types."
+  }
+}

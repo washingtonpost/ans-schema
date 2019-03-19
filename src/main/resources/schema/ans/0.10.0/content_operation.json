@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/content_operation.json",
+  "description": "An operation on a denormalized story",
+  "type": "object",
+  "allOf": [{
+    "properties": {
+      "type": {
+        "description": "Identifies this as an ANS operation",
+        "type": "string",
+        "enum": [ "content-operation" ]
+      },
+      "operation": {
+        "type": "string",
+        "description": "The identifier of the operation being performed",
+        "enum": [ "insert-story", "delete-story", "insert-gallery", "delete-gallery", "insert-video", "delete-video", "insert-redirect", "delete-redirect" ]
+      },
+      "date": {
+        "description": "When the operation should be considered performed",
+        "type": "string",
+        "format": "date-time"
+      },
+      "id": {
+        "type": "string",
+        "description": "The id of the item being operated"
+      },
+      "organization_id": {
+        "type": "string",
+        "description": "The id of the organization"
+      },
+      "branch": {
+        "type": "string",
+        "description": "The name of the branch within Story API that this operation occurs on, if any"
+      },
+      "published": {
+        "type": "boolean",
+        "description": "Identifies this item as published or not"
+      },
+      "version": {
+        "type": "string",
+        "description": "The version of ANS this item is written in"
+      },
+      "body": {
+        "description": "The object being inserted/updated/deleted",
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/content.json"
+      },
+      "created": {
+        "type": "boolean",
+        "description": "Identifies this item as created or updated."
+      },
+      "trigger": {
+        "title": "Operation Trigger",
+        "description": "Metadata about the primary source update that triggered this operation. These fields can be used by downstream consumers as an efficient way of determining the relevance of an operation.",
+        "type": "object",
+        "additionalProperties": false,
+
+        "properties": {
+          "type": {
+            "title": "Trigger Type",
+            "description": "The type of update that was consumed in order to produce this update. If this operation is the result of a referent update, than this type may or may not match the type of document in the body. For example, suppose story A contains image B and story C. If B is updated, then an operation may be produced with source 'image' and a body of story A (with updated image metadata.) If C is updated, then an operation may be produced with source 'story' and the body of story A.",
+            "type": "string",
+            "enum": [ "story", "gallery", "image", "video", "url", "site", "author", "clavis" ]
+          },
+          "id": {
+            "title": "Trigger ID",
+            "description": "The id of the document whose update was consumed in order to produce this update. If this operation is the result of a referent update, than this id will not match the id of the document in the body (except the case where a document references itself.)",
+            "type": "string"
+          },
+          "referent_update": {
+            "title": "Referent Update",
+            "description": "If true, this update was triggered by an update to a referenced element in the document rather than the document itself.",
+            "type": "boolean"
+          },
+
+          "priority": {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/traits/trait_priority.json"
+          },
+          "app_name": {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/traits/trait_app_name.json"
+          }
+
+        }
+      }
+
+    },
+    "required": [ "type", "operation", "id", "organization_id" ]
+  }]
+}

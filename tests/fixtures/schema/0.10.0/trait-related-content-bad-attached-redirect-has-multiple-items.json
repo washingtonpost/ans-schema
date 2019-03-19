@@ -1,0 +1,30 @@
+{
+  "basic": [
+    {
+      "type": "story",
+      "version": "0.10.0"
+    },
+    {
+      "type": "reference",
+      "referent": {
+        "type": "story",
+        "id": "ABCDEFG",
+        "provider": ""
+      }
+    }
+  ],
+  "redirect": [
+    {
+      "type": "redirect",
+      "version": "0.10.0",
+      "canonical_url": "/here",
+      "redirect_url": "/there"
+    },
+    {
+      "type": "redirect",
+      "version": "0.10.0",
+      "canonical_url": "/here",
+      "redirect_url": "/there2"
+    }
+  ]
+}
