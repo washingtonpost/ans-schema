@@ -108,6 +108,13 @@
       "content": "The phrase “ ‘tiny house’ put a name to the movement that was already there,” says Thom Stanton, a tiny-home builder in West Virginia."
     },
     {
+      "_id": "10000035",
+      "type": "divider",
+      "additional_properties": {
+        "foo": "bar"
+      }
+    },
+    {
       "_id": "1000004",
       "type": "text",
       "content": "Stanton says two groups are fueling the movement: millennials, because their college loans have put traditional houses out of reach, and retiring baby boomers looking for affordable homes with minimal maintenance. Meanwhile, traditional homeowners are contributing to the trend by building tiny houses on their properties to shelter guests, family members or caregivers, or putting them on vacation land."

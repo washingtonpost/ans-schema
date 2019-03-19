@@ -1038,8 +1038,11 @@ describe("Schema: ", function() {
             });
           });
 
-
-
+          describe("Divider", function() {
+            it("should not validate a divider with content", function() {
+              validate(version, type_prefix + '/divider.json', 'divider-fixture-bad', false);
+            });
+          });
 
 
           describe("...all together now", function() {
