@@ -7,12 +7,12 @@ Existing solutions are either too generic (`element_group`, `story`) to interpre
 
 ## Proposal
 
-Add a new content element `links_list` that contains a narrowly-targeted set of functionality around inline recirculation boxes. Applicable to stories only.
+Add a new content element `link_list` that contains a narrowly-targeted set of functionality around inline recirculation boxes. Applicable to stories only.
 
 A links_list may have:
 * A plaintext title
 * A subtype (selected from an enumerated-list configured on a per-organization basis)
-* A sequence of up to 10 and at least one `links_list_item`s, each of which has:
+* A sequence of up to 10 and at least one `link_list_item`s, each of which has:
     * A subtype
     * A plaintext title (required)
     * A link (required)
@@ -33,14 +33,14 @@ A links_list may have:
 
   "content_elements": [
     {
-      "type": "links_list",
+      "type": "link_list",
 
       "subtype": "sidebar",
       "title": "More 'Biting' Stories",
 
       "items": [
         {
-          "type": "links_list_item",
+          "type": "link_list_item",
           "subtype": "blue-label",
 
           "title": "Lorem ipsum",
@@ -59,6 +59,7 @@ A links_list may have:
           }
         },
         {
+          "type": "link_list_item",
           "title": "Reddit",
           "link": "http://www.reddit.com"
         }
@@ -107,6 +108,6 @@ The implicit tradeoff here -- that updates to headlines and urls of linked stori
 
 Also, as a practical matter, story references (as currently implemented) make payload sizes very large.
 
-### Doesn't `links_list` sound a lot like `linked_list`?
+### Doesn't `link_list` sound a lot like `linked_list`?
 
 I am open to suggestions for better names!
