@@ -15,7 +15,7 @@ A links_list may have:
 * A sequence of up to 10 and at least one `link_list_item`s, each of which has:
     * A subtype
     * A plaintext title (required)
-    * A link (required)
+    * A url (required)
     * A description (ANS `text` element)
     * An image (ANS `image` or `reference` to an image)
 
@@ -44,7 +44,7 @@ A links_list may have:
           "subtype": "blue-label",
 
           "title": "Lorem ipsum",
-          "link": "http://www.google.com",
+          "url": "http://www.google.com",
           "description": {
             "type": "text",
             "content": "<b>Foo</b> bar <em>baz</em>"
@@ -61,7 +61,7 @@ A links_list may have:
         {
           "type": "link_list_item",
           "title": "Reddit",
-          "link": "http://www.reddit.com"
+          "url": "http://www.reddit.com"
         }
       ]
     }
@@ -104,7 +104,7 @@ Images need to have content restrictions applied, so it is important to use ANS 
 
 Users may also want to link to stories or pages not within Arc. Users may also want to re-title links to other stories within Arc. These are expected use cases.
 
-The implicit tradeoff here -- that updates to headlines and urls of linked stories will not be automatically reflected in the body of stories that link to them via a `links_list` -- is, IMHO, acceptable.
+The implicit tradeoff here -- that updates to headlines and urls of linked stories will not be automatically reflected in the body of stories that link to them via a `link_list` -- is, IMHO, acceptable.
 
 Also, as a practical matter, story references (as currently implemented) make payload sizes very large.
 
