@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/traits/trait_additional_properties.json",
+  "title": "Has additional properties",
+  "description": "A grab-bag object for non-validatable data.",
+  "type": "object",
+  "additionalProperties": {}
+}

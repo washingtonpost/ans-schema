@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/utils/named_entity.json",
+    "title": "Named Entity",
+    "description": "Models a named entity (i.e. name of a person, place, or organization) used in a piece of content.",
+    "type": "object",
+    "required": ["_id", "name", "type"],
+    "additionalProperties": false,
+    "properties": {
+        "_id": {
+            "type": "string",
+            "description": "A unique identifier for the concept of the named entity."
+        },
+        "name": {
+            "type": "string",
+            "description": "The actual string of text that was identified as a named entity."
+        },
+        "type": {
+            "type": "string",
+            "description": "A description of what the named entity is. E.g. 'organization', 'person', or 'location'."
+        },
+        "score": {
+            "type": "number",
+            "decription": "An optional relevancy for this named entitiy."
+        }
+    }
+}

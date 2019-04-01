@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/traits/trait_comments.json",
+  "title": "Comments",
+  "description": "Comment configuration data",
+  "type": "object",
+  "additionalProperties": {},
+  "properties": {
+    "comments_period": {
+      "type": "integer",
+      "description": "How long (in days) after publish date until comments are closed."
+    },
+    "allow_comments": {
+      "type": "boolean",
+      "description": "If false, commenting is disabled on this content."
+    },
+    "display_comments": {
+      "type": "boolean",
+      "description": "If false, do not render comments on this content."
+    },
+    "moderation_required": {
+      "type": "boolean",
+      "description": "If true, comments must be moderator-approved before being displayed."
+    },
+
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/traits/trait_additional_properties.json"
+    }
+
+  }
+}

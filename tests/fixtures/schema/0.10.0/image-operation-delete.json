@@ -1,0 +1,10 @@
+{
+  "_id" : "XYZ123",
+  "date" : "2016-04-02T12:02:00+00:00",
+  "operation" : "delete",
+  "organization_id" : "PW5TIZPZINHXBPNQTAJRSIS123",
+  "type" : "image-operation",
+  "version" : "0.10.0",
+  "priority": "standard",
+  "app_name": "anglerfish"
+}
