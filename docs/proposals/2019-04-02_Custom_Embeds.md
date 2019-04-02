@@ -20,7 +20,7 @@ Organizations can integrate a third-party embed service to allow content produce
 
 # Example
 
-A story may have a `cutom_embed` ANS element. The element will contain an embed object with an id and configuration fields, perhaps like so:
+A story may have a `custom_embed` ANS element. The element will contain an embed object with an id and configuration fields, perhaps like so:
 
 ```
 {
@@ -40,20 +40,6 @@ A story may have a `cutom_embed` ANS element. The element will contain an embed 
 }
 ```
 > Please note: `embed` is a completely opaque data structure to the ARC. The only requirement is it should be a valid JSON and have no `type`, `version` or `referent` fields on any depth level.
-
-# Concerns
-
-- No content restrictions, rights management on edit metadata
-  - Publishing/unpublishing is controlled by them. Can’t use EL features to auto publish images with story.
-- Customer has to provide form validation and required field configuration. Will all be within the iframe.
-- Can’t stop bad data ingestion.
-- Arc has limited validation on subtype and ID.
-- Searchable or queryable on subtype and ID only.
-- Custom embeds will not be queryable in Site Search or Content API, beyond subtype and ID.
-  - E.g., the title of an embedded external video will not be factored into site search relevancy scores unless the title is included in the surrounding text.
-- They will not be available for denormalization in the Content API.
-- They will not have referent updates.  If the embed provider URL is changed in the Ellipsis settings screen, that change will not be reflected on older stories unless they are re-saved.
-- If the embed-provider service is down, Ellipsis will try to show an error message that service is down.
 
 # More information 
 https://paper.dropbox.com/doc/Proposal-for-Custom-Embeds-for-Third-Party-Content--AaaRXVa4dvfjXydDlqv4FZn8Ag-C5Z2Ahqw14nZV3MnZi9Be
