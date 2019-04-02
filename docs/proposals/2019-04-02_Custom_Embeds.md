@@ -25,7 +25,7 @@ A story may have a `cutom_embed` ANS element. The element will contain an embed 
 ```
 {
   "_id": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-  type: "custom_embed",
+  "type": "custom_embed",
   "subtype": "my_custom_type_1",
   "alignment": "left",
   "channels": [ "web" ],
@@ -54,10 +54,6 @@ A story may have a `cutom_embed` ANS element. The element will contain an embed 
 - They will not be available for denormalization in the Content API.
 - They will not have referent updates.  If the embed provider URL is changed in the Ellipsis settings screen, that change will not be reflected on older stories unless they are re-saved.
 - If the embed-provider service is down, Ellipsis will try to show an error message that service is down.
-
-## Isn't this somewhat duplicative with the existing `list` and `text` elements?
-
-Identifying a semantic recipe on a page clearly is useful rendering information, as well as enabling search by ingredient.
 
 # More information 
 https://paper.dropbox.com/doc/Proposal-for-Custom-Embeds-for-Third-Party-Content--AaaRXVa4dvfjXydDlqv4FZn8Ag-C5Z2Ahqw14nZV3MnZi9Be
