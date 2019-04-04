@@ -25,13 +25,50 @@
     },
 
     "url": {
-      "description": "The interstitial link url.",
+      "title": "Link URL",
+      "description": "The interstitial link url. This is where the user should be taken if they follow this link.",
       "type": "string"
     },
     "content": {
-      "description": "The interstitial link text.",
+      "title": "Link Title",
+      "description": "The interstitial link title text. This text should be considered part of the link.",
       "type": "string"
+    },
+    "description": {
+      "title": "Link Description",
+      "description": "Additional text about the link. May or may not be considered part of the link, depending on implementation.",
+
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/story_elements/text.json"
+    },
+    "image": {
+      "title": "Link Image",
+      "description": "An optional image. This should be considered part of the link.",
+
+      "oneOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/image.json"
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/utils/reference.json"
+            },
+            {
+              "properties": {
+                "referent": {
+                  "properties": {
+                    "type": {
+                      "enum": [ "image" ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
     }
   },
+
   "required": ["type", "url", "content"]
 }
