@@ -1038,9 +1038,23 @@ describe("Schema: ", function() {
             });
           });
 
-          describe("Divider", function() {
+          describe("Divider (0.10.0+)", function() {
             it("should not validate a divider with content", function() {
               validate(version, type_prefix + '/divider.json', 'divider-fixture-bad', false);
+            });
+          });
+
+          describe("Custom Embed (0.10.0+)", function() {
+            it("should validate a custom embed", function() {
+              validate(version, type_prefix + '/custom_embed.json', 'custom_embed-fixture-good')
+            });
+
+            it("should not validate a custom embed with invalid config names", function() {
+              validate(version, type_prefix + '/custom_embed.json', 'custom_embed-fixture-bad-1', false);
+            });
+
+            it("should not validate a custom embed without url and id", function() {
+              validate(version, type_prefix + '/custom_embed.json', 'custom_embed-fixture-bad-2', false);
             });
           });
 
