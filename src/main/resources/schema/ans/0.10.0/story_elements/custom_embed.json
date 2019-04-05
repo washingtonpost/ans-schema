@@ -57,7 +57,7 @@
 
           "additionalProperties": false,
           "patternProperties": {
-            "^(?!(referent|type)$)[a-zA-Z0-9_]*$": {}
+            "^(?!(referent|type|version)$)[a-zA-Z0-9_]*$": {}
           }
         }
       },
