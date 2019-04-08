@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.1/traits/trait_status.json",
+  "title": "Status",
+  "description": "Optional field to story story workflow related status (e.g. published/embargoed/etc)",
+  "type": "string"
+}

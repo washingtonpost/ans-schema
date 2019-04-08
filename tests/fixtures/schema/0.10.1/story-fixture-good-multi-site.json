@@ -1,0 +1,89 @@
+{
+  "type": "story",
+  "version": "0.10.1",
+
+  "canonical_website": "latimes",
+  "canonical_url": "/sports/lakers/yay-lakers-win",
+
+  "website": "tribune",
+  "website_url": "/sports/bulls/boo-bulls-lose",
+
+  "websites": {
+    "latimes": {
+      "website_section": {
+        "type": "section",
+        "version": "0.10.1",
+        "_id": "/sports/lakers",
+        "_website": "latimes",
+        "name": "Lakers"
+      }
+    },
+
+    "tribune": {
+      "website_section": {
+        "type": "reference",
+        "referent": {
+          "type": "section",
+          "id": "/sports/bulls",
+          "website": "tribune"
+        }
+      }
+    },
+
+    "balsun": {
+      "website_url": "/sports/lakers-defeat-bulls"
+    }
+  },
+
+
+  "headlines": {
+    "basic": "Lakers Defeat Bulls"
+  },
+
+
+  "content_elements": [
+    {
+      "type": "text",
+      "content": "The Lakers defeated the Bulls!"
+    }
+  ],
+
+
+  "taxonomy": {
+    "primary_section": {
+      "type": "reference",
+      "referent": {
+        "type": "section",
+        "id": "/sports",
+        "website": "latimes"
+      }
+    },
+    "sections": [
+      {
+        "type": "section",
+        "version": "0.10.1",
+        "_id": "/sports/bulls",
+        "_website": "tribune",
+        "name": "Bulls",
+        "parent_id": "/sports",
+        "parent": {
+          "default": "/sports"
+        }
+      },
+      {
+        "type": "section",
+        "version": "0.10.1",
+        "_id": "/sports/lakers",
+        "_website": "latimes",
+        "name": "Lakers"
+      },
+      {
+        "type": "section",
+        "version": "0.10.1",
+        "_id": "/sports",
+        "_website": "balsun",
+        "name": "Sports"
+      }
+    ]
+  }
+}
