@@ -1016,10 +1016,21 @@ describe("Schema: ", function() {
           describe("Interstitial Link", function() {
             it("should validate a interstitial link", function () {
               validateIfFixtureExists(version, type_prefix + '/interstitial_link.json', 'interstitial-link-fixture-good');
+              validateIfFixtureExists(version, type_prefix + '/interstitial_link.json', 'interstitial-link-fixture-good-2');
             });
 
             it("should not validate a non-interstitial link", function () {
               validateIfFixtureExists(version, type_prefix + '/interstitial_link.json', 'interstitial-link-fixture-bad', false);
+            });
+          });
+
+          describe("Link List (0.10.0+)", function() {
+            it("should validate a link list", function () {
+              validateIfFixtureExists(version, type_prefix + '/link_list.json', 'link-list-fixture-good');
+            });
+
+            it("should not validate a non-link-list", function () {
+              validateIfFixtureExists(version, type_prefix + '/link_list.json', 'link-list-fixture-bad', false);
             });
           });
 

@@ -120,6 +120,45 @@
       "content": "Stanton says two groups are fueling the movement: millennials, because their college loans have put traditional houses out of reach, and retiring baby boomers looking for affordable homes with minimal maintenance. Meanwhile, traditional homeowners are contributing to the trend by building tiny houses on their properties to shelter guests, family members or caregivers, or putting them on vacation land."
     },
     {
+      "_id": "ABC",
+      "type": "link_list",
+      "subtype": "more-information",
+      "alignment": "right",
+
+      "title": "Learn More",
+      "items": [
+        {
+          "_id": "DEF",
+          "type": "interstitial_link",
+          "subtype": "highlight",
+          "url": "https://www.washingtonpost.com/politics/can-clinton-and-trump-ride-to-big-victories-in-next-weeks-acela-primary/2016/04/20/ea6454fc-064e-11e6-bdcb-0133da18418d_story.html?hpid=hp_rhp-top-table-main_5states-1025a%3Ahomepage%2Fstory",
+          "content": "Can Clinton and Trump ride to big victories in next weeks Acela primary?",
+          "description": {
+            "type": "text",
+            "content": "<em>Emboldened</em> by dominant victories in <strong>New York</strong>, Hillary Clinton and Donald Trump plunged swiftly Wednesday into the next batch of primaries in five states along the Northeast Corridor, where they hope to bury or break their challengers for the Democratic and Republican presidential nominations."
+          },
+          "image": {
+            "type": "reference",
+            "referent": {
+              "type": "image",
+              "id": "AAAAAFGHIJKLMNOPQRSTUVWXYZ",
+              "provider": ""
+            }
+          }
+        },
+
+        {
+          "_id": "GHI",
+          "type": "interstitial_link",
+          "subtype": "skinny",
+
+          "url": "https://www.washingtonpost.com",
+          "content": "See more from The Washington Post"
+        }
+      ]
+    },
+
+    {
       "_id": "1000005",
       "type": "image",
       "version": "0.10.0",
