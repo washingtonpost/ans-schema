@@ -46,7 +46,7 @@
           "title": "Embed Provider URL",
           "description": "Provider URL for this embed item. When concatenated with Embed ID, should produce a URL that returns json metadata about the embedded content.",
           "type": "string",
-          "maxLength": 128,
+          "maxLength": 512,
           "minLength": 1
         },
 
