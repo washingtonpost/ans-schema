@@ -2,42 +2,38 @@
 
 # Problem
 
-Users want the ability to have a tabel of contents (TOC) in order to jump to different locations within an article.
+Users want the ability to have a jump links within an article.
 
 # Proposal
 
-We propose adding a new trait, `anchor` to content elements, which will contain the properties of `id` and `label`.
- * `id` will accept a string value which will be used to generate a hash seo friendly id.
- * `label` will accept a string value which will be used as the anchor's display text
+We propose adding two new content types, `Table of Contents` and `Anchor Divider`.
+- Anchor Link List / Table of Contents
+- Anchor Divider
 
-# Trait in ANS Schema
+# Anchor Divider
+A new content type used to create a hidden horizontal rule which will be utilized to auto generate a Link List/TOC. This hidden horizontal rule will have two properties, `text` and `id`.
+- `text` : inner text that will be used to form the hyperlink link
+- `id`: An id used to reference common links so that it may be treated as a "type" for filterning. This is seperated from the ANS `_id` which we will use as the id to target
 
-# Examples
+
+# Table of Contents
+A new content type which will auto generate a list of links based on Anchor Dividers within an article.
+
+When using the `Table of Contents` content type within a story, a user can place the TOC any where within the article. The TOC will auto generate a list of links based on the `Anchor Divider`'s within it, starting from top to bottom. Each link will be formed based on the `Anchor Divider`'s properties.
 ```
-content_elements: [{
-  anchor: {
-    id: "things-to-do-in-dc",
-    label: "Things to do in DC"
-  },
-  additional_properties: {}
-  alignment: "left"
-  channels: ["basic", "print"]
-  content: "bla bla bla"
-  level: 1
-  type: "header",
-  _id: "KKAE5ETLOVBLXCU7ZI4ELLVUJM"
-}]
+<a href="[_id]" name="[id]">[text]</a>
 ```
 
 # Concerns
 
-## How will this be used to generate a table of contents ?
+## How will this be used to generate a table of contents or list of anchor links?
+There will be two possible solutions for creating a TOC or a list of anchor links.
+- Use the `Table of Contents` content type within `Ellipsis`
+- Create a custom template within `PageBuilder`
 
-There would be two features — one for the table of contents, and another for the article body. And one feature would loop through the content elements, and output a “tabel of contents” and in the article body, we would loop through the same content elements, outputing the `#anchor-tags` appropriately.
+When using a custom template within `PageBuilder`, the list of anchors can then be re-ordered and/or filtered with using the `id` trait of the `Anchor Divider`.
 
 # Alternatives Considered
 
-
-# Implementation
 
 
