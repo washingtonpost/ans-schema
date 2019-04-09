@@ -6,7 +6,7 @@ The content element `raw_html` is often used to inject Javascript into an ANS do
 
 # Proposal
 
-Add a required `alternative` trait to the `raw_html` content element, that contains an array of one content element (allows for multiple later) that can notionally replace the `raw_html` block. The content in the array can only be of type `text`, `image`, `gallery` or `video`. When `upvert`ing this trait should be filled this with a `text` element that has a stock `This content is not available on this platform` message (or similar).
+Add an `alternative` trait to the `raw_html` content element, that contains an array of one content elements that can notionally replace the `raw_html` block. The content in the array can only be of type `text`, `image`, `gallery` or `video`. This trait is required unless the `rendering_guides.preferred_method` is set to `website` only. In all other cases, when `upvert`ing this trait should be filled this with a `text` element that has a stock `This content is not available on this platform` message (or similar).
 
 ## Alternatives
 
@@ -70,12 +70,6 @@ The social team is trying to build awareness of the Twitch channel so they are e
 Yes, honestly, in my opinion that is the "right" way to handle `raw_html`. The `raw_html` element should ONLY be allowed as an alternative to "pure" ANS content elements and in a well-known named one (ex `browser`) to help rendering applications make the right decision on content. The `raw_html` element is an escape hatch to ANS and defeats many of the benefits of ANS to the rendering layer. There should never be `raw_html` at the root level of the content element list. What I am calling the `basic` alternative above should be the content element or collection in an `element_group` and the `raw_html` could be in the alternatives for those applications that can use it. 
 
 Realistically though, given momentum and the frequent use of raw_html now, I am not sure that this answer would be tenable, so the proposal is a version of this that is more backwards compatible.
-
-## Does there need to be multiple alternatives by name? Couldn't it just be one list?
-
-_EDIT: Changed to this suggestion based on feedback_
-
-Yes, that would definitely solve the issue we are having, but my thinking was that the naming would be a signal as to the capabilities desired by these alternatives. In the proposal `basic` here suggests that you only need to be able to support ANS elements to render this alternative. In the example in the previous question `browser` signifies that it should be rendered in a browser-like environment.
 
 ## Couldn't you use channels instead?
 
