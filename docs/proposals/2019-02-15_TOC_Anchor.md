@@ -25,83 +25,63 @@ When using the `Table of Contents` content type within a story, a user can place
 <a id="[_id]" />
 ```
 
-# Anchor Schema Example
+# Anchor & TOC Example
 ```
-{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/story_elements/anchor.json",
-  "description": "An anchor link within an article",
-  "type": "object",
-  "additionalProperties": false,
-  "properties": {
-    "type": {
-      "enum": [ "anchor" ]
-    },
-    "_id": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/traits/trait_id.json"
-    },
-    "additional_properties": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/traits/trait_additional_properties.json"
-    },
-    "id": {
-      "title": "Anchor ID",
-      "description": "The ID used to identify similarly used anchors",
-      "type": "string"
-    },
-    "content": {
-      "title": "Anchor Link Text",
-      "description": "The text that should be used to link to the anchor .",
-      "type": "string"
-    }
-  },
-  "required": [ "type", "content" ]
-}
-```
+"content_elements": [
+    {
+      "_id": "123",
+      "type": "text",
+      "content": "this is my first paragraph"
+    }, {
+      "_id": "456",
+      "type": "toc",
+      "items": [
+        {
+          "type": "anchor",
+          "content": "taby",
+          "id": "cats",
+          "_id": 123
+        }, {
+          "type": "anchor",
+          "content": "scottish fold",
+          "id": "cats",
+          "_id": 456
+        },
+        {
+          "type": "anchor",
+          "content": "lab",
+          "id": "dogs",
+          "_id": 789
+        }, {
+          "type": "anchor",
+          "content": "greyhound",
+          "id": "dogs",
+          "_id": 1010
+        },
 
-# TOC Schema Example
-```
-{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/story_elements/toc.json",
-  "title": "Table of Contents",
-  "description": "A list of anchor links embedded in a story. Can be used as jump links within an article.",
-  "type": "object",
-  "additionalProperties": false,
-  "properties": {
-    "type": {
-      "enum": [ "toc" ]
+    }, {
+      "type": "anchor",
+      "content": "taby",
+      "id": "cats",
+      "_id": 123
+    }, {
+      "_id": "789",
+      "type": "text",
+      "content": "this is about taby's"
+    }, {
+      "type": "anchor",
+      "content": "scottish fold",
+      "id": "cats",
+      "_id": 456
+    }, {
+      "_id": "789",
+      "type": "text",
+      "content": "this is about scottish fold"
     },
-    "_id": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/traits/trait_id.json"
-    },
-    "subtype": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/traits/trait_subtype.json"
-    },
-    "channels": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/traits/trait_channel.json"
-    },
-    "alignment": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/traits/trait_alignment.json"
-    },
-
-    "additional_properties": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/traits/trait_additional_properties.json"
-    },
-
-    "items": {
-      "title": "Anchor Links list",
-      "description": "The anchors within the article",
-
-      "type": "array",
-      "items": {
-        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/story_elements/anchor.json"
-      },
-      "minItems": 1,
-      "maxItems": 10
-    }
-  },
-  "required": [ "type", "items" ]
-}
+    ...,
+    ...,
+    ...
+  ]
 ```
 
 # Concerns
