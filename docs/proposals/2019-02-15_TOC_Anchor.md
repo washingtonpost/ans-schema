@@ -11,9 +11,9 @@ We propose adding two new content types, `Table of Contents` and `Anchor`.
 - Anchor
 
 # Anchor
-A new content type used to create a hidden horizontal rule which will be utilized to auto generate a Link List/TOC. This hidden horizontal rule will have two properties, `content` and `id`.
+A new content type used to create a hidden horizontal rule which will be utilized to auto generate a Link List/TOC. This hidden horizontal rule will have two properties, `content` and `anchor_id`.
 - `content` : inner text that will be used to form the hyperlink link
-- `id`: An id used to reference common links so that it may be treated as a "type" for filterning. This is seperated from the ANS `_id` which we will use as the id to target
+- `anchor_id`: An id used to reference common links so that it may be treated as a "type" for filterning. This is seperated from the ANS `_id` which we will use as the id to target
 
 
 # Table of Contents
@@ -25,7 +25,8 @@ When using the `Table of Contents` content type within a story, a user can place
 <a id="[_id]" />
 ```
 
-# Anchor & TOC Example
+# Denormalized example of Anchor & TOC Example
+This is a **denormalized** json example. It's expected that items within a `toc` will be auto generated in the backend within `story api` and `ans` validation check for `anchors` within a document.
 ```
 "content_elements": [
     {
@@ -37,32 +38,32 @@ When using the `Table of Contents` content type within a story, a user can place
       "type": "toc",
       "items": [
         {
-          "type": "anchor",
+          "type": "toc_link",
           "content": "taby",
-          "id": "cats",
+          "anchor_id": "cats",
           "_id": 123
         }, {
-          "type": "anchor",
+          "type": "toc_link",
           "content": "scottish fold",
-          "id": "cats",
+          "anchor_id": "cats",
           "_id": 456
         },
         {
-          "type": "anchor",
+          "type": "toc_link",
           "content": "lab",
-          "id": "dogs",
+          "anchor_id": "dogs",
           "_id": 789
         }, {
-          "type": "anchor",
+          "type": "toc_link",
           "content": "greyhound",
-          "id": "dogs",
+          "anchor_id": "dogs",
           "_id": 1010
         },
 
     }, {
       "type": "anchor",
       "content": "taby",
-      "id": "cats",
+      "anchor_id": "cats",
       "_id": 123
     }, {
       "_id": "789",
@@ -71,7 +72,7 @@ When using the `Table of Contents` content type within a story, a user can place
     }, {
       "type": "anchor",
       "content": "scottish fold",
-      "id": "cats",
+      "anchor_id": "cats",
       "_id": 456
     }, {
       "_id": "789",
