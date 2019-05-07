@@ -51,6 +51,20 @@
         "type": "story",
         "_id": "some other unique ANS id",
         "version": "0.10.1"
+      },
+      {
+        "_id": "100000081",
+        "type": "custom_embed",
+        "subtype": "my_video_type",
+
+        "embed": {
+          "id": "12345",
+          "url": "https://my.custom.video.com/api/embed/",
+          "config": {
+            "autoplay": true,
+            "startPos": 32
+          }
+        }
       }
     ]
   },
@@ -72,6 +86,20 @@
       "caption": "America is having a big love affair with tiny houses.",
       "width": 320,
       "height": 160
+    },
+    "embed": {
+      "_id": "100000082",
+      "type": "custom_embed",
+      "subtype": "my_video_type",
+
+      "embed": {
+        "id": "12345",
+        "url": "https://my.custom.video.com/api/embed/",
+        "config": {
+          "autoplay": true,
+          "startPos": 32
+        }
+      }
     }
   },
   "taxonomy": {
