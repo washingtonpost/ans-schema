@@ -6,7 +6,7 @@
   "description": "Lists of promotional content to use when highlighting the story. In the Arc ecosystem, references in these lists will be denormalized.",
   "properties": {
     "basic": {
-      "anyOf": [
+      "oneOf": [
         {
           "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.1/content.json"
         },
@@ -27,7 +27,7 @@
   },
   "patternProperties": {
     ".*": {
-      "anyOf": [
+      "oneOf": [
         {
           "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.1/content.json"
         },
