@@ -20,9 +20,6 @@
           "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.1/story_elements/custom_embed.json"
         }
       ]
-    },
-    "embed": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.1/story_elements/custom_embed.json"
     }
   },
   "patternProperties": {
