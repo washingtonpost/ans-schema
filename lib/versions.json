@@ -140,6 +140,12 @@
   {
     "name": "0.10.1",
     "schema": true,
+    "upverter": true,
+    "downverter": false
+  },
+  {
+    "name": "0.10.2",
+    "schema": true,
     "upverter": false,
     "downverter": false
   }

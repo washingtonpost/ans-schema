@@ -1,0 +1,12 @@
+{
+  "id" : "23423423url",
+  "date" : "2016-04-02T12:02:00+00:00",
+  "operation" : "insert-redirect",
+  "organization_id" : "staging",
+  "type" : "url-operation",
+  "version" : "0.10.2",
+  "original_url" : "/original-url",
+  "destination_url" : "/destination-url",
+  "priority": "standard",
+  "app_name": "ellipsis"
+}
