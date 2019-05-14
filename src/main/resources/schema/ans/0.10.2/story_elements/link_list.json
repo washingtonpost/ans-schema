@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.2/story_elements/link_list.json",
+  "title": "Link List",
+  "description": "A list of links to related or external content that may be embedded in a story as a unit. Can be used for curated re-circulation, or simple 'More Information' boxes. Each item in the list must be an interstitial link.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "enum": [ "link_list" ]
+    },
+    "_id": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.2/traits/trait_id.json"
+    },
+    "subtype": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.2/traits/trait_subtype.json"
+    },
+    "channels": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.2/traits/trait_channel.json"
+    },
+    "alignment": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.2/traits/trait_alignment.json"
+    },
+
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.2/traits/trait_additional_properties.json"
+    },
+
+    "title": {
+      "type": "string",
+      "title": "Title",
+      "description": "The title of the list. Plain-text with no formatting."
+    },
+    "items": {
+      "title": "Links",
+      "description": "The links in this list.",
+
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.2/story_elements/interstitial_link.json"
+      },
+      "minItems": 1,
+      "maxItems": 10
+    }
+  },
+  "required": [ "type", "items" ]
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.2/story_elements/numeric_rating.json",
+  "description": "Indicates a numeric rating value",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "enum": [ "numeric_rating" ]
+    },
+    "_id": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.2/traits/trait_id.json"
+    },
+    "subtype": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.2/traits/trait_subtype.json"
+    },
+    "channels": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.2/traits/trait_channel.json"
+    },
+    "alignment": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.2/traits/trait_alignment.json"
+    },
+
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.2/traits/trait_additional_properties.json"
+    },
+
+    "numeric_rating": {
+      "description": "A number indicating the item's value.",
+      "type": "number"
+    },
+    "min": {
+      "description": "The minimum possible value of rating",
+      "type": "number"
+    },
+    "max": {
+      "description": "The maximum possible value of rating",
+      "type": "number"
+    },
+    "units": {
+      "description": "A string describing the rating units",
+      "type": "string"
+    }
+  },
+  "required": ["numeric_rating"]
+}

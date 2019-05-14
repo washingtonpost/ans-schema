@@ -1,0 +1,24 @@
+{
+  "_id": "ABC",
+  "type": "link_list",
+  "subtype": "more-information",
+  "alignment": "right",
+
+  "title": "Learn More",
+  "items": [
+    {
+      "_id": "GHI",
+      "type": "interstitial_link",
+      "subtype": "skinny",
+
+      "url": "https://www.washingtonpost.com",
+      "content": "See more from The Washington Post"
+    },
+
+    {
+      "_id": "XYZ",
+      "type": "text",
+      "content": "<p>This doesn't belong here</p>"
+    }
+  ]
+}

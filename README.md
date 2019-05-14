@@ -137,7 +137,8 @@ npm run-script ans -- --ansdata='{"type":"story", "version":"0.10.1", "content_e
 }
 ```
 ## Creating a new ANS version
-The script to create a new version: `npm run-script ans -- --version=0.x.x create`
+The script to create a new version: `npm run-script ans -- --version=x.xx.x create`
+
 After running this, if you've created a new major or minor version, you'll need to update line 19 in this file so that the validate endpoint will work: `lib/validator.js`.
 
 Make sure to also add a test file here: `tests/fixtures/schema/`. You can copy over the previous test file (`schema-tests-xx.js`) and rename it with your version number. When people open PRs for new schema changes, they can add tests to that file.
