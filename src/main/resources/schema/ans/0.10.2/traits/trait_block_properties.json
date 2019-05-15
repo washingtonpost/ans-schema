@@ -7,9 +7,9 @@
   "properties": {
     "dropcap": {
       "title": "Dropcap",
-      "description": "Style the first letter or first word with a dropcap",
+      "description": "Style the first letter of the first word with a dropcap",
       "type": "string",
-      "enum": ["letter", "word"]
+      "enum": ["letter"]
     }
   }
 }

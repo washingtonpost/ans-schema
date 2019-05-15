@@ -121,14 +121,6 @@
   "editor_note": "This URL earlier linked to a post that we’ve unpublished due to its flawed premise.",
   "content_elements": [
     {
-      "_id": "1000000",
-      "type": "text",
-      "block_properties":{
-        "dropcap": "word"
-      },
-      "content": "America is having a big love affair with tiny houses. There are television shows: “Tiny House Nation” and “Tiny House Hunters.” There are movies: “Tiny: A Story About Living Small” and “Small Is Beautiful: A Tiny House Documentary.” Pinterest has more than 900 boards devoted to tiny houses, and design Web site Houzz showcases thousands of tiny- house photos. “Many Houzz readers have been fascinated by the idea of a portable home they can pay off quickly and personalize down to the smallest detail,” says editor Sheila Schmitz. And you know a concept has arrived when “Portlandia” skewers it: Check out the “Microhouse” episode."
-    },
-    {
       "_id": "1000002",
       "type": "text",
       "block_properties":{
