@@ -12,7 +12,7 @@
   },
   "properties": {
     "external_distribution": {
-      "description": "Necessary for fulfilling contractual agreements with third party Globe and Mail clients",
+      "description": "Necessary for fulfilling contractual agreements with third party clients",
       "type": "boolean"
     },
     "search": {
