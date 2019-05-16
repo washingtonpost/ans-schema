@@ -14,13 +14,13 @@ We propose that the necessary subtype field in tags be included in the ANS schem
   "version": "0.10.1",
 
   "taxonomy": {
-    "tags": {
+    "tags": [{
       "_id": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
       "text": "some text",
       "description": "some description",
       "slug": "some-slug",
       "subtype": "some subtype"
-    }
+    }]
   }
 }
 ```
