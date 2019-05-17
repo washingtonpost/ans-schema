@@ -9,6 +9,12 @@
     "_id": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.2/traits/trait_id.json"
     },
+    "type": {
+      "enum": [ "tag" ]
+    },
+    "subtype": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.2/traits/trait_subtype.json"
+    },
     "text": {
       "type": "string",
       "description": "The text of the tag as displayed to users."

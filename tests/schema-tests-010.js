@@ -597,6 +597,18 @@ describe("Schema: ", function() {
           });
         });
 
+        describe("Tag", function() {
+          it("should validate a tag", function() {
+            validateIfFixtureExists(version, "/utils/tag.json", "tag-fixture-good", true);
+          });
+
+          it("should not validate invalid tags", function() {
+            validateIfFixtureExists(version, '/utils/tag.json', 'tag-fixture-bad-no-text', false);
+            validateIfFixtureExists(version, '/utils/tag.json', 'tag-fixture-bad-subtype', false);
+            validateIfFixtureExists(version, '/utils/tag.json', 'tag-fixture-bad-type', false);
+          });
+        });
+
         describe("Image", function() {
           it("should validate a valid image", function() {
             validate(version, '/image.json', 'image-fixture-good');
@@ -1168,9 +1180,8 @@ describe("Schema: ", function() {
           });
         });
 
-        describe("Misc bug fixes", function() {
 
-        });
+
 
         describe("Promo Items", function() {
           it("should allow raw_html item type under basic and any abitrary key", function() {

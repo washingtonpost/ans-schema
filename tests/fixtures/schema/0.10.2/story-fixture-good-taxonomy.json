@@ -15,6 +15,8 @@
     "tags": [
       {
         "_id": "fred",
+        "type": "tag",
+        "subtype": "basic",
         "text": "Fred",
         "slug": "fred",
         "description": "For all things Fred",
@@ -24,7 +26,11 @@
       },
       {
         "_id": "writing",
+        "subtype": "basic",
         "text": "Writing"
+      },
+      {
+        "text": "Obama"
       }
     ],
     "keywords": [
