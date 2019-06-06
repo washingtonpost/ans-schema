@@ -991,6 +991,17 @@ describe("Schema: ", function() {
               };
             });
 
+            it("should not validate a text element with block_properties dropcap that doesn't contain type string letter", function() {
+              if ('text-fixture-good-additional-properties' in fixtures) {
+                validate(version, type_prefix + '/text.json', 'story-fixture-bad-dropcap', false);
+              };
+            });
+
+            it("should validate a text element with block_properties dropcap that does contain type string letter", function() {
+              if ('text-fixture-good-additional-properties' in fixtures) {
+                validate(version, type_prefix + '/text.json', 'story-fixture-good-dropcap', false);
+              };
+            });
           });
 
           describe("Raw Html", function() {
