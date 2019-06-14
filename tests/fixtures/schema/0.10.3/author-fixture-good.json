@@ -1,0 +1,80 @@
+{
+  "type": "author",
+  "version": "0.10.3",
+  "_id": "engelg",
+  "name": "Gregory Engel",
+  "image": {
+    "type": "image",
+    "version": "0.10.3",
+    "url": "https://img.washingtonpost.com/rf/image_1248x701/2010-2019/WashingtonPost/2017/11/08/Local/Images/vagovernorgop3.jpg?t=20170517a"
+  },
+  "url": "http://www.washingtonpost.com",
+  "social_links": [
+    {
+      "site": "facebook",
+      "url": "http://facebook.com/gregory.r.engel"
+    },
+    {
+      "site": "reddit",
+      "url": "http://reddit.com/u/gregory.r.engel"
+    }
+  ],
+  "slug": "gregory-r-engel",
+  "first_name": "Gregory",
+  "middle_name": "R.",
+  "last_name": "Engel",
+  "suffix": "Jr.",
+  "byline": "Greg Engel",
+  "location": "Washington, D.C.",
+  "division": "Sports",
+  "email": "gregory.engel@washpost.com",
+  "role": "Content API Developer",
+  "expertise": "Baltimore, Soviet Cinema, Blue Seashells",
+  "affiliation": "The Washington Post",
+  "languages": "Russian",
+  "bio": "Gregory Engel is a developer for Arc Publishing at The Washington Post",
+  "long_bio": "Gregory Engel is a developer for Arc Publishing at The Washington Post. He has won numerous awards for his ten-part expose on breakfast cereal marshmallows in feudal Japan, including a Very Good Writer Award from Very Good Writer Magazine. He engages in online dicourse with his numerous fans and vociferous critics. His real name is 'Joe.'",
+  "books": [
+    {
+      "book_title": "Ten Ways to Eat Ice Cream: A Human's Guide for the Intimidated",
+      "book_url": "http://icecreambook.com"
+    },
+    {
+      "book_title": "If Only They Would Build It: The History of Turtle Fences in Medieval Wisconsin",
+      "book_url": "http://turtlefencebook.com"
+    },
+    {
+      "book_title": "The Speckled Land (A George Irwin Mystery)",
+      "book_url": "http://georgeirwinmysteries.com"
+    }
+  ],
+  "education": [
+    {
+      "school_name": "Oberlin College"
+    },
+    {
+      "school_name": "International Language Institute"
+    }
+  ],
+  "awards": [
+    {
+      "award_name": "A Very Good Writer Award"
+    },
+    {
+      "award_name": "A Just-OK Writer Award"
+    }
+  ],
+  "contributor": false,
+
+  "org": "Washington, D.C.",
+  "socialLinks": [
+    {
+      "site": "facebook",
+      "url": "http://facebook.com/gregory.r.engel"
+    },
+    {
+      "site": "reddit",
+      "url": "http://reddit.com/u/gregory.r.engel"
+    }
+  ]
+}
