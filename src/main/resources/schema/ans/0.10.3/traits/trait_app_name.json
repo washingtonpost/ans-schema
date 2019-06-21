@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.3/traits/trait_app_name.json",
+  "title": "Application Name",
+  "description": "The name of the application that generated an operation. This is used by downstream consumers in conjunction with 'priority' to make decisions about optimization.",
+  "type": "string"
+}
