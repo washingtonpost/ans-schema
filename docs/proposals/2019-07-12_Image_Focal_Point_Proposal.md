@@ -10,12 +10,16 @@ Editorial users wish to be able to declare a focal point for images. Additionall
 - Goldfish users can set a focal point on the video cover image
 
 ## Proposal
-We propose adding a focal point trait for use in images. The trait will be represented by a set of two integer values: X and Y coordinates. The focal point field will appear in the top-level of image ANS.
+We propose adding a focal point trait for use in images. The focal point is a single pixel position identified on an image will be stored by a set of two integer values: X and Y coordinates. The focal point field will appear in the top-level of image ANS.
 
 Parent documents can override an image's focal point. Gallery overrides will appear in the image's additional properties (as caption/headline overrides are). Story and thumbnail overrides will be done through referent_properties on the image.
 
 ### ANS Structure
-Focal point values are X, Y coordinates that represent the visual 'center' of the image. When cropping/resizing images, renderers will use the focal point to find the center of the image. The X coordinate's range is 0->width. The Y coordinate's range is 0->height.
+Focal point values are X, Y coordinates that represent the visual 'center' of the image. When cropping/resizing images, renderers will use the focal point to find the center of the image.
+
+The X-Y coordinates refers to the X and Y axis that are perpendicular lines intersecting at point referred to as the "focal point". The X axis is horizontal line and the Y axis the vertical line, and represent the LEFT, TOP of the image.
+
+The X coordinate's range is 0->Image Height. The Y coordinate's range is 0->Image Width.
 
 ```
 "focal_point": {
