@@ -28,6 +28,15 @@ The X coordinate's range is 0->Image Height. The Y coordinate's range is 0->Imag
 }
 ```
 
+### Example Focal Point
+```
+"focal_point": {
+  "x": 460,
+  "y": 300
+}
+```
+The above example sets a focal point at the intersetion of 460px from the LEFT edge of the image, and 300px from the TOP of the image.
+
 ### Example image ANS with focal point
 ```
 {
