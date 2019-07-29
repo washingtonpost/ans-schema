@@ -12,7 +12,7 @@ Editorial users wish to be able to declare a focal point for images. Additionall
 ## Proposal
 We propose adding a focal point trait for use in images. The focal point is a single pixel position identified on an image will be stored by a set of two integer values: X and Y coordinates. The focal point field will appear in the top-level of image ANS.
 
-Parent documents can override an image's focal point. Gallery overrides will appear in the image's new `gallery_properties` property, which is only valid in the context of an Image ANS within a gallery. Story and thumbnail overrides will be done through referent_properties on the image.
+Parent documents can over-ride an image's focal point. Gallery over-rides will appear in the image's new `gallery_properties` property, which is valid only in the context of an Image ANS within a gallery. Story and thumbnail over-rides will be done through referent_properties on the image.
 
 ### ANS Structure
 Focal point values are X, Y coordinates that represent the visual 'center' of the image. When cropping/resizing images, renderers will use the focal point to find the center of the image.
@@ -205,7 +205,7 @@ A Gallery can provide an individual over-ride per image in the gallery. These wi
 }
 ```
 
-### Example story ANS overriding the included image's focal point using referent_properties
+### Example story ANS over-riding the included image's focal point using referent_properties
 ```
 {
   "_id": "25NZ3GMIYJFKNNT5CNM36ZMKEA",
