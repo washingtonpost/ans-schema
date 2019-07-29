@@ -74,7 +74,10 @@ The above example sets a focal point at the intersetion of 460px from the LEFT e
 }
 ```
 
-### Example gallery ANS overriding the included image's focal point using additional_properties of the image
+## Gallery Focal Point Per Image Over-ride
+A Gallery can provide an individual over-ride per image in the gallery. These will be represented as `gallery_properties` on the Image ANS root. The new `gallery_properties` property is only valid in Image ANS within the context of a gallery.
+
+### Example Gallery ANS over-riding the included image's focal point using `gallery_properties` of the image
 ```
 
 {
@@ -137,10 +140,6 @@ The above example sets a focal point at the intersetion of 460px from the LEFT e
 	"content_elements": [{
 		"_id": "2K2QZFZXT5BPBPGFPKJIGL7D5Q",
 		"additional_properties": {
-      "focalPointOverride": {
-        "x": 700,
-        "y": 600
-      },
 			"fullSizeResizeUrl": "/photo/resize/Oyx05jwTKr3nakiLHktQnO2eD3w=/arc-anglerfish-local-localhost/public/2K2QZFZXT5BPBPGFPKJIGL7D5Q.jpeg",
 			"galleries": [{
 				"headlines": {
@@ -167,10 +166,16 @@ The above example sets a focal point at the intersetion of 460px from the LEFT e
 		"credits": {
 			"by": []
 		},
-    "focal_point": {
-      "x": 1146,
-      "y": 806
-    },
+		"focal_point": {
+			"x": 1146,
+			"y": 806
+		},
+		gallery_properties: {
+			"focal_point": {
+				"x": 700,
+				"y": 600
+			}
+		},
 		"geo": {},
 		"height": 4302,
 		"image_type": "illustration",
