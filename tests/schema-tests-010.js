@@ -620,6 +620,19 @@ describe("Schema: ", function() {
           it("should validate as content", function() {
             validate(version, '/content.json', 'image-fixture-good');
           });
+
+          it("should not validate an image with focal point data as text instead of number", function() {
+            validateIfFixtureExists(version, '/image.json', 'image-fixture-bad-focal-point-text-value', false);
+          });
+          it("should not validate an image with focal point data as null value", function() {
+            validateIfFixtureExists(version, '/image.json', 'image-fixture-bad-focal-point-null-value', false);
+          });
+          // it("should not validate an image with focal point data that is out of range", function() {
+          //   validateIfFixtureExists(version, '/image.json', 'image-fixture-bad-focal-point-out-of-range', false);
+          // });
+          it("should not validate an image with focal point data with invalid prop name", function() {
+            validateIfFixtureExists(version, '/image.json', 'image-fixture-bad-focal-point-bad-prop-name', false);
+          });
         });
 
         describe("Image Operation", function() {

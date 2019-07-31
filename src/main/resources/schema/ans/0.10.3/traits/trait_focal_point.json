@@ -2,7 +2,17 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.3/traits/trait_focal_point.json",
   "title": "Focal Point",
-  "description": "Coordinates that represent the visual 'center' of the image",
+  "description": "Coordinates representing the 'visual center' of an image. The X axis is horizontal line and the Y axis the vertical line, with 0,0 being the LEFT, TOP of the image.",
   "type": "object",
-  "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.3/utils/focal_point.json"
+  "properties": {
+    "x": {
+      "type": "number",
+      "description": "The coordinate point on the horizontal axis"
+    },
+    "y": {
+      "type": "number",
+      "description": "The coordinate point on the vertical axis"
+    }
+  },
+  "required": [ "x", "y" ]
 }
