@@ -137,6 +137,9 @@
     "alt_text": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.3/traits/trait_alt_text.json"
     },
+    "focal_point": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.3/traits/trait_focal_point.json"
+    },
 
     "additional_properties": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.3/traits/trait_additional_properties.json"

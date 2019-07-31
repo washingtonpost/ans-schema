@@ -47,6 +47,10 @@
     ]
   },
   "image_type": "photograph",
+  "focal_point": {
+    "x": 460,
+    "y": 220
+  },
   "additional_properties": {
     "foo": "bar"
   }

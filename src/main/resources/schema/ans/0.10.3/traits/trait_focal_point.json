@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.3/traits/trait_focal_point.json",
+  "title": "Focal Point",
+  "description": "Coordinates that represent the visual 'center' of the image",
+  "type": "object",
+  "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.3/utils/dictionary.json"
+}
