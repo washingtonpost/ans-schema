@@ -4,5 +4,5 @@
   "title": "Focal Point",
   "description": "Coordinates that represent the visual 'center' of the image",
   "type": "object",
-  "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.3/utils/dictionary.json"
+  "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.3/utils/focal_point.json"
 }
