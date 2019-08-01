@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.3/traits/trait_gallery_properties.json",
+  "title": "Has gallery properties",
+  "description": "An object for overrides for images when images are used in a gallery. Example usage: Each image in a gallery may have the images own focal point overridden by the gallery.",
+  "type": "object",
+  "gallery_properties": {
+    "focal_point": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.3/traits/trait_focal_point.json"
+    }
+  }
+}

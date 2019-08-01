@@ -23,6 +23,9 @@
     },
     "additional_properties": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.3/traits/trait_additional_properties.json"
+    },
+    "gallery_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.3/traits/trait_gallery_properties.json"
     }
   },
   "required": [ "type" ]

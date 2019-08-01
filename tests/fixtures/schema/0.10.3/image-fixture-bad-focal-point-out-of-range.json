@@ -48,8 +48,8 @@
   },
   "image_type": "photograph",
   "focal_point": {
-    "x": 460,
-    "y": 220
+    "x": 960,
+    "y": 850
   },
   "additional_properties": {
     "foo": "bar"
