@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.3/traits/trait_rendering_guides.json",
+  "title": "Rendering Guides",
+  "description": "Trait that provides suggestions for the rendering system.",
+  "type": "object",
+  "properties":{
+    "preferred_method": {
+      "type": "array",
+      "description": "The preferred rendering method of the story. Blank means there is no preference. If the rendering application is aware of these other options, it can decide to either use one of them, render messaging to the viewer, or render the story as normal",
+      "items": {
+        "anyOf": [
+          {
+            "enum": [ "website", "native" ],
+            "description": "Well-known values that describe the most common values. 'website' describes a traditional browser experience. 'native' describes a device specific application."
+          },
+          {
+            "type": "string",
+            "description": "Other than the well-known values are allowed, and can be ignored if not recognized"
+          }
+        ]
+      }
+    }
+  }
+}
