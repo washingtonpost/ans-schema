@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/story_elements/blockquote.json",
+  "title": "Blockquote",
+  "description": "(Deprecated.) Equivalent to an HTML blockquote element. Consider the new `quote` element instead.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "enum": [ "blockquote" ]
+    },
+    "_id": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/traits/trait_id.json"
+    },
+    "subtype": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/traits/trait_subtype.json"
+    },
+    "channels": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/traits/trait_channel.json"
+    },
+    "alignment": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/traits/trait_alignment.json"
+    },
+
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/traits/trait_additional_properties.json"
+    },
+
+    "content": {
+      "description": "A blockquote",
+      "type": "string"
+    }
+  },
+  "required": [ "type", "content" ]
+}
+

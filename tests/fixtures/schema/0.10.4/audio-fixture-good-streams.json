@@ -1,0 +1,30 @@
+{
+  "_id": "0987654321",
+  "type": "audio",
+  "version": "0.10.4",
+  "credits": {
+    "by": [
+      {
+        "type": "author",
+        "version": "0.10.4",
+        "name": "John Jacob",
+        "byline": "John Jacob"
+      }
+    ]
+  },
+
+  "streams": [{
+    "filesize": 3292344,
+    "audio_codec": "mpeg",
+    "stream_type": "mp3",
+    "bitrate": 96,
+    "url": "https://arc-content-api.s3.amazonaws.com/test-96.mp3"
+  }, {
+    "filesize": 4292341,
+    "audio_codec": "mpeg",
+    "stream_type": "mp3",
+    "bitrate": 128,
+    "url": "https://arc-content-api.s3.amazonaws.com/test-128.mp3"
+  }]
+
+}

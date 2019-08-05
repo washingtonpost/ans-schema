@@ -1,0 +1,37 @@
+{
+  "type": "story_operation",
+  "operation": "publish_edition",
+  "date": "2015-06-25T09:50:50.52Z",
+  "story_id": "f8f706f0-0acc-11e5-9e39-0db921c47b93",
+  "revision_id": "2A",
+  "branch": "default",
+  "version": "0.10.4",
+  "priority": "standard",
+  "app_name": "ellipsis",
+  "editions": [ "web" ],
+  "story": {
+    "_id": "f8f706f0-0acc-11e5-9e39-0db921c47b93",
+    "version": "0.10.4",
+    "type": "story",
+    "created_date": "2015-07-02T09:50:50.52Z",
+    "last_updated_date": "2015-07-02T09:50:50.52Z",
+    "headlines": {
+      "basic": "Tiny house, big benefits:\u2009Freedom from a mortgage and worries \u2014 and stuff"
+    },
+    "description": {
+      "basic": "Tiny house, big benefits:\u2009Freedom from a mortgage and worries \u2014 and stuff"
+    },
+    "content_elements": [
+      {
+        "type": "text",
+
+        "content": "MY TWO CENTS",
+        "_id": "D2349ABC88A9A"
+      }
+    ],
+    "revision": {
+      "revision_id": "2A",
+      "parent_id": "1A"
+    }
+  }
+}

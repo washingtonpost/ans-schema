@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/traits/trait_distributor.json",
+  "title": "Distributor",
+  "description": "Information about a third party that provided this content from outside this document's hosted organization.",
+  "type": "object",
+  "oneOf": [{
+    "properties": {
+      "name": {
+        "description": "The human-readable name of the distributor of this content. E.g., Reuters.",
+        "type": "string"
+      },
+
+      "category": {
+        "type": "string",
+        "enum": [ "staff", "wires", "freelance", "stock", "handout", "other" ],
+        "description": "The machine-readable category of how this content was produced. Use 'staff' if this content was produced by an employee of the organization who owns this document repository. (Multisite note: content produced within a single *organization*, but shared across multiple *websites* should still be considered 'staff.') Use ‘wires’ if this content was produced for another organization and shared with the one who owns this document repository. Use 'freelance' if this content was produced by an individual on behalf of the organization who owns this document repository. Use 'stock' if this content is stock media distributed directly from a stock media provider. Use 'handout' if this is content provided from a source for an article (usually promotional media distributed directly from a company). Use 'other' for all other cases."
+      },
+
+      "subcategory": {
+        "type": "string",
+        "description": "The machine-readable subcategory of how this content was produced. E.g., 'freelance - signed'. May vary between organizations."
+      },
+
+      "additional_properties": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/traits/trait_additional_properties.json"
+      },
+
+      "mode": {
+        "type": "string",
+        "enum": ["custom"]
+      }
+    },
+
+    "additionalProperties": false
+  }, {
+    "properties": {
+      "reference_id": {
+        "description": "The ARC UUID of the distributor of this content. E.g., ABCDEFGHIJKLMNOPQRSTUVWXYZ.",
+        "type": "string"
+      },
+
+      "mode": {
+        "type": "string",
+        "enum": ["reference"]
+      }
+    },
+
+    "required": [ "reference_id", "mode" ],
+
+    "additionalProperties": false
+  }]
+}

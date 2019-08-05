@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/traits/trait_content_aliases.json",
+  "title": "Aliases trait",
+  "description": "An list of alternate names that this content can be fetched by instead of id.",
+  "type": "array",
+  "items": {
+    "type": "string",
+    "pattern": "^([a-z])([a-z0-9-])*$"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/story_operation.json",
+  "description": "An operation on a story",
+  "additionalProperties": false,
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Identifies this as an ANS operation",
+      "type": "string",
+      "enum": [ "story_operation" ]
+    },
+    "operation": {
+      "type": "string",
+      "description": "The identifier of the operation being performed",
+      "enum": [ "create", "update", "delete", "publish_edition", "unpublish_edition" ]
+    },
+    "date": {
+      "description": "When the operation should be considered performed",
+      "type": "string",
+      "format": "date-time"
+    },
+    "display_date":{
+      "description": "The date that is displayed with this story to readers.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "publish_date":{
+      "description": "When the story was published.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "submit_date": {
+      "description": "When this operation was submitted to Content API. Used for latency checking.",
+      "type":"string",
+      "format": "date-time"
+    },
+    "story_id": {
+      "type": "string",
+      "description": "The id of the story being operated"
+    },
+    "revision_id": {
+      "type": "string",
+      "description": "The id of the specific revision that this operation occurs on, if any"
+    },
+    "editions": {
+      "type": "array",
+      "description": "A list of identifiers of editions that are changed in this operation, if any",
+      "items": {
+        "type": "string"
+      }
+    },
+    "branch": {
+      "type": "string",
+      "description": "The name of the branch within Story API that this operation occurs on, if any"
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of ANS this Story is written in"
+    },
+
+    "priority": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/traits/trait_priority.json"
+    },
+    "app_name": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/traits/trait_app_name.json"
+    },
+
+    "story": {
+      "description": "The story object being created/updated/deleted/published/unpublished",
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/story.json"
+    }
+  },
+  "required": [ "type", "operation", "story_id" ]
+}

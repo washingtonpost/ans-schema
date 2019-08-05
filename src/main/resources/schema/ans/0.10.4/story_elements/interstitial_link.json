@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/story_elements/interstitial_link.json",
+  "description": "An interstitial link",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "enum": [ "interstitial_link" ]
+    },
+    "_id": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/traits/trait_id.json"
+    },
+    "subtype": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/traits/trait_subtype.json"
+    },
+    "channels": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/traits/trait_channel.json"
+    },
+    "alignment": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/traits/trait_alignment.json"
+    },
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/traits/trait_additional_properties.json"
+    },
+
+    "url": {
+      "title": "Link URL",
+      "description": "The interstitial link url. This is where the user should be taken if they follow this link.",
+      "type": "string"
+    },
+    "content": {
+      "title": "Link Title",
+      "description": "The interstitial link title text. This text should be considered part of the link.",
+      "type": "string"
+    },
+    "description": {
+      "title": "Link Description",
+      "description": "Additional text about the link. May or may not be considered part of the link, depending on implementation.",
+
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/story_elements/text.json"
+    },
+    "image": {
+      "title": "Link Image",
+      "description": "An optional image. This should be considered part of the link.",
+
+      "oneOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/image.json"
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/utils/reference.json"
+            },
+            {
+              "properties": {
+                "referent": {
+                  "properties": {
+                    "type": {
+                      "enum": [ "image" ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+
+  "required": ["type", "url", "content"]
+}

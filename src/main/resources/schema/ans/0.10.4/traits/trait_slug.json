@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/traits/trait_slug.json",
+  "title": "Slug",
+  "description": "A short reference name for internal editorial use",
+  "type": "string"
+}

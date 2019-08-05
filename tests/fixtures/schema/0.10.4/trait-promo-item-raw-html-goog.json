@@ -1,0 +1,30 @@
+{
+  "basic": {
+    "type": "raw_html",
+    "content": "<h1>HTML content 1</h1>"
+  },
+  "bright": {
+    "_id": "unique ANS id",
+    "type": "image",
+    "version": "0.10.4",
+    "created_date": "2015-06-25T09:50:50.52Z",
+    "credits": {
+      "by": [
+        {
+          "type": "author",
+          "version": "0.10.4",
+          "name": "Ansel Adams",
+          "byline": "Ansel Adams"
+        }
+      ]
+    },
+    "url": "https://img.washingtonpost.com/rw/2010-2019/WashingtonPost/2015/06/19/Magazine/Images/6_28%20Tinyhome2_r1.tif?uuid=fXQD2BbLEeWd3OM1NUIQDA",
+    "caption": "America is having a big love affair with tiny houses.",
+    "width": 320,
+    "height": 160
+  },
+  "arbitrary_key": {
+    "type": "raw_html",
+    "content": "<h1>HTML content 2</h1>"
+  }
+}
