@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.3/story_elements/quote.json",
-  "description": "A blockquote content element, incompatible with the original blockquote: https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.3/story_elements/blockquote.json",
+  "description": "A blockquote or pull quote content element. Arc Composer distinguishes between blockquote and pullquote by setting the element subtype to either `blockquote` or `pullquote`. This element is the successor to (and incompatible with) the original blockquote: https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.3/story_elements/blockquote.json",
   "type": "object",
   "additionalPropeties": false,
   "properties": {
