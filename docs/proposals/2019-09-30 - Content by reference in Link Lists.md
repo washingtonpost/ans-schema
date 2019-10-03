@@ -17,7 +17,7 @@ However, unlink `image`, which is used only for presentation purpose, the `story
     "type": "text",
     "content": "A <em>British boxer</em> has had his license suspended after being disqualified for biting during a <strong>heavyweight</strong> fight."
   },
-  oneOf: [{
+  "oneOf": [{
     "url": "https://www.washingtonpost.com/sports/2019/04/01/british-boxer-suffers-dental-breakdown-bites-opponent-ring/",
     "story": {
       "type": "reference",
