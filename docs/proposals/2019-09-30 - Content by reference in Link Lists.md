@@ -51,6 +51,14 @@ However, unlink `image`, which is used only for presentation purpose, the `story
 }
 ```
 ## Questions and Concerns
+**So is the idea that an `interstitial_link` now can link to a url, a story, video or gallery? But only one of those would ever be present?**
+Yes and Yes
+
+**Does this mean “show a gallery here” or “show a link to a gallery here?**
+This means show a link to a gallery here.
+
+**What about the potential performance impact if a content producer adds 20 story reference `interstitial_link`s in a Link List?**
+Link Lists are capped at 10 content elements.
 
 ## Implementation
 Taiwei Tuan of Composer team will implement this and add to the schema if the proposal is accepted.
