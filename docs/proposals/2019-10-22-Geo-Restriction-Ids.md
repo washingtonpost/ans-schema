@@ -1,4 +1,4 @@
-# Adding Geo-Restriction Information to the content_restrictions Trait
+# Adding Geo-Restriction IDs to the content_restrictions Trait
 
 # Problem
 
@@ -29,7 +29,7 @@ The `geo` object should have a `restrictions` field. This field would map to an 
 
 # Concerns
 
-## Why not store the document/restriction associations in PubStack, or in a dedicated new service?
+## Why not store the document/restriction associations in PubStack?
 
 While this would eliminate the need for a later migration, it isn't feasible under the current time constraints.
 
