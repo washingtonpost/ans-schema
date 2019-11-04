@@ -758,6 +758,14 @@ describe("Schema: ", function() {
           it("should invalidate a geo restriction configuration with an additional field on the restriction object", function() {
             validateIfFixtureExists(version, '/traits/trait_content_restrictions.json', 'geo-restrictions-fixture-bad-property', false);
           });
+
+          it("should invalidate a geo restriction configuration with no restriction objects", function() {
+            validateIfFixtureExists(version, '/traits/trait_content_restrictions.json', 'geo-restrictions-fixture-bad-empty', false);
+          });
+
+          it("should invalidate a video with a content_restrictions.geo field set to an empty object", function() {
+            validateIfFixtureExists(version, '/video.json', 'video-fixture-bad-empty-geo-restriction', false);
+          });
         });
 
         describe("Clavis", function() {
