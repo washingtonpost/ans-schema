@@ -37,7 +37,14 @@
 
       "type": "array",
       "items": {
-        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/story_elements/interstitial_link.json"
+        "oneOf": [
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/story_elements/interstitial_link.json"
+          },
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.4/story_elements/text.json"
+          }
+        ]
       },
       "minItems": 1,
       "maxItems": 10

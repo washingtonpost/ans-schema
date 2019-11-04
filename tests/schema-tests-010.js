@@ -1081,7 +1081,11 @@ describe("Schema: ", function() {
               validateIfFixtureExists(version, type_prefix + '/link_list.json', 'link-list-fixture-good');
             });
 
-            it("should not validate a non-link-list", function () {
+            it("should validate a link list with a text item", function () {
+              validateIfFixtureExists(version, type_prefix + '/link_list.json', 'link-list-fixture-good-text');
+            });
+
+            it("should not validate a link list with an element that is not a link or a text item", function () {
               validateIfFixtureExists(version, type_prefix + '/link_list.json', 'link-list-fixture-bad', false);
             });
           });

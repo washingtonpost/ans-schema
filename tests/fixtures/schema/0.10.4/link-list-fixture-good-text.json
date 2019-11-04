@@ -17,7 +17,8 @@
 
     {
       "_id": "XYZ",
-      "type": "other_type"
+      "type": "text",
+      "content": "<p>This doesn't belong here</p>"
     }
   ]
 }
