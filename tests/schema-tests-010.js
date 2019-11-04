@@ -742,6 +742,22 @@ describe("Schema: ", function() {
           it("should invalidate a restricted content with no referent", function() {
             validate(version, '/restricted_content.json', 'restricted-content-fixture-bad-referent', false);
           });
+
+          it("should validate a geo restriction configuration in the content_restrictions trait", function() {
+            validateIfFixtureExists(version, '/traits/trait_content_restrictions.json', 'geo-restrictions-fixture-good');
+          });
+
+          it("should invalidate a geo restriction configuration with too many restriction objects", function() {
+            validateIfFixtureExists(version, '/traits/trait_content_restrictions.json', 'geo-restrictions-fixture-bad-length', false);
+          });
+
+          it("should invalidate a geo restriction configuration where restrictions property is not an array", function() {
+            validateIfFixtureExists(version, '/traits/trait_content_restrictions.json', 'geo-restrictions-fixture-bad-type', false);
+          });
+
+          it("should invalidate a geo restriction configuration with an additional field on the restriction object", function() {
+            validateIfFixtureExists(version, '/traits/trait_content_restrictions.json', 'geo-restrictions-fixture-bad-property', false);
+          });
         });
 
         describe("Clavis", function() {
