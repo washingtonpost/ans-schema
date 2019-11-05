@@ -1096,6 +1096,10 @@ describe("Schema: ", function() {
             it("should not validate a link list with an element that is not a link or a text item", function () {
               validateIfFixtureExists(version, type_prefix + '/link_list.json', 'link-list-fixture-bad', false);
             });
+
+            it("should validate a link list with text items only", function () {
+              validateIfFixtureExists(version, type_prefix + '/link_list.json', 'link-list-fixture-good-all-text');
+            });
           });
 
           describe("Element Group", function() {

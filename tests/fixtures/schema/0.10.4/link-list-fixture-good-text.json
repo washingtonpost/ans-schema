@@ -15,7 +15,7 @@
     {
       "_id": "XYZ",
       "type": "text",
-      "content": "<p>This doesn't belong here</p>"
+      "content": "<p>This does belong here</p>"
     }
   ]
 }
