@@ -3,21 +3,19 @@
   "type": "link_list",
   "subtype": "more-information",
   "alignment": "right",
-
   "title": "Learn More",
   "items": [
     {
       "_id": "GHI",
       "type": "interstitial_link",
       "subtype": "skinny",
-
       "url": "https://www.washingtonpost.com",
       "content": "See more from The Washington Post"
     },
-
     {
       "_id": "XYZ",
-      "type": "other_type"
+      "type": "text",
+      "content": "<p>This does belong here</p>"
     }
   ]
 }

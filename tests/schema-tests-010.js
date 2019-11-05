@@ -742,6 +742,30 @@ describe("Schema: ", function() {
           it("should invalidate a restricted content with no referent", function() {
             validate(version, '/restricted_content.json', 'restricted-content-fixture-bad-referent', false);
           });
+
+          it("should validate a geo restriction configuration in the content_restrictions trait", function() {
+            validateIfFixtureExists(version, '/traits/trait_content_restrictions.json', 'geo-restrictions-fixture-good');
+          });
+
+          it("should invalidate a geo restriction configuration with too many restriction objects", function() {
+            validateIfFixtureExists(version, '/traits/trait_content_restrictions.json', 'geo-restrictions-fixture-bad-length', false);
+          });
+
+          it("should invalidate a geo restriction configuration where restrictions property is not an array", function() {
+            validateIfFixtureExists(version, '/traits/trait_content_restrictions.json', 'geo-restrictions-fixture-bad-type', false);
+          });
+
+          it("should invalidate a geo restriction configuration with an additional field on the restriction object", function() {
+            validateIfFixtureExists(version, '/traits/trait_content_restrictions.json', 'geo-restrictions-fixture-bad-property', false);
+          });
+
+          it("should invalidate a geo restriction configuration with no restriction objects", function() {
+            validateIfFixtureExists(version, '/traits/trait_content_restrictions.json', 'geo-restrictions-fixture-bad-empty', false);
+          });
+
+          it("should invalidate a video with a content_restrictions.geo field set to an empty object", function() {
+            validateIfFixtureExists(version, '/video.json', 'video-fixture-bad-empty-geo-restriction', false);
+          });
         });
 
         describe("Clavis", function() {
@@ -1065,8 +1089,16 @@ describe("Schema: ", function() {
               validateIfFixtureExists(version, type_prefix + '/link_list.json', 'link-list-fixture-good');
             });
 
-            it("should not validate a non-link-list", function () {
+            it("should validate a link list with a text item", function () {
+              validateIfFixtureExists(version, type_prefix + '/link_list.json', 'link-list-fixture-good-text');
+            });
+
+            it("should not validate a link list with an element that is not a link or a text item", function () {
               validateIfFixtureExists(version, type_prefix + '/link_list.json', 'link-list-fixture-bad', false);
+            });
+
+            it("should validate a link list with text items only", function () {
+              validateIfFixtureExists(version, type_prefix + '/link_list.json', 'link-list-fixture-good-all-text');
             });
           });
 
