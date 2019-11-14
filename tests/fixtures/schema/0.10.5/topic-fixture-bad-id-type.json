@@ -1,0 +1,6 @@
+{
+    "id": 12345,
+    "name": "This should fail because id is a string, not a number.",
+    "score": 0.77,
+    "uid": "tz"
+}

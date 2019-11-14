@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.5/traits/trait_version.json",
+  "title": "Describes the ANS version of this object",
+  "description": "The version of ANS that this object was serialized as, in major.minor.patch format.  For top-level content objects, this is a required trait.",
+  "type": "string",
+  "enum": [ "0.10.5" ]
+}
