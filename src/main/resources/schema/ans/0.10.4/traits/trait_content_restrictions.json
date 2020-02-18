@@ -29,6 +29,32 @@
         }
       },
       "required": [ "active" ]
+    },
+    "geo": {
+      "type": "object",
+      "description": "Geo-Restriction configuration that contains the restriction ids that this content should be associated with.",
+      "additionalProperties": false,
+      "properties": {
+        "restrictions": {
+          "type": "array",
+          "description": "An array containing the geo-restriction objects. Limited to a size of 1 for now.",
+          "minItems": 1,
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "description": "An object specifying the _id of the restriction this content should be associated with.",
+            "additionalProperties": false,
+            "properties": {
+              "restriction_id": {
+                "type": "string",
+                "description": "The _id of the restriction that is stored in Global Settings."
+              }
+            },
+            "required": ["restriction_id"]
+          }
+        }
+      },
+      "required": ["restrictions"]
     }
   }
 }

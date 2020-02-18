@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.5/traits/trait_canonical_url.json",
+  "title": "Canonical URL",
+  "description": "The relative URL to this document on the website specified by the `canonical_website` field. In the Arc ecosystem, this will be populated by the content api from the arc-canonical-url service if present based on the canonical_website. In conjunction with canonical_website, it can be used to determine the SEO canonical url or open graph url. In a multi-site context, this field may be different from the website_url field.",
+  "type": "string"
+}

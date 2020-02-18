@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.5/traits/trait_content_restrictions.json",
+  "title": "Content Restrictions",
+  "description": "Trait that applies contains the content restrictions of an ANS object.",
+  "type": "object",
+  "properties":{
+    "content_code":{
+      "type": "string",
+      "description": "The content restriction code/level/flag associated with the ANS object"
+    },
+    "embargo": {
+      "description": "Embargo configuration to enforce publishing restrictions. Embargoed content must not go live.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "active": {
+          "type": "boolean",
+          "description": "The boolean flag to indicate if the embargo is active or not. If this field is false, ignore the embargo."
+        },
+        "end_time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "An optional end time for the embargo to indicate when it ends. When it's not defined, it means the embargo keeps applying. The end time should be ignored if active flag is false."
+        },
+        "description": {
+          "description": "An optional description for the embargo.",
+          "type": "string"
+        }
+      },
+      "required": [ "active" ]
+    },
+    "geo": {
+      "type": "object",
+      "description": "Geo-Restriction configuration that contains the restriction ids that this content should be associated with.",
+      "additionalProperties": false,
+      "properties": {
+        "restrictions": {
+          "type": "array",
+          "description": "An array containing the geo-restriction objects. Limited to a size of 1 for now.",
+          "minItems": 1,
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "description": "An object specifying the _id of the restriction this content should be associated with.",
+            "additionalProperties": false,
+            "properties": {
+              "restriction_id": {
+                "type": "string",
+                "description": "The _id of the restriction that is stored in Global Settings."
+              }
+            },
+            "required": ["restriction_id"]
+          }
+        }
+      },
+      "required": ["restrictions"]
+    }
+  }
+}

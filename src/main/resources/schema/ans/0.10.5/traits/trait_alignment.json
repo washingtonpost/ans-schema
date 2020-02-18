@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.5/traits/trait_alignment.json",
+  "title": "Alignment",
+  "type": "string",
+  "description": "A property used to determine horizontal positioning of a content element relative to the elements that immediately follow it in the element sequence.",
+  "enum": [ "left", "right", "center" ]
+}

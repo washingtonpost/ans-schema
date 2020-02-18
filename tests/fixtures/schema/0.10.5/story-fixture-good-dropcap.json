@@ -1,0 +1,17 @@
+{
+  "type": "story",
+  "version": "0.10.5",
+  "headlines": {
+    "basic": "Dropcap Bad"
+  },
+  "content_elements": [
+    {
+      "_id": "1000002",
+      "type": "text",
+      "block_properties":{
+        "dropcap": "letter"
+      },
+      "content": "Why are Americans, whose homes average about 2,200 square feet, so obsessed with tiny homes? Perhaps they are responding to the benefits tiny-house owners cite: financial and emotional freedom, a greener lifestyle, the satisfaction of building one’s own refuge."
+    }
+  ]
+}

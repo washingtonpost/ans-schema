@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.5/traits/trait_block_properties.json",
+  "title": "Block properties",
+  "description": "Block properties for style formatting content elements",
+  "type": "object",
+  "properties": {
+    "dropcap": {
+      "title": "Dropcap",
+      "description": "Style the first letter of the first word with a dropcap",
+      "type": "string",
+      "enum": ["letter"]
+    }
+  }
+}
