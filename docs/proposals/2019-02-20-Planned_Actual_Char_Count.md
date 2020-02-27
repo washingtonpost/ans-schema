@@ -23,6 +23,10 @@ Add additional traits `character_count_planned` and `character_count_actual` und
       "character_count_actual": {
         "description": "Current number of characters.",
         "type": "integer"
+      },
+      "character_encoding": {
+        "description": "The encoding used for counting these characters.",
+        "type": "string"
       }
     }
   }
