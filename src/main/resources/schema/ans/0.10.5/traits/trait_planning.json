@@ -95,7 +95,7 @@
           "type": "integer"
         },
         "character_count_actual": {
-          "description": "Current number of characters.",
+          "description": "The current number of characters in the story.",
           "type": "integer"
         },
         "character_encoding": {
