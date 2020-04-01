@@ -5,7 +5,7 @@ Character count exists in Composer but isn't reflected in ANS. As we bring on cl
 
 # Proposal
 
-Add additional traits `character_count_planned` and `character_count_actual` under `Planning -> Story Length` to reflect planned and actual character counts.
+Add additional traits `character_count_planned`, `character_count_actual`, and `character_encoding` under `Planning -> Story Length` to reflect planned and actual character counts.
 
 # Proposed Schema
 
