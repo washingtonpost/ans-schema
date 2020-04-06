@@ -89,6 +89,18 @@
         "line_count_actual": {
           "description": "The current length of the story in lines.",
           "type": "integer"
+        },
+        "character_count_planned": {
+          "description": "The anticipated number of characters in the story.",
+          "type": "integer"
+        },
+        "character_count_actual": {
+          "description": "The current number of characters in the story.",
+          "type": "integer"
+        },
+        "character_encoding": {
+          "description": "The encoding used for counting characters in the story.",
+          "type": "string"
         }
       }
     }
