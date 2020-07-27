@@ -17,20 +17,47 @@ Within the `contributor` object, each contributor will have three fields -- `use
 
 We will need `contributors[].user_id` at least to be an indexed field that can be search on in Content API, and probably `contributors[].creator` as well, if we do decide to pursue tracking a list of all contributors.
 
-# Example
+
+# Proposed Schema
+
+```
+"contributors": {
+  "type": "array",
+  "description": "An array containing contributor objects. Limited to a size of 1 for now.",
+  "minItems": 1,
+  "maxItems": 1,
+  "items": {
+    "type": "object",
+    "description": "An object specifying a contributor to the Document.",
+    "additionalProperties": false,
+    "properties": {
+      "user_id": {
+        "type": "string",
+        "description": "The unique identifier of the user, should be their email."
+      },
+      "display_name": {
+        "type": "string",
+        "description": "The display name for the user."
+      },
+      "creator": {
+        "type": "boolean",
+        "description": "T/F if the user is the original creator of the document."
+      }
+    },
+    "required": ["user_id", "creator"]
+  }
+}
+```
+
+## Example
 
 ```
 ...
-contributors: [
+"contributors": [
  {
   "user_id": "megan.delaunay@washpost.com",
   "display_name": "Megan DeLaunay",
   "creator": True
- },
- {
-  "user_id": "anais.felt@washpost.com",
-  "display_name": "Anais Felt",
-  "creator": False
  }
 ]
 ...
