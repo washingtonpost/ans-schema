@@ -71,6 +71,14 @@ The `contributors` trait will be most useful once multiple editorial apps are us
 
 For API Users, ie, creating content directly in Draft API or other creation APIs, it will be the user's responsibility to set this field if desired. Otherwise, it will be left blank.
 
+## Exposed Editorial Fields
+
+Isn't this just another Editorial Field that will now be accessible via Content API? Aren't we trying to get rid of those? Yes and also yes.
+
+In the long term, the preference would definitely be to have a separate product (as a part of Draft API) that is geared towards searching and rendering for Editorial Fields and content, like the `planning` trait, these `contributors`, `inline_comments`, and others. Ticket PPSE-65 addresses a short term option for this, which is to by default not expose those fields in Content API.
+
+There are other options that can make this even more robust until an Editorial Search product is available within the Publishing Platform.
+
 
 # Implementation
 
