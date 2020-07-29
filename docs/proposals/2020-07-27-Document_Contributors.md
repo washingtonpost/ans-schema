@@ -11,40 +11,37 @@ An upcoming use case of Arc Broadcast is a homepage view, which will show app us
 
 Add a `contributors` trait to the Story, Video, Image, Gallery, and Content Types that will hold key information about the person(s) who created and then later edited the Document.
 
-For this MVP, a limit of length 1 on the array is acceptable, holding just the information on the `creator`. However, as we move forward with this feature in Broadcast, there may be a desire to hold a list of all contributors to the Document, which is why it is an Array.
+For this MVP, the `contributors` trait will have one key field, `created_by`, which holds an object with a `display_name` and unique identifier, `user_id` of a given person.
 
-Within the `contributor` object, each contributor will have three fields -- `user_id`, `display_name`, and `creator`. The first two are just Strings that hold an identifier and a human-readable display name. The last is a Boolean value for whether or not this person was the initial `creator` of the Document. (But I am very open to other/better suggestions on how to do this).
+In the future, there is likely a scenario in which we want to track *all* contributors to a document, in which case we can add another subfield for this, which is why I've proposed a `contributor` and then `created_by` subfield. The theory then being we could add an `updated_by` field which holds an array of contributors. 
 
-We will need `contributors[].user_id` at least to be an indexed field that can be search on in Content API, and probably `contributors[].creator` as well, if we do decide to pursue tracking a list of all contributors.
+
+We will need `contributors.created_by.user_id` at least to be an indexed field that can be search on in Content API.
 
 
 # Proposed Schema
 
 ```
-"contributors": {
-  "type": "array",
-  "description": "An array containing contributor objects. Limited to a size of 1 for now.",
-  "minItems": 1,
-  "maxItems": 1,
-  "items": {
-    "type": "object",
-    "description": "An object specifying a contributor to the Document.",
-    "additionalProperties": false,
-    "properties": {
-      "user_id": {
-        "type": "string",
-        "description": "The unique identifier of the user, should be their email."
-      },
-      "display_name": {
-        "type": "string",
-        "description": "The display name for the user."
-      },
-      "creator": {
-        "type": "boolean",
-        "description": "T/F if the user is the original creator of the document."
+{
+  "title": "Contributors",
+  "description": "Trait that holds information on who created and contributed to a given document in Arc.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "created_by": {
+      "description": "The Creator of the Document.",
+      "type": "object",
+      "properties": {
+        "user_id": {
+          "type": "string"
+          "description": "The unique ID of the Arc user who created the Document"
+        },
+        "display_name": {
+          "type": "string"
+          "description": "The display name of the Arc user who created the Document"
+        }
       }
-    },
-    "required": ["user_id", "creator"]
+    }
   }
 }
 ```
@@ -53,13 +50,12 @@ We will need `contributors[].user_id` at least to be an indexed field that can b
 
 ```
 ...
-"contributors": [
- {
-  "user_id": "megan.delaunay@washpost.com",
-  "display_name": "Megan DeLaunay",
-  "creator": True
- }
-]
+"contributors": {
+  "created_by" : {
+    "user_id": "megan.delaunay@washpost.com",
+    "display_name": "Megan DeLaunay",
+  }
+}
 ...
 ```
 
@@ -75,9 +71,7 @@ For API Users, ie, creating content directly in Draft API or other creation APIs
 
 Isn't this just another Editorial Field that will now be accessible via Content API? Aren't we trying to get rid of those? Yes and also yes.
 
-In the long term, the preference would definitely be to have a separate product (as a part of Draft API) that is geared towards searching and rendering for Editorial Fields and content, like the `planning` trait, these `contributors`, `inline_comments`, and others. Ticket PPSE-65 addresses a short term option for this, which is to by default not expose those fields in Content API.
-
-There are other options that can make this even more robust until an Editorial Search product is available within the Publishing Platform.
+In the long term, the preference would definitely be to have a separate product (as a part of Draft API) that is geared towards searching and rendering for Editorial-specific fields, like the `planning` trait, these `contributors`, `inline_comments`, and others. Ticket PPSE-65 addresses a short term option for this, which is to by default not expose those fields in Content API. There are other options that can make this even more robust until an Editorial Search product is available within the Publishing Platform.
 
 
 # Implementation
