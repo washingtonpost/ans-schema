@@ -1,4 +1,4 @@
-# Collection Query Backfill 
+# Collection Query Backfill
 
 ## Problem
 
@@ -11,13 +11,16 @@ In order to limit scope on both the rendering and publishing sides, we only allo
 
 ### Example
 
-We would update the ANS spec to allow specifying a single website or tag:
+This document propose to implement the first iteration of query backfill.
+In this first step we would update the ANS spec to allow specifying a single section or tag.
+A Subsequent releases will be made to support multiple tags and sections.
+The current proposed schema is setting the contract for the first release and all subsequent releases, as such we call so lets call those fields tags and sections and use arrays for future proofing.
 
 ```JSON
 {
   "type": "collection",
   "dynamic_items": {
-    "type": "sections"
+    "type": "sections",
     "ids": ["/politics"]
   },
 }
@@ -27,7 +30,7 @@ We would update the ANS spec to allow specifying a single website or tag:
 {
   "type": "collection",
   "dynamic_items": {
-    "type": "tags"
+    "type": "tags",
     "ids": ["basketball"]
   },
   ...
