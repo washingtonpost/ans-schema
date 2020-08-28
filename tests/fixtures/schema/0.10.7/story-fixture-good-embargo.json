@@ -1,0 +1,20 @@
+{
+  "type": "story",
+  "version": "0.10.7",
+  "headlines": {
+    "basic": "Embargo"
+  },
+  "content_elements": [
+    {
+      "type": "text",
+      "content": "There is an embargo"
+    }
+  ],
+  "content_restrictions": {
+    "embargo": {
+      "active": true,
+      "end_time": "2020-11-30T05:00:00Z",
+      "description": "This is an embargo"
+    }
+  }
+}
