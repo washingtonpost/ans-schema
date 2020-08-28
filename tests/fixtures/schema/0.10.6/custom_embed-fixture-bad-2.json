@@ -1,0 +1,15 @@
+{
+  "_id": "WXYZABCDEFGHIJKLMNOPQRSTUV",
+  "type": "custom_embed",
+
+  "subtype": "my_custom_video",
+  "alignment": "left",
+  "channels": [ "web" ],
+
+  "embed": {
+    "config": {
+      "autoplay": true,
+      "startPos": 32
+    }
+  }
+}

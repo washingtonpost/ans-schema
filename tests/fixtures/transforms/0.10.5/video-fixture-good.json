@@ -1,0 +1,96 @@
+{
+  "_id": "unique ANS id",
+  "type": "video",
+  "version": "0.10.5",
+  "created_date": "2015-06-25T09:50:50.52Z",
+  "credits": {
+    "by": [
+      {
+        "type": "author",
+        "version": "0.10.5",
+        "name": "Bruce Harris",
+        "byline": "Bruce Harris"
+      }
+    ]
+  },
+  "location": "Washington, D.C.",
+  "geo": {
+    "latitude": 38.9047,
+    "longitude": -77.0164
+  },
+  "address": {
+    "locality": "Washington, D.C.",
+    "postal_code": "20002",
+    "country_name": "USA"
+  },
+  "copyright": "(c) 2015, The Washington Post, Inc",
+  "canonical_url": "https://www.youtube.com/watch?v=iZ-nBDcMlWs",
+  "taxonomy": {
+    "keywords": [
+      {
+        "keyword": "sailing",
+        "score": 0.005
+      }
+    ],
+    "tags": []
+  },
+  "description": {
+    "basic": "We went out in 25+ knots and massive waves with two 420's and a 470 off Sandringham Yacht Club... The result was a broken camera and some almost broken sailors. We hope you enjoy the carnage and speed. "
+  },
+  "duration": 139000,
+  "transcript": "This is a transcript of all the words said in the video. This can go on for quite some time.",
+  "rating": "graphic",
+  "video_type": "clip",
+  "youtube_content_id": "nKW3wvhnZoE",
+  "streams": [
+    {
+      "height": 360,
+      "width": 640,
+      "fileSize": 4443944,
+      "audioCodec": "",
+      "videoCodec": "",
+      "streamType": "ts",
+      "url": "https://videos.posttv.com/washpost-production/The%20Washington%20Post/20150701/55944729e4b082c8417f4483/55944904e4b0ef3ccc0da042_t_1435781395718_mobile.m3u8",
+      "bitrate": 600,
+      "provider": "elastictranscoder"
+    },
+    {
+      "height": 360,
+      "width": 640,
+      "fileSize": 2738596,
+      "audioCodec": "",
+      "videoCodec": "",
+      "streamType": "ts",
+      "url": "https://videos.posttv.com/washpost-production/The%20Washington%20Post/20150701/55944729e4b082c8417f4483/55944904e4b0ef3ccc0da042_t_1435781395718_mobile.m3u8",
+      "bitrate": 300,
+      "provider": "elastictranscoder"
+    }
+  ],
+  "promo_image": {
+    "_id": "unique image id",
+    "type": "image",
+    "version": "0.10.5",
+    "created_date": "2015-06-25T09:50:50.52Z",
+    "location": "Washington, D.C.",
+    "url": "https://img.washingtonpost.com/rf/image_908w/2010-2019/WashingtonPost/2012/06/29/Outlook/Advance/Images/511969927-363.jpg",
+    "caption": "US Supreme Court Justice Antonin Scalia testifies before the Senate Judiciary Committee",
+    "width": 800,
+    "height": 640
+  },
+  "subtitles": {
+    "confidence": 0.657583939,
+    "subtitlesUrls": [
+      {
+        "format": "DFXP",
+        "url": "https://closedcaptions.posttv.com/06-30-2015/5592c09fe4b082c8417f3f72_5592c013e4b082c8417f3f71/t_1435683757146.dfxp"
+      },
+      {
+        "format": "RAW_TEXT",
+        "url": "https://closedcaptions.posttv.com/06-30-2015/5592c09fe4b082c8417f3f72_5592c013e4b082c8417f3f71/t_1435683757146.rawtext"
+      }
+    ]
+  },
+  "additional_properties": {
+    "foo": "bar"
+  }
+}
