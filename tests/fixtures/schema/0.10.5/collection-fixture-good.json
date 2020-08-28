@@ -319,9 +319,5 @@
     }
   },
   "canonical_website": "washpost",
-  "dynamic_items": {
-    "type": "sections",
-    "ids": ["/politics"]
-  },
   "content_aliases": [ "man-dog-bite-collection", "dog-collection-1" ]
 }

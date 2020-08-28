@@ -1,0 +1,41 @@
+{
+  "_id" : "XYZABC1",
+  "additional_properties" : {
+    "version" : 0,
+    "coverPhoto" : null,
+    "published" : false
+  },
+  "channels": ["web"],
+  "content_elements" : [ {
+    "_id" : "XYZABC2",
+    "additional_properties" : {
+      "originalUrl" : "",
+      "published" : false
+    },
+    "type" : "image",
+    "url" : "",
+    "version" : "0.10.6"
+  }, {
+    "_id" : "XYZABC3",
+    "additional_properties" : {
+      "originalUrl" : "",
+      "published" : false
+    },
+    "type" : "image",
+    "url" : "",
+    "version" : "0.10.6"
+  } ],
+  "created_date" : "2016-04-02T12:02:00+00:00",
+  "description" : {
+    "basic" : "test gallery description 1"
+  },
+  "headlines" : {
+    "basic" : "gallery galleryName 1"
+  },
+  "content_restrictions": {
+    "content_code": "green"
+  },
+  "last_updated_date" : "2016-04-02T12:02:00+00:00",
+  "type" : "gallery",
+  "version" : "0.10.6"
+}

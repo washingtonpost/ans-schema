@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.6/story_element/table.json",
+  "description": "A data table content element",
+  "type": "object",
+  "additonalProperties": false,
+  "properties": {
+    "type": {
+      "enum": [ "table" ]
+    },
+    "_id": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.6/traits/trait_id.json"
+    },
+    "subtype": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.6/traits/trait_subtype.json"
+    },
+    "channels": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.6/traits/trait_channel.json"
+    },
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.6/traits/trait_additional_properties.json"
+    },
+
+
+    "header": {
+      "type": "array",
+      "description": "The header row of the table",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.6/story_elements/text.json"
+      }
+	},
+    "rows" : {
+	  "type" : "array",
+      "description": "The data rows of the table",
+      "items": {
+        "type": "array",
+        "items": {
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.6/story_elements/text.json"
+        }
+	  }
+    }
+  },
+  "required": [ "type", "rows" ]
+
+}

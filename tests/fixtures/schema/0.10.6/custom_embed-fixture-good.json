@@ -1,0 +1,17 @@
+{
+  "_id": "WXYZABCDEFGHIJKLMNOPQRSTUV",
+  "type": "custom_embed",
+
+  "subtype": "my_custom_video",
+  "alignment": "left",
+  "channels": [ "web" ],
+
+  "embed": {
+    "id": "12345",
+    "url": "https://my.custom.video.com/api/embed/",
+    "config": {
+      "autoplay": true,
+      "startPos": 32
+    }
+  }
+}

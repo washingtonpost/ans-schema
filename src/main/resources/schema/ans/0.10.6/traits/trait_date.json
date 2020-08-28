@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.6/traits/trait_date.json",
+    "title": "Dated trait",
+    "description": "Trait that applies common publishing-related dates to a schema.",
+    "type": "object",
+    "properties": {
+        "created_date": {
+            "description": "When the content was originally created (RFC3339-formatted).",
+            "type": "string",
+            "format": "date-time"
+        },
+        "last_updated_date": {
+            "description": "When the content was last updated (RFC3339-formatted).",
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}

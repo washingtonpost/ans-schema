@@ -1,0 +1,10 @@
+{
+    "_id": "unique ANS id",
+    "type": "restricted",
+    "restricted_content": {
+    },
+    "reasons": [{
+      "restriction_id": "unique ARC UUID",
+      "message": "a reason for the content to be restricted"
+    }]
+}
