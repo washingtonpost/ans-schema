@@ -14,6 +14,12 @@
       }
     ]
   },
+  "contributors": {
+    "created_by" : {
+      "user_id": "william.davis@washpost.com",
+      "display_name": "Tyler Davis"
+    }
+  },
   "location": "Washington, D.C.",
   "geo": {
     "latitude": 38.9047,
