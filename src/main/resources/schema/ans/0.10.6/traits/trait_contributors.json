@@ -15,7 +15,7 @@
           "description": "The unique ID of the Arc user who created the Document"
         },
         "display_name": {
-          "type": "string"
+          "type": "string",
           "description": "The display name of the Arc user who created the Document"
         }
       }
