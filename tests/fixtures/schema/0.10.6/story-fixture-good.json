@@ -35,12 +35,6 @@
       }
     ]
   },
-  "contributors": {
-    "created_by" : {
-      "user_id": "william.davis@washpost.com",
-      "display_name": "Tyler Davis"
-    }
-  },
   "language": "en",
   "location": "Washington, D.C.",
   "geo": {

@@ -157,6 +157,10 @@
 
     "websites": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.7/traits/trait_websites.json"
+    },
+    
+    "contributors": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.7/traits/trait_contributors.json"
     }
 
   },
