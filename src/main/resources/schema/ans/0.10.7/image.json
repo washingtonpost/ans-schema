@@ -169,6 +169,9 @@
     "licensable": {
       "description": "True if the image can legally be licensed to others.",
       "type": "boolean"
+    },
+    "contributors": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.7/traits/trait_contributors.json"
     }
   },
   "required": [ "type", "version" ]

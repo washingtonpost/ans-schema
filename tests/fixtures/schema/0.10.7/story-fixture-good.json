@@ -35,6 +35,12 @@
       }
     ]
   },
+  "contributors": {
+    "created_by" : {
+      "user_id": "william.davis@washpost.com",
+      "display_name": "Tyler Davis"
+    }
+  },
   "language": "en",
   "location": "Washington, D.C.",
   "geo": {
@@ -331,7 +337,8 @@
           "content_elements": [
             {
               "type": "image",
-              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Underwoodfive.jpg/220px-Underwoodfive.jpg"
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Underwoodfive.jpg/220px-Underwoodfive.jpg",
+              "version": "0.10.7"
             },
             {
               "type": "text",
@@ -422,12 +429,14 @@
         {
           "type": "image",
           "url": "http://foo.com/foo.jpg",
-          "caption": "Foo"
+          "caption": "Foo",
+          "version": "0.10.7"
         },
         {
           "type": "image",
           "url": "http://bar.com/bar.jpg",
-          "caption": "Bar"
+          "caption": "Bar",
+          "version": "0.10.7"
         }
       ]
     },
