@@ -6,8 +6,8 @@ JSON schema definition and supporting example/validation code for The Washington
 # Overview
 ANS ("Arc Native Specification") is the collection of schema documents that comprise the Washington Post's definition of "content", in so far as content is passed back and forth between systems in the Arc ecosystem of applications.
 
-## The current production version of ANS is 0.10.6
-## The current development version of ANS is 0.10.7
+## The current production version of ANS is 0.10.7
+## The current development version of ANS is 0.10.8
 
 ## Schema files
 ANS Schema files are defined with the [JSON Schema specification](https://spacetelescope.github.io/understanding-json-schema/index.html).  Schemas are defined in individual files under the [src/main/resrouces/schema/ans/_version_/](src/main/resources/schema/ans/0.10.0/) directory.
