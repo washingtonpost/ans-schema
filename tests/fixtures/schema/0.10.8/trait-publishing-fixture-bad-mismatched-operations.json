@@ -1,0 +1,10 @@
+{
+  "has_published_edition": true,
+  "scheduled_operations": {
+    "publish_edition": [{
+      "type": "story_operation",
+      "operation": "delete",
+      "story_id": "ABC"
+    }]
+  }
+}
