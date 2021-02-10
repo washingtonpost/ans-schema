@@ -1,0 +1,19 @@
+{
+  "_id": "ABC",
+  "type": "link_list",
+  "subtype": "more-information",
+  "alignment": "right",
+  "title": "Learn More",
+  "items": [
+    {
+      "_id": "XYY",
+      "type": "text",
+      "content": "<p>This does belong here</p>"
+    },
+    {
+      "_id": "XYZ",
+      "type": "text",
+      "content": "<p>This belongs here too</p>"
+    }
+  ]
+}

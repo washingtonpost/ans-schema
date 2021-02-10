@@ -1,0 +1,8 @@
+{
+    "_id": "ABC4567",
+    "type": "numeric_rating",
+    "numeric_rating": 2.5,
+    "min": 0,
+    "max": 5,
+    "units": "stars"
+}
