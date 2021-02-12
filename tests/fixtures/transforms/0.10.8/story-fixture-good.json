@@ -1,0 +1,354 @@
+{
+  "_id": "unique ANS id",
+  "type": "story",
+  "version": "0.10.8",
+  "created_date": "2015-06-24T09:50:50.52Z",
+  "last_updated_date": "2015-06-24T09:50:50.52Z",
+  "credits": {
+    "by": [
+      {
+        "type": "author",
+        "version": "0.10.8",
+        "name": "John Q. Reporter",
+        "image": {
+          "_id": "unique ANS id",
+          "type": "image",
+          "version": "0.10.8",
+          "created_date": "2015-06-25T09:50:50.52Z",
+          "url": "https://img.washingtonpost.com/wp-apps/imrs.php?src=http://wp-eng-static.washingtonpost.com/author_images/faiolaam.jpg?ts=1405950848547&w=90&h=90"
+        },
+        "url": "https://www.washingtonpost.com/people/anthony-faiola",
+        "social_links": [
+          {
+            "site": "twitter",
+            "url": "https://www.twitter.com/Anthony_Faiola"
+          },
+          {
+            "site": "facebook",
+            "url": "https://www.facebook.com/anthony.faiola"
+          }
+        ],
+        "byline": "John Q. Reporter",
+        "bio": "Anthony Faiola is The Post's Berlin bureau chief. Faiola joined the Post in 1994, since then reporting for the paper from five continents and serving as bureau chief in Tokyo, Buenos Aires, New York and London.",
+        "org": "The Washington Post"
+      }
+    ]
+  },
+  "language": "en",
+  "location": "Washington, D.C.",
+  "geo": {
+    "latitude": 38.9047,
+    "longitude": -77.0164
+  },
+  "address": {
+    "street_address": "1600 Pennsylvania Ave",
+    "extended_address": "West Wing",
+    "locality": "Washington",
+    "region": "D.C.",
+    "postal_code": "20002",
+    "country_name": "USA"
+  },
+  "copyright": "(c) 2015 The Washington Post, Inc.",
+  "canonical_url": "http://www.washingtonpost.com/local/anesthesiologist-trashes-sedated-patient-jury-orders-her-to-pay-500000/2015/06/23/cae05c00-18f3-11e5-ab92-c75ae6ab94b5_story.html",
+  "short_url": "http://wapo.st/1Crp6bY",
+  "headlines": {
+    "basic": "The default headline for this story",
+    "twitter": "Twitter headline!"
+  },
+  "description": {
+    "basic": "A Vienna man went in for a colonoscopy and intended to record his doctor"
+  },
+  "related_content": {
+    "basic": [
+      {
+        "_id": "some other unique ANS id",
+        "type": "story",
+        "version": "0.10.8"
+      }
+    ]
+  },
+  "promo_items": {
+    "basic": {
+      "_id": "unique ANS id",
+      "type": "image",
+      "version": "0.10.8",
+      "created_date": "2015-06-25T09:50:50.52Z",
+      "credits": {
+        "by": [
+          {
+            "type": "author",
+            "version": "0.10.8",
+            "name": "Ansel Adams",
+            "byline": "Ansel Adams"
+          }
+        ]
+      },
+      "url": "https://tinyurl.com/mqyonhb",
+      "caption": "Never gonna give you up",
+      "subtitle": "Never gonna let you down",
+      "width": 800,
+      "height": 640
+    }
+  },
+  "taxonomy": {
+    "keywords": [
+      {
+        "keyword": "Anesthesiologist",
+        "score": 0.77,
+        "frequency": 2
+      }
+    ],
+    "sites": [
+      {
+        "_id": "site_1",
+        "type": "site",
+        "version": "0.10.8",
+        "name": "Business",
+        "description": "For all your business needs",
+        "path": "/business",
+        "additional_properties": {
+          "foo": "bar"
+        },
+        "primary": false
+      },
+      {
+        "_id": "site_2",
+        "type": "site",
+        "version": "0.10.8",
+        "name": "Manufacturing",
+        "description": "For all your manufacturing needs",
+        "path": "/business/manufacturing",
+        "parent_id": "site_1",
+        "additional_properties": {
+          "foo": "bar"
+        },
+        "primary": false
+      }
+    ],
+    "tags": [
+      {
+        "_id": "tag1",
+        "text": "tag one",
+        "description": "The first tag",
+        "slug": "tag-one",
+        "additional_properties": {
+          "foo": "bar"
+        }
+      },
+      {
+        "_id": "tag2",
+        "text": "tag two",
+        "additional_properties": {
+          "tag": "tag two"
+        }
+      }
+    ]
+  },
+  "label": {
+    "basic": {
+      "text": "The Kicker",
+      "url": "https://www.washingtonpost.com/kicker",
+      "display": true,
+      "additional_properties": {
+        "bar": "foo"
+      }
+    },
+    "another_one": {
+      "text": "Another One"
+    }
+  },
+  "source": {
+    "source_id": "1234-5678",
+    "name": "The Washington Post",
+    "system": "Methode",
+    "additional_properties": {
+      "foo": "bar",
+      "type": "Original"
+    }
+  },
+  "publish_date": "2015-06-24T09:49:00.10Z",
+  "status": "published",
+  "display_date": "2015-06-25T09:50:50.52Z",
+  "editor_note": "This URL earlier linked to a post that we’ve unpublished due to its flawed premise.",
+  "owner": {
+    "id": "washpost",
+    "sponsored": false
+  },
+  "content_elements": [
+    {
+      "_id": "123",
+      "type": "text",
+      "content": "this is my first paragraph"
+    },
+    {
+      "_id": "456",
+      "type": "text",
+      "content": "this is my second paragraph"
+    },
+    {
+      "_id": "789",
+      "type": "image",
+      "version": "0.10.8",
+      "created_date": "2015-06-25T09:50:50.52Z",
+      "credits": {
+        "by": [
+          {
+            "type": "author",
+            "version": "0.10.8",
+            "name": "Ansel Adams",
+            "byline": "Ansel Adams"
+          }
+        ]
+      },
+      "url": "https://tinyurl.com/mqyonhb",
+      "caption": "Never gonna give you up",
+      "subtitle": "Never gonna let you down",
+      "width": 800,
+      "height": 640,
+      "taxonomy": {
+        "keywords": [
+          {
+            "keyword": "Anesthesiologist",
+            "score": 0.77,
+            "frequency": 2
+          }
+        ],
+        "sites": [
+          {
+            "_id": "site_1",
+            "type": "site",
+            "version": "0.10.8",
+            "name": "Business",
+            "description": "For all your business needs",
+            "path": "/business",
+            "additional_properties": {
+              "foo": "bar"
+            },
+            "primary": false
+          },
+          {
+            "_id": "site_2",
+            "type": "site",
+            "version": "0.10.8",
+            "name": "Manufacturing",
+            "description": "For all your manufacturing needs",
+            "path": "/business/manufacturing",
+            "parent_id": "site_1",
+            "additional_properties": {
+              "foo": "bar"
+            },
+            "primary": false
+          }
+        ],
+        "tags": []
+      }
+    },
+    {
+      "_id": "49876543210",
+      "type": "list",
+      "list_type": "unordered",
+      "items": [
+        {
+          "_id": "t1",
+          "type": "text",
+          "content": "Foo"
+        },
+        {
+          "_id": "t2",
+          "type": "text",
+          "content": "Bar"
+        },
+        {
+          "_id": "l2",
+          "type": "list",
+          "list_type": "ordered",
+          "items": [
+            {
+              "_id": "t4",
+              "type": "text",
+              "content": "Hi"
+            },
+            {
+              "_id": "t5",
+              "type": "text",
+              "content": "Mom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "549876543210",
+      "type": "blockquote",
+      "content": "<i>Here's my html</i>"
+    },
+    {
+      "_id": "649876543210",
+      "type": "raw_html",
+      "content": "<iframe src=\"http://www.google.com\"></iframe>",
+      "channels": [
+        "web"
+      ]
+    },
+    {
+      "type": "reference",
+      "_id": "22222229",
+      "channels": [
+        "ios",
+        "android"
+      ],
+      "referent": {
+        "type": "oembed",
+        "id": "https://twitter.com/BradDavis_WFTS/status/664422935130566656",
+        "provider": "https://api.twitter.com/1/statuses/oembed.json"
+      }
+    }
+  ],
+  "corrections": [
+    {
+      "correction_type": "retraction",
+      "text": "This document is a fabrication by the author and is false.",
+      "type": "correction"
+    },
+    {
+      "correction_type": "clarification",
+      "text": "An earlier version of this document mis-spelled the name of William Jefferson Clinton.",
+      "additional_properties": {
+        "foo": "bar"
+      },
+      "type": "correction"
+    },
+    {
+      "type": "correction",
+      "correction_type": "clarification",
+      "additional_properties": {
+        "content": "An earlier version of this document mis-spelled the name of William Jefferson Clinton."
+      },
+      "text": ""
+    },
+    {
+      "type": "correction",
+      "correction_type": "clarification",
+      "text": "An earlier version of this document mis-spelled the name of George Walker Bush.",
+      "additional_properties": {
+        "foo": "bar",
+        "content": "An earlier version of this document mis-spelled the name of William Jefferson Clinton."
+      },
+      "alignment": "left",
+      "channels": [
+        "web"
+      ],
+      "subtype": "why",
+      "_id": "correction_4"
+    }
+  ],
+  "comments": {
+    "comments_period": 14,
+    "allow_comments": true,
+    "display_comments": true,
+    "moderation_required": false,
+    "additional_properties": {
+      "favorite_comment": "All work and no play makes Jack a dull boy."
+    }
+  }
+}
