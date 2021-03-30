@@ -1,5 +1,8 @@
 # ANS Release Notes
 
+### 1.10.7.1 2021/3/30
+
+* Adds a return when it finish reading files to retrive ANS versions
 ### 1.9.1 2019/2/1
 
 * Adds new ANS version to validator logic
