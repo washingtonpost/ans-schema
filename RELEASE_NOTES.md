@@ -2,7 +2,7 @@
 
 ### 1.10.7.1 2021/3/30
 
-* Adds a return when it finish reading files to retrive ANS versions
+* Prevent the callback function from being called twice when errors occur during the loading of schemas
 
 ### 1.9.1 2019/2/1
 
