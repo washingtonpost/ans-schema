@@ -93,6 +93,9 @@
     "vanity_credits": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_vanity_credits.json"
     },
+    "tag": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/utils/tag.json"
+    },
     "taxonomy": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_taxonomy.json"
     },
