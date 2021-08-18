@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/video.json",
   "title": "Video Content",
-  "description": "Holds attributes of an ANS video component. In the Arc ecosystem, these are stored in Goldfish.",
+  "description": "Holds attributes of an ANS video component. In the Arc ecosystem, these are stored in Video Center.",
   "type": "object",
   "additionalProperties": false,
   "properties": {
