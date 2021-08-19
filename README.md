@@ -1,10 +1,8 @@
 # ans-schema
-JSON schema definition and supporting example/validation code for The Washington Post's ANS specification
-
-*NOTE* This schema is in development and subject to change.
+JSON schema definition and supporting example/validation code for Arc XP's ANS specification
 
 # Overview
-ANS ("Arc Native Specification") is the collection of schema documents that comprise the Washington Post's definition of "content", in so far as content is passed back and forth between systems in the Arc ecosystem of applications.
+ANS ("Arc Native Specification") is the collection of schema documents that comprise Arc XP's definition of "content", in so far as content is passed back and forth between systems in the Arc ecosystem of applications.
 
 ## The current production version of ANS is 0.10.8
 ## The current development version of ANS is 0.10.9
@@ -18,7 +16,7 @@ One can use a variety of third party tools to validate their content against the
 
 
 ## Examples
-A few examples are provided of content documents that validate against the Washington Post ANS schema:
+A few examples are provided of content documents that validate against Arc XP's ANS schema:
 
 1. [An Example Story](tests/fixtures/schema/0.10.3/story-fixture-references.json)
 2. [An Example Video](tests/fixtures/schema/0.10.3/video-fixture-nationals.json)
