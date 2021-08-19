@@ -68,6 +68,8 @@ PageBuilder should also change their engine to check `external_canonical_url` be
 
 ```
 
+### Open Questions
+1. Should this be a top-level field or part of the existing `distributor` trait? 
 
 ## Concerns
 
@@ -85,3 +87,4 @@ However, for this field to be properly used, we also need:
 1. PageBuilder support for consuming the field if it exists 
 2. Composer support for exposing the field for users to set
 3. PS support in Wires and other adapters if required. 
+
