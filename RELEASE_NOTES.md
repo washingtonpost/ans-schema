@@ -1,6 +1,6 @@
 # ANS Release Notes
 
-### 1.10.7.1 2021/3/30
+### 1.10.8 2021/3/30
 
 * Prevent the callback function from being called twice when errors occur during the loading of schemas
 
