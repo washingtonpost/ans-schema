@@ -32,6 +32,6 @@
     "ans": "lib/cli.js"
   },
   "publishConfig": {
-    "registry": "https://washingtonpost.jfrog.io/washingtonpost/api/npm/npm-local"
+    "registry": "https://washingtonpost.jfrog.io/artifactory/api/npm/npm-local/"
   }
 }
