@@ -60,7 +60,7 @@ npm run-script ans -- --ansfile=test.json --version=0.10.3 validate
 You can also load the validator as a library in your node project:
 
 ```
-var ans = require('ans-schema');
+var ans = require('@washingtonpost/ans-schema');
 
 ans.getValidatorForVersion('0.10.3', function(err, validator) {
   var errors = validator.validate({"type":"story", "version":"0.5.8"});
