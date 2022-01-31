@@ -1,5 +1,5 @@
 {
-  "name": "ans-schema",
+  "name": "@washingtonpost/ans-schema",
   "description": "The Washington Post's Arc Native Specification",
   "version": "1.10.8",
   "homepage": "https://github.com/washingtonpost/ans-schema",
@@ -32,6 +32,6 @@
     "ans": "lib/cli.js"
   },
   "publishConfig": {
-    "registry": "https://washingtonpost.jfrog.io/washingtonpost/api/npm/npm-local"
+    "registry": "https://npm.pkg.github.com/"
   }
 }
