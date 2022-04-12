@@ -1,5 +1,9 @@
 # ANS Release Notes
 
+### 1.10.10 2022/04/12
+
+* Removed duplicate description key from trait_id.
+
 ### 1.10.8 2021/3/30
 
 * Prevent the callback function from being called twice when errors occur during the loading of schemas

@@ -1,0 +1,24 @@
+{
+  "budget_line": "allies killed by U.S. missile strike in Syria story 2017-04-13",
+  "internal_note": "Tweeted",
+  "websked_sort_date": "2017-02-27T13:50:00Z",
+  "scheduling": {
+    "planned_publish_date": "2017-02-27T13:50:00Z",
+    "will_have_image": true,
+    "will_have_video": false,
+    "will_have_graphic": false,
+    "will_have_gallery": false
+  },
+  "story_length": {
+    "word_count_planned": 1000,
+    "word_count_actual": 800,
+    "inch_count_planned": 30,
+    "inch_count_actual": 25,
+    "line_count_planned": 100,
+    "line_count_actual": 80,
+    "character_count_planned": 2500,
+    "character_count_actual": 1500,
+    "character_encoding": "UTF-8"
+  },
+  "deadline_miss": 45
+}

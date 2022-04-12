@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.10/src/main/resources/schema/ans/0.10.10/traits/trait_id.json",
+  "title": "Globally Unique ID trait",
+  "description": "A globally unique identifier of the content in the ANS repository.",
+  "type": "string"
+}
