@@ -1,6 +1,6 @@
 {
   "type": "story",
-  "version": "0.10.9",
+  "version": "0.10.10",
 
   "canonical_website": "latimes",
   "canonical_url": "/sports/lakers/yay-lakers-win",
@@ -12,7 +12,7 @@
     "latimes": {
       "website_section": {
         "type": "section",
-        "version": "0.10.9",
+        "version": "0.10.10",
         "_id": "/sports/lakers",
         "_website": "latimes",
         "name": "Lakers"
@@ -61,7 +61,7 @@
     "sections": [
       {
         "type": "section",
-        "version": "0.10.9",
+        "version": "0.10.10",
         "_id": "/sports/bulls",
         "_website": "tribune",
         "name": "Bulls",
@@ -72,14 +72,14 @@
       },
       {
         "type": "section",
-        "version": "0.10.9",
+        "version": "0.10.10",
         "_id": "/sports/lakers",
         "_website": "latimes",
         "name": "Lakers"
       },
       {
         "type": "section",
-        "version": "0.10.9",
+        "version": "0.10.10",
         "_id": "/sports",
         "_website": "balsun",
         "name": "Sports"

@@ -22,7 +22,7 @@
       "height" : 300,
       "type" : "image",
       "url" : "http://path/to/image/1.jpg",
-      "version" : "0.10.9",
+      "version" : "0.10.10",
       "width" : 200
     }, {
       "additional_properties" : {
@@ -39,7 +39,7 @@
       "height" : 300,
       "type" : "image",
       "url" : "http://path/to/image/2.jpg",
-      "version" : "0.10.9",
+      "version" : "0.10.10",
       "width" : 200
     }, {
       "additional_properties" : {
@@ -56,7 +56,7 @@
       "height" : 300,
       "type" : "image",
       "url" : "http://path/to/image/3.jpg",
-      "version" : "0.10.9",
+      "version" : "0.10.10",
       "width" : 200
     } ],
     "description" : {
@@ -66,14 +66,14 @@
       "basic" : "Gallery of Test Images"
     },
     "type" : "gallery",
-    "version" : "0.10.9"
+    "version" : "0.10.10"
   },
   "date" : "2016-04-02T12:02:00+00:00",
   "submit_date" : "2016-04-02T12:02:01+00:00",
   "operation" : "insert",
   "organization_id" : "PW5TIZPZINHXBPNQTAJRSIS123",
   "type" : "gallery-operation",
-  "version" : "0.10.9",
+  "version" : "0.10.10",
   "priority": "standard",
   "app_name": "anglerfish"
 }

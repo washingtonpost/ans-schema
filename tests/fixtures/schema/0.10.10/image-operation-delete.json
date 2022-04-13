@@ -4,7 +4,7 @@
   "operation" : "delete",
   "organization_id" : "PW5TIZPZINHXBPNQTAJRSIS123",
   "type" : "image-operation",
-  "version" : "0.10.9",
+  "version" : "0.10.10",
   "priority": "standard",
   "app_name": "anglerfish"
 }

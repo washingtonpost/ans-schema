@@ -1,7 +1,7 @@
 {
   "_id": "unique ANS id",
   "type": "story",
-  "version": "0.10.9",
+  "version": "0.10.10",
   "created_date": "2015-06-24T09:50:50.52Z",
   "last_updated_date": "2015-06-24T09:50:50.52Z",
   "channels": ["ios", "android"],
@@ -12,11 +12,11 @@
         "byline": "John Q. Reporter",
         "org": "The Washington Post",
         "type": "author",
-        "version": "0.10.9",
+        "version": "0.10.10",
         "image": {
           "_id": "unique ANS id",
           "type": "image",
-          "version": "0.10.9",
+          "version": "0.10.10",
           "created_date": "2015-06-25T09:50:50.52Z",
           "url": "https://img.washingtonpost.com/wp-apps/imrs.php?src=http://wp-eng-static.washingtonpost.com/author_images/faiolaam.jpg?ts=1405950848547&w=90&h=90"
         },
@@ -83,7 +83,7 @@
     ],
     "redirect": [{
       "type": "redirect",
-      "version": "0.10.9",
+      "version": "0.10.10",
       "canonical_url": "/local/anesthesiologist-trashes-sedated-patient-jury-orders-her-to-pay-500000/2015/06/23/cae05c00-18f3-11e5-ab92-c75ae6ab94b5_story.html",
       "redirect_url": "http://www.washingtonpost.com/editors-note/published-too-soon.html"
     }]
@@ -92,7 +92,7 @@
     "basic": {
       "_id": "unique ANS id",
       "type": "image",
-      "version": "0.10.9",
+      "version": "0.10.10",
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {
         "by": [
@@ -100,7 +100,7 @@
             "name": "Ansel Adams",
             "byline": "Ansel Adams",
             "type": "author",
-            "version": "0.10.9"
+            "version": "0.10.10"
           }
         ]
       },
@@ -154,7 +154,7 @@
     "primary_site": {
       "_id": "site_primary",
       "type": "site",
-      "version": "0.10.9",
+      "version": "0.10.10",
       "name": "News",
       "description": "General News",
       "path": "/news",
@@ -166,7 +166,7 @@
       {
         "_id": "site_1",
         "type": "site",
-        "version": "0.10.9",
+        "version": "0.10.10",
         "primary": false,
         "name": "Business",
         "description": "For all your business needs",
@@ -178,7 +178,7 @@
       {
         "_id": "site_2",
         "type": "site",
-        "version": "0.10.9",
+        "version": "0.10.10",
         "primary": true,
         "name": "Manufacturing",
         "description": "For all your manufacturing needs",
@@ -248,7 +248,7 @@
     {
       "_id": "789",
       "type": "image",
-      "version": "0.10.9",
+      "version": "0.10.10",
       "alignment": "left",
 
       "created_date": "2015-06-25T09:50:50.52Z",
@@ -258,7 +258,7 @@
             "name": "Ansel Adams",
             "byline": "Ansel Adams",
             "type": "author",
-            "version": "0.10.9"
+            "version": "0.10.10"
           }
         ]
       },
@@ -511,7 +511,7 @@
 
     "output": {
       "type": "audio",
-      "version": "0.10.9",
+      "version": "0.10.10",
       "streams": [{
         "url": "https://arc-content-api.s3.amazonaws.com/polly/test.mp3"
       }]

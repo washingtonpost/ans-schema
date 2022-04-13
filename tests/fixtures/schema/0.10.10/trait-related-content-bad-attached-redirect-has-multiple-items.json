@@ -2,7 +2,7 @@
   "basic": [
     {
       "type": "story",
-      "version": "0.10.9"
+      "version": "0.10.10"
     },
     {
       "type": "reference",
@@ -16,13 +16,13 @@
   "redirect": [
     {
       "type": "redirect",
-      "version": "0.10.9",
+      "version": "0.10.10",
       "canonical_url": "/here",
       "redirect_url": "/there"
     },
     {
       "type": "redirect",
-      "version": "0.10.9",
+      "version": "0.10.10",
       "canonical_url": "/here",
       "redirect_url": "/there2"
     }

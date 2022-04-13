@@ -1,6 +1,6 @@
 {
   "_id": "unique ANS id",
-  "version": "0.10.9",
+  "version": "0.10.10",
   "type": "story",
   "created_date": "2015-06-24T09:50:50.52Z",
   "last_updated_date": "2015-06-24T09:50:50.52Z",
@@ -54,7 +54,7 @@
     "primary_site": {
       "_id": "site_primary",
       "type": "site",
-      "version": "0.10.9",
+      "version": "0.10.10",
       "name": "News",
       "description": "General News",
       "path": "/news",
@@ -66,7 +66,7 @@
       {
         "_id": "site_1",
         "type": "site",
-        "version": "0.10.9",
+        "version": "0.10.10",
         "primary": false,
         "name": "Business",
         "description": "For all your business needs",
@@ -78,7 +78,7 @@
       {
         "_id": "site_2",
         "type": "site",
-        "version": "0.10.9",
+        "version": "0.10.10",
         "primary": true,
         "name": "Manufacturing",
         "description": "For all your manufacturing needs",

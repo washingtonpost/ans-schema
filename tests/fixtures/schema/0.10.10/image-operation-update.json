@@ -19,7 +19,7 @@
         "name" : "Johnny Anonymous",
         "byline": "Johnny Anonymous",
         "type" : "author",
-        "version": "0.10.9"
+        "version": "0.10.10"
       } ]
     },
     "height" : 600,
@@ -27,14 +27,14 @@
     "subtitle" : "A test photo",
     "type" : "image",
     "url" : "http://anglerfish/fake/url/",
-    "version" : "0.10.9",
+    "version" : "0.10.10",
     "width" : 400
   },
   "date" : "2016-04-02T12:02:00+00:00",
   "operation" : "update",
   "organization_id" : "PW5TIZPZINHXBPNQTAJRSIS123",
   "type" : "image-operation",
-  "version" : "0.10.9",
+  "version" : "0.10.10",
   "priority": "standard",
   "app_name": "anglerfish"
 }

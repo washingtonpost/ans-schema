@@ -4,7 +4,7 @@
   "operation" : "insert-redirect",
   "organization_id" : "staging",
   "type" : "url-operation",
-  "version" : "0.10.9",
+  "version" : "0.10.10",
   "original_url" : "/original-url",
   "destination_url" : "/destination-url",
   "priority": "standard",

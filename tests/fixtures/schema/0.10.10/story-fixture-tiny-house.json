@@ -1,7 +1,7 @@
 {
   "_id": "f8f706f0-0acc-11e5-9e39-0db921c47b93",
   "type": "story",
-  "version": "0.10.9",
+  "version": "0.10.10",
   "created_date": "2015-07-02T09:50:50.52Z",
   "last_updated_date": "2015-07-02T09:50:50.52Z",
   "credits": {
@@ -11,7 +11,7 @@
       "byline": "Nina Patel",
       "org": "The Washington Post",
       "type": "author",
-      "version": "0.10.9",
+      "version": "0.10.10",
       "slug": "nina-patel"
     }]
   },
@@ -21,7 +21,7 @@
       "byline": "Nina Patel contributed this story for The Washington Post.",
       "org": "The Washington Post",
       "type": "author",
-      "version": "0.10.9"
+      "version": "0.10.10"
     }]
   },
 
@@ -50,7 +50,7 @@
       {
         "type": "story",
         "_id": "some other unique ANS id",
-        "version": "0.10.9"
+        "version": "0.10.10"
       },
       {
         "_id": "100000081",
@@ -72,12 +72,12 @@
     "basic": {
       "_id": "unique ANS id",
       "type": "image",
-      "version": "0.10.9",
+      "version": "0.10.10",
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": { "by": [
         {
           "type": "author",
-          "version": "0.10.9",
+          "version": "0.10.10",
           "name": "Ansel Adams",
           "byline": "Ansel Adams"
         }
@@ -187,14 +187,14 @@
     {
       "_id": "1000005",
       "type": "image",
-      "version": "0.10.9",
+      "version": "0.10.10",
       "alignment": "left",
       "created_date": "2015-06-25T09:50:50.52Z",
       "credits": {
         "by": [
           {
             "type": "author",
-            "version": "0.10.9",
+            "version": "0.10.10",
             "name": "Ansel Adams",
             "byline": "Ansel Adams"
           }

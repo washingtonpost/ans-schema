@@ -190,5 +190,11 @@
     "schema": true,
     "upverter": false,
     "downverter": false
+  },
+  {
+    "name": "0.10.10",
+    "schema": true,
+    "upverter": false,
+    "downverter": false
   }
 ]

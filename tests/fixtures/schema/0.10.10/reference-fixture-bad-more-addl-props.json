@@ -2,7 +2,7 @@
   "type": "reference",
   "referent": {
     "type": "author",
-    "version": "0.10.9",
+    "version": "0.10.10",
     "service": "http://www.credits.com/api",
     "provider": "http://www.credits.com/api",
     "id": "00001",

@@ -14,7 +14,7 @@
     },
     "type" : "image",
     "url" : "",
-    "version" : "0.10.9"
+    "version" : "0.10.10"
   }, {
     "_id" : "XYZABC3",
     "additional_properties" : {
@@ -23,7 +23,7 @@
     },
     "type" : "image",
     "url" : "",
-    "version" : "0.10.9"
+    "version" : "0.10.10"
   } ],
   "created_date" : "2016-04-02T12:02:00+00:00",
   "description" : {
@@ -37,5 +37,5 @@
   },
   "last_updated_date" : "2016-04-02T12:02:00+00:00",
   "type" : "gallery",
-  "version" : "0.10.9"
+  "version" : "0.10.10"
 }

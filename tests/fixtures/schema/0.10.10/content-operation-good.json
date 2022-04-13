@@ -3,7 +3,7 @@
   "type": "insert-story",
   "body" : {
     "_id" : "XYZ123",
-    "version": "0.10.9",
+    "version": "0.10.10",
     "type" : "story",
     "content_elements": [
       {
@@ -20,7 +20,7 @@
   "published": false,
   "created": false,
   "branch": "default",
-  "version" : "0.10.9",
+  "version" : "0.10.10",
   "trigger": {
     "type": "image",
     "id": "AB456",

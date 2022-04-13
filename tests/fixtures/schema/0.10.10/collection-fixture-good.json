@@ -1,7 +1,7 @@
 {
   "_id": "ZYXWVUTSRQPONMLKJIHGFEDCBA",
   "type": "collection",
-  "version": "0.10.9",
+  "version": "0.10.10",
   "created_date": "2017-06-24T09:50:50.52Z",
   "last_updated_date": "2017-06-24T09:50:50.52Z",
   "channels": ["ios", "android"],
@@ -12,11 +12,11 @@
         "byline": "John Q. Reporter",
         "org": "The Washington Post",
         "type": "author",
-        "version": "0.10.9",
+        "version": "0.10.10",
         "image": {
           "_id": "unique ANS id",
           "type": "image",
-          "version": "0.10.9",
+          "version": "0.10.10",
           "created_date": "2017-06-25T09:50:50.52Z",
           "url": "https://img.washingtonpost.com/wp-apps/imrs.php?src=http://wp-eng-static.washingtonpost.com/author_images/faiolaam.jpg?ts=1405950848547&w=90&h=90"
         },
@@ -86,7 +86,7 @@
     "basic": {
       "_id": "BBBBBBBBBBBBBBBBBBBBBBBBBB",
       "type": "image",
-      "version": "0.10.9",
+      "version": "0.10.10",
       "created_date": "2017-06-25T09:50:50.52Z",
       "credits": {
         "by": [
@@ -94,7 +94,7 @@
             "name": "Ansel Adams",
             "byline": "Ansel Adams",
             "type": "author",
-            "version": "0.10.9"
+            "version": "0.10.10"
           }
         ]
       },
@@ -132,7 +132,7 @@
       "_id": "/news",
       "_website": "washpost",
       "type": "section",
-      "version": "0.10.9",
+      "version": "0.10.10",
       "name": "News",
       "description": "General News",
       "path": "/news"
@@ -142,7 +142,7 @@
         "_id": "/news",
         "_website": "washpost",
         "type": "section",
-        "version": "0.10.9",
+        "version": "0.10.10",
         "name": "News",
         "description": "General News",
         "path": "/news"
@@ -151,7 +151,7 @@
         "_id": "/news/dogs",
         "_website": "washpost",
         "type": "section",
-        "version": "0.10.9",
+        "version": "0.10.10",
         "name": "Dogs",
         "description": "For all your dog news",
         "path": "/news/dogs",
@@ -311,7 +311,7 @@
         "_id": "/news",
         "_website": "washpost",
         "type": "section",
-        "version": "0.10.9",
+        "version": "0.10.10",
         "name": "General News",
         "path": "/news"
       },
