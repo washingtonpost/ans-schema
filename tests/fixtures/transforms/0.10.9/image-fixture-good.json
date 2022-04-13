@@ -1,13 +1,13 @@
 {
   "_id": "unique ANS id",
   "type": "image",
-  "version": "0.10.8",
+  "version": "0.10.9",
   "created_date": "2015-06-25T09:50:50.52Z",
   "credits": {
     "by": [
       {
         "type": "author",
-        "version": "0.10.8",
+        "version": "0.10.9",
         "name": "Ansel Adams",
         "byline": "Ansel Adams"
       }

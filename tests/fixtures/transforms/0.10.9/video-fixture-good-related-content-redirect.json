@@ -1,11 +1,11 @@
 {
   "type": "video",
-  "version": "0.10.8",
+  "version": "0.10.9",
   "related_content": {
     "basic": [
       {
         "type": "story",
-        "version": "0.10.8",
+        "version": "0.10.9",
         "headlines": {
           "basic": "Dog Bites Man."
         },

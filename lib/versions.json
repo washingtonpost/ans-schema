@@ -188,7 +188,7 @@
   {
     "name": "0.10.9",
     "schema": true,
-    "upverter": false,
+    "upverter": true,
     "downverter": false
   },
   {

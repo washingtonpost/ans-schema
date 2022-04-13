@@ -1,11 +1,11 @@
 {
   "type": "story",
-  "version": "0.10.8",
+  "version": "0.10.10",
   "credits": {
     "by": [
       {
         "type": "author",
-        "version": "0.10.8",
+        "version": "0.10.10",
         "name": "Thomas Jefferson",
         "byline": "Thomas Jefferson",
         "additional_properties": {
@@ -17,7 +17,7 @@
   "content_elements": [
     {
       "type": "story",
-      "version": "0.10.8",
+      "version": "0.10.10",
       "additional_properties": {
         "slug": "foo"
       }
