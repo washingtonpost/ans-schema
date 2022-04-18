@@ -42,7 +42,7 @@
 
       "body": {
         "description": "The object being inserted/updated/deleted",
-        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.10/src/main/resources/schema/ans/0.5.3/utils/site.json"
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.10/src/main/resources/schema/ans/0.10.10/utils/site.json"
       }
     },
     "required": [ "type", "operation", "id", "organization_id" ]
