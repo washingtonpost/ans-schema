@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/story_elements/interstitial_link.json",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/story_elements/interstitial_link.json",
   "description": "An interstitial link",
   "type": "object",
   "additionalProperties": false,
@@ -9,19 +9,19 @@
       "enum": [ "interstitial_link" ]
     },
     "_id": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_id.json"
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/traits/trait_id.json"
     },
     "subtype": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_subtype.json"
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/traits/trait_subtype.json"
     },
     "channels": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_channel.json"
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/traits/trait_channel.json"
     },
     "alignment": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_alignment.json"
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/traits/trait_alignment.json"
     },
     "additional_properties": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_additional_properties.json"
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/traits/trait_additional_properties.json"
     },
 
     "url": {
@@ -38,7 +38,7 @@
       "title": "Link Description",
       "description": "Additional text about the link. May or may not be considered part of the link, depending on implementation.",
 
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/story_elements/text.json"
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/story_elements/text.json"
     },
     "image": {
       "title": "Link Image",
@@ -46,12 +46,12 @@
 
       "oneOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/image.json"
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/image.json"
         },
         {
           "allOf": [
             {
-              "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/utils/reference.json"
+              "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/utils/reference.json"
             },
             {
               "properties": {

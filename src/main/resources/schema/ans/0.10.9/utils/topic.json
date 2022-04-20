@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/utils/topic.json",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/utils/topic.json",
     "title": "Topic",
     "description": "Models a topic used in describing a piece of content.",
     "type": "object",

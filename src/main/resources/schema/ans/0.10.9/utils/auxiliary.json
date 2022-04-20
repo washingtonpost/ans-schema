@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/utils/auxiliary.json",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/utils/auxiliary.json",
     "title": "Auxiliary",
     "description": "Models a auxiliary used in targeting a piece of content.",
     "type": "object",

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_distributor.json",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/traits/trait_distributor.json",
   "title": "Distributor",
   "description": "Information about a third party that provided this content from outside this document's hosted organization.",
   "type": "object",
@@ -23,7 +23,7 @@
       },
 
       "additional_properties": {
-        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_additional_properties.json"
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/traits/trait_additional_properties.json"
       },
 
       "mode": {

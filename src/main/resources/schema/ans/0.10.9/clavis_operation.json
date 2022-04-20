@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/clavis_operation.json",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/clavis_operation.json",
   "description": "An operation to add Clavis information to a story.",
   "type": "object",
   "allOf": [{
@@ -42,37 +42,37 @@
       },
 
       "priority": {
-        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_priority.json"
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/traits/trait_priority.json"
       },
       "app_name": {
-        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_app_name.json"
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/traits/trait_app_name.json"
       },
 
       "keywords": {
         "type": "array",
         "items": {
-          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/utils/keyword.json"
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/utils/keyword.json"
         },
         "description": "A list of keywords."
       },
       "named_entities": {
         "type": "array",
         "items": {
-          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/utils/named_entity.json"
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/utils/named_entity.json"
         },
         "description": "A list of named entities."
       },
       "topics": {
         "type": "array",
         "items": {
-          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/utils/topic.json"
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/utils/topic.json"
         },
         "description": "A list of topics."
       },
       "auxiliaries": {
         "type": "array",
         "items": {
-          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/utils/auxiliary.json"
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/utils/auxiliary.json"
         },
         "description": "A list of auxiliaries."
       }

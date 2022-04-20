@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_label.json",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/traits/trait_label.json",
   "title": "Label",
   "description": "What the Washington Post calls a Kicker",
   "type": "object",
@@ -24,7 +24,7 @@
           "description": "If false, this label should be hidden."
         },
         "additional_properties": {
-          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_additional_properties.json"
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/traits/trait_additional_properties.json"
         }
       },
       "required": [ "text" ]
@@ -49,7 +49,7 @@
           "description": "If false, this label should be hidden."
         },
         "additional_properties": {
-          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_additional_properties.json"
+          "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/traits/trait_additional_properties.json"
         }
       },
       "required": [ "text" ]

@@ -34,7 +34,7 @@
       },
       "body": {
         "description": "The object being inserted/updated",
-        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_publication_pitch.json"
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/0.10.9_ans_generator/src/main/resources/schema/ans/0.10.9/traits/trait_publication_pitch.json"
       }
     },
     "required": [ "type", "operation", "id", "organization_id", "body" ]
