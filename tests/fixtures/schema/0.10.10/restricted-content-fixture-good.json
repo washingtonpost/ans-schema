@@ -1,0 +1,16 @@
+{
+    "_id": "unique ANS id",
+    "type": "restricted",
+    "restricted_content": {
+      "referent": {
+        "id": "FFY22CTRZAI6LDMTBLZRP3KYZE",
+        "type": "gallery",
+        "provider": ""
+      },
+      "type": "reference"
+    },
+    "reasons": [{
+      "restriction_id": "unique ARC UUID",
+      "message": "a reason for the content to be restricted"
+    }]
+}

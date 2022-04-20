@@ -1,5 +1,11 @@
 # ANS Release Notes
 
+### 1.10.9 2022/04/20
+
+* Remove duplicate description key from trait_id.json.
+* Refactored usage of patternProperties in custom_embed.json to not use negative lookahead regexs which are optional to support according to the draft04 specification.
+* Updated story_operation.json, author_operation.json, and video_operation.json to reference 0.10.9 versions of schema files instead of 0.5.3. 
+
 ### 1.10.8 2021/3/30
 
 * Prevent the callback function from being called twice when errors occur during the loading of schemas

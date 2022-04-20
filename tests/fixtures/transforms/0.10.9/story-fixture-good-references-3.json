@@ -1,0 +1,14 @@
+{
+  "type": "story",
+  "version": "0.10.9",
+  "content_elements": [
+    {
+      "type": "reference",
+      "referent": {
+        "id": "1",
+        "type": "author",
+        "provider": "https://foo.com/authorservice"
+      }
+    }
+  ]
+}
