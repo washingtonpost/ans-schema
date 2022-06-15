@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "description": "Variant metadata describing its ID as well as the websites to which it is assigned",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/utils/variant.json",
+  "properties": {
+    "_id": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/traits/trait_id.json",
+      "description": "variant ID"
+    },
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/traits/trait_additional_properties.json"
+    },
+    "websites": {
+      "description": "websites assigned to this variant; individual values must be mutually exclusive with other variants",
+      "items": {
+        "maxItems": 50,
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "_id"
+  ],
+  "title": "Variant metadata",
+  "type": "object"
+}
