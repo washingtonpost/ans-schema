@@ -11,6 +11,10 @@
     "additional_properties": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/traits/trait_additional_properties.json"
     },
+    "content": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/content.json",
+      "description": "Variant content"
+    },
     "websites": {
       "description": "websites assigned to this variant; individual values must be mutually exclusive with other variants",
       "items": {
