@@ -12,8 +12,8 @@
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/traits/trait_additional_properties.json"
     },
     "content": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/content.json",
-      "description": "Variant content"
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/story.json",
+      "description": "Variant content.  Only 'story' data is supported, but this may expand in the future."
     },
     "created_date": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/traits/trait_created_date.json"
