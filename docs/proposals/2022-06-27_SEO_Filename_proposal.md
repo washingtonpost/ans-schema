@@ -6,11 +6,11 @@ Image resizer links in Arc are pretty ugly. The only reference to an image filen
 
 # Proposal
 
-Like Canonical URLs do for gallery leaf pages, we want to introduce a string field SEO Filename. This field will be used by PageBuilder and others when generating Resizer V2 URLs by appending it before the asset key, like `/resizer/v2/this-is-an-seo-filename-ABCDEFGHIJKLMNOPQRSTUVWXYZ.jpg`
+Like Canonical URLs do for gallery leaf pages, we want to introduce a string field SEO Filename. This field will be used by PageBuilder and others when generating Resizer V2 URLs by appending it before the asset key, like `/resizer/v2/this-is-an-seo-filename-ABCDEFGHIJKLMNOPQRSTUVWXYZ.jpg`.
 
 ## SEO Filename
 
-SEO Filename must be formatted like a slug, where the only allowed characters are alphanumeric and dashes. It must be at or below **X** characters
+SEO Filename must be formatted like a slug, where the only allowed characters are alphanumeric and dashes. It must be at or below 96 characters.
 
 # Example
 
