@@ -20,4 +20,4 @@ A new ANS content element will be defined to represent a `content zone` in the `
 
 https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/utils/variant.json
 
-A `variant` is a new ANS element which represents conditional content for a Story document.  A variant relates to a single story.  Multiple variants may related to the same story.  Each variant contains a list of websites (the condition).  If The Story is requested from a website set on a variant (condition matched), then the data defined on the variant will be used in place of the main story data.
+A `variant` is a new ANS element which represents conditional content for a Story document.  A variant relates to a single story.  Multiple variants may related to the same story.  Each variant contains a list of websites (the condition).  If the Story is requested from a website set on a variant, then the data defined on the variant will be used in place of the main story data.
