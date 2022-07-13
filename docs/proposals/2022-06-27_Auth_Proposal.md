@@ -2,11 +2,17 @@
 
 # Problem
 
-The Signing Service produces SHA256-signed HMAC tokens that are used to validate requests for Arc objects on the front-end. Those front-ends must make a call to Signing Service for each object that it wants to display.
+The [Signing Service](https://github.com/WPMedia/signing-service) was created to provide Photo Center & PageBuilder HMAC tokens which allow the use of images on the frontend. Without a field to store these tokens in, users would have to call the Signing Service for each image they want to display.
 
 # Proposal
 
-Add a field `auth` which contains a mapping of integer -> HMAC token, where the integer is the version of the secret key in SSM.
+Add a field `auth` which contains a mapping of integer -> HMAC token, where the integer is the version of the secret key in Signing Service. The secret key is stored in SSM and is only known by Signing Service and in Akamai/Edge. 
+
+When an image is requested on a customer site, a signed token must be passed in a query parameter `auth`. The customer's Akamai property will sign its own token and compare it to the one passed in `auth`.
+
+For displaying Photo Center images, Photo Center will provide the `auth` object in all image ANS, including signed tokens with all available secret versions from Signing Service.
+
+For displaying external images, PageBuilder (or another user) must call the Signing Service with the full URL of the image to be used as the token in `auth`.
 
 ## Key
 
@@ -40,7 +46,11 @@ The values corresponding to each secret version integer will be the HMAC token p
 
 > Aren't you exposing a token in ANS?
 
-Yes but it is the signed token, so there is no risk of exposing the secret key. Plus, it's only valid for that single Arc object.
+It is just the signed token, so there is no risk of exposing the secret key, and the token is only valid for that single image.
+
+> What prevents someone from reading the token from ANS embedded on a website and using it?
+
+We decided to accept this risk now that we aren't worried about the performance of Thumbor in ECS. Akamai is much more durable and has protections in place for DDOS & other exploits.
 
 # Alternatives Considered
 
