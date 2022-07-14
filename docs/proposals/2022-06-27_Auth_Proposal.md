@@ -2,7 +2,7 @@
 
 # Problem
 
-The [Signing Service](https://github.com/WPMedia/signing-service) was created to provide Photo Center & PageBuilder HMAC tokens which allow the use of images on the frontend. Without a field to store these tokens in, users would have to call the Signing Service for each image they want to display.
+The [Signing Service](https://github.com/WPMedia/signing-service) was created to provide Photo Center & PageBuilder HMAC tokens which allow the use of images on the frontend. Without a field to store these tokens in, users would have to call the Signing Service for each image they want to display using [Resizer V2](https://github.com/WPMedia/arc-photo-resizer).
 
 # Proposal
 
