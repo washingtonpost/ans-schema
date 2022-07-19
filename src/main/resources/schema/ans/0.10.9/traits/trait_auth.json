@@ -6,10 +6,9 @@
     "type": "object",
     "properties": {
         "/": {}
-    },          
+    },
     "patternProperties": {
         "^\\d+$": {"type": "string", "pattern": "^\\w{64}$"}
     },
     "additionalProperties": false
 }
-  

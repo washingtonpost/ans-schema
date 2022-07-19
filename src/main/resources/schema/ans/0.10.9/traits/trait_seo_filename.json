@@ -4,5 +4,4 @@
     "title": "SEO Filename",
     "description": "Human-friendly filename used by PageBuilder & Resizer to improve image SEO scoring.",
     "type": "string"
-  }
-  
+}
