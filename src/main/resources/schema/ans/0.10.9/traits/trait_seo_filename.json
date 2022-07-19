@@ -1,0 +1,8 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_seo_filename.json",
+    "title": "SEO Filename",
+    "description": "Human-friendly filename used by PageBuilder & Resizer to improve image SEO scoring.",
+    "type": "string"
+  }
+  

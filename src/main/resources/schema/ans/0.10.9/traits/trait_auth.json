@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_auth.json",
+    "title": "Auth",
+    "description": "Mapping of integers to tokens, where the integer represents the Signing Service's secret version in SSM, and token represents an object's public key for usage on the frontend.",
+    "type": "object",
+    "properties": {
+        "/": {}
+    },          
+    "patternProperties": {
+        "^\\d+$": {"type": "string", "pattern": "^\\w{64}$"}
+    },
+    "additionalProperties": false
+}
+  
