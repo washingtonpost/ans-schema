@@ -4,9 +4,6 @@
     "title": "Auth",
     "description": "Mapping of integers to tokens, where the integer represents the Signing Service's secret version, and token represents an object's public key for usage on the frontend.",
     "type": "object",
-    "properties": {
-        "/": {}
-    },
     "patternProperties": {
         "^\\d+$": {"type": "string", "pattern": "^\\w{64}$"}
     },

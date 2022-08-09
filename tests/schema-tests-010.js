@@ -633,6 +633,9 @@ describe("Schema: ", function() {
           it("should not validate an image with focal point data with invalid prop name", function() {
             validateIfFixtureExists(version, '/image.json', 'image-fixture-bad-focal-point-bad-prop-name', false);
           });
+          it("should not validate an image with an auth object that is incorrectly formatted", function() {
+            validateIfFixtureExists(version, '/image.json', 'image-fixture-bad-auth-format', false);
+          });
         });
 
         describe("Image Operation", function() {
