@@ -33,6 +33,9 @@
       "description": "Published status for the variant",
       "type": "boolean"
     },
+    "type": {
+      "enum": ["variant"]
+    },
     "websites": {
       "description": "websites assigned to this variant; individual values must be mutually exclusive with other variants",
       "items": {
@@ -43,7 +46,7 @@
     }
   },
   "required": [
-    "_id"
+    "type"
   ],
   "title": "Variant metadata",
   "type": "object"
