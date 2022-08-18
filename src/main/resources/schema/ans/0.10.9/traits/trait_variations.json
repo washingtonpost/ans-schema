@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "additionalProperties": false,
   "description": "Holds variant content metadata, including content zone IDs for use within 'content_elements' and mapping from website IDs to variant IDs",
-  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_variants.json",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_variations.json",
   "properties": {
     "additional_properties": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_additional_properties.json"
