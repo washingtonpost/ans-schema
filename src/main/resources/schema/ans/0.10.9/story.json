@@ -161,8 +161,8 @@
     "publishing": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_publishing.json"
     },
-    "variants": {
-      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_variants.json"
+    "variations": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_variations.json"
     },
     "voice_transcripts": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/traits/trait_voice_transcripts.json"
