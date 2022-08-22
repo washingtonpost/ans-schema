@@ -39,9 +39,9 @@
     "websites": {
       "description": "websites assigned to this variant; individual values must be mutually exclusive with other variants",
       "items": {
-        "maxItems": 50,
         "type": "string"
       },
+      "maxItems": 50,
       "type": "array"
     }
   },
