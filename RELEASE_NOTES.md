@@ -1,5 +1,9 @@
 # ANS Release Notes
 
+### 1.11.0-rc.0 2022/8/23
+
+* Pre-release version containing schema changes for Conditional Content
+
 ### 1.10.8 2021/3/30
 
 * Prevent the callback function from being called twice when errors occur during the loading of schemas
