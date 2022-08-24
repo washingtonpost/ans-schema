@@ -9,7 +9,7 @@
   },
   "bugs": "https://github.com/washingtonpost/ans-schema/issues",
   "dependencies": {
-    "ajv": "~3.4.0",
+    "ajv": "~6.12.3",
     "node-dir": "~0.1.11",
     "lodash": "~4.17.5",
     "node-options": "^0.0.7",
