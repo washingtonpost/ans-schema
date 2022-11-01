@@ -18,7 +18,7 @@
     "async": "2.0.0",
     "replacestream": "4.0.0",
     "should": "~8.2.1",
-    "mocha": "2.4.5"
+    "mocha": "10.1.0"
   },
   "engines": {
     "node": ">=5.5.0"
