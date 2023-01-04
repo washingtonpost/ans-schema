@@ -59,7 +59,7 @@
             "title": "Trigger Type",
             "description": "The type of update that was consumed in order to produce this update. If this operation is the result of a referent update, than this type may or may not match the type of document in the body. For example, suppose story A contains image B and story C. If B is updated, then an operation may be produced with source 'image' and a body of story A (with updated image metadata.) If C is updated, then an operation may be produced with source 'story' and the body of story A.",
             "type": "string",
-            "enum": [ "story", "gallery", "image", "video", "url", "site", "author", "clavis" ]
+            "enum": [ "story", "gallery", "image", "video", "url", "site", "author", "clavis", "variant" ]
           },
           "id": {
             "title": "Trigger ID",
