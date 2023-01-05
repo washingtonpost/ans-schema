@@ -4,7 +4,15 @@ Version>=0.10.9
 
 # Overview
 
-This document proposes ANS spec changes that define conditional content for a story as a `variant`.  A new story element is also introduced to represent a `content_zone` location for inserting `variant` content into a story.
+This document proposes ANS spec changes to support conditional content.
+
+A `variant` object contains conditional content data for a story. 
+
+> [/ans/0.10.9/utils/variant.json](https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/utils/variant.json)
+
+A `content_zone` story element represents a location for inserting `variant` content into story content.
+
+> [/ans/0.10.9/story_elements/content_zone.json](https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/story_elements/content_zone.json)
 
 # Background
 
