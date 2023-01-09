@@ -12,9 +12,9 @@ This document proposes changes to support conditional content in a story.  When 
 
 * A new `variant` object defining conditional content data for a story. 
   * [/ans/0.10.9/utils/variant.json](https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/utils/variant.json)
-* A new `content_zone` story element representing a location for `variant` content in a story.
+* A new `content_zone` story element representing a location for `variant` content within a story.
   * [/ans/0.10.9/story_elements/content_zone.json](https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/story_elements/content_zone.json)
-* A new `variations` trait on the story object that contains references to the associated `variant` data.
+* A new `variations` field on the story object that contains references to the associated `variant` data.
   * [/ans/0.10.9/traits/trait_variations.json](https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/traits/trait_variations.json)
 
 ![Conditional Content Data Model](../img/conditional-content-data-model.png)
@@ -29,7 +29,7 @@ This document proposes changes to support conditional content in a story.  When 
 
 [/ans/0.10.9/utils/variant.json](https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/utils/variant.json)
 
-A `variant` defines a condition and content combination associated with a story.  A story may have 0 or many `variant`s.
+A `variant` defines a condition and content combination associated with a story.  The condition of a `variant` is defined by the "websites" field.  The content of a `variant` is defined as a story object in the "content" field.  A story may have 0 or many `variant`s.  
 
 ```javascript
 variant = {
@@ -105,9 +105,9 @@ Below is an example ANS object of a story with a `content_zone` content element.
 
 [/ans/0.10.9/traits/trait_variations.json](https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/traits/trait_variations.json)
 
-To get the associated `variant`s of a story, we are introducing a new `variations` trait on the story object.
+To get the associated `variant`s of a story, we are introducing a new read-only `variations` field on the story object.
 
-The `variations` field contains the relationships between a story and its list of `variant`s.  It also contains a list of all `content_zone`s within the story content.  This information is added to the story object as a convenience and optimization for ANS consumers using conditional content.  It is a read-only field on the story object.  Data included in the `variations` field will be ignored for updates to a story object.  In order to maintain ANS document size limitations, `variant` data does *not* include its "content" field.
+The `variations` field contains the relationships between a story and its list of `variant`s.  It also contains a list of all `content_zone`s within the story content.  This information is added to the story object as a convenience and optimization for ANS consumers using conditional content.  It is a read-only field on the story object.  Data included in the `variations` field will be ignored for updates to a story object.  In order to maintain ANS document size limitations, `variant` data in a story `variations` field does *not* include its "content" field.
 
 ```javascript
     revision = {
@@ -150,7 +150,7 @@ All changes are additive to ANS.  Previous versions of all ANS objects will be c
 
 For future compatibility, variations may define fields for new conditions beyond websites.  We expect revisions for Variants in the future.
 
-## Why make the variations trait read-only?
+## Why make the variations field read-only?
 
 To help improve collaborative editing, `variant`s are designed for editing independent of the main story.  However, to support ANS consumers it helps to include variant data on the story object.  To maintain collaborative editing while also supporting publishing API consumers, the `variations` field was designed as read-only.  Variants will have an update API endpoint separate from the story object.
 
