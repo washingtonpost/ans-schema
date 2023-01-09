@@ -105,12 +105,12 @@ Below is an example ANS object of a story with a `content_zone` content element.
 
 [/ans/0.10.9/traits/trait_variations.json](https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/traits/trait_variations.json)
 
-To get the associated `variants` of a story, we are introducing a new `variations` trait on the story object.
+To get the associated `variant`s of a story, we are introducing a new `variations` trait on the story object.
 
-Variations contain the relationships between a story and its list of `variant`s.  It also contains a list of `content_zone`s that are within the story content.  This information is added to the story object as a convenience and optimization for ANS consumers using conditional content.  It is a read-only field.  Data included in the `variations` field will be ignored for updates to a story object.  In order to maintain ANS document size limitations, `variant` data does *not* include its "content" field.
+The `variations` field contains the relationships between a story and its list of `variant`s.  It also contains a list of all `content_zone`s within the story content.  This information is added to the story object as a convenience and optimization for ANS consumers using conditional content.  It is a read-only field on the story object.  Data included in the `variations` field will be ignored for updates to a story object.  In order to maintain ANS document size limitations, `variant` data does *not* include its "content" field.
 
 ```javascript
-    story_revision = {
+    revision = {
         "type": "story",
         "version": "0.10.9",
         "canonical_website": "TheGazette",
@@ -144,13 +144,19 @@ Variations contain the relationships between a story and its list of `variant`s.
 
 # Concerns
 
-## Why make the variations read-only?
+# What considerations have been made for backwards and forwards compatibility.
 
-To help improve collaborative editing, `variant`s are designed for editing independent of the main story.  However, to support ANS consumers it helps to include variant data on the story object.  To maintain collaborative editing while also supporting publishing API consumers, the `variations` field was designed as read-only.
+All changes are additive to ANS.  Previous versions of all ANS objects will be compatible with these changes.
+
+For future compatibility, variations may define fields for new conditions beyond websites.  We expect revisions for Variants in the future.
+
+## Why make the variations trait read-only?
+
+To help improve collaborative editing, `variant`s are designed for editing independent of the main story.  However, to support ANS consumers it helps to include variant data on the story object.  To maintain collaborative editing while also supporting publishing API consumers, the `variations` field was designed as read-only.  Variants will have an update API endpoint separate from the story object.
 
 ## Why not maintain story variant data in the story?
 
-Tightly coupling the story and variant content makes collaborative editing more complicated for users.  The intent of this feature is to be used in parallel by multiple editors.  There are also concerns about ANS document size limits if all content from all `variant`s are included in the story object.
+As noted, tightly coupling the story and variant content makes collaborative editing more complicated for users.  The intent of this feature is to be used in parallel by multiple editors.  There are also concerns about ANS document size limits if all content from all `variant`s are included in the story object.
 
 ## What are limits of new features?
 
