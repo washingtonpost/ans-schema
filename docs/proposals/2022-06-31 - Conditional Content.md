@@ -8,7 +8,7 @@ Editors need to be able to author alternate versions of a single story without b
 
 # Proposal
 
-This document proposes changes to support conditional content in a story.  When a story is request in Content API, the content will render differently depending on editor defined conditions.
+This document proposes changes to support conditional content in a story.  When a story is request in Content API, the content will render differently depending on editor defined conditions.  The the content of the story variations can be edited in parallel by multiple editors without locking each other out. 
 
 * A new `variant` object defining conditional content data for a story. 
   * [/ans/0.10.9/utils/variant.json](https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/utils/variant.json)
@@ -21,7 +21,7 @@ This document proposes changes to support conditional content in a story.  When 
 
 **Limitations**
 * Only websites are supported as a condition.  Future conditions would need additional changes to the ANS spec.
-* Revisions of conditional content is not supported.  This will likely require additional changes to the ANS spec.
+* Revisions of conditional content are not supported.  This will likely require future changes to the ANS spec.
 
 # Details
 
@@ -120,6 +120,8 @@ The `variations` field contains the relationships between a story and its list o
                 "type": "content_zone"
             }
         ],
+        
+        // Read only list of references to variants and content_zones
         "variations": {
             "variants": [
                 {
@@ -132,19 +134,19 @@ The `variations` field contains the relationships between a story and its list o
                     "websites": [
                         "TheGazette"
                     ]
-                    // Note the "content" field is not returned
+                    // Note the "content" field is not returned for variants
                 }
             ],
             "content_zone_ids": [
                 "AAAAAAAAAAAAAAAAAAAAAAAAAA"
             ]
-        },
+        }
     }
 ```
 
 # Concerns
 
-# What considerations have been made for backwards and forwards compatibility.
+## What considerations have been made for backwards and forwards compatibility.
 
 All changes are additive to ANS.  Previous versions of all ANS objects will be compatible with these changes.
 
@@ -170,4 +172,4 @@ In this solution, a story would be "cloned" but maintain "smart" references back
 
 # Implementation
 
-Publishing Platform team will implement support in Draft and Content API for this feature if this proposal is accepted.
+Publishing Platform team will implement authoring support in Draft API and rendering support in Content API for this feature.
