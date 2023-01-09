@@ -4,7 +4,7 @@ Version>=0.10.9
 
 # Problem
 
-Editors need to be able to develop alternate versions of a single story without blocking each other.  There is no way to render alternate versions of a single story for specific websites.
+Editors need to be able to author alternate versions of a single story without blocking each other.  There is no way to render alternate versions of a single story for specific websites.
 
 # Proposal
 
@@ -49,7 +49,7 @@ variant = {
                 "type": "element_group",
                 "content_elements": [
                     {
-                        "content": "Some data for content zone AAAAAA111111AAAAAA111111",
+                        "content": "Some data for content_zone AAAAAA111111AAAAAA111111",
                         "type": "text"
                     }
                 ]
@@ -74,28 +74,24 @@ variant = {
 
 [/ans/0.10.9/story_elements/content_zone.json](https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/story_elements/content_zone.json)
 
-To enable editors to place variant content into the main story content, we are introducing a new `content_zone` story element.
+To enable editors to place `variant` content into the main story content, we are introducing a new `content_zone` story element.
 
-A `content_zone` element can be used as a story content element to define where `variant` content will be updated in the story content.  A variant may then define an `element_group` which references that `content_zone` in the main story content.  When the main story is requested in Content API, the `content_zone` element of the story will be replaced with the `element_group` content. 
+A `content_zone` can be used as a story content element to define where `variant` content will be added to the story.  A `variant` may contain an `element_group` which references a `content_zone` in the main story content.  When the main story is requested in Content API, the `content_zone` element of the story will be replaced with the `element_group` content.  
 
-Below is an example ANS object of a main story revision with a `content_zone` story element.  Below that is an example of a `variant` with an `element_group` referencing the `content_zone`.
+Below is an example ANS object of a story with a `content_zone` content element.  The `content_zone` references the `element_group` of the `variant` defined in the previous section.
 
 ```javascript
-    story_revision = {
+    story = {
         "type": "story",
         "version": "0.10.9",
         "canonical_website": "TheGazette",
         "content_elements": [
             {
-                "content": "This is normal story content and will always appear when the story is requested from Content API",
-                "type": "text"
-            },
-            {
-                "_id": "AAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "_id": "AAAAAA111111AAAAAA111111",
                 "type": "content_zone",
                 "additional_properties": {
                     "comments": [
-                        "The content_zone element will never appear when the story is requested from Content API. It may be replaced from any matching the variants"
+                        "This content_zone may be replaced by an element_group from a variant"
                 }
             }
         ]
@@ -111,7 +107,7 @@ Below is an example ANS object of a main story revision with a `content_zone` st
 
 To get the associated `variants` of a story, we are introducing a new `variations` trait on the story object.
 
-Variations contains the relationships between a story and its list of `variant`s.  It also contains a list of `content_zone`s that are within the story content.  This information is added to the story object as a convenience and optimization for ANS consumers using conditional content.  It is a read-only field.  Data included in the `variations` field will be ignored for updates to a story object.  In order to maintain ANS document size limitations, `variant` data does *not* include its "content" field.
+Variations contain the relationships between a story and its list of `variant`s.  It also contains a list of `content_zone`s that are within the story content.  This information is added to the story object as a convenience and optimization for ANS consumers using conditional content.  It is a read-only field.  Data included in the `variations` field will be ignored for updates to a story object.  In order to maintain ANS document size limitations, `variant` data does *not* include its "content" field.
 
 ```javascript
     story_revision = {
@@ -120,7 +116,7 @@ Variations contains the relationships between a story and its list of `variant`s
         "canonical_website": "TheGazette",
         "content_elements": [
             {
-                "_id": "AAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "_id": "AAAAAA111111AAAAAA111111",
                 "type": "content_zone"
             }
         ],
@@ -154,7 +150,7 @@ To help improve collaborative editing, `variant`s are designed for editing indep
 
 ## Why not maintain story variant data in the story?
 
-Tightly coupling the story and variany content makes collaborative editing more complicaed for users.  The intent of this feature is to be used in paralelly by multiple editors.  There are also concerns about ANS document size limits if all content from all `variant`s are included in the story object.
+Tightly coupling the story and variant content makes collaborative editing more complicated for users.  The intent of this feature is to be used in parallel by multiple editors.  There are also concerns about ANS document size limits if all content from all `variant`s are included in the story object.
 
 ## What are limits of new features?
 
