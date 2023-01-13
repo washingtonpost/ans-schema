@@ -27,11 +27,11 @@ This document proposes changes to support conditional content in a story.  When 
 
 ## Modified/Added Schema
 
-* [/ans/0.10.9/content_operation.json]https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/content_operation.json
-* [/ans/0.10.9/story.json]https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/story.json
-* [/ans/0.10.9/story_elements/content_zone.json]https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/story_elements/content_zone.json
-* [/ans/0.10.9/traits/trait_variations.json]https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/traits/trait_variations.json
-* [/ans/0.10.9/utils/variant.json]https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/utils/variant.json
+* [/ans/0.10.9/content_operation.json](https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/content_operation.json)
+* [/ans/0.10.9/story.json](https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/story.json)
+* [/ans/0.10.9/story_elements/content_zone.json](https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/story_elements/content_zone.json)
+* [/ans/0.10.9/traits/trait_variations.json](https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/traits/trait_variations.json)
+* [/ans/0.10.9/utils/variant.json](https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/utils/variant.json)
 
 ## Variant object
 
