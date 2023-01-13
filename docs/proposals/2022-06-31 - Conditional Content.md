@@ -25,6 +25,14 @@ This document proposes changes to support conditional content in a story.  When 
 
 # Details
 
+## Modified/Added Schema
+
+* [/ans/0.10.9/content_operation.json]https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/content_operation.json
+* [/ans/0.10.9/story.json]https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/story.json
+* [/ans/0.10.9/story_elements/content_zone.json]https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/story_elements/content_zone.json
+* [/ans/0.10.9/traits/trait_variations.json]https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/traits/trait_variations.json
+* [/ans/0.10.9/utils/variant.json]https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/utils/variant.json
+
 ## Variant object
 
 [/ans/0.10.9/utils/variant.json](https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/utils/variant.json)
@@ -69,7 +77,6 @@ variant = {
 }
 ```
 
-
 ## Content Zone story element
 
 [/ans/0.10.9/story_elements/content_zone.json](https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/story_elements/content_zone.json)
@@ -99,7 +106,6 @@ Below is an example ANS object of a story with a `content_zone` content element.
 ```
 
 ![Content zone rendering login](../img/content-zone-rendering-logic.png)
-
 
 ## Variations story element
 
@@ -144,6 +150,62 @@ The `variations` field contains the relationships between a story and its list o
     }
 ```
 
+# Content Replacement Scheme
+
+In general, the particulars of how variant content replaces content in the
+original story is a matter of the content authoring and rendering tools'
+implementations.
+
+However, the initial planned support within the Arc system is specified below.
+Any custom implementation of Conditional Content should follow the guidelines to
+ensure compatibility.  Only the fields delineated below will be initially
+supported.
+
+## Content Elements
+
+The [Content Zone story element](#content-zone-story-element) section above
+outlines the `content_zone` element, which can be placed within the
+`content_elements` array of the original story.  These elements must have
+their `_id` field filled with a value.  This value must be unique within the
+context of this story's `content_elements`.
+
+The [variant data](#variant-object)'s `content` field holds a minimal story
+with its `content_elements` populated only with the replacement content.  For
+each `content_zone` in the original story, the variant `content_elements`
+may optionally contain an element with its `_id` filled with the same value
+from a corresponding `content_zone` element.  Though the replacement element
+may technically be any schema-compliant element, the `element_group` is the
+expected element type in the initial implementation.
+
+If a `content_zone` does not have a corresponding value in the variant
+content, it will be removed in the final rendering of the original story.  The
+order of the `content_zone`'s `_id` values will match the ordering in the
+variant's replacement data.
+
+## Featured Media
+
+The original story's `promo_items.basic` field can be replaced by simply
+populating the variant's `content.promo_items.basic` field with an image
+[reference](https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/utils/reference.json).
+The `basic` field is the only one within the `promo_items` object that is
+currently supported for replacement.
+
+## Tags
+
+The `taxonomy.tags` field in the original story is not replaced by the
+variant's values, but instead supplemented.  These auxiliary tags will be
+populated in the variant's `content.taxonomy.tags` field.
+
+While there will be an effort to eliminate duplicate tags between the original
+story and the variant content in the rendering tier, it is not likely to be
+perfect. This is due to the
+[tag schema](https://github.com/washingtonpost/ans-schema/blob/master/src/main/resources/schema/ans/0.10.9/utils/tag.json)
+itself. The `_id` field would be the ideal basis to determine uniqueness, but
+the only `text` field is required.  Ultimately, the authoring system is the
+best sentinel of uniqueness.
+
+The additional tags will render after the original story's tags.
+
 # Concerns
 
 ## What considerations have been made for backwards and forwards compatibility.
@@ -162,7 +224,7 @@ As noted, tightly coupling the story and variant content makes collaborative edi
 
 ## What are limits of new features?
 
-A story may hae up to 30 `variant`s and up to 10 `content_zones`.
+A story may have up to 30 `variant`s and up to 10 `content_zones`.
 
 # Alternatives considered
 
