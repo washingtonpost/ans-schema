@@ -1,5 +1,11 @@
 # ANS Release Notes
 
+### 1.11.0 2023/1/17
+
+* Release containing version 0.10.9 schema changes:
+  * [Add Auth & SEO Filename traits to image ANS](/docs/proposals/2022-06-27_SEO_Filename_proposal.md)
+  * [Conditional Content](/docs/proposals/2022-06-31%20-%20Conditional%20Content.md)
+
 ### 1.11.0-rc.0 2022/8/23
 
 * Pre-release version containing schema changes for Conditional Content
