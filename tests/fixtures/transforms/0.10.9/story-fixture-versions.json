@@ -1,0 +1,416 @@
+{
+  "_id": "6UFRMHAGUII6NMUD46OYDRR4DM",
+  "type": "story",
+  "subtype": "",
+  "version": "0.10.9",
+  "created_date": "2016-04-20T02:52:00.000Z",
+  "last_updated_date": "2016-04-22T02:11:04.000Z",
+  "language": "en",
+  "location": "Washington DC",
+  "address": {
+    "postal_code": "",
+    "region": "",
+    "locality": "",
+    "street_address": "",
+    "country_name": ""
+  },
+  "geo": {
+    "latitude": -1,
+    "longitude": -1
+  },
+  "copyright": "(c) 2016, The Washington Post, Inc.",
+  "credits": {
+    "by": [
+      {
+        "type": "author",
+        "version": "0.10.9",
+        "name": "John Wagner",
+        "byline": "John Wagner",
+        "org": "The Washington Post"
+      },
+      {
+        "type": "author",
+        "version": "0.10.9",
+        "name": "Dan Balz",
+        "byline": "Dan Balz",
+        "org": "The Washington Post"
+      }
+    ]
+  },
+  "short_url": "http://wapo.st/1TjjBGm",
+  "canonical_url": "/politics/after-new-york-comes-the-question-what-does-bernie-want/2016/04/20/f50b161c-06a2-11e6-b283-e79d81c63c1b_story.html",
+  "description": {
+    "basic": "Facing daunting odds, Sanders must soon decide his next steps as the leader of progressives."
+  },
+  "headlines": {
+    "mobile": "After New York comes the question: What does Bernie want?",
+    "basic": "After New York comes the question: What does Bernie want?",
+    "print": "What's next for Sanders? Much rests on his answer.",
+    "social": "After New York comes the question: What does Bernie want?"
+  },
+  "promo_items": {
+    "basic": {
+      "_id": "R467QZQGRMI6NP7N55S575MXBU",
+      "type": "image",
+      "version": "0.10.9"
+    }
+  },
+  "taxonomy": {
+    "keywords": [
+      {
+        "score": 0,
+        "frequency": 0,
+        "keyword": "bernie sanders"
+      },
+      {
+        "score": 0,
+        "frequency": 0,
+        "keyword": "hillary clinton"
+      },
+      {
+        "score": 0,
+        "frequency": 0,
+        "keyword": "new york primary"
+      },
+      {
+        "score": 0,
+        "frequency": 0,
+        "keyword": "campaign 2012"
+      }
+    ],
+    "tags": [
+      {
+        "text": "",
+        "_id": "3OCY5PMYTVHP5EAL7GFKUC4MQE",
+        "additional_properties": {
+          "tag": ""
+        }
+      },
+      {
+        "text": "",
+        "_id": "NTU4YE3J6JFULCAZWMBO545IEE",
+        "additional_properties": {
+          "tag": ""
+        }
+      }
+    ]
+  },
+  "content_elements": [
+    {
+      "_id": "",
+      "content": "<byline-text><p>by <author>John Wagner</author>\n</p>\n<p>and <author>Dan Balz</author>\n</p>\n</byline-text>",
+      "type": "raw_html"
+    },
+    {
+      "_id": "UYJYYITS2RBPFLZVLU6377W5YU",
+      "content": "<dateline>STATE COLLEGE, Pa. —</dateline> Hillary Clinton's victory in the New York primary Tuesday has brought Sen. Bernie Sanders one step closer to a series of difficult decisions that can be summed up in one simple question: What does Bernie want?",
+      "type": "text"
+    },
+    {
+      "_id": "4CYWL25TS5E2DLW2LXXZETGQFY",
+      "content": "How he answers that question will have a direct bearing on how united Democrats will be heading into the fall campaign — and whether Sanders will be able to leverage his success this year into lasting power and influence.",
+      "type": "text"
+    },
+    {
+      "_id": "AYO2PFXSMVBFROPRNS25JZ6NCY",
+      "content": "His campaign for the Democratic presidential nomination has been more successful than almost anyone had predicted. He has generated a sizable and enthusiastic following, including an outpouring among young people and a gusher of small donations that more than matched the mighty Clinton financial network. His bold agenda has pushed Clinton to the left, a testament to the strength of the party's grass-roots progressive wing, which has made him its hero.",
+      "type": "text"
+    },
+    {
+      "_id": "UBPWJE7EMBE63MMZBHUZ5S33B4",
+      "content": "But as Clinton extends her lead in pledged delegates, Sanders must now confront the reality that he has almost no chance of becoming the Democratic nominee. Instead he must decide what he will do with what he has built — starting with how he conducts his campaign over the next two months, how he navigates the party's national convention in July, what role he plays in the general election and, perhaps most important, what happens after the November results have been tallied.",
+      "type": "text"
+    },
+    {
+      "_id": "I3SZTCYQ2FHN5N2HXOFRCBBDU4",
+      "content": "At the heart of many of these questions is another one: Will the self-described democratic socialist, who has run all his past campaigns as an independent, continue calling himself a Democrat after his presidential bid ends? (After this article was published online Wednesday, Sanders's campaign manager said he expects the senator to be a member of the party \"for life.\")",
+      "type": "text"
+    },
+    {
+      "_id": "2AK6WV36MJHNPDIQBMGHYPORII",
+      "content": "Sanders advisers insist that, with the candidate focused on carrying on his campaign through the last of the primaries in June and on to the Philadelphia convention, there have been few discussions about such questions. But his wife, Jane, offered a preview of the candidate's thinking in an interview with The Washington Post just before New Yorkers went to the polls.",
+      "type": "text"
+    },
+    {
+      "_id": "NLFJOAYOKFGKRD3SZ2KKDUQ7TM",
+      "content": "\"If he's president, he wants to keep this movement going,\" she said. \"If he's not president, he'll have to keep this movement going for a lot more reasons, because nobody else wants to accomplish what has ignited the interest of the voters.\"",
+      "type": "text"
+    },
+    {
+      "_id": "6NNUSYAMEVBAJLVRBW35DVP4GI",
+      "content": "Asked what that might look like, she said: \"We'll figure that out, if and when. . . . Honestly, we will continue no matter what. There's enough people that will continue it. We'll keep that vision out there. I mean, he will not sit idly by. There's no doubt about that.\"",
+      "type": "text"
+    },
+    {
+      "_id": "MNGT73PMPNCCJKJUZ7DW6INPMM",
+      "content": "Neil Sroka, communications director of the progressive advocacy group Democracy for America, or DFA — which was founded by former Vermont governor Howard Dean after his 2004 presidential campaign and which has endorsed Sanders — said Sanders has several options. ",
+      "type": "text"
+    },
+    {
+      "_id": "3POCBD2FURGWHANGUNSLPHPMRY",
+      "content": "One would be something like DFA. Another would be a more traditional leadership PAC, while a third would be what Sroka called a \"let a thousand flowers bloom\" approach — working with a variety of existing organizations to further his progressive agenda.",
+      "type": "text"
+    },
+    {
+      "_id": "WIDVHMR4KFGQJEO5A4OPZG3L6M",
+      "content": "Whatever route he chooses, Sanders \"has pole-vaulted himself into a real leadership position in the progressive movement,\" Sroka said. \"This movement now not only has Elizabeth Warren but Bernie Sanders. He's going to be a powerful voice in either the White House or the Senate.\"",
+      "type": "text"
+    },
+    {
+      "_id": "TXTP3MCT25E4XC6DCC4HMF5OR4",
+      "content": "What Sanders decides about the future course of his campaign could be crucial to how quickly the party comes together after what has become an increasingly fractious nominating battle, something the Clinton forces are keenly aware of. Sanders's recent attacks on Clinton have alarmed her supporters. They are now listening closely for a change in his rhetoric — as there was in Clinton's at roughly the same point in 2008 in her contest against then-Sen. Barack Obama.",
+      "type": "text"
+    },
+    {
+      "additional_properties": {
+        "url": "https://www.washingtonpost.com/politics/hillary-clinton-won-new-york-but-her-image-is-underwater/2016/04/19/d1ff2f3c-0620-11e6-b283-e79d81c63c1b_story.html?hpid=hp_rhp-top-table-main_take-1040pm%3Ahomepage%2Fstory"
+      },
+      "referent": {
+        "id": "2H7S6PAGEAI6NMUD46OYDRR4DM",
+        "type": "story",
+        "provider": ""
+      },
+      "type": "reference"
+    },
+    {
+      "_id": "TYDXBJNP7VBYFJRLJTCSZNL3WY",
+      "content": "\"In 2008 after Hillary lost North Carolina, she made it clear that our days of attacking Obama were behind us and that we were not to do anything that would make it more difficult for Obama to win a general election,\" said Democratic pollster Geoff Garin, who was then a member of Clinton's campaign team and now serves as an adviser to Priorities USA, the pro-Clinton super PAC. \"She saw the thing through but refrained from criticisms of Obama that would leave a lasting mark. That's really the conversation that should be going on in the Sanders campaign.\"",
+      "type": "text"
+    },
+    {
+      "_id": "2FOUH2GD65B5DFM2LLDKCKMHIQ",
+      "content": "But his campaign showed no immediate signs of relenting in its improbable bid to catch her in the chase for delegates.",
+      "type": "text"
+    },
+    {
+      "_id": "EUCBFL3HH5GDPPIBUIZIS7HZUQ",
+      "content": "After the results from New York were in Tuesday night, Sanders's campaign manager, Jeff Weaver, appeared on MSNBC in front of a map of remaining states and outlined how he thinks the campaign could still close the delegate gap. He also said that if Sanders gets close, he will start actively trying to flip the allegiances of superdelegates, the elected officials and other party insiders who also get to weigh in on the nomination. So far, they have sided overwhelmingly with Clinton.",
+      "type": "text"
+    },
+    {
+      "_id": "USJS6U4HPVFODL4NGWEL26KODQ",
+      "content": "Given that delegates are awarded proportionately in the Democratic contests, Sanders would need to not only win most of the remaining primaries and caucuses but win them by very lopsided margins to catch Clinton. Many of the upcoming contests are also closed to independents, who have bolstered Sanders's numbers in states where he has prevailed.",
+      "type": "text"
+    },
+    {
+      "additional_properties": {
+        "url": "https://www.washingtonpost.com/politics/can-clinton-and-trump-ride-to-big-victories-in-next-weeks-acela-primary/2016/04/20/ea6454fc-064e-11e6-bdcb-0133da18418d_story.html?hpid=hp_rhp-top-table-main_5states-1025a%3Ahomepage%2Fstory"
+      },
+      "referent": {
+        "id": "5JSFJ7AGJYI6NPOLAEZ5UGCBRU",
+        "type": "story",
+        "provider": ""
+      },
+      "type": "reference"
+    },
+    {
+      "_id": "YHFWEQWR6BEWRGCHAFJDIRCRQA",
+      "content": "The New York primary made it clear that while Sanders may not have the backing of a majority of Democrats, the affection of his supporters runs deep. In the closing days of the race, he turned out three of the largest crowds of his entire campaign, including an estimated 28,000-plus at a park Sunday afternoon in Brooklyn, where he grew up.",
+      "type": "text"
+    },
+    {
+      "_id": "26JIBEE2PJBJFLCIGMZXJ6BT2E",
+      "content": "He was treated like a rock star as he walked the streets of New York with an entourage of aides, Secret Service agents and the press in tow, including on Monday during a 15-block stroll near the hotel where he stayed near Times Square. ",
+      "type": "text"
+    },
+    {
+      "_id": "MGFAPPRXCBGPVB7S5CDMRK6PWE",
+      "content": "\"Oh, my God,\" a young woman exclaimed upon seeing him. Others could be heard calling friends on their cellphones to say they had run into Sanders. People requested selfies by the dozen. And there were near-constant calls of \"Feel the Bern\" and \"Love you, Bernie\" as he passed by, along with honks of approval from cars on the street.",
+      "type": "text"
+    },
+    {
+      "_id": "U665XA2TDJBG3MCKWOS4EPLNQE",
+      "content": "That kind of enthusiasm is infectious and can make it all the more difficult for a candidate to pivot to a different phase of the campaign. Former Pennsylvania governor Ed Rendell (D), a Clinton supporter, praised Sanders for what he has accomplished, calling it \"an incredible feat\" — but he said the time is coming when Sanders will have to tone done his attacks on Clinton for the good of the party. But Rendell also said he understands how hard that can be.",
+      "type": "text"
+    },
+    {
+      "_id": "4LORGMWPVJDTXOAE2T2HHAQ3Q4",
+      "content": "\"He has candidate-itis, which we all who have run for office have had at one time or another,\" Rendell said. \"You look at the crowds, you think: 'They love me. I'm going to win.' You get the feedback from the crowds and you really think you're going to win.\"",
+      "type": "text"
+    },
+    {
+      "_id": "L2CVNMVYDZGOXKWOLXO7DYKRIM",
+      "content": "When Democrats get to Philadelphia in late July, it is assumed that Sanders has more than earned a prime-time speaking slot. Beyond that, he has also made clear he will seek to influence the shape of the party platform. Aides say the more delegates he takes into the convention, the more leverage he should have to do that.",
+      "type": "text"
+    },
+    {
+      "_id": "5PP4SAKCHFCT3MQMCHYLGMPPDY",
+      "content": "Party leaders want no repeat of the 1980 Democratic convention, when President Jimmy Carter faced a rebellion from Sen. Edward M. Kennedy of Massachusetts. Kennedy engineered a floor fight over the rules and denied Carter a final-night photograph of unity. In contrast, eight years ago, Clinton went to the floor of the convention during the nominating roll call and moved that Obama be nominated by acclamation.",
+      "type": "text"
+    },
+    {
+      "_id": "WVGL66DY6ZAMTAZIXFVLRQSIWA",
+      "content": "Recalling that moment, David Axelrod, who was chief strategist for Obama's campaigns, said of Sanders: \"The question is, will he do the same? Will he, once the result is clear, even if he goes to the convention, will he rally behind the nominee or will he strike a discordant note?\"",
+      "type": "text"
+    },
+    {
+      "_id": "7CHKC2NFMFBIHAOFSWBWGZSCPU",
+      "content": "Earlier this month, during an appearance on CBS's \"Face the Nation,\" Sanders was asked by host John Dickerson whether his aim was similar to Kennedy's.",
+      "type": "text"
+    },
+    {
+      "_id": "QOYRSV7GSJEZ5NWUKQEVXBB7SQ",
+      "content": "Sanders ticked off a series of issues important to him, including making corporations and the wealthy pay their \"fair share\" of taxes, combating poverty, fighting climate change, and rebuilding the nation's \"crumbling infrastructure.\"",
+      "type": "text"
+    },
+    {
+      "_id": "7K62U3AEHNCRLD5K6CQYXBFN44",
+      "content": "\"Those are the issues that we will fight for to get on the platform, whether I am the nominee or whether Secretary Clinton is the nominee,\" Sanders said.",
+      "type": "text"
+    },
+    {
+      "_id": "J2PTKNI5RFEU7MJTBFP7UFGKIU",
+      "content": "Aides have also suggested Sanders's call for a single-payer \"Medicare for all\" health-care system is something he will push at the convention.",
+      "type": "text"
+    },
+    {
+      "_id": "OI7Q7FXA5NEP3MMKJUXSP5PM4I",
+      "content": "He could also try to make an issue of voting rights. During the New York primary, Sanders was outspoken about the state's rule that bars independents from participating in Democratic and Republican primaries. Prior to leaving the state on Tuesday, he called that \"a very unfortunate thing\" and said it was something he wants to work to change. Whether he will go after the power of the superdelegates is another question. ",
+      "type": "text"
+    },
+    {
+      "_id": "VEVYZCEGJVCHJGPW2RLBUGZK54",
+      "content": "Sanders has said repeatedly that he plans to support the Democratic nominee and that a Donald Trump presidency would be \"a disaster\" for the country. Less clear is how hard Sanders will work to support Clinton if she becomes the nominee or how much he will do — and how much he can do — to bring his supporters on board. Many are new to the political process, including younger voters, and few express enthusiasm about Clinton.",
+      "type": "text"
+    },
+    {
+      "_id": "G356HRG5CJAHNBGPZAFKGU7EKE",
+      "content": "As the tone of the primary has become nastier, Sanders has routinely ticked off differences he has with Clinton on policy issues and mocked her refusal to release transcripts of paid speeches she delivered on Wall Street. His supporters routinely boo at the mention of her name, and in a change from earlier in the campaign, Sanders does nothing to discourage them.",
+      "type": "text"
+    },
+    {
+      "_id": "5GSWSAOVONEJXGZEEHY4E6NTFA",
+      "content": "Clinton allies fear the toll all this is taking. \"I think it's clear that the Clinton campaign has work to do in terms of strengthening her image heading into a general election,\" Garin said. \"And having Bernie attacking her and fighting to the bitter end will make that process more difficult.\"",
+      "type": "text"
+    },
+    {
+      "_id": "DSYHBW4KONBBPF6P65Q3RHXE5Y",
+      "content": "In the Post interview, Jane Sanders made it clear that her husband's supporters won't simply fall in line with the Clinton campaign.",
+      "type": "text"
+    },
+    {
+      "_id": "MHG2RRR4WRDD3K3JPI65IUXHDQ",
+      "content": "\"If they have any hope of getting any of Bernie's supporters, it cannot be 'Okay, we got through the primary, now I move to the center,' \" she said.<span> \"That is the history of the Democratic and Republican party. The Republicans go right-wing, then they go more to the center. The Democrats go more liberal, and then they go to the center. So we will keep people, whether Bernie's the nominee or Hillary's the nominee, we will keep people focused on issues that are important.\"</span>\n",
+      "type": "text"
+    },
+    {
+      "_id": "LSABPTFX5FD4HIHUD7XA6EOXX4",
+      "content": "Other Sanders supporters have sounded even more skeptical notes about the willingness of his backers to rally behind a Clinton nomination, regardless of whether Sanders says he is on board.",
+      "type": "text"
+    },
+    {
+      "_id": "SNIH7CKDPNGVZD3RWH6TIAEWRQ",
+      "content": "\"A Democrat other than Bernie is going to have an extremely difficult time winning the general election, because people don't want the status quo,\" said RoseAnn DeMoro, director of National Nurses United, the first national labor union to back Sanders.",
+      "type": "text"
+    },
+    {
+      "_id": "6UQCCR5TWBE5VEPXB5FLL5I4VA",
+      "content": "\"There's Bernie and there's his movement,\" DeMoro said. \"He amplifies the movement, but he's not the movement.\"",
+      "type": "text"
+    },
+    {
+      "_id": "ME5SF3YMFNEGPAXMQQTRQO2INI",
+      "content": "Just who can help broker this is a question Democrats are beginning to ask. One possibility is Warren, the senator from Massachusetts, who until Sanders decided to run was the acknowledged leader of the party's progressive wing. She has refrained from endorsing Clinton or Sanders and as a result could have credibility both with the Clinton team and Sanders's followers.",
+      "type": "text"
+    },
+    {
+      "_id": "B6BUJ5Q3C5BEDIHZ6IYN3M7RCU",
+      "content": "Warren has had occasional conversations with both candidates and recently met with Clinton's campaign chairman, John Podesta, according to a knowledgeable source. ",
+      "type": "text"
+    },
+    {
+      "_id": "O53U7JONY5G3NF44HOREZLWOE4",
+      "content": "Sanders, 74, almost certainly will not run for president again. While he is in generally good health and has shown remarkable stamina on the campaign trail, those around him acknowledge that a White House bid at age 78 seems improbable. Already, he would be the oldest person to enter the Oval Office in U.S. history.",
+      "type": "text"
+    },
+    {
+      "_id": "KDLKTRALWNE7BETI7XEGBIPZ6I",
+      "content": "Associates say he is likely to run for reelection as a senator in two years when his term expires.",
+      "type": "text"
+    },
+    {
+      "_id": "NV6XF2VINRDEBO2QEZFH37DGHU",
+      "content": "His job in the Senate offers Sanders a platform to continue speaking out about issues he cares about, and he remains very popular in his home state of Vermont. That was evidenced by his showing in the state's Democratic presidential primary in March, when he won 86 percent of the vote against Clinton.",
+      "type": "text"
+    },
+    {
+      "_id": "2ZRVJW5XJRHP7OAJZ5MQ5YLWRQ",
+      "content": "Sanders's trip to the Vatican, just days before the primary, was questionable for its political value, but it gave him an opportunity to talk about income inequality on a global scale.",
+      "type": "text"
+    },
+    {
+      "_id": "W3XN2J2CT5G77EPPBK2GPLIB6E",
+      "content": "Upon his return to New York, television cameras followed him to multiple stops at public housing projects in the Bronx, where he highlighted run-down conditions, including out-of-service elevators in high-rises that forced elderly residents to climb the stairs and a shuttered playground that he said robbed children of a place to play and stay out of trouble.",
+      "type": "text"
+    },
+    {
+      "_id": "B3BAZQD4LNCJBJR7TIMAKDNHYI",
+      "content": "As the campaign unfolded, Sanders also became a regular on the late-night talk-show circuit and made more appearances than any other candidate this cycle on the Sunday-morning talk shows. Both afforded opportunities to spread his brand of democratic socialism to wider audiences.",
+      "type": "text"
+    },
+    {
+      "_id": "CCJ7XIRIRZH25FWFNNUY46UQVI",
+      "content": "Sanders has served in the House and Senate as an independent, though he has caucused with the Democrats. Given what he has created this year, party leaders see him as a potentially invaluable asset to help other Democratic candidates raise money and rally young voters. ",
+      "type": "text"
+    },
+    {
+      "_id": "T35YFBUFPFAMLH4I37VITWXQDY",
+      "content": "So far, Sanders has shown little inclination to play a big role on that front. But Sen. Richard J. Durbin (D-Ill.), noting the size of Sanders's following, said, \"Let me tell you, he's got a heck of an email list, and if he decides to use it to help the Democrats take control of the Senate, that creates a better opportunity for his ideas to see the light of day.\"",
+      "type": "text"
+    },
+    {
+      "_id": "3ZQPFAQDGRFCLB4V6ECPT5HYII",
+      "content": "Besides the fundraising operation Sanders has built online, his campaign has also used social media to build a nationwide community of followers that could endure long after the campaign.<span> He now has more than 2 million followers on Twitter, as well as legions of fans on Facebook and other platforms, including Reddit, a favorite of the younger generation.</span>\n",
+      "type": "text"
+    },
+    {
+      "_id": "B2TG5XOKERC3TINS55N37D7RJ4",
+      "content": "That gives Sanders the opportunity to become the leader of the progressive movement and, with others such as Warren, to keep the pressure on Clinton as both nominee and president, if both were to happen. <span>Still, harnessing all those resources into an effective organization is challenging, as Obama found with the organization he built in 2008 and expanded in 2012. </span>\n",
+      "type": "text"
+    },
+    {
+      "_id": "F4JPHUF53NCFFMYQEPQ6EQPOV4",
+      "content": "His movement, now called Organizing for America, has had limited success generating support for the president's legislative goals. But Sanders's success in pushing Clinton to the left during their nomination contest suggests the kind of influence that Sanders and the progressives in the party could wield in the future.",
+      "type": "text"
+    },
+    {
+      "_id": "",
+      "content": "<attribution><email>john.wagner@washpost.com</email>\n</attribution>",
+      "type": "raw_html"
+    },
+    {
+      "_id": "",
+      "content": "<attribution><email>dan.balz@washpost.com</email>\n</attribution>",
+      "type": "raw_html"
+    },
+    {
+      "_id": "",
+      "content": "<trailer><p class=\"trailleft\">Balz reported from Washington. Anne Gearan and Mike DeBonis in Washington contributed to this report.</p>\n</trailer>",
+      "type": "raw_html"
+    },
+    {
+      "referent": {
+        "id": "FFY22CTRZAI6LDMTBLZRP3KYZE",
+        "type": "gallery",
+        "provider": ""
+      },
+      "type": "reference"
+    },
+    {
+      "referent": {
+        "id": "JUUKNRAGQYI6NP7N55S575MXBU",
+        "type": "video",
+        "provider": ""
+      },
+      "type": "reference"
+    },
+    {
+      "referent": {
+        "id": "U7GLBNW4GMI6LANOOSI3TOPH34",
+        "type": "graphic",
+        "provider": ""
+      },
+      "type": "reference"
+    }
+  ]
+}
