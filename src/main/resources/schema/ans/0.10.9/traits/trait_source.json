@@ -20,7 +20,7 @@
     },
     "system": {
       "type": "string",
-      "description": "The software (CMS or editor) that was used to enter this content. E.g., 'wordpress', 'ellipsis'."
+      "description": "The software (CMS or editor) that was used to enter this content. E.g., 'composer', 'wordpress'."
     },
     "edit_url": {
       "type": "string",
