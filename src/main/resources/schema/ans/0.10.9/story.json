@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/story.json",
   "title": "A story.",
-  "description": "Holds attributes of an ANS story. In the Arc ecosystem, these are stored in the Story API. ",
+  "description": "Holds attributes of an ANS story. In the Arc ecosystem, these are stored in the Draft API. ",
   "type": "object",
   "additionalProperties": false,
   "properties": {
