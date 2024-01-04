@@ -53,7 +53,7 @@
       "tests/fixtures/schema/0.10.0/results-fixture*.json",
       "**.results.json"
     ],
-    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/summaries/results.json"
+    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.0/results.json"
   },
   {
     "fileMatch": [
