@@ -4,7 +4,7 @@ JSON schema definition and supporting example/validation code for The Washington
 
 *NOTE* This schema is in development and subject to change.
 
-# Overview
+## Overview
 
 ANS ("Arc Native Specification") is the collection of schema documents that comprise the Washington Post's definition of "content", in so far as content is passed back and forth between systems in the Arc ecosystem of applications.
 
@@ -12,14 +12,14 @@ ANS ("Arc Native Specification") is the collection of schema documents that comp
 
 While `ans-schema` is a public package, it does require a GitHub authentication token to be installed. First, you will need to generate a "personal access token (classic)" with the scope `read:packages`. Once you have the token, you can add these lines to your `~/.npmrc`:
 
-```
+```bash
 @washingtonpost:registry=https://npm.pkg.github.com/
 //npm.pkg.github.com/:_authToken=ghp_XXXXXXXXXXXXXX (put your token here)
 ```
 
 Finally, you can install the package:
 
-```
+```bash
 npm install @washingtonpost/ans-schema
 ```
 
@@ -44,21 +44,36 @@ One can use a variety of third party tools to validate their content against the
 
 A few examples are provided of content documents that validate against the Washington Post ANS schema:
 
-1. [An Example Story](tests/fixtures/schema/0.10.3/story-fixture-references.json)
-2. [An Example Video](tests/fixtures/schema/0.10.3/video-fixture-nationals.json)
-3. [An Example Image](tests/fixtures/schema/0.10.3/image-fixture-good.json)
+1. [An Example Story](tests/fixtures/schema/0.10.9/story-fixture-references.json)
+2. [An Example Video](tests/fixtures/schema/0.10.9/video-fixture-nationals.json)
+3. [An Example Image](tests/fixtures/schema/0.10.9/image-fixture-good.json)
 
 ## Contributing
 
 See the [contributing documentation](CONTRIBUTING.md) for information about how to suggest changes to the ANS schema.
 
-## Validating Locally ##
+## For developers
+
+<details>
+<summary>Details</summary>
+
+### Use VS Code built-in support for JSON schemas
+
+VS Code supports JSON schema auto-completion and validation. In order to use that, you need to modify setting values that are stored in the [`settings.json`](https://code.visualstudio.com/docs/getstarted/settings#_settingsjson) file. You can review and edit this file directly by opening it in the editor with the **Preferences: Open User Settings (JSON)** command.
+
+To use a specific version of ANS, simply set the field `json.schemas` of your `settings.json` file to the contents of the corresponding file in this directory: [./src/main/resources/schema/json-schema-settings/ans/](./src/main/resources/schema/json-schema-settings/ans/).
+
+![`json.schemas` in the `settings.json` file](./docs/img/json-schemas.png)
+
+Any file that you open in your editor that matches the specified naming pattern in the `fileMatch` fields above will automatically have auto-completion and JSON schema validation.
+
+### Validating Locally
 
 This project contains a node library that can be used to validate ANS documents locally.  It is the same validator used in the ANS Service: <http://ans.arc2.nile.works/validate/0.9.0>
 
 You can run the validator on the command line from the project directory to validate an ANS document:
 
-```
+```bash
 npm install
 npm run-script ans -- --ansdata='{"type":"story", "version":"0.8.1"}' --version=0.10.3 validate
 
@@ -75,14 +90,13 @@ npm run-script ans -- --ansdata='{"type":"story", "version":"0.8.1"}' --version=
 
 A file can also be used as input:
 
-```
+```bash
 npm run-script ans -- --ansfile=test.json --version=0.10.3 validate
-
 ```
 
 You can also load the validator as a library in your node project:
 
-```
+```javascript
 var ans = require('@washingtonpost/ans-schema');
 
 ans.getValidatorForVersion('0.10.3', function(err, validator) {
@@ -97,13 +111,13 @@ ans.getValidatorForVersion('0.10.3', function(err, validator) {
 });
 ```
 
-## Other Commands ##
+### Other Commands
 
-### upvert ###
+#### upvert
 
 Converts a valid document in an old version of ANS to newer version.
 
-```
+```bash
 npm run-script ans -- --ansdata='{"type":"story", "version":"0.5.0", "content_elements":[{"type":"text", "content": "Foo!", "additonal_properties": { "foo":"bar"}}], "taxonomy":{"sections":[{ "type": "section", "version":"0.5.0"}]}}' upvert
 
 {
@@ -135,11 +149,11 @@ npm run-script ans -- --ansdata='{"type":"story", "version":"0.5.0", "content_el
 }
 ```
 
-### sync ###
+#### sync
 
 Fixes an invalid document composed of valid sub-documents of differing ANS versions. Essentially this converts a very specific kind of invalid document to a valid one by selective upverting.
 
-```
+```bash
 npm run-script ans -- --ansdata='{"type":"story", "version":"0.10.3", "content_elements":[{"type":"gallery", "version":"0.8.1", "content_elements":[ {"type":"image", "version":"0.8.1", "url":"http://foo.com/img.jpg"}]}]}' sync
 
 {
@@ -161,6 +175,8 @@ npm run-script ans -- --ansdata='{"type":"story", "version":"0.10.3", "content_e
 }
 ```
 
+</details>
+
 ## Creating a new ANS version
 
 The script to create a new version: `npm run-script ans -- --version=x.xx.x create`
@@ -168,3 +184,5 @@ The script to create a new version: `npm run-script ans -- --version=x.xx.x crea
 After running this, if you've created a new major or minor version, you'll need to update line 19 in this file so that the validate endpoint will work: `lib/validator.js`.
 
 Make sure to also add a test file here: `tests/fixtures/schema/`. You can copy over the previous test file (`schema-tests-xx.js`) and rename it with your version number. When people open PRs for new schema changes, they can add tests to that file.
+
+Finally, run [this script](./src/main/resources/schema/json-schema-settings/ans/README.md) to generate the JSON schema settings for VS Code to benefit from auto-completion and JSON schema validation for the newly created version.

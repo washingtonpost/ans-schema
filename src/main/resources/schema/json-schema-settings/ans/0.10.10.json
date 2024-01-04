@@ -1,0 +1,72 @@
+[
+  {
+    "fileMatch": [
+      "tests/fixtures/schema/0.10.10/audio-fixture*.json",
+      "**.audio.json"
+    ],
+    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/audio.json"
+  },
+  {
+    "fileMatch": [
+      "tests/fixtures/schema/0.10.10/collection-fixture*.json",
+      "**.collection.json"
+    ],
+    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/collection.json"
+  },
+  {
+    "fileMatch": [
+      "tests/fixtures/schema/0.10.10/content-fixture*.json",
+      "**.content.json"
+    ],
+    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/content.json"
+  },
+  {
+    "fileMatch": [
+      "tests/fixtures/schema/0.10.10/gallery-fixture*.json",
+      "**.gallery.json"
+    ],
+    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/gallery.json"
+  },
+  {
+    "fileMatch": [
+      "tests/fixtures/schema/0.10.10/image-fixture*.json",
+      "**.image.json"
+    ],
+    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/image.json"
+  },
+  {
+    "fileMatch": [
+      "tests/fixtures/schema/0.10.10/redirect-fixture*.json",
+      "**.redirect.json"
+    ],
+    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/redirect.json"
+  },
+  {
+    "fileMatch": [
+      "tests/fixtures/schema/0.10.10/restricted_content-fixture*.json",
+      "**.restricted_content.json"
+    ],
+    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/restricted_content.json"
+  },
+  {
+    "fileMatch": [
+      "tests/fixtures/schema/0.10.10/results-fixture*.json",
+      "**.results.json"
+    ],
+    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/results.json"
+  },
+  {
+    "fileMatch": [
+      "tests/fixtures/schema/0.10.10/story-fixture*.json",
+      "**.story.json"
+    ],
+    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/story.json"
+  },
+  {
+    "fileMatch": [
+      "tests/fixtures/schema/0.10.10/video-fixture*.json",
+      "**.video.json"
+    ],
+    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/video.json"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "fileMatch": [
+      "tests/fixtures/schema/0.5.9/audio-fixture*.json",
+      "**.audio.json"
+    ],
+    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/audio.json"
+  },
+  {
+    "fileMatch": [
+      "tests/fixtures/schema/0.5.9/content-fixture*.json",
+      "**.content.json"
+    ],
+    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/content.json"
+  },
+  {
+    "fileMatch": [
+      "tests/fixtures/schema/0.5.9/gallery-fixture*.json",
+      "**.gallery.json"
+    ],
+    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/gallery.json"
+  },
+  {
+    "fileMatch": [
+      "tests/fixtures/schema/0.5.9/image-fixture*.json",
+      "**.image.json"
+    ],
+    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/image.json"
+  },
+  {
+    "fileMatch": [
+      "tests/fixtures/schema/0.5.9/redirect-fixture*.json",
+      "**.redirect.json"
+    ],
+    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/redirect.json"
+  },
+  {
+    "fileMatch": [
+      "tests/fixtures/schema/0.5.9/results-fixture*.json",
+      "**.results.json"
+    ],
+    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/summaries/results.json"
+  },
+  {
+    "fileMatch": [
+      "tests/fixtures/schema/0.5.9/story-fixture*.json",
+      "**.story.json"
+    ],
+    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/story.json"
+  },
+  {
+    "fileMatch": [
+      "tests/fixtures/schema/0.5.9/video-fixture*.json",
+      "**.video.json"
+    ],
+    "url": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.5.9/video.json"
+  }
+]
