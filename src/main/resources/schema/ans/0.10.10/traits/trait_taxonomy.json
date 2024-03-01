@@ -40,6 +40,27 @@
         "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/utils/tag.json"
       }
     },
+    "categories": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/utils/category.json"
+      },
+      "description": "A list of categories.  Categories are overall, high-level classification of what the content is about."
+    },
+    "content_topics": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/utils/content_topic.json"
+      },
+      "description": "A list of topics. Topics are the subjects that the content is about."
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/utils/entity.json"
+      },
+      "description": "A list of entities. Entities are proper nouns, like people, places, and organizations."
+    },
 
     "primary_site": {
       "description": "Deprecated in 0.10.10. (See `primary_section` instead.) A primary site object or reference to one. In the Arc ecosystem, a reference here is denormalized into a site from the arc-site-service.",
