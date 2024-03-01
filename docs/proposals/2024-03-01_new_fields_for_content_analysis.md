@@ -155,7 +155,7 @@ In the examples below, we are using "..." where the reference URL will be update
 ## Modified/Added Schema
 
 * The following JSON schemas will be added or modified in ANS:
-  * `/src/main/resources/schema/ans/0.10.10/categories.json`
+  * `/src/main/resources/schema/ans/0.10.10/utils/categories.json`
   * `/src/main/resources/schema/ans/0.10.10/content_topics.json`
   * `/src/main/resources/schema/ans/0.10.10/entities.json`
 
