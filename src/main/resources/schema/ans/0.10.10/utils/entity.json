@@ -4,7 +4,7 @@
   "title": "Entity",
   "description": "Models a named entity (i.e. name of a person, place, or organization) used in a piece of content.",
   "type": "object",
-  "required": ["label", "score"],
+  "required": ["label"],
   "additionalProperties": false,
   "properties": {
     "_id": {
@@ -25,7 +25,7 @@
     },
     "score": {
       "type": "number",
-      "decription": "The score assigned to this entity between 0 and 1, where 1 is an exact match."
+      "description": "The score assigned to this entity between 0 and 1, where 1 is an exact match."
     }
   }
 }
