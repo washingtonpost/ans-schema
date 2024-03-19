@@ -7,19 +7,21 @@ The current ANS schema does not have dedicated fields for categories, content to
 
 # Proposal
 
-This document proposes the addition of three new fields to the ANS schema to improve data classification and facilitate the integration of external analysis tools.
+This document proposes the addition of five new fields to the ANS schema to improve data classification and facilitate the integration of external analysis tools.
 
 * New fields in the Taxonomy section for ANS:
-  * `categories`
+  * `categories` 
   * `content_topics`
   * `entities`
+  * `custom_categories`
+  * `custom_entities`
 
-These fields will be placed in the Taxonomy section, following the `auxiliaries` field and preceding the `tags` field, to ensure a structured and accessible data model.
+* These fields will be placed in the Taxonomy section, following the `auxiliaries` field and preceding the `tags` field, to ensure a structured and accessible data model.
+  * Taxonomy section: `src/main/resources/schema/ans/0.10.10/traits/trait_taxonomy.json`
 
 ## Fields
 
-1. Categories
-
+1. Categories `src/main/resources/schema/ans/0.10.10/utils/category.json`
    
 ```
 {
@@ -57,7 +59,7 @@ These fields will be placed in the Taxonomy section, following the `auxiliaries`
 }
 ```
 
-2. Content Topics
+2. Content Topics `src/main/resources/schema/ans/0.10.10/utils/content_topic.json`
 ```
 {
   "$schema": "...",
@@ -89,7 +91,7 @@ These fields will be placed in the Taxonomy section, following the `auxiliaries`
 }
 ```
    
-3. Entities
+3. Entities `src/main/resources/schema/ans/0.10.10/utils/entity.json`
 ```
 {
   "$schema": "...",
@@ -126,6 +128,74 @@ These fields will be placed in the Taxonomy section, following the `auxiliaries`
   }
 }
 ```
+
+4. Custom Category `src/main/resources/schema/ans/0.10.10/utils/custom_category.json` 
+```
+  {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/utils/custom_category.json",
+    "title": "Custom Category",
+    "description": "Models a category used in classifying a piece of content.",
+    "type": "object",
+    "required": ["_id", "name", "classifier"],
+    "additionalProperties": false,
+    "properties": {
+      "_id": {
+        "type": "string",
+        "description": "The unique ID for this category within its classifier."
+      },
+      "classifier": {
+        "type": "string",
+        "description": "The unique identifier for the classifier that matched this category."
+      },
+      "name": {
+        "type": "string",
+        "description": "The human readable label for this category."
+      },
+      "score": {
+        "type": "number",
+        "description": "The score assigned to this category between 0 and 1, where 1 is an exact match."
+      }
+    }
+  }
+   
+```
+5. Custom Entity `src/main/resources/schema/ans/0.10.10/utils/custom_entity.json`
+```
+ {
+     "$schema": "http://json-schema.org/draft-04/schema#",
+     "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/utils/custom_entity.json",
+     "title": "Custom Entity",
+     "description": "Models a named custom entity (i.e. name of a person, place, or organization) used in a piece of content.",
+     "type": "object",
+     "required": ["label"],
+     "additionalProperties": false,
+     "properties": {
+       "_id": {
+         "type": "string",
+         "description": "The unique ID for this entity."
+       },
+       "custom_id": {
+         "type": "string",
+         "description": "A unique identifier for a custom-defined entity."
+       },
+       "label": {
+         "type": "string",
+         "description": "The actual string of text that was identified as a named entity."
+       },
+       "type": {
+         "type": "string",
+         "description": "A description of what the named entity is. E.g. 'organization', 'person', or 'location'."
+       },
+       "score": {
+         "type": "number",
+         "description": "The score assigned to this entity between 0 and 1, where 1 is an exact match."
+       }
+     }
+   }
+   
+  ```
+
 ### Example
 In the examples below, we are using "..." where the reference URL will be updated with the latest version numbers. Otherwise, definitions are:
 
@@ -155,9 +225,14 @@ In the examples below, we are using "..." where the reference URL will be update
 ## Modified/Added Schema
 
 * The following JSON schemas will be added or modified in ANS:
-  * `/src/main/resources/schema/ans/0.10.10/utils/categories.json`
-  * `/src/main/resources/schema/ans/0.10.10/utils/content_topics.json`
-  * `/src/main/resources/schema/ans/0.10.10/utils/entities.json`
+  * `/src/main/resources/schema/ans/0.10.10/utils/category.json`
+  * `/src/main/resources/schema/ans/0.10.10/utils/content_topic.json`
+  * `/src/main/resources/schema/ans/0.10.10/utils/entity.json`
+  * `/src/main/resources/schema/ans/0.10.10/utils/custom_category.json`
+  * `/src/main/resources/schema/ans/0.10.10/utils/custom_entity.json`
+ 
+* Here the trait_taxomnomy.json:
+  * `/src/main/resources/schema/ans/0.10.10/traits/trait_taxonomy.json`
 
 
 ## Concerns
