@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/utils/content_topic.json",
+  "title": "Content Topic",
+  "description": "Models a keyword used in describing a piece of content.",
+  "type": "object",
+  "required": ["_id", "label", "score"],
+  "additionalProperties": false,
+  "properties": {
+    "_id": {
+      "type": "string",
+      "description": "The unique Wikidata ID for this topic."
+    },
+    "label": {
+      "type": "string",
+      "description": "A topic this piece of content is about."
+    },
+    "score": {
+      "type": "number",
+      "description": "The score assigned to this topic between 0 and 1, where 1 is an exact match."
+    }
+  }
+}
