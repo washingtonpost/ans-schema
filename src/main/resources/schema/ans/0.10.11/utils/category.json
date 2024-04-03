@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.11/utils/category.json",
+  "title": "Category",
+  "description": "Models a category used in classifying a piece of content.",
+  "type": "object",
+  "required": ["_id", "name", "classifier"],
+  "additionalProperties": false,
+  "properties": {
+    "_id": {
+      "type": "string",
+      "description": "The unique ID for this category within its classifier."
+    },
+    "classifier": {
+      "type": "string",
+      "description": "The unique identifier for the classifier that matched this category."
+    },
+    "name": {
+      "type": "string",
+      "description": "The human readable label for this category."
+    },
+    "score": {
+      "type": "number",
+      "description": "The score assigned to this category between 0 and 1, where 1 is an exact match."
+    }
+  }
+}

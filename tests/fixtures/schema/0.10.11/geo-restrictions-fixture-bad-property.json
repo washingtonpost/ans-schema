@@ -1,0 +1,8 @@
+{
+  "geo": {
+    "restrictions": [{
+      "restriction_id": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      "name": "A Geo-Restriction"
+    }]
+  }
+}

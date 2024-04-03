@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "description": "Variant metadata describing its ID as well as the websites to which it is assigned",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.11/utils/variant.json",
+  "properties": {
+    "_id": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.11/traits/trait_id.json",
+      "description": "variant ID"
+    },
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.11/traits/trait_additional_properties.json"
+    },
+    "content": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.11/story.json",
+      "description": "Variant content.  Only 'story' data is supported, but this may expand in the future."
+    },
+    "created_date": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.11/traits/trait_created_date.json"
+    },
+    "last_updated_date": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.11/traits/trait_last_updated_date.json"
+    },
+    "name": {
+      "description": "User-facing name for the variant",
+      "maxLength": 256,
+      "type": "string"
+    },
+    "publish_date": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.11/traits/trait_publish_date.json"
+    },
+    "published": {
+      "description": "Published status for the variant",
+      "type": "boolean"
+    },
+    "type": {
+      "enum": ["variant"]
+    },
+    "websites": {
+      "description": "websites assigned to this variant; individual values must be mutually exclusive with other variants",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 50,
+      "type": "array"
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "title": "Variant metadata",
+  "type": "object"
+}

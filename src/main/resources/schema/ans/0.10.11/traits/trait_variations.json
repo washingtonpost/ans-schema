@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "description": "Holds variant content metadata, including content zone IDs for use within 'content_elements' and mapping from website IDs to variant IDs",
+  "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.11/traits/trait_variations.json",
+  "properties": {
+    "additional_properties": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.11/traits/trait_additional_properties.json"
+    },
+    "content_zone_ids": {
+      "description": "A list of content zone IDs for use within the 'content_elements' array of the hub story",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 10,
+      "type": "array"
+    },
+    "variants": {
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.11/utils/variant.json",
+        "maxItems": 150
+      },
+      "type": "array"
+    }
+  },
+  "title": "Variant content metadata",
+  "type": "object"
+}

@@ -1,0 +1,191 @@
+{
+  "_id": "unique ANS id",
+  "type": "story",
+  "version": "0.10.10",
+  "created_date": "2015-06-24T09:50:50.52Z",
+  "last_updated_date": "2015-06-24T09:50:50.52Z",
+  "credits": {
+    "by": [
+      {
+        "type": "reference",
+        "referent": {
+          "type": "author",
+          "service": "http://www.credits.com/api",
+          "provider": "http://www.credits.com/api",
+          "id": "00001"
+        }
+      }
+    ],
+    "additional reporting by": [
+      {
+        "type": "author",
+        "version": "0.10.10",
+        "name": "Greg Engel",
+        "byline": "Greg Engel"
+      }
+    ]
+  },
+  "language": "en",
+  "location": "Washington, D.C.",
+  "geo": {
+    "latitude": 38.9047,
+    "longitude": -77.0164
+  },
+  "address": {
+    "street_address": "1600 Pennsylvania Ave",
+    "extended_address": "West Wing",
+    "locality": "Washington",
+    "region": "D.C.",
+    "postal_code": "20002",
+    "country_name": "USA"
+  },
+  "copyright": "(c) 2015 The Washington Post, Inc.",
+  "canonical_url": "http://www.washingtonpost.com/local/anesthesiologist-trashes-sedated-patient-jury-orders-her-to-pay-500000/2015/06/23/cae05c00-18f3-11e5-ab92-c75ae6ab94b5_story.html",
+  "short_url": "http://wapo.st/1Crp6bY",
+  "headlines": {
+    "basic": "The basic headline for this story",
+    "twitter": "Twitter headline!"
+  },
+  "description": {
+    "basic": "A Vienna man went in for a colonoscopy and intended to record his doctor"
+  },
+  "related_content": {
+    "basic": [
+      {
+        "_id": "some other unique ANS id",
+        "type": "story",
+        "version": "0.10.10"
+      }
+    ]
+  },
+  "promo_items": {
+    "basic": {
+      "_id": "unique ANS id",
+      "type": "image",
+      "version": "0.10.10",
+      "created_date": "2015-06-25T09:50:50.52Z",
+      "credits": {
+        "by": [
+          {
+            "type": "author",
+            "version": "0.10.10",
+            "name": "Ansel Adams",
+            "byline": "Ansel Adams"
+          }
+        ]
+      },
+      "url": "https://tinyurl.com/mqyonhb",
+      "caption": "Never gonna give you up",
+      "subtitle": "Never gonna let you down",
+      "width": 800,
+      "height": 640
+    }
+  },
+  "taxonomy": {
+    "keywords": [
+      {
+        "keyword": "Anesthesiologist",
+        "score": 0.77,
+        "frequency": 2
+      }
+    ],
+    "tags": []
+  },
+  "publish_date": "2015-06-24T09:49:00.10Z",
+  "status": "published",
+  "display_date": "2015-06-25T09:50:50.52Z",
+  "editor_note": "This URL earlier linked to a post that we’ve unpublished due to its flawed premise.",
+  "content_elements": [
+    {
+      "_id": "123",
+      "type": "text",
+      "content": "<h1>this is my first paragraph</h1>"
+    },
+    {
+      "_id": "456",
+      "type": "text",
+      "content": "<h2>this is my second paragraph</h2>"
+    },
+    {
+      "_id": "789",
+      "type": "image",
+      "version": "0.10.10",
+      "created_date": "2015-06-25T09:50:50.52Z",
+      "credits": {
+        "by": [
+          {
+            "type": "author",
+            "version": "0.10.10",
+            "name": "Ansel Adams",
+            "byline": "Ansel Adams"
+          }
+        ]
+      },
+      "url": "https://tinyurl.com/mqyonhb",
+      "caption": "Never gonna give you up",
+      "subtitle": "Never gonna let you down",
+      "width": 800,
+      "height": 640
+    },
+    {
+      "_id": "49876543210",
+      "type": "list",
+      "list_type": "unordered",
+      "items": [
+        {
+          "_id": "t1",
+          "type": "text",
+          "content": "Foo"
+        },
+        {
+          "_id": "t2",
+          "type": "text",
+          "content": "Bar"
+        },
+        {
+          "_id": "l2",
+          "type": "list",
+          "list_type": "ordered",
+          "items": [
+            {
+              "_id": "t4",
+              "type": "text",
+              "content": "Hi"
+            },
+            {
+              "_id": "t5",
+              "type": "text",
+              "content": "Mom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "549876543210",
+      "type": "blockquote",
+      "content": "<i>Here's my html</i>"
+    },
+    {
+      "_id": "649876543210",
+      "type": "raw_html",
+      "content": "<iframe src=\"http://www.google.com\"></iframe>",
+      "channels": [
+        "web"
+      ]
+    },
+    {
+      "type": "reference",
+      "_id": "22222229",
+      "channels": [
+        "ios",
+        "android"
+      ],
+      "referent": {
+        "type": "oembed",
+        "id": "https://twitter.com/BradDavis_WFTS/status/664422935130566656",
+        "provider": "https://api.twitter.com/1/statuses/oembed.json"
+      }
+    }
+  ]
+}

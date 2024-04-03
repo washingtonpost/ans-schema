@@ -28,9 +28,9 @@ For more information, please refer to GitHub documentation:
 - <https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package>
 - <https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-to-github-packages>
 
-## The current production version of ANS is 0.10.9
+## The current production version of ANS is 0.10.10
 
-## The current development version of ANS is 0.10.10
+## The current development version of ANS is 0.10.11
 
 ## Schema files
 

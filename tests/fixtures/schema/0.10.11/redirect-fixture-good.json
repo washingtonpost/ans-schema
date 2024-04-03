@@ -1,0 +1,7 @@
+{
+  "_id" : "XYZABC1",
+  "type" : "redirect",
+  "version" : "0.10.11",
+  "canonical_url" : "/canonical-url",
+  "redirect_url" : "/redirect-url"
+}
