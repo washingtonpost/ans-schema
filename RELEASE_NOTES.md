@@ -1,5 +1,10 @@
 # ANS Release Notes
 
+### 1.12.0 2023/1/17
+
+* Release containing version 0.10.10 schema changes:
+  * [New fields for integration of external analysis tool](/docs/proposals/2024-03-01_new_fields_for_content_analysis.md)
+
 ### 1.11.0 2023/1/17
 
 * Release containing version 0.10.9 schema changes:
