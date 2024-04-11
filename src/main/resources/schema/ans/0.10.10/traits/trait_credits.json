@@ -5,9 +5,43 @@
   "type": "object",
   "description": "A list of people and groups attributed to this content, keyed by type of contribution. In the Arc ecosystem, references in this list will be denormalized into author objects from the arc-author-service.",
   "properties": {
+    "host_talent": {
+      "title": "Host talent",
+      "description": "The host(s) of this content, if it is a podcast or video.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "anyOf": [
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/utils/author.json"
+          },
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/utils/reference.json"
+          }
+        ]
+      }
+    },
+
+    "contributors": {
+      "title": "Contributors",
+      "description": "The contributors to this content, if it is a podcast or video.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "anyOf": [
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/utils/author.json"
+          },
+          {
+            "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.10/utils/reference.json"
+          }
+        ]
+      }
+    },
+
     "by": {
       "title": "By",
-      "description": "The primary author(s) of this document. For a story, is is the writer or reporter. For an image, it is the photographer.",
+      "description": "The primary author(s) of this document. For a story, this is the writer or reporter. For an image, it is the photographer.",
       "type": "array",
       "items": {
         "type": "object",
