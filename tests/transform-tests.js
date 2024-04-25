@@ -7,6 +7,7 @@ var should = require('should'),
     ans = require('../lib/ans'),
     _ = require('lodash'),
     async = require('async');
+const assert = require('assert');    
 
 var current_version = ans.version;
 var transforms = ans.transforms;
@@ -690,4 +691,38 @@ describe("Transformations: ", function() {
       validateAns(result, original, '0.5.5');
     });
   });
+
+  describe.only("Upvert", function() {
+    it ("should upert a valid ans", function() {
+      
+
+    const version_types = [1, "0.10.10", "1.0.0"]
+
+    for(const version of version_types){
+      var original_ans = {
+        "version":"0.10.9",
+        "type":"story",
+        "content_elements": [
+          {
+            "embed": {
+                "config": {
+                    "editorState": {
+                        "root": {
+                            "type": "root",
+                            "version": `${version}`
+                        }
+                    }
+                }
+            },
+            "subtype": "custom",
+            "type": "custom_embed"
+        }
+        ]
+    }
+    var result = transforms.upvert(original_ans, '0.10.10');
+    assert.ok(result instanceof Error === false)
+    }
+      
+    });
+  })
 });

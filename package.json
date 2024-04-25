@@ -1,7 +1,7 @@
 {
   "name": "@washingtonpost/ans-schema",
   "description": "The Washington Post's Arc Native Specification",
-  "version": "1.12.0",
+  "version": "1.12.1",
   "homepage": "https://github.com/washingtonpost/ans-schema",
   "repository": {
     "type": "git",
@@ -10,15 +10,16 @@
   "bugs": "https://github.com/washingtonpost/ans-schema/issues",
   "dependencies": {
     "ajv": "~3.4.0",
-    "node-dir": "~0.1.11",
-    "lodash": "~4.17.5",
-    "node-options": "^0.0.7",
-    "ncp": "2.0.0",
-    "rimraf": "2.5.2",
+    "assert": "^2.1.0",
     "async": "2.0.0",
+    "lodash": "~4.17.5",
+    "mocha": "2.4.5",
+    "ncp": "2.0.0",
+    "node-dir": "~0.1.11",
+    "node-options": "^0.0.7",
     "replacestream": "4.0.0",
-    "should": "~8.2.1",
-    "mocha": "2.4.5"
+    "rimraf": "2.5.2",
+    "should": "~8.2.1"
   },
   "engines": {
     "node": ">=5.5.0"
