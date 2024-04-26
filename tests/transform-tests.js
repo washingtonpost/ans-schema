@@ -695,8 +695,7 @@ describe("Transformations: ", function() {
 
   describe("Upvert", function () {
     it("should upert an ans types which has versions and typ and not in version_upverter_types", function () {
-      const version_types = [1, "0.10.10", "1.0.0", "0.4.5"];
-      const version_upgrade = "0.10.10";
+      const version_types = [1, "0.10.10", "1.0.0", "0.4.5"]; 
       for (const version of version_types) {
         var original_ans = {
           version: "0.10.9",
@@ -718,17 +717,17 @@ describe("Transformations: ", function() {
             },
           ],
         };
-        var result = transforms.upvert(original_ans, version_upgrade);
+        var result = transforms.upvert(original_ans, LAST_VERSION);
         assert.ok(result instanceof Error === false);
         if (Version.is_semantic_version(version)) {
           const expected = _.cloneDeep(original_ans);
-          expected.version = version_upgrade;
+          expected.version = LAST_VERSION;
           expected.content_elements[0].embed.config.editorState.root.version =
-            version_upgrade;
+          LAST_VERSION;
           assert.equal(JSON.stringify(result), JSON.stringify(expected));
         } else {
           const expected = _.cloneDeep(original_ans);
-          expected.version = version_upgrade;
+          expected.version = LAST_VERSION;
           assert.equal(JSON.stringify(result), JSON.stringify(expected));
         }
       }
