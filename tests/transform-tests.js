@@ -719,17 +719,10 @@ describe("Transformations: ", function() {
         };
         var result = transforms.upvert(original_ans, LAST_VERSION);
         assert.ok(result instanceof Error === false);
-        if (Version.is_semantic_version(version)) {
-          const expected = _.cloneDeep(original_ans);
-          expected.version = LAST_VERSION;
-          expected.content_elements[0].embed.config.editorState.root.version =
-          LAST_VERSION;
-          assert.equal(JSON.stringify(result), JSON.stringify(expected));
-        } else {
+        
           const expected = _.cloneDeep(original_ans);
           expected.version = LAST_VERSION;
           assert.equal(JSON.stringify(result), JSON.stringify(expected));
-        }
       }
     });
   });
