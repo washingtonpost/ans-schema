@@ -168,7 +168,3 @@ The script to create a new version: `npm run-script ans -- --version=x.xx.x crea
 After running this, if you've created a new major or minor version, you'll need to update line 19 in this file so that the validate endpoint will work: `lib/validator.js`.
 
 Make sure to also add a test file here: `tests/fixtures/schema/`. You can copy over the previous test file (`schema-tests-xx.js`) and rename it with your version number. When people open PRs for new schema changes, they can add tests to that file.
-
-## Updating The ANS Top Level Types 
- - for every version upgrade we need to update transform.js version_upverter_types if any of new ans types have field version with `"trait_version.json"`
- - This needs to upgraded so that we can read through the schemas and if the version field is present we need to upvert recursively to the latest version
