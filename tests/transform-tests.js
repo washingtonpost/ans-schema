@@ -8,6 +8,7 @@ var should = require('should'),
     _ = require('lodash'),
     async = require('async');
 const assert = require('assert');    
+const  Version = require('../lib/version');
 
 var current_version = ans.version;
 var transforms = ans.transforms;
@@ -692,37 +693,45 @@ describe("Transformations: ", function() {
     });
   });
 
-  describe.only("Upvert", function() {
-    it ("should upert a valid ans", function() {
-      
-
-    const version_types = [1, "0.10.10", "1.0.0"]
-
-    for(const version of version_types){
-      var original_ans = {
-        "version":"0.10.9",
-        "type":"story",
-        "content_elements": [
-          {
-            "embed": {
-                "config": {
-                    "editorState": {
-                        "root": {
-                            "type": "root",
-                            "version": `${version}`
-                        }
-                    }
-                }
+  describe("Upvert", function () {
+    it("should upert an ans types which has versions and typ and not in version_upverter_types", function () {
+      const version_types = [1, "0.10.10", "1.0.0", "0.4.5"];
+      const version_upgrade = "0.10.10";
+      for (const version of version_types) {
+        var original_ans = {
+          version: "0.10.9",
+          type: "story",
+          content_elements: [
+            {
+              embed: {
+                config: {
+                  editorState: {
+                    root: {
+                      type: "root",
+                      version: `${version}`,
+                    },
+                  },
+                },
+              },
+              subtype: "custom",
+              type: "custom_embed",
             },
-            "subtype": "custom",
-            "type": "custom_embed"
+          ],
+        };
+        var result = transforms.upvert(original_ans, version_upgrade);
+        assert.ok(result instanceof Error === false);
+        if (Version.is_semantic_version(version)) {
+          const expected = _.cloneDeep(original_ans);
+          expected.version = version_upgrade;
+          expected.content_elements[0].embed.config.editorState.root.version =
+            version_upgrade;
+          assert.equal(JSON.stringify(result), JSON.stringify(expected));
+        } else {
+          const expected = _.cloneDeep(original_ans);
+          expected.version = version_upgrade;
+          assert.equal(JSON.stringify(result), JSON.stringify(expected));
         }
-        ]
-    }
-    var result = transforms.upvert(original_ans, '0.10.10');
-    assert.ok(result instanceof Error === false)
-    }
-      
+      }
     });
-  })
+  });
 });
