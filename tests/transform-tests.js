@@ -7,6 +7,8 @@ var should = require('should'),
     ans = require('../lib/ans'),
     _ = require('lodash'),
     async = require('async');
+const assert = require('assert');    
+const  Version = require('../lib/version');
 
 var current_version = ans.version;
 var transforms = ans.transforms;
@@ -688,6 +690,40 @@ describe("Transformations: ", function() {
       var original = fixtures['0.5.5']['story-fixture-bad-mixed-sub-document-versions'];
       var result = transforms.sync(original);
       validateAns(result, original, '0.5.5');
+    });
+  });
+
+  describe("Upvert", function () {
+    it("should upert an ans types which has versions and typ and not in version_upverter_types", function () {
+      const version_types = [1, "0.10.10", "1.0.0", "0.4.5"]; 
+      for (const version of version_types) {
+        var original_ans = {
+          version: "0.10.9",
+          type: "story",
+          content_elements: [
+            {
+              embed: {
+                config: {
+                  editorState: {
+                    root: {
+                      type: "root",
+                      version: `${version}`,
+                    },
+                  },
+                },
+              },
+              subtype: "custom",
+              type: "custom_embed",
+            },
+          ],
+        };
+        var result = transforms.upvert(original_ans, LAST_VERSION);
+        assert.ok(result instanceof Error === false);
+        
+          const expected = _.cloneDeep(original_ans);
+          expected.version = LAST_VERSION;
+          assert.equal(JSON.stringify(result), JSON.stringify(expected));
+      }
     });
   });
 });
