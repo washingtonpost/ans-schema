@@ -694,7 +694,7 @@ describe("Transformations: ", function() {
   });
 
   describe("Upvert", function () {
-    it("should upert an ans types which has versions and typ and not in version_upverter_types", function () {
+    it.only("should upert an ans types which has versions and typ and not in version_upverter_types", function () {
       const version_types = [1, "0.10.10", "1.0.0", "0.4.5"]; 
       for (const version of version_types) {
         var original_ans = {
@@ -708,6 +708,10 @@ describe("Transformations: ", function() {
                     root: {
                       type: "root",
                       version: `${version}`,
+                      children: [{
+                        version: 1,
+                        type: "children"
+                      }]
                     },
                   },
                 },
