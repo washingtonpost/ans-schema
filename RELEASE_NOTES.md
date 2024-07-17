@@ -1,4 +1,12 @@
 # ANS Release Notes
+### 1.12.2 
+
+* [PPA-825](https://arcpublishing.atlassian.net/browse/PPA-825) - fix a minor issue in previous 1.12.1
+
+### 1.12.1 
+
+* [PPA-825](https://arcpublishing.atlassian.net/browse/PPA-825) - Fix version checking of unwanted types while upverting
+
 
 ### 1.12.0 2023/1/17
 
