@@ -1,7 +1,7 @@
 {
   "name": "@washingtonpost/ans-schema",
   "description": "The Washington Post's Arc Native Specification",
-  "version": "1.12.2",
+  "version": "1.12.3",
   "homepage": "https://github.com/washingtonpost/ans-schema",
   "repository": {
     "type": "git",

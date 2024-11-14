@@ -1,4 +1,10 @@
 # ANS Release Notes
+
+### 1.12.3
+
+* Prevent the callback function from being called twice during the loading of schemas
+* Prevent the load schema function from returning before the full schema is read
+
 ### 1.12.2 
 
 * [PPA-825](https://arcpublishing.atlassian.net/browse/PPA-825) - fix a minor issue in previous 1.12.1
