@@ -35,6 +35,9 @@
     "canonical_url": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.11/traits/trait_canonical_url.json"
     },
+    "canonical_url_external": {
+      "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.11/traits/trait_canonical_url_external.json"
+    },
     "canonical_website": {
       "$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.11/traits/trait_canonical_website.json"
     },
