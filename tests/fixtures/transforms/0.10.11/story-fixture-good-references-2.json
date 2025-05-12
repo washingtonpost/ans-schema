@@ -1,0 +1,19 @@
+{
+  "type": "story",
+  "version": "0.10.11",
+  "content_elements": [
+    {
+      "type": "reference",
+      "foo": "bar",
+      "referent": {
+        "id": "1",
+        "type": "author",
+        "three": "four",
+        "provider": "https://foo.com/authorservice"
+      },
+      "additional_properties": {
+        "one": "two"
+      }
+    }
+  ]
+}

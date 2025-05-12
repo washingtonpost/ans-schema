@@ -1,5 +1,5 @@
 # Adding new field canonical_url_external for story traits
-Version>=`0.10.10`
+Version>=`0.10.11`
 
 # Problem
 

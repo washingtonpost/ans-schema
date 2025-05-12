@@ -1,0 +1,18 @@
+{
+  "type": "story",
+  "version": "0.10.12",
+  "headlines": {
+    "basic": "Embargo"
+  },
+  "content_elements": [
+    {
+      "type": "text",
+      "content": "There is a bad embargo"
+    }
+  ],
+  "content_restrictions": {
+    "embargo": {
+      "end_time": false
+    }
+  }
+}

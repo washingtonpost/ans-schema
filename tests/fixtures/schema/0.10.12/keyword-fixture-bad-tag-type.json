@@ -1,0 +1,5 @@
+{
+    "keyword": "This should fail because tag is a string, not a number",
+    "score": 0.6,
+    "tag": 1.25
+}
