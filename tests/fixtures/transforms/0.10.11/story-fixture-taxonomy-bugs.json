@@ -1,0 +1,119 @@
+{
+  "_id": "unique ANS id",
+  "type": "story",
+  "version": "0.10.11",
+  "created_date": "2015-06-24T09:50:50.52Z",
+  "last_updated_date": "2015-06-24T09:50:50.52Z",
+  "copyright": "(c) 2015 The Washington Post, Inc.",
+  "canonical_url": "http://www.washingtonpost.com/local/anesthesiologist-trashes-sedated-patient-jury-orders-her-to-pay-500000/2015/06/23/cae05c00-18f3-11e5-ab92-c75ae6ab94b5_story.html",
+  "short_url": "http://wapo.st/1Crp6bY",
+  "headlines": {
+    "basic": "The default headline for this story"
+  },
+  "description": {
+    "basic": "A Vienna man went in for a colonoscopy and intended to record his doctor"
+  },
+  "taxonomy": {
+    "keywords": [
+      {
+        "keyword": "Anesthesiologist",
+        "score": 0.77,
+        "frequency": 2
+      }
+    ],
+    "tags": [
+      {
+        "additional_properties": {
+          "0": "a",
+          "1": "l",
+          "2": "p",
+          "3": "h",
+          "4": "a"
+        }
+      },
+      {
+        "additional_properties": {
+          "0": "b",
+          "1": "e",
+          "2": "t",
+          "3": "a"
+        }
+      },
+      {
+        "additional_properties": {
+          "0": "g",
+          "1": "a",
+          "2": "m",
+          "3": "m",
+          "4": "a"
+        }
+      }
+    ],
+    "sites": [
+      {
+        "type": "site",
+        "name": "Business",
+        "path": "/business",
+        "primary": false
+      },
+      {
+        "type": "site",
+        "title": "Finance",
+        "path": "/business/finance",
+        "parent": "/business",
+        "additional_properties": {
+          "primary": true
+        },
+        "primary": true
+      },
+      {
+        "type": "reference",
+        "referent": {
+          "id": "1",
+          "type": "site",
+          "provider": "foo"
+        },
+        "additional_properties": {
+          "primary": true
+        }
+      }
+    ]
+  },
+  "publish_date": "2015-06-24T09:49:00.10Z",
+  "status": "published",
+  "display_date": "2015-06-25T09:50:50.52Z",
+  "editor_note": "This URL earlier linked to a post that we’ve unpublished due to its flawed premise.",
+  "content_elements": [
+    {
+      "_id": "123",
+      "type": "text",
+      "content": "this is my first paragraph"
+    },
+    {
+      "type": "story",
+      "_id": "456",
+      "taxonomy": {
+        "tags": [
+          {
+            "additional_properties": {
+              "0": "d",
+              "1": "e",
+              "2": "l",
+              "3": "t",
+              "4": "a"
+            }
+          }
+        ],
+        "sites": [
+          {
+            "type": "site",
+            "name": "Section 451",
+            "path": "/451",
+            "primary": false
+          }
+        ]
+      },
+      "version": "0.10.11"
+    }
+  ]
+}
