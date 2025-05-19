@@ -1,5 +1,8 @@
 # ANS Release Notes
 
+### 1.12.5
+* [ACMS-1317](https://arcpublishing.atlassian.net/browse/ACMS-1317) - Adding pattern for External Canonical URL Support
+
 ### 1.12.4
 * [ACMS-1783](https://arcpublishing.atlassian.net/browse/ACMS-1783) - External Canonical URL Support
 

@@ -3,5 +3,6 @@
   "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.11/traits/trait_canonical_url_external.json",
   "title": "Canonical External URL",
   "description": "The absolute URL of the document on website which will override any relative URL specified by the `canonical_url` field.",
-  "type": "string"
+  "type": "string",
+  "pattern": "^https?:\\/\\/[^\\s]*$"
 }
