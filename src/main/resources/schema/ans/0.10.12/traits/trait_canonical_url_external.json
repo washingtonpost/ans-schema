@@ -4,5 +4,5 @@
   "title": "Canonical External URL",
   "description": "The absolute URL of the document on website which will override any relative URL specified by the `canonical_url` field.",
   "type": "string",
-  "pattern": "^https?:\\/\\/([a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.)+[a-zA-Z]{2,}(\\/[a-zA-Z0-9\\-._~:/%]+)*$"
+  "pattern": "^https?:\\/\\/[^\\s]*$"
 }
