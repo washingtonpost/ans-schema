@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.9/image.json",
   "title": "An image.",
-  "description": "Holds attributes of an ANS image component. In the Arc ecosystem, these are stored in Anglerfish.",
+  "description": "Holds attributes of an ANS image component. In the Arc ecosystem, these are stored in Photo Center.",
   "type": "object",
   "additionalProperties": false,
   "properties": {
