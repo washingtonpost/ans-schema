@@ -1,5 +1,8 @@
 # ANS Release Notes
 
+### 1.12.6
+* [ACMS-1870](https://arcpublishing.atlassian.net/browse/ACMS-1870) - Fix ANS parsing when null value elements are passed in `content_elements` or `promo_items`
+
 ### 1.12.5
 * [ACMS-1317](https://arcpublishing.atlassian.net/browse/ACMS-1317) - Adding pattern for External Canonical URL Support
 
