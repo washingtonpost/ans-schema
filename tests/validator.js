@@ -138,6 +138,17 @@ describe("ANS Validator", function() {
     });
 
 
+    it("should return an error if a related content item is null", function() {
+      var story = { "type": "story", "version": version,
+                    "related_content": {
+                      "default": [ null ] } };
+      var errors = validator.getAllContentErrors(story, version, "");
+      errors.length.should.be.above(0);
+      _.some(errors, { "dataPath": ".related_content.default[0]",
+                       "message": "should be object" }).should.eql(true);
+    });
+
+
     it("should return no errors if related content validates against its own schema", function() {
       var story = { "type": "story", "version": version,
                     "related_content": {
